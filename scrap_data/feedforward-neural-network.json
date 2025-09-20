@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Structure of a Feedforward Neural Network",
+    "output": "Feedforward Neural Networks have a structured layered design where data flows sequentially through each layer.\nEach connection between neurons in these layers has an associated weight that is adjusted during the training process to minimize the error in predictions."
+  },
+  {
+    "input": "Activation Functions",
+    "output": "Activation functionsintroduce non-linearity into the network enabling it to learn and model complex data patterns.\nCommon activation functions include:\nSigmoid:\\sigma(x) = \\frac{1}{1 + e^{-x}}\nTanh:\\text{tanh}(x) = \\frac{e^x - e^{-x}}{e^x + e^{-x}}\nReLU:\\text{ReLU}(x) = \\max(0, x)"
+  },
+  {
+    "input": "Training a Feedforward Neural Network",
+    "output": "Training a Feedforward Neural Network involves adjusting the weights of the neurons to minimize the error between the predicted output and the actual output. This process is typically performed using backpropagation and gradient descent."
+  },
+  {
+    "input": "Gradient Descent",
+    "output": "Gradient Descentis an optimization algorithm used to minimize the loss function by iteratively updating the weights in the direction of the negative gradient. Common variants of gradient descent include:\nBatch Gradient Descent: Updates weights after computing the gradient over the entire dataset.\nStochastic Gradient Descent (SGD): Updates weights for each training example individually.\nMini-batch Gradient Descent:  It Updates weights after computing the gradient over a small batch of training examples."
+  },
+  {
+    "input": "Evaluation of Feedforward neural network",
+    "output": "Evaluating the performance of the trained model involves several metrics:\nAccuracy: The proportion of correctly classified instances out of the total instances.\nPrecision: The ratio of true positive predictions to the total predicted positives.\nRecall: The ratio of true positive predictions to the actual positives.\nF1 Score: The harmonic mean of precision and recall, providing a balance between the two.\nConfusion Matrix:A table used to describe the performance of a classification model, showing the true positives, true negatives, false positives and false negatives."
+  },
+  {
+    "input": "Implementation of Feedforward Neural Network",
+    "output": "This code demonstrates the process of building, training and evaluating a neural network model usingTensorFlowandKerasto classify handwritten digits from the MNIST dataset.\nThe model architecture is defined using the Sequential consisting of:\na Flatten layer to convert the 2D image input into a 1D array\na Dense layer with 128 neurons and ReLU activation\na final Dense layer with 10 neurons and softmax activation to output probabilities for each digit class.\nModel is compiled with\nAdam optimizer\nSparse Categorical Crossentropy loss function\nSparse Categorical Accuracy metric\nThen trained for 5 epochs on the training data\nOutput:\nBy understanding their architecture, activation functions and training process, one can make real world projects. Continuous advancements in optimization techniques and activation functions have made feedforward networks more efficient and effective in the field of artificial intelligence."
+  }
+]

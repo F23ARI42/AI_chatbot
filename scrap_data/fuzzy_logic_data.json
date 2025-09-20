@@ -1,0 +1,30 @@
+[
+  {
+    "input": "Fuzzy Logic Architecture",
+    "output": "Fuzzy Logic systems are made up of four main components that work together to process imprecise or uncertain data:"
+  },
+  {
+    "input": "Membership Functions",
+    "output": "A membership function describes how much an input value belongs to a fuzzy set. It assigns a value between 0 and 1 to each point in the input space also called the universe of discourse:\n0 -> the value does not belong to the set\n1 -> the value fully belongs to the set\nValues in between -> partial membership\nThese functions are a key part of fuzzification, helping translate precise real-world data into fuzzy values that can be processed by the system."
+  },
+  {
+    "input": "Common Types of membership functions:",
+    "output": "By choosing the right membership function, we can represent uncertainty more naturally and make fuzzy logic systems respond in a way that feels closer to human reasoning."
+  },
+  {
+    "input": "Fuzzy Control",
+    "output": "Fuzzy control is a method of designing systems that make decisions in a way similar to human reasoning. Instead of depending only on exact values, it works with approximate information to produce results that are practical and acceptable, even if they aren’t perfectly precise. This approach is useful when dealing with uncertainty or incomplete data, situations where traditional control methods might fail.\nBy capturing the flexibility of human decision-making, it helps systems operate effectively in complex, unpredictable environments."
+  },
+  {
+    "input": "Applications of Fuzzy Logic",
+    "output": "Fuzzy logic is used in many fields where precision isn’t always possible:"
+  },
+  {
+    "input": "Advantages of Fuzzy Logic",
+    "output": "Fuzzy logic systems has several benefits which are as follows:"
+  },
+  {
+    "input": "Disadvantages of Fuzzy Logic",
+    "output": "While fuzzy logic has many strengths, it also comes with some challenges:"
+  }
+]

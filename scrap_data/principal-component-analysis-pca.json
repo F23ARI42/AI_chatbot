@@ -1,0 +1,50 @@
+[
+  {
+    "input": "How Principal Component Analysis Works",
+    "output": "PCA uses linear algebra to transform data into new features called principal components. It finds these by calculating eigenvectors (directions) and eigenvalues (importance) from the covariance matrix. PCA selects the top components with the highest eigenvalues and projects the data onto them simplify the dataset.\nImagine you’re looking at a messy cloud of data points like stars in the sky and want to simplify it. PCA helps you find the \"most important angles\" to view this cloud so you don’t miss the big patterns. Here’s how it works step by step:"
+  },
+  {
+    "input": "Step 1: Standardize the Data",
+    "output": "Different features may have different units and scales like salary vs. age. To compare them fairly PCA firststandardizesthe data by making each feature have:\nA mean of 0\nA standard deviation of 1\nZ = \\frac{X-\\mu}{\\sigma}\nwhere:\n\\muis the mean of independent features\\mu = \\left \\{ \\mu_1, \\mu_2, \\cdots, \\mu_m \\right \\}\n\\sigmais the standard deviation of independent features\\sigma = \\left \\{ \\sigma_1, \\sigma_2, \\cdots, \\sigma_m \\right \\}"
+  },
+  {
+    "input": "Step 2: Calculate Covariance Matrix",
+    "output": "Next PCA calculates thecovariance matrixto see how features relate to each other whether they increase or decrease together. The covariance between two featuresx_1andx_2is:\ncov(x1,x2) = \\frac{\\sum_{i=1}^{n}(x1_i-\\bar{x1})(x2_i-\\bar{x2})}{n-1}\nWhere:\n\\bar{x}_1 \\,and \\, \\bar{x}_2​ are the mean values of featuresx_1 \\, and\\,  x_2\nnis the number of data points\nThe value of covariance can be positive, negative or zeros."
+  },
+  {
+    "input": "Step 3: Find the Principal Components",
+    "output": "PCA identifiesnew axeswhere the data spreads out the most:\n1st Principal Component (PC1):The direction of maximum variance (most spread).\n2nd Principal Component (PC2):The next best direction,perpendicular to PC1and so on.\nThese directions come from theeigenvectorsof the covariance matrix and their importance is measured byeigenvalues. For a square matrix A aneigenvectorX (a non-zero vector) and its correspondingeigenvalueλ satisfy:\nAX = \\lambda X\nThis means:\nWhenAacts on X it only stretches or shrinks X by the scalar λ.\nThe direction of X remains unchanged hence eigenvectors define \"stable directions\" of A.\nEigenvalues help rank these directions by importance."
+  },
+  {
+    "input": "Step 4: Pick the Top Directions & Transform Data",
+    "output": "After calculating the eigenvalues and eigenvectors PCA ranks them by the amount of information they capture. We then:\nThis means we reduce the number of features (dimensions) while keeping the important patterns in the data.\nIn the above image the original dataset has two features \"Radius\" and \"Area\" represented by the black axes. PCA identifies two new directions:PC₁andPC₂which are theprincipal components.\nThese new axes are rotated versions of the original ones.PC₁captures the maximum variance in the data meaning it holds the most information whilePC₂captures the remaining variance and is perpendicular to PC₁.\nThe spread of data is much wider along PC₁ than along PC₂. This is why PC₁ is chosen for dimensionality reduction. By projecting the data points (blue crosses) onto PC₁ we effectivelytransform the 2D data into 1D andretain most of the important structure and patterns."
+  },
+  {
+    "input": "Implementation of Principal Component Analysis in Python",
+    "output": "Hence PCA uses a linear transformation that is based on preserving the most variance in the data using the least number of dimensions. It involves the following steps:"
+  },
+  {
+    "input": "Step 1: Importing Required Libraries",
+    "output": "We import the necessary library likepandas,numpy,scikit learn,seabornandmatplotlibto visualize results."
+  },
+  {
+    "input": "Step 2: Creating Sample Dataset",
+    "output": "We make a small dataset with three features Height, Weight, Age and Gender.\nOutput:"
+  },
+  {
+    "input": "Step 3: Standardizing the Data",
+    "output": "Since the features have different scales Height vs Age we standardize the data. This makes all features have mean = 0 and standard deviation = 1 so that no feature dominates just because of its units."
+  },
+  {
+    "input": "Step 4: Applying PCA algorithm",
+    "output": "We reduce the data from 3 features to 2 new features called principal components. These components capture most of the original information but in fewer dimensions.\nWe split the data into 70% training and 30% testing sets.\nWe train alogistic regressionmodel on the reduced training data and predict gender labels on the test set."
+  },
+  {
+    "input": "Step 5: Evaluating with Confusion Matrix",
+    "output": "Theconfusion matrixcompares actual vs predicted labels. This makes it easy to see where predictions were correct or wrong.\nOutput:"
+  },
+  {
+    "input": "Step 6: Visualizing PCA Result",
+    "output": "Output:\nLeft Plot Before PCA: This shows theoriginal standardized dataplotted using the first two features. There isno guarantee of clear separationbetween classes as these are raw input dimensions.\nRight Plot After PCA: This displays thetransformed datausing thetop 2 principal components. These new components capture themaximum varianceoften showing betterclass separation and structuremaking it easier to analyze or model."
+  }
+]

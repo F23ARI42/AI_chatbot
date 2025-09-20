@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Single Layer Perceptron",
+    "output": "It is one of the oldest and first introduced neural networks. It was proposed byFrank Rosenblattin1958. Perceptron is also known as an artificial neural network. Perceptron is mainly used to compute thelogical gatelikeAND, OR and NORwhich has binary input and binary output.\nThe main functionality of the perceptron is:-\nTakes input from the input layer\nWeight them up and sum it up.\nPass the sum to the nonlinear function to produce the output.\nHere activation functions can be anything likesigmoid, tanh, relubased on the requirement we will be choosing the most appropriate nonlinearactivation functionto produce the better result. Now let us implement a single-layer perceptron."
+  },
+  {
+    "input": "Implementation of Single-layer Perceptron",
+    "output": "Let’s build a simplesingle-layer perceptronusingTensorFlow. This model will help you understand how neural networks work at the most basic level."
+  },
+  {
+    "input": "Step1: Import necessary libraries",
+    "output": "Scikit-learn– Scikit-learn provides easy-to-use and efficient tools for data mining and machine learning, enabling quick implementation of algorithms for classification, regression, clustering, and more.\nTensorFlow– This is an open-source library that is used for Machine Learning and Artificial intelligence and provides a range of functions to achieve complex functionalities with single lines of code."
+  },
+  {
+    "input": "Step 2: Create and split synthetic dataset",
+    "output": "We will create a simple 2-feature synthetic binary-classification dataset for our demonstration and then split it into training and testing."
+  },
+  {
+    "input": "Step 3: Standardize the Dataset",
+    "output": "Now standardize the dataset to enable faster and more precise computations.Standardizationhelps the model converge more quickly and often enhances accuracy."
+  },
+  {
+    "input": "Step 4: Building a neural network",
+    "output": "Next, we build the single-layer model using a Sequential architecture with one Dense layer. TheDense(1)indicates that this layer contains a single neuron. We apply the sigmoid activation function, which maps the output to a value between 0 and 1, suitable for binary classification. The original perceptron used a step function that only gave 0 or 1 as output and trained differently. But modern models use sigmoid because it’s smooth and helps the model learn better with gradient-based methods. Theinput_shape=(2,)specifies that each input sample consists of two features."
+  },
+  {
+    "input": "Step 5: Compile the Model",
+    "output": "Next, we compile the model using the Adam optimizer, which is a popular and efficient algorithm for optimizing neural networks. We use binary cross-entropy as the loss function, which is well-suited for binary classification tasks with sigmoid activation. Additionally, we track the model’s performance using accuracy as the evaluation metric during training and testing."
+  },
+  {
+    "input": "Step 6: Train the Model",
+    "output": "Now, we train the model by iterating over the entire training dataset a specified number of times, called epochs. During training, the data is divided into smaller batches of samples, known as the batch size, which determines how many samples are processed before updating the model’s weights. We also set aside a fraction of the training data as validation data to monitor the model’s performance on unseen data during training."
+  },
+  {
+    "input": "Step 7: Model Evaluation",
+    "output": "After training we test the model's performance on unseen data.\nOutput:\nEven with such asimple modelwe achieved close to88% accuracy.That’s quite impressive for a neural network with just one layer. However for even better results we could addhidden layersor use more complex architectures likeCNNs (Convolutional Neural Networks)."
+  }
+]

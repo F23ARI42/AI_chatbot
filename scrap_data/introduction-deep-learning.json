@@ -1,0 +1,30 @@
+[
+  {
+    "input": "How Deep Learning Works?",
+    "output": "Neural networkconsists of layers of interconnected nodes or neurons that collaborate to process input data. In afully connected deep neural networkdata flows through multiple layers where each neuron performs nonlinear transformations, allowing the model to learn intricate representations of the data.\nIn a deep neural network theinput layerreceives data which passes throughhidden layersthat transform the data using nonlinear functions. The finaloutput layergenerates the model’s prediction."
+  },
+  {
+    "input": "Difference between Machine Learning and Deep Learning",
+    "output": "Machine learning and Deep Learning both are subsets of artificial intelligence but there are many similarities and differences between them."
+  },
+  {
+    "input": "Evolution of Neural Architectures",
+    "output": "The journey of deep learning began with theperceptron, a single-layer neural network introduced in the 1950s. While innovative, perceptrons could only solve linearly separable problems hence failing at more complex tasks like the XOR problem.\nThis limitation led to the development ofMulti-Layer Perceptrons (MLPs). It introduced hidden layers and non-linear activation functions. MLPs trained usingbackpropagationcould model complex, non-linear relationships marking a significant leap in neural network capabilities. This evolution from perceptrons to MLPs laid the groundwork for advanced architectures like CNNs and RNNs, showcasing the power of layered structures in solving real-world problems."
+  },
+  {
+    "input": "1. Computer vision",
+    "output": "In computer vision, deep learning models enable machines to identify and understand visual data. Some of the main applications of deep learning in computer vision include:\nObject detection and recognition:Deep learning models are used to identify and locate objects within images and videos, making it possible for machines to perform tasks such as self-driving cars, surveillance and robotics.\nImage classification:Deep learning models can be used to classify images into categories such as animals, plants and buildings. This is used in applications such as medical imaging, quality control and image retrieval.\nImage segmentation:Deep learning models can be used for image segmentation into different regions, making it possible to identify specific features within images."
+  },
+  {
+    "input": "2. Natural language processing (NLP)",
+    "output": "In NLP, deep learning model enable machines to understand and generate human language. Some of the main applications of deep learning in NLP include:\nAutomatic Text Generation:Deep learning model can learn the corpus of text and new text like summaries, essays can be automatically generated using these trained models.\nLanguage translation:Deep learning models can translate text from one language to another, making it possible to communicate with people from different linguistic backgrounds.\nSentiment analysis:Deep learning models can analyze the sentiment of a piece of text, making it possible to determine whether the text is positive, negative or neutral.\nSpeech recognition:Deep learning models can recognize and transcribe spoken words, making it possible to perform tasks such as speech-to-text conversion, voice search and voice-controlled devices."
+  },
+  {
+    "input": "3. Reinforcement learning",
+    "output": "In reinforcement learning, deep learning works as training agents to take action in an environment to maximize a reward. Some of the main applications of deep learning in reinforcement learning include:\nGame playing:Deep reinforcement learning models have been able to beat human experts at games such as Go, Chess and Atari.\nRobotics:Deep reinforcement learning models can be used to train robots to perform complex tasks such as grasping objects, navigation and manipulation.\nControl systems:Deep reinforcement learning models can be used to control complex systems such as power grids, traffic management and supply chain optimization."
+  },
+  {
+    "input": "Disadvantages of Deep Learning",
+    "output": "Deep learning has made significant advancements in various fields but there are still some challenges that need to be addressed. Here are some of the main challenges in deep learning:\nAs we continue to push the boundaries of computational power and dataset sizes, the potential applications of deep learning are limitless. Deep Learning promises to reshape our future where machines can learn, adapt and solve complex problems at a scale and speed previously unimaginable."
+  }
+]

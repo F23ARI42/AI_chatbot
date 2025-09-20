@@ -1,0 +1,30 @@
+[
+  {
+    "input": "Dendrogram",
+    "output": "A dendrogram is like a family tree for clusters. It shows how individual data points or groups of data merge together. The bottom shows each data point as its own group and as we move up, similar groups are combined. The lower the merge point, the more similar the groups are. It helps us see how things are grouped step by step.\nAt the bottom of the dendrogram the points P, Q, R, S and T are all separate.\nAs we move up, the closest points are merged into a single group.\nThe lines connecting the points show how they are progressively merged based on similarity.\nThe height at which they are connected shows how similar the points are to each other; the shorter the line the more similar they are"
+  },
+  {
+    "input": "Types of Hierarchical Clustering",
+    "output": "Now we understand the basics of hierarchical clustering. There are two main types of hierarchical clustering."
+  },
+  {
+    "input": "1. Hierarchical Agglomerative Clustering",
+    "output": "It is also known as the bottom-up approach or hierarchicalagglomerative clustering(HAC). Bottom-up algorithms treat each data as a singleton cluster at the outset and then successively agglomerate pairs of clusters until all clusters have been merged into a single cluster that contains all data."
+  },
+  {
+    "input": "Implementation",
+    "output": "Let's see the implementation of Agglomerative Clustering,\nStart with each data point as its own cluster.\nCompute distances between all clusters.\nMerge the two closest clusters based on a linkage method.\nUpdate the distances to reflect the new cluster.\nRepeat merging until the desired number of clusters or one cluster remains.\nThe dendrogram visualizes these merges as a tree, showing cluster relationships and distances.\nOutput :"
+  },
+  {
+    "input": "2. Hierarchical Divisive clustering",
+    "output": "Divisive clusteringis also known as a top-down approach. Top-down clustering requires a method for splitting a cluster that contains the whole data and proceeds by splitting clusters recursively until individual data have been split into singleton clusters."
+  },
+  {
+    "input": "Implementation",
+    "output": "Let's see the implementation of Divisive Clustering,\nStarts with all data points as one big cluster.\nFinds the largest cluster and splits it into two using KMeans.\nRepeats splitting the largest cluster until reaching the desired number of clusters.\nAssigns cluster labels to each data point based on the splits.\nReturns history of clusters at each step and final labels.\nVisualizes data points colored by their final cluster.\nOutput:"
+  },
+  {
+    "input": "Computing Distance Matrix",
+    "output": "While merging two clusters we check the distance between two every pair of clusters and merge the pair with the least distance/most similarity. But the question is how is that distance determined. There are different ways of defining Inter Cluster distance/similarity. Some of them are:\nMin Distance: Find the minimum distance between any two points of the cluster.\nMax Distance:Find the maximum distance between any two points of the cluster.\nGroup Average: Find the average distance between every two points of the clusters.\nWard's Method: The similarity of two clusters is based on the increase in squared error when two clusters are merged.\nThe image compares cluster distance methods:\nMin uses the shortest distance between clusters\nMax uses the longest\nGroup Average computes the mean of all pairwise distances\nWard’s method minimizes the increase in within-cluster variance during merging"
+  }
+]

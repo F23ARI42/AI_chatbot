@@ -1,0 +1,54 @@
+[
+  {
+    "input": "Types of Logistic Regression",
+    "output": "Logistic regression can be classified into three main types based on the nature of the dependent variable:"
+  },
+  {
+    "input": "Assumptions of Logistic Regression",
+    "output": "Understanding the assumptions behind logistic regression is important to ensure the model is applied correctly, main assumptions are:"
+  },
+  {
+    "input": "Understanding Sigmoid Function",
+    "output": "1. The sigmoid function is a important part of logistic regression which is used to convert the raw output of the model into a probability value between 0 and 1.\n2. This function takes any real number and maps it into the range 0 to 1 forming an \"S\" shaped curve called the sigmoid curve or logistic curve. Because probabilities must lie between 0 and 1, the sigmoid function is perfect for this purpose.\n3. In logistic regression, we use a threshold value usually 0.5 to decide the class label.\nIf the sigmoid output is same or above the threshold, the input is classified as Class 1.\nIf it is below the threshold, the input is classified as Class 0.\nThis approach helps to transform continuous input values into meaningful class predictions."
+  },
+  {
+    "input": "How does Logistic Regression work?",
+    "output": "Logistic regression model transforms thelinear regressionfunction continuous value output into categorical value output using a sigmoid function which maps any real-valued set of independent variables input into a value between 0 and 1. This function is known as the logistic function.\nSuppose we have input features represented as a matrix:\nX = \\begin{bmatrix} x_{11}  & ... & x_{1m}\\\\ x_{21}  & ... & x_{2m} \\\\  \\vdots & \\ddots  & \\vdots  \\\\ x_{n1}  & ... & x_{nm} \\end{bmatrix}\nand the dependent variable isYhaving only binary value i.e 0 or 1.\nY = \\begin{cases} 0 & \\text{ if } Class\\;1 \\\\ 1 & \\text{ if } Class\\;2 \\end{cases}\nthen, apply the multi-linear function to the input variables X.\nz = \\left(\\sum_{i=1}^{n} w_{i}x_{i}\\right) + b\nHerex_iis theithobservation of X,w_i = [w_1, w_2, w_3, \\cdots,w_m]is the weights or Coefficient andbis the bias term also known as intercept. Simply this can be represented as the dot product of weight and bias.\nz = w\\cdot X +b\nAt this stage,zis a continuous value from the linear regression. Logistic regression then applies the sigmoid function tozto convert it into a probability between 0 and 1 which can be used to predict the class.\nNow we use thesigmoid functionwhere the input will be z and we find the probability between 0 and 1. i.e. predicted y.\n\\sigma(z) = \\frac{1}{1+e^{-z}}\nAs shown above the sigmoid function converts the continuous variable data into the probability i.e between 0 and 1.\n\\sigma(z)tends towards 1 asz\\rightarrow\\infty\n\\sigma(z)tends towards 0 asz\\rightarrow-\\infty\n\\sigma(z)is always bounded between 0 and 1\nwhere the probability of being a class can be measured as:\nP(y=1) = \\sigma(z) \\\\ P(y=0) = 1-\\sigma(z)"
+  },
+  {
+    "input": "Logistic Regression Equation and Odds:",
+    "output": "It models the odds of the dependent event occurring which is the ratio of the probability of the event to the probability of it not occurring:\n\\frac{p(x)}{1-p(x)}  = e^z\nTaking the natural logarithm of the odds gives the log-odds or logit:\n\\begin{aligned}\\log \\left[\\frac{p(x)}{1-p(x)} \\right] &= z \\\\ \\log \\left[\\frac{p(x)}{1-p(x)} \\right] &= w\\cdot X +b\\\\ \\frac{p(x)}{1-p(x)}&= e^{w\\cdot X +b} \\;\\;\\cdots\\text{Exponentiate both sides}\\\\ p(x) &=e^{w\\cdot X +b}\\cdot (1-p(x))\\\\p(x) &=e^{w\\cdot X +b}-e^{w\\cdot X +b}\\cdot p(x))\\\\p(x)+e^{w\\cdot X +b}\\cdot p(x))&=e^{w\\cdot X +b}\\\\p(x)(1+e^{w\\cdot X +b}) &=e^{w\\cdot X +b}\\\\p(x)&= \\frac{e^{w\\cdot X +b}}{1+e^{w\\cdot X +b}}\\end{aligned}\nthen the final logistic regression equation will be:\np(X;b,w) = \\frac{e^{w\\cdot X +b}}{1+e^{w\\cdot X +b}} = \\frac{1}{1+e^{-w\\cdot X +b}}\nThis formula represents the probability of the input belonging to Class 1."
+  },
+  {
+    "input": "Likelihood Function for Logistic Regression",
+    "output": "The goal is to find weightswand biasbthat maximize the likelihood of observing the data.\nFor each data pointi\nfory=1, predicted probabilities will be: p(X;b,w) =p(x)\nfory=0The predicted probabilities will be: 1-p(X;b,w) =1-p(x)\nL(b,w) = \\prod_{i=1}^{n}p(x_i)^{y_i}(1-p(x_i))^{1-y_i}\nTaking natural logs on both sides:\n\\begin{aligned}\\log(L(b,w)) &= \\sum_{i=1}^{n} y_i\\log p(x_i)\\;+\\; (1-y_i)\\log(1-p(x_i)) \\\\ &=\\sum_{i=1}^{n} y_i\\log p(x_i)+\\log(1-p(x_i))-y_i\\log(1-p(x_i)) \\\\ &=\\sum_{i=1}^{n} \\log(1-p(x_i)) +\\sum_{i=1}^{n}y_i\\log \\frac{p(x_i)}{1-p(x_i} \\\\ &=\\sum_{i=1}^{n} -\\log1-e^{-(w\\cdot x_i+b)} +\\sum_{i=1}^{n}y_i (w\\cdot x_i +b) \\\\ &=\\sum_{i=1}^{n} -\\log1+e^{w\\cdot x_i+b} +\\sum_{i=1}^{n}y_i (w\\cdot x_i +b) \\end{aligned}\nThis is known as the log-likelihood function."
+  },
+  {
+    "input": "Gradient of the log-likelihood function",
+    "output": "To find the bestwandbwe use gradient ascent on the log-likelihood function. The gradient with respect to each weightw_jis:\n\\begin{aligned} \\frac{\\partial J(l(b,w)}{\\partial w_j}&=-\\sum_{i=n}^{n}\\frac{1}{1+e^{w\\cdot x_i+b}}e^{w\\cdot x_i+b} x_{ij} +\\sum_{i=1}^{n}y_{i}x_{ij} \\\\&=-\\sum_{i=n}^{n}p(x_i;b,w)x_{ij}+\\sum_{i=1}^{n}y_{i}x_{ij} \\\\&=\\sum_{i=n}^{n}(y_i -p(x_i;b,w))x_{ij} \\end{aligned}"
+  },
+  {
+    "input": "Terminologies involved in Logistic Regression",
+    "output": "Here are some common terms involved in logistic regression:"
+  },
+  {
+    "input": "Implementation for Logistic Regression",
+    "output": "Now, let's see the implementation of logistic regression in Python. Here we will be implementing two main types of Logistic Regression:"
+  },
+  {
+    "input": "1. Binomial Logistic regression:",
+    "output": "In binomial logistic regression, the target variable can only have two possible values such as \"0\" or \"1\", \"pass\" or \"fail\". The sigmoid function is used for prediction.\nWe will be usingsckit-learnlibrary for this and shows how to use the breast cancer dataset to implement a Logistic Regression model for classification.\nOutput:\nThis code uses logistic regression to classify whether a sample from the breast cancer dataset is malignant or benign."
+  },
+  {
+    "input": "2. Multinomial Logistic Regression:",
+    "output": "Target variable can have 3 or more possible types which are not ordered i.e types have no quantitative significance like “disease A” vs “disease B” vs “disease C”.\nIn this case, the softmax function is used in place of the sigmoid function.Softmax functionfor K classes will be:\n\\text{softmax}(z_i) =\\frac{ e^{z_i}}{\\sum_{j=1}^{K}e^{z_{j}}}\nHereKrepresents the number of elements in the vectorzandi, jiterates over all the elements in the vector.\nThen the probability for classcwill be:\nP(Y=c | \\overrightarrow{X}=x) = \\frac{e^{w_c \\cdot x + b_c}}{\\sum_{k=1}^{K}e^{w_k \\cdot x + b_k}}\nBelow is an example of implementing multinomial logistic regression using the Digits dataset from scikit-learn:\nOutput:\nThis model is used to predict one of 10 digits (0-9) based on the image features."
+  },
+  {
+    "input": "How to Evaluate Logistic Regression Model?",
+    "output": "Evaluating the logistic regression model helps assess its performance and ensure it generalizes well to new, unseen data. The following metrics are commonly used:\n1. Accuracy:Accuracyprovides the proportion of correctly classified instances.\n2. Precision:Precisionfocuses on the accuracy of positive predictions.\n3. Recall (Sensitivity or True Positive Rate):Recallmeasures the proportion of correctly predicted positive instances among all actual positive instances.\n4. F1 Score:F1 scoreis the harmonic mean of precision and recall.\n5. Area Under the Receiver Operating Characteristic Curve (AUC-ROC):The ROC curve plots the true positive rate against the false positive rate at various thresholds.AUC-ROCmeasures the area under this curve which provides an aggregate measure of a model's performance across different classification thresholds.\n6. Area Under the Precision-Recall Curve (AUC-PR):Similar to AUC-ROC,AUC-PRmeasures the area under the precision-recall curve helps in providing a summary of a model's performance across different precision-recall trade-offs."
+  },
+  {
+    "input": "Differences Between Linear and Logistic Regression",
+    "output": "Logistic regression and linear regression differ in their application and output. Here's a comparison:"
+  }
+]
