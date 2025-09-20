@@ -1,0 +1,30 @@
+[
+  {
+    "input": "1. Narrow AI",
+    "output": "Narrow AI is also known as Weak AI which refers to AI systems that are designed to perform a specific task or a narrow range of tasks. These AI systems are highly specialized and operate within a limited context and excels at the specific functions for which they are programmed."
+  },
+  {
+    "input": "Key Characteristics of Narrow AI",
+    "output": "Task-Specific:Narrow AI is built to perform particular tasks such as facial recognition, language translation or playing chess.\nNo Generalization:These systems cannot generalize their knowledge or apply it to tasks outside their designated function.\nHuman-Like Performance:In their specialized domains, Narrow AI can perform at or even surpass human levels but they do not possess understanding or consciousness."
+  },
+  {
+    "input": "Examples of Narrow AI",
+    "output": "Voice Assistants:These AI-powered assistants like Siri or Alexa can perform a wide range of tasks such as setting reminders, answering queries and controlling smart home devices but they are limited to their programmed capabilities.\nRecommendation Systems:AI-driven recommendation engines used by platforms like Netflix and Amazon suggest products or content based on user behavior and preferences but their functionality is confined to this specific domain."
+  },
+  {
+    "input": "2. General AI",
+    "output": "General AI is also known as Strong AI which refers to AI systems that possess the ability to understand, learn and apply knowledge across a wide range of tasks—similar to human cognitive abilities. Unlike Narrow AI, General AI can perform any intellectual task that a human can do with the ability to generalize knowledge and apply it to different contexts."
+  },
+  {
+    "input": "Key Characteristics of General AI",
+    "output": "Broad Intelligence:General AI would be able to perform a variety of tasks, not just one, making it versatile and adaptable.\nHuman-Like Reasoning:It would have the ability to reason, solve problems and make decisions just like a human being.\nSelf-Learning:General AI would be capable of learning and improving over time, adapting to new situations and acquiring new skills without human intervention.\nAs of now, General AI remains theoretical and has not yet been achieved. Researchers are working on creating AI systems that could one day reach this level of capability but it is considered a long-term goal in AI development."
+  },
+  {
+    "input": "3. Super Intelligent AI",
+    "output": "Super Intelligent AI represents the most advanced form of AI, surpassing human intelligence in all aspects including creativity, problem-solving and emotional intelligence. This type of AI would be capable of outperforming the brightest human minds in any field, from science to art to social skills."
+  },
+  {
+    "input": "Key Characteristics of Superintelligent AI",
+    "output": "Surpasses Human Intelligence:Superintelligent AI would exceed human cognitive abilities, potentially making it the most powerful tool or threat in existence.\nAutonomous Decision-Making:This AI would be able to make decisions without human input and its reasoning and actions could be beyond human comprehension.\nEthical and Existential Concerns:The development of Superintelligent AI raises significant ethical questions including the potential risks it could pose to humanity if not properly controlled.\nLike General AI, Superintelligent AI is still a concept explored in theory and science fiction. Its potential development is a subject of intense debate among AI researchers, ethicists and futurists."
+  }
+]

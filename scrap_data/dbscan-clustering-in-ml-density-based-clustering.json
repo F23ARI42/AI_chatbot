@@ -1,0 +1,34 @@
+[
+  {
+    "input": "Key Parameters in DBSCAN",
+    "output": "1. eps: This defines the radius of the neighborhood around a data point. If the distance between two points is less than or equal to eps they are considered neighbors. A common method to determine eps is by analyzing the k-distance graph. Choosing the right eps is important:\nIf eps is too small most points will be classified as noise.\nIf eps is too large clusters may merge and the algorithm may fail to distinguish between them.\n2. MinPts: This is the minimum number of points required within theepsradius to form a dense region. A general rule of thumb is to set MinPts >= D+1 whereDis the number of dimensions in the dataset."
+  },
+  {
+    "input": "How Does DBSCAN Work?",
+    "output": "DBSCAN works by categorizing data points into three types:\nBy iteratively expanding clusters from core points and connecting density-reachable points, DBSCAN forms clusters without relying on rigid assumptions about their shape or size."
+  },
+  {
+    "input": "Implementation of DBSCAN Algorithm In Python",
+    "output": "Here we’ll use the Python library sklearn to compute DBSCAN and matplotlib.pyplot library for visualizing clusters."
+  },
+  {
+    "input": "Step 1: Importing Libraries",
+    "output": "We import all the necessary library likenumpy,matplotlibandscikit-learn."
+  },
+  {
+    "input": "Step 2: Preparing Dataset",
+    "output": "We will create a dataset of 4 clusters usingmake_blob. The dataset have 300 points that are grouped into 4 visible clusters."
+  },
+  {
+    "input": "Step 3: Applying DBSCAN Clustering",
+    "output": "Now we apply DBSCAN clustering on our data, count it and visualize it using the matplotlib library.\neps=0.3:The radius to look for neighboring points.\nmin_samples:Minimum number of points required to form a dense region a cluster.\nlabels:Cluster numbers for each point.-1means the point is considered noise.\nOutput:\nAs shown in above output image cluster are shown in different colours like yellow, blue, green and red."
+  },
+  {
+    "input": "Step 4: Evaluation Metrics For DBSCAN Algorithm In Machine Learning",
+    "output": "We will use theSilhouette scoreandAdjusted rand scorefor evaluating clustering algorithms.\nSilhouette's score is in the range of -1 to 1. A score near 1 denotes the best meaning that the data point i is very compact within the cluster to which it belongs and far away from the other clusters. The worst value is -1. Values near 0 denote overlapping clusters.\nAbsolute Rand Score is in the range of 0 to 1. More than 0.9 denotes excellent cluster recovery and above 0.8 is a good recovery. Less than 0.5 is considered to be poor recovery.\nOutput:\nBlack points represent outliers. By changing the eps and the MinPts we can change the cluster configuration."
+  },
+  {
+    "input": "When Should We Use DBSCAN Over K-Means Clustering?",
+    "output": "DBSCAN andK-Meansare both clustering algorithms that group together data that have the same characteristic. However they work on different principles and are suitable for different types of data. We prefer to use DBSCAN when the data is not spherical in shape or the number of classes is not known beforehand.\nAs it can identify clusters of arbitrary shapes and effectively handle noise. K-Means on the other hand is better suited for data with well-defined, spherical clusters and is less effective with noise or complex cluster structures."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "input": "1. Bellman Equation for State Value Function",
+    "output": "State value function denoted asV(s)under a given policy represents the expected cumulative reward when starting from statesand following that policy:\nV^{\\pi}(s) = \\mathbb{E}[R(s,a) + \\gamma V^{\\pi }(s')]\nExpanding this equation with transition probabilities we get:\nV^{\\pi}(s) = \\sum_{a \\in A} \\pi(a | s) \\sum_{s' \\in S} P(s' | s, a) \\left[ R(s, a) + \\gamma V^{\\pi}(s') \\right]\nwhere:\nV^{\\pi}(s): Value function of statesunder policy.\nP(s' | s, a): Transition probability from statesto states'when taking actiona.\nR(s, a): Reward obtained after taking actionain states.\nγ: Discount factor controlling the importance of future rewards.\n\\pi(a | s): Probability of taking actionain statesunder policy ."
+  },
+  {
+    "input": "2. Bellman Equation for Action Value Function (Q-function)",
+    "output": "Q-function(Q(s, a))represents the expected return for taking actionain state s and following the policy afterward:\nQ^{\\pi}(s, a) = \\mathbb{E} \\left[ R(s, a) + \\gamma V^{\\pi}(s') \\right]\nExpanding it using transition probabilities:\nQ^{\\pi}(s, a) = \\sum_{s' \\in S} P(s' | s, a) \\left[ R(s, a) + \\gamma \\sum_{a'} \\pi(a' | s') Q^{\\pi}(s', a') \\right]\nThis equation helps compute the expected future rewards based on both current actionaand subsequent policy actions."
+  },
+  {
+    "input": "Bellman Optimality Equations",
+    "output": "For an optimal policy\\pi^*, the Bellman equation becomes:\n1. Optimal State Value Function\nV^*(s) = \\max_{a} \\sum_{s'} P(s' | s, a) \\left[ R(s, a) + \\gamma V^*(s') \\right]\nQ^*(s, a) = \\sum_{s'} P(s' | s, a) \\left[ R(s, a) + \\gamma \\max_{a'} Q^*(s', a') \\right]\nThese equations form the foundation for Dynamic Programming, Temporal Difference (TD) Learning and Q-Learning."
+  },
+  {
+    "input": "Solving MDPs with Bellman Equations",
+    "output": "Markov Decision Processcan be solved using Dynamic Programming (DP) methods that rely on Bellman Equations:\nValue Iteration: Uses Bellman Optimality Equation to iteratively update value functions until convergence.\nPolicy Iteration: Alternates between policy evaluation (solving Bellman Expectation Equation) and policy improvement (updating policy based on new value function).\nQ-Learning: Uses the Bellman Optimality Equation for Q-values to learn optimal policies."
+  },
+  {
+    "input": "Example: Navigating a Maze",
+    "output": "Consider a maze as our environment, where an agent's goal is to reach the trophy state (rewardR = 1) while avoiding the fire state (rewardR = -1). The agent receives positive reinforcement for reaching the goal and negative reinforcement for failing. The agent must navigate the maze efficiently while considering possible future rewards.\nWhat Happens Without the Bellman Equation?\nInitially we allow the agent to explore the environment and find a path to the goal. Once it reaches the trophy state it backtracks to its starting position and assigns a value of V = 1 to all states that lead to the goal.\nHowever if we change the agent’s starting position it will struggle to find a new path since all previously learned state values remain the same. This is where the Bellman Equation helps by dynamically updating state values based on future rewards.\nApplying the Concept\nConsider a state adjacent to the fire state, where V = 0.9. The agent can move UP, DOWN or RIGHT but cannot move LEFT due to a wall. Among the available actions the agent selects the action leading to the maximum value, ensuring the highest possible reward over time.\nBy continuously updating state values the agent systematically calculates the best path while avoiding the fire state. The goal (trophy) and failure (fire) states do not require value updates as they represent terminal states (V = 0). Bellman Equation allows agents to think ahead, balance immediate and future rewards and choose actions wisely."
+  }
+]

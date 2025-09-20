@@ -1,0 +1,42 @@
+[
+  {
+    "input": "Working of Sem-Supervised Learning,",
+    "output": "Several techniques fall under semi-supervised learning including:\nSelf-Training: The model is first trained on labeled data. It then predicts labels for unlabeled data, adding high-confidence predictions to the labeled set iteratively to refine the model.\nCo-Training:Two models are trained on different feature subsets of the data. Each model labels unlabeled data for the other, enabling them to learn from complementary views.\nMulti-View Training: A variation of co-training where models train on different data representations (e.g., images and text) to predict the same output.\nGraph-Based Models: Data is represented as a graph with nodes (data points) and edges (similarities). Labels are propagated from labeled nodes to unlabeled ones based on graph connectivity.\nLet's see an example to understand better,"
+  },
+  {
+    "input": "Step 1: Importing Libraries and Loading Data",
+    "output": "We will import the necessary libraries such asnumpy,matplotlibandsklearn. We will load IRIS Dataset."
+  },
+  {
+    "input": "Step 2: Semi-Supervised Setup (Mask Labels)",
+    "output": "We will setup the semi-supervised working,\nlabels is what we pass to the algorithm (contains -1 for unlabeled).\nmask is a boolean array indicating which points keep their labels.\nlabels[~mask] = -1 — scikit-learn convention: unlabeled = -1.\nPrint helps readers see how many labels remain (important when describing experiments)."
+  },
+  {
+    "input": "Step 3: Train a Graph-Based Model (Label Propagation)",
+    "output": "We will train a graph-based model,\nLabelPropagation() builds a graph on X (similarities) and propagates labels from labeled nodes to unlabeled ones.\nfit(X, labels) performs the label diffusion — no separate .predict() needed for transduction."
+  },
+  {
+    "input": "Step 4: Get Transduced Labels and Evaluate",
+    "output": "Labels are assigned to all points,\nmodel.transduction_ gives the inferred labels for every sample (including previously unlabeled).\nEvaluate both on the small originally-labeled subset (y[mask]) and on the true labels (y) to show how well propagation recovered the full labeling.\naccuracy_score is a simple, interpretable metric.\nOutput:"
+  },
+  {
+    "input": "Step 5: Visualize",
+    "output": "We will visualize results:\nLeft plot shows the few labeled examples (colored) against unlabeled (gray).\nRight plot shows model’s assigned labels for every point after propagation.\nRemoving edgecolor avoids common scatter warnings.\nOutput:\nAs we can see in the result that the model was able to classify images into the categories or labels after successful operations of semi-supervised learning."
+  },
+  {
+    "input": "When to Use Semi-Supervised Learning",
+    "output": "When labeled data is scarce or costly, such as medical imaging requiring expert annotation.\nWhen large volumes of unlabeled data exist, like social media or web content.\nFor unstructured data types (text, images, audio) where labeling is difficult.\nWhen classes are rare and labeled examples few, improving class recognition.\nWhen purely supervised or unsupervised methods are insufficient."
+  },
+  {
+    "input": "Applications",
+    "output": "Let's see the applications,\nFace Recognition: Enhancing accuracy by learning from limited labeled face images plus many unlabeled ones using graph-based methods.\nHandwritten Text Recognition: Adapting models to diverse handwriting styles through generative models.\nSpeech Recognition: Improving transcription quality by using unlabeled speech data with CNNs and other techniques.\nSecurity: Google uses semi-supervised learning for anomaly detection in network traffic and malware detection.\nFinance: PayPal applies it for fraud detection and creditworthiness assessment using transaction data."
+  },
+  {
+    "input": "Advantages",
+    "output": "Better Generalization: Utilizes both labeled and unlabeled data to capture the whole data structure, improving prediction robustness.\nCost Efficient: Reduces dependency on costly manual labeling by exploiting unlabeled data.\nFlexible and Robust: Handles different data types and sources, adapting well to changing data distributions.\nImproved Clustering: Refines clusters by leveraging unlabeled data, yielding better class separation.\nHandling Rare Classes: Enhances learning for underrepresented classes where labeled examples are minimal."
+  },
+  {
+    "input": "Limitations",
+    "output": "Model Complexity: Requires careful choice of architecture and hyperparameters, which may require extensive tuning.\nNoisy Data: Unlabeled data may contain errors or irrelevant information, risking degraded model performance.\nAssumption Sensitivity: Relies on assumptions such as data consistency and clusterability, which may not hold in all cases.\nEvaluation Challenge: Assessing performance is difficult due to limited labeled data and varied quality of unlabeled data."
+  }
+]

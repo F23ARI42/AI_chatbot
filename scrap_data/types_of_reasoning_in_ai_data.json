@@ -1,0 +1,34 @@
+[
+  {
+    "input": "1. Deductive Reasoning",
+    "output": "Deductive reasoningstarts with general principles and applies them to specific cases to arrive at certain conclusions. If the premises are true, the conclusion must also be true.\nExample:If all humans are mortal and Socrates is a human, then Socrates is mortal.\nApplication:It is used in expert systems. These systems apply predefined rules such as “if-then” statements to specific problems to derive solutions. For example, in a medical diagnosis system, if the presence of certain symptoms matches a known pattern a diagnosis is made."
+  },
+  {
+    "input": "2. Inductive Reasoning",
+    "output": "Inductive reasoningworks by drawing general conclusions from specific observations. The conclusions reached are not certain but are based on probability and patterns observed in the data.\nExample:If we observe that the sun rises in the east every day, we might infer that it will rise in the east tomorrow.\nApplication: It is fundamental to machine learning. AI systems, in supervised learning, identify patterns in data and use them to make predictions about new, unseen data. For example, Netflix’s recommendation engine uses inductive reasoning to suggest movies based on past viewing habits."
+  },
+  {
+    "input": "3. Abductive Reasoning",
+    "output": "Abductive reasoningstarts with incomplete observations and seeks the most likely explanation. It’s about making educated guesses based on available data, even if not all facts are known.\nExample: If a patient has a fever and cough, a doctor might hypothesize that they have the flu even though other illnesses could cause similar symptoms.\nApplication:It is used in diagnostic AI systems like those in healthcare or fault detection systems. For example, an AI tool for diagnosing diseases can suggest the most likely diagnosis based on a set of symptoms even if it doesn’t have all the information."
+  },
+  {
+    "input": "4. Analogical Reasoning",
+    "output": "It involves comparing two situations that are similar and using knowledge from one to solve problems in another. It helps AI systems solve problems in new domains by applying solutions from related areas.\nExample: If flying a helicopter is similar to flying a drone, knowledge from piloting a helicopter can be transferred to flying a drone.\nApplications: This type of reasoning is used in robotics and cognitive systems where AI can transfer knowledge from one task like navigating a robot to a similar task of piloting a drone."
+  },
+  {
+    "input": "5. Common Sense Reasoning",
+    "output": "It allows AI to handle situations based on everyday knowledge something that humans use naturally. It involves making judgments about the world that are obvious to humans but difficult for machines to understand such as predicting outcomes in familiar situations.\nExample: If it rains, we can expect the ground to get wet even without explicitly stating it.\nApplication:It is important in conversational AI such as Siri, Alexa which allows AI to respond to user queries in a logical, intuitive manner. It's also used in autonomous vehicles where AI must anticipate and react to everyday scenarios like pedestrians crossing the road."
+  },
+  {
+    "input": "6. Monotonic Reasoning",
+    "output": "It refers to a form of reasoning where conclusions once drawn, cannot be reversed even if new information becomes available. This ensures that conclusions remain consistent regardless of updates to the knowledge base.\nExample: The statement \"The Sahara is a desert\" remains true even if more information about the world's deserts is introduced.\nApplications: It is used in systems requiring consistency such as formal verification tools in AI. These tools ensure that AI systems behave as expected and that conclusions do not change unless deliberately altered."
+  },
+  {
+    "input": "7. Nonmonotonic Reasoning",
+    "output": "In contrast to monotonic reasoning,nonmonotonic reasoningallows AI systems to revise their conclusions based on new information. It’s important for decision-making in dynamic and unpredictable environments.\nExample: Initially, we might think that all birds can fly, but we revise this conclusion after learning about penguins, which cannot fly.\nApplication: It is important for adaptive AI systems that need to change their decisions based on new data such as in real-time traffic management or autonomous vehicles that adjust their routes depending on traffic conditions."
+  },
+  {
+    "input": "8. Fuzzy Reasoning",
+    "output": "Fuzzy reasoningdeals with uncertainty by allowing for degrees of truth rather than binary true/false values. This is useful when data is vague or incomplete.\nExample: The statement \"It’s warm outside\" is vague. Fuzzy reasoning might assign a value like 0.7, to represent how warm it is.\nApplication in AI: It is used in control systems such as those found in smart appliances like air conditioners or washing machines where precise values may not always be available. It’s also used in autonomous vehicles to interpret sensor data when conditions are uncertain (e.g fog or poor visibility).\nAs AI technology continues to evolve, these reasoning techniques will further advance, bringing us closer to machines that can think and act as humans do."
+  }
+]

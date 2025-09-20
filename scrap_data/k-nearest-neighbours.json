@@ -1,0 +1,78 @@
+[
+  {
+    "input": "What is 'K' in K Nearest Neighbour?",
+    "output": "In the k-Nearest Neighbours algorithm k is just a number that tells the algorithm how many nearby points or neighbors to look at when it makes a decision.\nExample:Imagine you're deciding which fruit it is based on its shape and size. You compare it to fruits you already know.\nIf k = 3, the algorithm looks at the 3 closest fruits to the new one.\nIf 2 of those 3 fruits are apples and 1 is a banana, the algorithm says the new fruit is an apple because most of its neighbors are apples."
+  },
+  {
+    "input": "How to choose the value of k for KNN Algorithm?",
+    "output": "The value of k in KNN decides how many neighbors the algorithm looks at when making a prediction.\nChoosing the right k is important for good results.\nIf the data has lots of noise or outliers, using a larger k can make the predictions more stable.\nBut if k is too large the model may become too simple and miss important patterns and this is called underfitting.\nSo k should be picked carefully based on the data."
+  },
+  {
+    "input": "Statistical Methods for Selecting k",
+    "output": "Cross-Validation:Cross-Validationis a good way to find the best value of k is by using k-fold cross-validation. This means dividing the dataset into k parts. The model is trained on some of these parts and tested on the remaining ones. This process is repeated for each part. The k value that gives the highest average accuracy during these tests is usually the best one to use.\nElbow Method: InElbow Methodwe draw a graph showing the error rate or accuracy for different k values. As k increases the error usually drops at first. But after a certain point error stops decreasing quickly. The point where the curve changes direction and looks like an \"elbow\" is usually the best choice for k.\nOdd Values for k: It’s a good idea to use an odd number for k especially in classification problems. This helps avoid ties when deciding which class is the most common among the neighbors."
+  },
+  {
+    "input": "Distance Metrics Used in KNN Algorithm",
+    "output": "KNN uses distance metrics to identify nearest neighbor, these neighbors are used for classification and regression task. To identify nearest neighbor we use below distance metrics:"
+  },
+  {
+    "input": "1. Euclidean Distance",
+    "output": "Euclidean distance is defined as the straight-line distance between two points in a plane or space. You can think of it like the shortest path you would walk if you were to go directly from one point to another."
+  },
+  {
+    "input": "2. Manhattan Distance",
+    "output": "This is the total distance you would travel if you could only move along horizontal and vertical lines like a grid or city streets. It’s also called \"taxicab distance\" because a taxi can only drive along the grid-like streets of a city."
+  },
+  {
+    "input": "3. Minkowski Distance",
+    "output": "Minkowski distance is like a family of distances, which includes both Euclidean and Manhattan distances as special cases.\nFrom the formula above, when p=2, it becomes the same as the Euclidean distance formula and when p=1, it turns into the Manhattan distance formula. Minkowski distance is essentially a flexible formula that can represent either Euclidean or Manhattan distance depending on the value of p."
+  },
+  {
+    "input": "Working of KNN algorithm",
+    "output": "Thе K-Nearest Neighbors (KNN) algorithm operates on the principle of similarity where it predicts the label or value of a new data point by considering the labels or values of its K nearest neighbors in the training dataset."
+  },
+  {
+    "input": "Step 1: Selecting the optimal value of K",
+    "output": "K represents the number of nearest neighbors that needs to be considered while making prediction."
+  },
+  {
+    "input": "Step 2: Calculating distance",
+    "output": "To measure the similarity between target and training data points Euclidean distance is widely used. Distance is calculated between data points in the dataset and target point."
+  },
+  {
+    "input": "Step 3: Finding Nearest Neighbors",
+    "output": "The k data points with the smallest distances to the target point are nearest neighbors."
+  },
+  {
+    "input": "Step 4: Voting for Classification or Taking Average for Regression",
+    "output": "When you want to classify a data point into a category like spam or not spam, the KNN algorithm looks at the K closest points in the dataset. These closest points are called neighbors. The algorithm then looks at which category the neighbors belong to and picks the one that appears the most. This is called majority voting.\nIn regression, the algorithm still looks for the K closest points. But instead of voting for a class in classification, it takes the average of the values of those K neighbors. This average is the predicted value for the new point for the algorithm.\nIt shows how a test point is classified based on its nearest neighbors. As the test point moves the algorithm identifies the closest 'k' data points i.e. 5 in this case and assigns test point the majority class label that is grey label class here."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "Counteris used to count the occurrences of elements in a list or iterable. In KNN after finding the k nearest neighbor labels Counter helps count how many times each label appears."
+  },
+  {
+    "input": "2. Defining the Euclidean Distance Function",
+    "output": "euclidean_distanceis to calculate euclidean distance between points."
+  },
+  {
+    "input": "3. KNN Prediction Function",
+    "output": "distances.appendsaves how far each training point is from the test point, along with its label.\ndistances.sortis used to sorts the list so the nearest points come first.\nk_nearest_labelspicks the labels of the k closest points.\nUses Counter to find which label appears most among those k labels that becomes the prediction."
+  },
+  {
+    "input": "5. Prediction",
+    "output": "Output:\nThe algorithm calculates the distances of the test point [4, 5] to all training points selects the 3 closest points as k = 3 and determines their labels. Since the majority of the closest points are labelled'A'the test point is classified as'A'."
+  },
+  {
+    "input": "Applications of KNN",
+    "output": "Recommendation Systems: Suggests items like movies or products by finding users with similar preferences.\nSpam Detection: Identifies spam emails by comparing new emails to known spam and non-spam examples.\nCustomer Segmentation: Groups customers by comparing their shopping behavior to others.\nSpeech Recognition: Matches spoken words to known patterns to convert them into text."
+  },
+  {
+    "input": "Advantages of KNN",
+    "output": "Simple to use: Easy to understand and implement.\nNo training step: No need to train as it just stores the data and uses it during prediction.\nFew parameters: Only needs to set the number of neighbors (k) and a distance method.\nVersatile: Works for both classification and regression problems."
+  },
+  {
+    "input": "Disadvantages of KNN",
+    "output": "Slow with large data: Needs to compare every point during prediction.\nStruggles with many features: Accuracy drops when data has too many features.\nCan Overfit: It can overfit especially when the data is high-dimensional or not clean."
+  }
+]

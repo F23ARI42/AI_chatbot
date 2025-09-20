@@ -1,0 +1,46 @@
+[
+  {
+    "input": "Key Components of an ANN",
+    "output": "Input Layer:This is where the network receives information. For example, in an image recognition task, the input could be an image.\nHidden Layers:These layers process the data received from the input layer. The more hidden layers there are, the more complex patterns the network can learn and understand. Each hidden layer transforms the data into more abstract information.\nOutput Layer:This is where the final decision or prediction is made. For example, after processing an image, the output layer might decide whether it’s a cat or a dog."
+  },
+  {
+    "input": "Working of Artificial Neural Networks",
+    "output": "ANNs work by learning patterns in data through a process called training. During training, the network adjusts itself to improve its accuracy by comparing its predictions with the actual results.\nLets see how the learning process works:\nInput Layer: Data such as an image, text or number is fed into the network through the input layer.\nHidden Layers: Each neuron in the hidden layers performs some calculation on the input, passing the result to the next layer. The data is transformed and abstracted at each layer.\nOutput Layer: After passing through all the layers, the network gives its final prediction like classifying an image as a cat or a dog.\nThe process ofbackpropagationis used to adjust the weights between neurons. When the network makes a mistake, the weights are updated to reduce the error and improve the next prediction."
+  },
+  {
+    "input": "Training and Testing:",
+    "output": "During training, the network is shown examples like images of cats and learns to recognize patterns in them.\nAfter training, the network is tested on new data to check its performance. The better the network is trained, the more accurately it will predict new data."
+  },
+  {
+    "input": "How do Artificial Neural Networks learn?",
+    "output": "Artificial Neural Networks (ANNs) learn by training on a set of data. For example, to teach an ANN to recognize a cat, we show it thousands of images of cats. The network processes these images and learns to identify the features that define a cat.\nOnce the network has been trained, we test it by providing new images to see if it can correctly identify cats. The network’s prediction is then compared to the actual label (whether it's a cat or not). If it makes an incorrect prediction, the network adjusts by fine-tuning the weights of the connections between neurons using a process called backpropagation. This involves correcting the weights based on the difference between the predicted and actual result.\nThis process repeats until the network can accurately recognize a cat in an image with minimal error. Essentially, through constant training and feedback, the network becomes better at identifying patterns and making predictions."
+  },
+  {
+    "input": "Common Activation Functions in ANNs",
+    "output": "Activation functions are important in neural networks because they introduce non-linearity and helps the network to learn complex patterns. Lets see some common activation functions used in ANNs:\nThese functions help the network decide whether to activate a neuron helps it to recognize patterns and make predictions."
+  },
+  {
+    "input": "1. Feedforward Neural Network (FNN)",
+    "output": "Feedforward Neural Networksare one of the simplest types of ANNs. In this network, data flows in one direction from the input layer to the output layer, passing through one or more hidden layers. There are no loops or cycles means the data doesn’t return to any earlier layers. This type of network does not use backpropagation and is mainly used for basic classification and regression tasks."
+  },
+  {
+    "input": "2. Convolutional Neural Network (CNN)",
+    "output": "Convolutional Neural Networks (CNNs)are designed to process data that has a grid-like structure such as images. It include convolutional layers that apply filters to extract important features from the data such as edges or textures. This makes CNNs effective in image and speech recognition as they can identify patterns and structures in complex data."
+  },
+  {
+    "input": "3. Radial Basis Function Network (RBFN)",
+    "output": "Radial Basis Function Networksare designed to work with data that can be modeled in a radial or circular way. These networks consist of two layers: one that maps input to radial basis functions and another that finds the output. They are used for classification and regression tasks especially when the data represents an underlying pattern or trend."
+  },
+  {
+    "input": "4. Recurrent Neural Network (RNN)",
+    "output": "Recurrent Neural Networksare designed to handle sequential data such as time-series or text. Unlike other networks, RNNs have feedback loops that allow information to be passed back into previous layers, giving the network memory. This feature helps RNNs to make predictions based on the context provided by previous data helps in making them ideal for tasks like speech recognition, language modeling and forecasting."
+  },
+  {
+    "input": "Optimization Algorithms in ANN Training",
+    "output": "Optimization algorithms adjust the weights of a neural network during training to minimize errors. The goal is to make the network’s predictions more accurate. Lets see key algorithms:"
+  },
+  {
+    "input": "Challenges in Artificial Neural Networks",
+    "output": "As technology keeps improving, Artificial Neural Networks will continue to change the way we solve problems and make our lives easier."
+  }
+]
