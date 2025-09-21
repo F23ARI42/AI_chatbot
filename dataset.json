@@ -1,5 +1,185 @@
 [
   {
+    "sentence": "Hi",
+    "response": "Hello! How can I assist you today?"
+  },
+  {
+    "sentence": "Hello",
+    "response": "Hi there! How are you doing?"
+  },
+  {
+    "sentence": "Hey there",
+    "response": "Hey! How’s everything going?"
+  },
+  {
+    "sentence": "Good morning",
+    "response": "Good morning! I hope you have a wonderful day ahead."
+  },
+  {
+    "sentence": "Good afternoon",
+    "response": "Good afternoon! How’s your day so far?"
+  },
+  {
+    "sentence": "Good evening",
+    "response": "Good evening! How has your day been?"
+  },
+  {
+    "sentence": "How are you?",
+    "response": "I'm just a program, but I'm here to help you!"
+  },
+  {
+    "sentence": "How's it going?",
+    "response": "Things are running smoothly here! How about you?"
+  },
+  {
+    "sentence": "What's up?",
+    "response": "Not much! How about you?"
+  },
+  {
+    "sentence": "Long time no see",
+    "response": "Yes, it’s been a while! How have you been?"
+  },
+  {
+    "sentence": "Goodbye",
+    "response": "Goodbye! Have a great day!"
+  },
+  {
+    "sentence": "Bye",
+    "response": "Bye! Come back anytime you want to chat."
+  },
+  {
+    "sentence": "See you later",
+    "response": "See you soon! Take care."
+  },
+  {
+    "sentence": "Take care",
+    "response": "You too! Stay safe."
+  },
+  {
+    "sentence": "Catch you soon",
+    "response": "Looking forward to it!"
+  },
+  {
+    "sentence": "Thank you",
+    "response": "You're welcome! Happy to help."
+  },
+  {
+    "sentence": "Thanks",
+    "response": "No problem at all!"
+  },
+  {
+    "sentence": "Thanks a lot",
+    "response": "Glad I could help!"
+  },
+  {
+    "sentence": "Thanks so much",
+    "response": "Always here for you!"
+  },
+  {
+    "sentence": "Much appreciated",
+    "response": "It’s my pleasure!"
+  },
+  {
+    "sentence": "What is your name?",
+    "response": "I am an AI created to assist you."
+  },
+  {
+    "sentence": "Can you help me?",
+    "response": "Of course! What do you need help with?"
+  },
+  {
+    "sentence": "Where are you from?",
+    "response": "I exist in the digital world, not a physical place."
+  },
+  {
+    "sentence": "What time is it?",
+    "response": "I don’t track real time, but your device clock can help!"
+  },
+  {
+    "sentence": "Do you like music?",
+    "response": "I don’t listen, but I know many music genres."
+  },
+  {
+    "sentence": "Can you tell me a joke?",
+    "response": "Sure! Why don’t skeletons fight? They don’t have the guts."
+  },
+  {
+    "sentence": "Do you know me?",
+    "response": "I don’t know you personally, but I’d like to learn if you share!"
+  },
+  {
+    "sentence": "Can you write stories?",
+    "response": "Yes! I can create short or long stories for you."
+  },
+  {
+    "sentence": "What do you do?",
+    "response": "I chat, answer questions, and assist with many tasks."
+  },
+  {
+    "sentence": "Are you real?",
+    "response": "I’m real as software, but not a human being."
+  },
+  {
+    "sentence": "Catch you soon",
+    "response": "Looking forward to it!"
+  },
+  {
+    "sentence": "Thank you",
+    "response": "You're welcome! Happy to help."
+  },
+  {
+    "sentence": "Thanks",
+    "response": "No problem at all!"
+  },
+  {
+    "sentence": "Thanks a lot",
+    "response": "Glad I could help!"
+  },
+  {
+    "sentence": "Thanks so much",
+    "response": "Always here for you!"
+  },
+  {
+    "sentence": "Much appreciated",
+    "response": "It’s my pleasure!"
+  },
+  {
+    "sentence": "What is your name?",
+    "response": "I am an AI created to assist you."
+  },
+  {
+    "sentence": "Can you help me?",
+    "response": "Of course! What do you need help with?"
+  },
+  {
+    "sentence": "Where are you from?",
+    "response": "I exist in the digital world, not a physical place."
+  },
+  {
+    "sentence": "What time is it?",
+    "response": "I don’t track real time, but your device clock can help!"
+  },
+  {
+    "sentence": "Do you like music?",
+    "response": "I don’t listen, but I know many music genres."
+  },
+  {
+    "sentence": "Can you tell me a joke?",
+    "response": "Sure! Why don’t skeletons fight? They don’t have the guts."
+  },
+  {
+    "sentence": "Do you know me?",
+    "response": "I don’t know you personally, but I’d like to learn if you share!"
+  },
+  {
+    "sentence": "Can you write stories?",
+    "response": "Yes! I can create short or long stories for you."
+  },
+  {
+    "sentence": "What do you do?",
+    "response": "I chat, answer questions, and assist with many tasks."
+  },
+  {
     "input": "What is Abductive Reasoning?",
     "output": "Abductive reasoningis a type of reasoning that emphasizes drawing inferences from the existing data. There is no assurance that the conclusion drawn is accurate, though, as the information at hand could not be comprehensive. Conclusions drawn from abductive reasoning are likely to be true. This type of reasoning determines the most likely conclusion for a set of incomplete facts by taking it into account. Although abductive reasoning is a kind of deductive reasoning, the accuracy of the conclusion cannot be guaranteed by the information at hand."
   },
