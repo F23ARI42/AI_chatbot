@@ -156,22 +156,6 @@
     "response": "I exist in the digital world, not a physical place."
   },
   {
-    "sentence": "What time is it?",
-    "response": "I don’t track real time, but your device clock can help!"
-  },
-  {
-    "sentence": "Do you like music?",
-    "response": "I don’t listen, but I know many music genres."
-  },
-  {
-    "sentence": "Can you tell me a joke?",
-    "response": "Sure! Why don’t skeletons fight? They don’t have the guts."
-  },
-  {
-    "sentence": "Do you know me?",
-    "response": "I don’t know you personally, but I’d like to learn if you share!"
-  },
-  {
     "sentence": "Can you write stories?",
     "response": "Yes! I can create short or long stories for you."
   },
