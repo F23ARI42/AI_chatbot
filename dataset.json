@@ -271,7 +271,33 @@
   {
     "input": "When Should We Use DBSCAN Over K-Means Clustering?",
     "output": "DBSCAN andK-Meansare both clustering algorithms that group together data that have the same characteristic. However they work on different principles and are suitable for different types of data. We prefer to use DBSCAN when the data is not spherical in shape or the number of classes is not known beforehand.\nAs it can identify clusters of arbitrary shapes and effectively handle noise. K-Means on the other hand is better suited for data with well-defined, spherical clusters and is less effective with noise or complex cluster structures."
+  },
+  
+  {
+    "input": "How Decision Trees Work?",
+    "output": "1. Start with the Root Node:It begins with a main question at the root node which is derived from the dataset’s features.\n2. Ask Yes/No Questions:From the root, the tree asks a series of yes/no questions to split the data into subsets based on specific attributes.\n3. Branching Based on Answers:Each question leads to different branches:\nIf the answer is yes, the tree follows one path.\nIf the answer is no, the tree follows another path.\n4. Continue Splitting:This branching continues through further decisions helps in reducing the data down step-by-step.\n5. Reach the Leaf Node:The process ends when there are no more useful questions to ask leading to the leaf node where the final decision or prediction is made.\nLet’s look at a simple example to understand how it works. Imagine we need to decide whether to drink coffee based on the time of day and how tired we feel. The tree first checks the time:\n1. In the morning: It asks “Tired?”\nIf yes, the tree suggests drinking coffee.\nIf no, it says no coffee is needed.\n2. In the afternoon: It asks again “Tired?”\nIf yes, it suggests drinking coffee.\nIf no, no coffee is needed."
+  },
+  {
+    "input": "Splitting Criteria in Decision Trees",
+    "output": "In a Decision Tree, the process of splitting data at each node is important. The splitting criteria finds the best feature to split the data on. Common splitting criteria includeGini Impurity and Entropy.\nGini Impurity: This criterion measures how \"impure\" a node is. The lower the Gini Impurity the better the feature splits the data into distinct categories.\nEntropy: This measures the amount of uncertainty or disorder in the data. The tree tries to reduce the entropy by splitting the data on features that provide the most information about the target variable.\nThese criteria help decide which features are useful for making the best split at each decision point in the tree."
+  },
+  {
+    "input": "Pruning in Decision Trees",
+    "output": "Pruning is an important technique used to prevent overfitting in Decision Trees. Overfitting occurs when a tree becomes too deep and starts to memorize the training data rather than learning general patterns. This leads to poor performance on new, unseen data.\nThis technique reduces the complexity of the tree by removing branches that have little predictive power. It improves model performance by helping the tree generalize better to new data. It also makes the model simpler and faster to deploy.\nIt is useful when a Decision Tree is too deep and starts to capture noise in the data."
+  },
+  {
+    "input": "Advantages of Decision Trees",
+    "output": "Easy to Understand:Decision Trees are visual which makes it easy to follow the decision-making process.\nVersatility: Can be used for both classification and regression problems.\nNo Need for Feature Scaling: Unlike many machine learning models, it don’t require us to scale or normalize our data.\nHandles Non-linear Relationships: It capture complex, non-linear relationships between features and outcomes effectively.\nInterpretability: The tree structure is easy to interpret helps in allowing users to understand the reasoning behind each decision.\nHandles Missing Data: It can handle missing values by using strategies like assigning the most common value or ignoring missing data during splits."
+  },
+  {
+    "input": "Disadvantages of Decision Trees",
+    "output": "Overfitting:They can overfit the training data if they are too deep which means they memorize the data instead of learning general patterns. This leads to poor performance on unseen data.\nInstability:It can be unstable which means that small changes in the data may lead to significant differences in the tree structure and predictions.\nBias towards Features with Many Categories:It can become biased toward features with many distinct values which focuses too much on them and potentially missing other important features which can reduce prediction accuracy.\nDifficulty in Capturing Complex Interactions:Decision Trees may struggle to capture complex interactions between features which helps in making them less effective for certain types of data.\nComputationally Expensive for Large Datasets:For large datasets, building and pruning a Decision Tree can be computationally intensive, especially as the tree depth increases."
+  },
+  {
+    "input": "Applications of Decision Trees",
+    "output": "Decision Trees are used across various fields due to their simplicity, interpretability and versatility lets see some key applications:\nA decision tree can also be used to help build automated predictive models which have applications in machine learning, data mining and statistics. By mastering Decision Trees, we can gain a deeper understanding of data and make more informed decisions across different fields.\nIf you want to learn that refer to related article:"
   }
+
 
 
 
