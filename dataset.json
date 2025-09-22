@@ -333,7 +333,37 @@
   {
     "input": "Deductive Reasoning Solved Examples",
     "output": "Example 1: Identify the conclusion drawn from the following syllogism: \"All mammals are warm-blooded. Elephants are mammals. Therefore, elephants are warm-blooded.\"\nSolution:\nExample 2:Apply modus ponens to the following premises: \"If it rains, then the ground is wet. It is raining.\" What conclusion can be drawn?\nSolution:\nExample 3:Utilize modus tollens with the given premises: \"If the battery is dead, then the car won't start. The car starts.\" What conclusion can be derived?\nSolution:\nExample 4: Analyze the following syllogism: \"All A are B. All B are C. Therefore, all A are C.\" Is the conclusion valid? Why or why not?\nSolution:"
+  },
+  
+  {
+    "input": "Problem with Long-Term Dependencies in RNN",
+    "output": "Recurrent Neural Networks (RNNs) are designed to handle sequential data by maintaining a hidden state that captures information from previous time steps. However they often face challenges in learning long-term dependencies where information from distant time steps becomes crucial for making accurate predictions for current state. This problem is known as the vanishing gradient or exploding gradient problem.\nVanishing Gradient: When training a model over time, the gradients which help the model learn can shrink as they pass through many steps. This makes it hard for the model to learn long-term patterns since earlier information becomes almost irrelevant.\nExploding Gradient: Sometimes gradients can grow too large causing instability. This makes it difficult for the model to learn properly as the updates to the model become erratic and unpredictable.\nBoth of these issues make it challenging for standard RNNs to effectively capture long-term dependencies in sequential data."
+  },
+  {
+    "input": "LSTM Architecture",
+    "output": "LSTM architectures involves the memory cell which is controlled by three gates:\nThis allows LSTM networks to selectively retain or discard information as it flows through the network which allows them to learn long-term dependencies. The network has a hidden state which is like its short-term memory. This memory is updated using the current input, the previous hidden state and the current state of the memory cell."
+  },
+  {
+    "input": "Working of LSTM",
+    "output": "LSTM architecture has a chain structure that contains four neural networks and different memory blocks called cells.\nInformation is retained by the cells and the memory manipulations are done by thegates.There are three gates -"
+  },
+  {
+    "input": "1. Forget Gate",
+    "output": "The information that is no longer useful in the cell state is removed with the forget gate. Two inputsx_t(input at the particular time) andh_{t-1}(previous cell output) are fed to the gate and multiplied with weight matrices followed by the addition of bias. The resultant is passed through sigmoid activation function which gives output in range of [0,1]. If for a particular cell state the output is 0 or near to 0, the piece of information is forgotten and for output of 1 or near to 1, the information is retained for future use.\nThe equation for the forget gate is:\nf_t = \\sigma \\left( W_f \\cdot [h_{t-1}, x_t] + b_f \\right)\nWhere:\nW_frepresents the weight matrix associated with the forget gate.\n[h_t-1, x_t]denotes the concatenation of the current input and the previous hidden state.\nb_fis the bias with the forget gate.\n\\sigmais the sigmoid activation function."
+  },
+  {
+    "input": "2. Input gate",
+    "output": "The addition of useful information to the cell state is done by the input gate. First the information is regulated using the sigmoid function and filter the values to be remembered similar to the forget gate using inputsh_{t-1}andx_t. Then, a vector is created usingtanhfunction that gives an output from -1 to +1 which contains all the possible values fromh_{t-1}andx_t. At last the values of the vector and the regulated values are multiplied to obtain the useful information. The equation for the input gate is:\ni_t = \\sigma \\left( W_i \\cdot [h_{t-1}, x_t] + b_i \\right)\n\\hat{C}_t = \\tanh \\left( W_c \\cdot [h_{t-1}, x_t] + b_c \\right)\nWe multiply the previous state byf_teffectively filtering out the information we had decided to ignore earlier. Then we addi_t \\odot C_twhich represents the new candidate values scaled by how much we decided to update each state value.\nC_t = f_t \\odot C_{t-1} + i_t \\odot \\hat{C}_t\nwhere\n\\odotdenotes element-wise multiplication\ntanh is activation function"
+  },
+  {
+    "input": "3. Output gate",
+    "output": "The output gate is responsible for deciding what part of the current cell state should be sent as the hidden state (output) for this time step.First, the gate uses a sigmoid function to determine which information from the current cell state will be output. This is done using the previous hidden stateh_{t - 1}​ and the current inputx_t​:\no_t = \\sigma \\left( W_o \\cdot [h_{t-1}, x_t] + b_o \\right)\nNext, the current cell stateC_t​ is passed through a tanh activation to scale its values between-1and+1. Finally, this transformed cell state is multiplied element-wise witho_t​ to produce the hidden stateh_t:\nh_t = o_t \\odot \\tanh(C_t)\nHere:\no_t​ is the output gate activation.\nC_t​ is the current cell state.\n\\odotrepresents element-wise multiplication.\n\\sigmais the sigmoid activation function.\nThis hidden state htht​ is then passed to the next time step and can also be used for generating the output of the network."
+  },
+  {
+    "input": "Applications of LSTM",
+    "output": "Some of the famous applications of LSTM includes:\nLanguage Modeling: Used in tasks like language modeling, machine translation and text summarization. These networks learn the dependencies between words in a sentence to generate coherent and grammatically correct sentences.\nSpeech Recognition: Used in transcribing speech to text and recognizing spoken commands. By learning speech patterns they can match spoken words to corresponding text.\nTime Series Forecasting: Used for predicting stock prices, weather and energy consumption. They learn patterns in time series data to predict future events.\nAnomaly Detection: Used for detecting fraud or network intrusions. These networks can identify patterns in data that deviate drastically and flag them as potential anomalies.\nRecommender Systems: In recommendation tasks like suggesting movies, music and books. They learn user behavior patterns to provide personalized suggestions.\nVideo Analysis: Applied in tasks such as object detection, activity recognition and action classification. When combined withConvolutional Neural Networks (CNNs)they help analyze video data and extract useful information."
   }
+
 
 
 
