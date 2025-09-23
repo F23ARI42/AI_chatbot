@@ -650,7 +650,77 @@
   {
     "input": "Disadvantages of Fuzzy Logic",
     "output": "While fuzzy logic has many strengths, it also comes with some challenges:"
+  },
+  
+  {
+    "input": "What are Gated Recurrent Units (GRU) ?",
+    "output": "Gated Recurrent Units (GRUs)are a type of RNN introduced by Cho et al. in 2014. The core idea behind GRUs is to usegating mechanismsto selectively update the hidden state at each time step allowing them to remember important information while discarding irrelevant details. GRUs aim to simplify the LSTM architecture by merging some of its components and focusing on just two main gates: theupdate gateand thereset gate.\nThe GRU consists oftwo main gates:\nThese gates allow GRU to control the flow of information in a more efficient manner compared to traditional RNNs which solely rely on hidden state."
+  },
+  {
+    "input": "Equations for GRU Operations",
+    "output": "The internal workings of a GRU can be described using following equations:"
+  },
+  {
+    "input": "1. Reset gate:",
+    "output": "r_t = \\sigma \\left( W_r \\cdot [h_{t-1}, x_t] \\right)\nThe reset gate determines how much of the previous hidden stateh_{t-1}should be forgotten."
+  },
+  {
+    "input": "2. Update gate:",
+    "output": "z_t = \\sigma(W_z \\cdot [h_{t-1}, x_t])\nThe update gate controls how much of the new informationx_t​ should be used to update the hidden state."
+  },
+  {
+    "input": "3. Candidate hidden state:",
+    "output": "h_t' = \\tanh(W_h \\cdot [r_t \\cdot h_{t-1}, x_t])\nThis is the potential new hidden state calculated based on the current input and the previous hidden state."
+  },
+  {
+    "input": "4. Hidden state:",
+    "output": "h_t = (1 - z_t) \\cdot h_{t-1} + z_t \\cdot h_t'\nThe final hidden state is a weighted average of the previous hidden stateh_{t-1}and the candidate hidden stateh_t'based on the update gatez_t."
+  },
+  {
+    "input": "How GRUs Solve the Vanishing Gradient Problem",
+    "output": "Like LSTMs, GRUs were designed to address thevanishing gradient problemwhich is common in traditional RNNs. GRUs help mitigate this issue by using gates that regulate the flow of gradients during training ensuring that important information is preserved and that gradients do not shrink excessively over time. By using these gates, GRUs maintain a balance between remembering important past information and learning new, relevant data."
+  },
+  {
+    "input": "GRU vs LSTM",
+    "output": "GRUs are more computationally efficient because they combine the forget and input gates into a single update gate. GRUs do not maintain an internal cell state as LSTMs do, instead they store information directly in the hidden state making them simpler and faster."
+  },
+  {
+    "input": "Implementation in Python",
+    "output": "Now let's implement simple GRU model in Python using Keras. We'll start by preparing the necessary libraries and dataset."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We will import the following libraries for implementing our GRU model.\nnumpy: For handling numerical data and array manipulations.\npandas: For data manipulation and reading datasets (CSV files).\nMinMaxScaler: For normalizing the dataset.\nTensorFlow: For building and training the GRU model.\nAdam: An optimization algorithm used during training."
+  },
+  {
+    "input": "2. Loading the Dataset",
+    "output": "The dataset we're using is a time-series dataset containing daily temperature data i.e forecasting dataset. It spans 8,000 days starting from January 1, 2010. You can download dataset fromhere.\npd.read_csv():Reads a CSV file into a pandas DataFrame. Here, we are assuming that the dataset has aDatecolumn which is set as the index of the DataFrame.\ndate_parser=True:Ensures that pandas parses the 'Date' column as datetime.\nOutput:"
+  },
+  {
+    "input": "3. Preprocessing the Data",
+    "output": "We will scale our data to ensure all features have equal weight and avoid any bias. In this example, we will useMinMaxScaler, which scales the data to a range between 0 and 1. Proper scaling is important because neural networks tend to perform better when input features are normalized."
+  },
+  {
+    "input": "4. Preparing Data for GRU",
+    "output": "We will define a function to prepare our data for training our model.\ncreate_dataset():Prepares the dataset for time-series forecasting. It creates sliding windows of time_step length to predict the next time step.\nX.reshape(): Reshapes the input data to fit the expected shape for the GRU which is 3D: [samples, time steps, features]."
+  },
+  {
+    "input": "5. Building the GRU Model",
+    "output": "We will define our GRU model with the following components:\nGRU(units=50):Adds a GRU layer with 50 units (neurons).\nreturn_sequences=True:Ensures that the GRU layer returns the entire sequence (required for stacking multiple GRU layers).\nDense(units=1):The output layer which predicts a single value for the next time step.\nAdam():An adaptive optimizer commonly used in deep learning.\nOutput:"
+  },
+  {
+    "input": "6. Training the Model",
+    "output": "model.fit()trains the model on the prepared dataset. Theepochs=10specifies the number of iterations over the entire dataset, andbatch_size=32defines the number of samples per batch.\nOutput:"
+  },
+  {
+    "input": "7. Making Predictions",
+    "output": "We will be now making predictions using our trained GRU model.\nInput Sequence:The code takes the last 100 temperature values from the dataset(scaled_data[-time_step:]) as an input sequence.\nReshaping the Input Sequence:The input sequence is reshaped into theshape (1, time_step, 1)because the GRU model expects a 3D input: [samples, time_steps, features]. Heresamples=1because we are making one prediction, time_steps=100 (the length of the input sequence) and features=1 because we are predicting only the temperature value.\nmodel.predict():Uses the trained model to predict future values based on the input data.\n\nOutput:"
+  },
+  {
+    "input": "8. Inverse Transforming the Predictions",
+    "output": "Inverse Transforming the Predictions refers to the process of converting the scaled (normalized) predictions back to their original scale.\nscaler.inverse_transform():Converts the normalized predictions back to their original scale.\nOutput:\nThe output25.03^\\omicron \\text{C}is the GRU model's prediction for the next day's temperature based on the past 100 days of data. The model uses historical patterns to forecast future values and converts the prediction back to the original temperature scale."
   }
+
 
 
 
