@@ -936,7 +936,61 @@
   {
     "input": "Applications of Recurrent Neural Networks",
     "output": "RNNs are used in various applications where data is sequential or time-based:\nTime-Series Prediction: RNNs excel in forecasting tasks, such as stock market predictions and weather forecasting.\nNatural Language Processing (NLP): RNNs are fundamental in NLP tasks like language modeling, sentiment analysis and machine translation.\nSpeech Recognition: RNNs capture temporal patterns in speech data, aiding in speech-to-text and other audio-related applications.\nImage and Video Processing: When combined with convolutional layers, RNNs help analyze video sequences, facial expressions and gesture recognition."
+  },
+  
+  {
+    "input": "Working of K-Means Clustering",
+    "output": "Suppose we are given a data set of items with certain features and values for these features like a vector. The task is to categorize those items into groups. To achieve this we will use the K-means algorithm. \"k\" represents the number of groups or clusters we want to classify our items into.\nThe algorithm will categorize the items into \"k\" groups or clusters of similarity. To calculate that similarity we will use theEuclidean distanceas a measurement. The algorithm works as follows:\nThe goal is to partition the dataset intokclusters such that data points within each cluster are more similar to each other than to those in other clusters."
+  },
+  {
+    "input": "Why Use K-Means Clustering?",
+    "output": "K-Means is popular in a wide variety of applications due to its simplicity, efficiency and effectiveness. Here’s why it is widely used:"
+  },
+  {
+    "input": "Implementation of K-Means Clustering",
+    "output": "We will be using blobs datasets and show how clusters are made usingPythonprogramming language."
+  },
+  {
+    "input": "Step 1: Importing the necessary libraries",
+    "output": "We will be importing the following libraries.\nNumpy:for numerical operations (e.g., distance calculation).\nMatplotlib: for plotting data and results.\nScikit learn:to create a synthetic dataset usingmake_blobs"
+  },
+  {
+    "input": "Step 2: Creating Custom Dataset",
+    "output": "We will generate a synthetic dataset with make_blobs.\nmake_blobs(n_samples=500, n_features=2, centers=3):Generates 500 data points in a 2D space, grouped into 3 clusters.\nplt.scatter(X[:, 0], X[:, 1]):Plots the dataset in 2D, showing all the points.\nplt.show():Displays the plot\nOutput:"
+  },
+  {
+    "input": "Step 3:Initializing Random Centroids",
+    "output": "We will randomly initialize the centroids for K-Means clustering\nnp.random.seed(23):Ensures reproducibility by fixing the random seed.\nThe for loop initializes k random centroids, with values between -2 and 2, for a 2D dataset.\nOutput:"
+  },
+  {
+    "input": "Step 4:Plotting Random Initialized Center with Data Points",
+    "output": "We will now plot the data points and the initial centroids.\nplt.grid(): Plots a grid.\nplt.scatter(center[0], center[1], marker='*', c='red'):Plots the cluster center as a red star (* marker).\nOutput:"
+  },
+  {
+    "input": "Step 5:Defining Euclidean Distance",
+    "output": "To assign data points to the nearest centroid, we define a distance function:\nnp.sqrt():Computes the square root of a number or array element-wise.\nnp.sum():Sums all elements in an array or along a specified axis"
+  },
+  {
+    "input": "Step 6:Creating Assign and Update Functions",
+    "output": "Next, we define functions to assign points to the nearest centroid and update the centroids based on the average of the points assigned to each cluster.\ndist.append(dis):Appends the calculated distance to the list dist.\ncurr_cluster = np.argmin(dist):Finds the index of the closest cluster by selecting the minimum distance.\nnew_center = points.mean(axis=0):Calculates the new centroid by taking the mean of the points in the cluster."
+  },
+  {
+    "input": "Step 7: Predicting the Cluster for the Data Points",
+    "output": "We create a function to predict the cluster for each data point based on the final centroids.\npred.append(np.argmin(dist)):Appends the index of the closest cluster (the one with the minimum distance) to pred."
+  },
+  {
+    "input": "Step 8:Assigning, Updating and Predicting the Cluster Centers",
+    "output": "We assign points to clusters, update the centroids and predict the final cluster labels.\nassign_clusters(X, clusters):Assigns data points to the nearest centroids.\nupdate_clusters(X, clusters):Recalculates the centroids.\npred_cluster(X, clusters):Predicts the final clusters for all data points."
+  },
+  {
+    "input": "Step 9: Plotting Data Points with Predicted Cluster Centers",
+    "output": "Finally, we plot the data points, colored by their predicted clusters, along with the updated centroids.\ncenter = clusters[i]['center']:Retrieves the center (centroid) of the current cluster.\nplt.scatter(center[0], center[1], marker='^', c='red'):Plots the cluster center as a red triangle (^ marker).\nOutput:"
+  },
+  {
+    "input": "Challenges with K-Means Clustering",
+    "output": "K-Means algorithm has the following limitations:\nChoosing the Right Number of Clusters(k): One of the biggest challenges is deciding how many clusters to use.\nSensitive to Initial Centroids:The final clusters can vary depending on the initial random placement of centroids.\nNon-Spherical Clusters:K-Means assumes that the clusters are spherical and equally sized. This can be a problem when the actual clusters in the data are of different shapes or densities.\nOutliers: K-Means is sensitive to outliers, which can distort the centroid and, ultimately, the clusters."
   }
+
 
 
 
