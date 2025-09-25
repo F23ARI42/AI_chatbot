@@ -1107,7 +1107,33 @@
   {
     "input": "Conclusion",
     "output": "Knowledge representation is a foundational element of AI, enabling machines to understand, reason, and act on the information they process. By leveraging various representation techniques, AI systems can tackle complex tasks that require human-like intelligence. However, challenges such as complexity, ambiguity, and scalability remain critical areas of ongoing research. As AI continues to evolve, advancements in knowledge representation will play a pivotal role in the development of more intelligent and capable systems."
+  },
+  
+  {
+    "input": "Key Components of an MDP",
+    "output": "An MDP hasfive main parts:\n1.States (S):A state is a situation or condition the agent can be in. For example, A position on a grid like being at cell (1,1).\n2.Actions (A): An action is something the agent can do. For example, Move UP, DOWN, LEFT or RIGHT. Each state can have one or more possible actions.\n3.Transition Model (T): The model tells us what happens when an action is taken in a state. It’s like asking: “If I move RIGHT from here, where will I land?” Sometimes the outcome isn’t always the same that’s uncertainty. For example:\n80% chance of moving in the intended direction\n10% chance of slipping to the left\n10% chance of slipping to the right\nThis randomness is called astochastic transition.\n4.Reward (R): A reward is a number given to the agent after it takes an action. If the reward is positive, it means the result of the action was good. If the reward is negative it means the outcome was bad or there was a penalty help the agent learn what’s good or bad. Examples:\n+1 for reaching the goal\n-1 for stepping into fire\n-0.1 for each step to encourage fewer moves\n5.Policy (π): A policy is the agent’s plan. It tells the agent: “If you are in this state, take this action.” The goal is to find the best policy that helps the agent earn the highest total reward over time.\nLet’s consider a 3x4 grid world. The agent starts at cell(1,1)and aims to reach theBlue Diamondat(4,3)while avoidingFireat(4,2)and aWallat(2,2). At each state the agent can take one of the following actions:UP, DOWN, LEFT or RIGHT"
+  },
+  {
+    "input": "1. Movement with Uncertainty (Transition Model)",
+    "output": "The agent’s moves are stochastic (uncertain):\n80% chance of going in the intended direction.\n10% chance of going left of the intended direction.\n10% chance of going right of the intended direction."
+  },
+  {
+    "input": "2. Reward System",
+    "output": "+1 for reaching the goal.\n-1 for falling into fire.\n-0.04 for each regular move (to encourage shorter paths).\n0 for hitting a wall (no movement or penalty)."
+  },
+  {
+    "input": "3. Goal and Policy",
+    "output": "The agent’s objective is to maximize total rewards.\nIt must find an optimal policy: the best action to take in each state to reach the goal quickly while avoiding danger."
+  },
+  {
+    "input": "4. Path Example",
+    "output": "One possible optimal path is:UP → UP → RIGHT → RIGHT → RIGHT\nBut because of randomness the agent must plan carefully to avoid accidentally slipping into fire."
+  },
+  {
+    "input": "Applications of Markov Decision Processes (MDPs)",
+    "output": "Markov Decision Processes are useful in many real-life situations where decisions must be made step-by-step under uncertainty. Here are some applications:"
   }
+
 
 
 
