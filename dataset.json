@@ -1173,7 +1173,77 @@
   {
     "input": "Disadvantages",
     "output": "Slow convergence: Convergence can be very gradual, especially near the optimum.\nInitialization sensitive: Requires good initial parameter guesses; poor choices may yield bad solutions.\nNo guarantee of global best solution: Unlike some optimization methods, EM doesn’t guarantee reaching the absolute best parameters.\nComputationally intensive: For large datasets or complex models, repeated iterations can be costly."
+  },
+  
+  {
+    "input": "Components of Multi-Layer Perceptron (MLP)",
+    "output": "Input Layer: Each neuron or node in this layer corresponds to an input feature. For instance, if you have three input features the input layer will have three neurons.\nHidden Layers: MLP can have any number of hidden layers with each layer containing any number of nodes. These layers process the information received from the input layer.\nOutput Layer: The output layer generates the final prediction or result. If there are multiple outputs, the output layer will have a corresponding number of neurons.\nEvery connection in the diagram is a representation of the fully connected nature of an MLP. This means that every node in one layer connects to every node in the next layer. As the data moves through the network each layer transforms it until the final output is generated in the output layer."
+  },
+  {
+    "input": "Working of Multi-Layer Perceptron",
+    "output": "Let's see working of the multi-layer perceptron. The key mechanisms such as forward propagation, loss function, backpropagation and optimization."
+  },
+  {
+    "input": "1. Forward Propagation",
+    "output": "Inforward propagationthe data flows from the input layer to the output layer, passing through any hidden layers. Each neuron in the hidden layers processes the input as follows:\n1. Weighted Sum: The neuron computes the weighted sum of the inputs:\nz = \\sum_{i} w_i x_i + b\nWhere:\nx_i​ is the input feature.\nw_i​ is the corresponding weight.\nbis the bias term.\n2.Activation Function: The weighted sum z is passed through an activation function to introduce non-linearity. Common activation functions include:\nSigmoid:\\sigma(z) = \\frac{1}{1 + e^{-z}}\nReLU (Rectified Linear Unit):f(z) = \\max(0, z)\nTanh (Hyperbolic Tangent):\\tanh(z) = \\frac{2}{1 + e^{-2z}} - 1"
+  },
+  {
+    "input": "2. Loss Function",
+    "output": "Once the network generates an output the next step is to calculate the loss using aloss function. In supervised learning this compares the predicted output to the actual label.\nFor a classification problem the commonly usedbinary cross-entropyloss function is:\nL = -\\frac{1}{N} \\sum_{i=1}^{N} \\left[ y_i \\log(\\hat{y}_i) + (1 - y_i) \\log(1 - \\hat{y}_i) \\right]\nWhere:\ny_iis the actual label.\n\\hat{y}_iis the predicted label.\nNis the number of samples.\nFor regression problems themean squared error (MSE)is often used:\nMSE = \\frac{1}{N} \\sum_{i=1}^{N} (y_i - \\hat{y}_i)^2"
+  },
+  {
+    "input": "3. Backpropagation",
+    "output": "The goal of training an MLP is to minimize the loss function by adjusting the network's weights and biases. This is achieved throughbackpropagation:\nWhere:\nwis the weight.\n\\etais the learning rate.\n\\frac{\\partial L}{\\partial w}​is the gradient of the loss function with respect to the weight."
+  },
+  {
+    "input": "4. Optimization",
+    "output": "MLPs rely on optimization algorithms to iteratively refine the weights and biases during training. Popular optimization methods include:\nStochastic Gradient Descent (SGD): Updates the weights based on a single sample or a small batch of data:w = w - \\eta \\cdot \\frac{\\partial L}{\\partial w}\nAdam Optimizer: An extension of SGD that incorporates momentum and adaptive learning rates for more efficient training:m_t = \\beta_1 m_{t-1} + (1 - \\beta_1) \\cdot g_tv_t = \\beta_2 v_{t-1} + (1 - \\beta_2) \\cdot g_t^2\nm_t = \\beta_1 m_{t-1} + (1 - \\beta_1) \\cdot g_t\nv_t = \\beta_2 v_{t-1} + (1 - \\beta_2) \\cdot g_t^2\nHereg_t​ represents the gradient at timetand\\beta_1, \\beta_2are decay rates.\nNow that we are done with the theory part of multi-layer perception, let's go ahead and implement code in python using the TensorFlow library."
+  },
+  {
+    "input": "Implementing Multi Layer Perceptron",
+    "output": "In this section, we will guide through building a neural network using TensorFlow."
+  },
+  {
+    "input": "1. Importing Modules and Loading Dataset",
+    "output": "First we import necessary libraries such asTensorFlow,NumPyandMatplotlibfor visualizing the data. We also load theMNIST dataset."
+  },
+  {
+    "input": "2.Loading and Normalizing Image Data",
+    "output": "Next we normalize the image data by dividing by255(since pixel values range from 0 to 255) which helps in faster convergence during training.\nOutput:"
+  },
+  {
+    "input": "3. Visualizing Data",
+    "output": "To understand the data better we plot the first 100 training samples each representing a digit.\nOutput:"
+  },
+  {
+    "input": "4. Building the Neural Network Model",
+    "output": "Here we build aSequential neural network model. The model consists of:\nFlatten Layer: Reshapes 2D input (28x28 pixels) into a 1D array of 784 elements.\nDense Layers: Fully connected layers with 256 and 128 neurons, both using the relu activation function.\nOutput Layer: The final layer with 10 neurons representing the 10 classes of digits (0-9) withsigmoidactivation."
+  },
+  {
+    "input": "5. Compiling the Model",
+    "output": "Once the model is defined we compile it by specifying:\nOptimizer: Adam for efficient weight updates.\nLoss Function: Sparse categorical cross entropy, which is suitable for multi-class classification.\nMetrics: Accuracy to evaluate model performance."
+  },
+  {
+    "input": "6. Training the Model",
+    "output": "We train the model on the training data using 10 epochs and a batch size of 2000. We also use 20% of the training data for validation to monitor the model’s performance on unseen data during training.\nOutput:"
+  },
+  {
+    "input": "7. Evaluating the Model",
+    "output": "After training we evaluate the model on the test dataset to determine its performance.\nOutput:\nWe got the accuracy of our model 92% by usingmodel.evaluate()on the test samples."
+  },
+  {
+    "input": "8. Visualizing Training and Validation Loss VS Accuracy",
+    "output": "Output:\nThe model is learning effectively on the training set, but the validation accuracy and loss levels off which might indicate that the model is starting to overfit."
+  },
+  {
+    "input": "Advantages of Multi Layer Perceptron",
+    "output": "Versatility: MLPs can be applied to a variety of problems, both classification and regression.\nNon-linearity: Using activation functions MLPs can model complex, non-linear relationships in data.\nParallel Computation: With the help of GPUs, MLPs can be trained quickly by taking advantage of parallel computing."
+  },
+  {
+    "input": "Disadvantages of Multi Layer Perceptron",
+    "output": "Computationally Expensive: MLPs can be slow to train especially on large datasets with many layers.\nProne to Overfitting: Without proper regularization techniques they can overfit the training data, leading to poor generalization.\nSensitivity to Data Scaling: They require properly normalized or scaled data for optimal performance.\nIn short Multilayer Perceptron has the ability to learn complex patterns from data makes it a valuable tool in machine learning."
   }
+
 
 
 
