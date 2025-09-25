@@ -1323,7 +1323,29 @@
   {
     "input": "Applications of Naive Bayes Classifier",
     "output": "Spam Email Filtering: Classifies emails as spam or non-spam based on features.\nText Classification: Used in sentiment analysis, document categorization, and topic classification.\nMedical Diagnosis:Helps in predicting the likelihood of a disease based on symptoms.\nCredit Scoring:Evaluates creditworthiness of individuals for loan approval.\nWeather Prediction: Classifies weather conditions based on various factors."
+  },
+  
+  {
+    "input": "What Are Ontologies?",
+    "output": "Think of ontologies as smart organizing systems for knowledge. Just as a library uses categories to organize books (fiction, non-fiction, science, history), ontologies create structured ways to organize information, enabling computers and people to understand it more effectively.\nInstead of just throwing information into random buckets, ontologies define how different pieces of information connect. They're like creating a family tree, but for ideas and concepts."
+  },
+  {
+    "input": "Let's Look at a Simple Example: Movies",
+    "output": "Imagine you're building a database about movies. An ontology would help you logically organize all the movie information:\nThe Building Blocks of Our Movie Ontology:\n1. Individual Items- These are the actual, specific things:\nMovies: \"Titanic,\" \"Avatar,\" \"The Dark Knight\"\nPeople: Leonardo DiCaprio, Christopher Nolan, Scarlett Johansson\nStudios: Warner Bros, Disney, Netflix\n2. Categories (Classes)- These are the groups we put things into:\nMovie types: Action, Comedy, Drama, Horror\nPeople types: Actors, Directors, Producers\nFormats: Streaming, Theater, DVD\n3. Properties- These describe what something has or what it's like:\nA movie has a runtime, budget, and rating\nA person has an age, nationality, and filmography\nA studio has a location and a founding year\n4. Relationships- These show how things connect:\nLeonardo DiCaprio starred in Titanic\nJames Cameron directed Avatar\nDisney produced many animated films"
+  },
+  {
+    "input": "Why Do We Need Ontologies?",
+    "output": "Think about trying to search for information online. When you type \"comedy movies with Tom Hanks,\" you want results that understand what you mean. Ontologies help computers know that:\nTom Hanks is an actor (not a bank or a location)\nComedy is a movie genre\nYou're looking for movies where he acted, not directed\nThis makes searches smarter and more helpful."
+  },
+  {
+    "input": "Different Ways to Build Ontologies",
+    "output": "Just like there are different programming languages, there are different \"languages\" for creating ontologies:\nWeb Ontology Language (OWL)- The most popular one for internet-based systems\nOpen Biomedical Ontologies (OBO)- Used specifically for medical and biological information\nRule Interchange Format (RIF)- Helps combine different systems together\nCycL- An older system that's good for complex logical relationships"
+  },
+  {
+    "input": "Why Should You Care?",
+    "output": "Ontologies are working behind the scenes in many tools you already use:\nSearch engines use them to give you better results\nVoice assistants use them to understand what you're asking\nRecommendation systems use them to suggest movies, music, or products you might like\nMedical systems use them to help doctors diagnose conditions"
   }
+
 
 
 
