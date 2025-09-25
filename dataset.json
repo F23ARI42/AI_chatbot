@@ -1242,7 +1242,89 @@
   {
     "input": "Disadvantages of Multi Layer Perceptron",
     "output": "Computationally Expensive: MLPs can be slow to train especially on large datasets with many layers.\nProne to Overfitting: Without proper regularization techniques they can overfit the training data, leading to poor generalization.\nSensitivity to Data Scaling: They require properly normalized or scaled data for optimal performance.\nIn short Multilayer Perceptron has the ability to learn complex patterns from data makes it a valuable tool in machine learning."
+  },
+  
+  {
+    "input": "Key Features of Naive Bayes Classifiers",
+    "output": "The main idea behind the Naive Bayes classifier is to useBayes' Theoremto classify data based on the probabilities of different classes given the features of the data. It is used mostly in high-dimensional text classification\nThe Naive Bayes Classifier is a simple probabilistic classifier and it has very few number of parameters which are used to build the ML models that can predict at a faster speed than other classification algorithms.\nIt is a probabilistic classifier because it assumes that one feature in the model is independent of existence of another feature. In other words, each feature contributes to the predictions with no relation between each other.\nNaive Bayes Algorithm is used in spam filtration, Sentimental analysis, classifying articles and many more."
+  },
+  {
+    "input": "Why it is Called Naive Bayes?",
+    "output": "It is named as \"Naive\" because it assumes the presence of one feature does not affect other features. The \"Bayes\" part of the name refers to its basis in Bayes’ Theorem.\nConsider a fictional dataset that describes the weather conditions for playing a game of golf. Given the weather conditions, each tuple classifies the conditions as fit(“Yes”) or unfit(“No”) for playing golf. Here is a tabular representation of our dataset.\nThe dataset is divided into two parts i.e feature matrix and the response vector.\nFeature matrix contains all the vectors(rows) of dataset in which each vector consists of the value of dependent features. In above dataset, features are ‘Outlook’, ‘Temperature’, ‘Humidity’ and ‘Windy’.\nResponse vector contains the value of class variable (prediction or output) for each row of feature matrix. In above dataset, the class variable name is ‘Play golf’."
+  },
+  {
+    "input": "Assumption of Naive Bayes",
+    "output": "The fundamental Naive Bayes assumption is that each feature makes an:\nFeature independence:This means that when we are trying to classify something, we assume that each feature (or piece of information) in the data does not affect any other feature.\nContinuous features are normally distributed:If a feature is continuous, then it is assumed to be normally distributed within each class.\nDiscrete features have multinomial distributions:If a feature is discrete, then it is assumed to have a multinomial distribution within each class.\nFeatures are equally important:All features are assumed to contribute equally to the prediction of the class label.\nNo missing data:The data should not contain any missing values."
+  },
+  {
+    "input": "Introduction to Bayes' Theorem",
+    "output": "Bayes’ Theoremprovides a principled way to reverse conditional probabilities. It is defined as:\nWhere:\nP(y|X): Posterior probability, probability of classygiven featuresX\nP(X|y): Likelihood, probability of featuresXgiven classy\nP(y): Prior probability of classy\nP(X): Marginal likelihood or evidence"
+  },
+  {
+    "input": "1. Terminology",
+    "output": "Consider a classification problem (like predicting if someone plays golf based on weather). Then:\nyis the class label (e.g. \"Yes\" or \"No\" for playing golf)\nX = (x_1, x_2, ..., x_n)is the feature vector (e.g. Outlook, Temperature, Humidity, Wind)\nA sample row from the dataset:\nThis represents:\nWhat is the probability that someone will not play golf given that the weather is Rainy, Hot, High humidity, and No wind?"
+  },
+  {
+    "input": "2. The Naive Assumption",
+    "output": "The \"naive\" in Naive Bayes comes from the assumption that all features are independent given the class. That is:\nThus, Bayes' theorem becomes:\nSince the denominator is constant for a given input, we can write:"
+  },
+  {
+    "input": "3. Constructing the Naive Bayes Classifier",
+    "output": "We compute the posterior for each classyand choose the class with the highest probability:\nThis becomes our Naive Bayes classifier."
+  },
+  {
+    "input": "4. Example: Weather Dataset",
+    "output": "Let’s take a dataset used for predicting if golf is played based on:\nOutlook: Sunny, Rainy, Overcast\nTemperature: Hot, Mild, Cool\nHumidity: High, Normal\nWind: True, False\nExample Input:X = (Sunny, Hot, Normal, False)\nGoal:Predict if golf will be played (YesorNo)."
+  },
+  {
+    "input": "5. Pre-computation from Dataset",
+    "output": "Class Probabilities:\nFrom dataset of 14 rows:\nP(\\text{Yes}) = \\frac{9}{14}\nP(\\text{No}) = \\frac{5}{14}\nConditional Probabilities (Tables 1–4):"
+  },
+  {
+    "input": "6. Calculate Posterior Probabilities",
+    "output": "For Class = Yes:\nFor Class = No:"
+  },
+  {
+    "input": "7. Normalize Probabilities",
+    "output": "To compare:"
+  },
+  {
+    "input": "8. Final Prediction",
+    "output": "Since:"
+  },
+  {
+    "input": "Naive Bayes for Continuous Features",
+    "output": "For continuous features, we assume a Gaussian distribution:\nWhere:\n\\mu_yis the mean of featurex_ifor classy\n\\sigma^2_yis the variance of featurex_ifor classy\nThis leads to what is calledGaussian Naive Bayes."
+  },
+  {
+    "input": "Types of Naive Bayes Model",
+    "output": "There are three types of Naive Bayes Model :"
+  },
+  {
+    "input": "1. Gaussian Naive Bayes",
+    "output": "InGaussian Naive Bayes, continuous values associated with each feature are assumed to be distributed according to a Gaussian distribution. A Gaussian distribution is also calledNormal distributionWhen plotted, it gives a bell shaped curve which is symmetric about the mean of the feature values as shown below:"
+  },
+  {
+    "input": "2. Multinomial Naive Bayes",
+    "output": "Multinomial Naive Bayesis used when features represent the frequency of terms (such as word counts) in a document. It is commonly applied in text classification, where term frequencies are important."
+  },
+  {
+    "input": "3. Bernoulli Naive Bayes",
+    "output": "Bernoulli Naive Bayesdeals with binary features, where each feature indicates whether a word appears or not in a document. It is suited for scenarios where the presence or absence of terms is more relevant than their frequency. Both models are widely used in document classification tasks"
+  },
+  {
+    "input": "Advantages of Naive Bayes Classifier",
+    "output": "Easy to implement and computationally efficient.\nEffective in cases with a large number of features.\nPerforms well even with limited training data.\nIt performs well in the presence of categorical features.\nFor numerical features data is assumed to come from normal distributions"
+  },
+  {
+    "input": "Disadvantages of Naive Bayes Classifier",
+    "output": "Assumes that features are independent, which may not always hold in real-world data.\nCan be influenced by irrelevant attributes.\nMay assign zero probability to unseen events, leading to poor generalization."
+  },
+  {
+    "input": "Applications of Naive Bayes Classifier",
+    "output": "Spam Email Filtering: Classifies emails as spam or non-spam based on features.\nText Classification: Used in sentiment analysis, document categorization, and topic classification.\nMedical Diagnosis:Helps in predicting the likelihood of a disease based on symptoms.\nCredit Scoring:Evaluates creditworthiness of individuals for loan approval.\nWeather Prediction: Classifies weather conditions based on various factors."
   }
+
 
 
 
