@@ -1556,7 +1556,37 @@
   {
     "input": "Disadvantages of Q-learning",
     "output": "Slow Learning: Requires many examples, making it time-consuming for complex problems.\nExpensive in Some Environments: In robotics, testing actions can be costly due to physical limitations.\nCurse of Dimensionality: Large state and action spaces make the Q-table too large to handle efficiently.\nLimited to Discrete Actions: It struggles with continuous actions like adjusting speed, making it less suitable for real-world applications involving continuous decisions."
+  },
+  
+  {
+    "input": "Working of Random Forest Algorithm",
+    "output": "Create Many Decision Trees:The algorithm makes manydecision treeseach using a random part of the data. So every tree is a bit different.\nPick Random Features:When building each tree it doesn’t look at all the features (columns) at once. It picks a few at random to decide how to split the data. This helps the trees stay different from each other.\nEach Tree Makes a Prediction:Every tree gives its own answer or prediction based on what it learned from its part of the data.\nCombine the Predictions:Forclassificationwe choose a category as the final answer is the one that most trees agree on i.e majority voting and forregressionwe predict a number as the final answer is the average of all the trees predictions.\nWhy It Works Well:Using random data and features for each tree helps avoid overfitting and makes the overall prediction more accurate and trustworthy."
+  },
+  {
+    "input": "Key Features of Random Forest",
+    "output": "Handles Missing Data:It can work even if some data is missing so you don’t always need to fill in the gaps yourself.\nShows Feature Importance:It tells you which features (columns) are most useful for making predictions which helps you understand your data better.\nWorks Well with Big and Complex Data:It can handle large datasets with many features without slowing down or losing accuracy.\nUsed for Different Tasks:You can use it for bothclassificationlike predicting types or labels andregressionlike predicting numbers or amounts."
+  },
+  {
+    "input": "Assumptions of Random Forest",
+    "output": "Each tree makes its own decisions: Every tree in the forest makes its own predictions without relying on others.\nRandom parts of the data are used: Each tree is built using random samples and features to reduce mistakes.\nEnough data is needed: Sufficient data ensures the trees are different and learn unique patterns and variety.\nDifferent predictions improve accuracy: Combining the predictions from different trees leads to a more accurate final result."
+  },
+  {
+    "input": "Implementing Random Forest for Classification Tasks",
+    "output": "Here we will predict survival rate of a person in titanic.\nImport libraries likepandasandscikit learn.\nLoad the Titanic dataset.\nRemove rows with missing target values ('Survived').\nSelect features like class, sex, age, etc and convert 'Sex' to numbers.\nFill missing age values with the median.\nSplit the data into training and testing sets, then train a Random Forest model.\nPredict on test data, check accuracy and print a sample prediction result.\nOutput:\nWe evaluated model's performance using a classification report to see how well it predicts the outcomes and used a random sample to check model prediction."
+  },
+  {
+    "input": "Implementing Random Forest for Regression Tasks",
+    "output": "We will do house price prediction here.\nLoad the California housing dataset and create a DataFrame with features and target.\nSeparate the features and the target variable.\nSplit the data into training and testing sets (80% train, 20% test).\nInitialize and train a Random Forest Regressor using the training data.\nPredict house values on test data and evaluate using MSE and R² score.\nPrint a sample prediction and compare it with the actual value.\nOutput:\nWe evaluated the model's performance usingMean Squared ErrorandR-squared Scorewhich show how accurate the predictions are and used a random sample to check model prediction."
+  },
+  {
+    "input": "Advantages of Random Forest",
+    "output": "Random Forest provides very accurate predictions even with large datasets.\nRandom Forest can handle missing data well without compromising with accuracy.\nIt doesn’t require normalization or standardization on dataset.\nWhen we combine multiple decision trees it reduces the risk of overfitting of the model."
+  },
+  {
+    "input": "Limitations of Random Forest",
+    "output": "It can be computationally expensive especially with a large number of trees.\nIt’s harder to interpret the model compared to simpler models like decision trees."
   }
+
 
 
 
