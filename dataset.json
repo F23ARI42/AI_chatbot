@@ -1475,7 +1475,89 @@
   {
     "input": "Limitations of Propositional Logic",
     "output": "Despite of having many advantages it has various limitations:\nPropositional logic is a simple but efficient way to teach machines how to think and make decisions based on facts and knowledge base.\nYou can also read:"
+  },
+  
+  {
+    "input": "1. Q-Values or Action-Values",
+    "output": "Q-values represent the expected rewards for taking an action in a specific state. These values are updated over time using the Temporal Difference (TD) update rule."
+  },
+  {
+    "input": "2. Rewards and Episodes",
+    "output": "The agent moves through different states by taking actions and receiving rewards. The process continues until the agent reaches a terminal state which ends the episode."
+  },
+  {
+    "input": "3. Temporal Difference or TD-Update",
+    "output": "The agent updates Q-values using the formula:\nQ(S,A)\\leftarrow Q(S,A) + \\alpha (R + \\gamma Q({S}',{A}') - Q(S,A))\nWhere,\nSis the current state.\nAis the action taken by the agent.\nS'is the next state the agent moves to.\nA'is the best next action in state S'.\nRis the reward received for taking action A in state S.\nγ (Gamma)is the discount factor which balances immediate rewards with future rewards.\nα (Alpha)is the learning rate determining how much new information affects the old Q-values."
+  },
+  {
+    "input": "4. ϵ-greedy Policy (Exploration vs. Exploitation)",
+    "output": "The ϵ-greedy policy helps the agent decide which action to take based on the current Q-value estimates:\nExploitation:The agent picks the action with the highest Q-value with probability1 - ϵ. This means the agent uses its current knowledge to maximize rewards.\nExploration:With probabilityϵ, the agent picks a random action, exploring new possibilities to learn if there are better ways to get rewards. This allows the agent to discover new strategies and improve its decision-making over time."
+  },
+  {
+    "input": "How does Q-Learning Works?",
+    "output": "Q-learning models follow an iterative process where different components work together to train the agent. Here's how it works step-by-step:"
+  },
+  {
+    "input": "1.Start at a State (S)",
+    "output": "The environment provides the agent with a starting state which describes the current situation or condition."
+  },
+  {
+    "input": "2.Agent Selects an Action (A)",
+    "output": "Based on the current state and the agent chooses an action using its policy. This decision is guided by a Q-table which estimates the potential rewards for different state-action pairs. The agent typically uses an ε-greedy strategy:\nIt sometimes explores new actions (random choice).\nIt mostly exploits known good actions (based on current Q-values)."
+  },
+  {
+    "input": "3.Action is Executed and Environment Responds",
+    "output": "The agent performs the selected action. The environment then provides:\nAnew state (S′)— the result of the action.\nAreward (R)— feedback on the action's effectiveness."
+  },
+  {
+    "input": "4.Learning Algorithm Updates the Q-Table",
+    "output": "The agent updates the Q-table using the new experience:\nIt adjusts the value for the state-action pair based on the received reward and the new state.\nThis helps the agent better estimate which actions are more beneficial over time."
+  },
+  {
+    "input": "5.Policy is Refined and the Cycle Repeats",
+    "output": "With updated Q-values the agent:\nImproves its policy to make better future decisions.\nContinues this loop — observing states, taking actions, receiving rewards and updating Q-values across many episodes.\nOver time the agent learns the optimal policy that consistently yields the highest possible reward in the environment."
+  },
+  {
+    "input": "1.Temporal Difference (TD):",
+    "output": "Temporal Difference is calculated by comparing the current state and action values with the previous ones. It provides a way to learn directly from experience, without needing a model of the environment."
+  },
+  {
+    "input": "2.Bellman’s Equation:",
+    "output": "Bellman’s Equationis a recursive formula used to calculate the value of a given state and determine the optimal action. It is fundamental in the context of Q-learning and is expressed as:\nQ(s, a) = R(s, a) + \\gamma \\max_a Q(s', a)\nWhere:\nQ(s, a)is the Q-value for a given state-action pair.\nR(s, a)is the immediate reward for taking actionain states.\nγis the discount factor, representing the importance of future rewards.\nmax_a Q(s', a)is the maximum Q-value for the next states'and all possible actions."
+  },
+  {
+    "input": "What is a Q-table?",
+    "output": "The Q-table is essentially a memory structure where the agent stores information about which actions yield the best rewards in each state. It is a table of Q-values representing the agent's understanding of the environment. As the agent explores and learns from its interactions with the environment, it updates the Q-table. The Q-table helps the agent make informed decisions by showing which actions are likely to lead to better rewards.\nStructure of a Q-table:\nRows represent the states.\nColumns represent the possible actions.\nEach entry in the table corresponds to the Q-value for a state-action pair.\nOver time, as the agent learns and refines its Q-values through exploration and exploitation, the Q-table evolves to reflect the best actions for each state, leading to optimal decision-making."
+  },
+  {
+    "input": "Implementation of Q-Learning",
+    "output": "Here, we implement basic Q-learning algorithm where agent learns the optimal action-selection strategy to reach a goal state in a grid-like environment."
+  },
+  {
+    "input": "Step 1: Define the Environment",
+    "output": "Set up the environment parameters including the number of states and actions and initialize the Q-table. In this each state represents a position and actions move the agent within this environment."
+  },
+  {
+    "input": "Step 2: Set Hyperparameters",
+    "output": "Define the parameters for the Q-learning algorithm which include the learning rate, discount factor, exploration probability and the number of training epochs."
+  },
+  {
+    "input": "Step 3: Implement the Q-Learning Algorithm",
+    "output": "Perform the Q-learning algorithm over multiple epochs. Each epoch involves selecting actions based on an epsilon-greedy strategy updating Q-values based on rewards received and transitioning to the next state."
+  },
+  {
+    "input": "Step 4: Output the Learned Q-Table",
+    "output": "After training, print the Q-table to examine the learned Q-values which represent the expected rewards for taking specific actions in each state.\nOutput:\nThe learned Q-table shows the expected rewards for each state-action pair, with higher Q-values near the goal state (state 15), indicating the optimal actions that lead to reaching the goal. The agent's actions gradually improve over time, as reflected in the increasing Q-values across states leading to the goal."
+  },
+  {
+    "input": "Advantages of Q-learning",
+    "output": "Trial and Error Learning: Q-learning improves over time by trying different actions and learning from experience.\nSelf-Improvement: Mistakes lead to learning, helping the agent avoid repeating them.\nBetter Decision-Making: Stores successful actions to avoid bad choices in future situations.\nAutonomous Learning: It learns without external supervision, purely through exploration."
+  },
+  {
+    "input": "Disadvantages of Q-learning",
+    "output": "Slow Learning: Requires many examples, making it time-consuming for complex problems.\nExpensive in Some Environments: In robotics, testing actions can be costly due to physical limitations.\nCurse of Dimensionality: Large state and action spaces make the Q-table too large to handle efficiently.\nLimited to Discrete Actions: It struggles with continuous actions like adjusting speed, making it less suitable for real-world applications involving continuous decisions."
   }
+
 
 
 
