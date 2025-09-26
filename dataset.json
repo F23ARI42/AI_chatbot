@@ -1434,7 +1434,49 @@
   {
     "input": "Disadvantages Of Probabilistic Models",
     "output": "There are also some disadvantages to using probabilistic models.\nOne of the disadvantages is the potential foroverfitting, where the model is too specific to the training data and doesn't perform well on new data.\nNot all data fits well into a probabilistic framework, which can limit the usefulness of these models in certain applications.\nAnother challenge is that probabilistic models can be computationally intensive and require significant resources to develop and implement."
+  },
+  
+  {
+    "input": "Understanding Propositional Logic in Artificial Intelligence",
+    "output": "Propositional logicworks with statements called propositions that can be true or false. These propositions represent facts or conditions about a situation. We use symbols to represent the propositions and logical operations to connect those propositions. It help us understand how different facts are related to each other in complex statements or problem. Proposition operators like conjunction (∧), disjunction (∨), negation (¬), implication( →) and biconditional (↔) helps combine various proposition to represent logical relations."
+  },
+  {
+    "input": "Example of Propositions Logic",
+    "output": "P: \"The sky is blue.\" (This statement can be either true or false.)\nQ: \"It is raining right now.\" (This can also be true or false.)\nR: \"The ground is wet.\" (This is either true or false.)\nThese can be combined using logical operations to create more complex statements. For example:\nP ∧ Q: \"The sky is blue AND it is raining.\" (This is true only if both P and Q are true.)\nP ∨ Q: \"The sky is blue OR it is raining.\" (This is true if at least one of P or Q is true.)\n¬P: \"It is NOT true that the sky is blue.\" (This is true if P is false means the sky is not blue.)"
+  },
+  {
+    "input": "Logical Equivalence",
+    "output": "Two statements are logically equivalent if they always have the same truth values in every possible situation. For example:\nThe statement \"S → T\" (if S then T) is equivalent to \"¬S ∨ T\" (not S or T). This means \"if S is true, then T must be true\" is the same as \"either S is false or T is true.\"\nThe biconditional \"P ↔ Q\" (P if and only if Q) is equivalent to \"(P → Q) ∧ (Q → P)\" (P implies Q and Q implies P).\nThese equivalences show that different logical expressions can have the same meaning. You can verify them using truth tables or by simplifying the statements with logical rules."
+  },
+  {
+    "input": "1. Propositions",
+    "output": "A proposition is a statement that can either be true or false. It does not matter how complicated statement is if it can be classified as true or false then it is a proposition. For example:\n\"The sky is blue.\" (True)\n\"It is raining.\" (False)"
+  },
+  {
+    "input": "2. Logical Connectives",
+    "output": "Logical connectives are used to combine simple propositions into more complex ones. The main connectives are:\nAND (∧): This operation is true if both propositions are true.Example: \"It is sunny ∧ it is warm\" is true only if both \"It is sunny\" and \"It is warm\" are true.\nOR (∨): This operation is true if at least one of the propositions is true.Example: \"It is sunny ∨ it is raining\" is true if either \"It is sunny\" or \"It is raining\" is true.\nNOT (¬): This operation reverses the truth value of a proposition.Example: \"¬It is raining\" is true if \"It is raining\" is false.\nIMPLIES (→): This operation is true if the first proposition leads to the second.Example: \"If it rains then the ground is wet\" (It rains → The ground is wet) is true unless it rains and the ground is not wet.\nIF AND ONLY IF (↔): This operation is true if both propositions are either true or false together.Example: \"It is raining ↔ The ground is wet\" is true if both \"It is raining\" and \"The ground is wet\" are either true or both false."
+  },
+  {
+    "input": "3. Truth Tables",
+    "output": "They are used to find the truth value of complex propositions by checking all possible combinations of truth values for their components. They systematically list every possible combinations which helps in making it easy to find how different logical operators affect the overall outcome. This approach ensures that no combination is given extra importance which provides a clear and complete picture of the logic at work."
+  },
+  {
+    "input": "4. Tautologies, Contradictions and Contingencies",
+    "output": "Tautology: A proposition that is always true no matter the truth values of the individual components.Example: \"P ∨ ¬P\" (This is always true because either P is true or P is false).\nContradiction: A proposition that is always false.Example: \"P ∧ ¬P\" (This is always false because P can't be both true and false at the same time).\nContingency: A proposition that can be true or false depending on the truth values of its components.Example: \"P ∧ Q\" (This is true only if both P and Q are true)."
+  },
+  {
+    "input": "Properties of Operators",
+    "output": "Logical operators in propositional logic have various important properties that help to simplify and analyze complex statements:\n1.Commutativity: Order of propositions doesn’t matter when using AND (∧) or OR (∨).\nP ∧ Q ≡ Q ∧ P\nP ∨ Q ≡ Q ∨ P\n2.Associativity: Grouping of propositions doesn’t matter when using multiple ANDs or ORs.\n(P ∧ Q) ∧ R ≡ P ∧ (Q ∧ R)\n(P ∨ Q) ∨ R ≡ P ∨ (Q ∨ R)\n3.Distributivity: AND (∧) and OR (∨) can distribute over each other which is similar to multiplication and addition in math.\nP ∧ (Q ∨ R) ≡ (P ∧ Q) ∨ (P ∧ R)\nP ∨ (Q ∧ R) ≡ (P ∨ Q) ∧ (P ∨ R)\n4.Identity: A proposition combined with \"True\" or \"False\" behaves predictably.\nP ∧ true ≡ P\nP ∨ false ≡ P\n5.Domination: When combined with \"True\" or \"False\" some outcomes are always fixed.\nP ∨ true ≡ true\nP ∧ false ≡ false\n6. Double Negation:Negating a proposition twice cancels out the negation.\n¬ (¬P) ≡ P\n7.Idempotence: Repeating same proposition with AND or OR doesn’t change its value.\nP ∧ P ≡ P\nP ∨ P ≡ P"
+  },
+  {
+    "input": "Applications of Propositional Logic in AI",
+    "output": "1. Knowledge Representation:Propositional logic is used to represent knowledge in a structured way. It allows AI systems to store and manipulate facts about the world. For example in expert systems knowledge is encoded as a set of propositions and logical rules.\n2. Automated Reasoning:AI uses logical rules such as Modus Ponens and Modus Tollens which help systems to find new conclusions from existing fact and to \"think\" logically. For example:\nModus Ponens:If \"P → Q\" and \"P\" are true then \"Q\" must be true.\nModus Tollens:If \"P → Q\" and \"¬Q\" are true then \"¬P\" must be true.\n3. Problem Solving and Planning:It allows AI planners to solve problems and to create action sequences by representing goals. For example theSTRIPS planning systemhelps propositional logic to represent preconditions and effects of actions.\n4. Decision Making:It helps to evaluate various options and find the best course of action. Logical rules can encode decision criteria and truth tables can be used to assess the outcomes of different choices.\n5. Natural Language Processing (NLP):It is applied in NLP for tasks like semantic parsing where natural language sentences are converted into logical representations. This helps in understanding and reasoning about the meaning of sentences."
+  },
+  {
+    "input": "Limitations of Propositional Logic",
+    "output": "Despite of having many advantages it has various limitations:\nPropositional logic is a simple but efficient way to teach machines how to think and make decisions based on facts and knowledge base.\nYou can also read:"
   }
+
 
 
 
