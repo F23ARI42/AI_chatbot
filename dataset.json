@@ -1785,7 +1785,60 @@
   {
     "input": "Disadvantages",
     "output": "Requires labeled data: Large amounts of labeled datasets are expensive and time-consuming to prepare.\nBias from data: If training data is biased or unbalanced, the model may learn and amplify those biases.\nOverfitting risk: Model may memorize training data instead of learning general patterns, especially with small datasets.\nLimited adaptability: Performance drops significantly when applied to data distributions very different from training data.\nNot scalable for some problems: In tasks with millions of possible labels like natural language, supervised labeling becomes impractical."
+  },
+  {
+    "input": "Key Concepts of Support Vector Machine",
+    "output": "Hyperplane: A decision boundary separating different classes in feature space and is represented by the equation wx + b = 0 in linear classification.\nSupport Vectors: The closest data points to the hyperplane, crucial for determining the hyperplane and margin in SVM.\nMargin: The distance between the hyperplane and the support vectors. SVM aims to maximize this margin for better classification performance.\nKernel: A function that maps data to a higher-dimensional space enabling SVM to handle non-linearly separable data.\nHard Margin: A maximum-margin hyperplane that perfectly separates the data without misclassifications.\nSoft Margin: Allows some misclassifications by introducing slack variables, balancing margin maximization and misclassification penalties when data is not perfectly separable.\nC: A regularization term balancing margin maximization and misclassification penalties. A higher C value forces stricter penalty for misclassifications.\nHinge Loss: A loss function penalizing misclassified points or margin violations and is combined with regularization in SVM.\nDual Problem: Involves solving for Lagrange multipliers associated with support vectors, facilitating the kernel trick and efficient computation."
+  },
+  {
+    "input": "How does Support Vector Machine Algorithm Work?",
+    "output": "The key idea behind the SVM algorithm is to find the hyperplane that best separates two classes by maximizing the margin between them. This margin is the distance from the hyperplane to the nearest data points (support vectors) on each side.\nThe best hyperplane also known as the\"hard margin\"is the one that maximizes the distance between the hyperplane and the nearest data points from both classes. This ensures a clear separation between the classes. So from the above figure, we choose L2 as hard margin. Let's consider a scenario like shown below:\nHere, we have one blue ball in the boundary of the red ball."
+  },
+  {
+    "input": "How does SVM classify the data?",
+    "output": "The blue ball in the boundary of red ones is an outlier of blue balls. The SVM algorithm has the characteristics to ignore the outlier and finds the best hyperplane that maximizes the margin. SVM is robust to outliers.\nA soft margin allows for some misclassifications or violations of the margin to improve generalization. The SVM optimizes the following equation to balance margin maximization and penalty minimization:\n\\text{Objective Function} = (\\frac{1}{\\text{margin}}) + \\lambda \\sum \\text{penalty }\nThe penalty used for violations is oftenhinge losswhich has the following behavior:\nIf a data point is correctly classified and within the margin there is no penalty (loss = 0).\nIf a point is incorrectly classified or violates the margin the hinge loss increases proportionally to the distance of the violation.\nTill now we were talking about linearly separable data that seprates group of blue balls and red balls by a straight line/linear line."
+  },
+  {
+    "input": "What if data is not linearly separable?",
+    "output": "When data is not linearly separable i.e it can't be divided by a straight line, SVM uses a technique calledkernelsto map the data into a higher-dimensional space where it becomes separable. This transformation helps SVM find a decision boundary even for non-linear data.\nA kernel is a function that maps data points into a higher-dimensional space without explicitly computing the coordinates in that space. This allows SVM to work efficiently with non-linear data by implicitly performing the mapping. For example consider data points that are not linearly separable. By applying a kernel function SVM transforms the data points into a higher-dimensional space where they become linearly separable.\nLinear Kernel: For linear separability.\nPolynomial Kernel: Maps data into a polynomial space.\nRadial Basis Function (RBF) Kernel: Transforms data into a space based on distances between data points.\nIn this case the new variable y is created as a function of distance from the origin."
+  },
+  {
+    "input": "Mathematical Computation of SVM",
+    "output": "Consider a binary classification problem with two classes, labeled as +1 and -1. We have a training dataset consisting of input feature vectors X and their corresponding class labels Y. The equation for the linear hyperplane can be written as:\nw^Tx+ b = 0\nWhere:\nwis the normal vector to the hyperplane (the direction perpendicular to it).\nbis the offset or bias term representing the distance of the hyperplane from the origin along the normal vectorw."
+  },
+  {
+    "input": "Distance from a Data Point to the Hyperplane",
+    "output": "The distance between a data pointx_iand the decision boundary can be calculated as:\nd_i = \\frac{w^T x_i + b}{||w||}\nwhere ||w|| represents the Euclidean norm of the weight vector w."
+  },
+  {
+    "input": "Linear SVM Classifier",
+    "output": "Distance from a Data Point to the Hyperplane:\n\\hat{y} = \\left\\{ \\begin{array}{cl} 1 & : \\ w^Tx+b \\geq 0 \\\\ 0 & : \\  w^Tx+b  < 0 \\end{array} \\right.\nWhere\\hat{y}is the predicted label of a data point."
+  },
+  {
+    "input": "Optimization Problem for SVM",
+    "output": "For a linearly separable dataset the goal is to find the hyperplane that maximizes the margin between the two classes while ensuring that all data points are correctly classified. This leads to the following optimization problem:\n\\underset{w,b}{\\text{minimize}}\\frac{1}{2}\\left\\| w \\right\\|^{2}\nSubject to the constraint:\ny_i(w^Tx_i + b) \\geq 1 \\;for\\; i = 1, 2,3, \\cdots,m\nWhere:\ny_i​ is the class label (+1 or -1) for each training instance.\nx_i​ is the feature vector for thei-th training instance.\nmis the total number of training instances.\nThe conditiony_i (w^T x_i + b) \\geq 1ensures that each data point is correctly classified and lies outside the margin."
+  },
+  {
+    "input": "Soft Margin in Linear SVM Classifier",
+    "output": "In the presence of outliers or non-separable data the SVM allows some misclassification by introducing slack variables\\zeta_i​. The optimization problem is modified as:\n\\underset{w, b}{\\text{minimize }} \\frac{1}{2} \\|w\\|^2 + C \\sum_{i=1}^{m} \\zeta_i\nSubject to the constraints:\ny_i (w^T x_i + b) \\geq 1 - \\zeta_i \\quad \\text{and} \\quad \\zeta_i \\geq 0 \\quad \\text{for } i = 1, 2, \\dots, m\nWhere:\nCis a regularization parameter that controls the trade-off between margin maximization and penalty for misclassifications.\n\\zeta_i​ are slack variables that represent the degree of violation of the margin by each data point."
+  },
+  {
+    "input": "Dual Problem for SVM",
+    "output": "The dual problem involves maximizing the Lagrange multipliers associated with the support vectors. This transformation allows solving the SVM optimization using kernel functions for non-linear classification.\nThe dual objective function is given by:\n\\underset{\\alpha}{\\text{maximize }} \\frac{1}{2} \\sum_{i=1}^{m} \\sum_{j=1}^{m} \\alpha_i \\alpha_j t_i t_j K(x_i, x_j) - \\sum_{i=1}^{m} \\alpha_i\nWhere:\n\\alpha_i​ are the Lagrange multipliers associated with thei^{th}training sample.\nt_i​ is the class label for thei^{th}-th training sample.\nK(x_i, x_j)is the kernel function that computes the similarity between data pointsx_i​ andx_j​. The kernel allows SVM to handle non-linear classification problems by mapping data into a higher-dimensional space.\nThe dual formulation optimizes the Lagrange multipliers\\alpha_i​ and the support vectors are those training samples where\\alpha_i > 0."
+  },
+  {
+    "input": "SVM Decision Boundary",
+    "output": "Once the dual problem is solved, the decision boundary is given by:\nw = \\sum_{i=1}^{m} \\alpha_i t_i K(x_i, x) + b\nWherewis the weight vector,xis the test data point andbis the bias term. Finally the bias termbis determined by the support vectors, which satisfy:\nt_i (w^T x_i - b) = 1 \\quad \\Rightarrow \\quad b = w^T x_i - t_i\nWherex_i​ is any support vector.\nThis completes the mathematical framework of the Support Vector Machine algorithm which allows for both linear and non-linear classification using the dual problem and kernel trick."
+  },
+  {
+    "input": "Types of Support Vector Machine",
+    "output": "Based on the nature of the decision boundary, Support Vector Machines (SVM) can be divided into two main parts:\nLinear SVM:Linear SVMs use a linear decision boundary to separate the data points of different classes. When the data can be precisely linearly separated, linear SVMs are very suitable. This means that a single straight line (in 2D) or a hyperplane (in higher dimensions) can entirely divide the data points into their respective classes. A hyperplane that maximizes the margin between the classes is the decision boundary.\nNon-Linear SVM:Non-Linear SVMcan be used to classify data when it cannot be separated into two classes by a straight line (in the case of 2D). By using kernel functions, nonlinear SVMs can handle nonlinearly separable data. The original input data is transformed by these kernel functions into a higher-dimensional feature space where the data points can be linearly separated. A linear SVM is used to locate a nonlinear decision boundary in this modified space."
+  },
+  {
+    "input": "Implementing SVM Algorithm Using Scikit-Learn",
+    "output": "We will predict whether cancer is Benign or Malignant using historical data about patients diagnosed with cancer. This data includes independent attributes such as tumor size, texture, and others. To perform this classification, we will use an SVM (Support Vector Machine) classifier to differentiate between benign and malignant cases effectively.\nload_breast_cancer():Loads the breast cancer dataset (features and target labels).\nSVC(kernel=\"linear\", C=1): Creates a Support Vector Classifier with a linear kernel and regularization parameter C=1.\nsvm.fit(X, y):Trains the SVM model on the feature matrix X and target labels y.\nDecisionBoundaryDisplay.from_estimator():Visualizes the decision boundary of the trained model with a specified color map.\nplt.scatter():Creates a scatter plot of the data points, colored by their labels.\nplt.show():Displays the plot to the screen.\nOutput:"
   }
+
 
 
 
