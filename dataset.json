@@ -1741,7 +1741,52 @@
   {
     "input": "Step 7: Model Evaluation",
     "output": "After training we test the model's performance on unseen data.\nOutput:\nEven with such asimple modelwe achieved close to88% accuracy.That’s quite impressive for a neural network with just one layer. However for even better results we could addhidden layersor use more complex architectures likeCNNs (Convolutional Neural Networks)."
+  },
+  {
+    "input": "Types of Supervised Learning in Machine Learning",
+    "output": "Now, Supervised learning can be applied to two main types of problems:\nClassification:Where the output is a categorical variable (e.g., spam vs. non-spam emails, yes vs. no).\nRegression:Where the output is a continuous variable (e.g., predicting house prices, stock prices).\nWhile training the model, data is usually split in the ratio of 80:20 i.e. 80% as training data and the rest as testing data. In training data, we feed input as well as output for 80% of data. The model learns from training data only. We use different supervised learning algorithms (which we will discuss in detail in the next section) to build our model. Let's first understand the classification and regression data through the table below:\nBoth the above figures have labelled data set as follows:\nFigure A: It is a dataset of a shopping store that is useful in predicting whether a customer will purchase a particular product under consideration or not based on his/her gender, age and salary.\nInput: Gender, Age, Salary\nOutput: Purchased i.e. 0 or 1; 1 means yes the customer will purchase and 0 means that the customer won't purchase it.\nFigure B:It is a Meteorological dataset that serves the purpose of predicting wind speed based on different parameters.\nInput: Dew Point, Temperature, Pressure, Relative Humidity, Wind Direction\nOutput: Wind Speed"
+  },
+  {
+    "input": "Working of Supervised Machine Learning",
+    "output": "The working of supervised machine learning follows these key steps:"
+  },
+  {
+    "input": "1. Collect Labeled Data",
+    "output": "Gather a dataset where each input has a known correct output (label).\nExample: Images of handwritten digits with their actual numbers as labels."
+  },
+  {
+    "input": "2. Split the Dataset",
+    "output": "Divide the data into training data (about 80%) and testing data (about 20%).\nThe model will learn from the training data and be evaluated on the testing data."
+  },
+  {
+    "input": "3. Train the Model",
+    "output": "Feed the training data (inputs and their labels) to a suitable supervised learning algorithm (like Decision Trees, SVM or Linear Regression).\nThe model tries to find patterns that map inputs to correct outputs."
+  },
+  {
+    "input": "4. Validate and Test the Model",
+    "output": "Evaluate the model using testing data it has never seen before.\nThe model predicts outputs and these predictions are compared with the actual labels to calculate accuracy or error."
+  },
+  {
+    "input": "5. Deploy and Predict on New Data",
+    "output": "Once the model performs well, it can be used to predict outputs for completely new, unseen data."
+  },
+  {
+    "input": "Supervised Machine Learning Algorithms",
+    "output": "Supervised learning can be further divided into several different types, each with its own unique characteristics and applications. Here are some of the most common types of supervised learning algorithms:\nLinear Regression:Linear regression is a type of supervised learning regression algorithm that is used to predict a continuous output value. It is one of the simplest and most widely used algorithms in supervised learning.\nLogistic Regression: Logistic regression is a type of supervised learning classification algorithm that is used to predict a binary output variable.\nDecision Trees: Decision tree is a tree-like structure that is used to model decisions and their possible consequences. Each internal node in the tree represents a decision, while each leaf node represents a possible outcome.\nRandom Forests: Random forests again are made up of multiple decision trees that work together to make predictions. Each tree in the forest is trained on a different subset of the input features and data. The final prediction is made by aggregating the predictions of all the trees in the forest.\nSupport Vector Machine(SVM):The SVM algorithm creates a hyperplane to segregate n-dimensional space into classes and identify the correct category of new data points. The extreme cases that help create the hyperplane are called support vectors, hence the name Support Vector Machine.\nK-Nearest Neighbors:KNN works by finding k training examples closest to a given input and then predicts the class or value based on the majority class or average value of these neighbors. The performance of KNN can be influenced by the choice of k and the distance metric used to measure proximity.\nGradient Boosting:Gradient Boosting combines weak learners, like decision trees, to create a strong model. It iteratively builds new models that correct errors made by previous ones.\nNaive Bayes Algorithm:The Naive Bayes algorithm is a supervised machine learning algorithm based on applying Bayes' Theorem with the “naive” assumption that features are independent of each other given the class label.\nLet's summarize the supervised machine learning algorithms in table:\nThese types of supervised learning in machine learning vary based on the problem we're trying to solve and the dataset we're working with. In classification problems, the task is to assign inputs to predefined classes, while regression problems involve predicting numerical outcomes."
+  },
+  {
+    "input": "Practical Examples of Supervised learning",
+    "output": "Few practical examples of supervised machine learning across various industries:\nFraud Detection in Banking: Utilizes supervised learning algorithms on historical transaction data, training models with labeled datasets of legitimate and fraudulent transactions to accurately predict fraud patterns.\nParkinson Disease Prediction:Parkinson’s disease is a progressive disorder that affects the nervous system and the parts of the body controlled by the nerves.\nCustomer Churn Prediction:Uses supervised learning techniques to analyze historical customer data, identifying features associated with churn rates to predict customer retention effectively.\nCancer cell classification:Implements supervised learning for cancer cells based on their features and identifying them if they are ‘malignant’ or ‘benign.\nStock Price Prediction: Applies supervised learning to predict a signal that indicates whether buying a particular stock will be helpful or not."
+  },
+  {
+    "input": "Advantages",
+    "output": "Here are some advantages of supervised learning listed below:\nSimplicity & clarity:Easy to understand and implement since it learns from labeled examples.\nHigh accuracy: When sufficient labeled data is available, models achieve strong predictive performance.\nVersatility: Works for both classification like spam detection, disease prediction and regression like price forecasting.\nGeneralization: With enough diverse data and proper training, models can generalize well to unseen inputs.\nWide application: Used in speech recognition, medical diagnosis, sentiment analysis, fraud detection and more."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Requires labeled data: Large amounts of labeled datasets are expensive and time-consuming to prepare.\nBias from data: If training data is biased or unbalanced, the model may learn and amplify those biases.\nOverfitting risk: Model may memorize training data instead of learning general patterns, especially with small datasets.\nLimited adaptability: Performance drops significantly when applied to data distributions very different from training data.\nNot scalable for some problems: In tasks with millions of possible labels like natural language, supervised labeling becomes impractical."
   }
+
 
 
 
