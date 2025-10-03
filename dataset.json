@@ -1625,6 +1625,86 @@
   {
     "input": "Conclusion",
     "output": "Reasoning mechanisms empower AI systems to process information and make decisions in ways that mirror human cognitive abilities. As AI continues to evolve, the integration of advanced reasoning mechanisms will undoubtedly enhance the intelligence and autonomy of AI systems, broadening their potential applications across all sectors of industry and society."
+  },
+  {
+    "input": "Types of Semantic Networks",
+    "output": "We can categorize semantic networks into various types based on the nature and purpose of the relationships they represent:"
+  },
+  {
+    "input": "1. Definitional Networks",
+    "output": "Definitional networks are used to represent hierarchical relationships, used in taxonomies or ontologies. They define concepts by their relationships to more general or more specific concepts. For example, \"Dog\" might be linked to \"Mammal\" which is linked to \"Animal\" showing a classification system."
+  },
+  {
+    "input": "2. Assertional Networks",
+    "output": "It represent specific facts or attributes about concepts. They describe properties of specific entities. For example, \"Rex is a Dog\" and \"Rex has Brown Fur\" are assertions about a particular dog."
+  },
+  {
+    "input": "3. Implicational Networks",
+    "output": "It focus on representing logical implications between concepts. They are used to infer new knowledge from existing relationships. For example, if \"All Dogs are Mammals\" and \"Rex is a Dog\" the network can infer \"Rex is a Mammal.\""
+  },
+  {
+    "input": "4. Executable Networks",
+    "output": "They are designed to represent procedural knowledge where the relationships include actions or sequences that an AI system can execute. For example, a recipe could include steps like \"Add Water\" followed by \"Boil Water.\""
+  },
+  {
+    "input": "5. Learning Networks",
+    "output": "They evolve as the AI system learns new information. They update relationships and nodes based on new data or experiences. For example, an AI might update its understanding of \"Dog\" as it encounters new breeds or characteristics."
+  },
+  {
+    "input": "6. Hybrid Networks",
+    "output": "They combine elements from two or more of the above types, allowing for more complex and versatile representations of knowledge. For example, representing both the general concept of \"Dog\" and specific example like \"Rex.\""
+  },
+  {
+    "input": "Key Components of Semantic Networks",
+    "output": "Semantic networks consist of various key components that helps AI systems to represent and reason about knowledge effectively. These components are important for organizing complex relationships between concepts. They can be grouped into four main categories:"
+  },
+  {
+    "input": "1. Lexical Components",
+    "output": "Nodes: These are the core elements of a semantic network, representing concepts, entities or objects such as \"Dog,\" \"Animal\" or \"Tree.\"\nLabels: Descriptive identifiers attached to nodes, clarifying what each node represents."
+  },
+  {
+    "input": "2. Structural Components",
+    "output": "Edges or Links: These are connections between nodes, defining relationships like \"is a\", \"has a\" or \"causes.\" For example, \"Dog is a Mammal\" represents a hierarchical relationship.\nTypes of Relationships: These can include hierarchical relationships (e.g \"is a\"), associative relationships (e.g \"related to\") and functional relationships (e.g \"causes\" or \"results in\")."
+  },
+  {
+    "input": "3. Semantic Components",
+    "output": "Meanings of Nodes: Each node carries a specific meaning within the context of the network, ensuring proper interpretation of concepts.\nInterpretation of Relationships: The edges define real-world relationships ensuring they reflect accurate connections between concepts."
+  },
+  {
+    "input": "4. Procedural Part",
+    "output": "Inference Rules: These logical rules allow the network to derive new knowledge.\nQuery Mechanisms: These helps users or systems to retrieve information based on specific criteria or conditions.\nUpdate Mechanisms: Semantic networks can be updated to incorporate new knowledge, modifying or adding nodes and edges as needed."
+  },
+  {
+    "input": "Working of Semantic Networks",
+    "output": "In AI systems, semantic networks are used for knowledge representation, reasoning and decision-making Let's see how they work:"
+  },
+  {
+    "input": "Examples of Semantic Networks in AI",
+    "output": "Semantic networks are used in AI to represent and organize complex relationships across different domains. Let's see few examples showing how semantic networks can be applied to various fields:"
+  },
+  {
+    "input": "1.Technology Stack Classification",
+    "output": "Nodes:Frontend, Backend, HTML, CSS, JavaScript, Python, Django, API\nRelationships:\n\"HTML,\" \"CSS\" and \"JavaScript\" are types of Frontend\n\"Python\" and \"Django\" are types of Backend\n\"API\" is used by both Frontend and Backend\nLabels: Web Development, Framework, Language\nIn this semantic network, we map out the components of a technology stack. The relationship between \"HTML,\" \"CSS\" and \"JavaScript\" is defined as \"is a\" (i.e they are types of Frontend) while \"Python\" and \"Django\" are classified under Backend. The \"API\" node connects both Frontend and Backend showing its role in connecting these two aspects of web development."
+  },
+  {
+    "input": "2.Food Hierarchy",
+    "output": "Nodes: Fruit, Apple, Banana, Animal, Lion\nRelationships:\n\"Apple\" and \"Banana\" are types of Fruit\n\"Lion\" is a type of Animal\n\"Fruit\" is eaten by Herbivore\n\"Animal\" is eaten by Carnivore\nLabels: Herbivore, Carnivore, Predator\nThis semantic network shows a basic food chain. \"Apple\" and \"Banana\" are categorized under \"Fruit\" while \"Lion\" is an \"Animal.\" The relationships highlight how \"Fruit\" is typically consumed by \"Herbivores\" and \"Animals\" are consumed by \"Carnivores\" representing the dietary connections in the food chain."
+  },
+  {
+    "input": "Difference Between Semantic Networks and Frames",
+    "output": "Semantic networks and frames are both used for knowledge representation but differ in their structure and approach:"
+  },
+  {
+    "input": "Applications of Semantic Networks in AI",
+    "output": "Semantic networks are used in various AI applications such as:"
+  },
+  {
+    "input": "Advantages of Semantic Networks",
+    "output": "Semantic networks has several advantages which are as follows:"
+  },
+  {
+    "input": "Challenges of Semantic Networks",
+    "output": "Despite their various benefits, semantic networks come with challenges:\nBy mastering semantic networks helps AI systems understand and reason better, making technologies smarter and more efficient."
   }
 
 
