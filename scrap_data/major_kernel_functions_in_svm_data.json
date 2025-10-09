@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Types of SVM Kernel Functions",
+    "output": "SVM algorithm use the mathematical function defined by the kernel.Kernel Functionis a methodused to take data as input and transform it into the required form of processing data.\". Different algorithm uses different type of kernel functions. These  function are of different types. For example Linear, Polynomial, Gaussian etc. We can define the Kernel function as:\nK (\\bar{x}) = 1, if ||\\bar{x}|| <= 1\nK (\\bar{x}) = 0, Otherwise\nThis function is 1 inside a closed ball of radius 1 centered at the origin and 0 outside. It works like a switch: on (1) inside the ball and off (0) outside. just like shown in figure:"
+  },
+  {
+    "input": "Types of Kernels used in SVM",
+    "output": "Here are some common types of kernels used by SVM. Let's understand them one by one:"
+  },
+  {
+    "input": "1. Linear Kernel",
+    "output": "Alinear kernelis the simplest form of kernel used in SVM. It is suitable when the data is linearly separable meaning that a straight line (or hyperplane in higher dimensions) can effectively separate the classes.\nIt is represented as:K(x,y)= x.y\nIt is used for text classification problems such as spam detection"
+  },
+  {
+    "input": "2. Polynomial Kernel",
+    "output": "Thepolynomial kernelallows SVM to model more complex relationships by introducing polynomial terms. It is useful when the data is not linearly separable but still follows a pattern. The formula of Polynomial kernel is:\nK(x,y)=(x.y+c)^dwhere  is a constant and d is the polynomial degree.\nIt is used in  Complex problems like image recognition where relationships between features can be non-linear."
+  },
+  {
+    "input": "3.  Radial Basis Function Kernel (RBF) Kernel",
+    "output": "TheRBF kernelis the most widely used kernel in SVM. It maps the data into an infinite-dimensional space making it highly effective for complex classification problems. The formula of RBF kernel is:\nK (x, y) = e ^ - (\\gamma{||x - y||^2})where\\gammais a parameter that controls the influence of each training example.\nWe use RBF kernel When the decision boundary is highly non-linear and we have no prior knowledge about the data’s structure is available."
+  },
+  {
+    "input": "4. Gaussian Kernel",
+    "output": "TheGaussian kernelis a special case of the RBF kernel and is widely used for non-linear data classification. It provides smooth and continuous transformations of data into higher dimensions. It can be represented by:\nK (x, y) = e ^ - (\\frac{||x - y||^2} {2 \\sigma^2})where\\sigmais a parameter that controls the spread of the kernel function.\nIt is used Used when data has a smooth, continuous distribution and requires a flexible boundary."
+  },
+  {
+    "input": "5. Sigmoid Kernel",
+    "output": "Thesigmoid kernelis inspired by neural networks and behaves similarly to the activation function of a neuron. It is based on the hyperbolic tangent function and is suitable for neural networks and other non-linear classifiers. It is represented as:\nK (x, y) = tanh (\\gamma.{x^T y}+{r})\nIt is often used inneural networksandnon-linear classifiers."
+  },
+  {
+    "input": "Choosing the Right Kernel for SVM",
+    "output": "Picking the right kernel for an SVM (Support Vector Machine) model is very important because it affects how well the model works. Here’s a simple guide to help you choose the right kernel:"
+  },
+  {
+    "input": "Real World Applications of SVM Kernels",
+    "output": "Linear kernelsare commonly used in credit scoring and fraud detection models because they are fast, easy to implement and produce interpretable results.\nPolynomial kernelsare frequently applied in image classification tasks to identify objects or patterns in images. They help capture the complex relationships between pixel features, making them suitable for tasks like facial recognition or object detection.\nIntext analysissuch as sentiment analysis (classifying text as positive, negative, or neutral) SVMs with various kernels can handle different types of text data. Non-linear kernels especiallyRBF\nSVM kernelsare used to diagnose diseases predict patient outcomes and identify patterns in medical data."
+  }
+]
