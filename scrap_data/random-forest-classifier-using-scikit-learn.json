@@ -1,0 +1,42 @@
+[
+  {
+    "input": "Benefits of Random Forest Classification:",
+    "output": "Random Forest can handle large datasets and high-dimensional data.\nBy combining predictions from many decision trees, it reduces the risk of overfitting compared to a single decision tree.\nIt is robust to noisy data and works well with categorical data."
+  },
+  {
+    "input": "Implementing Random Forest Classification in Python",
+    "output": "Before implementing random forest classifier in Python let's first understand it's parameters.\nn_estimators:Number of trees in the forest.\nmax_depth:Maximum depth of each tree.\nmax_features:Number of features considered for splitting at each node.\ncriterion:Function used to measure split quality ('gini' or 'entropy').\nmin_samples_split:Minimum samples required to split a node.\nmin_samples_leaf:Minimum samples required to be at a leaf node.\nbootstrap:Whether to use bootstrap sampling when building trees (True or False).\nNow that we know it's parameters we can start building it in python."
+  },
+  {
+    "input": "1. Import Required Libraries",
+    "output": "We will be importingPandas,matplotlib,seabornandsklearnto build the model."
+  },
+  {
+    "input": "2. Import Dataset",
+    "output": "For this we'll use theIris Datasetwhich is available within scikit learn. This dataset contains information about three types of Iris flowers and their respective features (sepal length, sepal width, petal length and petal width).\nOutput:"
+  },
+  {
+    "input": "3. Data Preparation",
+    "output": "Here we will separate the features (X) and the target variable (y)."
+  },
+  {
+    "input": "4. Splitting the Dataset",
+    "output": "We'll split the dataset into training and testing sets so we can train the model on one part and evaluate it on another.\nX_train, y_train:80% of the data used to train the model.\nX_test, y_test:20% of the data used to test the model.\ntest_size=0.2:means 20% of data goes to testing.\nrandom_state=42:ensures you get the same split every time"
+  },
+  {
+    "input": "5. Feature Scaling",
+    "output": "Feature scaling ensures that all the features are on a similar scale which is important for some machine learning models. However Random Forest is not highly sensitive to feature scaling. But it is a good practice to scale when combining models."
+  },
+  {
+    "input": "6. Building Random Forest Classifier",
+    "output": "We will create the Random Forest Classifier model, train it on the training data and make predictions on the test data.\nRandomForestClassifier(n_estimators=100, random_state=42)creates 100 trees (100 trees balance accuracy and training time).\nclassifier.fit(X_train, y_train)trains on training data.\nclassifier.predict(X_test)predicts on test data.\nrandom_state=42ensures reproducible results."
+  },
+  {
+    "input": "7. Evaluation of the Model",
+    "output": "We will evaluate the model using the accuracy score and confusion matrix.\nOutput:"
+  },
+  {
+    "input": "8. Feature Importance",
+    "output": "Random Forest Classifiers also provide insight into which features were the most important in making predictions. We can plot the feature importance.\nOutput:\nFrom the graph we can see that petal width (cm) is the most important feature followed closely by petal length (cm). The sepal width (cm) and sepal length (cm) have lower importance in determining the model’s predictions. This indicates that the classifier relies more on the petal measurements to make predictions about the flower species."
+  }
+]
