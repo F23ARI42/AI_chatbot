@@ -2409,7 +2409,68 @@
   {
     "input": "8. Feature Importance",
     "output": "Random Forest Classifiers also provide insight into which features were the most important in making predictions. We can plot the feature importance.\nOutput:\nFrom the graph we can see that petal width (cm) is the most important feature followed closely by petal length (cm). The sepal width (cm) and sepal length (cm) have lower importance in determining the model’s predictions. This indicates that the classifier relies more on the petal measurements to make predictions about the flower species."
+  },
+  {
+    "input": "Need for Polynomial Regression",
+    "output": "Non-linear Relationships:Polynomial regression is used when the relationship between the independent variable (input) and dependent variable (output) is non-linear. Unlike linear regression which fits a straight line, it fits a polynomial equation to capture the curve in the data.\nBetter Fit for Curved Data:When a researcher hypothesizes a curvilinear relationship, polynomial terms are added to the model. A linear model often results in residuals with noticeable patterns which shows a poor fit. It can capture these non-linear patterns effectively.\nFlexibility and Complexity:It does not assume all independent variables are independent. By introducing higher-degree terms, it allows for more flexibility and can model more complex, curvilinear relationships between variables."
+  },
+  {
+    "input": "How does a Polynomial Regression work?",
+    "output": "Polynomial regression is an extension oflinear regressionwhere higher-degree terms are added to model non-linear relationships. The general form of the equation for a polynomial regression of degreenis:\ny=β_0+β_1x+β_2x^2+…+β_nx^n +ϵ\nwhere:\nyis the dependent variable.\nxis the independent variable.\nβ_0,β_1,…,β_n​ are the coefficients of the polynomial terms.\nnis the degree of the polynomial.\nϵrepresents the error term.\nThe goal of regression analysis is to model the expected value of a dependent variableyin terms of an independent variablex. In simple linear regression, this relationship is modeled as:\ny = a + bx + e\nHere\nyis a dependent variable\nais the y-intercept,bis the slope\neis the error term\nHowever in cases where the relationship between the variables is nonlinear such as modelling chemical synthesis based on temperature, a linear model may not be sufficient. Instead, we use polynomial regression which introduces higher-degree terms such asx ^2to better capture the relationship.\nFor example, a quadratic model can be written as:\ny = a + b_1x + b_2x^2 + e\nHere:\nyis the dependent variable onx\nais the y-intercept andeis the error rate.\nIn general, polynomial regression can be extended to the nth degree:\ny = a + b_1x + b_2x^2 +....+ b_nx^n\nWhile the regression function is linear in terms of the unknown coefficients𝑏_0,𝑏_1,…,𝑏_𝑛, the model itself captures non-linear patterns in the data. The coefficients are estimated using techniques like Least Square technique to minimize the error between predicted and actual values.\nChoosing the right polynomial degreenis important: a higher degree may fit the data more closely but it can lead to overfitting. The degree should be selected based on the complexity of the data. Once the model is trained, it can be used to make predictions on new data, capturing non-linear relationships and providing a more accurate model for real-world applications."
+  },
+  {
+    "input": "Real-Life Example for Polynomial Regression",
+    "output": "Let’s consider an example in the field of finance where we analyze the relationship between an employee's years of experience and their corresponding salary. If we check that the relationship might not be linear, polynomial regression can be used to model it more accurately.\nExample Data:\nNow, let's apply polynomial regression to model the relationship between years of experience and salary. We'll use a quadratic polynomial (degree 2) which includes both linear and quadratic terms for better fit. The quadratic polynomial regression equation is:\nSalary=β_0+β_1 ×Experience+β_2​×Experience^2+ϵ\nTo find the coefficients\\beta_0, \\beta_1, \\beta _2that minimize the difference between the predicted and actual salaries, we can use theLeast Squares method.The objective is to minimize the sum of squared differences between the predicted salaries and the actual data points which allows us to fit a model that captures the non-linear progression of salary with respect to experience."
+  },
+  {
+    "input": "Implementation of Polynomial Regression",
+    "output": "Here we will see how to implement polynomial regression using Python."
+  },
+  {
+    "input": "Step 1: Importing Required Libraries",
+    "output": "We'll usingPandas,NumPy,MatplotlibandSckit-Learnlibraries and a random dataset for the analysis of Polynomial Regression which you can download fromhere."
+  },
+  {
+    "input": "Step 2: Loading and Preparing the Data",
+    "output": "Here we will load the dataset and print it for our understanding.\nOutput:"
+  },
+  {
+    "input": "Step 3: Defining Feature and Target Variables",
+    "output": "Our feature variable that is X will contain the Column between 1stand the target variable that is y will contain the 2ndcolumn."
+  },
+  {
+    "input": "Step 4: Fitting the Linear Regression Model",
+    "output": "We will first fit a simple linear regression model to the data.\nOutput:"
+  },
+  {
+    "input": "Step 5: Fitting the Polynomial Regression Model",
+    "output": "Now we will apply polynomial regression by adding polynomial terms to the feature space. In this example, we use a polynomial of degree 4."
+  },
+  {
+    "input": "Step 6: Visualizing the Linear Regression Results",
+    "output": "Visualize the results of the linear regression model by plotting the data points and the regression line.\nOutput:\nA scatter plot of the feature and target variable with the linear regression line fitted to the data."
+  },
+  {
+    "input": "Step 7: Visualize the Polynomial Regression Results",
+    "output": "Now visualize the polynomial regression results by plotting the data points and the polynomial curve.\nOutput:\nA scatter plot of the feature and target variable with the polynomial regression curve fitted to the data."
+  },
+  {
+    "input": "Step 8: Predict New Results",
+    "output": "To predict new values using both linear and polynomial regression we need to ensure the input variable is in a 2D array format.\nOutput:\nOutput:"
+  },
+  {
+    "input": "Balancing Overfitting and Underfitting in Polynomial Regression",
+    "output": "In polynomial regression, overfitting happens when the model is too complex and fits the training data too closely helps in making it perform poorly on new data. To avoid this, we use techniques likeLassoandRidge regressionwhich helps to simplify the model by limiting the size of the coefficients.\nOn the other hand, underfitting occurs when the model is too simple to capture the real patterns in the data. This usually happens with a low-degree polynomial. The key is to choose the right polynomial degree to ensure the model is neither too complex nor too simple which helps it work well on both the training data and new data."
+  },
+  {
+    "input": "Bias Vs Variance Tradeoff",
+    "output": "Bias Vs Variance Tradeoffhelps us avoid both overfitting and underfitting by selecting the appropriate polynomial degree. As we increase the polynomial degree, the model fits the training data better but after a certain point, it starts to overfit. This is visible when the gap between training and validation errors begins to widen. The goal is to choose a polynomial degree where the model captures the data patterns without becoming too complex which ensures a good generalization."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "By mastering polynomial regression, we can better model complex data patterns which leads to more accurate predictions and valuable insights across various fields."
   }
+
 
 
 
