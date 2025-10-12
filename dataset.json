@@ -2273,6 +2273,46 @@
   {
     "input": "Disadvantages",
     "output": "No Bias Reduction: Bagging primarily reduces variance but does not improve or reduce bias. So if the base models are biased, bagging will not correct that and the overall error might still be high.\nPotential Overfitting in Some Cases: Although bagging generally reduces overfitting, if the base learners are too complex and not properly regularized, ensemble models can still overfit.\nLimited Improvement for Stable Models: For base learners that are already stable (low variance), such as linear models, bagging may not yield significant performance gains.\nHyperparameter Sensitivity: Selecting the right number of estimators and other parameters is important; improper tuning can lead to suboptimal results or wasted resources."
+  },
+  {
+    "input": "1. Hard Voting",
+    "output": "In hard voting each classifier casts a \"vote\" for a class. The class that gets the most votes is the final prediction. For example:\nClassifier 1 predicts: Class A\nClassifier 2 predicts: Class A\nClassifier 3 predicts: Class B\nHere Class A gets two votes and Class B gets one vote so the final prediction isClass A."
+  },
+  {
+    "input": "2. Soft Voting",
+    "output": "In soft voting instead of choosing the class with the most votes we take the average of the predicted probabilities for each class. The class with the highest average probability is the final prediction. For example suppose three models predict the following probabilities for two classes (A and B):\nClass A: [0.30, 0.47, 0.53]\nClass B: [0.20, 0.32, 0.40]\nThe average probability for Class A is\\frac{0.30 + 0.47 + 0.53}{3} = 0.43and for Class B is\\frac{0.20 + 0.32 + 0.40}{3} = 0.31. Since Class A has the highest average probability it will be chosen as the final prediction. To get the best results it is essential to use a variety of models in the Voting Classifier. This way errors made by one model can be corrected by the others."
+  },
+  {
+    "input": "Step 1: Import Required Libraries",
+    "output": "We first need to import the necessary libraries for classifier, dataset and model evaluation."
+  },
+  {
+    "input": "Step 2: Load the Dataset",
+    "output": "We will use theIris datasetwhich is a popular dataset for classification tasks. The load_iris()function provides the dataset and we will extract features and labels."
+  },
+  {
+    "input": "Step 3: Split the Data into Training and Testing Sets",
+    "output": "We need to divide the data into training and testing sets. We'll use 80% of the data for training and 20% for testing with the help oftrain_test_split()function."
+  },
+  {
+    "input": "Step 4: Create Ensemble of Models",
+    "output": "We will create a list of different classifiers to combine into our Voting Classifier. Here we are usingLogistic Regression,Support Vector Classifier (SVC)andDecision Tree Classifier."
+  },
+  {
+    "input": "Step 5: Initialize and Train the Voting Classifier with Hard Voting",
+    "output": "We will first create a Voting Classifier that usesHard Voting. This mean each classifier will vote for a class and the class with the most votes wins. After initializing we will fit the classifier to the training data."
+  },
+  {
+    "input": "Step 6: Making Predictions and Evaluating",
+    "output": "We use the trained Hard Voting classifier to predict the test set and calculate the accuracy.\nOutput:"
+  },
+  {
+    "input": "Step 7: Initialize and Train the Voting Classifier with Soft Voting",
+    "output": "Next, we will create aSoft Votingclassifier. Soft voting takes the average probability of each class from all the classifiers and selects the class with the highest average probability."
+  },
+  {
+    "input": "Step 8: Making Predictions and Evaluating",
+    "output": "Finally we will use the Soft Voting classifier to predict the test set and calculate its accuracy.\nOutput:\nBoth Hard and Soft Voting classifiers gave 100% accurate results. Hard Voting used majority votes while Soft Voting average prediction probabilities to make correct predictions."
   }
 
 
