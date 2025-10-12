@@ -1,0 +1,26 @@
+[
+  {
+    "input": "1. Using NumPy Library",
+    "output": "NumPyprovides a simple way to create a correlation matrix. We can use thenp.corrcoef()function to find the correlation between two or more variables.\nExample: A daily sales and temperature record is kept by an ice cream store. To find the relationship between sales and temperature, we can utilize the NumPy library where x is sales in dollars and y is the daily temperature.\nOutput:"
+  },
+  {
+    "input": "2. Using Pandas library",
+    "output": "Pandasis used to create a correlation matrix using its built-incorr()method. It helps in analyzing and interpreting relationships between different variables in a dataset.\nExample: Let's create a simple DataFrame with three variables and calculate correlation matrix.\nOutput:"
+  },
+  {
+    "input": "3. Using Matplotlib and Seaborn for Visualization",
+    "output": "In addition to creating a correlation matrix, it is useful to visualize it. Using libraries likeMatplotlibandSeaborn, we can generate heatmaps that provide a clear visual representation of how strongly variables are correlated.\nOutput:"
+  },
+  {
+    "input": "Example with Real Dataset (Iris Dataset)",
+    "output": "In this example we will considerIrisdataset and find correlation between the features of the dataset.\ndataset = datasets.load_iris():Loads the Iris dataset, which includes flower feature data and species labels.\ndataframe[\"target\"] = dataset.target:Adds a target column to the DataFrame containing the species labels.\ndataframe.corr():Computes the correlation matrix for the numerical features in the DataFrame.\nplt.figure(figsize=(8,6)):Sets the figure size to 8 inches by 6 inches.\nsns.heatmap(matrix, annot=True, cmap=\"coolwarm\", fmt=\".2f\", linewidths=0.5):Plots the correlation matrix as a heatmap, displaying values with two decimal places, using a color scale from blue (negative correlation) to red (positive correlation) and adds lines between cells for clarity.\nOutput:"
+  },
+  {
+    "input": "Understanding Correlation Values",
+    "output": "No Correlation: A correlation value of 0 means no linear relationship between the variables. As one changes, the other does not follow any predictable pattern.\nPositive Correlation: A value closer to +1 indicates a direct relationship as one variable increases, the other also increases. Example: height and weight.\nNegative Correlation: A value closer to -1 indicates an inverse relationship as one variable increases, the other decreases. Example: speed and travel time."
+  },
+  {
+    "input": "Related Articles:",
+    "output": "Correlation: Meaning, Significance, Types and Degree of Correlation\nCorrelation Matrix in R Programming\nHow to Create a Correlation Matrix using Pandas?\nExploring Correlation in Python\nPlotting Correlation Matrix using Python"
+  }
+]
