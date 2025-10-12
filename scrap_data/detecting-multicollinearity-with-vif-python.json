@@ -1,0 +1,18 @@
+[
+  {
+    "input": "Mathematics behind Variance Inflation Factor (VIF) Formula",
+    "output": "Variance Inflation Factor (VIF) measures the increase in the variance of a regression coefficient caused bymulticollinearityamong predictor variables. It does this by regressing each independent variable against all other independent variables in the model to calculate the coefficient of determination orR^2\nFormula for VIF is:\nwhereR-squared(R^2)is thecoefficient of determinationin linear regression which represents how well one feature can be predicted from others with values ranging between 0 and 1. A higherR^2means a stronger relationship with other variables which leads to a higher VIF.\nIf R-squared is close to 1 this indicates high multicollinearity because other variables almost entirely explain the variable.\nAs we see from the formula, greater the value of R-squared greater is the VIF. Hence greater VIF denotes greater correlation. Generally a VIF above 5 shows a high multicollinearity.\nBy understanding the VIF formula we can accurately detect multicollinearity in ourregression modelsand take necessary steps to address it."
+  },
+  {
+    "input": "VIF Interpretation",
+    "output": "Values near 1 mean predictors are independent.\nValues between 1 and 5 shows moderate correlation which is sometime acceptable.\nValues above 10 signal problematic multicollinearity requiring action."
+  },
+  {
+    "input": "Multicollinearity Detection using VIF in Python",
+    "output": "To detect multicollinearity in regression analysis we can implement the Variance Inflation Factor (VIF) using thestatsmodelslibrary. This function calculates the VIF value for each feature in the dataset helping us identify multicollinearity.\nParameters:\nexog: Array or DataFrame of independent variables (features).\nexog_idx: Index of the feature for which VIF is calculated.\nConsider a dataset of 500 individuals containing their gender, height, weight and Body Mass Index (BMI). Here, Index is the dependent variable and Gender, Height and Weight are independent variables. We will be usingPandaslibrary for its implementation.\nOutput:\nHere we are using the below approch:\nConverting categorical variables like Gender into numeric form.\nPassing each feature index tovariance_inflation_factor()to calculate the VIF.\nStoring the results in a Pandas DataFrame for easy interpretation.\nOutput :\nHigh VIF values for Height and Weight shows strong multicollinearity between these two variables which makes sense because a person’s height influences their weight. Detecting such relationships helps us to understand and improve the stability of our regression models."
+  },
+  {
+    "input": "What to do if VIF is High?",
+    "output": "Here are several effective strategies to address high VIF values and improve model performance:\n1.Removing Highly Correlated Features\nDrop one of the correlated features, the one which is less important or with a higher VIF. Removing such features reduces redundancy and improves model interpretability and stability.\n2.Combining Variables or Using Dimensionality Reduction Techniques\nCreate new variables by combining correlated features like calculating Body Mass Index (BMI) from height and weight.\nApplyPrincipal Component Analysis (PCA)to transform correlated variables into uncorrelated components. These components can replace original features which helps in removing multicollinearity while preserving most of the data’s variance.\nUnderstanding and correcting multicollinearity in regression is important for improving model accuracy in fields like econometrics where variable relationships play a important role."
+  }
+]
