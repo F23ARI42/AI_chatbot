@@ -2497,7 +2497,28 @@
   {
     "input": "Related Articles:",
     "output": "Correlation: Meaning, Significance, Types and Degree of Correlation\nCorrelation Matrix in R Programming\nHow to Create a Correlation Matrix using Pandas?\nExploring Correlation in Python\nPlotting Correlation Matrix using Python"
+  },
+  {
+    "input": "Types of Regularization",
+    "output": "There are mainly 3 types of regularization techniques, each applying penalties in different ways to control model complexity and improve generalization."
+  },
+  {
+    "input": "1. Lasso Regression",
+    "output": "A regression model which uses theL1 Regularizationtechnique is calledLASSO (Least Absolute Shrinkage and Selection Operator)regression. It adds theabsolute value of magnitudeof the coefficient as a penalty term to the loss function(L). This penalty can shrink some coefficients to zero which helps in selecting only the important features and ignoring the less important ones.\nWhere\nm- Number of Features\nn- Number of Examples\nyi- Actual Target Value\n\\hat{y}_i- Predicted Target Value\nLets see how to implement this using python:\nX, y = make_regression(n_samples=100, n_features=5, noise=0.1, random_state=42): Generates a regression dataset with 100 samples, 5 features and some noise.\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42): Splits the data into 80% training and 20% testing sets.\nlasso = Lasso(alpha=0.1): Creates a Lasso regression model with regularization strength alpha set to 0.1.\nOutput:\nThe output shows the model's prediction error and the importance of features with some coefficients reduced to zero due to L1 regularization."
+  },
+  {
+    "input": "2. Ridge Regression",
+    "output": "A regression model that uses theL2 regularizationtechnique is calledRidge regression. It adds thesquared magnitudeof the coefficient as a penalty term to the loss function(L). It handles multicollinearity by shrinking the coefficients of correlated features instead of eliminating them.\nWhere,\nn= Number of examples or data points\nm= Number of features i.e predictor variables\ny_i= Actual target value for theithexample\n\\hat{y}_i​ = Predicted target value for theithexample\nw_i= Coefficients of the features\n\\lambda= Regularization parameter that controls the strength of regularization\nLets see how to implement this using python:\nridge = Ridge(alpha=1.0): Creates a Ridge regression model with regularization strength alpha set to 1.0.\nOutput:\nThe output shows the MSE showing model performance. Lower MSE means better accuracy. Thecoefficientsreflect the regularized feature weights."
+  },
+  {
+    "input": "3. Elastic Net Regression",
+    "output": "Elastic Net Regressionis a combination of bothL1 as well as L2 regularization.That shows that we add theabsolute norm of the weightsas well as thesquared measure of the weights. With the help of an extra hyperparameter that controls the ratio of the L1 and L2 regularization.\nWhere\nn= Number of examples (data points)\nm= Number of features (predictor variables)\ny_i​ = Actual target value for thei^{th}example\n\\hat{y}_i​ = Predicted target value for theithexample\nwi= Coefficients of the features\n\\lambda= Regularization parameter that controls the strength of regularization\n\\alpha= Mixing parameter where0 \\leq \\alpha \\leq 1and\\alpha= 1 corresponds to Lasso (L_1) regularization,\\alpha= 0 corresponds to Ridge (L_2) regularization and Values between 0 and 1 provide a balance of both L1 and L2 regularization\nLets see how to implement this using python:\nmodel = ElasticNet(alpha=1.0, l1_ratio=0.5): Creates an Elastic Net model with regularization strength alpha=1.0 and L1/L2 mixing ratio 0.5.\nOutput:\nThe output showsMSEwhich measures how far off predictions are from actual values (lower is better)andcoefficientsshow feature importance."
+  },
+  {
+    "input": "Benefits of Regularization",
+    "output": "Now, let’s see various benefits of regularization which are as follows:"
   }
+
 
 
 
