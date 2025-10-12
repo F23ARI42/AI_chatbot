@@ -2313,6 +2313,62 @@
   {
     "input": "Step 8: Making Predictions and Evaluating",
     "output": "Finally we will use the Soft Voting classifier to predict the test set and calculate its accuracy.\nOutput:\nBoth Hard and Soft Voting classifiers gave 100% accurate results. Hard Voting used majority votes while Soft Voting average prediction probabilities to make correct predictions."
+  },
+  {
+    "input": "Types of Regression",
+    "output": "Regression can be classified into different types based on the number of predictor variables and the nature of the relationship between variables:"
+  },
+  {
+    "input": "1.Simple Linear Regression",
+    "output": "Linear regressionis one of the simplest and most widely used statistical models. This assumes that there is a linear relationship between the independent and dependent variables. This means that the change in the dependent variable is proportional to the change in the independent variables.For example predicting the price of a house based on its size."
+  },
+  {
+    "input": "2.Multiple Linear Regression",
+    "output": "Multiple linear regressionextends simple linear regression by using multiple independent variables to predict target variable.For example predicting the price of a house based on multiple features such as size, location, number of rooms, etc."
+  },
+  {
+    "input": "3.Polynomial Regression",
+    "output": "Polynomial regressionis used to model with non-linear relationships between the dependent variable and the independent variables. It adds polynomial terms to the linear regression model to capture more complex relationships.For example when we want to predict a non-linear trend like population growth over time we use polynomial regression."
+  },
+  {
+    "input": "4.Ridge & Lasso Regression",
+    "output": "Ridge & lasso regressionare regularized versions of linear regression that help avoid overfitting by penalizing large coefficients.When there’s a risk of overfitting due to too many features we use these type of regression algorithms."
+  },
+  {
+    "input": "5.Support Vector Regression (SVR)",
+    "output": "SVR is a type of regression algorithm that is based on theSupport Vector Machine (SVM)algorithm. SVM is a type of algorithm that is used for classification tasks but it can also be used for regression tasks. SVR works by finding a hyperplane that minimizes the sum of the squared residuals between the predicted and actual values."
+  },
+  {
+    "input": "6.Decision Tree Regression",
+    "output": "Decision treeUses a tree-like structure to make decisions where each branch of tree represents a decision and leaves represent outcomes. For example predicting customer behavior based on features like age, income, etc there we use decison tree regression."
+  },
+  {
+    "input": "7.Random Forest Regression",
+    "output": "Random Forestis a ensemble method that builds multiple decision trees and each tree is trained on a different subset of the training data. The final prediction is made by averaging the predictions of all of the trees. For example customer churn or sales data using this."
+  },
+  {
+    "input": "Regression Evaluation Metrics",
+    "output": "Evaluation in machine learning measures the performance of a model. Here are some popular evaluation metrics for regression:\nMean Absolute Error (MAE):The average absolute difference between the predicted and actual values of the target variable.\nMean Squared Error (MSE):The average squared difference between the predicted and actual values of the target variable.\nRoot Mean Squared Error (RMSE):Square root of the mean squared error.\nHuber Loss:A hybrid loss function that transitions from MAE to MSE for larger errors, providing balance between robustness and MSE’s sensitivity to outliers.\nR2 – Score: Higher values indicate better fit ranging from 0 to 1."
+  },
+  {
+    "input": "Regression Model Machine Learning",
+    "output": "Let's take an example of linear regression. We have aHousing data setand we want to predict the price of the house. Following is the python code for it.\nOutput:\nHere in this graph we plot the test data. The red line indicates the best fit line for predicting the price.\nTo make an individual prediction using the linear regression model:"
+  },
+  {
+    "input": "Applications of Regression",
+    "output": "Predicting prices:Used to predict the price of a house based on its size, location and other features.\nForecasting trends:Model to forecast the sales of a product based on historical sales data.\nIdentifying risk factors:Used to identify risk factors for heart patient based on patient medical data.\nMaking decisions:It could be used to recommend which stock to buy based on market data."
+  },
+  {
+    "input": "Advantages of Regression",
+    "output": "Easy to understand and interpret.\nRobust to outliers.\nCan handle both linear relationships easily."
+  },
+  {
+    "input": "Disadvantages of Regression",
+    "output": "Assumes linearity.\nSensitive to situation where two or more independent variables are highly correlated with each other i.e multicollinearity.\nMay not be suitable for highly complex relationships."
+  },
+  {
+    "input": "Conclusion",
+    "output": "Regression in machine learning is a fundamental technique for predicting continuous outcomes based on input features. It is used in many real-world applications like price prediction, trend analysis and risk assessment. With its simplicity and effectiveness regression is used to understand relationships in data."
   }
 
 
