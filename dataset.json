@@ -2517,7 +2517,56 @@
   {
     "input": "Benefits of Regularization",
     "output": "Now, let’s see various benefits of regularization which are as follows:"
+  },
+  {
+    "input": "Steps for Multiple Linear Regression",
+    "output": "Steps to perform multiple linear regression are similar to that of simple linear Regression but difference comes in the evaluation process. We can use it to find out which factor has the highest influence on the predicted output and how different variables are related to each other. Equation for multiple linear regression is:\ny = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_n X_n\nWhere:\nyis the dependent variable\nX_1, X_2, \\cdots X_nare the independent variables\n\\beta_0is the intercept\n\\beta_1,\\beta_2, \\cdots  \\beta_nare the slopes\nThe goal of the algorithm is to find the best fit line equation that can predict the values based on the independent variables. A regression model learns from the dataset with known X and y values and uses it to predict y values for unknown X."
+  },
+  {
+    "input": "Handling Categorical Data with Dummy Variables",
+    "output": "In multiple regression model we may encountercategorical datasuch as gender (male/female), location (urban/rural), etc. Since regression models require numerical inputs then categorical data must be transformed into a usable form. This is whereDummy Variablesused. These are binary variables (0 or 1) that represent the presence or absence of each category. For example:\nMale: 1 if male, 0 otherwise\nFemale: 1 if female, 0 otherwise\n\nIn the case of multiple categories we create a dummy variable for each category excluding one to avoidmulticollinearity. This process is calledone-hot encodingwhich converts categorical variables into a numerical format suitable for regression models."
+  },
+  {
+    "input": "Multicollinearity in Multiple Linear Regression",
+    "output": "Multicollinearity arises when two or more independent variables are highly correlated with each other. This can make it difficult to find the individual contribution of each variable to the dependent variable.\nTo detect multicollinearity we can use:"
+  },
+  {
+    "input": "Assumptions of Multiple Regression Model",
+    "output": "Similar to simple linear regression we have some assumptions in multiple linear regression which are as follows:"
+  },
+  {
+    "input": "Implementation of Multiple Linear Regression Model",
+    "output": "We will use theCalifornia Housing datasetwhich includes features such asmedian income, average roomsand thetarget variable,house prices."
+  },
+  {
+    "input": "Step1: Importing Libraries",
+    "output": "We will be usingnumpy,pandas,matplotlibandscikit learnfor this."
+  },
+  {
+    "input": "Step2: Loading Dataset",
+    "output": "Load the California Housing dataset fromsklearn.datasets.\nDataset contains features such as median income, average rooms stored inXand the target i.e house prices is stored iny."
+  },
+  {
+    "input": "Step3: Selecting Features for Visualization",
+    "output": "Choose two featuresMedInc(median income) andAveRooms(average rooms) to simplify visualization in two dimensions."
+  },
+  {
+    "input": "Step4: Train-Test Split",
+    "output": "We will use 80% data for training and 20% for testing."
+  },
+  {
+    "input": "Step5: Initializing and Training Model",
+    "output": "Create a multiple linear regression model usingLinearRegressionfrom scikit-learn and train it on the training data."
+  },
+  {
+    "input": "Step6: Making Predictions",
+    "output": "Using the trained model to predict house prices on the test data."
+  },
+  {
+    "input": "Step7: Visualizing Best Fit Line in 3D",
+    "output": "Plot a 3D graph where blue points represent actual house prices based on MedIncand AveRooms and the red surface shows the best-fit plane predicted by the model. This visualization helps us to understand how these two features influence the predicted house prices.\nOutput:\nMultiple Linear Regression effectively captures how several factors together influence a target variable which helps in providing a practical approach for predictive modeling in real-world scenarios."
   }
+
 
 
 
