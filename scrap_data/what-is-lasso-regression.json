@@ -1,0 +1,42 @@
+[
+  {
+    "input": "Understanding Lasso Regression",
+    "output": "Lasso Regression is a regularization technique used to prevent overfitting. It improves linear regression by adding a penalty term to the standard regression equation. It works by minimizing the sum of squared differences between the observed and predicted values by fitting a line to the data.\nHowever in real-world datasets features have strong correlations with each other known asmulticollinearitywhere Lasso Regression actually helps.\nFor example, if we're predicting house prices based on features like location, square footage and number of bedrooms. Lasso Regression can identify most important features. It might determine that location and square footage are the key factors influencing price while others has less impact. By making coefficient for the bedroom feature to zero it simplifies the model and improves its accuracy."
+  },
+  {
+    "input": "Bias-Variance Tradeoff in Lasso Regression",
+    "output": "Thebias-variance tradeoffrefers to the balance between two types of errors in a model:\nBias: Error caused by over simplistic assumptions of the data.\nVariance: Error caused by the model being too sensitive to small changes in the training data.\nWhen implementing Lasso Regression theL1 regularizationpenalty reduces variance by making the coefficients of less important features to zero. This prevents overfitting by ensuring model doesn't fit to noise in the data.\nHowever increasing regularization strength i.e raising thelambdavalue canincrease bias. This happens because a stronger penalty can cause the model to oversimplify making it unable to capture the true relationships in the data leading tounderfitting.\nThus the goal is to choose rightlambda  valuethat balances both bias and variance throughcross-validation."
+  },
+  {
+    "input": "Understanding Lasso Regression Working",
+    "output": "Lasso Regression is an extension oflinear regression. While traditional linear regression minimizes the sum of squared differences between the observed and predicted values to find the best-fit line, it doesn’t handle the complexity of real-world data well when many factors are involved."
+  },
+  {
+    "input": "1.Ordinary Least Squares (OLS) Regression",
+    "output": "It builds onOrdinary Least Squares (OLS) Regressionmethod by adding a penalty term. The basic equation for OLS is:\nminRSS = Σ(yᵢ - ŷᵢ)²\nWhere\ny_iis the observed value.\nŷᵢis the predicted value for each data pointi."
+  },
+  {
+    "input": "2. Penalty Term for Lasso Regression",
+    "output": "In Lasso regression a penalty term is added to the OLS equation. Penalty is the sum of the absolute values of the coefficients. Updated cost function becomes:\nRSS + \\lambda \\times \\sum |\\beta_i|\nWhere,\n\\beta_irepresents the coefficients of the predictors\n\\lambdais the tuning parameter that controls the strength of the penalty. As\\lambdaincreases more coefficients are pushed towards zero"
+  },
+  {
+    "input": "3. Shrinking Coefficients:",
+    "output": "Key feature of Lasso is its ability to make coefficients of less important features to zero. This removes irrelevant features from the model helps in making it useful for high-dimensional data with many predictors relative to the number of observations."
+  },
+  {
+    "input": "4. Selecting the optimal\\lambda:",
+    "output": "Selecting correctlambdavalue is important. Cross-validation techniques are used to find the optimal value helps in balancing model complexity and predictive performance.\nPrimary objective of Lasso regression is to minimizeresidual sum of squares (RSS)along with a penalty term multiplied by the sum of the absolute values of the coefficients.\nIn the plot, the equation for the Lasso Regression of cost function combines the residual sum of squares (RSS) and an L1 penalty on the coefficientsβ_j.\nRSS measures:Squared difference between expected and actual values is measured.\nL1 penalty:Penalizes absolute values of the coefficients making some of them to zero and simplifying the model. Strength of L1 penalty is controlled by thelambdaparameter.\ny-axis:Represents value of the cost function which Lasso Regression tries to minimize.\nx-axis:Represents value of the lambda (λ) parameter which controls the strength of the L1 penalty in the cost function.\nGreen to orange curve:This curve shows how the cost function (on the y-axis) changes aslambda(on the x-axis) increases. Aslambdagrows the curve shifts from green to orange. This indicates that the cost function value increases as the L1 penalty becomes stronger helps in pushing more coefficients toward zero."
+  },
+  {
+    "input": "When to use Lasso Regression",
+    "output": "Lasso Regression is useful in the following situations:\nFor its implementation refer to:\nImplementation of Lasso Regression From Scratch using Python\nLasso Regression in R Programming"
+  },
+  {
+    "input": "Advantages of Lasso Regression",
+    "output": "Feature Selection:It removes the need to manually select most important features hence the developed regression model becomes simpler and more explainable.\nRegularization:It constrains large coefficients so a less biased model is generated which is robust and general in its predictions.\nInterpretability:This creates another models helps in making them simpler to understand and explain which is important in fields like healthcare and finance.\nHandles Large Feature Spaces:It is effective in handling high-dimensional data such as images and videos."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Selection Bias:Lasso may randomly select one variable from a group of highly correlated variables which leads to a biased model.\nSensitive to Scale:It is sensitive to features with different scales as they can impact the regularization and affect model's accuracy.\nImpact of Outliers:It can be easily affected by the outliers in the given data which results to overfitting of the coefficients.\nModel Instability:It can be unstable when there are many correlated variables which causes it to select different features with small changes in the data.\nTuning Parameter Selection:Analyzing different λ (alpha) values may be problematic but can be solved by cross-validation.\nBy introducing a penalty term to the coefficients Lasso helps in doing the right balance between bias and variance that improves accuracy and preventing overfitting."
+  }
+]
