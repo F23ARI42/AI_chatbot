@@ -1,0 +1,22 @@
+[
+  {
+    "input": "1. Import Libraries",
+    "output": "Let's begin with importing important libraries likenumpyandscikit learnwhich will be required to do classification task."
+  },
+  {
+    "input": "2. Defining the AdaBoost Class",
+    "output": "In this step we define a custom class called AdaBoost that will implement the AdaBoost algorithm from scratch. This class will handle the entire training process and predictions.\nThe AdaBoost class is where we define the entire AdaBoost algorithm which consists of:\nInitializing model parameters like number of estimators, weights and models.\nFitting the model to the training data.\nMaking predictions using the trained model.\nThe constructor(__init__)initializes the number of weak models(n_estimators)to a list to store the alphas(self.alphas)and a list to store the weak classifiers(self.models)"
+  },
+  {
+    "input": "3. Training the AdaBoost Model",
+    "output": "In the fit() method we:\nSample Weights Initialization:w= np.ones(n_samples) / n_samplesinitializes all sample weights equally.\nTraining the Weak Classifier: ADecisionTreeClassifierwithmax_depth =1is trained using the current sample weights.\nError Calculation:err = np.sum (w* ( predictions != y)) / np.sum(w)computes the weighted error of the classifier.\nAlpha Calculation:alpha = 0.5*np.log ((1-err) / (err+1e-10) )calculates the classifier's weight (alpha).\nUpdating Weights: Misclassified samples weights are increased usingw *= np.exp(-alpha *y *predictions)and normalized withw /= np.sum(w)."
+  },
+  {
+    "input": "4. Defining Predict Method",
+    "output": "In the predict() method  we combine the predictions of all weak classifiers using their respective alpha values to make the final prediction.\nstrong_preds = np.zeroes(X.shape[0])initializes an array of zeros to store the weighted sum of predictions from all weak classifiers.\nfor model, alpha in zip(self.models, self.alphas)loops through each trained model and its corresponding alpha value.\nstrong_preds += alpha * predictionsadds the weighted prediction of each weak model to strong_preds\nnp.sign(strong_preds)takes the sign of the sum to classify samples as 1 (positive class) or -1 (negative class)."
+  },
+  {
+    "input": "5. Example Usage",
+    "output": "We are generating a synthetic dataset with 1000 samples and 20 features.\nThen, we split the data into training and testing sets.\nWe initialize and train an AdaBoost classifier with 50 estimators.\nAfter training, we predict on the test set and evaluate the model.\nOutput:\nThe model performs well with:\nAccuracy of 84% meaning it makes correct predictions most of the time.\nIt has good balance between precision (0.836) which makes accurate positive predictions.\nRecall (0.858) which means it catch most of the actual positive cases.\nThe F1 score (0.847) combines these two measures\nROC-AUC (0.839) show the model does a good job of telling the difference between the two classes.\nOverall these metrics indicate good performance."
+  }
+]
