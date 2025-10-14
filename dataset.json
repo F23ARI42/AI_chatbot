@@ -3410,5 +3410,73 @@
   {
     "input": "Conclusion",
     "output": "Target encoding is a powerful technique for handling categorical variables, especially with high cardinality. Implementing it correctly in a Scikit-Learn pipeline using nested cross-validation can prevent data leakage and overfitting, ensuring robust model performance. By integrating these practices, data scientists can build more reliable and accurate predictive models."
+  },
+  {
+    "input": "Introduction of SoftMax in Neural Networks",
+    "output": "In the 1980s, neural network researchers adapted this concept for machine learning, using it inmulti-class classification problems.\nSoftmax functionis a mathematical function thatconverts a vector of raw prediction scores (often called logits) from the neural network into probabilities. These probabilities are distributed across different classes such that their sum equals 1. Essentially, Softmax helps in transforming output values into a format that can be interpreted as probabilities, which makes it suitable for classification tasks.\nIn amulti-class classification neural network, the final layer outputs a set of values, each corresponding to a different class. These values, before Softmax is applied, can be any real numbers, and may not provide meaningful information directly. The Softmax function processes these values into probabilities, which indicate the likelihood of each class being the correct one.\nSoftmax gained prominence with the rise of deep learning, particularly in models such asmultilayer perceptrons (MLPs)andconvolutional neural networks (CNNs), where it is typically applied to the final output layer in classification tasks.."
+  },
+  {
+    "input": "Formula of Softmax function",
+    "output": "\\text{Softmax}(z_i) = \\frac{e^{z_i}}{\\sum_{j=1}^{K} e^{z_j}}\nWhere:\nz_i​ is the logit (the output of the previous layer in the network) for the i^{th}class.\nKis the number of classes.\ne^{z_i}​ represents the exponential of the logit.\n\\sum_{j=1}^{K} e^{z_j}is the sum of exponentials across all classes."
+  },
+  {
+    "input": "How Softmax Works?",
+    "output": "Let's break down how Softmax works inneural networks, complete with formulas and a step-by-step explanation:"
+  },
+  {
+    "input": "Step 1: Raw Logits (Pre-Softmax Outputs)",
+    "output": "Consider the output from the last layer of the neural network, which consists oflogits. These logits are unbounded real numbers and represent the raw predictions for each class.\nLet’s assume we are working on a classification task withKclasses. The neural network provides an output vector\\mathbf{z} = [z_1, z_2, \\dots, z_K], where eachz_i​ is the logit corresponding to thei^{th}class."
+  },
+  {
+    "input": "Step 2: Applying the Softmax Function",
+    "output": "The Softmax function transforms these logits into probabilities. The formula for Softmax for each classiis:\n\\text{Softmax}(z_i) = \\frac{e^{z_i}}{\\sum_{j=1}^{K} e^{z_j}}\nThis function ensures that:"
+  },
+  {
+    "input": "Step 3: Exponential Scaling",
+    "output": "The exponential functione^{z_i}​ applied to each logit{z_i}plays a crucial role. It emphasizes the difference between logits: even a slight increase in a logit value leads to a larger probability, while small logits result in near-zero probabilities.\nExample:\nSuppose you have three logits:[z_1 = 1.5, z_2 = 0.5, z_3 = 0.1]\nApplying the exponential function to these logits results in:e^{1.5} \\approx 4.48, \\quad e^{0.5} \\approx 1.65, \\quad e^{0.1} \\approx 1.11"
+  },
+  {
+    "input": "Step 4: Normalization",
+    "output": "The sum of the exponentials is used to normalize the values into probabilities. The normalization step ensures that all the probabilities add up to 1:\n\\sum_{j=1}^{K} e^{z_j} = e^{1.5} + e^{0.5} + e^{0.1} \\approx 4.48 + 1.65 + 1.11 = 7.24\nEach exponential is then divided by the sum of exponentials to get the final probabilities:\n\\text{Softmax}(z_1) = \\frac{4.48}{7.24} \\approx 0.62, \\quad \\text{Softmax}(z_2) = \\frac{1.65}{7.24} \\approx 0.23, \\quad \\text{Softmax}(z_3) = \\frac{1.11}{7.24} \\approx 0.15\nSo, the final probability distribution is:\n[0.62,0.23,0.15]"
+  },
+  {
+    "input": "Step 5: Interpretation of the Output",
+    "output": "The result of applying the Softmax function to the logits is a probability distribution. Each element represents the probability that the input data belongs to a particular class.\nIn this case:\nThere is a62%probability that the input belongs to class 1,\nA23%probability for class 2, and\nA15%probability for class 3."
+  },
+  {
+    "input": "Softmax and Cross-Entropy Loss",
+    "output": "In many neural networks, particularly for classification, the Softmax is used in conjunction with theCross-Entropy Loss.\nThe cross-entropy loss compares the predicted probability distribution (from Softmax) with the true label (which is represented as a one-hot encoded vector) and penalizes the network if the predicted probability for the correct class is low.\nThe formula for cross-entropy loss is:\n\\text{Loss} = - \\sum_{i=1}^{K} y_i \\log(\\hat{y}_i)\nWhere:\ny_iis the true label (1 for the correct class, 0 for others),\n\\hat{y}_i​ is the predicted probability for class iii from the Softmax function.\nThis combination ofSoftmaxandCross-Entropy Lossforms the basis for many classification models."
+  },
+  {
+    "input": "Step 1:Import Required Libraries",
+    "output": "We neednumpyfor matrix operations and numerical computations, as it handles operations on arrays."
+  },
+  {
+    "input": "Step 2:Define Activation Functions",
+    "output": "We define two key activation functions for the network:softmaxfor the output layer andrelufor the hidden layer.\nSoftmax: Converts logits (raw scores) into probabilities.\nReLU: Sets negative values to 0 while keeping positive values unchanged."
+  },
+  {
+    "input": "Step 3:Initialize the Neural Network",
+    "output": "In this step, we define the structure of our neural network:\ninput_size: Number of input features.\nhidden_size: Number of neurons in the hidden layer.\noutput_size: Number of output classes for multi-class classification.\nThe weights (W1,W2) and biases (b1,b2) are initialized for the hidden and output layers."
+  },
+  {
+    "input": "Step 4:Forward Pass",
+    "output": "This step computes the output of the neural network by passing data through two layers:\nLayer 1: The input is passed through the hidden layer, using the ReLU activation function.\nLayer 2: The output from the hidden layer is passed through the output layer, using the softmax activation function."
+  },
+  {
+    "input": "Step 5:Loss Function (Cross-Entropy)",
+    "output": "The loss is computed by comparing the predicted probabilities (Y_hat) with the actual labels (Y). The cross-entropy loss function is used, which penalizes wrong predictions."
+  },
+  {
+    "input": "Complete Code",
+    "output": "Output:"
+  },
+  {
+    "input": "Softmax vs. Other Activation Functions",
+    "output": "Sigmoid Function: The sigmoid function is a great choice for binary classification problems because it outputs values between 0 and 1. However, for multi-class classification, it falls short as it doesn’t normalize the outputs in a way that sums to 1 across multiple classes.\nReLU (Rectified Linear Unit): ReLU is widely used in hidden layers of deep networks because of its simplicity and computational efficiency, but it’s not suitable for output layers in classification tasks, as it doesn't convert logits to probabilities.\nTanh (Hyperbolic Tangent): Similar to sigmoid but with output values ranging from -1 to 1. Like sigmoid, it’s not typically used for multi-class problems, as it does not handle probability distributions."
+  },
+  {
+    "input": "Conclusion",
+    "output": "Softmax activation function is used for multi-class classification problems. By converting raw model outputs into probabilities, it allows for easy interpretation and decision-making. As a result, it has become an essential component in neural networks that classify data into more than two categories. Whether you're building a machine learning model for image recognition or language translation, understanding Softmax is critical to improving the performance and accuracy of your model."
   }
 ]
