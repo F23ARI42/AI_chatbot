@@ -2818,5 +2818,41 @@
   {
     "input": "Limitations of BoW",
     "output": "Loss of Context:It ignores word order and context which means it might miss important relationships between words.\nSparsity:When working with large datasets, most word vectors will be sparse (containing mostly zeros) which can lead to inefficiency.\nLimited Semantic Understanding:The model doesn’t capture the meaning of words which can be important for some NLP tasks.\nBy mastering the Bag of Words model helps us to effectively transform text data into useful insights for various NLP tasks."
+  },
+  {
+    "input": "Introduction to Loss Functions",
+    "output": "In machine learning, the goal of training a model is to minimize the error in its predictions. To do this, models use aloss function, which calculates how well the model’s predictions match the actual values. The lower the value of the loss function, the better the model is performing. For classification tasks,cross-entropyis a popular choice due to its effectiveness in quantifying the performance of a classification model."
+  },
+  {
+    "input": "Understanding Categorical Cross-Entropy",
+    "output": "Categorical cross-entropy is used when you have more than two classes in your classification problem (multi-class classification). It measures the difference between two probability distributions: the predicted probability distribution and the true distribution, which is represented by a one-hot encoded vector.\nIn a one-hot encoded vector, the correct class is represented as \"1\" and all other classes as \"0.\" Categorical cross-entropy penalizes predictions based on how confident the model is about the correct class.\nIf the model assigns a high probability to the true class, the cross-entropy will be low. Conversely, if the model assigns low probability to the correct class, the cross-entropy will be high."
+  },
+  {
+    "input": "Mathematical Representation of Categorical Cross-Entropy",
+    "output": "The categorical cross-entropy formula is expressed as:\nL(y, \\hat{y}) = - \\sum_{i=1}^{C} y_i \\log(\\hat{y}_i)\nWhere:\nL(y, \\hat{y})is the categorical cross-entropy loss.\ny_iis the true label (0 or 1 for each class) from the one-hot encoded target vector.\n\\hat{y}_iis the predicted probability for classi.\nCis the number of classes.\nIn this formula, the logarithm ensures that incorrect predictions are heavily penalized."
+  },
+  {
+    "input": "Example : Calculating Categorical Cross-Entropy",
+    "output": "Let's break down thecategorical cross-entropycalculation with a mathematical example using the following true labels and predicted probabilities.\nWe have 3 samples, each belonging to one of 3 classes (Class 1, Class 2, or Class 3). The true labels areone-hot encoded.\nStep-by-Step Calculation\nExample 1: True Label[0, 1, 0], Predicted[0.1, 0.8, 0.1]\nThe true class is Class 2, soy_2 = 1, and we focus on the predicted probability for Class 2, which is\\hat{y}_2 = 0.8.\nL_1 = -\\left( 0 \\cdot \\log(0.1) + 1 \\cdot \\log(0.8) + 0 \\cdot \\log(0.1) \\right)\nSimplifying:\nL_1 = -\\log(0.8) = -(-0.22314355) = 0.22314355\nExample 2: True Label[1, 0, 0], Predicted[0.7, 0.2, 0.1]\nThe true class is Class 1, soy_1 = 1, and we focus on the predicted probability for Class 1, which is\\hat{y}_1 = 0.7.\nL_2 = -\\left( 1 \\cdot \\log(0.7) + 0 \\cdot \\log(0.2) + 0 \\cdot \\log(0.1) \\right)\nSimplifying:\nL_2 = -\\log(0.7) = -(-0.35667494) = 0.35667494\nExample 3: True Label[0, 0, 1], Predicted[0.2, 0.3, 0.5]\nThe true class is Class 3, soy_3 = 1, and we focus on the predicted probability for Class 3, which is\\hat{y}_3 = 0.5.\nL_3 = -\\left( 0 \\cdot \\log(0.2) + 0 \\cdot \\log(0.3) + 1 \\cdot \\log(0.5) \\right)\nSimplifying:\nL_3 = -\\log(0.5) = -(-0.69314718) = 0.69314718\nFinal Losses:\nForExample 1, the loss is:0.22314355\nForExample 2, the loss is:0.35667494\nForExample 3, the loss is:0.69314718\nThus, the total categorical cross-entropy loss values are:\n\\text{Loss}: [0.22314355, 0.35667494, 0.69314718]\nThis loss function is crucial in guiding the model to learn better during training by adjusting its weights to minimize the error."
+  },
+  {
+    "input": "How Categorical Cross-Entropy Works",
+    "output": "To understand how CCE works, let's break it down:\nFor example, if the true label is class 1, and the predicted probability for class 1 is 0.9, the categorical cross-entropy loss will be small. If the predicted probability is 0.1, the loss will be much larger, forcing the model to correct its weights."
+  },
+  {
+    "input": "Application of Categorical Cross-Entropy in Multi-Class Classification",
+    "output": "Categorical cross-entropy is essential inmulti-class classification, where a model must classify an instance into one of several classes. For example, in an image classification task, the model might need to identify whether an image is of a cat, dog, or bird. CCE helps the model adjust its weights during training to make better predictions.\nIt's important to note that the CCE loss function assumes that each data point belongs to exactly one class. If you have a problem where a data point can belong to multiple classes simultaneously,binary cross-entropywould be a better choice."
+  },
+  {
+    "input": "Differences Between Categorical and Binary Cross-Entropy",
+    "output": "While both binary and categorical cross-entropy are used to calculate loss in classification problems, they differ in use cases and how they handle multiple classes:\nBinary Cross-Entropyis used for binary classification problems where there are only two possible outcomes (e.g., \"yes\" or \"no\").\nCategorical Cross-Entropyis used for multi-class classification where there are three or more categories, and the model assigns probabilities to each.\nThe key distinction lies in the number of classes the model is predicting and how those classes are encoded in the target labels."
+  },
+  {
+    "input": "Implementing Categorical Cross-Entropy in Python",
+    "output": "Implementing categorical cross-entropy in Python, especially with libraries like TensorFlow or PyTorch, is straightforward since these libraries have built-in functions to handle this.\nHere’s an example inTensorFlow:\nOutput:\nThe outputLoss: [0.22314355 0.35667494 0.69314718]represents thecategorical cross-entropy lossfor each of the three examples in the provided dataset."
+  },
+  {
+    "input": "Conclusion",
+    "output": "Categorical cross-entropy is a powerful loss function commonly used in multi-class classification problems. By comparing the predicted probabilities to the true one-hot encoded labels, it guides the model’s learning process, pushing it to make better predictions. Understanding how to use CCE and implementing it correctly can significantly impact the performance of your classification models."
   }
 ]
