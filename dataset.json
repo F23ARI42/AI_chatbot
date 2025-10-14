@@ -2958,5 +2958,53 @@
   {
     "input": "Also Read:",
     "output": "Methods of measurements of Correlation\nCalculation of Correlation with Scattered Diagram\nSpearman’s Rank Correlation Coefficient in Statistics\nKarl Pearson's Coefficient of Correlation | Assumptions, Merits and Demerits\nKarl Pearson's Coefficient of Correlation | Methods and Examples"
+  },
+  {
+    "input": "Types of Cross-Validation",
+    "output": "There are several types of cross-validation techniques which are as follows:"
+  },
+  {
+    "input": "1. Holdout Validation",
+    "output": "InHoldout Validationmethod typically 50% data is used for training and 50% for testing. Making it simple and quick to apply. The major drawback of this method is that only 50% data is used for training, the model may miss important patterns in the other half which leads to high bias."
+  },
+  {
+    "input": "2. LOOCV (Leave One Out Cross Validation)",
+    "output": "In this method the model is trained on the entire dataset except for one data point which is used for testing. This process is repeated for each data point in the dataset.\nAll data points are used for training, resulting in low bias.\nTesting on a single data point can cause high variance, especially if the point is an outlier.\nIt can be very time-consuming for large datasets as it requires one iteration per data point."
+  },
+  {
+    "input": "3. Stratified Cross-Validation",
+    "output": "It is a technique that ensures each fold of the cross-validation process has the same class distribution as the full dataset. This is useful for imbalanced datasets where some classes are underrepresented.\nThe dataset is divided into k folds, keeping class proportions consistent in each fold.\nIn each iteration, one fold is used for testing and the remaining folds for training.\nThis process is repeated k times so that each fold is used once as the test set.\nIt helps classification models generalize better by maintaining balanced class representation."
+  },
+  {
+    "input": "4. K-Fold Cross Validation",
+    "output": "K-Fold Cross Validationsplits the dataset intokequal-sized folds. The model is trained onk-1folds and tested on the remaining fold. This process is repeatedktimes each time using a different fold for testing."
+  },
+  {
+    "input": "Exampleof K Fold Cross Validation",
+    "output": "The diagram below shows an example of the training subsets and evaluation subsets generated in k-fold cross-validation. Here we have total 25 instances.\nHere we will take k as 5.\n1st iteration:The first 20% of data [1–5] is used for testing and the remaining 80% [6–25] is used for training.\n2nd iteration:The second 20% [6–10] is used for testing and the remaining data [1–5] and [11–25] is used for training.\nThis process continues until each fold has been used once as the test set.\nEach iteration uses different subsets for testing and training, ensuring that all data points are used for both training and testing."
+  },
+  {
+    "input": "Comparison between K-Fold Cross-Validation and Hold Out Method",
+    "output": "K-Fold Cross-Validation and Hold Out Method are widely used technique and sometimes they are confusing so here is the quick comparison between them:"
+  },
+  {
+    "input": "Step 1: Importing necessary libraries",
+    "output": "We will importscikit learn."
+  },
+  {
+    "input": "Step 2: Loading the dataset",
+    "output": "let's use the iris dataset which is a multi-class classification in-built dataset."
+  },
+  {
+    "input": "Step 3: Creating SVM classifier",
+    "output": "SVCis aSupport Vector Classificationmodel from scikit-learn."
+  },
+  {
+    "input": "Step 4: Defining the number of folds for cross-validation",
+    "output": "Here we will be using 5 folds."
+  },
+  {
+    "input": "Step 6: Evaluation metrics",
+    "output": "Output:\nThe output shows the accuracy scores from each of the 5 folds in the K-fold cross-validation process. The mean accuracy is the average of these individual scores which is approximately 97.33% indicating the model's overall performance across all the folds."
   }
 ]
