@@ -2898,5 +2898,65 @@
   {
     "input": "Implementation of Confusion Matrix for Multi-Class classification using Python",
     "output": "Step 1: Import the necessary libraries\nStep 2: Create the NumPy array for actual and predicted labels\ny_true:List of true labels.\ny_pred:List of predicted labels by the model.\nclasses:A list of class names: 'Cat', 'Dog' and 'Horse'\nStep 3: Generate and Visualize the Confusion Matrix\nConfusionMatrixDisplay:Creates a display object for the confusion matrix.\nconfusion_matrix=cm:Passes the confusion matrix (cm) to display.\ndisplay_labels=classes:Sets the labels (['Cat' , 'Dog' , 'Horse']) or the confusion matrix.\nOutput:\nStep 4: Print the Classification Report\nOutput:\nConfusion matrix provides clear insights into important metrics like accuracy, precision and recall by analyzing correct and incorrect predictions."
+  },
+  {
+    "input": "What is Correlation?",
+    "output": "A statistical tool that helps in the study of the relationship between two variables is known asCorrelation.It also helps in understanding the economic behaviour of the variables."
+  },
+  {
+    "input": "Correlation and Causation",
+    "output": "The degree of correlation between two or more variables can be determined using correlation. However, it does not consider the cause-and-effect relationship between variables. If two variables are correlated, it could be for any of the following reasons:\nThe influence of a third party can result in a high degree of correlation between the two variables. This analysis does not take into account third-party influence.For example,the correlation between the yield per acre of grain and jute can be of a high degree because both are linked to the amount of rainfall. However, in reality, both these variables do not have any effect on each other.\nIt may be challenging to determine which is the cause, and which is the effect when two variables indicate a high degree of correlation. It is so because they may be having an impact on one another.For example,when there is an increase in the price of a commodity, it increases its demand. Here, the price is the cause, and demand is the effect. However, there is a possibility that the price of the commodity will rise due to increased demand (population growth or other factors). In that case, increased demand is the cause, and the price is the effect.\nIt is possible that the correlation between the two variables was obtained by random chance or coincidence alone. This correlation is also known asspurious. Therefore, it is crucial to determine whether there is a possibility of a relationship between the variables under analysis.For example,even if there is no relationship between the two variables (between the income of people in a society and their clothes size), one may see a strong correlation between them.\nSo, it can be said that correlation provides only a quantitative measure and does not indicates cause and effect relationship between the variables. For that reason, it must be ensured that variables are correctly selected for the correlation analysis."
+  },
+  {
+    "input": "Types of Correlation",
+    "output": "Correlation can be classified based on various categories:"
+  },
+  {
+    "input": "1. Positive Correlation:",
+    "output": "When two variables move in the same direction; i.e., when one increases the other also increases and vice-versa, then such a relation is called aPositive Correlation.For example,Relationship between the price and supply, income and expenditure, height and weight, etc."
+  },
+  {
+    "input": "2. Negative Correlation:",
+    "output": "When two variables move in opposite directions; i.e., when one increases the other decreases, and vice-versa, then such a relation is called aNegative Correlation.For example,the relationship between the price and demand, temperature and sale of woollen garments, etc."
+  },
+  {
+    "input": "1. Linear Correlation:",
+    "output": "When there is a constant change in the amount of one variable due to a change in another variable, it is known asLinear Correlation.This term is used when two variables change in the same ratio. If two variables that change in a fixed proportion are displayed on graph paper, a straight- line will be used to represent the relationship between them. As a result, it suggests a linear relationship.\nIn the above graph, for every change in the variable X by 5 units there is a change of 10 units in variable Y. The ratio of change of variables X and Y in the above schedule is 1:2 and it remains the same, thus there is a linear relationship between the variables."
+  },
+  {
+    "input": "2. Non-Linear (Curvilinear) Correlation:",
+    "output": "When there is no constant change in the amount of one variable due to a change in another variable, it is known asaNon-Linear Correlation.This term is used when two variables do not change in the same ratio. This shows that it does not form a straight-line relationship.For example,the production of grains would not necessarily increase even if the use of fertilizers is doubled.\n\nIn the above schedule, there is no specific relationship between the variables. Even though both change in the same direction i.e. both are increasing, they change in different proportions. The ratio of change of variables X and Y in the above schedule is not the same, thus there is a non-linear relationship between the variables."
+  },
+  {
+    "input": "1. Simple Correlation:",
+    "output": "Simple correlation implies the study between the two variables only.For example,the relationship between price and demand, and the relationship between price and money supply."
+  },
+  {
+    "input": "2. Partial Correlation:",
+    "output": "Partial correlation implies the study between the two variables keeping other variables constant.For example,the production of wheat depends upon various factors like rainfall, quality of manure, seeds, etc. But, if one studies the relationship between wheat and the quality of seeds, keeping rainfall and manure constant, then it is a partial correlation."
+  },
+  {
+    "input": "3. Multiple Correlation:",
+    "output": "Multiple correlation implies the study between three or more three variables simultaneously. The entire set of independent and dependent variables is studied simultaneously.For example,the relationship between wheat output with the quality of seeds and rainfall."
+  },
+  {
+    "input": "Degree of Correlation",
+    "output": "The degree of correlation is measured through the coefficient of correlation. The degree of correlation for the given variables can be expressed in the following ways:"
+  },
+  {
+    "input": "1. Perfect Correlation:",
+    "output": "If the relationship between the two variables is in such a way that it varies in equal proportion (increase or decrease) it is said to be perfectly correlated. This can be of two types:\nPositive Correlation:When the proportional change in two variables is in the same direction, it is said to be positively correlated. In this case, the Coefficient of Correlation is shown as+1.\nNegative Correlation:When the proportional change in two variables is in the opposite direction, it is said to be negatively correlated. In this case, the Coefficient of Correlation is shown as-1."
+  },
+  {
+    "input": "2. Zero Correlation:",
+    "output": "If there is no relation between two series or variables, it is said to have zero or no correlation. It means that if one variable changes and it does not have any impact on the other variable, then there is a lack of correlation between them. In such cases, the Coefficient of Correlation will be0."
+  },
+  {
+    "input": "3. Limited Degree of Correlation:",
+    "output": "There is a situation with a limited degree of correlation between perfect and absence of correlation. In real life, it was found that there is a limited degree of correlation.\nThe coefficient of correlation, in this case, lies between +1 and -1.\nCorrelation is limited negative when there are unequal changes in the opposite direction.\nCorrelation is limited and positive when there are unequal changes in the same direction.\nThe degree of correlation can below(when the coefficient of correlation lies between 0 and 0.25),moderate(when the coefficient of correlation lies between 0.25 and 0.75), orhigh(when the coefficient of correlation lies between 0.75 and 1)."
+  },
+  {
+    "input": "Also Read:",
+    "output": "Methods of measurements of Correlation\nCalculation of Correlation with Scattered Diagram\nSpearman’s Rank Correlation Coefficient in Statistics\nKarl Pearson's Coefficient of Correlation | Assumptions, Merits and Demerits\nKarl Pearson's Coefficient of Correlation | Methods and Examples"
   }
 ]
