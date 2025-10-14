@@ -3006,5 +3006,73 @@
   {
     "input": "Step 6: Evaluation metrics",
     "output": "Output:\nThe output shows the accuracy scores from each of the 5 folds in the K-fold cross-validation process. The mean accuracy is the average of these individual scores which is approximately 97.33% indicating the model's overall performance across all the folds."
+  },
+  {
+    "input": "How to Perform Data Cleaning",
+    "output": "The process begins by identifying issues like missing values, duplicates and outliers. Performing data cleaning involves a systematic process to identify and remove errors in a dataset. The following steps are essential to perform data cleaning:\nRemove Unwanted Observations:Eliminate duplicates, irrelevant entries or redundant data that add noise.\nFix Structural Errors:Standardize data formats and variable types for consistency.\nManage Outliers:Detect and handle extreme values that can skew results, either by removal or transformation.\nHandle Missing Data:Address gaps using imputation, deletion or advanced techniques to maintain accuracy and integrity."
+  },
+  {
+    "input": "Implementation for Data Cleaning",
+    "output": "Let's understand each step for Database Cleaning usingtitanic dataset."
+  },
+  {
+    "input": "Step 1: Import Libraries and Load Dataset",
+    "output": "We will import all the necessary libraries i.epandasandnumpy.\nOutput:"
+  },
+  {
+    "input": "Step 2: Check for Duplicate Rows",
+    "output": "df.duplicated(): Returns a boolean Series indicating duplicate rows.\nOutput:"
+  },
+  {
+    "input": "Step 3: Identify Column Data Types",
+    "output": "List comprehension with .dtype attribute to separate categorical and numerical columns.\nobject dtype:Generally used for text or categorical data.\nOutput:"
+  },
+  {
+    "input": "Step 4: Count Unique Values in the Categorical Columns",
+    "output": "df[numeric_columns].nunique():Returns count of unique values per column.\nOutput:"
+  },
+  {
+    "input": "Step 5: Calculate Missing Values as Percentage",
+    "output": "df.isnull():Detects missing values, returning boolean DataFrame.\nSum missing across columns, normalize by total rows and multiply by 100.\nOutput:"
+  },
+  {
+    "input": "Step 6: Drop Irrelevant or Data-Heavy Missing Columns",
+    "output": "df.drop(columns=[]): Drops specified columns from the DataFrame.\ndf.dropna(subset=[]): Removes rows where specified columns have missing values.\nfillna(): Fills missing values with specified value (e.g., mean)."
+  },
+  {
+    "input": "Step 7: Detect Outliers with Box Plot",
+    "output": "matplotlib.pyplot.boxplot():Displays distribution of data, highlighting median, quartiles and outliers.\nplt.show(): Renders the plot.\nOutput:"
+  },
+  {
+    "input": "Step 8: Calculate Outlier Boundaries and Remove Them",
+    "output": "Calculate mean and standard deviation (std) using df['Age'].mean() and df['Age'].std().\nDefine bounds as mean ± 2 * std for outlier detection.\nFilter DataFrame rows within bounds using Boolean indexing."
+  },
+  {
+    "input": "Step 9: Impute Missing Data Again if Any",
+    "output": "fillna()applied again on filtered data to handle any remaining missing values.\nOutput:"
+  },
+  {
+    "input": "Step 10: Recalculate Outlier Bounds and Remove Outliers from the Updated Data",
+    "output": "mean = df3['Age'].mean(): Calculates the average (mean) value of the Age column in the DataFrame df3.\nstd = df3['Age'].std(): Computes the standard deviation (spread or variability) of the Age column in df3.\nlower_bound = mean - 2 * std: Defines the lower limit for acceptable Age values, set as two standard deviations below the mean.\nupper_bound = mean + 2 * std: Defines the upper limit for acceptable Age values, set as two standard deviations above the mean.\ndf4 = df3[(df3['Age'] >= lower_bound) & (df3['Age'] <= upper_bound)]: Creates a new DataFrame df4 by selecting only rows where the Age value falls between the lower and upper bounds, effectively removing outlier ages outside this range.\nOutput:"
+  },
+  {
+    "input": "Step 11: Data validation and verification",
+    "output": "Data validation and verification involve ensuring that the data is accurate and consistent by comparing it with external sources or expert knowledge. For the machine learning prediction  we separate independent and target features. Here we will consider only 'Sex' 'Age' 'SibSp', 'Parch' 'Fare' 'Embarked' only as the independent features and Survived as target variables because PassengerId will not affect the survival rate."
+  },
+  {
+    "input": "Step 12: Data formatting",
+    "output": "Data formatting involves converting the data into a standard format or structure that can be easily processed by the algorithms or models used for analysis. Here we will discuss commonly used data formatting techniques i.e. Scaling and Normalization.\nScaling involves transforming the values of features to a specific range. It maintains the shape of the original distribution while changing the scale. It is useful when features have different scales and certain algorithms are sensitive to the magnitude of the features. Common scaling methods include:\n1. Min-Max Scaling:Min-Max scaling rescales the values to a specified range, typically between 0 and 1. It preserves the original distribution and ensures that the minimum value maps to 0 and the maximum value maps to 1.\nOutput:\n\n2. Standardization (Z-score scaling):Standardization transforms the values to have a mean of 0 and a standard deviation of 1. It centers the data around the mean and scales it based on the standard deviation. Standardization makes the data more suitable for algorithms that assume a Gaussian distribution or require features to have zero mean and unit variance.\nWhere,\nX = Data\nμ = Mean value of X\nσ = Standard deviation of X"
+  },
+  {
+    "input": "Data Cleaning Tools",
+    "output": "Some data cleansing tools:\nOpenRefine:A free, open-source tool for cleaning, transforming and enriching messy data with an easy-to-use interface and powerful features like clustering and faceting.\nTrifacta Wrangler:An AI-powered, user-friendly platform that helps automate data cleaning and transformation workflows for faster, more accurate preparation.\nTIBCO Clarity:A data profiling and cleansing tool that ensures high-quality, standardized and consistent datasets across diverse sources.\nCloudingo:A cloud-based solution focused on deduplication and data cleansing, especially useful for maintaining accurate CRM data.\nIBM InfoSphere QualityStage:An enterprise-grade tool designed for large-scale, complex data quality management including profiling, matching and cleansing."
+  },
+  {
+    "input": "Advantages",
+    "output": "Improved model performance:Removal of errors, inconsistencies and irrelevant data helps the model to better learn from the data.\nIncreased accuracy:Helps ensure that the data is accurate, consistent and free of errors.\nBetter representation of the data:Data cleaning allows the data to be transformed into a format that better represents the underlying relationships and patterns in the data.\nImproved data quality:Improve the quality of the data, making it more reliable and accurate.\nImproved data security:Helps to identify and remove sensitive or confidential information that could compromise data security."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Time-consuming:It is very time consuming task specially for large and complex datasets.\nError-prone:It can result in loss of important information.\nCost and resource-intensive:It is resource-intensive process that requires significant time, effort and expertise. It can also require the use of specialized software tools.\nOverfitting:Data cleaning can contribute to overfitting by removing too much data."
   }
 ]
