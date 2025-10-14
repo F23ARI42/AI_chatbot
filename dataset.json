@@ -3114,5 +3114,33 @@
   {
     "input": "Advantages",
     "output": "Let's see the advantages of data preprocessing,\nImproves Data Quality:Cleans and organizes raw data for better analysis.\nEnhances Model Accuracy:Removes noise and irrelevant data, leading to more precise predictions.\nReduces Overfitting:Handles outliers and redundant features, improving model generalization.\nSpeeds Up Training:Efficiently scaled data reduces computation time.\nEnsures Algorithm Compatibility:Converts data into formats suitable for machine learning models."
+  },
+  {
+    "input": "How Dimensionality Reduction Works?",
+    "output": "Lets understand how dimensionality Reduction is used with the help of example. Imagine a dataset where each data point exists in a 3D space defined by axes X, Y and Z. If most of the data variance occurs along X and Y then the Z-dimension may contribute very little to understanding the structure of the data.\nBefore Reduction we can see that data exist in 3D (X,Y,Z). It has high redundancy and Z contributes little meaningful information\nOn the right after reducing the dimensionality the data is represented in lower-dimensional spaces. The top plot (X-Y) maintains the meaningful structure while the bottom plot (Z-Y) shows that the Z-dimension contributed little useful information.\nThis process makes data analysis more efficient hence improving computation speed and visualization while minimizing redundancy"
+  },
+  {
+    "input": "Dimensionality Reduction Techniques",
+    "output": "Dimensionality reduction techniques can be broadly divided into two categories:"
+  },
+  {
+    "input": "1. Feature Selection",
+    "output": "Feature selectionchooses the most relevant features from the dataset without altering them. It helps remove redundant or irrelevant features, improving model efficiency. Some common methods are:\nFilter methodsrank the features based on their relevance to the target variable.\nWrapper methodsuse the model performance as the criteria for selecting features.\nEmbedded methodscombine feature selection with the model training process."
+  },
+  {
+    "input": "2. Feature Extraction",
+    "output": "Feature extractioninvolves creating new features by combining or transforming the original features. These new features retain most of the dataset’s important information in fewer dimensions. Common feature extraction methods are:"
+  },
+  {
+    "input": "Real World Use Case",
+    "output": "Dimensionality reduction plays a important role in many real-world applications such as text categorization, image retrieval, gene expression analysis and more. Here are a few examples:"
+  },
+  {
+    "input": "Advantages",
+    "output": "As seen earlier high dimensionality makes models inefficient. Let's now summarize the key advantages of reducing dimensionality.\nFaster Computation: With fewer features machine learning algorithms can process data more quickly. This results in faster model training and testing which is particularly useful when working with large datasets.\nBetter Visualization: As we saw in the earlier figure reducing dimensions makes it easier to visualize data and reveal hidden patterns.\nPrevent Overfitting: With few features models are less likely to memorize the training data and overfit. This helps the model generalize better to new, unseen data improve its ability to make accurate predictions."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Data Loss & Reduced Accuracy:Some important information may be lost during dimensionality reduction and affect model performance.\nChoosing the Right Components:Deciding how many dimensions to keep is difficult as keeping too few may lose valuable information while keeping too many can led to overfitting."
   }
 ]
