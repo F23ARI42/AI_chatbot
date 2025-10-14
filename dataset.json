@@ -3170,5 +3170,25 @@
   {
     "input": "Difference between Each Encoding Technique",
     "output": "Here we will see a quick difference between Label Encoding, One-Hot Encoding and Ordinal Encoding."
+  },
+  {
+    "input": "Exampleof an Epoch",
+    "output": "In deep learning, datasets are usually divided into smaller subsets known asbatches. The model processes these batches sequentially, updating the parameters after each batch. Batch size is a hyperparameter that plays an important role in determining how many samples are processed together which affects the frequency of updates.\nFor example, if the training dataset has 1000 samples, one epoch would involve processing and updating the model with all 1000 samples in sequence.\nIf the dataset has 1000 samples but a batch size of 100 is used then there would be only 10 batches in total. In this case, each epoch would consist of 10 iterations with each iteration processing one batch of 100 samples.\nTypically, when training a model, the number of epochs is set to a large number like 100 and anearly stoppingmethod is used to determine when to stop training. This means that the model will continue to train until either thevalidation lossstops improving or the maximum number of epochs is reached.\nNow let's see how the data is fed to the model during training, this process involves splitting the data into smaller batches which are then processed in multiple iterations."
+  },
+  {
+    "input": "How Epochs, Batches and Iterations Work Together?",
+    "output": "Understanding the relationship between epochs, batch size and iterations is important to optimize model training. Let's see how they work together:\nEpochs Ensure Data Completeness:An epoch represents one complete pass through the entire training dataset, allowing the model to refine its parameters with each iteration.\nBatch Size affects training efficiency:The batch size refers to how many samples are processed in each batch. A larger batch size allows the model to process more data at once, smaller batches on the other hand provide more frequent updates.\nIterations update the model:An iteration occurs each time a batch is processed where the model find the loss, adjusts its parameters and updates its weights based on that loss."
+  },
+  {
+    "input": "Learning Rate Decay and Its Role in Epochs",
+    "output": "In addition to adjusting the number of epochs, the learning rate decay is an important technique that can further enhance model performance over time.\nLearning rateis a hyperparameter that controls how much the model’s weights are adjusted during training. A high learning rate might cause the model to overshoot the optimal weight while a low learning rate can make the training slow.\nLearning rate decayis a technique where the learning rate gradually decreases during training. This helps the model make large adjustments at the start and more refined, smaller adjustments as it nears the optimal solution.\nUsing learning rate decay with multiple epochs ensures that the model doesn’t overshoot during later stages of training. It helps the model to get an optimal solution which improves its performance."
+  },
+  {
+    "input": "Advantages of Using Multiple Epochs in Model Training",
+    "output": "Using multiple epochs in machine learning is key to effective model training:"
+  },
+  {
+    "input": "Disadvantages of Overusing Epochs in Model Training",
+    "output": "Training a model for too many epochs can lead to some common issues which are as follows:\nBy understanding epochs, batches and iterations, we can optimize our model's training process and fine-tune it for better performance."
   }
 ]
