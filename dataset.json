@@ -3250,5 +3250,53 @@
   {
     "input": "Advantages",
     "output": "Improves Model Performance:Enhances accuracy and predictive power by presenting features in comparable scales.\nSpeeds Up Convergence:Helps gradient-based algorithms train faster and more reliably.\nPrevents Feature Bias:Avoids dominance of large-scale features, ensuring fair contribution from all features.\nIncreases Numerical Stability:Reduces risks of overflow/underflow in computations.\nFacilitates Algorithm Compatibility:Makes data suitable for distance- and gradient-based models like SVM, KNN and neural networks."
+  },
+  {
+    "input": "Need of Feature Selection",
+    "output": "Feature selection methods are essential in data science and machine learning for several key reasons:\nImproved Accuracy: Focusing only on the most relevant features enables models to learn more effectively often resulting in higher predictive accuracy.\nFaster Training: With fewer features to process, models train more quickly and require less computational power hence saving time.\nGreater Interpretability: Reducing the number of features makes it easier to understand, analyze and explain how a model makes its decisions which is helpful for debugging and transparency.\nAvoiding the Curse of Dimensionality: Limiting feature count prevents models from being overwhelmed in high-dimensional spaces which helps in maintain performance and reliable results."
+  },
+  {
+    "input": "Types of Feature Selection Methods",
+    "output": "There are various algorithms used for feature selection and are grouped into three main categories and each one has its own strengths and trade-offs depending on the use case."
+  },
+  {
+    "input": "1. Filter Methods",
+    "output": "Filter methods evaluate each feature independently with target variable. Feature with high correlation with target variable are selected as it means this feature has some relation and can help us in making predictions. These methods are used in the preprocessing phase to remove irrelevant or redundant features based on statistical tests (correlation) or other criteria."
+  },
+  {
+    "input": "Advantages",
+    "output": "Fast and efficient: Filter methods are computationally inexpensive, making them ideal for large datasets.\nEasy to implement: These methods are often built-in to popular machine learning libraries, requiring minimal coding effort.\nModel Independence: Filter methods can be used with any type of machine learning model, making them versatile tools."
+  },
+  {
+    "input": "Limitations",
+    "output": "Limited interaction with the model: Since they operate independently, filter methods might miss data interactions that could be important for prediction.\nChoosing the right metric: Selecting the appropriate metric for our data and task is crucial for optimal performance.\nSome techniques used are:\nInformation Gain:It is defined as the amount of information provided by the feature for identifying the target value and measures reduction in the entropy values. Information gain of each attribute is calculated considering the target values for feature selection.\nChi-square test:It is generally used to test the relationship between categorical variables. It compares the observed values from different attributes of the dataset to its expected value.\nFisher’s Score:It selects each feature independently according to their scores under Fisher criterion leading to a suboptimal set of features. Larger the Fisher’s score means selected feature is better to choose.\nPearson’s Correlation Coefficient:It is a measure of quantifying the association between the two continuous variables and the direction of the relationship with its values ranging from -1 to 1.\nVariance Threshold:It is an approach where all features are removed whose variance doesn’t meet the specific threshold. By default this method removes features having zero variance. The assumption made using this method is higher variance features are likely to contain more information.\nMean Absolute Difference:It is a method is similar to variance threshold method but the difference is there is no square in this method. This method calculates the mean absolute difference from the mean value.\nDispersion ratio:It is defined as the ratio of the Arithmetic mean (AM) to that of Geometric mean (GM) for a given feature. Its value ranges from +1 to infinity as AM ≥ GM for a given feature. Higher dispersion ratio implies a more relevant feature."
+  },
+  {
+    "input": "2. Wrapper methods",
+    "output": "Wrapper methods are also referred as greedy algorithms that train algorithm. They use different combination of features and compute relation between these subset features and target variable and based on conclusion addition and removal of features are done. Stopping criteria for selecting the best subset are usually pre-defined by the person training the model such as when the performance of the model decreases or a specific number of features are achieved."
+  },
+  {
+    "input": "Advantages",
+    "output": "Model-specific optimization: Wrapper methods directly consider how features influence the model, potentially leading to better performance compared to filter methods.\nFlexible: These methods can be adapted to various model types and evaluation metrics."
+  },
+  {
+    "input": "Limitations",
+    "output": "Computationally expensive: Evaluating different feature combinations can be time-consuming, especially for large datasets.\nRisk of overfitting: Fine-tuning features to a specific model can lead to an overfitted model that performs poorly on unseen data.\nSome techniques used are:\nForward selection: This method is an iterative approach where we initially start with an empty set of features and keep adding a feature which best improves our model after each iteration. The stopping criterion is till the addition of a new variable does not improve the performance of the model.\nBackward elimination: This method is also an iterative approach where we initially start with all features and after each iteration, we remove the least significant feature. The stopping criterion is till no improvement in the performance of the model is observed after the feature is removed.\nRecursive elimination:Recursive eliminationis a greedy method that selects features by recursively removing the least important ones. It trains a model, ranks features based on importance and eliminates them one by one until the desired number of features is reached."
+  },
+  {
+    "input": "3. Embedded methods",
+    "output": "Embedded methods perform feature selection during the model training process. They combine the benefits of both filter and wrapper methods. Feature selection is integrated into the model training allowing the model to select the most relevant features based on the training process dynamically."
+  },
+  {
+    "input": "Advantages",
+    "output": "Efficient and effective: Embedded methods can achieve good results without the computational burden of some wrapper methods.\nModel-specific learning: Similar to wrapper methods these techniques usees the learning process to identify relevant features."
+  },
+  {
+    "input": "Limitations",
+    "output": "Limited interpretability: Embedded methods can be more challenging to interpret compared to filter methods making it harder to understand why specific features were chosen.\nNot universally applicable: Not all machine learning algorithms support embedded feature selection techniques.\nSome techniques used are:\nL1 Regularization (Lasso):A regression method that applies L1 regularization to encourage sparsity in the model. Features with non-zero coefficients are considered important.\nDecision TreesandRandom Forests:These algorithms naturally perform feature selection by selecting the most important features for splitting nodes based on criteria like Gini impurity or information gain.\nGradient Boosting:Like random forests gradient boosting models select important features while building trees by prioritizing features that reduce error the most."
+  },
+  {
+    "input": "Choosing the Right Feature Selection Method",
+    "output": "Choice of feature selection method depends on several factors:\nDataset size: Filter methods are generally faster for large datasets while wrapper methods might be suitable for smaller datasets.\nModel type: Some models like tree-based models, have built-in feature selection capabilities.\nInterpretability: If understanding the rationale behind feature selection is crucial, filter methods might be a better choice.\nComputational resources:Wrapper methods can be time-consuming, so consider our available computing power.\nWith these feature selection methods we can easily improve performance of our model and reduce its computational cost."
   }
 ]
