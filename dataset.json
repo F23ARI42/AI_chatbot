@@ -3190,5 +3190,37 @@
   {
     "input": "Disadvantages of Overusing Epochs in Model Training",
     "output": "Training a model for too many epochs can lead to some common issues which are as follows:\nBy understanding epochs, batches and iterations, we can optimize our model's training process and fine-tune it for better performance."
+  },
+  {
+    "input": "1. Precision:",
+    "output": "It refers to the proportion of correct positive predictions (True Positives) out of all the positive predictions made by the model (True Positives + False Positives). It is a measure of the accuracy of the positive predictions. The formula for Precision is:\n\\text{Precision} = \\frac{\\text{True Positives}}{\\text{True Positives} + \\text{False Positives}}\nFor example, if there are 10 positive cases and 5 negative cases. The model can identify 5 positive cases. But out of these 5 identified cases only 4 are positive and 1 is negative. Thus precision becomes 80% (4/5)."
+  },
+  {
+    "input": "2. Recall:",
+    "output": "It isalso known as Sensitivity or True Positive Rate where we measures the proportion of actual positive instances that were correctly identified by the model. It is the ratio of True Positives to the total actual positives (True Positives + False Negatives). The formula for Recall is:\n\\text{Recall} = \\frac{\\text{True Positives}}{\\text{True Positives} + \\text{False Negatives}}\nLet's use the previous example. Although the model'sprecisionis quite high at 80% the recall will be significantly lower. Given 10 actual positive cases the model only identified 4 positive cases correctly. Therefore the recall can be calculated as 40% (4/10)."
+  },
+  {
+    "input": "F1 Score by combining Precision and Recall",
+    "output": "Now the F1 Score combines precision and recall using the harmonic mean:\nF_1 \\text{ Score} = 2 \\times \\frac{\\text{Precision} \\times \\text{Recall}}{\\text{Precision} + \\text{Recall}}\nThis formula ensures that both precision and recall must be high for the F1 score to be high. If either one drops significantly the F1 score will also drop."
+  },
+  {
+    "input": "Why We Use Harmonic Mean Instead of Simple Average?",
+    "output": "Harmonic mean is preferred over the arithmetic mean because it better handles rates like precision and recall. It balances both metrics equally ensuring that both need to be high for a good F1 score. The harmonic mean helps combine precision and recall when their denominators differ by averaging their reciprocals and then transforming the result back. This approach is especially useful in imbalanced datasets where a low value in either precision or recall can significantly lower the F1 score."
+  },
+  {
+    "input": "Calculating F1 Score",
+    "output": "We will be using binary classification and multiclass classification for understanding and calculation of F1 Score."
+  },
+  {
+    "input": "1. Binary Classification",
+    "output": "Inbinary classificationwhere there are only two classes (positive and negative) the F1 score can be computed from theconfusion matrixthat helps calculate metrics such as precision, recall and the F1 score.\nLet's take an example of a dataset with 100 total cases. Out of these 90 are positive and 10 are negative cases. The model predicted 85 positive cases out of which 80 are actual positive and 5 are from actual negative cases. The confusion matrix would look like:\nLet us see how does F1 score help when there is a class imbalance:\nExample 1:Consider the below case where there are only 9 cases of true positives out of a dataset of 100.\nIn this case if we give importance to accuracy over model will predict everything as negative. This gives us an accuracy of 91 %. However our F1 score is low.\nExample 2:However one must also consider the opposite case where the positives outweigh the negative cases. In such a case our model will try to predict everything as positive.\nHere we get a good F1 score but low accuracy. In such cases the negative should be treated as positive and positive as negative."
+  },
+  {
+    "input": "2. Multiclass Classification",
+    "output": "In amulti-class classificationproblem where there are more than two classes we calculate the F1 score per class rather than providing a single overall F1 score for the entire model. This approach is often referred to as the one-vs-rest (OvR) or one-vs-all (OvA) strategy.\nFor each class in the multi-class problem a binary classification problem is created.\nWe treat one class as the positive class and the rest of the classes as the negative class.\nThen we proceed to calculate the F1 score as outlined above.\nFor a specific class the true positives (TP) are the instances correctly classified as that class, false positives (FP) are instances incorrectly classified as that class and false negatives (FN) are instances of that class incorrectly classified as other classes.\nThis means that you train a separate binary classifier for each class considering instances of that class as positive and instances of all other classes as negative.\nOnce we have calculated the F1 score for each class we might want to aggregate these scores to get an overall performance measure for your model. Common approaches include calculating a micro-average, macro-average or weighted average of the individual F1 scores."
+  },
+  {
+    "input": "Implementing F1 Score in Python",
+    "output": "We can easily calculate the F1 score in Python using the f1_scorefunction from thesklearn.metricsmodule. This function supports both binary and multi-class classification.\nHere's an explanation of the function and its parameters:\nf1_scorefunction takes two required parameters: y_true and y_pred along with an optional parameter average.\ny_true: This parameter represents the true labels for the instances, providing the actual outcomes that the model is trying to predict.\ny_pred: This parameter contains the predicted labels from the model indicating the model's output based on the input data.\naverage:This parameter defines the type of averaging performed on the data. It is a optional parameter.\nOutput:\nMicro-average: Calculates metrics globally by counting the total true positives, false negatives and false positives.\nMacro-average: Averages the F1 score for each class without considering class imbalance.\nWeighted-average: Considers class imbalance by weighting the F1 scores by the number of true instances for each class.\nTherefore F1 score provides a balanced evaluation of a model’s performance especially when dealing with imbalanced datasets."
   }
 ]
