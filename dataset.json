@@ -3314,5 +3314,37 @@
   {
     "input": "Using scipy.stats.pearsonr",
     "output": "Computes Pearson correlation for each pair of columns individually, returning both the coefficient and a p-value for significance. Offers detailed stats but requires manual looping over pairs.\nOutput\nExplanation: AandBhave a perfect negative correlation (-1), reflecting their opposite linear trends.AandC, as well asBandC, show no correlation (0), indicating no linear relationship. The matrix clearly captures these relationships between the variables.\nRelated articles:"
+  },
+  {
+    "input": "Techniques for Hyperparameter Tuning",
+    "output": "Models can have many hyperparameters and finding the best combination of parameters can be treated as a search problem. The two best strategies for Hyperparameter tuning are:"
+  },
+  {
+    "input": "1. GridSearchCV",
+    "output": "GridSearchCVis a brute-force technique for hyperparameter tuning. It trains the model using all possible combinations of specified hyperparameter values to find the best-performing setup. It is slow and uses a lot of computer power which makes it hard to use with big datasets or many settings. It works using below steps:\nCreate a grid of potential values for each hyperparameter.\nTrain the model for every combination in the grid.\nEvaluate each model using cross-validation.\nSelect the combination that gives the highest score.\nFor example if we want to tune two hyperparameters C and Alpha for a Logistic Regression Classifier model with the following sets of values:C = [0.1, 0.2, 0.3, 0.4, 0.5]Alpha = [0.01, 0.1, 0.5, 1.0]\n\nThe grid search technique will construct multiple versions of the model with all possible combinations of C and Alpha, resulting in a total of 5 * 4 = 20 different models. The best-performing combination is then chosen."
+  },
+  {
+    "input": "Example: Tuning Logistic Regression with GridSearchCV",
+    "output": "The following code illustrates how to use GridSearchCV . In this below code:\nWe generate sample data usingmake_classification.\nWe define a range ofCvalues using logarithmic scale.\nGridSearchCV tries all combinations fromparam_gridand uses 5-fold cross-validation.\nIt returns the best hyperparameter (C) and its corresponding validation score\nOutput:\nThis represents the highest accuracy achieved by the model using the hyperparameter combinationC = 0.0061. The best score of0.853means the model achieved 85.3% accuracy on the validation data during the grid search process."
+  },
+  {
+    "input": "2. RandomizedSearchCV",
+    "output": "As the name suggestsRandomizedSearchCVpicks random combinations of hyperparameters from the given ranges instead of checking every single combination like GridSearchCV.\nIn each iteration ittries a new random combinationof hyperparameter values.\nItrecords the model’s performancefor each combination.\nAfter several attempts itselects the best-performing set."
+  },
+  {
+    "input": "Example: Tuning Decision Tree with RandomizedSearchCV",
+    "output": "The following code illustrates how to use RandomizedSearchCV. In this example:\nWe define a range of values for each hyperparameter e.g,max_depth,min_samples_leafetc.\nRandom combinations are picked and evaluated using 5-fold cross-validation.\nThe best combination and score are printed.\nOutput:\nA score of0.842means the model performed with an accuracy of 84.2% on the validation set with following hyperparameters."
+  },
+  {
+    "input": "3. Bayesian Optimization",
+    "output": "Grid Search and Random Search can be inefficient because they blindly try many hyperparameter combinations, even if some are clearly not useful.Bayesian Optimizationtakes a smarter approach. It treats hyperparameter tuning like a mathematical optimization problem andlearns from past resultsto decide what to try next.\nBuild a probabilistic model (surrogate function) that predicts performance based on hyperparameters.\nUpdate this model after each evaluation.\nUse the model to choose the next best set to try.\nRepeat until the optimal combination is found. The surrogate function models:\nHere the surrogate function models the relationship between hyperparametersxand the scorey. By updating this model iteratively with each new evaluation Bayesian optimization makes more informed decisions. Common surrogate models used in Bayesian optimization include:\nGaussian Processes\nRandom Forest Regression\nTree-structured Parzen Estimators (TPE)"
+  },
+  {
+    "input": "Advantages of Hyperparameter tuning",
+    "output": "Improved Model Performance: Finding the optimal combination of hyperparameters can significantly boost model accuracy and robustness.\nReduced Overfitting and Underfitting: Tuning helps to prevent both overfitting and underfitting resulting in a well-balanced model.\nEnhanced Model Generalizability: By selecting hyperparameters that optimize performance on validation data the model is more likely to generalize well to unseen data.\nOptimized Resource Utilization: With careful tuning resources such as computation time and memory can be used more efficiently avoiding unnecessary work.\nImproved Model Interpretability: Properly tuned hyperparameters can make the model simpler and easier to interpret."
+  },
+  {
+    "input": "Challenges in Hyperparameter Tuning",
+    "output": "Dealing with High-Dimensional Hyperparameter Spaces:The larger the hyperparameter space the more combinations need to be explored. This makes the search process computationally expensive and time-consuming especially for complex models with many hyperparameters.\nHandling Expensive Function Evaluations:Evaluating a model's performance can be computationally expensive, particularly for models that require a lot of data or iterations.\nIncorporating Domain Knowledge: Itcan help guide the hyperparameter search, narrowing down the search space and making the process more efficient. Using insights from the problem context can improve both the efficiency and effectiveness of tuning.\nDeveloping Adaptive Hyperparameter Tuning Methods:Dynamic adjustment of hyperparameters during training such as learning rate schedules or early stopping can lead to better model performance."
   }
 ]
