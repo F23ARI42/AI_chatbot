@@ -1,0 +1,34 @@
+[
+  {
+    "input": "1. Precision",
+    "output": "Precision is the ratio between the True Positives and all the Positives. It shows how many of the “yes” predictions made by the model were actually correct. It helps us reduce wrong “yes” guesses which are calledfalse positives (FP). Precision is calculated as:\nImagine you build a model to findbirds in photos. It marks some photos as \"bird.\"\nIf those marked photos really have birds that’s good (true positives).\nBut if some don’t have birds the model made a mistake (false positives)."
+  },
+  {
+    "input": "Uses of Precision",
+    "output": "Precisionhelps us understand how accurate a model's “yes” predictions are. It is especially useful when the data has more of one kind of result than the other.\nFor example if most emails are not spam and only a few are then precision helps us see how well the model is finding the spam without making too many mistakes. In such uneven data precision helps measure how correctly the model is picking out the less common group like spam or fraud."
+  },
+  {
+    "input": "Advantages of High Precision",
+    "output": "A model with high precision is very good at avoiding mistakes when it says “yes.” This is important in situations where false alarms are a big problem. For example:\nIn spam email detection it's better if real emails don't get wrongly marked as spam.\nWe care more about getting the important emails right than stopping every single spam message.\nSo in these cases a model that gives fewer wrong \"yes\" answers is more useful."
+  },
+  {
+    "input": "Limitations of Precision",
+    "output": "If we only care about precision then model may miss some real cases. It becomes too careful and may say “no” even when something is actually “yes.”\nIf the model is too focused on being precise it might let lots of spam emails into your inbox because it's afraid of wrongly marking a real email as spam."
+  },
+  {
+    "input": "2. Recall",
+    "output": "Recalltells us how well a model finds all the correct “yes” cases in the data. It checkshow many real positive casesthe model was able to correctly identify. The formula to calculate recall is:\nTrue Positives (TP): The model correctly said “yes.”\nFalse Negatives (FN): The model missed a real “yes” and said “no” instead.\nImagine a computer model that looks for birds in pictures.\nRecall tells us how many real birds the model found correctly.\nA perfect model would find all birds with no misses that means no false negatives."
+  },
+  {
+    "input": "Uses of Recall",
+    "output": "You use recall when it’s very important to find all possible positive cases even if some of them turn out to be wrong. For example:\nIn medical tests you want to catch every possible patient who may be sick even if that means a few healthy people are wrongly flagged.\nIn fraud detection it’s better to check a few extra normal transactions than to miss a real fraud."
+  },
+  {
+    "input": "Advantages of High Recall",
+    "output": "A model with high recall is very good at not missing anything important. It finds almost all the actual “yes” cases in the data. This is helpful when:\nMissing a real case is dangerous or costly.\nFor example in cybersecurity missing an attack is worse than accidentally flagging something safe."
+  },
+  {
+    "input": "Limitations of Recall",
+    "output": "Focusing only on recall means the model is optimized to identify as many actual positives as possible even at the cost of incorrectly labeling negatives as positives. This often leads to a high number of false positives."
+  }
+]
