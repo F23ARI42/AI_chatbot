@@ -1,0 +1,30 @@
+[
+  {
+    "input": "Step 1: Loading the Dataset",
+    "output": "Here we will loadpandasandscikit learnlibrary. After that we can load our dataset."
+  },
+  {
+    "input": "Step 2: Label Encoding",
+    "output": "Here we will useLabel encodingconverts each category into a unique integer, making it suitable for ordinal data or when models need numeric input.\nfit_transform: Learns and applies the mapping.\n.classes_:Shows the mapping order."
+  },
+  {
+    "input": "Step 3: One-Hot Encoding",
+    "output": "Now we will useOne-Hot encodingwhich creates separate binary columns for each category, ideal for nominal data with no natural order.\nfit_transform: Finds all unique categories and encodes them to binary columns.\ndf_ohe.drop(columns=categorical_cols, inplace=True):Drop original categorical columns if you proceed with encoded values only"
+  },
+  {
+    "input": "Step 4: Ordinal Encoding",
+    "output": "Ordinal encodingis used for features where order matters likelow < med < high. Explicitly supplies category order to ensure model sees the true underlying order."
+  },
+  {
+    "input": "Step 5: Putting Data Together with ColumnTransformer",
+    "output": "This approach cleanly manages both ordinal and nominal encoding and fits directly into any sklearn modeling pipeline.\nSuitable for any supervised learning (classification/regression) with categorical inputs."
+  },
+  {
+    "input": "Step 6: Inspection and Resulted Dataset",
+    "output": "Always use the same encoder objects on train and test data to ensure consistency.\nFor categorical variable exploration and encoding in a deployed or production ML pipeline, prefer maintaining category order explicitly for any ordinal features.\nOutput:"
+  },
+  {
+    "input": "Difference between Each Encoding Technique",
+    "output": "Here we will see a quick difference between Label Encoding, One-Hot Encoding and Ordinal Encoding."
+  }
+]
