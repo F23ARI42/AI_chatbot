@@ -1,0 +1,18 @@
+[
+  {
+    "input": "Working of Holdout Method",
+    "output": "The holdout method works by creating separate partitions of data that ensure training and evaluation are performed independently.\nThe training set is used to fit the model.\nThe test set is used to evaluate performance metrics such as accuracy, precision, recall or RMSE.\nThe model is never tested on the same data it was trained on to check its accuracy.\nPerformance results approximate how the model will behave on real-world unseen data.\nSometimes a validation set is introduced to tune hyperparameters before the final test.\nLet's see an example:\nHere we will usescikit learnlibrary.\nDataset: We will use Iris dataset which is a standard classification dataset.\ntrain_test_split: Divides data into 80% training and 20% testing.\nDecisionTreeClassifier: We will see the decision tree model for demonstration.\nAccuracy & Report: Shows how well the model performs on unseen data.\nOutput:"
+  },
+  {
+    "input": "Application",
+    "output": "Fraud Detection in Banking: Evaluating models that identify fraudulent transactions using past transaction data.\nMedical Diagnosis Systems: Validating models that predict diseases based on patient health records.\nSpam Email Classification: Testing classifiers that separate spam from genuine emails.\nCustomer Churn Prediction: Measuring accuracy of models that forecast which customers may leave a service.\nRecommendation Systems: Assessing product or content recommendation models in e-commerce and streaming platforms."
+  },
+  {
+    "input": "Advantages",
+    "output": "Simplicity: Easy to understand and implement without complex procedures.\nSpeed: Computationally efficient since the dataset is split only once.\nUnbiased Evaluation: Ensures test data remains unseen during training.\nScalability: Works effectively with very large datasets.\nFlexibility: Allows adjustable train-test ratios based on dataset size."
+  },
+  {
+    "input": "Limitations",
+    "output": "Data Dependency: Performance heavily depends on how the dataset is split.\nVariance in Results: Different splits may give different accuracy scores.\nData Waste in Small Sets: Not all data is used for training, reducing learning capacity.\nClass Imbalance Sensitivity: Risk of uneven class distribution between train and test sets.\nLess Reliable for Small Data: Cross-validation often outperforms holdout in limited data scenarios."
+  }
+]
