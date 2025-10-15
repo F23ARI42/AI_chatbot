@@ -1,0 +1,46 @@
+[
+  {
+    "input": "1. Accuracy",
+    "output": "Accuracyshows how many predictions the model got right out of all the predictions. It gives idea of overall performance but it can be misleading when one class is more dominant over the other. For example a model that predicts the majority class correctly most of the time might have high accuracy but still fail to capture important details about other classes. It can be calculated using the below formula:\n\\text{Accuracy} = \\frac {TP+TN}{TP+TN+FP+FN}"
+  },
+  {
+    "input": "2. Precision",
+    "output": "Precisionfocus on the quality of the model’s positive predictions. It tells us how many of the \"positive\" predictions were actually correct. It is important in situations where false positives need to be minimized such as detecting spam emails or fraud. The formula of precision is:\n\\text{Precision} = \\frac{TP}{TP+FP}"
+  },
+  {
+    "input": "3. Recall",
+    "output": "Recallmeasures how how good the model is at predicting positives. It shows the proportion of true positives detected out of all the actual positive instances. High recall is essential when missing positive cases has significant consequences like in medical tests.\n\\text{Recall} = \\frac{TP}{TP+FN}"
+  },
+  {
+    "input": "4. F1-Score",
+    "output": "F1-scorecombines precision and recall into a single metric to balance their trade-off. It provides a better sense of a model’s overall performance particularly for imbalanced datasets. It is helpful when both false positives and false negatives are important though it assumes precision and recall are equally important but in some situations one might matter more than the other.\n\\text{F1-Score} = \\frac {2 \\cdot Precision \\cdot Recall}{Precision + Recall}"
+  },
+  {
+    "input": "5. Specificity",
+    "output": "Specificityis another important metric in the evaluation of classification models particularly in binary classification. It measures the ability of a model to correctly identify negative instances. Specificity is also known as the True Negative Rate Formula is given by:\n\\text{Specificity} = \\frac{TN}{TN+FP}"
+  },
+  {
+    "input": "6. Type 1 and Type 2 error",
+    "output": "Type 1 and Type 2error are:\nType 1 error: It occurs when the model incorrectly predicts a positive instance but the actual instance is negative. This is also known as afalse positive. Type 1 Errors affect theprecisionof a model which measures the accuracy of positive predictions.\\text{Type 1 Error} = \\frac{\\text{FP}}{\\text{FP} + \\text{TN}}\nType 2 error: This occurs when the model fails to predict a positive instance even though it is actually positive. This is also known as afalse negative. Type 2 Errors impact therecallof a model which measures how well the model identifies all actual positive cases.\\text{Type 2 Error} = \\frac{FN}{TP+FN}\nExample:A diagnostic test is used to detect a particular disease in patients.\nType 1 Error (False Positive):This occurs when the test predicts a patient has the disease (positive result) but the patient is actually healthy (negative case).\nType 2 Error (False Negative):This occurs when the test predicts the patient is healthy (negative result) but the patient actually has the disease (positive case)."
+  },
+  {
+    "input": "Confusion Matrix For Binary Classification",
+    "output": "A 2x2 Confusion matrix is shown below for the image recognition having a Dog image or Not Dog image:\nTrue Positive (TP):It is the total counts having both predicted and actual values are Dog.\nTrue Negative (TN):It is the total counts having both predicted and actual values are Not Dog.\nFalse Positive (FP):It is the total counts having prediction is Dog while actually Not Dog.\nFalse Negative (FN):It is the total counts having prediction is Not Dog while actually, it is Dog.\nActual Dog Counts = 6\nActual Not Dog Counts = 4\nTrue Positive Counts = 5\nFalse Positive Counts = 1\nTrue Negative Counts = 3\nFalse Negative Counts = 1"
+  },
+  {
+    "input": "Implementation of Confusion Matrix for Binary classification using Python",
+    "output": "Step 1: Import the necessary libraries\nStep 2: Create the NumPy array for actual and predicted labels\nactual:represents the true labels or the actual classification of the items. In this case it's a list of 10 items where each entry is either 'Dog' or 'Not Dog'.\npredicted:represents the predicted labels or the classification made by the model.\nStep 3: Compute the confusion matrix\nconfusion_matrix:This function from sklearn.metrics computes the confusion matrix which is a table used to evaluate the performance of a classification algorithm. It compares actual and predicted to  generate a matrix\nStep 4: Plot the confusion matrix with the help of the seaborn heatmap\nsns.heatmap:This function fromSeabornis used to create a heatmap of the confusion matrix.\nannot=True:Display the numerical values in each cell of the heatmap.\nOutput:\nStep 5: Classifications Report based on Confusion Metrics\nOutput:"
+  },
+  {
+    "input": "Confusion Matrix For Multi-class Classification",
+    "output": "Inmulti-class classificationthe confusion matrix is expanded to account for multiple classes.\nRowsrepresent the actual classes (ground truth).\nColumnsrepresent the predicted classes.\nEach cell in the matrix shows how often a specific actual class was predicted as another class.\nFor example in a 3-class problem the confusion matrix would be a 3x3 table where each row and column corresponds to one of the classes. It summarizes the model's performance across all classes in a compact format. Lets consider the below example:"
+  },
+  {
+    "input": "Example: Confusion Matrix for Image Classification (Cat, Dog, Horse)",
+    "output": "The definitions of all the terms (TP, TN, FP and FN) are the same as described in the previous example.\nExample with Numbers:\nLet's consider the scenario where the model processed 30 images:\nIn this scenario:\nCats:8 were correctly identified, 1 was misidentified as a dog and 1 was misidentified as a horse.\nDogs:10 were correctly identified, 2 were misidentified as cats.\nHorses:8 were correctly identified, 2 were misidentified as dogs.\nTo calculate true negatives, we need to know the total number of images that were NOT cats, dogs or horses. Let's assume there were 10 such images and the model correctly classified all of them as \"not cat,\" \"not dog,\" and \"not horse.\" Therefore:\nTrue Negative (TN) Counts:10 for each class as the model correctly identified each non-cat/dog/horse image as not belonging to that class"
+  },
+  {
+    "input": "Implementation of Confusion Matrix for Multi-Class classification using Python",
+    "output": "Step 1: Import the necessary libraries\nStep 2: Create the NumPy array for actual and predicted labels\ny_true:List of true labels.\ny_pred:List of predicted labels by the model.\nclasses:A list of class names: 'Cat', 'Dog' and 'Horse'\nStep 3: Generate and Visualize the Confusion Matrix\nConfusionMatrixDisplay:Creates a display object for the confusion matrix.\nconfusion_matrix=cm:Passes the confusion matrix (cm) to display.\ndisplay_labels=classes:Sets the labels (['Cat' , 'Dog' , 'Horse']) or the confusion matrix.\nOutput:\nStep 4: Print the Classification Report\nOutput:\nConfusion matrix provides clear insights into important metrics like accuracy, precision and recall by analyzing correct and incorrect predictions."
+  }
+]
