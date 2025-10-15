@@ -1,0 +1,18 @@
+[
+  {
+    "input": "Using DataFrame.corr()",
+    "output": "This method computes the Pearson correlation coefficient, measuring the linear relationship between columns. Values range from -1 (perfect negative correlation) to 1 (perfect positive correlation), with 0 indicating no linear relationship. The diagonal is always 1 because each column perfectly correlates with itself.\nExplanation:ColumnsAandBhave a perfect negative correlation (-1) because asAincreases,Bdecreases. ColumnCshows no linear correlation with others, indicated by values near 0."
+  },
+  {
+    "input": "Using DataFrame.corr(method='spearman') or 'kendall'",
+    "output": "These compute rank-based correlations instead of using raw values. Spearman measures how well a monotonic relationship fits (useful for non-linear but consistent trends), while Kendall compares data orderings differently. Both work well with non-linear or ordinal data.\nOutput\nExplanation: XandYhave a perfect negative correlation (-1). Z shows moderate positive correlation with X and moderate negative with Y, reflecting consistent but not perfect monotonic relationships in both Spearman and Kendall matrices."
+  },
+  {
+    "input": "Using numpy.corrcoef()",
+    "output": "Calculates the Pearson correlation matrix directly on NumPy arrays. It’s fast but doesn’t handle labels, you’d convert results back to a DataFrame for clarity.\nOutput\nExplanation: MandNhave a weak negative correlation,MandOshow moderate positive correlation andNandOhave a strong negative correlation. The matrix reflects these varying linear relationships."
+  },
+  {
+    "input": "Using scipy.stats.pearsonr",
+    "output": "Computes Pearson correlation for each pair of columns individually, returning both the coefficient and a p-value for significance. Offers detailed stats but requires manual looping over pairs.\nOutput\nExplanation: AandBhave a perfect negative correlation (-1), reflecting their opposite linear trends.AandC, as well asBandC, show no correlation (0), indicating no linear relationship. The matrix clearly captures these relationships between the variables.\nRelated articles:"
+  }
+]
