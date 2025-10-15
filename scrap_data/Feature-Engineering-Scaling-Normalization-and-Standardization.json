@@ -1,0 +1,30 @@
+[
+  {
+    "input": "1. Absolute Maximum Scaling",
+    "output": "Absolute Maximum Scaling rescales each feature by dividing all values by the maximum absolute value of that feature. This ensures the feature values fall within the range of -1 to 1. While simple and useful in some contexts, it is highly sensitive tooutlierswhich can skew the max absolute value and negatively impact scaling quality.\nScales values between -1 and 1.\nSensitive to outliers, making it less suitable for noisy datasets.\nCode Example:We will first Load the Dataset\nOutput:\nPerforming Absolute Maximum Scaling\nComputes max absolute value per column with np.max(np.abs(df), axis=0).\nDivides each value by that max absolute to scale features between -1 and 1.\nDisplays first few rows of scaled data with scaled_df.head().\nOutput:"
+  },
+  {
+    "input": "2. Min-Max Scaling",
+    "output": "Min-Max Scaling transforms features by subtracting the minimum value and dividing by the difference between the maximum and minimum values. This method maps feature values to a specified range, commonly 0 to 1, preserving the original distribution shape but is still affected by outliers due to reliance on extreme values.\nScales features to range.\nSensitive to outliers because min and max can be skewed.\nCode Example:Performing Min-Max Scaling\nCreates MinMaxScaler object to scale features to range.\nFits scaler to data and transforms with scaler.fit_transform(df).\nConverts result to DataFrame maintaining column names.\nShows first few scaled rows with scaled_df.head().\nOutput:"
+  },
+  {
+    "input": "3. Normalization (Vector Normalization)",
+    "output": "Normalization scales each data sample (row) such that its vector length (Euclidean norm) is 1. This focuses on the direction of data points rather than magnitude making it useful in algorithms where angle or cosine similarity is relevant, such as text classification or clustering.\nWhere:\n{X_i}is each individual value.\n{\\| X \\|}represents the Euclidean norm (or length) of the vectorX.\nNormalizes each sample to unit length.\nUseful for direction-based similarity metrics.\nCode Example:Performing Normalization\nScales each row (sample) to have unit norm (length = 1) based on Euclidean distance.\nFocuses on direction rather than magnitude of data points.\nUseful for algorithms relying on similarity or angles (e.g., cosine similarity).\nscaled_df.head() shows normalized data where each row is scaled individually.\nOutput:"
+  },
+  {
+    "input": "4. Standardization",
+    "output": "Standardization centers features by subtracting the mean and scales them by dividing by the standard deviation, transforming features to have zero mean and unit variance. This assumption of normal distribution often benefits models like linear regression, logistic regression and neural networks by improving convergence speed and stability.\nwhere\\mu= mean,\\sigma= standard deviation.\nProduces features with mean 0 and variance 1.\nEffective for data approximately normally distributed.\nCode Example:Performing Standardization\nCenters features by subtracting mean and scales to unit variance.\nTransforms data to have zero mean and standard deviation of 1.\nAssumes roughly normal distribution; improves many ML algorithms’ performance.\nscaled_df.head() shows standardized features.\nOutput:"
+  },
+  {
+    "input": "5. Robust Scaling",
+    "output": "Robust Scaling uses the median and interquartile range (IQR) instead of the mean and standard deviation making the transformation robust to outliers and skewed distributions. It is highly suitable when the dataset contains extreme values or noise.\nReduces influence of outliers by centering on median\nScales based on IQR, which captures middle 50% spread\nCode Example:Performing Robust Scaling\nUses median and interquartile range (IQR) for scaling instead of mean/std.\nRobust to outliers and skewed data distributions.\nCenters data around median and scales based on spread of central 50% values.\nscaled_df.head() shows robustly scaled data minimizing outlier effects.\nOutput:"
+  },
+  {
+    "input": "Comparison of Various Feature Scaling Techniques",
+    "output": "Let's see the key differences across the five main feature scaling techniques commonly used in machine learning preprocessing."
+  },
+  {
+    "input": "Advantages",
+    "output": "Improves Model Performance:Enhances accuracy and predictive power by presenting features in comparable scales.\nSpeeds Up Convergence:Helps gradient-based algorithms train faster and more reliably.\nPrevents Feature Bias:Avoids dominance of large-scale features, ensuring fair contribution from all features.\nIncreases Numerical Stability:Reduces risks of overflow/underflow in computations.\nFacilitates Algorithm Compatibility:Makes data suitable for distance- and gradient-based models like SVM, KNN and neural networks."
+  }
+]
