@@ -1,0 +1,82 @@
+[
+  {
+    "input": "Working of Back Propagation Algorithm",
+    "output": "The Back Propagation algorithm involves two main steps: the Forward Pass and the Backward Pass."
+  },
+  {
+    "input": "1. Forward Pass Work",
+    "output": "In forward pass the input data is fed into the input layer. These inputs combined with their respective weights are passed to hidden layers.  For example in a network with two hidden layers (h1 and h2) the output from h1 serves as the input to h2. Before applying an activation function, a bias is added to the weighted inputs.\nEach hidden layer computes the weighted sum (`a`) of the inputs then applies an activation function likeReLU (Rectified Linear Unit)to obtain the output (`o`). The output is passed to the next layer where an activation function such assoftmaxconverts the weighted outputs into probabilities for classification."
+  },
+  {
+    "input": "2. Backward Pass",
+    "output": "In the backward pass the error (the difference between the predicted and actual output) is propagated back through the network to adjust the weights and biases. One common method for error calculation is theMean Squared Error (MSE)given by:\nOnce the error is calculated the network adjusts weights using gradients which are computed with the chain rule. These gradients indicate how much each weight and bias should be adjusted to minimize the error in the next iteration. The backward pass continues layer by layer ensuring that the network learns and improves its performance. The activation function through its derivative plays a crucial role in computing these gradients during Back Propagation."
+  },
+  {
+    "input": "Example of Back Propagation in Machine Learning",
+    "output": "Let’s walk through an example of Back Propagation in machine learning. Assume the neurons use the sigmoid activation function for the forward and backward pass. The target output is 0.5 and the learning rate is 1."
+  },
+  {
+    "input": "1. Initial Calculation",
+    "output": "The weighted sum at each node is calculated using:\nWhere,\na_jis  the weighted sum of all the inputs and weights at each node\nw_{i,j}represents the weights between thei^{th}input and thej^{th}neuron\nx_irepresents the value of thei^{th}input\nO (output):After applying the activation function to a,we get the output of the neuron:"
+  },
+  {
+    "input": "2. Sigmoid Function",
+    "output": "The sigmoid function returns a value between 0 and 1, introducing non-linearity into the model."
+  },
+  {
+    "input": "3. Computing Outputs",
+    "output": "At h1 node\nOnce we calculated the a1value, we can now proceed to find the y3value:\nSimilarly find the values of y4ath2and y5at O3"
+  },
+  {
+    "input": "4. Error Calculation",
+    "output": "Our actual output is 0.5 but we obtained 0.67.To calculate the error we can use the below formula:\nUsing this error value we will be backpropagating."
+  },
+  {
+    "input": "1. Calculating Gradients",
+    "output": "The change in each weight is calculated as:\nWhere:\n\\delta_j​ is the error term for each unit,\n\\etais the learning rate."
+  },
+  {
+    "input": "2. Output Unit Error",
+    "output": "For O3:"
+  },
+  {
+    "input": "3. Hidden Unit Error",
+    "output": "For h1:\nFor h2:"
+  },
+  {
+    "input": "4. Weight Updates",
+    "output": "For the weights from hidden to output layer:\nNew weight:\nFor weights from input to hidden layer:\nNew weight:\nSimilarly other weights are updated:\nw_{1,2}(\\text{new}) = 0.273225\nw_{1,3}(\\text{new}) = 0.086615\nw_{2,1}(\\text{new}) = 0.269445\nw_{2,2}(\\text{new}) = 0.18534\nThe updated weights are illustrated below\nAfter updating the weights the forward pass is repeated hence giving:\ny_3 = 0.57\ny_4 = 0.56\ny_5 = 0.61\nSincey_5 = 0.61is still not the target output the process of calculating the error and backpropagating continues until the desired output is reached.\nThis process demonstrates how Back Propagation iteratively updates weights by minimizing errors until the network accurately predicts the output.\nThis process is said to be continued until the actual output is gained by the neural network."
+  },
+  {
+    "input": "Back Propagation Implementation in Python for XOR Problem",
+    "output": "This code demonstrates how Back Propagation is used in a neural network to solve the XOR problem. The neural network consists of:"
+  },
+  {
+    "input": "1. Defining Neural Network",
+    "output": "We define a neural network as Input layer with 2 inputs, Hidden layer with 4 neurons, Output layer with 1 output neuron and useSigmoidfunction as activation function.\nself.input_size = input_size: stores the size of the input layer\nself.hidden_size = hidden_size:stores the size of the hidden layer\nself.weights_input_hidden = np.random.randn(self.input_size, self.hidden_size): initializes weights for input to hidden layer\nself.weights_hidden_output = np.random.randn(self.hidden_size, self.output_size): initializes weights for hidden to output layer\nself.bias_hidden = np.zeros((1, self.hidden_size)):initializes bias for hidden layer\nself.bias_output = np.zeros((1, self.output_size)):initializes bias for output layer"
+  },
+  {
+    "input": "2. Defining Feed Forward Network",
+    "output": "In Forward pass inputs are passed through the network activating the hidden and output layers using the sigmoid function.\nself.hidden_activation = np.dot(X, self.weights_input_hidden) + self.bias_hidden: calculates activation for hidden layer\nself.hidden_output= self.sigmoid(self.hidden_activation): applies activation function to hidden layer\nself.output_activation= np.dot(self.hidden_output, self.weights_hidden_output) + self.bias_output:calculates activation for output layer\nself.predicted_output= self.sigmoid(self.output_activation):applies activation function to output layer"
+  },
+  {
+    "input": "3. Defining Backward Network",
+    "output": "In Backward pass or Back Propagation the errors between the predicted and actual outputs are computed. The gradients are calculated using the derivative of the sigmoid function and weights and biases are updated accordingly.\noutput_error = y - self.predicted_output:calculates the error at the output layer\noutput_delta = output_error * self.sigmoid_derivative(self.predicted_output):calculates the delta for the output layer\nhidden_error = np.dot(output_delta, self.weights_hidden_output.T):calculates the error at the hidden layer\nhidden_delta = hidden_error * self.sigmoid_derivative(self.hidden_output):calculates the delta for the hidden layer\nself.weights_hidden_output += np.dot(self.hidden_output.T, output_delta) * learning_rate:updates weights between hidden and output layers\nself.weights_input_hidden += np.dot(X.T, hidden_delta) * learning_rate:updates weights between input and hidden layers"
+  },
+  {
+    "input": "4. Training Network",
+    "output": "The network is trained over 10,000 epochs using the Back Propagation algorithm with a learning rate of 0.1 progressively reducing the error.\noutput = self.feedforward(X):computes the output for the current inputs\nself.backward(X, y, learning_rate):updates weights and biases using Back Propagation\nloss = np.mean(np.square(y - output)):calculates the mean squared error (MSE) loss"
+  },
+  {
+    "input": "5. Testing Neural Network",
+    "output": "X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]]):defines the input data\ny = np.array([[0], [1], [1], [0]]):defines the target values\nnn = NeuralNetwork(input_size=2, hidden_size=4, output_size=1):initializes the neural network\nnn.train(X, y, epochs=10000, learning_rate=0.1):trains the network\noutput = nn.feedforward(X): gets the final predictions after training\nOutput:\nThe output shows the training progress of a neural network over 10,000 epochs. Initially the loss was high (0.2713) but it gradually decreased as the network learned reaching a low value of 0.0066 by epoch 8000.\nThe final predictions are close to the expected XOR outputs: approximately 0 for [0, 0] and [1, 1] and approximately 1 for [0, 1] and [1, 0] indicating that the network successfully learned to approximate the XOR function."
+  },
+  {
+    "input": "Advantages",
+    "output": "The key benefits of using the Back Propagation algorithm are:\nEase of Implementation:Back Propagation is beginner-friendly requiring no prior neural network knowledge and simplifies programming by adjusting weights with error derivatives.\nSimplicity and Flexibility:Its straightforward design suits a range of tasks from basic feedforward to complex convolutional or recurrent networks.\nEfficiency: Back Propagation accelerates learning by directly updating weights based on error especially in deep networks.\nGeneralization:It helps models generalize well to new data improving prediction accuracy on unseen examples.\nScalability:The algorithm scales efficiently with larger datasets and more complex networks making it ideal for large-scale tasks."
+  },
+  {
+    "input": "Challenges",
+    "output": "While Back Propagation is useful it does face some challenges:\nVanishing Gradient Problem: In deep networks the gradients can become very small during Back Propagation making it difficult for the network to learn. This is common when using activation functions like sigmoid or tanh.\nExploding Gradients: The gradients can also become excessively large causing the network to diverge during training.\nOverfitting:If the network is too complex it might memorize the training data instead of learning general patterns."
+  }
+]
