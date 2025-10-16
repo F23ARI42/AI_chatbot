@@ -3570,5 +3570,33 @@
   {
     "input": "Performance of Adam",
     "output": "In comparison to other optimizers likeSGD (Stochastic Gradient Descent)and momentum-based SGD, Adam outperforms them significantly in terms of both training time and convergence accuracy. Its ability to adjust the learning rate per parameter combined with the bias-correction mechanism leading to faster convergence and more stable optimization. This makes Adam especially useful in complex models with large datasets as it avoids slow convergence and instability while reaching the global minimum.\nIn practice, Adam often achieves superior results with minimal tuning, making it a go-to optimizer for deep learning tasks."
+  },
+  {
+    "input": "Properties of the Sigmoid Function",
+    "output": "The sigmoid function has several key properties that make it a popular choice in machine learning and neural networks:"
+  },
+  {
+    "input": "Sigmoid Function in Backpropagation",
+    "output": "If we use a linear activation function in aneural network, the model will only be able to separate data linearly, which results in poor performance on non-linear datasets. However, by adding a hidden layer with a sigmoid activation function, the model gains the ability to handle non-linearity, thereby improving performance.\nDuring thebackpropagation, the model calculates and updates weights and biases by computing the derivative of the activation function. The sigmoid function is useful because:\nIt is the only function that appears in its derivative.\nIt is differentiable at every point, which helps in the effective computation of gradients during backpropagation."
+  },
+  {
+    "input": "Derivative of Sigmoid Function",
+    "output": "The derivative of the sigmoid function, denoted asσ'(x), is given byσ'(x)=σ(x)⋅(1−σ(x)).\nLet's see how the derivative of sigmoid function is computed.\nWe know that, sigmoid function is defined as:\ny = \\sigma(x) = \\frac{1}{1 + e^{-x}}\nDefine:\nu = 1 + e^{-x}\nRewriting the sigmoid function:\ny = \\frac{1}{u}\nDifferentiatinguwith respect tox:\n\\frac{du}{dx} = -e^{-x}\nDifferentiatingywith respect tou:\n\\frac{dy}{du} = -\\frac{1}{u^2}\nUsing the chain rule:\n\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}\n\\frac{dy}{dx} = (- \\frac{1}{u^2}) \\cdot (e^{-x})\n\\frac{dy}{dx} = \\frac{e^{-x}}{u^2}\nSinceu = 1 + e^{-x}, substituting:\n\\frac{dy}{dx} = \\frac{e^{-x}}{(1 + e^{-x})^2}\nSince:\n\\sigma(x) = \\frac{1}{1 + e^{-x}}\nRewriting:\n1 - \\sigma(x) = \\frac{e^{-x}}{1 + e^{-x}}\nSubstituting:\n\\frac{dy}{dx} = \\sigma(x) \\cdot (1 - \\sigma(x))\nFinal Result\n\\sigma'(x) = \\sigma(x) \\cdot (1 - \\sigma(x))\nThe above equation is known as the generalized form of the derivation of the sigmoid function. The below image shows the derivative of the sigmoid function graphically."
+  },
+  {
+    "input": "Issue with Sigmoid Function in Backpropagation",
+    "output": "One key issue with using the sigmoid function is the vanishing gradient problem. When updating weights and biases using gradient descent, if the gradients are too small, the updates to weights and biases become insignificant, slowing down or even stopping learning.\nThe shades red region highlights the areas where the derivative\\sigma^{'}(x)is very small (close to 0). In these regions, the gradients used to update weights and biases during backpropagation become extremely small. As a result, the model learns very slowly or stops learning altogether, which is a major issue in deep neural networks."
+  },
+  {
+    "input": "Problem 1: Calculate the derivative of the sigmoid function at 𝑥=0.",
+    "output": "\\sigma(0) = \\frac{1}{1 + e^0} = \\frac{1}{2}\n\\sigma'(0) = \\sigma(0) \\cdot (1 - \\sigma(0))\n= \\frac{1}{2} \\times \\left(1 - \\frac{1}{2}\\right) = \\frac{1}{4}"
+  },
+  {
+    "input": "Problem 2: Find the Value of\\sigma'(2)",
+    "output": "\\sigma(2) = \\frac{1}{1 + e^{-2}} \\approx 0.88\n\\sigma'(2) = \\sigma(2) \\cdot (1 - \\sigma(2))σ′(2)=σ(2)⋅(1−σ(2))\n\\approx 0.88 \\times (1 - 0.88) \\approx 0.1056"
+  },
+  {
+    "input": "Compute\\sigma'(-1):",
+    "output": "\\sigma(-1) = \\frac{1}{1 + e^1} \\approx 0.2689\n\\sigma'(-1) = \\sigma(-1) \\cdot (1 - \\sigma(-1))\n\\approx 0.2689 \\times (1 - 0.2689) \\approx 0.1966"
   }
 ]
