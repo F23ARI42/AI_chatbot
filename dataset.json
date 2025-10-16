@@ -3994,5 +3994,101 @@
   {
     "input": "When to Use",
     "output": "Use Categorical Crossentropy if:\nOur labels are already one-hot encoded.\nWe want precise control over label representation. For example, custom metrics or weighted classes.\nUse Sparse Categorical Crossentropy if:\nOur labels are integers.\nWe want faster training and better memory usage, especially with many classes.\nBoth Categorical and Sparse Categorical Crossentropy are equally effective for multi-class classification. The only real difference lies in the label format."
+  },
+  {
+    "input": "Mathematical Definition",
+    "output": "In mathematical terms, the standard deviation is the square root of thevariance. Variance is the average of the squared differences from the mean.\nStandard Deviation is defined as the degree ofdispersionof the data points from the mean value of the data points.\nStandard deviation is a measure used in statistics to understand how the data points in a set are spread out from the mean value.\nIt indicates the extent of the data's variation and shows how far individual data points deviate from the average."
+  },
+  {
+    "input": "Standard Deviation Formulas",
+    "output": "The formula for the standard deviation depends on whether you're working with a sample or an entire population."
+  },
+  {
+    "input": "For Sample Data",
+    "output": "where,\nsis Population Standard Deviation\nxiis the ithobservation\nx̄is the Sample Mean\nNis the Number of Observations\n∑= sum over all the values"
+  },
+  {
+    "input": "For Population Data",
+    "output": "where,\nσis Population Standard Deviation\nxiis the ithObservation\nμis Population Mean\nNis the Number of Observations\n∑= Sum over all the values\nIt is evident that both formulas look the same and have only slide changes in their denominator.\nFor a population, the denominator isN.\nFor a sample, the denominator isn - 1.\nHistorically, the sample standard deviation was first written withnin the denominator, but the results tended to underestimate the true variability of the population.\nTo correct this bias, the denominator was changed fromnton − 1. This adjustment is known asBessel’s correction, and it gives an unbiased estimate of the population variance when working with samples."
+  },
+  {
+    "input": "Steps to Calculate Standard Deviation",
+    "output": "Generally, when we talk about standard deviation, we talk aboutpopulation standard deviation. The steps to calculate the standard deviation of a given set of values are as follows,"
+  },
+  {
+    "input": "Variance",
+    "output": "Variance is a statistical measure that tells us how spread out the values in a data set are from the mean (average).\nIt is the average of the squared differences from the mean.\nVariance shows how much the numbers in your data vary from the average value.\nIf the variance is small, the numbers are close to the mean.\nIf the variance is large, the numbers are more spread out."
+  },
+  {
+    "input": "Variance Formula",
+    "output": "The formula to calculate the variance of a dataset is as follows:\nWhere:\nΣdenotes Summation (adding up)\nxrepresents Each Individual Data Point\nμis the Mean (Average) of the Dataset\nNis the Total Number of Data Points\n∑= sum over all the values"
+  },
+  {
+    "input": "Variance vs Standard Deviation",
+    "output": "The keydifference between variance and standarddeviation is given below:"
+  },
+  {
+    "input": "Standard Deviation of Ungrouped Data",
+    "output": "For ungrouped data, the standard deviation can be calculated using three methods:"
+  },
+  {
+    "input": "Standard Deviation by Actual Mean Method",
+    "output": "Standard Deviation by theactual mean methoduses the basic mean formula to calculate the mean of the given data,and using this mean value, we find the standard deviation of the given data values.\nWe calculate the mean in this method with the formula:\nStandard deviation formula for the Actual mean method\nExample:Find the Standard Deviation of the data set, X = {2, 3, 4, 5, 6}"
+  },
+  {
+    "input": "Standard Deviation by Assumed Mean Method",
+    "output": "For very large values of x, finding the mean of the grouped data is a tedious task; therefore, we use anassumed mean methodwhere we assume an arbitrary value (A) as the mean value and then calculate the standard deviation using the normal method. Suppose for the group of n data values ( x1, x2, x3, ..., xn), the assumed mean is A, then the deviation is,\nWhere,\nxi= data values\nA = assumed mean\nStandard Deviation formula for the assumed mean method\nWhere,\n'n' = Total Number of Data Values\ndi= xi- A"
+  },
+  {
+    "input": "Standard Deviation by Step Deviation Method",
+    "output": "We can also calculate the standard deviation of the grouped data using thestep deviation method. As in the above method, in this method also, we choose some arbitrary data value as the assumed mean (say A). Then we calculate the deviations of all data values (x1, x2, x3, ..., xn),  di= xi- A\nIn the next step, we calculate the Step Deviations (d') using\nwhere 'iis a Common Factor of all values\nStandard Deviation Formula for Step Deviation Method\nwhere,\n'n' = Total Number of Data Values\ndi= xi- A"
+  },
+  {
+    "input": "Standard Deviation of Discrete Grouped Data",
+    "output": "In grouped data, first, we made a frequency table, and then any further calculation was made. For discrete grouped data, the standard deviation can also be calculated using three methods:\nActual Mean Method\nAssumed Mean Method\nStep Deviation Method"
+  },
+  {
+    "input": "Formula Based on Discrete Frequency Distribution",
+    "output": "For a given data set, if it has n values (x1, x2, x3, ..., xn) and the frequency corresponding to them is (f1, f2, f3, ..., fn), then its standard deviation is calculated using the formula,\nwhere,\nnis Total Frequency (n = f1+ f2+ f3+...+ fn)\nx̄is the Mean of the Data\nxiValue of data point\nfifrequency of data points\nExample:Calculate the standard deviation for the given data\nSolution:"
+  },
+  {
+    "input": "Standard Deviation of Discrete Data by Assumed Mean Method",
+    "output": "In grouped data, if the values in the given data set are very large, then we assume a random value (say A) as the mean of the data. Then, the deviation of each value from the assumed mean is calculated as,\ndi=Deviation of data point from assumed mean\nStandard deviation formula for the assumed mean method\nwhere,\n'f' is the Frequency of Data Value x\ndi=Deviation of data point from assumed mean\n'n' is Total Frequency[n = ∑(fi)]"
+  },
+  {
+    "input": "Standard Deviation of Discrete Data by Step Deviation Method",
+    "output": "We can also use the step deviation method to calculate the standard deviation of the discrete grouped data. As in the above method, in this method also, we choose some arbitrary data value as the assumed mean (say A). Then we calculate the deviations of all data values (x1, x2, x3, ..., xn),  di= xi- A\nIn the next step,we calculate the Step Deviations (d') using\nwhere 'C' is the Common Factor of all 'd'values\nStandard deviation formula for the Step Deviation Method\nWhere,\nσ = Standard Deviation\nC =  Common Factor of all 'd values\n∑f_id_i^2= Sum total of the squared step deviations multiplied by frequencies\n∑f_id_i=  Sum total of step deviations multiplied by frequencies\nN = Total Number of Data Values"
+  },
+  {
+    "input": "Standard Deviation of Continuous Grouped Data",
+    "output": "For the continuous grouped data, we can easily calculate the standard deviation using the Discrete data formulas by replacing each class with its midpoint (as xi) and then normally calculating the formulas.\nThe calculation of each class is calculated using the formula:"
+  },
+  {
+    "input": "Standard Deviation Formula for Grouped Data:",
+    "output": "Where:\nx_i​ = midpoint of each class interval\nf_i​ = frequency of each class interval\n\\bar{x}= mean of the grouped data\ns = standard deviation\nFor example:Calculate the standard deviation of continuous grouped data as given in the table.\nSolution:"
+  },
+  {
+    "input": "Standard Deviation of Probability Distribution",
+    "output": "In probability of all the possible outcomes are generally equal, and we take many trials to find the experimental probability of the given experiment.\nFor anormal distribution, the expected mean is zero and the Standard Deviation is 1."
+  },
+  {
+    "input": "Standard Deviation Formula Binomial Distribution",
+    "output": "For abinomial distribution, the standard deviation is given by the formula,\nwhere,\nnis the Number of Trials\nPis the Probability of Success of a Trial\nqis Probability of Failure of Trial (q = 1 - p)"
+  },
+  {
+    "input": "Standard Deviation Formula Poisson Distribution",
+    "output": "For a Poisson distribution, the standard deviation is given by\nwhere,\nλis the Average Number of Successes\ntis given a time interval"
+  },
+  {
+    "input": "Standard Deviation of Random Variables",
+    "output": "Random variablesare the numerical values that denote the possible outcomes of the random experiment in the sample space. Calculating the standard deviation of the random variable tells us about the probability distribution of the random variable and the degree of the difference from the expected value.\nWe use X, Y, and Z as functions to represent the random variables. The probability of the random variable is denoted as P(X), and the expected mean value is denoted by the μ symbol.\nThen the Standard Deviation formula for the standard deviation of a probability distribution is,\nwhere:\nxi=data points\np(xi) =probability of xi\nμ =Expected mean Value"
+  },
+  {
+    "input": "Solved Examples on Standard Deviation",
+    "output": "Example 1:Find the Standard Deviation of the following data,\nSolution:\nExample 2:Find the Standard Deviation of the following data table.\nSolution:"
+  },
+  {
+    "input": "Standard Deviation Formula in Excel",
+    "output": "Use Excel's built-in functionsSTDEV.Pfor the entire population orSTDEV.Sfor a sample.\nStep-by-Step Guide:Enter your data set in a single column, then type=STDEV.S(A1:A10)(replace A1:A10 with your data range.) in a new cell to get the standard deviation for a sample.\nVisual Aids:Utilize Excel's chart tools to visually represent data variability alongside standard deviation.\nExample:Suppose you have the following numbers in cellsA1 to A5:\nSolution:\nFor population SD:=STDEV.P(A1:A5)\nFor sample SD:=STDEV.S(A1:A5)"
   }
 ]
