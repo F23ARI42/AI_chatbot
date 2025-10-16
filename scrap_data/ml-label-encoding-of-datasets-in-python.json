@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Understanding Label Encoding",
+    "output": "Categorical data is broadly divided into two types:\nNominal Data:Categories without inherent order (e.g., colors: red, blue, green).\nOrdinal Data:Categories with a natural order (e.g., satisfaction levels: low, medium, high).\nLabel encoding works best for ordinal data, where the assigned numbers reflect the order. However, applying it to nominal data can unwantedly suggest an order (e.g., Red = 0, Blue = 1, Green = 2), which may mislead algorithms likelinear regression. Thus, the choice of encoding must align with the data type and the algorithm used."
+  },
+  {
+    "input": "When to Use Label Encoding",
+    "output": "Label encoding is particularly valuable when:\nFor nominal data and algorithms sensitive to numerical values, one-hot encoding is often a better alternative."
+  },
+  {
+    "input": "Implementing Label Encoding in Python",
+    "output": "Python provides two primary ways to perform label encoding: scikit-learn's LabelEncoder and pandas’ Categorical type."
+  },
+  {
+    "input": "1. Using scikit-learn’sLabelEncoder",
+    "output": "Output:\nThe fit_transform method both learns the unique categories and applies the encoding, while the classes_ attribute stores the mapping for future reference."
+  },
+  {
+    "input": "2. Using pandas’CategoricalType",
+    "output": "Output:\nThis approach is simpler for pandas-based workflows and does not require an external library."
+  },
+  {
+    "input": "Encoding Ordinal Data",
+    "output": "When dealing with ordinal data, a custom mapping ensures the numeric values preserve order:\nOutput:\nThis approach is ideal for features where the order carries semantic meaning."
+  },
+  {
+    "input": "Performance and Limitations",
+    "output": "Label encoding is computationally efficient. Both LabelEncoder and pandas' Categorical require a single scan of the data (O(n)) to map categories. Memory usage is minimal as only integer codes and the category map are stored."
+  },
+  {
+    "input": "Limitations",
+    "output": "Nominal data misinterpretation:Encoded integers can imply false order; one-hot encoding is safer for nominal features.\nMissing values:These must be handled prior to encoding.\nUnseen categories in test data:Encoders will fail if new categories appear; handle this with a default value or ensure training includes all possible categories.\nHigh cardinality:Features with many unique categories may still require additional feature engineering."
+  },
+  {
+    "input": "Best Practices",
+    "output": "Apply label encoding primarily to ordinal features or tree-based models.\nHandle missing values before encoding.\nSave the encoder or category mapping to enable inverse transformation during evaluation or deployment.\nFor nominal features in algorithms sensitive to numerical relationships, use one-hot encoding instead."
+  }
+]
