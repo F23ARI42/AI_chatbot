@@ -3542,5 +3542,33 @@
   {
     "input": "Factors Affecting Type I and Type II Errors",
     "output": "Sample Size:In statistical hypothesis testing, larger sample sizes generally reduce the probability of both Type I and Type II errors. With larger samples, the estimates tend to be more precise, resulting in more accurate conclusions.\nSignificance Level:The significance level (α) in hypothesis testing determines the probability of committing a Type I error. Choosing a lower significance level reduces the risk of Type I error but increases the risk of Type II error, and vice versa.\nEffect Size:The magnitude of the effect or difference being tested influences the probability of Type II error. Smaller effect sizes are more challenging to detect, increasing the likelihood of failing to reject the null hypothesis when it's false.\nStatistical Power:The power of Statistics (1 – β) dictates that the opportunity for rejecting a wrong null hypothesis is based on the inverse of the chance of committing a Type II error. The power level of the test rises, thus a chance of the Type II error dropping."
+  },
+  {
+    "input": "How Does Adam Work?",
+    "output": "Adam builds upon two key concepts in optimization:"
+  },
+  {
+    "input": "1. Momentum",
+    "output": "Momentumis used to accelerate the gradient descent process by incorporating an exponentially weighted moving average of past gradients. This helps smooth out the trajectory of the optimization allowing the algorithm to converge faster by reducing oscillations.\nThe update rule with momentum is:\nwhere:\nm_tis the moving average of the gradients at timet\nαis the learning rate\nw_t​ andw_{t+1}​ are the weights at timetandt+1, respectively\nThe momentum termm_tis updated recursively as:\nwhere:\n\\beta_1​ is the momentum parameter (typically set to 0.9)\n\\frac{\\partial L}{\\partial w_t}​ is the gradient of the loss function with respect to the weights at timet"
+  },
+  {
+    "input": "2. RMSprop (Root Mean Square Propagation)",
+    "output": "RMSpropis an adaptive learning rate method that improves upon AdaGrad. WhileAdaGradaccumulates squared gradients and RMSprop uses an exponentially weighted moving average of squared gradients, which helps overcome the problem of diminishing learning rates.\nThe update rule for RMSprop is:\nwhere:\nv_t​ is the exponentially weighted average of squared gradients:\nϵis a small constant (e.g.,10^{-8}) added to prevent division by zero"
+  },
+  {
+    "input": "Combining Momentum and RMSprop to form Adam Optimizer",
+    "output": "Adam optimizer combines the momentum and RMSprop techniques to provide a more balanced and efficient optimization process. The key equations governing Adam are as follows:\nFirst moment (mean) estimate:\nSecond moment (variance) estimate:\nBias correction: Since bothm_t​ andv_tare initialized at zero, they tend to be biased toward zero, especially during the initial steps. To correct this bias, Adam computes the bias-corrected estimates:\nFinal weight update: The weights are then updated as:"
+  },
+  {
+    "input": "Key Parameters",
+    "output": "α: The learning rate or step size (default is 0.001)\n\\beta_1​ and\\beta_2​: Decay rates for the moving averages of the gradient and squared gradient, typically set to\\beta_1 = 0.9and\\beta_2 = 0.999\nϵ: A small positive constant (e.g.,10^{-8}) used to avoid division by zero when computing the final update"
+  },
+  {
+    "input": "Why Adam Works So Well?",
+    "output": "Adam addresses several challenges of gradient descent optimization:\nDynamic learning rates: Each parameter has its own adaptive learning rate based on past gradients and their magnitudes. This helps the optimizer avoid oscillations and get past local minima more effectively.\nBias correction: By adjusting for the initial bias when the first and second moment estimates are close to zero helping to prevent early-stage instability.\nEfficient performance: Adam typically requires fewer hyperparameter tuning adjustments compared to other optimization algorithms like SGD making it a more convenient choice for most problems."
+  },
+  {
+    "input": "Performance of Adam",
+    "output": "In comparison to other optimizers likeSGD (Stochastic Gradient Descent)and momentum-based SGD, Adam outperforms them significantly in terms of both training time and convergence accuracy. Its ability to adjust the learning rate per parameter combined with the bias-correction mechanism leading to faster convergence and more stable optimization. This makes Adam especially useful in complex models with large datasets as it avoids slow convergence and instability while reaching the global minimum.\nIn practice, Adam often achieves superior results with minimal tuning, making it a go-to optimizer for deep learning tasks."
   }
 ]
