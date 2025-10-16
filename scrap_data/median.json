@@ -1,0 +1,50 @@
+[
+  {
+    "input": "Median Definition",
+    "output": "Themedianis the middle value of the dataset when arranged in ascending or descending order. If the dataset has an odd number of values, the median is the middle value. If the dataset has an even number of values, the median is the average of the two middle values.\nThe three measures of the central tendency are,\nMean\nMedian\nMode"
+  },
+  {
+    "input": "Median Example",
+    "output": "Various examples of the median are:\nExample 1: Median salary of five friends, where the individual salary of each friend is,\n74,000,\n82,000,\n75,000,\n96,000, and\n88,000.\nExample 2:Median Age of a Group- Consider a group of people's ages:\n25, 30, 27, 22, 35, and 40."
+  },
+  {
+    "input": "Median Value Formula",
+    "output": "As we know median is the middle term of any data, and finding the middle term when the data is linearly arranged is very easy, the method of calculating the median varies when the given number of data is even or odd.\nFor example,\nIf we have 3 (odd-numbered) data 1, 2, and 3 then 2 is the middle term as it has one number to its left and one number to its right. So finding the middle term is quite simple.\nBut when we are given with even number of data (say 4 data sets), 1, 2, 3, and 4, then finding the median is quite tricky as by observing we can see that there is no single middle term then for finding the median we use a different concept.\nHere, we will learn about the median of grouped and ungrouped data in detail."
+  },
+  {
+    "input": "Median of Ungrouped Data",
+    "output": "The median formula is calculated by two methods,\nMedian Formula (when n is Odd)\nMedian Formula (when n is Even)\nNow let's learn about these formulas in detail."
+  },
+  {
+    "input": "Median Formula (When n is Odd)",
+    "output": "If the number of values (n value) in the data set is odd then the formula to calculate the median is,"
+  },
+  {
+    "input": "Median Formula (When n is Even)",
+    "output": "If the number of values (n value) in the data set is even then the formula to calculate the median is:"
+  },
+  {
+    "input": "Median of Grouped Data",
+    "output": "Grouped data is the data where the class interval frequency and cumulative frequency of the data are given. The median of the grouped data median is calculated using the formula,\nwhere,\nlis the Lower Limit of the Median Class\nnis the Number of Observations\nfis Frequency of Median Class\nhis Class Size\ncfis the Cumulative Frequency of Class Preceding Median Class\nWe can understand the use of the formula by studying the example discussed below,\nExample: Find the Median of the following data,\nIf the marks scored by the students in a class test out of 50 are,\nSolution:"
+  },
+  {
+    "input": "How to Find Median?",
+    "output": "To find the median of the data we can use the steps discussed below,\nStudy the following example to get an idea about the steps used.\nExample: Find the median of given data set 30, 40, 10, 20, and 50\nSolution:"
+  },
+  {
+    "input": "Application of Median Formula",
+    "output": "The median formula has various applications, this can be understood with the following example, in a cricket match the scores of the five batsmen A, B C, D, and E are 29, 78, 11, 98, and 65 then the median run of the five batsmen is,\nFirst arrange the run in ascending order as, 11, 29, 65, 78, and 98. Now by observing we can clearly see that the middle term is 65. thus the median run score is 65."
+  },
+  {
+    "input": "Median of Two Numbers",
+    "output": "For two numbers finding the middle term is a bit tricky as for two numbers there is no middle term, so we find the median as we find the mean by adding them and then dividing it by two. Thus, we can say that the median of the two numbers is the same as the mean of the two numbers. Thus, the median of the two numbers a and b is,\nMedian = (a + b)/2\nNow let's understand this using an example, find the median of the following 23 and 27\nSolution:\nRead More,\nStatistics\nMeasure of central tendency\nMean, Median, and Mode"
+  },
+  {
+    "input": "Solved Examples on Median",
+    "output": "Example 1: Find the median of the given data set 60, 70, 10, 30, and 50\nSolution:\nExample 2: Find the median of the given data set 13, 47, 19, 25, 75, 66, and 50\nSolution:\nExample 3: Find the Median of the following data,\nIf the marks scored by the students in a class test out of 100 are,\nSolution:\nExample 4: Find the median number of hours studied per week\nThe following table shows the distribution of the number of hours spent studying per week by a group of students:\nSolution:"
+  },
+  {
+    "input": "Conclusion",
+    "output": "The median is an important statistical measure that helps us find the middle value of a dataset. It is especially useful when the data contains extreme values, as it provides a better representation of the central tendency compared to the mean. Calculating the median is simple and offers an easy way to understand the distribution of values in a set."
+  }
+]
