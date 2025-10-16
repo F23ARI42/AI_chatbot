@@ -1,0 +1,14 @@
+[
+  {
+    "input": "Why Not Use Mean Squared Error (MSE)",
+    "output": "MSE works well for regression, but in Logistic Regression it creates anon-convex curve(multiple local minima).\nLog loss ensures aconvex cost function, making optimization with Gradient Descent easier and guaranteeing a global minimum."
+  },
+  {
+    "input": "Example in Python",
+    "output": "Output:"
+  },
+  {
+    "input": "Related Articles",
+    "output": "Logistic Regression\nMean Squared Error (MSE)"
+  }
+]
