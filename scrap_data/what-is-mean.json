@@ -1,0 +1,90 @@
+[
+  {
+    "input": "Mean",
+    "output": "Mean in Mathematicsis the measure of central tendency and is mostly used in Statistics. Mean is the easiest of all the measures. The method of finding the mean is also different depending on the type of data. Data is of two types,grouped dataandungrouped data.  The mean is generally the average of a given set of numbers or data. It is one of the most important measures of the central tendency of distributed data.\nIt is calculated by adding all the numbers in the data set and dividing by the number of values in the set. The mean is also known as theaverage. It is sensitive to skewed data and extreme values. For example, when the data is skewed, it can miss the mark."
+  },
+  {
+    "input": "Mean Symbol",
+    "output": "Mean is denoted as a bar over x or\\bar{x}. Let's say the dataset given is X = {x1, x2, x3,..., xn} The mean of this dataset is denoted as μ\\bar{x}and is given by:"
+  },
+  {
+    "input": "Mean Application",
+    "output": "There are many uses and examples of the mean in real life. The following are some of the real-life examples of mean:\nThe average (mean) marks obtained by the students in a class.\nA cricketer's average is also an example of a mean.\nThe average salary package is also used for the marketing of the colleges and their placement cell."
+  },
+  {
+    "input": "Mean Formula",
+    "output": "The mean formula in statistics is defined as the sum of all observations in the given dataset divided by the total number of observations. The image added below shows the mean formula of the given observation.\nWe use a mean formula to easily calculate the mean of a given dataset set for example,\nExample:Calculate the mean of the first 10 natural numbers.\nSolution:"
+  },
+  {
+    "input": "How to Find the Mean?",
+    "output": "To find the mean of a dataset, it's important to first determine whether the data isgroupedorungrouped, as the method of calculation differs for each.\nForungrouped data(individual data points listed without any frequency distribution), the mean is calculated by summing all the values and dividing by the number of observations.\nForgrouped data(data presented in class intervals with frequencies), a different formula is used that incorporates class midpoints and frequencies.\nThere are two steps involved in the calculation of the mean:\nBased on the type of dataset given, we can find out the mean using different methods. Let's take a look at the different cases to find the mean:\nCase 1:If there are 'n' number of items in a list. The data is {x1, x2, x3, ... xn}. The Mean is calculated using the formula:\nCase 2:Let's assume there are n number of items in a set, i.e., {x1, x2, x3, ... xn}, and the frequency of each item is given as {f1, f2, f3, . . ., fn}. Then, the mean is calculated using the formula:\nCase 3:When items of the set are given in the form of a range, for example, 1-10, 10-20, etc. To find the mean, first we need to calculate the class mark for each class interval, and then the mean is calculated using the given formula:"
+  },
+  {
+    "input": "Mean of Ungrouped Data",
+    "output": "The mean of ungrouped data is the sum of all the observations divided by the total number of observations. Ungrouped data is known as raw data, where the dataset simply contains all the data in no particular order. The following are the steps that are to be followed to find the mean of ungrouped data:\nNote down the entire dataset for which the mean is to be calculated.\nNow, apply any of the two formulas added below based on the observation of the data."
+  },
+  {
+    "input": "Mean Formula For Ungrouped Data",
+    "output": "The mean formula for ungrouped data is added below,\nThe mean formula for ungrouped data added above is used to find the mean of ungrouped data, for example,\nExample:Calculate the mean for the following set of data: 2, 6, 7, 9, 15, 11, 13, 12.\nSolution:"
+  },
+  {
+    "input": "Types of Mean",
+    "output": "In statistics, there are four types of mean, and they are weighted mean,Arithmetic Mean (AM),Geometric Mean (GM), andHarmonic Mean (HM). When not specified, the mean is generally referred to as the arithmetic mean. Let's take a look at all the types of mean:"
+  },
+  {
+    "input": "Arithmetic Mean",
+    "output": "The arithmetic mean is calculated for a given set of data by calculating the ratio of the sum of all observed values to the total number of observed values. When the specification of the mean is not given, it is presumed that the mean is anarithmetic mean. The general formula for the arithmetic mean is given as:\nWhere,\n\\bar{x}= Arithmetic mean\nFi= Frequency of each data point\nN = Number of frequencies.\nFor example, the arithmetic mean of five values: 4, 36, 45, 50, 75 is:\nSolution: (4 + 36 + 45 + 50 + 75)/5 = 210/5 = 42."
+  },
+  {
+    "input": "Geometric Mean",
+    "output": "The geometric mean is calculated for a set of n values by calculating the nth root of the product of all n observed values. It is defined as the nth root of the product of n numbers in the dataset. The formula for thegeometric meanis given as:\nFor example: Find the geometric mean of the numbers: 4, 16, 64\nSolution:\n\\bold{G.M. = \\sqrt[n]{x_1\\times x_2\\times x_3\\times \\ldots \\times x_n}}G.M. = ∛4 × 16 × 64G.M. = ∛4096G.M. = ∛4096G.M. = 16"
+  },
+  {
+    "input": "Harmonic Mean",
+    "output": "The harmonic mean is calculated by dividing the number of values in the observed set by the sum of reciprocals of each observed data value. Therefore, theharmonic meancan also be called the reciprocal of the arithmetic mean. The formula for harmonic mean is given as:\nFor Example: Find the harmonic mean of the numbers: 4, 5, and 10\nSolution:Harmonic Mean = (Number of Observed Values) / (1/n1+ 1/n2+ 1/n3+ .  . .)Harmonic Mean = 3/ (1/4 + 1/5 + 1/10)Harmonic Mean = 3/ 0.55Harmonic Mean = 5.454"
+  },
+  {
+    "input": "Weighted Mean",
+    "output": "The Weighted Mean is calculated in certain cases of the dataset when the given set of data has some values more important than others. In the dataset, a weight 'wi' is connected to each data 'xi', and the general formula forweighted meanis given as:\nWhere,\nxiis ithobservation, and\nwiis the Weight of ithobservations.\nFor example: A student has the following grades in two subjects:\nMath: 85 (weight 3)\nEnglish: 90 (weight 2)\nCalculate theweighted meanof the student's grades.\nSolution:"
+  },
+  {
+    "input": "Mean of Grouped Data",
+    "output": "Grouped data is the set of data that is obtained by forming individual observations of variables into groups. Grouped data is divided into groups. A frequency distribution table is required for the grouped data, which helps showcase the frequencies of the given data. The mean of grouped data can be obtained using three methods. The methods are:\nDirect Method\nAssumed Mean Method\nStep Deviation Method"
+  },
+  {
+    "input": "Calculating Mean Using Direct Method",
+    "output": "The direct method is the simplest method to find the mean of grouped data. Themean of grouped data using the direct methodcan be calculated using the following steps:\nFour columns are created in the table. The columns are Class interval, class marks (xi), frequencies (fi), the product of frequencies, and class marks (fixi).\nNow, calculate the mean of the grouped data using the formula"
+  },
+  {
+    "input": "Mean Formula For Grouped Data (Using Direct Method)",
+    "output": "The mean formula for grouped data using the direct method is added below,\nExample: Calculate the mean height for the following data using the direct method.\nSolution:"
+  },
+  {
+    "input": "Calculating Mean Using Assumed Mean Method",
+    "output": "When the calculation of the mean for grouped data using the direct method becomes very tedious, then the mean can be calculated using the assumed mean method. To find the mean using the assumed mean method, the following steps are needed:\nFive columns are created in the table, i.e., class interval, class marks (xi), corresponding deviations (di= xi- A) where A is the central value from class marks as assumed mean, frequencies (fi), and the product of fiand di.\nNow, the mean value can be calculated for the given data using the following formula."
+  },
+  {
+    "input": "Mean Formula For Grouped Data (Using Assumed Mean Method)",
+    "output": "The mean formula for grouped data using the assumed mean method is added below,\nExample: Calculate the mean of the following data using the Assumed Mean Method.\nSolution:"
+  },
+  {
+    "input": "Calculating Mean Using Step Deviation Method",
+    "output": "The step deviation method is also famously known as the scale method or the shift of origin method. When finding the mean of grouped data becomes tedious, usingstep deviation methodcan be used. The following are the steps that should be followed while using the step deviation method:\nFive columns are created in the table. They are class interval, class marks (xi, here the central value is A), deviations (di), ui= di/h (h is class width), and the product of fiand UIi.\nNow, the mean of the data can be calculated using the following formula"
+  },
+  {
+    "input": "Mean Formula For Grouped Data (Using Step Deviation Method)",
+    "output": "The mean formula for grouped data using the step deviation mean method is added below,\nExample: Calculate the mean of the following data using the Step Deviation method.\nSolution:"
+  },
+  {
+    "input": "Arithmetic Mean vs. Geometric Mean",
+    "output": "There are key differences between the Arithmetic Mean and Geometric Mean, which can be listed as follows:"
+  },
+  {
+    "input": "Solved Question on Mean",
+    "output": "Question 1:Calculate the mean of the first 5 even natural numbers.\nSolution:\nQuestion 2:Calculate the mean of the first 10 natural odd numbers.\nSolution:\nQuestion 3:Calculate missing values from the observed set 2, 6, 7, x, whose mean is 6.\nSolution:\nQuestion 4:There are 20 students in Class 10. The marks obtained by the students in mathematics (out of 100) are given below. Calculate the mean of the marks.\nSolution:\nQuestion 5:Calculate the mean of the following dataset.\nSolution:\n\nThus, Mean = 68 + 2 × (-10.5)/25\n⇒ Mean = 68 + 2 × (-0.42)\n⇒ Mean = 68 - 0.84 = 67.16\nThus, the mean height of the data using the step deviation method is 67.16 inches."
+  },
+  {
+    "input": "Practice Questions on Mean",
+    "output": "Question 1:Find the Mean temperature of a week given that the temperatures from Monday to Sunday are 21℃, 23℃, 22.5℃, 21.6℃, 22.3℃, 24℃, 20.5℃.\nQuestion2: Find the mean of the first 10 even numbers.\nQuestion 3:Find the Mean height of students if the given heights are 150 cm, 152 cm, 155 cm, 160 cm, and 148 cm.\nQuestion 4:Find the Mean of the given dataset"
+  }
+]
