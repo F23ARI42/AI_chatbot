@@ -1,0 +1,22 @@
+[
+  {
+    "input": "What is Ridge Regression or (L2 Regularization) Method?",
+    "output": "Ridge regression, also known asL2 regularization, is a technique used in linear regression to prevent overfitting by adding a penalty term to the loss function. This penalty is proportional to thesquareof the magnitude of the coefficients (weights).\nRidge Regression is a version of linear regression that includes a penalty to prevent the model from overfitting, especially when there are many predictors or not enough data.\nThe standard loss function (mean squared error) is modified to include a regularization term:\nHere, λ is theregularization parameterthat controls the strength of the penalty, and wiare the coefficients."
+  },
+  {
+    "input": "What is Lasso Regression or (L1 Regularization) Method?",
+    "output": "Lasso regression, also known asL1 regularization, is a linear regression technique that adds a penalty to the loss function to prevent overfitting. This penalty is based on theabsolute valuesof the coefficients.\nLasso regression is a version of linear regression including a penalty equal to the absolute value of the coefficient magnitude. By encouraging sparsity, this L1 regularization term reduces overfitting and helps some coefficients to be absolutely zero, hence facilitating feature selection.\nThe standard loss function (mean squared error) is modified to include a regularization term:\nHere, λ is theregularization parameterthat controls the strength of the penalty, and wiare the coefficients."
+  },
+  {
+    "input": "Difference between Ridge Regression and Lasso Regression",
+    "output": "The key differences between ridge and lasso regression are discussed below:"
+  },
+  {
+    "input": "When to Use Ridge Regression?",
+    "output": "Ridge Regression is most suitable whenall predictors are expected to contribute to the outcome and none should be excluded from the model. It reduces overfitting by shrinking the coefficients, ensuring they don’t become too large, while still keeping all the predictors in the model.\nFor example, when predicting house prices, features like size, number of bedrooms, location, and year built are all likely relevant. Ridge Regression ensures these features remain in the model but with reduced influence to create a balanced and robust prediction."
+  },
+  {
+    "input": "When to Use Lasso Regression?",
+    "output": "Lasso Regression is ideal when you suspect thatonly a few predictors are truly important, and the rest may add noise or redundancy. Itperforms automatic feature selection by shrinking the coefficients of less important predictors to zero, effectively removing them from the model.\nFor example, in genetic research, where thousands of genes are analyzed for their effect on a disease, Lasso Regression helps by identifying only the most impactful genes and ignoring the irrelevant ones, leading to a simpler and more interpretable model."
+  }
+]
