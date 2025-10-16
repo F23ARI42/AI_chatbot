@@ -1,0 +1,50 @@
+[
+  {
+    "input": "Training a Self-Supervised Learning Model in ML",
+    "output": "Let's see how the training a Self-Supervised Learning Model is done,"
+  },
+  {
+    "input": "Step 1: Import Libraries and Load Dataset",
+    "output": "We will import the required libraries such asTensorFlow,Keras,numpy,matplotlib.pyplot. Also we will load the MNIST dataset for our model.\nLoads raw MNIST digit images without labels for the SSL pre-training task.\nNormalizes pixel values to be between 0 and 1.\nAdds a channel dimension to images to fit CNN input shape."
+  },
+  {
+    "input": "Step 2: Prepare Rotation Task Dataset",
+    "output": "We will,\nDefines four rotation angles (0°, 90°, 180°, 270°) as prediction targets.\nRotates each image by these angles and records the rotation label.\nCreates a new dataset where the task is to predict the rotation angle, forming a self-supervised task"
+  },
+  {
+    "input": "Step 3: Define and Compile CNN Model for Rotation Classification",
+    "output": "We will,\nDefines a simple CNN with convolutional and pooling layers to learn image features.\nThe last layer outputs probabilities over 4 classes (rotation angles).\nCompiles the model withAdam optimizerandsparse categorical crossentropy lossfor classification."
+  },
+  {
+    "input": "Step 4: Train the Model on Rotated Images",
+    "output": "Trains the model on the self-supervised rotation prediction task.\nUses the generated rotation labels as targets.\nValidates on a similar rotated test set to monitor performance.\nOutput:"
+  },
+  {
+    "input": "Step 5: Visualized Rotation Predicted Results",
+    "output": "Uses the trained model to predict rotation angles on test images.\nRandomly selects 5 rotated images to display.\nShows original image with true and predicted rotation angle to check model accuracy visually.\nOutput:"
+  },
+  {
+    "input": "Step 6: Load Labeled MNIST Data for Fine-Tuning",
+    "output": "Now we will,\nLoads fully labeled MNIST dataset for downstream digit classification task.\nPreprocesses images and selects smaller subsets for quick fine-tuning."
+  },
+  {
+    "input": "Step 7: Modify and Fine-Tune Model on Labeled Digital Data",
+    "output": "Here,\nFreezes convolutional layers to keep learned features unchanged.\nReplaces output layer to predict 10 digit classes instead of rotations.\nCompiles and trains the model on labeled data to adapt it for digit recognition.\nOutput:"
+  },
+  {
+    "input": "Step 8: Visualize Fine-Tuned Predictions",
+    "output": "Model will,\nPredicts digit classes on labeled test images after fine-tuning.\nRandomly selects 5 test images to display.\nShows images with ground truth and predicted digit labels for visual performance check.\nOutput:"
+  },
+  {
+    "input": "Applications of SSL",
+    "output": "Computer Vision: Improves tasks like image and video recognition, object detection and medical image analysis by learning from unlabeled images to create strong visual representations.\nNatural Language Processing (NLP): Enhances language models (e.g., BERT, GPT) by learning context and semantics from large unlabeled text, boosting tasks like translation, sentiment analysis and text classification.\nSpeech Recognition: Helps transcribe and understand spoken language by learning from large volumes of unlabeled audio data.\nHealthcare: Assists in medical image analysis and diagnosis where labeled medical data is scarce due to expert annotation costs.\nAutonomous Systems and Robotics: Enables robots and self-driving cars to learn from raw sensor and video data for navigation, perception and decision-making under varied conditions."
+  },
+  {
+    "input": "Advantages of Self-Supervised Learning",
+    "output": "Less Dependence on Labeled Data: Learns useful features from large amounts of unlabeled data, reducing the cost and time of manual labeling.\nBetter Generalization: Models learn from the data’s inherent structure, helping them perform well on new, unseen data.\nSupports Transfer Learning:Pre-trained SSL models can be adapted easily to related tasks, speeding up training and improving accuracy.\nScalable: Can handle very large datasets without the need for expensive annotations, making it ideal for big data scenarios."
+  },
+  {
+    "input": "Limitations of Self-Supervised Learning",
+    "output": "Quality of Supervision Signal: The automatically generated labels (pseudo-labels) can be noisy or incomplete, leading to lower accuracy compared to supervised learning.\nTask Restrictions: Less effective for highly complex or unstructured data where meaningful pretext tasks are difficult to design.\nTraining Complexity: SSL methods like contrastive learning require careful design, tuning and more computational resources.\nHigh Computational Cost: Training SSL models often demands significant computation power and time, especially on large datasets."
+  }
+]
