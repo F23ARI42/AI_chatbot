@@ -3782,5 +3782,17 @@
   {
     "input": "Conclusion",
     "output": "The median is an important statistical measure that helps us find the middle value of a dataset. It is especially useful when the data contains extreme values, as it provides a better representation of the central tendency compared to the mean. Calculating the median is simple and offers an easy way to understand the distribution of values in a set."
+  },
+  {
+    "input": "Why Not Use Mean Squared Error (MSE)",
+    "output": "MSE works well for regression, but in Logistic Regression it creates anon-convex curve(multiple local minima).\nLog loss ensures aconvex cost function, making optimization with Gradient Descent easier and guaranteeing a global minimum."
+  },
+  {
+    "input": "Example in Python",
+    "output": "Output:"
+  },
+  {
+    "input": "Related Articles",
+    "output": "Logistic Regression\nMean Squared Error (MSE)"
   }
 ]
