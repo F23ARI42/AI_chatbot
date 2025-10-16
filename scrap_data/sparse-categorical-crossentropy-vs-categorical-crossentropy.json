@@ -1,0 +1,14 @@
+[
+  {
+    "input": "What is Categorical Crossentropy?",
+    "output": "Categorical Crossentropymeasures how well the predicted probabilities of each class align with the actual target labels. Its primary purpose is to evaluate a classification model's performance by comparing the model's predicted probabilities for each class with the actual class labels. Categorical Crossentropy requires the target labels to be inone-hot encodedformat. This means that for each label, the correct class is represented by 1 while all other classes are represented by 0.\nExample:If we are classifying animals into three categories- Dog, Cat and Rabbit and the correct label is \"Cat\",\nThe one-hot encoded vector would be [0, 1, 0].\nSuppose the model predicts probabilities like [0.2, 0.7, 0.1] (20% Dog, 70% Cat, 10% Rabbit). The loss is calculated for the correct class (Cat) using the formula:\nThe lower the loss, the closer the model's prediction is to the true label. The model minimizes this loss during training to improve accuracy."
+  },
+  {
+    "input": "What is Sparse Categorical Crossentropy?",
+    "output": "Sparse Categorical Crossentropyis functionally similar to Categorical Crossentropy but is designed for cases where the target labels are not one-hot encoded. Instead, the labels are represented as integers corresponding to the class indices. The true labels are integers where each integer represents the class index.\nExample:If the correct label is \"Cat\", it would be represented as the integer1(since \"Cat\" is the second class, starting from0).\nSuppose the model predicts probabilities like[0.2, 0.7, 0.1].\nThe loss is calculated for the correct class (Cat) using the formula:-\\log(0.7)\nThis again results in a loss of approximately 0.3567.\nSparse Categorical Crossentropy internally converts these integer labels into one-hot encoded format before calculating the loss. This approach can save memory and computational resources, especially when dealing with datasets containing a large number of classes."
+  },
+  {
+    "input": "When to Use",
+    "output": "Use Categorical Crossentropy if:\nOur labels are already one-hot encoded.\nWe want precise control over label representation. For example, custom metrics or weighted classes.\nUse Sparse Categorical Crossentropy if:\nOur labels are integers.\nWe want faster training and better memory usage, especially with many classes.\nBoth Categorical and Sparse Categorical Crossentropy are equally effective for multi-class classification. The only real difference lies in the label format."
+  }
+]
