@@ -1,0 +1,42 @@
+[
+  {
+    "input": "Step 1: Problem Definition",
+    "output": "The first step is identifying and clearly defining the business problem. A well-framed problem provides the foundation for the entire lifecycle. Important things like project objectives, desired outcomes and the scope of the task are carefully designed during this stage.\nCollaborate with stakeholders to understand business goals\nDefine project objectives, scope and success criteria\nEnsure clarity in desired outcomes"
+  },
+  {
+    "input": "Step 2: Data Collection",
+    "output": "Data Collectionphase involves systematic collection of datasets that can be used as raw data to train model. The quality and variety of data directly affect the model’s performance.\nHere are some basic features of Data Collection:\nRelevance:Collect data should be relevant to the defined problem and include necessary features.\nQuality:Ensure data quality by considering factors like accuracy and ethical use.\nQuantity:Gather sufficient data volume to train a robust model.\nDiversity:Include diverse datasets to capture a broad range of scenarios and patterns."
+  },
+  {
+    "input": "Step 3: Data Cleaning and Preprocessing",
+    "output": "Raw data is often messy and unstructured and if we use this data directly to train then it can lead to poor accuracy. We need to dodata cleaning and preprocessingwhich often involves:\nData Cleaning:Address issues such as missing values, outliers and inconsistencies in the data.\nData Preprocessing:Standardize formats, scale values and encode categorical variables for consistency.\nData Quality:Ensure that the data is well-organized and prepared for meaningful analysis."
+  },
+  {
+    "input": "Step 4: Exploratory Data Analysis (EDA)",
+    "output": "To find patterns and characteristics hidden in the dataExploratory Data Analysis (EDA)is used to uncover insights and understand the dataset's structure. During EDA patterns, trends and insights are provided which may not be visible by naked eyes. This valuable insight can be used to make informed decision.\nHere are the basic features of Exploratory Data Analysis:\nExploration:Use statistical and visual tools to explore patterns in data.\nPatterns and Trends:Identify underlying patterns, trends and potential challenges within the dataset.\nInsights:Gain valuable insights for informed decisions making in later stages.\nDecision Making:Use EDA for feature engineering and model selection."
+  },
+  {
+    "input": "Step 5: Feature Engineering and Selection",
+    "output": "Feature engineering and selectionis a transformative process that involve selecting only relevant features to enhance model efficiency and prediction while reducing complexity.\nHere are the basic features of Feature Engineering and Selection:\nFeature Engineering:Create new features or transform existing ones to capture better patterns and relationships.\nFeature Selection:Identify subset of features that most significantly impact the model's performance.\nDomain Expertise:Use domain knowledge to engineer features that contribute meaningfully for prediction.\nOptimization:Balance set of features for accuracy while minimizing computational complexity."
+  },
+  {
+    "input": "Step 6: Model Selection",
+    "output": "For a good machine learning model, model selection is a very important part as we need to find model that aligns with our defined problem, nature of the data, complexity of problem and the desired outcomes.\nHere are the basic features of Model Selection:\nComplexity:Consider the complexity of the problem and the nature of the data when choosing a model.\nDecision Factors:Evaluate factors like performance, interpretability and scalability when selecting a model.\nExperimentation:Experiment with different models to find the best fit for the problem."
+  },
+  {
+    "input": "Step 7: Model Training",
+    "output": "With the selected model the machine learning lifecycle moves to model training process. This process involves exposing model to historical data allowing it to learn patterns, relationships and dependencies within the dataset.\nHere are the basic features of Model Training:\nIterative Process:Train the model iteratively, adjusting parameters to minimize errors and enhance accuracy.\nOptimization:Fine-tune model to optimize its predictive capabilities.\nValidation:Rigorously train model to ensure accuracy to new unseen data."
+  },
+  {
+    "input": "Step 8: Model Evaluation and Tuning",
+    "output": "Model evaluationinvolves rigorous testing against validation or test datasets to test accuracy of model on new unseen data. It provides insights into model's strengths and weaknesses. If the model fails to acheive desired performance levels we may need to tune model again and adjust its hyperparameters to enhance predictive accuracy.\nHere are the basic features of Model Evaluation and Tuning:\nEvaluation Metrics:Use metrics like accuracy, precision, recall and F1 score to evaluate model performance.\nStrengths and Weaknesses:Identify the strengths and weaknesses of the model through rigorous testing.\nIterative Improvement:Initiate model tuning to adjust hyperparameters and enhance predictive accuracy.\nModel Robustness:Iterative tuning to achieve desired levels of model robustness and reliability."
+  },
+  {
+    "input": "Step 9: Model Deployment",
+    "output": "Now model is ready for deployment for real-world application. It involves integrating the predictive model with existing systems allowing business to use this for informed decision-making.\nHere are the basic features of Model Deployment:\nIntegrate with existing systems\nEnable decision-making using predictions\nEnsure deployment scalability and security\nProvide APIs or pipelines for production use"
+  },
+  {
+    "input": "Step 10: Model Monitoring and Maintenance",
+    "output": "After Deployment models must be monitored to ensure they perform well over time. Regular tracking helps detect data drift, accuracy drops or changing patterns and retraining may be needed to keep the model reliable in real-world use.\nHere are the basic features of Model Monitoring and Maintenance:\nTrack model performance over time\nDetect data drift or concept drift\nUpdate and retrain the model when accuracy drops\nMaintain logs and alerts for real-time issues\nEach step is essential for building a successful machine learning model that can provide valuable insights and predictions. By following the Machine learning lifecycle organizations we can solve complex problems."
+  }
+]
