@@ -4110,5 +4110,37 @@
   {
     "input": "Techniques to Reduce Underfitting",
     "output": "Techniques to Reduce Overfitting"
+  },
+  {
+    "input": "Converting Text into vectors with TF-IDF",
+    "output": "Let's take an example where we have a corpus (a collection of documents) with three documents and our goal is to calculate the TF-IDF score for specific terms in these documents.\nOur goal is to calculate the TF-IDF score for specific terms in these documents. Let’s focus on the word\"cat\"and see how TF-IDF evaluates its importance."
+  },
+  {
+    "input": "Step 1: Calculate Term Frequency (TF)",
+    "output": "For Document 1:\nThe word\"cat\"appears 1 time.\nThe total number of terms in Document 1 is 6 (\"the\", \"cat\", \"sat\", \"on\", \"the\", \"mat\").\nSo, TF(cat,Document 1) = 1/6\nFor Document 2:\nThe word\"cat\"does not appear.\nSo, TF(cat,Document 2)=0.\nFor Document 3:\nThe word\"cat\" appears 1 time.\nThe total number of terms in Document 3 is6(\"cats\", \"and\", \"dogs\", \"are\", \"great\", \"pets\").\nSo TF (cat,Document 3)=1/6\nIn Document 1 and Document 3 the word\"cat\"has the same TF score. This means it appears with the same relative frequency in both documents. In Document 2 the TF score is 0 because the word\"cat\"does not appear."
+  },
+  {
+    "input": "Step 2: Calculate Inverse Document Frequency (IDF)",
+    "output": "Total number of documents in the corpus (D):3\nNumber of documents containing the term \"cat\":2 (Document 1 and Document 3)."
+  },
+  {
+    "input": "Step 3: Calculate TF-IDF",
+    "output": "The TF-IDF score for \"cat\" is 0.029 in Document 1 and Document 3 and 0 in Document 2 that reflects both the frequency of the term in the document (TF) and its rarity across the corpus (IDF).\nThe TF-IDF score is the product of TF and IDF:\nFor Document 1: TF-IDF (cat, Document 1, D)-0.167 * 0.176 - 0.029\nFor Document 2: TF-IDF(cat, Document 2, D)-0x 0.176-0\nFor Document 3: TF-IDF (cat, Document 3, D)-0.167 x 0.176 ~ 0.029"
+  },
+  {
+    "input": "Step 1: Import modules",
+    "output": "We will importscikit learnfor this."
+  },
+  {
+    "input": "Step 3: Get TF-IDF values",
+    "output": "Here we are using TfidfVectorizer() from scikit learn to perform tf-idf and apply on our courpus using fit_transform."
+  },
+  {
+    "input": "Step 4: Display IDF values",
+    "output": "Output:"
+  },
+  {
+    "input": "Step 5: Display TF-IDF values along with indexing",
+    "output": "Output:\nThe result variable consists of unique words as well as the tf-if values. It can be elaborated using the below image:\n\nFrom the above image the below table can be generated:"
   }
 ]
