@@ -4762,5 +4762,53 @@
   {
     "input": "Updating the model",
     "output": "Now we will update the parameters of the model by those which are obtained by using RandomizedSearchCV.\nOutput:\nBoth methods help identify the best combination of hyperparameters leading to improved model accuracy and more balanced precision, recall and F1-scores for both classes."
+  },
+  {
+    "input": "Working of Random Forest Regression",
+    "output": "Random Forest Regression works by creating multiple ofdecision treeseach trained on a random subset of the data. The process begins withBootstrap samplingwhere random rows of data are selected with replacement to form different training datasets for each tree. After this we dofeature samplingwhere only a random subset of features is used to build each tree ensuring diversity in the models.\nAfter the trees are trained each tree make a prediction and the final prediction for regression tasks is the average of all the individual tree predictions and this process is called asAggregation.\nThis approach is beneficial because individual decision trees may have high variance and are prone to overfitting especially with complex data. However by averaging the predictions from multiple decision trees Random Forest minimizes this variance leading to more accurate and stable predictions and hence improving generalization of model."
+  },
+  {
+    "input": "Implementing Random Forest Regression in Python",
+    "output": "We will be implementing random forest regression on salaries data."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "Here we are importingnumpy,pandas,matplotlib,seabornandscikit learn.\nRandomForestRegressor:This is the regression model that is based upon the Random Forest model.\nLabelEncoder:This class is used to encode categorical data into numerical values.\nKNNImputer:This class is used to impute missing values in a dataset using ak-nearest neighborsapproach.\ntrain_test_split:This function is used to split a dataset into training and testing sets.\nStandardScaler:This class is used to standardize features by removing the mean and scaling to unit variance.\nf1_score:This function is used to evaluate the performance of a classification model using the F1 score.\nRandomForestRegressor:This class is used to train a random forest regression model.\ncross_val_score:This function is used to perform k-fold cross-validation to evaluate the performance of a model"
+  },
+  {
+    "input": "2. Importing Dataset",
+    "output": "Now let's load the dataset in the panda's data frame. For better data handling and leveraging the handy functions to perform complex tasks in one go.\nOutput:\nOutput:"
+  },
+  {
+    "input": "3.Data Preparation",
+    "output": "Here the code will extracts two subsets of data from the Dataset and stores them in separate variables.\nExtracting Features:It extracts the features from the DataFrame and stores them in a variable named X.\nExtracting Target Variable:It extracts the target variable from the DataFrame and stores it in a variable named y."
+  },
+  {
+    "input": "4. Random Forest Regressor Model",
+    "output": "The code processes categorical data by encoding it numerically, combines the processed data with numerical data and trains a Random Forest Regression model using the prepared data.\nRandomForestRegressor:It builds multiple decision trees and combines their predictions.\nn_estimators=10: Defines the number of decision trees in the Random Forest.\nrandom_state=0:Ensures the randomness in model training is controlled for reproducibility.\noob_score=True:Enablesout-of-bag scoringwhich evaluates the model's performance using data not seen by individual trees during training.\nLabelEncoder():Converts categorical variables (object type) into numerical values, making them suitable for machine learning models.\napply(label_encoder.fit_transform):Applies the LabelEncoder transformation to each categorical column, converting string labels into numbers.\nconcat():Combines the numerical and encoded categorical features horizontally into one dataset which is then used as input for the model."
+  },
+  {
+    "input": "5. Making predictions and Evaluating",
+    "output": "The code evaluates the trained Random Forest Regression model:\noob_score_:Retrive out-of-bag (OOB) score which estimates the model's generalization performance.\nMakes predictions using the trained model and stores them in the 'predictions' array.\nEvaluates the model's performance using the Mean Squared Error (MSE) and R-squared (R2) metrics.\nOutput:"
+  },
+  {
+    "input": "6. Visualizing",
+    "output": "Now let's visualize the results obtained by using the RandomForest Regression model on our salaries dataset.\nCreates a grid of prediction points covering the range of the feature values.\nPlots the real data points as blue scatter points.\nPlots the predicted values for the prediction grid as a green line.\nAdds labels and a title to the plot for better understanding.\nOutput:"
+  },
+  {
+    "input": "7.Visualizing a Single Decision Tree from the Random Forest Model",
+    "output": "The code visualizes one of the decision trees from the trained Random Forest model. Plots the selected decision tree, displaying the decision-making process of a single tree within the ensemble.\nOutput:"
+  },
+  {
+    "input": "Applications of Random Forest Regression",
+    "output": "The Random forest regression has a wide range of real-world problems including:\nPredicting continuous numerical values:Predicting house prices, stock prices or customer lifetime value.\nIdentifying risk factors:Detecting risk factors for diseases, financial crises or other negative events.\nHandling high-dimensional data:Analyzing datasets with a large number of input features.\nCapturing complex relationships:Modeling complex relationships between input features and the target variable."
+  },
+  {
+    "input": "Advantages of Random Forest Regression",
+    "output": "Handles Non-Linearity: It can capture complex, non-linear relationships in the data that other models might miss.\nReduces Overfitting: By combining multiple decision trees and averaging predictions it reduces the risk of overfitting compared to a single decision tree.\nRobust to Outliers: Random Forest is less sensitive to outliers as it aggregates the predictions from multiple trees.\nWorks Well with Large Datasets: It can efficiently handle large datasets and high-dimensional data without a significant loss in performance.\nHandles Missing Data: Random Forest can handle missing values by using surrogate splits and maintaining high accuracy even with incomplete data.\nNo Need for Feature Scaling: Unlike many other algorithms Random Forest does not require normalization or scaling of the data."
+  },
+  {
+    "input": "Disadvantages of Random Forest Regression",
+    "output": "Complexity: It can be computationally expensive and slow to train especially with a large number of trees and high-dimensional data. Due to this it may not be suitable for real-time predictions especially with a large number of trees.\nLess Interpretability: Since it uses many trees it can be harder to interpret compared to simpler models like linear regression or decision trees.\nMemory Intensive: Storing multiple decision trees for large datasets require significant memory resources.\nOverfitting on Noisy Data: While Random Forest reduces overfitting, it can still overfit if the data is highly noisy especially with a large number of trees.\nSensitive to Imbalanced Data: It may perform poorly if the dataset is highly imbalanced like one class is significantly more frequent than another.\nRandom Forest Regression has become a important tool for continuous prediction tasks with advantages over traditional decision trees. Its capability to handle high-dimensional data, capture complex relationships and reduce overfitting has made it useful."
   }
 ]
