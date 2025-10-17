@@ -1,0 +1,22 @@
+[
+  {
+    "input": "Random Forest Hyperparameter Tuning using Sklearn",
+    "output": "Scikit-learnoffers tools for hyperparameter tuning which can help improve the performance of machine learning models. Hyperparameter tuning involves selecting the best set of parameters for a given model to maximize its efficiency and accuracy. We will explore two commonly used techniques for hyperparameter tuning:GridSearchCVandRandomizedSearchCV.\nBoth methods are essential for automating the process of fine-tuning machine learning models and we will examine how each works and when to use them. Below is the code with random forest working on heart disease prediction.\nOutput:\nThe classification report shows that the model has an accuracy of 84% with good precision for class 1 (0.90) but slightly lower precision for class 0 (0.77) and a recall of 0.87 for class 0. This suggests that fine-tuning hyperparameters such asn_estimatorsandmax_depthcould help improve the performance especially for class 0."
+  },
+  {
+    "input": "1. Hyperparameter Tuning using GridSearchCV",
+    "output": "First let's useGridSearchCVto obtain the best parameters for the model. It is a hyperparameter tuning method in Scikit-learn that exhaustively searches through all possible combinations of parameters provided in the param_grid. For that we will pass RandomForestClassifier() instance to the model and then fit the GridSearchCV using the training data to find the best parameters.\nparam_grid:A dictionary containing hyperparameters and their possible values. GridSearchCV will try every combination of these values to find the best-performing set of hyperparameters.\ngrid_search.fit(X_train, y_train):This trains the model on the training data (X_train, y_train) for every combination of hyperparameters defined in param_grid.\ngrid_search.best_estimator_:After completing the grid search, this will print the RandomForest model that has the best combination of hyperparameters from the search.\nOutput:"
+  },
+  {
+    "input": "Updating the Model",
+    "output": "Now we will update the parameters of the model by those which are obtained by using GridSearchCV.\nOutput:"
+  },
+  {
+    "input": "2. Hyperparameter Tuning using RandomizedSearchCV",
+    "output": "RandomizedSearchCVperforms a random search over a specified parameter grid. It randomly selects combinations and evaluates the model often leading to faster results especially when there are many hyperparameters.\nNow let's use RandomizedSearchCV to obtain the best parameters for the model. For that we will pass RandomFoestClassifier() instance to the model and then fit the RandomizedSearchCV using the training data to find the best parameters.\nparam_gridspecifies the hyperparameters that you want to tune similar to the grid in GridSearchCV.\nfit(X_train, y_train)trains the model using the training data.\nbest_estimator_shows the model with the best combination of hyperparameters found by the search process.\nOutput:"
+  },
+  {
+    "input": "Updating the model",
+    "output": "Now we will update the parameters of the model by those which are obtained by using RandomizedSearchCV.\nOutput:\nBoth methods help identify the best combination of hyperparameters leading to improved model accuracy and more balanced precision, recall and F1-scores for both classes."
+  }
+]
