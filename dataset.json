@@ -4586,5 +4586,65 @@
   {
     "input": "Related articles",
     "output": "Naive Bayes Classifiers\nGaussian Naive Bayes\nMultinomial Naive Bayes"
+  },
+  {
+    "input": "Mathematics Behind Gaussian Naive Bayes",
+    "output": "GaussianNaive Bayesassumes that the likelihood (P(x_i|y)) follows the Gaussian Distribution for eachx_iwithiny_k. Therefore,\nWhere:\nx_iis the feature value,\n\\muis the mean of the feature values for a given classy_k,\n\\sigmais the standard deviation of the feature values for that class,\n\\piis a constant (approximately 3.14159),\neis the base of the natural logarithm.\nTo classify each new data point x the algorithm finds out the maximum value of the posterior probability of each class and assigns the data point to that class."
+  },
+  {
+    "input": "Why Gaussian Naive Bayes Works Well for Continuous Data?",
+    "output": "Gaussian Naive Bayes is effective for continuous data because it assumes each feature follows a Gaussian (normal) distribution. When this assumption holds true the algorithm performs well. For example in tasks like spam detection, medical diagnosis or predicting house prices where features such as age, income or height fit a normal distribution there Gaussian Naive Bayes can make accurate predictions."
+  },
+  {
+    "input": "Practical Example",
+    "output": "To understand how Gaussian Naive Bayes works here's a simple binary classification problem using one feature: petal length.\nWe want to classify a new sample withpetal length = 1.6 cm."
+  },
+  {
+    "input": "1. Separate by Class",
+    "output": "Class 0: [1.4, 1.3, 1.5]\nClass 1: [4.5, 4.7, 4.6]"
+  },
+  {
+    "input": "2. Calculate Mean and Variance",
+    "output": "For class 0:\n\\mu_0 = \\frac{1.4 + 1.3 + 1.5}{3} = 1.4\n\\sigma_0^2 = \\frac{(1.4 - 1.4)^2 + (1.3 - 1.4)^2 + (1.5 - 1.4)^2}{3} = 0.0067\nFor class 1:\n\\mu_1 = \\frac{4.5 + 4.7 + 4.6}{3} = 4.6\n\\sigma_1^2 = \\frac{(4.5 - 4.6)^2 + (4.7 - 4.6)^2 + (4.6 - 4.6)^2}{3} = 0.0067"
+  },
+  {
+    "input": "3. Gaussian Likelihood",
+    "output": "The Gaussian PDF is:\nForx = 1.6:\nClass 0\nP(1.6 | C=0) \\approx \\frac{1}{\\sqrt{2\\pi \\cdot 0.0067}} \\cdot e^{-\\frac{(1.6 - 1.4)^2}{2 \\cdot 0.0067}} \\approx 0.247\nClass 1\nP(1.6 | C=1) \\approx \\frac{1}{\\sqrt{2\\pi \\cdot 0.0067}} \\cdot e^{-\\frac{(1.6 - 4.6)^2}{2 \\cdot 0.0067}} \\approx 0"
+  },
+  {
+    "input": "4. Multiply by Class Priors",
+    "output": "Assume equal priors:\nP(C=0) = P(C=1) = 0.5\nThen:\nP(C=0|x) \\propto 0.247 \\cdot 0.5 = 0.1235\nP(C=1|x) \\propto 0 \\cdot 0.5 = 0"
+  },
+  {
+    "input": "5. Prediction",
+    "output": "SinceP(C=0|x) > P(C=1|x),"
+  },
+  {
+    "input": "Python Implementation of Gaussian Naive Bayes",
+    "output": "Here we will be applying Gaussian Naive Bayes to the Iris Dataset, this dataset consists of four features namely Sepal Length in cm, Sepal Width in cm, Petal Length in cm, Petal Width in cm and from these features we have to identify which feature set belongs to which specie class. The iris flower dataset is available inSklearnlibrary of python.\nNow we will be using Gaussian Naive Bayes in predicting the correct specie of Iris flower."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "First we will be importing the required libraries:\npandas:for data manipulation\nload_iris:to load dataset\ntrain_test_split:to split the data into training and testing sets\nGaussianNB:for the Gaussian Naive Bayes classifier\naccuracy_score:to evaluate the model\nLabelEncoder:to encode the categorical target variable."
+  },
+  {
+    "input": "2. Loading the Dataset and Preparing Features and Target Variable",
+    "output": "After that we will load the Iris dataset from a CSV file named \"Iris.csv\" into a pandas DataFrame. Then we will separate the features (X) and the target variable (y) from the dataset. Features are obtained by dropping the \"Species\" column and the target variable is set to the \"Species\" column which we will be predicting."
+  },
+  {
+    "input": "3. Encoding and Splitting the Dataset",
+    "output": "Since the target variable \"Species\" is categorical we will be usingLabel Encoderto convert it into numerical form. This is necessary for the Gaussian Naive Bayes classifier as it requires numerical inputs.\nWe will be splitting the dataset into training and testing sets using thetrain_test_splitfunction. 70% of the data is used for training and 30% is used for testing. The random_state parameter ensures reproducibility of the same data."
+  },
+  {
+    "input": "4. Creating and Training the Model",
+    "output": "We will be creating a Gaussian Naive Bayes Classifier (gnb) and then training it on the training data using the fit method.\nOutput:"
+  },
+  {
+    "input": "5. Plotting 1D Gaussian Distributions for All Features",
+    "output": "We visualize the Gaussian distributions for each feature in the Iris dataset across all classes. The distributions are modeled by the Gaussian Naive Bayes classifier where each class is represented by a normal (Gaussian) distribution with a mean and variance specific to each feature. Separate plots are created for each feature in the dataset showing how each class's feature values are distributed.\nOutput:"
+  },
+  {
+    "input": "6. Making Predictions",
+    "output": "At last we will be using the trained model to make predictions on the testing data.\nOutput:\nHigh accuracy suggests that the model has effectively learned to distinguish between the three different species of Iris based on the given features (sepal length, sepal width, petal length and petal width)."
   }
 ]
