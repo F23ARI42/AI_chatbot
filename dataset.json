@@ -4302,5 +4302,61 @@
   {
     "input": "Practice Questions on Mean",
     "output": "Question 1:Find the Mean temperature of a week given that the temperatures from Monday to Sunday are 21℃, 23℃, 22.5℃, 21.6℃, 22.3℃, 24℃, 20.5℃.\nQuestion2: Find the mean of the first 10 even numbers.\nQuestion 3:Find the Mean height of students if the given heights are 150 cm, 152 cm, 155 cm, 160 cm, and 148 cm.\nQuestion 4:Find the Mean of the given dataset"
+  },
+  {
+    "input": "Types of Ensembles Learning in Machine Learning",
+    "output": "There are three main types of ensemble methods:\nWhile stacking is also a method but bagging and boosting method is widely used and lets see more about them."
+  },
+  {
+    "input": "1. Bagging Algorithm",
+    "output": "Bagging classifiercan be used for both regression and classification tasks. Here is an overview of Bagging classifier algorithm:\nBootstrap Sampling:Divides the original training data into ‘N’ subsets and randomly selects a subset with replacement in some rows from other subsets. This step ensures that the base models are trained on diverse subsets of the data and there is no class imbalance.\nBase Model Training:For each bootstrapped sample we train a base model independently on that subset of data. These weak models are trained in parallel to increase computational efficiency and reduce time consumption. We can use different base learners i.e. different ML models as base learners to bring variety and robustness.\nPrediction Aggregation:To make a prediction on testing data combine the predictions of all base models. For classification tasks it can include majority voting or weighted majority while for regression it involves averaging the predictions.\nOut-of-Bag (OOB) Evaluation: Some samples are excluded from the training subset of particular base models during the bootstrapping method. These “out-of-bag” samples can be used to estimate the model’s performance without the need for cross-validation.\nFinal Prediction:After aggregating the predictions from all the base models, Bagging produces a final prediction for each instance."
+  },
+  {
+    "input": "1. Importing Libraries and Loading Data",
+    "output": "We will importscikit learnfor:\nBaggingClassifier:for creating an ensemble of classifiers trained on different subsets of data.\nDecisionTreeClassifier:the base classifier used in the bagging ensemble.\nload_iris:to load the Iris dataset for classification.\ntrain_test_split:to split the dataset into training and testing subsets.\naccuracy_score: to evaluate the model’s prediction accuracy."
+  },
+  {
+    "input": "2. Loading and Splitting the Iris Dataset",
+    "output": "data = load_iris():loads the Iris dataset, which includes features and target labels.\nX = data.data:extracts the feature matrix (input variables).\ny = data.target:extracts the target vector (class labels).\ntrain_test_split(...):splits the data into training (80%) and testing (20%) sets, with random_state=42 to ensure reproducibility."
+  },
+  {
+    "input": "3. Creating a Base Classifier",
+    "output": "Decision tree is chosen as the base model. They are prone to overfitting when trained on small datasets making them good candidates for bagging.\nbase_classifier = DecisionTreeClassifier(): initializes a Decision Tree classifier, which will serve as the base estimator in the Bagging ensemble."
+  },
+  {
+    "input": "4. Creating and Training the Bagging Classifier",
+    "output": "ABaggingClassifieris created using the decision tree as the base classifier.\nn_estimators = 10specifies that 10 decision trees will be trained on different bootstrapped subsets of the training data."
+  },
+  {
+    "input": "5. Making Predictions and Evaluating Accuracy",
+    "output": "The trained bagging model predicts labels for test data.\nThe accuracy of the predictions is calculated by comparing the predicted labels (y_pred) to the actual labels (y_test).\nOutput:"
+  },
+  {
+    "input": "2. Boosting Algorithm",
+    "output": "Boostingis an ensemble technique that combines multiple weak learners to create a strong learner. Weak models are trained in series such that each next model tries to correct errors of the previous model until the entire training dataset is predicted correctly. One of the most well-known boosting algorithms isAdaBoost (Adaptive Boosting).Here is an overview of Boosting algorithm:\nInitialize Model Weights: Begin with a single weak learner and assign equal weights to all training examples.\nTrain Weak Learner: Train weak learners on these dataset.\nSequential Learning: Boosting works by training models sequentially where each model focuses on correcting the errors of its predecessor. Boosting typically uses a single type of weak learner like decision trees.\nWeight Adjustment: Boosting assigns weights to training datapoints. Misclassified examples receive higher weights in the next iteration so that next models pay more attention to them."
+  },
+  {
+    "input": "1. Importing Libraries and Modules",
+    "output": "AdaBoostClassifier from sklearn.ensemble:for building the AdaBoost ensemble model.\nDecisionTreeClassifier from sklearn.tree:as the base weak learner for AdaBoost.\nload_iris from sklearn.datasets:to load the Iris dataset.\ntrain_test_split from sklearn.model_selection:to split the dataset into training and testing sets.\naccuracy_score from sklearn.metrics:to evaluate the model’s accuracy."
+  },
+  {
+    "input": "2. Loading and Splitting the Dataset",
+    "output": "data = load_iris(): loads the Iris dataset, which includes features and target labels.\nX = data.data: extracts the feature matrix (input variables).\ny = data.target: extracts the target vector (class labels).\ntrain_test_split(...): splits the data into training (80%) and testing (20%) sets, with random_state=42 to ensure reproducibility."
+  },
+  {
+    "input": "3. Defining the Weak Learner",
+    "output": "We are creating the base classifier as a decision tree with maximum depth 1 (a decision stump). This simple tree will act as a weak learner for the AdaBoost algorithm, which iteratively improves by combining many such weak learners."
+  },
+  {
+    "input": "4. Creating and Training the AdaBoost Classifier",
+    "output": "base_classifier: The weak learner used in boosting.\nn_estimators = 50: Number of weak learners to train sequentially.\nlearning_rate = 1.0: Controls the contribution of each weak learner to the final model.\nrandom_state = 42: Ensures reproducibility."
+  },
+  {
+    "input": "5. Making Predictions and Calculating Accuracy",
+    "output": "We are calculating the accuracy of the model by comparing the true labelsy_testwith the predicted labelsy_pred. The accuracy_score function returns the proportion of correctly predicted samples. Then, we print the accuracy value.\nOutput:"
+  },
+  {
+    "input": "Benefits of Ensemble Learning in Machine Learning",
+    "output": "Ensemble learning is a versatile approach that can be applied to machine learning model for:\nReduction in Overfitting: By aggregating predictions of multiple model's ensembles can reduce overfitting that individual complex models might exhibit.\nImproved Generalization: It generalizes better to unseen data by minimizing variance and bias.\nIncreased Accuracy: Combining multiple models gives higher predictive accuracy.\nRobustness to Noise: It mitigates the effect of noisy or incorrect data points by averaging out predictions from diverse models.\nFlexibility: It can work with diverse models including decision trees, neural networks and support vector machines making them highly adaptable.\nBias-Variance Tradeoff: Techniques like bagging reduce variance, while boosting reduces bias leading to better overall performance.\nThere are various ensemble learning techniques we can use as each one of them has their own pros and cons."
   }
 ]
