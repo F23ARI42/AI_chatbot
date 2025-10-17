@@ -4402,5 +4402,57 @@
   {
     "input": "Use Cases",
     "output": "Let's see the use case of Association rule,\nMarket Basket Analysis: Identifies products often bought together to improve store layouts and promotions (e.g., bread and butter).\nRecommendation Systems: Suggests related items based on buying patterns (e.g., accessories with laptops).\nFraud Detection: Detects unusual transaction patterns indicating fraud.\nHealthcare Analytics: Finds links between symptoms, diseases and treatments (e.g., symptom combinations predicting a disease).\nInterpretable and Easy to Explain: Rules offer clear “if-then” relationships understandable to non-technical stakeholders.\nUnsupervised Learning: Works well on unlabeled data to find hidden patterns without prior knowledge.\nFlexible Data Types: Effective on transactional, categorical and binary data.\nHelps in Feature Engineering: Can be used to create new features for downstream supervised models.\nLarge Number of Rules: Can generate many rules, including trivial or redundant ones, making interpretation hard.\nSupport Threshold Sensitivity: High support thresholds miss interesting but infrequent patterns; low thresholds generate too many rules.\nNot Suitable for Continuous Variables: Requires discretization or binning before use with numerical attributes.\nComputationally Expensive: Performance degrades on very large or dense datasets due to combinatorial explosion.\nStatistical Significance: High confidence doesn’t guarantee a meaningful rule; domain knowledge is essential to validate findings."
+  },
+  {
+    "input": "How AUC-ROC Works",
+    "output": "AUC-ROC curve helps us understand how well a classification model distinguishes between the two classes. Imagine we have 6 data points and out of these:\n3 belong to the positive class:Class 1 for people who have a disease.\n3 belong to the negative class:Class 0 for people who don’t have disease.\nNow the model will give each data point a predicted probability of belonging to Class 1. The AUC measures the model's ability to assign higher predicted probabilities to the positive class than to the negative class. Here’s how it work:"
+  },
+  {
+    "input": "When to Use AUC-ROC",
+    "output": "AUC-ROC is effective when:\nThe dataset is balanced and the model needs to be evaluated across all thresholds.\nFalse positives and false negatives are of similar importance.\nModel Performance with AUC-ROC:\nHigh AUC (close to 1): The model effectively distinguishes between positive and negative instances.\nLow AUC (close to 0): The model struggles to differentiate between the two classes.\nAUC around 0.5: The model doesn’t learn any meaningful patterns i.e it is doing random guessing.\nIn short AUC gives you an overall idea of how well your model is doing at sorting positives and negatives, without being affected by the threshold you set for classification. A higher AUC means your model is doing good."
+  },
+  {
+    "input": "1. Installing Libraries",
+    "output": "We will be importingnumpy,pandas,matplotlibandscikit learn."
+  },
+  {
+    "input": "2. Generating data and splitting data",
+    "output": "Using an 80-20 split ratio, the algorithm creates artificial binary classification data with 20 features, divides it into training and testing sets, and assigns a random seed to ensure reproducibility."
+  },
+  {
+    "input": "3. Training the different models",
+    "output": "To train theRandom ForestandLogistic Regressionmodels we use a fixed random seed to get the same results every time we run the code. First we train a logistic regression model using the training data. Then use the same training data and random seed we train a Random Forest model with 100 trees."
+  },
+  {
+    "input": "4. Predictions",
+    "output": "Using the test data and a trained Logistic Regression model the code predicts the positive class's probability. In a similar manner, using the test data, it uses the trained Random Forest model to produce projected probabilities for the positive class."
+  },
+  {
+    "input": "5. Creating a dataframe",
+    "output": "Using the test data the code creates a DataFrame called test_df with columns labeled \"True,\" \"Logistic\" and \"RandomForest,\" add true labels and predicted probabilities from  Random Forest and Logistic Regression models."
+  },
+  {
+    "input": "6. Plotting ROC Curve for models",
+    "output": "Output:\n\nThe plot computes the AUC and ROC curve for each model i.e Random Forest and Logistic Regression, then plots the ROC curve. The ROC curve for random guessing is also represented by a red dashed line, and labels, a title, and a legend are set for visualization."
+  },
+  {
+    "input": "ROC-AUC for a Multi-Class Model",
+    "output": "For a multi-class model we can simply use one vs all methodology and you will have one ROC curve for each class. Let's say you have four classes A, B, C and D then there would be ROC curves and corresponding AUC values for all the four classes i.e once A would be one class and B, C and D combined would be the others class similarly B is one class and A, C and D combined as others class.\nThe general steps for using AUC-ROC in the context of a multiclass classification model are:\nFor each class in your multiclass problem treat it as the positive class while combining all other classes into the negative class.\nTrain the binary classifier for each class against the rest of the classes.\nHere we plot the ROC curve for the given class against the rest.\nPlot the ROC curves for each class on the same graph. Each curve represents the discrimination performance of the model for a specific class.\nExamine the AUC scores for each class. A higher AUC score indicates better discrimination for that particular class.\nLets see Implementation of AUC-ROC in Multiclass Classification"
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "The program creates artificial multiclass data, divides it into training and testing sets and then uses theOne-vs-Restclassifiertechnique to train classifiers for both Random Forest and Logistic Regression. It plots the two models multiclass ROC curves to demonstrate how well they discriminate between various classes."
+  },
+  {
+    "input": "2. Generating Data and splitting",
+    "output": "Three classes and twenty features make up the synthetic multiclass data produced by the code. After label binarization, the data is divided into training and testing sets in an 80-20 ratio."
+  },
+  {
+    "input": "3. Training Models",
+    "output": "The program trains two multiclass models i.e a Random Forest model with 100 estimators and a Logistic Regression model with the One-vs-Rest approach. With the training set of data both models are fitted."
+  },
+  {
+    "input": "4. Plotting the AUC-ROC Curve",
+    "output": "Output:\n\nThe Random Forest and Logistic Regression models ROC curves and AUC scores are calculated by the code for each class. The multiclass ROC curves are then plotted showing the discrimination performance of each class and featuring a line that represents random guessing. The resulting plot offers a graphic evaluation of the models' classification performance."
   }
 ]
