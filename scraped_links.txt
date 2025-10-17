@@ -109,3 +109,15 @@ https://www.geeksforgeeks.org/machine-learning/gradient-descent-in-linear-regres
 https://www.geeksforgeeks.org/machine-learning/ml-cost-function-in-logistic-regression/
 https://www.geeksforgeeks.org/machine-learning/derivative-of-the-sigmoid-function/
 https://www.geeksforgeeks.org/maths/mean-squared-error/
+https://www.geeksforgeeks.org/machine-learning/auc-roc-curve/
+https://www.geeksforgeeks.org/machine-learning/understanding-decision-boundaries-in-k-nearest-neighbors-knn/
+https://www.geeksforgeeks.org/machine-learning/gaussian-naive-bayes/
+https://www.geeksforgeeks.org/machine-learning/multinomial-naive-bayes/
+https://www.geeksforgeeks.org/machine-learning/probability-density-estimation-maximum-likelihood-estimation/
+https://www.geeksforgeeks.org/machine-learning/bernoulli-naive-bayes/
+https://www.geeksforgeeks.org/machine-learning/complement-naive-bayes-cnb-algorithm/
+https://www.geeksforgeeks.org/machine-learning/random-forest-regression-in-python/
+https://www.geeksforgeeks.org/machine-learning/random-forest-hyperparameter-tuning-in-python/
+https://www.geeksforgeeks.org/machine-learning/a-comprehensive-guide-to-ensemble-learning/
+https://www.geeksforgeeks.org/machine-learning/clustering-in-machine-learning/
+https://www.geeksforgeeks.org/machine-learning/association-rule/
