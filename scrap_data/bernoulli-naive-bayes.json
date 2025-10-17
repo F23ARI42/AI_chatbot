@@ -1,0 +1,62 @@
+[
+  {
+    "input": "Mathematics Behind Bernoulli Naive Bayes",
+    "output": "In Bernoulli Naive Bayes model we assume that each feature is conditionally independent given the classy. This means that we can calculate the likelihood of each feature occurring as:\nHere, p(x_i|y) is the conditional probability of xi occurring provided y has occurred.\ni is the event\nx_iholds binary value either 0 or 1\nNow we will learn Bernoulli distribution as Bernoulli Naive Bayes works on that."
+  },
+  {
+    "input": "Bernoulli distribution",
+    "output": "Bernoulli distributionis used for discrete probability calculation. It either calculates success or failure. Here the random variable is either 1 or 0 whose chance of occurring is either denoted by p or (1-p) respectively.\nThe mathematical formula is given\nNow in the above function if we put x=1 then the value of f(x) is p and if we put x=0 then the value of f(x) is 1-p. Here p denotes the success of an event."
+  },
+  {
+    "input": "Example:",
+    "output": "To understand how Bernoulli Naive Bayes works, here's a simple binary classification problem."
+  },
+  {
+    "input": "1. Vocabulary",
+    "output": "Extract all unique words from the training data:\nVocabulary sizeV = 10"
+  },
+  {
+    "input": "2. Binary Feature Matrix (Presence = 1, Absence = 0)",
+    "output": "Each message is represented using binary features indicating the presence (1) or absence (0) of a word."
+  },
+  {
+    "input": "3. Apply Laplace Smoothing",
+    "output": "whereN_C = 2for both classes (2 documents per class), so the denominator becomes 4."
+  },
+  {
+    "input": "4. Word Probabilities",
+    "output": "For Spam class:\nP(\\text{buy} \\mid \\text{Spam}) = \\frac{2+1}{4} = 0.75\nP(\\text{cheap} \\mid \\text{Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{now} \\mid \\text{Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{limited} \\mid \\text{Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{offer} \\mid \\text{Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{others} \\mid \\text{Spam}) = \\frac{0+1}{4} = 0.25\nFor Not Spam class:\nP(\\text{now} \\mid \\text{Not Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{meet} \\mid \\text{Not Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{me} \\mid \\text{Not Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{let's} \\mid \\text{Not Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{catch} \\mid \\text{Not Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{up} \\mid \\text{Not Spam}) = \\frac{1+1}{4} = 0.5\nP(\\text{others} \\mid \\text{Not Spam}) = \\frac{0+1}{4} = 0.25"
+  },
+  {
+    "input": "5. Classify Message \"buy now\"",
+    "output": "The message contains words \"buy\" and \"now, so the feature vector is:\n\\text{buy}=1, \\quad \\text{now}=1, \\quad \\text{others}=0\n5.1 For Spam:\nP(\\text{Spam} \\mid d) \\propto P(\\text{Spam}) \\cdot P(\\text{buy}=1 \\mid \\text{Spam}) \\cdot P(\\text{now}=1 \\mid \\text{Spam}) = 0.5 \\cdot 0.75 \\cdot 0.5 = 0.1875\n5.2 For Not Spam:\nP(\\text{Not Spam} \\mid d) \\propto P(\\text{Not Spam}) \\cdot P(\\text{buy}=1 \\mid \\text{Not Spam}) \\cdot P(\\text{now}=1 \\mid \\text{Not Spam}) = 0.5 \\cdot 0.25 \\cdot 0.5 = 0.0625"
+  },
+  {
+    "input": "6. Final Classification",
+    "output": "P(\\text{Spam} \\mid d) = 0.1875,\\quad P(\\text{Not Spam} \\mid d) = 0.0625\nSinceP(\\text{Spam} \\mid d) > P(\\text{Not Spam} \\mid d), the message is classified as:\\boxed{\\text{Spam}}"
+  },
+  {
+    "input": "Implementing Bernoulli Naive Bayes",
+    "output": "For performing classification using Bernoulli Naive Bayes we have considered an email dataset.\nThe email dataset comprises of four columns named Unnamed: 0, label, label_num and text. The category of label is either ham or spam. For ham the number assigned is 0 and for spam 1 is assigned. Text comprises the body of the mail.  The length of the dataset is 5171."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "In the code we have imported necessary libraries likepandas,numpyandsklearn. Bernoulli Naive Bayes is a part of sklearn package."
+  },
+  {
+    "input": "2. Data Analysis",
+    "output": "In this code we have performed a quick data analysis that includes reading the data, dropping unnecessary columns, printing shape of data, information about dataset etc.\nOutput:"
+  },
+  {
+    "input": "3. Count Vectorizer",
+    "output": "In the code since text data is used to train our classifier we convert the text into a matrix comprising numbers using Count Vectorizer so that the model can perform well."
+  },
+  {
+    "input": "4. Data Splitting, Model Training and Prediction",
+    "output": "Output:\nThe classification report shows that for class 0 (not spam) precision, recall and F1 score are 0.84, 0.98 and 0.91 respectively. For class 1 (spam) they are 0.92, 0.56 and 0.70. The recall for class 1 drops due to the 13% spam data. The overall accuracy of the model is 86%, which is good.\nBernoulli Naive Bayes is used for spam detection, text classification, Sentiment Analysis and used to determine whether a certain word is present in a document or not."
+  },
+  {
+    "input": "Difference Between Different Naive Bayes Model",
+    "output": "Here is the quick comparison between types of Naive Bayes that areGaussian Naive Bayes,Multinomial Naive Bayesand Bernoulli Naive Bayes."
+  }
+]
