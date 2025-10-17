@@ -4646,5 +4646,69 @@
   {
     "input": "6. Making Predictions",
     "output": "At last we will be using the trained model to make predictions on the testing data.\nOutput:\nHigh accuracy suggests that the model has effectively learned to distinguish between the three different species of Iris based on the given features (sepal length, sepal width, petal length and petal width)."
+  },
+  {
+    "input": "How Does Multinomial Naive Bayes Work?",
+    "output": "In Multinomial Naive bayes the word \"Naive\" means that the method assumes all features like words in a sentence are independent from each other and \"Multinomial\" refers to how many times a word appears or how often a category occurs. It works by using word counts to classify text. The main idea is that it assumes each word in a message or feature is independent of each others. This means the presence of one word doesn't affect the presence of another word which makes the model easy to use.\nThe model looks at how many times each word appears in messages from different categories (like \"spam\" or \"not spam\"). For example if the word \"free\" appears often in spam messages that will be used to help predict whether a new message is spam or not.\nTo calculate the probability of a message belonging to a certain category Multinomial Naive Bayes uses themultinomial distribution:\nWhere:\nn is the total number of trials.\nn_iis the count of occurrences for outcome i.\np_iis the probability of outcome i.\nTo estimate how likely each word is in a particular class like \"spam\" or \"not spam\" we use a method calledMaximum Likelihood Estimation (MLE).This helps finding probabilities based on actual counts from our data. The formula is:\nWhere:\ncount(wi,c)is the number of times wordw_iappears in documents of class c.\n\\Nuis the total number of words in documents of class cc.\nvis the vocabulary size."
+  },
+  {
+    "input": "Example",
+    "output": "To understand how Multinomial Naive Bayes works, here's a simple example to classify whether a message is\"spam\"or\"not spam\"based on the presence of certain words."
+  },
+  {
+    "input": "1. Vocabulary",
+    "output": "Extract all unique words from the training data:\nVocabulary sizeV = 10"
+  },
+  {
+    "input": "2. Word Frequencies by Class",
+    "output": "Spam Class (M1, M2):\nbuy: 2\ncheap: 1\nnow: 1\nlimited: 1\noffer: 1\nTotal words: 6\nNot Spam Class (M3, M4):\nmeet: 1\nme: 1\nnow: 1\nlet's: 1\ncatch: 1\nup: 1\nTotal words: 6"
+  },
+  {
+    "input": "3. Test Message",
+    "output": "Test Message: \"\\text{buy now}\""
+  },
+  {
+    "input": "4. Applying Multinomial Naive Bayes Formula",
+    "output": "Prior Probabilities:\nApply Laplace Smoothing:\nSpam Class:\nNot Spam Class:"
+  },
+  {
+    "input": "Python Implementation of Multinomial Naive Bayes",
+    "output": "Let's understand it with a example of spam email detection. We'll classify emails into two categories:spamandnot spam."
+  },
+  {
+    "input": "1.Importing Libraries:",
+    "output": "We will importpandasandscikit learnwhere:\npandas: Used for handling data in DataFrame format.\nCountVectorizer: Converts a collection of text documents into a matrix of token counts.\ntrain_test_split: Splits the data into training and test sets for model evaluation.\nMultinomialNB: A Naive Bayes classifier suited for classification tasks with discrete features (such as word counts).\naccuracy_score: Computes the accuracy of the model's predictions."
+  },
+  {
+    "input": "2.Creating the Dataset",
+    "output": "A simple dataset is created with text messages labeled as either spam or not spam. This data is then converted into a DataFrame for easy handling."
+  },
+  {
+    "input": "3.Mapping Labels to Numerical Values",
+    "output": "The labels (spam and not spam) are mapped to numerical values where spam becomes 1 and not spam becomes 0. This is necessary for the classifier, as it works with numerical data."
+  },
+  {
+    "input": "4.Splitting the Data",
+    "output": "X contains the text messages (features), and y contains the labels (target).\nThe dataset is split into training (70%) and testing (30%) sets usingtrain_test_split."
+  },
+  {
+    "input": "5.Vectorizing the Text Data",
+    "output": "CountVectorizeris used to convert text data into numerical vectors. It counts the occurrences of each word in the corpus.\nfit_transform()is applied to the training data to learn the vocabulary and transform it into a feature matrix.\ntransform()is applied to the test data to convert it into the same feature space."
+  },
+  {
+    "input": "6.Training the Naive Bayes Model",
+    "output": "A Multinomial Naive Bayes classifier is created and trained using the vectorized training data (X_train_vectors) and corresponding labels (y_train)."
+  },
+  {
+    "input": "7.Making Predictions and Evaluating Accuracy",
+    "output": "We are usingmodel.predict(X_test_vectors)to generate predictions from the trained model on test data.\naccuracy_score(y_test, y_pred)compares predicted labelsy_predwith true labelsy_testto calculate accuracy.\nOutput:"
+  },
+  {
+    "input": "8.Predicting for a Custom Message",
+    "output": "We create a custom message and transform it into a vector usingvectorizer.transform().\nThe vectorized message is passed tomodel.predict()to get the prediction.\nWe print the result, interpreting 1 as “Spam” and 0 as “Not Spam”.\nOutput:\nIn the above code we did spam detection for given set of messages and evaluated model accuracy for the output it gave."
+  },
+  {
+    "input": "How Multinomial Naive Bayes differs from Gaussian Naive Bayes?",
+    "output": "The Multinomial naive bayes andGaussian naive bayesboth are the variants of same algorithm. However they have several number of differences which are discussed below:\nMultinomial Naive Bayes efficiency combined with its ability to handle large datasets makes it useful for applications like document categorization and email filtering."
   }
 ]
