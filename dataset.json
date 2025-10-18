@@ -5122,5 +5122,17 @@
   {
     "input": "Step 6. Use the Tree for Predictions",
     "output": "To predict an activity follow the branches of the tree. Example: If the outlook is Sunny and the humidity is High follow the tree:\nStart atOutlook.\nTake the branch for Sunny.\nThen go toHumidityand take the branch for High Humidity.\nResult: \"Swimming\".\nA decision tree works by breaking down data step by step asking the best possible questions at each point and stopping once it reaches a clear decision. It's an easy and understandable way to make choices. Because of their simple and clear structure decision trees are very helpful in machine learning for tasks like sorting data into categories or making predictions."
+  },
+  {
+    "input": "Agglomerative Clustering",
+    "output": "Agglomerative clustering is a bottom-up approach where each data point starts as its own individual cluster. The algorithm iteratively merges the most similar pairs of clusters until all the data points belong to a single cluster. It’s widely used due to its simplicity and efficiency in many clustering tasks.\nKey steps in agglomerative clustering:\nThis method can be computationally expensive especially for large datasets. The algorithm needs to compute the distance between every pair of points leading to a time complexity ofO(n^3)for large datasets.\nIt can be implemented using Scikit learn and SciPy library of python. Here’s a simple implementation of agglomerative clustering using randomly generated data in Python  with Scipy:\nOutput:"
+  },
+  {
+    "input": "Divisive Clustering",
+    "output": "Divisive clustering on the other hand, is a top-down approach. It starts with all data points in a single cluster and recursively splits the clusters into smaller sub-clusters based on their dissimilarity until each data point is in its own individual cluster. This approach is more computationally intensive as it require splitting the data rather than merging it.\nKey steps in divisive clustering:\nDivisive clustering’s complexity can vary depending on the implementation it generally requires more computational power due to the recursive splitting process. However because it operates on sub-clusters it can sometimes reduce the computational cost when compared to agglomerative clustering on very large datasets. It is more complex to implement and require a choice of splitting criteria."
+  },
+  {
+    "input": "Difference between Agglomerative clustering and Divisive clustering",
+    "output": "Both agglomerative and divisive clustering are hierarchical clustering techniques with their own strengths and weaknesses. Agglomerative clustering is more commonly used due to its simplicity and efficiency while divisive clustering may be useful in specific applications where a top-down approach is preferred. Understanding these methods and their differences will help in selecting the appropriate technique for a given clustering task."
   }
 ]
