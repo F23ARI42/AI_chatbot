@@ -5366,5 +5366,33 @@
   {
     "input": "Step 7: Visualize the Most Popular Items",
     "output": "Let’s see which items are most frequently bought:\nOutput:\nAs shown in the above outputWhole milkis the most frequently bought item, followed byother vegetables,rolls/bunandsoda."
+  },
+  {
+    "input": "How Does Isomap Work?",
+    "output": "Now that we understand the basics, let’s look at how Isomap works one step at a time.\nCalculate Pairwise Distances:First we find the Euclidean distances between all pairs of data points.\nFind Nearest Neighbors:For each point find the closest other points based on distance.\nCreate a Neighborhood Graph:Connect each point to its nearest neighbors to form a graph.\nCalculate Geodesic Distances:Use algorithms like Floyd-Warshall to measure the shortest paths between points by following the graph connections.\nPerform Dimensional Reduction:Move points into a simpler space while keeping their distances as accurate as possible."
+  },
+  {
+    "input": "Implementation of Isomap with Scikit-learn",
+    "output": "So far we have discussed about the introduction and working of Isomap, now lets understand its implementation to better understand it with the help of the visualisation."
+  },
+  {
+    "input": "1. Applying Isomap to S-Curve Data",
+    "output": "This part generates a 3D S-curve dataset and applies Isomap to reduce it to 2D for visualization. It highlights how Isomap preserves the non-linear structure by flattening the curve while keeping the relationships between points intact.\nmake_s_curve()creates a 3D curved dataset shaped like an \"S\".\nIsomap()reduces the data to 2D while keeping its true structure.\nOutput:\nScatter plot shows how Isomap clusters S shaped dataset together while preserving the dataset’s inherent structure."
+  },
+  {
+    "input": "2. Applying Isomap to Digits Dataset",
+    "output": "Here Isomap is applied to the handwritten digits dataset that has 64 features per sample and reduces it to 2D. The scatter plot visually shows how Isomap groups similar digits together making patterns and clusters easier to identify in lower dimensions.\nOutput:\nThe scatter plot shows how Isomap clusters similar digits together in the 2D space, preserving the dataset’s inherent structure."
+  },
+  {
+    "input": "Advantages of Isomap",
+    "output": "Captures Non-Linear Relationships:Unlike PCA Isomap can find complex, non-linear patterns in data.\nPreserves Global Structure:It retains the overall geometry of the data and provide a more accurate representation of the data relationships.\nGlobal Optimal Solution:It guarantees that the optimal solution is found for the neighborhood graph and ensure accurate dimensionality reduction."
+  },
+  {
+    "input": "Disadvanatges of Isomap",
+    "output": "Computational Cost:Isomap can be slow for large datasets especially when calculating geodesic distances.\nSensitive to Parameters:Incorrect parameter choices can led to poor results so it requires careful tuning.\nComplex Manifolds:It may struggle with data that contains topological complexity such as holes in the manifold."
+  },
+  {
+    "input": "Applications of Isomap",
+    "output": "Visualisation:It makes it easier to see complex data like face images by turning it into 2D or 3D form so we can understand it better with plots or graphs.\nData Exploration:It helps to find groups or patterns in the data that might be hidden when the data has too many features or dimensions.\nAnomaly Detection:Outliers or anomalies in the data can be identified by understanding how they deviate from the manifold.\nPre-processing for Machine Learning:It can be used as a pre-processing step before applying other machine learning techniques improve model performance"
   }
 ]
