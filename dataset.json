@@ -5590,5 +5590,49 @@
   {
     "input": "Disadvantages",
     "output": "High Memory Requirement: Large TID sets can consume significant memory.\nNot Suitable for Sparse Data: Works better in dense datasets, but performance drops for sparse datasets where intersections result in small itemsets.\nSensitive to Large Transactions: If a transaction has too many items its corresponding TID-set intersections can be expensive."
+  },
+  {
+    "input": "Working of Fuzzy Clustering",
+    "output": "Fuzzy clustering follows an iterative optimization process where data points are assigned membership values instead of hard cluster labels. Here’s a step-by-step breakdown of how it works:\nStep 1: Initialize Membership Values Randomly:Each data point is assigned initial membership degrees for all clusters. These values represent the likelihood of the point belonging to each cluster. Unlike hard clustering, a point can partially belong to multiple clusters simultaneously.\nFor example, for 2 clusters and 4 data points, an initial membership matrix (\\gamma) might look like:\nStep 2: Compute Cluster Centroids:Cluster centroids are calculated as the weighted average of all data points, where weights are the membership values raised to the fuzziness parameter m. Points with higher membership influence centroids more.\nThe centroid coordinatev_{ij}for clusteriand featurejis:\nWhere:\n\\gamma_{ik}​ = membership of point k in clusteri.\nm= fuzziness parameter (usually 2).\nx_{kj}​ = value of feature j for pointk.\nStep 3: Calculate Distance Between Data Points and Centroids:Compute the Euclidean distance between each point and every centroid to determine proximity, which will be used to update memberships. Example for point (1,3):\nSimilarly the distance of all other points is computed from both the centroids.\nStep 4: Update Membership Values:Membership values are updated inversely proportional to these distances. Points closer to a centroid get higher membership.\nUpdated membership\\gamma_{ik}for point k in clusteriis:\nStep 5: Repeat Until Convergence:Steps 2–4 are repeated until the membership values stabilize meaning there are no significant changes from one iteration to the next. This indicates that the clustering has reached an optimal state."
+  },
+  {
+    "input": "Implementation of Fuzzy Clustering",
+    "output": "The fuzzyscikit learnlibrary has a pre-defined function for fuzzy c-means which can be used in Python. For using fuzzy c-means we need to install the skfuzzy library."
+  },
+  {
+    "input": "Step 1: Importing Libraries",
+    "output": "We will usenumpyfor numerical operations, skfuzzy for the Fuzzy C-Means clustering algorithm andmatplotlibfor plotting the results."
+  },
+  {
+    "input": "Step 2: Generating Sample Data",
+    "output": "We will creates 100 two-dimensional points clustered using Gaussian noise.\nSet random seed (np.random.seed(0)):Ensures results are reproducible every time you run the code.\nDefine center = 0.5 and spread = 0.1:The cluster points will be centered around 0.5 with some variation.\nGenerate data (np.random.randn(2, 100)):Creates 100 random points in 2D space usingGaussian (normal) distribution.\nClip values (np.clip(data, 0, 1)):Ensures all points lie within the [0,1] range (keeps data bounded)."
+  },
+  {
+    "input": "Step 3: Setting Fuzzy C-Means Parameters",
+    "output": "Parameters control clustering behavior: number of clusters, fuzziness degree, stop tolerance and max iterations for convergence.\nn_clusters = 3:We want to divide data into 3 clusters.\nm = 1.7:The fuzziness parameter; higher values make cluster memberships softer (points can belong to multiple clusters).\nerror = 1e-5:The stopping tolerance; algorithm stops if changes are smaller than this threshold.\nmaxiter = 2000:The maximum number of iterations allowed to reach convergence."
+  },
+  {
+    "input": "Step 4: Performing Fuzzy C-Means Clustering and Assign Each Point to a Hard Cluster",
+    "output": "Converts fuzzy memberships to hard cluster assignments by taking the cluster with highest membership for each point.\ncntr:Final cluster centers\nu: Membership matrix indicating degree of belonging for each point to each cluster\nfpc:Fuzzy partition coefficient (quality metric)\nThis runs the clustering algorithm on the data."
+  },
+  {
+    "input": "Step 5: Printing Cluster Centers and Membership Matrix",
+    "output": "Outputs coordinates of cluster centers and the membership values for the first 5 data points to provide insight into clustering results.\nOutput:"
+  },
+  {
+    "input": "Step 6: Visualizing Fuzzy Memberships and Hard Clusters",
+    "output": "Plots membership levels as soft-colored points and overlays crisp cluster assignments with distinct markers to visualize both fuzzy and hard clustering. Cluster centers are highlighted with red X marks.\nOutput:\nThe plot shows soft clustering meaning a point can belong to multiple clusters with different probabilities rather than being assigned to just one cluster. This makes it useful when boundaries between clusters are not well-defined and all the Red \"X\" markers indicate the cluster centers computed by the algorithm."
+  },
+  {
+    "input": "Applications",
+    "output": "Image Segmentation: Handles noise and overlapping regions efficiently.\nPattern Recognition: Identifies ambiguous patterns in speech, handwriting, etc.\nCustomer Segmentation: Groups customers with partial membership for flexible marketing.\nMedical Diagnosis: Analyzes patient or genetic data with uncertain boundaries.\nBioinformatics: Captures multifunctional gene roles by assigning genes to multiple clusters."
+  },
+  {
+    "input": "Advantages",
+    "output": "Flexibility: Allows overlapping clusters representing ambiguous or complex data.\nRobustness: More resilient to noise and outliers by soft memberships.\nDetailed Insights: Membership degrees give richer understanding of data relationships.\nBetter Representation: Suitable when strict cluster boundaries are unrealistic."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Computationally Intensive: More expensive than hard clustering due to membership optimization.\nParameter Sensitivity: Choosing number of clusters and fuzziness parameter needs expertise.\nComplexity in Interpretation: Results can be harder to interpret than crisp clusters."
   }
 ]
