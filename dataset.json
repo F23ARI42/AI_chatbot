@@ -5826,5 +5826,25 @@
   {
     "input": "5. Sample Example",
     "output": "Here we will Integratex^2from 0 to 1\nOutput:\nMonte Carlo integration in Python provides a robust and versatile framework for tackling complex or high-dimensional integrals where traditional analytical or numerical methods may be impractical. Its flexibility allows seamless adaptation to a wide range of problems across science, engineering and data analysis."
+  },
+  {
+    "input": "Matrix Decomposition and Representation in NMF",
+    "output": "For a matrix A of dimensionsm \\times nwhere each element is\\geq 0NMF factorizes it into two matricesWandHwith dimensionsm \\times kandk \\times nrespectively where both matrices contain only non-negative elements:\nwhere:\nA: Original input matrix (a linear combination of W and H)\nW: Feature matrix (basis components)\nH: Coefficient matrix (weights associated with W)\nk: Rank (dimensionality of the reduced representation wherek \\le \\min(m, n)\nNMF helps to identify hidden patterns in data by assuming that each data point can be represented as a combination of fundamental features found inW."
+  },
+  {
+    "input": "Intuition Behind NMF",
+    "output": "The goal of NMF is to simplify complex data into a smaller set of meaningful patterns. By choosing a lower dimension k the decomposition highlights essential features while ignoring noise.\nEach data point (column inA) is approximated as a combination of non-negative feature vectors inW.\nThis method assumes that data consists of meaningful parts that add up to form the whole.\nFor example in facial recognition NMF can break down an image into basic facial features such as eyes, nose and mouth. TheWmatrix contains these key features while theHmatrix defines how strongly each image is composed of these features."
+  },
+  {
+    "input": "Working of NMF",
+    "output": "NMF decomposes a data matrixAinto two smaller matricesWandHusing an iterative optimization process that minimizes reconstruction error:\n1. Initialization: Start with random non-negative values forWandH.\n2. Iterative Update: ModifyWandHto minimize the difference betweenAandW \\times H.\n3. Stopping Criteria: The process stops when:\nThe reconstruction error stabilizes.\nA set number of iterations is reached.\nCommon optimization techniques for NMF include:\nMultiplicative Update Rules: Ensures non-negativity by iteratively adjustingWandH.\nAlternating Least Squares (ALS): Solves forWwhile keepingHfixed and vice versa, in an alternating manner."
+  },
+  {
+    "input": "Real-life Example",
+    "output": "Let us consider some real-life examples to understand the working of the NMF algorithm. Let's take a case of image processing.\nSuppose we have an input image having pixels that form matrix A.\nUsing NMF we factorize it into two matrices one containing the facial feature set [Matrix W]\nOther contains the importance of each facial feature in the input image i.e. the weights [Matrix H]. (As shown in below image)"
+  },
+  {
+    "input": "Applications of NMF",
+    "output": "NMF has a wide range of applications including:\nImage Processing: Feature extraction in facial recognition and object detection.\nText Mining and NLP Task: Topic modeling by decomposing a document-term matrix into key topics.\nSpectral Data Analysis: Identifying hidden patterns in sound, medical signals and chemical spectra.\nBioinformatics: Gene expression analysis for identifying molecular patterns in biological data."
   }
 ]
