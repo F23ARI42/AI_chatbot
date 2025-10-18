@@ -5190,5 +5190,45 @@
   {
     "input": "Advantages over Traditional Methods",
     "output": "One of the primary advantage of DPMMs is their ability to automatically determine the number of clusters in the data. Traditional methods often require the pre-specification of the number of clusters like in k-means which can be challenging in real-world applications.\nIt operate within a probabilistic framework allowing for the quantification of uncertainty. Traditional methods often provide \"hard\" assignments of data points to clusters while DPMMs give probabilistic cluster assignments capturing the uncertainty inherent in the data.\nDPMMs find applications in a wide range of fields including natural language processing, computer vision, bioinformatics and finance. Their flexibility makes them applicable to diverse datasets and problem domains."
+  },
+  {
+    "input": "Working of Elbow Point",
+    "output": "The Elbow Method works in the following steps:\n1. We iterate over a range of k values, typically from 1 to n (where n is a hyperparameter you choose).\n2. For each k, we calculate a distance measure called WCSS (Within-Cluster Sum of Squares). This tells us how spread out the data points are within each cluster.\nWCSS measures how well the data points are clustered around their respective centroids. It is defined as the sum of the squared distances between each point and its cluster centroid:\nwhere:\n\\text{distance}(x_j^{(i)}, c_i)represents the distance between thej^{th}data pointx_j^{(i)}​ in cluster i and the centroidc_iof that cluster.\n3. We try different k values (number of clusters). For each k, we run KMeans and calculate the WCSS.\n4. We plot a graph with k on the X-axis and WCSS on the Y-axis.\n5. As we increase k, the WCSS typically decreases because we're creating more clusters, which tend to capture more data variations. However, there comes a point where adding more clusters results in only a marginal decrease in WCSS. This is where we observe an \"elbow\" shape in the graph.\nBefore the elbow: Increasing k significantly reduces WCSS, indicating that new clusters effectively capture more of the data's variability.\nAfter the elbow: Adding more clusters results in a minimal reduction in WCSS, suggesting that these extra clusters may not be necessary and could lead to overfitting.\nThe goal is to identify the point where the rate of decrease in WCSS sharply changes, indicating that adding more clusters (beyond this point) yields diminishing returns. This \"elbow\" point suggests the optimal number of clusters."
+  },
+  {
+    "input": "Understanding Distortion and Inertia in K-Means Clustering",
+    "output": "In K-Means clustering, we aim to group similar data points together. To evaluate the quality of these groupings, we use two key metrics: Distortion and Inertia."
+  },
+  {
+    "input": "1. Distortion",
+    "output": "Distortion measures the average squared distance between each data point and its assigned cluster center. It's a measure of how well the clusters represent the data. A lower distortion value indicates better clustering.\nwhere,\nx_i​ is thei^{th}data point\ncis a cluster center from the set of all cluster centroids\n\\left\\| x_i - c \\right\\|^2is the squared Euclidean distance between the data point and the cluster center\nnis the total number of data points"
+  },
+  {
+    "input": "2. Inertia",
+    "output": "Inertia is the sum of squared distances of each data point to its closest cluster center. It's essentially the total squared error of the clustering. Like distortion, a lower inertia value suggests better clustering.\nIn the Elbow Method, we calculate the distortion or inertia for different values of k (number of clusters). We then plot these values to identify the \"elbow point\", where the rate of decrease in distortion or inertia starts to slow down. This elbow point often indicates the optimal number of clusters."
+  },
+  {
+    "input": "Implementation of Elbow Method",
+    "output": "Let's implement the Elbow method,"
+  },
+  {
+    "input": "Step 1: Importing the required libraries",
+    "output": "We will importnumpy,matplotlib,scikit learnandscipyfor this."
+  },
+  {
+    "input": "Step 2: Creating and Visualizing the data",
+    "output": "We will create a random array and visualize its distribution\nOutput:\nFrom the above visualization, we can see that the optimal number of clusters should be around 3. But visualizing the data alone cannot always give the right answer. Hence we demonstrate the following steps."
+  },
+  {
+    "input": "Step 3: Building the Clustering Model and Calculating Distortion and Inertia",
+    "output": "In this step, we will fit the K-means model for different values of k (number of clusters) and calculate both the distortion and inertia for each value."
+  },
+  {
+    "input": "Step 4: Tabulating and Visualizing the Results",
+    "output": "a) Displaying Distortion Values\nOutput:\nb) Displaying Inertia Values:\nOutput:"
+  },
+  {
+    "input": "Step 5: Clustered Data Points For Different k Values",
+    "output": "We will plot images of data points clustered for different values of k. For this, we will apply the k-means algorithm on the dataset by iterating on a range of k values.\nOutput:"
   }
 ]
