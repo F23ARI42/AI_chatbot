@@ -5526,5 +5526,9 @@
   {
     "input": "Module 7: Deployment of ML Models",
     "output": "The trained ML model must be integrated into an application or service to make its predictions accessible.\nMachine learning deployement\nDeploy ML Model using Streamlit Library\nDeploy ML web app on Heroku\nCreate UIs for prototyping Machine Learning model with Gradio\nAPIs allow other applications or systems to access the ML model's functionality and integrate them into larger workflows.\nDeploy Machine Learning Model using Flask\nDeploying ML Models as API using FastAPI\nMLOps ensure they are deployed, monitored and maintained efficiently in real-world production systems.\nMLOps\nContinuous Integration and Continuous Deployment (CI/CD) in MLOps\nEnd-to-End MLOps"
+  },
+  {
+    "input": "Types of Market Basket Analysis",
+    "output": "There are three types of Market Basket Analysis. They are as follow:"
   }
 ]
