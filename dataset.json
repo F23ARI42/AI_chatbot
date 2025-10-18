@@ -5066,5 +5066,61 @@
   {
     "input": "Summarizing all Algorithms",
     "output": "Here’s a short summary of all decision tree algorithms we have learned so far:"
+  },
+  {
+    "input": "How Does a Decision Tree Work?",
+    "output": "A decision tree splits the dataset based on feature values to create pure subsets ideally all items in a group belong to the same class. Each leaf node of the tree corresponds to a class label and the internal nodes are feature-based decision points. Let’s understand this with an example.\nLet’s consider a decision tree for predicting whether a customer will buy a product based on age, income and previous purchases: Here's how the decision tree works:\n1. Root Node (Income)\nFirst Question:\"Is the person’s income greater than $50,000?\"\nIf Yes, proceed to the next question.\nIf No, predict \"No Purchase\" (leaf node).\n2. Internal Node (Age):\nIf the person’s income is greater than $50,000, ask:\"Is the person’s age above 30?\"\nIf Yes, proceed to the next question.\nIf No, predict \"No Purchase\" (leaf node).\n3. Internal Node (Previous Purchases):\nIf the person is above 30 and has made previous purchases, predict \"Purchase\" (leaf node).\nIf the person is above 30 and has not made previous purchases, predict \"No Purchase\" (leaf node).\nExample:Predicting Whether a Customer Will Buy a Product Using Two Decision Trees"
+  },
+  {
+    "input": "Tree 1:Customer Demographics",
+    "output": "First tree asks two questions:\n1. \"Income > $50,000?\"\nIf Yes, Proceed to the next question.\nIf No, \"No Purchase\"\n2. \"Age > 30?\"\nYes: \"Purchase\"\nNo: \"No Purchase\""
+  },
+  {
+    "input": "Tree 2: Previous Purchases",
+    "output": "\"Previous Purchases > 0?\"\nYes: \"Purchase\"\nNo: \"No Purchase\"\nOnce we have predictions from both trees, we can combine the results to make a final prediction. If Tree 1 predicts \"Purchase\" and Tree 2 predicts \"No Purchase\", the final prediction might be \"Purchase\" or \"No Purchase\" depending on the weight or confidence assigned to each tree. This can be decided based on the problem context."
+  },
+  {
+    "input": "Information Gain and Gini Index in Decision Tree",
+    "output": "Till now we have discovered the basic intuition and approach of how decision tree works, so lets just move to the attribute selection measure of decision tree. We have two popular attribute selection measures used:"
+  },
+  {
+    "input": "1. Information Gain",
+    "output": "Information Gain tells us how useful a question (or feature) is for splitting data into groups. It measures how much the uncertainty decreases after the split. A good question will create clearer groups and the feature with the highest Information Gain is chosen to make the decision.\nFor example if we split a dataset of people into \"Young\" and \"Old\" based on age and all young people bought the product while all old people did not, the Information Gain would be high because the split perfectly separates the two groups with no uncertainty left\nSupposeSis a set of instancesAis an attribute,Svis the subset ofS,vrepresents an individual value that the attributeAcan take and Values (A) is the set of all possible values ofAthen\nEntropy:is the measure of uncertainty of a random variable it characterizes the impurity of an arbitrary collection of examples. The higher the entropy more the information content.\nFor example if a dataset has an equal number of \"Yes\" and \"No\" outcomes (like 3 people who bought a product and 3 who didn’t), the entropy is high because it’s uncertain which outcome to predict. But if all the outcomes are the same (all \"Yes\" or all \"No\") the entropy is 0 meaning there is no uncertainty left in predicting the outcome\nSupposeSis a set of instances,Ais an attribute,Svis the subset ofSwithA=vand Values (A) is the set of all possible values ofA, then\nExample:"
+  },
+  {
+    "input": "Building Decision Tree using Information Gain the essentials",
+    "output": "Start with all training instances associated with the root node\nUse info gain to choose which attribute to label each node with\nRecursively construct each subtree on the subset of training instances that would be classified down that path in the tree.\nIf all positive or all negative training instances remain, the label that node “yes\" or “no\" accordingly\nIf no attributes remain label with a majority vote of training instances left at that node\nIf no instances remain label with a majority vote of the parent's training instances.\nExample:Now let us draw a Decision Tree for the following data using Information gain. Training set: 3 features and 2 classes\nHere, we have 3 features and 2 output classes. To build a decision tree using Information gain. We will take each of the features and calculate the information for each feature.\nFrom the above images we can see that the information gain ismaximumwhen we make a split on feature Y. So, for the root node best-suited feature is feature Y. Now we can see that while splitting the dataset by feature Y, the child contains a pure subset of the target variable. So we don't need to further split the dataset. The final tree for the above dataset would look like this:"
+  },
+  {
+    "input": "2. Gini Index",
+    "output": "Gini Index is a metric to measure how often a randomly chosen element would be incorrectly identified. It means an attribute with a lower Gini index should be preferred. Sklearn supports “Gini” criteria for Gini Index and by default it takes “gini” value.\nFor example if we have a group of people where all bought the product (100% \"Yes\") the Gini Index is 0 indicate perfect purity. But if the group has an equal mix of \"Yes\" and \"No\" the Gini Index would be 0.5 show high impurity or uncertainty. Formula for Gini Index is given by :"
+  },
+  {
+    "input": "Understanding Decision Tree with Real life use case:",
+    "output": "Till now we have understand about the attributes and components of decision tree. Now lets jump to a real life use case in which how decision tree works step by step."
+  },
+  {
+    "input": "Step 1. Start with the Whole Dataset",
+    "output": "We begin with all the data which is treated as the root node of the decision tree."
+  },
+  {
+    "input": "Step 2. Choose the Best Question (Attribute)",
+    "output": "Pick the best question to divide the dataset. For example ask:\"What is the outlook?\""
+  },
+  {
+    "input": "Step 3. Split the Data into Subsets",
+    "output": "Divide the dataset into groups based on the question:\nIf Sunny go to one subset.\nIf Cloudy go to another subset.\nIf Rainy go to the last subset."
+  },
+  {
+    "input": "Step 4. Split Further if Needed (Recursive Splitting)",
+    "output": "For each subset ask another question to refine the groups. For example If the Sunny subset is mixed ask:\"Is the humidity high or normal?\"\nHigh humidity → \"Swimming\".\nNormal humidity → \"Hiking\"."
+  },
+  {
+    "input": "Step 5. Assign Final Decisions (Leaf Nodes)",
+    "output": "When a subset contains only one activity, stop splitting and assign it a label:\nCloudy → \"Hiking\".\nRainy → \"Stay Inside\".\nSunny + High Humidity → \"Swimming\".\nSunny + Normal Humidity → \"Hiking\"."
+  },
+  {
+    "input": "Step 6. Use the Tree for Predictions",
+    "output": "To predict an activity follow the branches of the tree. Example: If the outlook is Sunny and the humidity is High follow the tree:\nStart atOutlook.\nTake the branch for Sunny.\nThen go toHumidityand take the branch for High Humidity.\nResult: \"Swimming\".\nA decision tree works by breaking down data step by step asking the best possible questions at each point and stopping once it reaches a clear decision. It's an easy and understandable way to make choices. Because of their simple and clear structure decision trees are very helpful in machine learning for tasks like sorting data into categories or making predictions."
   }
 ]
