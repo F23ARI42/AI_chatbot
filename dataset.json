@@ -5790,5 +5790,17 @@
   {
     "input": "OPTICS vs. DBSCAN Algorithm",
     "output": "We can compare OPTICS and DBSCAN to highlight their similarities and differences in clustering approach, flexibility and performance.\nOPTICS is widely used for clustering algorithm that works well for identifying clusters of varying densities. It provides flexibility through reachability plots which allows dynamic cluster extraction. While computationally more expensive it is useful for complex datasets where density variation is significant."
+  },
+  {
+    "input": "Implementation of t-SNE on MNIST Dataset",
+    "output": "Now let's use the sklearn implementation of the t-SNE algorithm on the MNIST dataset which contains 10 classes that are for the 10 different digits in the mathematics.\nNow let's load the MNIST dataset into pandas dataframe.\nOutput:\nBefore applying the t-SNE algorithm on the dataset we muststandardizethe data. As we know that the t-SNE algorithm is a complex algorithm which utilizes some complex non-linear methods.\nOutput:\nNow let's reduce the 784 columns data to 2 dimensions so that we can create a scatter plot to visualize the same.\nOutput:\nThe scatter plot above shows how t-SNE has mapped the MNIST dataset into a 2D space. The points are grouped by digit and we can see that similar digits (like 1s or 7s) are clustered together making it easier to identify patterns and relationships in the data."
+  },
+  {
+    "input": "Advantages of t-SNE",
+    "output": "Great for Visualization: t-SNE is particularly used to convert complex high-dimensional data into 2D or 3D for visualization making patterns and clusters easy to observe.\nPreserve Local Structure: Unlike linear techniques like PCA t-SNE focus on maintaining the local relationships between data points meaning similar data points remain close in the lower-dimensional space.\nNon-Linear Capability: It captures non-linear dependencies in the data which makes it suitable for complex datasets where linear methods fail.\nCluster Separation: Helps in clearly visualizing clusters and class separability in datasets like MNIST making it easier for interpretation and exploration."
+  },
+  {
+    "input": "Disadvantages of t-SNE",
+    "output": "Computationally Intensive: t-SNE is slower and more computationally expensive compared to linear methods especially on large datasets.\nNon-deterministic Output: The output can vary with each run due to its randomness unless a fixed random_state is used.\nNot Scalable for Large Datasets: It struggles with very large datasets (e.g., millions of points) unless optimized or approximated versions are used.\nNot Good for Downstream Tasks: t-SNE is mainly for visualization and is not suitable for dimensionality reduction when feeding data into other ML algorithms.\nNo Global Structure Preservation: It may distort global distances and structures in the data focusing more on preserving local neighborhoods."
   }
 ]
