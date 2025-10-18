@@ -5002,5 +5002,37 @@
   {
     "input": "Limitations",
     "output": "A3C also has some drawbacks such as:\nStale Gradients: Workers may use outdated global parameters, leading to less effective updates.\nExploration Redundancy: If multiple agents converge to similar policies, exploration diversity may suffer.\nHardware Dependency: A3C benefits most from multi-core systems; on single-core machines, its advantages may diminish.\nA3C has changed reinforcement learning by proving that parallel, asynchronous agents can enhance training speed and stability. Its architecture balances exploration and exploitation while scaling well with hardware. Though newer methods like PPO and SAC have refined its ideas, A3C is still inspiring ongoing research in advantage estimation and sample efficiency."
+  },
+  {
+    "input": "1: Importing Libraries",
+    "output": "We will import libraries likeScikit-Learnfor machine learning tasks."
+  },
+  {
+    "input": "2: Loading the Dataset",
+    "output": "In order to perform classification load a dataset. For demonstration one can use sample datasets from Scikit-Learn such as Iris or Breast Cancer."
+  },
+  {
+    "input": "3: Splitting the Dataset",
+    "output": "Use the train_test_splitmethod from sklearn.model_selection to split the dataset into training and testing sets."
+  },
+  {
+    "input": "4: Defining the Model",
+    "output": "Using DecisionTreeClassifier from sklearn.tree create an object for the Decision Tree Classifier."
+  },
+  {
+    "input": "5: Training the Model",
+    "output": "Apply the fit method to match the classifier to the training set of data.\nOutput:"
+  },
+  {
+    "input": "6: Making Predictions",
+    "output": "Apply the predict method to the test data and use the trained model to create predictions.\nOutput:"
+  },
+  {
+    "input": "7: Hyperparameter Tuning with Decision Tree Classifier using GridSearchCV",
+    "output": "Hyperparameters are configuration settings that control the behavior of a decision tree model and significantly affect its performance. Proper tuning can improve accuracy, reduce overfitting and enhance generalization of model. Popular methods for tuning include Grid Search, Random Search and Bayesian Optimization which explore different combinations to find the best configuration.\nLet's make use of Scikit-Learn's GridSearchCVto find the best combination of of hyperparameter values. The code is as follows:\nOutput:\nHere we defined the parameter grid with a set of hyperparameters and a list of possible values. The GridSearchCV evaluates the different hyperparameter combinations for the Decision Tree Classifier and selects the best combination of hyperparameters based on the performance across all k folds."
+  },
+  {
+    "input": "8: Visualizing the Decision Tree Classifier",
+    "output": "Decision Tree visualization is used to interpret and comprehend model's choices. We'll plot feature importance obtained from the Decision Tree model to see which features have the greatest predictive power. Here we fetch the best estimator obtained from the GridSearchCV as the decision tree classifier.\nOutput:\nWe can see that it start from the root node (depth 0 at the top).\nThe root node checks whether the flower petal width is less than or equal to 0.75. If it is then we move to the root's left child node (depth1, left). Here the left node doesn't have any child nodes so the classifier will predict the class for that node assetosa.\nIf the petal width is greater than 0.75 then we must move down to the root's right child node (depth 1, right). Here the right node is not a leaf node, so node check for the condition until it reaches the leaf node.\nBy using hyperparameter tuning methods like GridSearchCV we can optimize their performance."
   }
 ]
