@@ -5434,5 +5434,97 @@
   {
     "input": "Optimal number of clusters in the K-Mode algorithm",
     "output": "Elbow methodis used to find the optimal number of clusters\nOutputs:\nAs we can see from the graph there is an elbow-like shape at 2.0 and 3.0 Now it we can consider either 2.0 or 3.0 cluster. Let's consider Number of cluster =2.0\nOutputs :\nThis also shows that the first, third, fourth and fifth data points have been assigned to the first cluster and the second data points have been assigned to the second cluster.  So our previous answer was 100 % correct. To find the best number of groups we use the Elbow Method which helps us see when adding more groups doesn't make a big difference. K-Modes is an easy and effective way to group similar data when working with categories"
+  },
+  {
+    "input": "Module 1: Machine Learning Pipeline",
+    "output": "This section covers preprocessing, exploratory data analysis and model evaluation to prepare data, uncover insights and build reliable models."
+  },
+  {
+    "input": "1. Data Preprocessing",
+    "output": "ML workflow\nData Cleaning\nData Preprocessing in Python\nFeature Scaling\nFeature Extraction\nFeature Engineering\nFeature Selection Techniques"
+  },
+  {
+    "input": "2. Exploratory Data Analysis",
+    "output": "Exploratory Data Analysis\nExploratory Data Analysis in Python\nAdvance EDA\nTime Series Data Visualization"
+  },
+  {
+    "input": "3. Model Evaluation",
+    "output": "Regularization in Machine Learning\nConfusion Matrix\nPrecision, RecallandF1-Score\nAUC-ROC Curve\nCross-validation\nHyperparameter Tuning"
+  },
+  {
+    "input": "Module 2: Supervised Learning",
+    "output": "Supervised learning algorithms are generally categorized intotwo main types:\nClassification- where the goal is to predict discrete labels or categories\nRegression- where the aim is to predict continuous numerical values.\nThere are many algorithms used in supervised learning each suited to different types of problems. Some of the most commonly used supervised learning algorithms are:"
+  },
+  {
+    "input": "1. Linear Regression",
+    "output": "This is one of the simplest ways to predict numbers using a straight line. It helps find the relationship between input and output.\nIntroduction to Linear Regression\nGradient Descent in Linear Regression\nMultiple Linear Regression"
+  },
+  {
+    "input": "2. Logistic Regression",
+    "output": "Used when the output is a \"yes or no\" type answer. It helps in predicting categories like pass/fail or spam/not spam.\nUnderstanding Logistic Regression\nCost function in Logistic Regression"
+  },
+  {
+    "input": "3.Decision Trees",
+    "output": "A model that makes decisions by asking a series of simple questions, like a flowchart. Easy to understand and use.\nDecision Tree in Machine Learning\nTypes of Decision tree algorithms\nDecision Tree - Regression (Implementation)\nDecision tree - Classification (Implementation)"
+  },
+  {
+    "input": "4.Support Vector Machines (SVM)",
+    "output": "A bit more advanced—it tries to draw the best line (or boundary) to separate different categories of data.\nUnderstanding SVMs\nSVM Hyperparameter Tuning - GridSearchCV\nNon-Linear SVM"
+  },
+  {
+    "input": "5. k-Nearest Neighbors (k-NN)",
+    "output": "This model looks at the closest data points (neighbors) to make predictions. Super simple and based on similarity.\nIntroduction to KNN\nDecision Boundaries in K-Nearest Neighbors (KNN)"
+  },
+  {
+    "input": "6. Naïve Bayes",
+    "output": "A quick and smart way to classify things based on probability. It works well for text and spam detection.\nIntroduction to Naive Bayes\nGaussian Naive Bayes\nMultinomial Naive Bayes\nBernoulli Naive Bayes\nComplement Naive Bayes"
+  },
+  {
+    "input": "7. Random Forest (Bagging Algorithm)",
+    "output": "A powerful model that builds lots of decision trees and combines them for better accuracy and stability.\nIntroduction to Random forest\nRandom Forest Classifier\nRandom Forest Regression\nHyperparameter Tuning in Random Forest"
+  },
+  {
+    "input": "Introduction to Ensemble Learning",
+    "output": "Ensemble learningcombines multiple simple models to create a stronger, smarter model. There are mainly two types of ensemble learning:\nBaggingthat combines multiple models trained independently.\nBoostingthat builds models sequentially each correcting the errors of the previous one."
+  },
+  {
+    "input": "Module 3: Unsupervised learning",
+    "output": "Unsupervised learning are again divided intothree main categoriesbased on their purpose:\nClustering\nAssociation Rule Mining\nDimensionality Reduction."
+  },
+  {
+    "input": "1. Clustering",
+    "output": "Clustering algorithms group data points into clusters based on their similarities or differences. Types of clustering algorithms are:\nCentroid-based Methods:\nK-Means clustering\nElbow Method for optimal value of k in KMeans\nK-Means++ clustering\nK-Mode clustering\nFuzzy C-Means (FCM) Clustering\nDistribution-based Methods:\nGaussian mixture models\nExpectation-Maximization Algorithm\nDirichlet process mixture models (DPMMs)\nConnectivity based methods:\nHierarchical clustering\nAgglomerative Clustering\nDivisive clustering\nAffinity propagation\nDensity Based methods:\nDBSCAN (Density-Based Spatial Clustering of Applications with Noise)\nOPTICS (Ordering Points To Identify the Clustering Structure)"
+  },
+  {
+    "input": "2. Dimensionality Reduction",
+    "output": "Dimensionality reduction is used to simplify datasets by reducing the number of features while retaining the most important information.\nPrincipal Component Analysis (PCA)\nt-distributed Stochastic Neighbor Embedding (t-SNE)\nNon-negative Matrix Factorization (NMF)\nIndependent Component Analysis (ICA)\nIsomap\nLocally Linear Embedding (LLE)"
+  },
+  {
+    "input": "3. Association Rule",
+    "output": "Find patterns between items in large datasets typically inmarket basket analysis.\nApriori algorithm\nImplementing apriori algorithm\nFP-Growth (Frequent Pattern-Growth)\nECLAT (Equivalence Class Clustering and bottom-up Lattice Traversal)"
+  },
+  {
+    "input": "Module 4: Reinforcement Learning",
+    "output": "Reinforcement learning interacts with environment and learn from them based on rewards."
+  },
+  {
+    "input": "1.Model-Based Methods",
+    "output": "These methods use a model of the environment to predict outcomes and help the agent plan actions by simulating potential results.\nMarkov decision processes (MDPs)\nBellman equation\nValue iteration algorithm\nMonte Carlo Tree Search"
+  },
+  {
+    "input": "2. Model-Free Methods",
+    "output": "The agent learns directly from experience by interacting with the environment and adjusting its actions based on feedback.\nQ-Learning\nSARSA\nMonte Carlo Methods\nReinforce Algorithm\nActor-Critic Algorithm\nAsynchronous Advantage Actor-Critic (A3C)"
+  },
+  {
+    "input": "Module 5: Semi Supervised Learning",
+    "output": "It uses a mix of labeled and unlabeled data making it helpful when labeling data is costly or it is very limited.\nSemi Supervised Classification\nSelf-Training in Semi-Supervised Learning\nFew-shot learning in Machine Learning"
+  },
+  {
+    "input": "Module 6: Forecasting Models",
+    "output": "Forecasting models analyze past data to predict future trends, commonly used for time series problems like sales, demand or stock prices.\nARIMA (Auto-Regressive Integrated Moving Average)\nSARIMA (Seasonal ARIMA)\nExponential Smoothing (Holt-Winters)"
+  },
+  {
+    "input": "Module 7: Deployment of ML Models",
+    "output": "The trained ML model must be integrated into an application or service to make its predictions accessible.\nMachine learning deployement\nDeploy ML Model using Streamlit Library\nDeploy ML web app on Heroku\nCreate UIs for prototyping Machine Learning model with Gradio\nAPIs allow other applications or systems to access the ML model's functionality and integrate them into larger workflows.\nDeploy Machine Learning Model using Flask\nDeploying ML Models as API using FastAPI\nMLOps ensure they are deployed, monitored and maintained efficiently in real-world production systems.\nMLOps\nContinuous Integration and Continuous Deployment (CI/CD) in MLOps\nEnd-to-End MLOps"
   }
 ]
