@@ -6818,5 +6818,49 @@
   {
     "input": "Conclusion",
     "output": "In conclusion, in this article, we discussedwhat is spatial analysis, thetypes of spatial data, theimportance of spatial analysis, theprocess of spatial analysis, and some applications of spatial analysis. Spatial data can be divided into two main categories, vector and raster data which can be accompanied by additional attribute data.Spatial analysis is important to identify patterns, and decision-making and is an omnipresent technology. The steps involved in spatial analysis are data collection, analysis, and presentation.The technique of spatial analysis is used extensively in many sectors like urban planning, public health, and agriculture which are all discussed above in the article."
+  },
+  {
+    "input": "Univariate Analysis",
+    "output": "Univariate Analysis is a type of data visualization where we visualize only a single variable at a time. Univariate Analysis helps us to analyze the distribution of the variable present in the data so that we can perform further analysis. You can find the link to the datasethere.\nOutput:"
+  },
+  {
+    "input": "Histogram",
+    "output": "Here we’ll be performing univariate analysis on Numerical variables using thehistogramfunction.\nOutput:"
+  },
+  {
+    "input": "Bar Chart",
+    "output": "Univariate analysis of categorical data. We’ll be using thecount plotfunction from theseabornlibrary\nOutput:\nThe Bars in the chart are representing the count of each category present in the business travel column."
+  },
+  {
+    "input": "Pie Chart",
+    "output": "Apiecharthelps us to visualize the percentage of the data belonging to each category.\nOutput:"
+  },
+  {
+    "input": "Bivariate analysis",
+    "output": "Bivariate analysis is the simultaneous analysis of two variables. It explores the concept of the relationship between two variable whether there exists an association and the strength of this association or whether there are differences between two variables and the significance of these differences.\nThe main three types we will see here are:"
+  },
+  {
+    "input": "Categorical v/s Numerical",
+    "output": "Output:\nHere the Black horizontal line is indicating huge differences in the length of service among different departments."
+  },
+  {
+    "input": "Numerical v/s Numerical",
+    "output": "Output:\nIt displays the age and length of service of employees in the organization as we can see that younger employees have less experience in terms of their length of service."
+  },
+  {
+    "input": "Categorical v/s Categorical",
+    "output": "Output:"
+  },
+  {
+    "input": "Multivariate Analysis",
+    "output": "It is an extension of bivariate analysis which means it involves multiple variables at the same time to find correlation between them. Multivariate Analysis is a set of statistical model that examine patterns in multidimensional data by considering at once, several data variable."
+  },
+  {
+    "input": "PCA",
+    "output": "Output:"
+  },
+  {
+    "input": "HeatMap",
+    "output": "Here we are using a heat map to check the correlation between all the columns in the dataset. It is a data visualisation technique that shows the magnitude of the phenomenon as colour in two dimensions. The values of correlation can vary from -1 to 1 where -1 means strong negative and +1 means strong positive correlation.\nOutput:"
   }
 ]
