@@ -1,0 +1,30 @@
+[
+  {
+    "input": "Step 1: Importing the required libraries",
+    "output": "First we will import all the necessary libraries likenumpy ,pandas,matplotlibandscikit learn."
+  },
+  {
+    "input": "Step 2: Loading and Cleaning the data",
+    "output": "We will now read the .csv file and clean it.\nRemove theCUST_IDcolumn since it's just an ID and not useful\nHandle missing values using forward fill.\nOutput:"
+  },
+  {
+    "input": "Step 3: Preprocessing the data",
+    "output": "We prepare the data so that all features are on the same scale.\nScalingmakes features comparable It is important because clustering depends on distance.\nNormalizationhelps the clustering algorithm work better."
+  },
+  {
+    "input": "Step 4: Reducing the dimensionality of the Data",
+    "output": "We usePCAto reduce many columns features to just 2 so we can easily visualize the data."
+  },
+  {
+    "input": "Step 5: Make the Dendrograms",
+    "output": "Adendrogramhelps us decide how many clusters to choose. We will use the matplotlib to plot it.\n\nTo determine the optimal number of clusters by visualizing the data, imagine all the horizontal lines as being completely horizontal and then after calculating the maximum distance between any two horizontal lines, draw a horizontal line in the maximum distance calculated.\nThe above image shows that the optimal number of clusters should be 2 for the given data."
+  },
+  {
+    "input": "Step 6: Apply Agglomerative Clustering for Different Values of k",
+    "output": "Now let’s apply clustering for different values ofk(number of clusters). For each value ofkwe created a clustering model and plot the two PCA components colored by cluster.\nOutput:"
+  },
+  {
+    "input": "Step 7: Evaluate models and Visualizing results",
+    "output": "Silhouette scoretells us how well the data has been grouped. The Higher the score the better is model.\nOutput:\nAs in the above image based on the Silhouette Score and Dendrogram we usually choose the value of k that gives the highest score. In most cases with this dataset the best number of clusters is 2."
+  }
+]
