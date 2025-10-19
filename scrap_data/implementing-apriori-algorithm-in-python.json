@@ -1,0 +1,30 @@
+[
+  {
+    "input": "Step 1: Importing Required Libraries",
+    "output": "Before we begin we need to import the necessary Python libraries likePandas,Numpyand mlxtend."
+  },
+  {
+    "input": "Step 2: Loading and exploring the data",
+    "output": "We start by loading a popular groceries dataset. This dataset contains customer transactions with details like customer ID, transaction date, and the item purchased. you can download the dataset fromhere.\nOutput:\nEach row represents one item in a customer's basket on a given date.\nTo use the Apriori algorithm we must convert this into full transactions per customer per visit."
+  },
+  {
+    "input": "Step 3: Group Items by Transaction",
+    "output": "We group items purchased together by the same customer on the same day to form one transaction.\nOutput:"
+  },
+  {
+    "input": "Step 4: Convert to One-Hot Format",
+    "output": "Apriori needs data in True/False format like Did the item appear in the basket?. We use Transaction Encoder for this:"
+  },
+  {
+    "input": "Step 5: Run Apriori Algorithm",
+    "output": "Now we findfrequent itemsetscombinations of items that often occur together. Here min_support=0.01 means itemsets that appear inat least 1% of transactions. This gives uscommon combinationsof items.\nOutput:"
+  },
+  {
+    "input": "Step 6: Generate Association Rules",
+    "output": "Now we find rules likeIf bread and butter are bought, milk is also likely to be bought.\nSupport: How often the rule appears in the dataset.\nConfidence: Probability of buying item B if item A is bought.\nLift: Strength of the rule over random chance. (>1 means it's a good rule)\nOutput:"
+  },
+  {
+    "input": "Step 7: Visualize the Most Popular Items",
+    "output": "Let’s see which items are most frequently bought:\nOutput:\nAs shown in the above outputWhole milkis the most frequently bought item, followed byother vegetables,rolls/bunandsoda."
+  }
+]
