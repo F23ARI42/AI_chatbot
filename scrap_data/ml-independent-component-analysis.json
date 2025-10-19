@@ -1,0 +1,46 @@
+[
+  {
+    "input": "Statistical Independence Concept",
+    "output": "Statistical independence refers to the idea that two random variables: X and Y are independent if knowing one does not affect the probability of the other. Mathematically, this means the joint probability of X and Y is equal to the product of their individual probabilities."
+  },
+  {
+    "input": "Assumptions in ICA",
+    "output": "ICA operates under two key assumptions:\nThese assumptions allow ICA to effectively separate mixed signals into independent components, a task that traditional methods like PCA cannot achieve"
+  },
+  {
+    "input": "Mathematical Representation of ICA",
+    "output": "The observed random vector isX= (x_1 , \\dots , x_m )^Trepresenting the observed data with m components. The hidden components are represented by the random vectorS = (s_{1} ,\\dots, s_{n})^Twherenis the number of hidden sources.\nThe observed dataXis transformed into hidden componentsSusing a linear static transformation representation by the matrix W.\nS = WX\nThe goal is to transform the observed dataXin a way that the resulting hidden components are independent. The independence is measured by some functionF(s_1 , \\dots, s_n). The task is to find the optimal transformation matrixWthat maximizes the independence of hidden components."
+  },
+  {
+    "input": "Cocktail Party Problem in ICA",
+    "output": "To better understand how Independent Component Analysis (ICA) works let’s look at a classic example known as the Cocktail Party Problem\nHere there is a party going into a room full of people.\nThere is 'n' number of speakers in that room and they are speaking simultaneously at the party.\nIn the same room, there are also 'n' microphones placed at different distances from the speakers which are recording 'n' speakers' voice signals.\nHence the number of speakers is equal to the number of microphones in the room. Now using these microphones' recordings, we want to separate all the 'n' speakers voice signals in the room given that each microphone recorded the voice signals coming from each speaker of different intensity due to the difference in distances between them.\nDecomposing the mixed signal of each microphone's recording into an independent source's speech signal can be done by using the machine learning technique independent component analysis.\nwhereX_1, X_2, \\dots, X_nare the original signals present in the mixed signal andY_1, Y_2, \\dots, Y_nare the new features and are independent components that are independent of each other."
+  },
+  {
+    "input": "Implementing ICA in Python",
+    "output": "FastICA is a specific implementation of the Independent Component Analysis (ICA) algorithm that is designed for efficiency and speed."
+  },
+  {
+    "input": "Step 1: Import necessary libraries",
+    "output": "First we will importnumpy,sklearn,FastICAandmatplotlib."
+  },
+  {
+    "input": "Step 2: Generate Random Data and Mix the Signals",
+    "output": "In this step we create three separate signals: a sine wave, a square wave and random noise. These represent different types of real-world signals. We use NumPy to generate 200 time points between 0 and 8.\nsignal_1:A sine wave like a tuning fork tone.\nsignal_2:A square wave like a digital signal (on/off).\nsignal_3:A random noise signal using the Laplace distribution which has sharper peaks than normal distribution.\nnp.c_[]:Combine all three 1D signals into a single 2D array.\n0.2is the standard deviation of the noise"
+  },
+  {
+    "input": "Step 3: Apply ICA to unmix the signals",
+    "output": "In this step we apply Independent Component Analysis using the FastICA class from Scikit-learn. We first create an instance of FastICA and set the number of independent components to 3 matching the number of original signals."
+  },
+  {
+    "input": "Step 4: Visualize the signals",
+    "output": "In this step we use Matplotlib to plot and compare the original sources, mixed signals and the signals recovered using ICA.\nWe create three subplots:\nFirst shows the original synthetic signals\nSecond displays the observed mixed signals\nThird shows the estimated independent sources obtained from ICA\nOutput:"
+  },
+  {
+    "input": "Difference between PCA and ICA",
+    "output": "PCAand ICA both uses the techniques used in signal processing and dimensionality reduction but they have different goals."
+  },
+  {
+    "input": "Disadvantages:",
+    "output": "Assumes Non-Gaussian Sources:It assumes that the underlying sources are non-Gaussian which may not always be true. If the underlying sources are Gaussian ICA may not be effective.\nAssumes Linear Mixing:ICA assumes that the sources are mixed linearly which may not always be the case. If the sources are mixed nonlinearly ICA may not be effective.\nComputationally Expensive:This can be computationally expensive especially for large datasets which make it difficult to apply ICA to real-world problems."
+  }
+]
