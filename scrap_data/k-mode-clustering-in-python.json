@@ -1,0 +1,42 @@
+[
+  {
+    "input": "When Should You Use K-Modes?",
+    "output": "Use K-Modes when:\nYour dataset contains categorical variables like gender, color, brand etc.\nYou want to group customers by product preferences\nYou're analyzing survey responses Yes/No, Male/Female etc."
+  },
+  {
+    "input": "How K-Modes clustering works?",
+    "output": "Unlike hierarchical clustering KModes requires us to decide the number of clusters (K) in advance. Here's how it works step by step:\nStart by picking clusters:Randomly select K data points from the dataset to act as the starting clusters these are called \"modes\".\nAssign data to clusters:Check how similar each data point is to these clusters using the total number of mismatches and assign each data point to the cluster it matches the most.\nUpdate the clusters:Find the most common value for each cluster and update the cluster centers based on this.\nRepeat the process:Keep repeating steps 2 and 3 until no data points are reassigned to different clusters.\nLet X be a set of categorical data objects ofX = \\begin{bmatrix} x_{11}, & ... & x_{1n}\\\\ ... & ... & ...\\\\ x_{n1},& ... & x_{nm} \\end{bmatrix}that can be denoted as and the mode of Z is a vectorQ = [q_{1},q_{2},...,q_{m}]then minimize\nD(X,Q) = \\sum_{i=1}^{n}d(X_{i},Q)\nApply dissimilarity metric equation for data objects\nD(X,Q) = \\sum_{i=1}^{n}\\sum_{j=1}^{m}\\delta(x_{ij},Q)\nSuppose we want to K cluster Then we have Q =[q_{k1},q_{k2},....,q_{km}] \\epsilon Q\nC(Q) = \\sum_{k=1}^{K}\\sum_{i=1}^{n}\\sum_{j=1}^{m}\\delta(x_{ij},q_{kj})\nOverall the goal of K-modes clustering is to minimize the dissimilarities between the data objects and the centroids (modes) of the clusters using a measure of categorical similarity such as the Hamming distance."
+  },
+  {
+    "input": "Implementation of the k-mode clustering algorithm",
+    "output": "K-Modes is a way to group categorical data into clusters. Here's how you can do it step-by-step in Python using justNumPyandPandas."
+  },
+  {
+    "input": "Step 1: Prepare Your Data",
+    "output": "Start by defining your dataset. Each row is a data point and each column contains categorical values like letters or labels."
+  },
+  {
+    "input": "Step 2: Set Number of Clusters",
+    "output": "Decide how many groups you want to divide your data into."
+  },
+  {
+    "input": "Step 3: Pick Starting Points (Modes)",
+    "output": "Randomly choosekrows from the data to be the starting cluster centers."
+  },
+  {
+    "input": "Step 4: Assign Data to Clusters",
+    "output": "For each data point, count how many features are different from each mode. Assign the point to the most similar cluster."
+  },
+  {
+    "input": "Step 5: Update Cluster Modes",
+    "output": "After assigning all points update each cluster’s mode to the most common values in that cluster."
+  },
+  {
+    "input": "Step 6: View Final Results",
+    "output": "Print out which cluster each data point belongs to and what the final cluster centers (modes) are.\nOutput:\nThe output shows that the first data point belongs to cluster 1 and the rest belong to cluster 0. Each cluster has a common pattern: cluster 0 has mode values ['A', 'A', 'B'] and cluster 1 has ['A', 'B', 'C']. These modes represent the most frequent values in each cluster and are used to group similar rows together."
+  },
+  {
+    "input": "Optimal number of clusters in the K-Mode algorithm",
+    "output": "Elbow methodis used to find the optimal number of clusters\nOutputs:\nAs we can see from the graph there is an elbow-like shape at 2.0 and 3.0 Now it we can consider either 2.0 or 3.0 cluster. Let's consider Number of cluster =2.0\nOutputs :\nThis also shows that the first, third, fourth and fifth data points have been assigned to the first cluster and the second data points have been assigned to the second cluster.  So our previous answer was 100 % correct. To find the best number of groups we use the Elbow Method which helps us see when adding more groups doesn't make a big difference. K-Modes is an easy and effective way to group similar data when working with categories"
+  }
+]
