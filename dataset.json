@@ -6170,5 +6170,41 @@
   {
     "input": "6.3. UMAP (Uniform Manifold Approximation and Projection)",
     "output": "UMAP is another non-linear dimensionality reduction technique that’s similar to t-SNE, but it’s faster and can preserve both local and global structures. UMAP works by constructing a graph of the data and then embedding it in a lower-dimensional space while maintaining as much of the original data’s structure as possible.\nBest used:UMAP is ideal for visualizing high-dimensional data and is especially useful for large datasets. It can preserve both the local and global structure of the data, making it suitable for tasks like clustering, classification, or anomaly detection. For example, UMAP is often used in genomics or image analysis to reduce the dimensionality of gene expression data or image feature vectors.\nNot suitable:Like t-SNE, UMAP can distort data points’ exact distances, so it’s not suitable for tasks requiring precise distance metrics. It also requires careful tuning of hyperparameters to get optimal results.\nExample:A data scientist might use UMAP to visualize the features of customer interactions with an online store, reducing high-dimensional data into two or three dimensions to uncover trends or clusters that might indicate potential marketing strategies."
+  },
+  {
+    "input": "Types of Bivariate Analysis",
+    "output": "The type of bivariate analysis used depends on thenature of the variablesinvolved — whether they arenumerical,categorical, orordinal. The choice of statistical technique is guided by how these variables interact.\n1)Numerical Vs Numerical:\nIn this type, both the independent and dependent variables are numerical.\nHeight vs. Weight– Do taller people tend to weigh more?\nStudy Hours vs. Test Scores– Is there a relationship between time spent studying and performance?\n2)Categorical vs Categorical:\nHere,both variables are categorical. The goal is often to test for association or independence.\nGender vs. Product Preference– Do preferences vary between male and female customers?\n3)Numerical vs Categorical:\nIn this scenario,one variable is numerical(usually the dependent), and theother is categorical(often the independent).\nEducation Level vs. Income– How does education level impact salary?"
+  },
+  {
+    "input": "Types of Bivariate Analysis Methods",
+    "output": "The various types of methods used in bivariate analysis are:"
+  },
+  {
+    "input": "Scatter Plots",
+    "output": "Scatter Plotsvisually display the relationship between two variables. Each dot on the plot represents a single observation, (xi, yi). The pattern formed by the dots can reveal the nature of the relationship between the variables—whether it's positive, negative, or no correlation.\nPositive Trend:Points slope upward (e.g., height vs. weight).\nNegative Trend:Points slope downward (e.g., TV time vs. grades).\nNo Pattern:Random cloud (e.g., shoe size vs. IQ)."
+  },
+  {
+    "input": "Correlation Analysis",
+    "output": "Correlation Analysisquantifies the strength and direction of the relationship between two continuous variables.\nThe correlation coefficient, typically denoted by \"r,\" ranges from -1 to 1.\nA positive value indicates a positive correlation (as one variable increases, the other tends to increase), while a negative value suggests a negative correlation (as one variable increases, the other tends to decrease).\nA value close to zero indicates little to no correlation."
+  },
+  {
+    "input": "Regression Analysis",
+    "output": "Regression analysisexplores the relationship between two or more variables by predicting one variable (the dependent variable) based on the values of one or more other variables (the independent variables).\nSimple linear regression involves predicting a dependent variable from a single independent variable, while multiple linear regression involves predicting the dependent variable from multiple independent variables."
+  },
+  {
+    "input": "Chi-Square Test",
+    "output": "Thechi-square testexamines the association between two categorical variables by comparing the observed frequencies in a contingency table to the frequencies that would be expected if the variables were independent.\nIt determines whether the observed association between the variables is statistically significant or due to random chance."
+  },
+  {
+    "input": "T-tests and ANOVA",
+    "output": "T-testsand analysis of variance (ANOVA) are used to compare means between groups for one or more independent variables. In bivariate analysis, they can be applied to examine whether there are significant differences in the mean values of a continuous variable across different categories of another variable.\nT-tests are suitable for comparing means between two groups, while ANOVA is used for comparing means among three or more groups."
+  },
+  {
+    "input": "Univariate vs Bivariate vs Multivariate Analysis",
+    "output": "The basic difference between univariate, bivariate, and multivariate analysis is explained in the table added below:"
+  },
+  {
+    "input": "Applications of Bivariate Analysis in CS",
+    "output": "Some of the applications of bivariate analysis in computer science are given below:\nMachine Learning and Data Processing\nCorrelation Analysis between features helps in feature selection and dimensionality reduction.\nFor example, to identify multicollinearity, understand linear or non-linear relationships between variables, and detect redundant features.\nSoftware Engineering\nAnalyzing defect rates vs. code metrics helps understand software quality\nFor example, the relationship between code complexity and the number of maintenance hours.\nNetwork and System Performance Analysis\nEvaluating the relationship between bandwidth and latency, or CPU usage vs. response time, helps in performance tuning.\nUsed in benchmarking and optimizing system resources.\nHuman-Computer Interaction (HCI)\nUnderstanding user behavior by analyzing two variables, such as Time on task vs. number of errors, and Click frequency vs. page load time.\nHelps improve interface design and user experience.\nNatural Language Processing (NLP)\nAnalyzing relationships between word frequency and document relevance, or word count and sentiment score.\nImportant in preprocessing and feature engineering for models like sentiment classifiers."
   }
 ]
