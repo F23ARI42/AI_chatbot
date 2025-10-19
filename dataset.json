@@ -6462,5 +6462,37 @@
   {
     "input": "Disadvantages of few-shot learning",
     "output": "Less diverse representation:Due to the limited amount of data provided during training, the model will have a less diverse and less robust representation of underlying data.\nRisk of overfitting:It can be a scenario where the model memorizes the examples given in the support set rather than analyzing the pattern between them. This will result in overfitting where the model will perform well in the support set but poor with the new unseen data.\nInsufficient data for complex tasks:It can be difficult for a model to find the relationship between the features with a limited amount of examples. It can result in inaccurate analysis of complex tasks.\nSensitive to noise:A model trained using few-shot learning will be sensitive to noise present in the support set. If noisy or incorrect data is present in the support set, it will create a significant impact on the result given by the model.\nInefficient for rare classes:A model will find it difficult to recognize when it comes to rare classes due to the small number of examples available for these classes."
+  },
+  {
+    "input": "Step 1: Develop and Create a Model in a Training Environment",
+    "output": "Build your model in an offline training environment using training data. ML teams often create multiple models, but only a few make it to deployment."
+  },
+  {
+    "input": "Step 2: Optimize and Test Code",
+    "output": "Ensure that your code is of high quality and can be deployed. Clean and optimize the code as necessary and test it thoroughly to ensure it functions correctly in a live environment."
+  },
+  {
+    "input": "Step 3: Prepare for Container Deployment:",
+    "output": "Containerize your model before deployment. Containers are predictable, repeatable and easy to coordinate making them ideal for deployment. They simplify deployment, scaling, modification and updating of ML models."
+  },
+  {
+    "input": "Step 4: Plan for Continuous Monitoring and Maintenance",
+    "output": "After your model is running keep checking if it’s working well. Make sure it still gives good answers and works fast. If the data changes or it starts making mistakes, fix it. Also update the model often with new information to keep it useful."
+  },
+  {
+    "input": "Common Deployment Strategies",
+    "output": "Mainly we used to need to focus these strategies:\nShadow Deployment: Itinvolves running the new model alongside the existing one without affecting production traffic. This allows for a comparison of their performances in a real-world setting. It helps to ensure that new model meets the required performance metrics before fully deploying it.\nCanary Deployment:This means slowly giving the new model to a small group of users while most people keep using the old model. This way you can watch how the new model works and find any problems before making it available to everyone.\nA/B Testing:It show different versions of the model to different groups of users and comparing how well each one works. This helps you decide which version is better before using it for all users."
+  },
+  {
+    "input": "Tools and Platforms for Model Deployment",
+    "output": "Here are some popular tools that help you put your machine learning models to work:\nKuberneteshelps manage and run your models inside containers. It makes sure your model runs smoothly can handle lots of users and automatically adjusts resources when needed.\nKubeflowis built on Kubernetes and is made especially for machine learning. It gives you easy-to-use tools to deploy and manage your ML models in a production environment.\nMLflowis an open-source tool that helps you to manage the whole machine learning process. It keeps track of experiments, organizes your code and helps to manage different versions of your models so your work can be repeated and shared easily.\nTensorFlow Servingis a system designed to run TensorFlow models in production. It makes it easy to deploy models as small services that can handle many requests at once and can grow to handle more users."
+  },
+  {
+    "input": "Best Practices for Deployment",
+    "output": "Automated Testing:Always test your model automatically before you release it.\nVersion Control:Keep track of model versions and changes in code/data.\nSecurity Measures:Protect your model and data from unauthorized access or attacks."
+  },
+  {
+    "input": "If you want to learn more about ML Deployment then refer to below articles:",
+    "output": "Deploy your Machine Learning web app (Streamlit) on Heroku\nDeploy a Machine Learning Model using Streamlit Library\nDeploy Machine Learning Model using Flask\nPython – Create UIs for prototyping Machine Learning model with Gradio\nDeploying ML Models as API using FastAPI"
   }
 ]
