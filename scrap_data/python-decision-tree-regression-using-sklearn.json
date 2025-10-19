@@ -1,0 +1,34 @@
+[
+  {
+    "input": "Step 1: Importing the required libraries",
+    "output": "We will import the following libraries.\nNumPy: For numerical computations and array handling\nMatplotlib: For plotting graphs and visualizations\nWe import different modules fromscikit-learnfor various tasks such as modeling, data splitting, tree visualization and performance evaluation."
+  },
+  {
+    "input": "Step 2: Creating a Sample Dataset",
+    "output": "Here we create a synthetic dataset using numpy library, where the feature valuesXare randomly sampled and sorted between 0 and 5 and the targetyis a noisy sine function ofX. The scatter plot visualizes the data points, showing how the target values vary with the feature.\nOutput:"
+  },
+  {
+    "input": "Step 3: Splitting the Dataset",
+    "output": "We split the dataset into train and test dataset using the train_test_split function into the ratio of 70% training and 30% testing. We also set a random_state=42 to ensure reproducibility."
+  },
+  {
+    "input": "Step 4: Initializing the Decision Tree Regressor",
+    "output": "Here we used DecisionTreeRegressor method from Sklearn python library to implement Decision Tree Regression. We also define the max_depth as 4 which controls the maximum levels a tree can reach , controlling model complexity."
+  },
+  {
+    "input": "Step 5: Fiting Decision Tree Regressor Model",
+    "output": "We fit our model using the .fit() method on the X_train and y_train, so that the model can learn the relationships between different variables.\nOutput:"
+  },
+  {
+    "input": "Step 6: Predicting a New Value",
+    "output": "We will now predict a new value using our trained model using the predict() function. After that we also calculated themean squared error (MSE)to check how accurate is our predicted value from the actual value , telling how well the model fits to our training data.\nOutput:"
+  },
+  {
+    "input": "Step 7: Visualizing the result",
+    "output": "We will visualise the regression line our model has calculated to see how well the decision tree fits the data and captures the underlying pattern, especially showing how the predictions change smoothly or in steps depending on the tree's splits.\nOutput:"
+  },
+  {
+    "input": "Step 8: Export and Show the Tree Structure below",
+    "output": "For better understanding we used plot_tree to visualize the structure of the decision tree to understand how the model splits the feature space, showing the decision rules at each node and how the tree partitions the data to make predictions.\nOutput:\nDecision Tree Regression is used for predicting continuous values effectively capturing non-linear patterns in data. Its tree-based structure makes model interpretability easy as we can tell why a decision was made and why we get this specific output. This information can further be used to fine tune model based on it flow of working."
+  }
+]
