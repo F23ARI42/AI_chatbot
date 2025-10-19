@@ -6642,5 +6642,57 @@
   {
     "input": "Application of Semi-Supervised Learning:",
     "output": "1. Speech recognition:Because labeling audio requires a lot of time and resources, semi-supervised learning can be utilized to overcome these obstacles and deliver superior results.\n2. Web content classification:To classify information on web pages by assigning relevant labels would require a massive staff of human capital due to the billions of websites that exist and offer all kinds of material. To enhance user experience, many forms of semi-supervised learning are employed to annotate and categorize web material.\n3. Text document classification:Making a text document classifier is another case where semi-supervised learning has been effective. The technique works well in this case since it is quite challenging for human annotators to read through several texts that are wordy in order to assign a simple label, such as a kind or genre.\nExample:\nA text document classifier is a typical illustration of a semi-supervised learning application. In this kind of case, it would be almost impossible to obtain a significant quantity of labeled text documents, making semi-supervised learning the ideal choice. Simply said, it would take too much time to have someone read through complete text documents just to categorize them.\nIn these kinds of situations,semi-supervised semi-supervised algorithms help by learning from a tiny labeled text document data set to recognize a huge amount of unlabeled text document data set in the training set."
+  },
+  {
+    "input": "Concepts in Time Series Analysis",
+    "output": "Trend:It represents the general direction in which a time series is moving over an extended period. It checks whether the values are increasing, decreasing or staying relatively constant.\nSeasonality:Seasonality refers to repetitive patterns or cycles that occur at regular intervals within a time series corresponding to specific time units like days, weeks, months or seasons.\nMoving average:It is used to smooth out short-term fluctuations and highlight longer-term trends or patterns in the data.\nNoise:It represents the irregular and unpredictable components in a time series that do not follow a pattern.\nDifferencing:It is used to make the difference in values of a specified interval. By default it’s 1 but we can specify different values for plots.\nStationarity:A stationary time series is statistical properties such as mean, variance and autocorrelation remain constant over time.\nOrder:The order of differencing refers to the number of times the time series data needs to be differenced to achieve stationarity.\nAutocorrelation: Autocorrelationis a statistical method used in time series analysis to quantify the degree of similarity between a time series and a lagged version of itself.\nResampling:Resamplingis a technique in time series analysis that is used for changing the frequency of the data observations."
+  },
+  {
+    "input": "Types of Time Series Data",
+    "output": "Time series data can be classified into two sections:"
+  },
+  {
+    "input": "Practical Time Series Visualization with Python",
+    "output": "Lets implement this step by step:"
+  },
+  {
+    "input": "Step 1: Installing and Importing Libraries",
+    "output": "We will be usingNumpy,Pandas,seabornandMatplotliblibraries."
+  },
+  {
+    "input": "Step 2: Loading the Dataset",
+    "output": "Here we will load the dataset and use theparse_datesparameter to convert theDatecolumn to the DatetimeIndex format.\nOutput:"
+  },
+  {
+    "input": "Step 3: Cleaning of Data",
+    "output": "We will drop columns from the dataset that are not important for our visualization.\nOutput:"
+  },
+  {
+    "input": "Step 4: Plotting High Stock Prices",
+    "output": "Since thevolumecolumn is of continuous data type we will useline graphto visualize it.\nsns.lineplot(data=df, x=df.index, y='High', label='High Price', color='blue'): Plots High prices over time using the datetime index on x-axis.\nOutput:"
+  },
+  {
+    "input": "Step 5: Resampling Data",
+    "output": "To better understand the trend of the data we will use theresampling methodwhich provide a clearer view of trends and patterns when we are dealing with daily data.\ndf_resampled = df.resample('M').mean(numeric_only=True):Resamples data to monthly frequency and calculates the mean of all numeric columns for each month.\nOutput:"
+  },
+  {
+    "input": "Step 6: Detecting Seasonality with Autocorrelation",
+    "output": "We will detect Seasonality using the autocorrelation function (ACF) plot. Peaks at regular intervals in the ACF plot suggest the presence of seasonality.\nOutput:"
+  },
+  {
+    "input": "Step 7: Testing Stationarity with ADF test",
+    "output": "We will perform theADF testto formally test for stationarity.\nOutput:\nBased on the ADF Statistic we accept the null hypothesis and check that the data does not appear to be stationary according to the Augmented Dickey-Fuller test.\nThis suggests that differencing or other transformations may be needed to achieve stationarity before applying certain time series models."
+  },
+  {
+    "input": "Step 8: Differencing to Achieve Stationarity",
+    "output": "Differencing involves subtracting the previous observation from the current observation to remove trends or seasonality.\nOutput:"
+  },
+  {
+    "input": "Step 9: Smoothing Data with Moving Average",
+    "output": "df['High'].diff():helps in calculating the difference between consecutive values in the High column. This differencing operation is used to transform a time series into a new series that represents the changes between consecutive observations.\nOutput:\nThis calculates the moving average of the High column with a window size of 120(A quarter), creating a smoother curve in thehigh_smoothedseries. The plot compares the original High values with the smoothed version."
+  },
+  {
+    "input": "Step 10: Original Data Vs Differenced Data",
+    "output": "Printing the original and differenced data side by side we get:\nOutput:\nHence the high_diff column represents the differences between consecutive high values. The first value of high_diff is NaN because there is no previous value to calculate the difference.\nAs there is a NaN value we will drop that proceed with our test:\nOutput:\nAfter that if we conduct the ADF test:\nOutput:\nBased on the ADF Statistic we reject the null hypothesis and conclude that we have enough evidence to reject the null hypothesis."
   }
 ]
