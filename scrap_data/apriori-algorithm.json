@@ -1,0 +1,50 @@
+[
+  {
+    "input": "How the Apriori Algorithm Works?",
+    "output": "The Apriori Algorithm operates through a systematic process that involves several key steps:"
+  },
+  {
+    "input": "1. Identifying Frequent Item-Sets",
+    "output": "The Apriori algorithm starts by looking through all the data to count how many times each single item appears. These single items are called 1-Item-Sets.\nNext it uses a rule called minimum support this is a number that tells us how often an item or group of items needs to appear to be important. If an item appears often enough meaning its count is above this minimum support it is called a frequent Item-Set."
+  },
+  {
+    "input": "2. Creating Possible Item Group",
+    "output": "After finding the single items that appear often enough (frequent 1-item groups) the algorithm combines them to create pairs of items (2-item groups). Then it checks which pairs are frequent by seeing if they appear enough times in the data.\nThis process keeps going step by step making groups of 3 items, then 4 items and so on. The algorithm stops when it can’t find any bigger groups that happen often enough."
+  },
+  {
+    "input": "3. Removing Infrequent Item Groups",
+    "output": "The Apriori algorithm uses a helpful rule to save time. This rule says: if a group of items does not appear often enough then any larger group that incl2 udes these items will also not appear often.\nBecause of this, the algorithm does not check those larger groups. This way it avoids wasting time looking at groups that won’t be important make the whole process faster."
+  },
+  {
+    "input": "4.Generating Association Rules",
+    "output": "The algorithm makes rules to show how items are related.\nIt checks these rules using support, confidence and lift to find the strongest ones."
+  },
+  {
+    "input": "Key Metrics of Apriori Algorithm",
+    "output": "Support: This metric measures how frequently an item appears in the dataset relative to the total number of transactions. A higher support indicates a more significant presence of the Item-Set in the dataset. Support tells us how often a particular item or combination of items appears in all the transactions like Bread is bought in 20% of all transactions.\nConfidence: Confidence assesses the likelihood that an item Y is purchased when item X is purchased. It provides insight into the strength of the association between two items. Confidence tells us how often items go together i.e If bread is bought, butter is bought 75% of the time.\nLift: Lift evaluates how much more likely two items are to be purchased together compared to being purchased independently. A lift greater than 1 suggests a strong positive association. Lift shows how strong the connection is between items. Like Bread and butter are much more likely to be bought together than by chance.\nLets understand the concept of apriori Algorithm with the help of an example. Consider the following dataset and we will find frequent Item-Sets and generate association rules for them:"
+  },
+  {
+    "input": "Step 1 : Setting the parameters",
+    "output": "Minimum Support Threshold:50% (item must appear in at least 3/5 transactions). This threshold is formulated from this formula:\n\\text{Support}(A) = \\frac{\\text{Number of transactions containing itemset } A}{\\text{Total number of transactions}}\nMinimum Confidence Threshold:70% ( You can change the value of parameters as per the use case and problem statement ). This threshold is formulated from this formula:\n\\text{Confidence}(X \\rightarrow Y) = \\frac{\\text{Support}(X \\cup Y)}{\\text{Support}(X)}"
+  },
+  {
+    "input": "Step 2: Find Frequent 1-Item-Sets",
+    "output": "Lets count how many transactions include each item in the dataset (calculating the frequency of each item).\nAll items have support% ≥ 50%, so they qualify as frequent 1-Item-Sets. if any item has support% < 50%, It will be omitted out from the frequent 1- Item-Sets."
+  },
+  {
+    "input": "Step 3: Generate Candidate 2-Item-Sets",
+    "output": "Combine the frequent 1-Item-Sets into pairs and calculate their support.For this use case we will get 3 item pairs ( bread,butter) , (bread,ilk) and (butter,milk) and will calculate the support similar to step 2\nFrequent 2-Item-Sets:{Bread, Milk} meet the 50% threshold but {Butter, Milk} and {Bread ,Butter} doesn't meet the threshold, so will be committed out."
+  },
+  {
+    "input": "Step 4: Generate Candidate 3-Item-Sets",
+    "output": "Combine the frequent 2-Item-Sets into groups of 3 and calculate their support. for the triplet we have only got one case i.e {bread,butter,milk} and we will calculate the support.\nSince this does not meet the 50% threshold, there are no frequent 3-Item-Sets."
+  },
+  {
+    "input": "Step 5: Generate Association Rules",
+    "output": "Now we generate rules from the frequent Item-Sets and calculate confidence.\nSupport of {Bread, Butter} = 2.\nSupport of {Bread} = 4.\nConfidence = 2/4 = 50% (Failed threshold).\nSupport of {Bread, Butter} = 3.\nSupport of {Butter} = 3.\nConfidence = 3/3 = 100% (Passes threshold).\nSupport of {Bread, Milk} = 3.\nSupport of {Bread} = 4.\nConfidence = 3/4 = 75% (Passes threshold).\nThe Apriori Algorithm, as demonstrated in the bread-butter example, is widely used in modern startups like Zomato, Swiggy and other food delivery platforms. These companies use it to performmarket basket analysiswhich helps them identify customer behaviour patterns and optimise recommendations."
+  },
+  {
+    "input": "Applications of Apriori Algorithm",
+    "output": "Below are some applications of Apriori algorithm used in today's companies and startups"
+  }
+]
