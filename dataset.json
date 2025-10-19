@@ -6626,5 +6626,21 @@
   {
     "input": "Challenges of Self-Training",
     "output": "Error Amplification:Incorrect pseudo-labels may degrade performance over iterations.\nConfidence Thresholding:Selecting a proper confidence threshold is non-trivial.\nImbalanced Datasets:Models may propagate bias in imbalanced datasets."
+  },
+  {
+    "input": "Working:",
+    "output": "Semi-supervised learning trains the model using pseudo-labeled training data as opposed to supervised learning. During training, many other models like neural network models and training methods are introduced to increase accuracy.\nStep 1:First, it uses a very small portion of labeled training data to train the model using supervised learning algorithms. Up until the model produces accurate results, training is continued.\nStep 2:Now algorithm will use a portion of unlabeled training data with pseudo labels. In this step, the output can have less accuracy.Step 3:In this step labeled training data and pseudo-labeled training data are linked.\nStep 4:Unlabeled training data and labeled training data share the same input data.\nStep 5:As we did in the previous phase, train the model once more using the new combined input. It will decrease the number of errors and increase the model's accuracy."
+  },
+  {
+    "input": "Advantages:",
+    "output": "It is simple to comprehend.\nIt minimizes the utilization of annotated data.\nThis algorithm is reliable."
+  },
+  {
+    "input": "Disadvantages:",
+    "output": "The outcomes of iterations are unstable.\nData at the network level is not covered by it.\nIt is not very accurate."
+  },
+  {
+    "input": "Application of Semi-Supervised Learning:",
+    "output": "1. Speech recognition:Because labeling audio requires a lot of time and resources, semi-supervised learning can be utilized to overcome these obstacles and deliver superior results.\n2. Web content classification:To classify information on web pages by assigning relevant labels would require a massive staff of human capital due to the billions of websites that exist and offer all kinds of material. To enhance user experience, many forms of semi-supervised learning are employed to annotate and categorize web material.\n3. Text document classification:Making a text document classifier is another case where semi-supervised learning has been effective. The technique works well in this case since it is quite challenging for human annotators to read through several texts that are wordy in order to assign a simple label, such as a kind or genre.\nExample:\nA text document classifier is a typical illustration of a semi-supervised learning application. In this kind of case, it would be almost impossible to obtain a significant quantity of labeled text documents, making semi-supervised learning the ideal choice. Simply said, it would take too much time to have someone read through complete text documents just to categorize them.\nIn these kinds of situations,semi-supervised semi-supervised algorithms help by learning from a tiny labeled text document data set to recognize a huge amount of unlabeled text document data set in the training set."
   }
 ]
