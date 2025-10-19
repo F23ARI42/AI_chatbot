@@ -1,0 +1,30 @@
+[
+  {
+    "input": "Step 1: Importing Necessary Libraries",
+    "output": "We will be usingPandas,NumPyandScikit-learnfor building and evaluating the model."
+  },
+  {
+    "input": "Step 2: Loading and Printing the Dataset",
+    "output": "In this example we will use Breast Cancer dataset from Scikit-learn. This dataset contains data about cell features and their corresponding cancer diagnosis i.e malignant or benign.\nOutput:"
+  },
+  {
+    "input": "Step 3: Splitting the Data into Training and Testing Sets",
+    "output": "We will split the dataset into training (70%) and testing (30%) sets using train_test_split."
+  },
+  {
+    "input": "Step 4: Training an SVM Model without Hyperparameter Tuning",
+    "output": "Before tuning the model let’s train a simple SVM classifier without any hyperparameter tuning.\nOutput:\nWhile the accuracy is around 92%, we can improve the model’s performance by tuning the hyperparameters."
+  },
+  {
+    "input": "Step 5: Hyperparameter Tuning with GridSearchCV",
+    "output": "Now let’s useGridSearchCVto find the best combination of C, gamma and kernel hyperparameters for the SVM model. But before that leys understand these parameters:\nC:Controls the trade-off between a wider margin (low C) and correctly classifying all points (high C).\ngamma:Determines how far the influence of each data point reaches with high gamma fitting tightly to the data.\nkernel:Defines the function used to transform data for separating classes. For example linear or rbf.\nOutput:"
+  },
+  {
+    "input": "Step 6: Get the Best Hyperparameters and Model",
+    "output": "After grid search finishes we can check best hyperparameters and the optimized model.\nOutput:"
+  },
+  {
+    "input": "Step 7: Evaluating the Optimized Model",
+    "output": "We can evaluate the optimized model on the test dataset.\nOutput:\nAfter hyperparameter tuning, the accuracy of the model increased to 94% showing that the tuning process improved the model’s performance. By using this approach, we can improve the model which helps in making it more accurate and reliable."
+  }
+]
