@@ -6694,5 +6694,57 @@
   {
     "input": "Step 10: Original Data Vs Differenced Data",
     "output": "Printing the original and differenced data side by side we get:\nOutput:\nHence the high_diff column represents the differences between consecutive high values. The first value of high_diff is NaN because there is no previous value to calculate the difference.\nAs there is a NaN value we will drop that proceed with our test:\nOutput:\nAfter that if we conduct the ADF test:\nOutput:\nBased on the ADF Statistic we reject the null hypothesis and conclude that we have enough evidence to reject the null hypothesis."
+  },
+  {
+    "input": "Types of Exploratory Data Analysis",
+    "output": "There are various types of EDA based on nature of records. Depending on the number of columns we are analyzing we can divide EDA into three types:"
+  },
+  {
+    "input": "1. Univariate Analysis",
+    "output": "Univariate analysisfocuses on studying one variable to understand its characteristics. It helps to describe data and find patterns within a single feature. Various common methods like histograms are used to show data distribution, box plots to detect outliers and understand data spread and bar charts for categorical data. Summary statistics likemean,median,mode,varianceandstandard deviationhelps in describing the central tendency and spread of the data"
+  },
+  {
+    "input": "2. Bivariate Analysis",
+    "output": "Bivariate Analysisfocuses on identifying relationship between two variables to find connections, correlations and dependencies. It helps to understand how two variables interact with each other. Some key techniques include:\nScatter plots which visualize the relationship between two continuous variables.\nCorrelation coefficient measures how strongly two variables are related which commonly usePearson's correlationfor linear relationships.\nCross-tabulation or contingency tables shows the frequency distribution of two categorical variables and help to understand their relationship.\nLine graphsare useful for comparing two variables over time in time series data to identify trends or patterns.\nCovariancemeasures how two variables change together but it is paired with the correlation coefficient for a clearer and more standardized understanding of the relationship."
+  },
+  {
+    "input": "3. Multivariate Analysis",
+    "output": "Multivariate Analysisidentify relationships between two or more variables in the dataset and aims to understand how variables interact with one another which is important for statistical modeling techniques. It include techniques like:\nPair plotswhich shows the relationships between multiple variables at once and helps in understanding how they interact.\nAnother technique isPrincipal Component Analysis (PCA)which reduces the complexity of large datasets by simplifying them while keeping the most important information.\nSpatial Analysisis used for geographical data by using maps and spatial plotting to understand the geographical distribution of variables.\nTime Series Analysisis used for datasets that involve time-based data and it involves understanding and modeling patterns and trends over time. Common techniques include line plots, autocorrelation analysis, moving averages andARIMAmodels."
+  },
+  {
+    "input": "Steps for Performing Exploratory Data Analysis",
+    "output": "It involves a series of steps to help us understand the data, uncover patterns, identify anomalies, test hypotheses and ensure the data is clean and ready for further analysis. It can be done using different tools like:\nIn Python, Pandas is used to clean, filter and manipulate data.Matplotlibhelps to create basic visualizations whileSeabornmakes more attractive plots. For interactive visualizations Plotly is a good choice.\nIn R,ggplot2is used for creating complex plots,dplyrhelps with data manipulation andtidyrmakes sure our data is organized and easy to work with.\nIts step includes:"
+  },
+  {
+    "input": "Step 1: Understanding the Problem and the Data",
+    "output": "The first step in any data analysis project is to fully understand the problem we're solving and the data we have. This includes asking key questions like:\nBy understanding the problem and the data, we can plan our analysis more effectively, avoid incorrect assumptions and ensure accurate conclusions."
+  },
+  {
+    "input": "Step 2: Importing and Inspecting the Data",
+    "output": "After understanding the problem and the data, next step is to import the data into our analysis environment such as Python, R or a spreadsheet tool. It’s important to find data to gain an basic understanding of its structure, variable types and any potential issues. Here’s what we can do:\nBy completing these tasks we'll be prepared to clean and analyze the data more effectively."
+  },
+  {
+    "input": "Step 3: Handling Missing Data",
+    "output": "Missing datais common in many datasets and can affect the quality of our analysis. During EDA it's important to identify and handle missing data properly to avoid biased or misleading results. Here’s how to handle it:\nProperly handling of missing data improves the accuracy of our analysis and prevents misleading conclusions."
+  },
+  {
+    "input": "Step 4: Exploring Data Characteristics",
+    "output": "After addressing missing data we find the characteristics of our data by checking the distribution, central tendency and variability of our variables and identifying outliers or anomalies. This helps in selecting appropriate analysis methods and finding major data issues. We should calculate summary statistics like mean, median, mode, standard deviation, skewness and kurtosis for numerical variables. These provide an overview of the data’s distribution and helps us to identify any irregular patterns or issues."
+  },
+  {
+    "input": "Step 5: Performing Data Transformation",
+    "output": "Data transformation is an important step in EDA as it prepares our data for accurate analysis and modeling. Depending on our data's characteristics and analysis needs, we may need to transform it to ensure it's in the right format. Common transformation techniques include:"
+  },
+  {
+    "input": "Step 6: Visualizing Relationship of Data",
+    "output": "Visualization helps to find relationships between variables and identify patterns or trends that may not be seen from summary statistics alone."
+  },
+  {
+    "input": "Step 7: Handling Outliers",
+    "output": "Outliers are data points that differs from the rest of the data may caused by errors in measurement or data entry. Detecting and handling outliers is important because they can skew our analysis and affect model performance. We can identify outliers using methods likeinterquartile range (IQR),Z-scoresor domain-specific rules. Once identified it can be removed or adjusted depending on the context. Properly managing outliers shows our analysis is accurate and reliable."
+  },
+  {
+    "input": "Step 8: Communicate Findings and Insights",
+    "output": "The final step in EDA is to communicate our findings clearly. This involves summarizing the analysis, pointing out key discoveries and presenting our results in a clear way.\nEffective communication is important to ensure that our EDA efforts make an impact and that stakeholders understand and act on our insights. By following these steps and using the right tools, EDA helps in increasing the quality of our data, leading to more informed decisions and successful outcomes in any data-driven project."
   }
 ]
