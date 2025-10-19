@@ -6250,5 +6250,61 @@
   {
     "input": "5. Running the App",
     "output": "To run the app open your terminal and type:\nThis will launch the Streamlit app in your browser. You can enter flower measurements, click \"Predict,\" and the model will output the predicted species\nOutput:\nDeploying machine learning models with Streamlit is fast, simple and perfect for creating interactive applications. With just a few lines of code you can turn your machine learning model into a user-friendly web application.For more detail refer to:\nDiabetes Prediction Machine Learning Project Using Python Streamlit\nData Science Apps Using Streamlit\nHow to use PyGWalker with Streamlit in Python"
+  },
+  {
+    "input": "Installation and Setup",
+    "output": "After creating and activating a virtual environment install Flask and other libraries required in this project using these commands-"
+  },
+  {
+    "input": "File Structure",
+    "output": "After completing the project, our file structure should look similar to this-"
+  },
+  {
+    "input": "Dataset and Model Selection",
+    "output": "We are using theAdult Income Datasetfrom theUCI Machine Learning Repository. This dataset contains information about individuals, including age, education, occupation, and marital status, with the goal of predicting whether their income exceeds$50K per year.\nDataset Preview-\nWe are goin to use theDecision Tree Classifier, a popularsupervised learning algorithm. It is easy to interpret, flexible, and works well with both numerical and categorical data. The model learns patterns from historical data and predicts whether a person’s income is above or below $50K based on their attributes."
+  },
+  {
+    "input": "Preprocessing Dataset",
+    "output": "Dataset consists of 14 attributes and a class label telling whether the income of the individual is less than or more than 50K a year. Before training our machine learning model, we need to clean and preprocess the dataset to ensure better accuracy and efficiency. Create a file- \"preprocessing.py\", it will containt the code to preprocess the dataset. Here’s how we prepare the data:"
+  },
+  {
+    "input": "Handling Missing Values:",
+    "output": "The dataset may contain missing values represented by \"?\". These are replaced withNaN, and then filled using the mode (most frequent value) of each column."
+  },
+  {
+    "input": "Simplifying Categorical Data:",
+    "output": "The marital status column is simplified by grouping values into just two categories: \"married\" and \"not married\"."
+  },
+  {
+    "input": "Encoding Categorical Variables:",
+    "output": "Machine learning models work best withnumerical data, so we applyLabel Encodingto convert categorical columns like workclass, education, occupation, etc., into numerical values.\nA mapping dictionary is created to keep track of the original values and their encoded form and  then dropping redundant values."
+  },
+  {
+    "input": "Splitting Features and Target:",
+    "output": "The dataset is split into features (X) and target labels (Y), where the target column represents income classification(≤50K or >50K)."
+  },
+  {
+    "input": "Training and Saving Model",
+    "output": "Now that we havepreprocessedour dataset, we can train and save ourMachine Learning Modelover it. The dataset is divided into70% trainingdata and30% testingdata to evaluate the model’s performance and we are usingpickle libraryto save it locally."
+  },
+  {
+    "input": "Creating app.py",
+    "output": "Create a file- \"app.py\", it will contain the code of our main flask app.\nCode Breakdown:\nLoads and serves a pre-trained ML model (model.pkl).\nAccepts user input via a web form and processes it.\nMakes predictions and displays results on result.html.\nRuns in debug mode for easy testing."
+  },
+  {
+    "input": "Creating Template files",
+    "output": "We create all the HTML files in atemplatesfolder in flask. Here are the HTML files we need to create for this app-"
+  },
+  {
+    "input": "index.html",
+    "output": "This page contains a form that will take input from the user and then send to \"/result\"route in the app.py file that will process it and predict the output over it using the saved model.\nOutput :"
+  },
+  {
+    "input": "result.html",
+    "output": "Simple page that will render the predicted output."
+  },
+  {
+    "input": "Running the Application",
+    "output": "To run the application, use this command in the terminal- \"python app.py\" and visit the developmeent URL- \"http://127.0.0.1:5000\". Below is the snapshot of the output and testing."
   }
 ]
