@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Understanding LLE Algorithm",
+    "output": "Locally Linear Embedding (LLE)is a popular manifold learning algorithm used for nonlinear dimensionality reduction. It assumes that each data point and its neighbors lie on or close to a locally linear patch of the manifold, and aims to reconstruct the data's manifold structure by preserving these local relationships in lower-dimensional space. It works by:\nConstructing a neighborhood graph:Each data point is connected to its nearest neighbors, capturing the local geometric structure.\nFinding the weights for local linear reconstructions:It calculates the weights that best represent each data point as a linear combination of its neighbors.\nEmbedding the data in a lower-dimensional space: It minimizes the reconstruction error by finding the lower-dimensional coordinates (2D or 1D) that preserve the local structure.\nLLE can be sensitive to the number of neighbors chosen and may not preserve the global shape of the dataset."
+  },
+  {
+    "input": "Implementation of Swiss Roll Reduction with LLE",
+    "output": "We will implement swiss roll reduction using LLE using scikit-learn library."
+  },
+  {
+    "input": "1. Importing Required Libraries",
+    "output": "We begin by importing the Python libraries required for generating data, performing dimensionality reduction and visualization.\nnumpy:For numerical operations and handling arrays.\nmatplotlib:For plotting 2D graphs and visualizing data.\nmplot3d:Enables 3D plotting for visualizing 3D datasets.\nSklearn:used to create synthetic 3D data with make_swiss_roll, apply nonlinear dimensionality reduction with LocallyLinearEmbedding, and perform linear dimensionality reduction with PCA."
+  },
+  {
+    "input": "2. Generating Swiss Roll Dataset",
+    "output": "Next, we create the synthetic 3D dataset that will be used for the experiment.\nmake_swiss_roll: Creates a nonlinear 3D manifold (Swiss Roll).\ncolor array: Maintains consistent colors for visualization."
+  },
+  {
+    "input": "3. Appling Locally Linear Embedding (LLE)",
+    "output": "We now perform nonlinear dimensionality reduction using LLE to map the data into 2D.\nn_components=2: Reduces the data to 2D.\nn_neighbors=12: Defines the size of the local neighborhood.\nfit_transform(): Projects data into lower dimensions.\nreconstruction_error_: Measures how well local structure is preserved."
+  },
+  {
+    "input": "4. Appling Principal Component Analysis (PCA)",
+    "output": "For comparison, we also reduce the data usingPCA, a linear dimensionality reduction technique.\nPCA: Provides a linear method for dimensionality reduction.\npca_error: Represents the portion of variance not captured."
+  },
+  {
+    "input": "5. Plotting Original Swiss Roll in 3D",
+    "output": "We then visualize the original dataset to understand its structure before reduction.\nax = fig.add_subplot(131, projection='3d'): Adds the first subplot in a 1x3 grid layout and specifies it as a 3D plot.\nax.scatter(X[:, 0], X[:, 1], X[:, 2], c=color, cmap=plt.cm.Spectral): Plots the 3D data points from the Swiss Roll dataset. Thec=colorargument applies a color mapping based on thecolorarray, whileplt.cm.Spectralprovides a distinct colormap.\nOutput:"
+  },
+  {
+    "input": "6. Plotting 2D Output from LLE",
+    "output": "Here, we visualize the 2D representation obtained from the LLE algorithm.\nFlattening: LLE unrolls the spiral while maintaining neighborhood relationships.\nManifold learning: Shows effectiveness in capturing nonlinear structure.\nOutput:"
+  },
+  {
+    "input": "7. Plotting 2D Output from PCA",
+    "output": "Finally, we display the 2D output from PCA to see how it handles the same dataset.\nLinear projection: PCA projects the data linearly and cannot preserve the spiral structure.\nColor gradient: May still reflect partial ordering despite distortion.\nOutput:\nThe plots help us compare how well LLE and PCA keep the original shape of the Swiss Roll after reducing it to 2D. The numbers in the plot titles show the reconstruction error, lower error means the method kept the structure better."
+  }
+]
