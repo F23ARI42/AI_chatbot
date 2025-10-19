@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Implementing Monte Carlo integration",
+    "output": "Now lets see its implement it using python:"
+  },
+  {
+    "input": "1. Required Python Libraries",
+    "output": "NumPy: For fast numeric operations and random number generation.\nMatplotlib: For plotting and visualizations.p."
+  },
+  {
+    "input": "2. Monte Carlo Integration Example",
+    "output": "We will estimate:\\int_0^\\pi \\sin(x)\\, dx\nOutput:"
+  },
+  {
+    "input": "3. Visualizing Result",
+    "output": "Monte Carlo estimates are statistical i.e they fluctuate. We can visualize this variability by repeating the procedure many times and plotting the results:"
+  },
+  {
+    "input": "4. Distributed/Parallel Monte Carlo Integration",
+    "output": "To further speed up calculations, Monte Carlo integration adapts easily to parallel computing. Each batch of random samples can be processed independently.\nMakes full use of all CPU cores.\nGreatly reduces computation time for large N or repeated estimates.\nOutput:"
+  },
+  {
+    "input": "5. Sample Example",
+    "output": "Here we will Integratex^2from 0 to 1\nOutput:\nMonte Carlo integration in Python provides a robust and versatile framework for tackling complex or high-dimensional integrals where traditional analytical or numerical methods may be impractical. Its flexibility allows seamless adaptation to a wide range of problems across science, engineering and data analysis."
+  }
+]
