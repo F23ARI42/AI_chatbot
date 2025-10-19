@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Working of GMM",
+    "output": "Each cluster corresponds to a Gaussian distribution. For a given data pointx_n​ of belonging to a cluster. GMM computes the probability it belongs to each cluster k:\nwhere:\nz_n=k is a latent variable indicating which Gaussian the point belongs to.\n\\pi_kis the mixing probability of the k-th Gaussian.\n\\mathcal{N}(x_n \\mid \\mu_k, \\Sigma_k)is the Gaussian distribution with mean\\mu_kand covariance\\Sigma_k\nNext we need to calculate the overall likelihood of observing a data pointx_n​ under all Gaussians. This is achieved by summing over all possible clusters (Gaussians) for each point:\nwhere:\nP(x_n)is the overall likelihood of observing the data pointx_n\nThe sum accounts for all possible Gaussians k."
+  },
+  {
+    "input": "Expectation-Maximization (EM) Algorithm",
+    "output": "To fit a Gaussian Mixture Model to the data we use theExpectation-Maximization (EM)algorithm which is an iterative method that optimize the parameters of the Gaussian distributions like mean, covariance and mixing coefficients. It works in two main steps:\nExpectation Step (E-step):In this step the algorithm calculates the probability that each data point belongs to each cluster based on the current parameter estimates (mean, covariance, mixing coefficients).\nMaximization Step (M-step):After estimating the probabilities the algorithm updates the parameters (mean, covariance and mixing coefficients) to better fit the data.\nThese two steps are repeated until the model converges meaning the parameters no longer change significantly between iterations. Here’s a simple breakdown of the  GMM process:\nFormula:\nThe E-step computes the probabilities that each data point belongs to each Gaussian while the M-step updates the parameters μk​, Σk ​ and πk based on these probabilities."
+  },
+  {
+    "input": "Cluster Shapes in GMM",
+    "output": "In a Gaussian Mixture Model, each cluster is modeled by a Gaussian distribution characterized by:\nMean (μ):The mean represents the central point or average location of the cluster in the feature space. It defines where the cluster is centered.\nCovariance (Σ):The covariance matrix describes the shape, size and orientation of the cluster. Unlike simpler clustering methods such as K-Means which assume spherical (circular) clusters, the covariance allows Gaussian components to take on elliptical shapes. This means clusters can be stretched, compressed or tilted depending on the relationships between features.\nTo visualize these concepts, consider two sets of data points generated from two Gaussians with different means and covariances:\nScatter plots show the raw data points clustered around their respective means.\nOverlaidkernel density estimate(KDE) contours represent the smooth shape of each Gaussian, illustrating the cluster’s distribution and spread.\nThis visualization highlights the flexibility of GMMs to model clusters that are not necessarily spherical and can overlap, making them more powerful than simpler methods like K-Means that assume equally sized, spherical clusters. By adjusting the mean and covariance, GMM adapts to the true underlying data distribution more accurately."
+  },
+  {
+    "input": "Use-Cases",
+    "output": "Clustering: Discover underlying groups or structure in data (marketing, medicine, genetics).\nAnomaly Detection: Identify outliers or rare events (fraud, medical errors).\nImage Segmentation: Separate images into meaningful regions (medical, remote sensing).\nDensity Estimation: Model complex probability distributions for generative modeling."
+  },
+  {
+    "input": "Advantages",
+    "output": "Flexible Cluster Shapes: Models ellipsoidal and overlapping clusters.\nSoft Assignments: Assigns probabilistic cluster membership instead of hard labels.\nHandles Missing Data: Robust to incomplete observations.\nInterpretable Parameters: Each Gaussian’s mean, covariance and weight are easy to interpret."
+  },
+  {
+    "input": "Limitations",
+    "output": "Initialization Sensitive: Results depend on starting parameter values—can get stuck in local optima.\nComputation Intensive: Slow for high-dimensional or very large datasets.\nAssumes Gaussian Distributions: Not suitable for non-Gaussian cluster shapes.\nRequires Cluster Number: Must specify the number of components/clusters before fitting."
+  }
+]
