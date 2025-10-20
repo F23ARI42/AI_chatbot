@@ -7970,5 +7970,21 @@
   {
     "input": "Model Development in Stepwise Regression",
     "output": "Next, stepwise regression is performed using theSequentialFeatureSelector()function from the mlxtend library. This function uses a logistic regression model to select the most important features in the dataset, and the number of selected features can be specified using the k_features parameter.\nAfter the stepwise regression is complete, the selected features are checked using the selected_features.k_feature_names_ attribute and a data frame with only the selected features are created. Finally, the data is split into train and test sets using thetrain_test_split()function from the sklearn library, and a logistic regression model is fit using the selected features. The model performance is then evaluated using the accuracy_score() function from the sklearn library.\nOutput:\nThe difference between linear regression and stepwise regression is that stepwise regression is a method for building a regression model by iteratively adding or removing predictors, while linear regression is a method for modeling the relationship between a response and one or more predictor variables.\nIn the stepwise regression examples, the mlxtend library is used to iteratively add or remove predictors based on their relationship with the response variable, while in the linear regression examples, all predictors are used to fit the model."
+  },
+  {
+    "input": "Concepts related to the Support vector regression (SVR):",
+    "output": "There are several concepts related to support vector regression (SVR) that you may want to understand in order to use it effectively. Here are a few of the most important ones:\nSupport vector machines (SVMs):SVR is a type ofsupport vector machine(SVM), a supervised learning algorithm that can be used for classification or regression tasks. SVMs try to find the hyperplane in a high-dimensional space that maximally separates different classes or output values.\nKernels:SVR can use different types of kernels, which are functions that determine the similarity between input vectors. A linear kernel is a simple dot product between two input vectors, while a non-linear kernel is a more complex function that can capture more intricate patterns in the data. The choice of kernel depends on the data's characteristics and the task's complexity.\nHyperparameters:SVR has severalhyperparametersthat you can adjust to control the behavior of the model. For example, the'C'parameter controls the trade-off between the insensitive loss and the sensitive loss. A larger value of'C'means that the model will try to minimize the insensitive loss more, while a smaller value of C means that the model will be more lenient in allowing larger errors.\nModel evaluation:Like anymachine learningmodel, it's important to evaluate the performance of an SVR model. One common way to do this is to split the data into a training set and a test set, and use the training set to fit the model and the test set to evaluate it. You can then use metrics likemean squared error (MSE)ormean absolute error (MAE)to measure the error between the predicted and true output values."
+  },
+  {
+    "input": "Fitting an SVR Model on the Sine Curve data using Linear Kernel",
+    "output": "First, we will try to achieve some baseline results using the linear kernel on a non-linear dataset and we will try to observe up to what extent it can be fitted by the model.\nOutput:"
+  },
+  {
+    "input": "Fitting an SVR Model on the Sine Curve data using Polynomial Kernel",
+    "output": "Now we will fit a Support vector Regression model using a polynomial kernel. This will be hopefully a little better than the SVR model with a linear kernel.\nOutput:"
+  },
+  {
+    "input": "Fitting an SVR Model on the Sine Curve data using RBF Kernel",
+    "output": "Now we will fit a Support vector Regression model using an RBF(Radial Basis Function) kernel. This will help us to achieve probably the best results as the RBF kernel is one of the best kernels which helps us to introduce non-linearity in our model.\nOutput:"
   }
 ]
