@@ -7890,5 +7890,17 @@
   {
     "input": "2. Precision, Recall and F1 score",
     "output": "The F1 score is the harmonic mean of precision and recall, balancing both metrics into a single value. It’s useful when the class distribution is imbalanced or when false positives and false negatives are costly.\nOutput:\nNaive Bayes proves to be an efficient and simple algorithm that works well for classification tasks. It is easy to understand since it is based on Bayes' theorem and is simple to use and analyze."
+  },
+  {
+    "input": "sklearn.datasets.make_blobs",
+    "output": "Output:"
+  },
+  {
+    "input": "sklearn.datasets.make_moon",
+    "output": "Output:"
+  },
+  {
+    "input": "sklearn.datasets.make_circle",
+    "output": "Output:\nScikit-learn (sklearn) is a popular machine learning library for Python that provides a wide range of functionalities, including data generation. In order to create test datasets using Sklearn, you can use the following code:"
   }
 ]
