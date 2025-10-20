@@ -7986,5 +7986,21 @@
   {
     "input": "Fitting an SVR Model on the Sine Curve data using RBF Kernel",
     "output": "Now we will fit a Support vector Regression model using an RBF(Radial Basis Function) kernel. This will help us to achieve probably the best results as the RBF kernel is one of the best kernels which helps us to introduce non-linearity in our model.\nOutput:"
+  },
+  {
+    "input": "The Role of Tech Giants",
+    "output": "This process has become so profitable that software giants likeGoogleandFacebookearn a major part of their revenue by micro-targeting their users and advertising their clients' products.Googlehas also been known to deploy aselective filtering featurefor its clients in which theGoogle Search Algorithmhas a bias toward the clients' products. This feature also has the potential to influence elections and thus can be considered to be more powerful than the US president himself."
+  },
+  {
+    "input": "Facebook’s Tracking Practices",
+    "output": "Facebook has garnered a reputation as an \"obsessive stalker\" because of its obsession to track its users' every movement. Facebook generates insights about its users by tracking the following -\nThe infamous Cambridge Analytica scandal was the birth child of the concept of Targeted advertising. It is a common saying that\"If you are not paying for the product then, You are not the Customer, YOU are the product\""
+  },
+  {
+    "input": "Applications of Machine Learning in Targeted Advertising",
+    "output": "Targeted advertising using machine learning involves using data-driven insights to tailor ads to specific individuals or groups based on their interests, behavior, and demographics. Here are some ways machine learning is used for targeted advertising:\nAudience Segmentation:Machine learning algorithms can be used to segment audiences into specific groups based on shared interests, behaviors, and demographics. This allows advertisers to create targeted ads that are more likely to resonate with specific individuals or groups.\nPredictive Analytics:Machine learning can be used to analyze data on consumer behavior and purchasing patterns to predict which users are most likely to engage with certain ads or products. This helps advertisers to create more effective ad campaigns and allocate their advertising budget more efficiently.\nPersonalization: Machine learning can be used to personalize ads to specific individuals based on their browsing history, purchase history, and other data points. This allows advertisers to create more relevant and personalized ads that are more likely to convert.\nOptimization:Machine learning can be used to optimize ad campaigns in real time based on performance data. This allows advertisers to adjust their ad targeting and messaging to maximize their return on investment.\nFraud Detection:Machine learningcan be used to detect and prevent ad fraud, which occurs when advertisers pay for ads that are not seen by real users. This helps to ensure that advertisers get what they pay for and that ad campaigns are effective."
+  },
+  {
+    "input": "Conclusion",
+    "output": "Overall, targeted advertising using machine learning can help advertisers to create more effective and efficient ad campaigns that are tailored to specific audiences. It can also help to prevent fraud and ensure that ad campaigns are generating a positive return on investment."
   }
 ]
