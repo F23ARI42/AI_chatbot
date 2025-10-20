@@ -6926,5 +6926,73 @@
   {
     "input": "Conclusion",
     "output": "In summary, Python's versatility, simplicity, and vast ecosystem make it a go-to choice for Machine Learning tasks. From Scikit-Learn for classical algorithms to TensorFlow and PyTorch for deep learning, Python libraries cater to every stage of the Machine Learning workflow. Libraries like Pandas and NumPy streamline data preprocessing, while Matplotlib and Seaborn aid in data visualization. Specialized tools such asNLTK,XGBoost, andLightGBMfurther enhance the ability to solve complex problems efficiently."
+  },
+  {
+    "input": "Core Concepts",
+    "output": "Hyperplane: The decision boundary separating classes. It is a line in 2D, a plane in 3D or a hyperplane in higher dimensions.\nSupport Vectors: The data points closest to the hyperplane. These points directly influence its position and orientation.\nMargin: The distance between the hyperplane and the nearest support vectors from each class. SVMs aim to maximize this margin for better robustness and generalization.\nRegularization Parameter (C): Controls the trade-off between maximizing the margin and minimizing classification errors. A high value of C prioritizes correct classification but may overfit. A low value of C prioritizes a larger margin but may underfit."
+  },
+  {
+    "input": "Optimization Objective",
+    "output": "SVMssolve a constrained optimization problem with two main goals:"
+  },
+  {
+    "input": "The Kernel Trick",
+    "output": "Real-world data is rarely linearly separable. The kernel trick elegantly solves this by implicitly mapping data into higher-dimensional spaces where linear separation becomes possible, without explicitly computing the transformation."
+  },
+  {
+    "input": "Common Kernel Functions",
+    "output": "Linear Kernel: Ideal for linearly separable data, offers the fastest computation and serves as a reliable baseline.\nPolynomial Kernel: Models polynomial relationships with complexity controlled by degree d, allowing curved decision boundaries.\nRadial Basis Function (RBF) Kernel: Maps data to infinite-dimensional space, widely used for non-linear problems with parameter\\gammacontrolling influence of each sample.\nSigmoid Kernel: Resembles neural network activation functions but is less common in practice due to limited effectiveness."
+  },
+  {
+    "input": "1. Importing Required Libraries",
+    "output": "We will import required python libraries\nNumPy: Used for numerical operations.\nMatplotlib: Used for plotting graphs (can be used later for decision boundaries).\nload_breast_cancer: Loads the Breast Cancer Wisconsin dataset from scikit-learn.\nStandardScaler: Standardizes features by removing the mean and scaling to unit variance.\nSVC: Support Vector Classifier from scikit-learn."
+  },
+  {
+    "input": "2. Loading the Dataset",
+    "output": "We will load the dataset and select only two features for visualization:\nload_breast_cancer(): Returns a dataset with 569 samples and 30 features.\ndata.data[:, [0, 1]]: Selects only two features (mean radius and mean texture) for simplicity and visualization.\ndata.target: Contains the binary target labels (malignant or benign)."
+  },
+  {
+    "input": "3. Splitting the Data",
+    "output": "We will split the dataset into training and test sets:\ntrain_test_split:splits data into training (80%) and test (20%) sets\nrandom_state=42:ensures reproducibility"
+  },
+  {
+    "input": "4. Scale the Features",
+    "output": "We will scale the features so that they are standardized:\nStandardScaler– standardizes data by removing mean and scaling to unit variance\nfit_transform()– fits the scaler to training data and transforms it\ntransform()– applies the same scaling to test data"
+  },
+  {
+    "input": "5.  Train the SVM Classifier",
+    "output": "We will train the Support Vector Classifier:\nSVC:creates an SVM classifier with a specified kernel\nkernel='linear':uses a linear kernel for classification\nC=1.0:regularization parameter to control margin vs misclassification\nfit():trains the classifier on scaled training data"
+  },
+  {
+    "input": "6. Evaluate the Model",
+    "output": "We will predict labels and evaluate model performance:\npredict():makes predictions on test data\naccuracy_score():calculates prediction accuracy\nclassification_report():shows precision, recall and F1-score for each class\nOutput:"
+  },
+  {
+    "input": "Visualizing the Decision Boundary",
+    "output": "We will plot the decision boundary for the trained SVM model:\nnp.meshgrid() :creates a grid of points across the feature space\npredict() :classifies each point in the grid using the trained model\nplt.contourf() :fills regions based on predicted classes\nplt.scatter() :plots the actual data points\nOutput:"
+  },
+  {
+    "input": "Why Use SVMs",
+    "output": "SVMs work best when the data has clear margins of separation, when the feature space is high-dimensional (such as text or image classification) and when datasets are moderate in size so that quadratic optimization remains feasible."
+  },
+  {
+    "input": "Advantages",
+    "output": "Performs well in high-dimensional spaces.\nRelies only on support vectors, which speeds up predictions.\nCan be used for both binary and multi-class classification."
+  },
+  {
+    "input": "Limitations",
+    "output": "Computationally expensive for large datasets with time complexity O(n²)–O(n³).\nRequires feature scaling and careful hyperparameter tuning.\nSensitive to outliers and class imbalance, which may skew the decision boundary.\nSupport Vector Machines are a robust choice for classification, especially when classes are well-separated. By maximizing the margin around the decision boundary, they deliver strong generalization performance across diverse datasets."
+  },
+  {
+    "input": "For Large Datasets",
+    "output": "Use LinearSVC for linear kernels (faster than SVC with linear kernel)\nConsider SGDClassifier with hinge loss as an alternative"
+  },
+  {
+    "input": "Memory Management",
+    "output": "Use probability = False if you don't need probability estimates\nConsider incremental learning for very large datasets\nUse sparse data formats when applicable"
+  },
+  {
+    "input": "Preprocessing Best Practices",
+    "output": "Always scale features before training\nRemove or handle outliers appropriately\nConsider feature engineering for better separability\nUse dimensionality reduction for high-dimensional sparse data"
   }
 ]
