@@ -7474,5 +7474,9 @@
   {
     "input": "Implementation of Polynomial Regression using Python",
     "output": "Implementing the Polynomial regression using Python:\nHere we will import all the necessary libraries for data analysis and machine learning tasks and then loads the 'Position_Salaries.csv' dataset using Pandas. It then prepares the data for modeling by handling missing values and encoding categorical data. Finally, it splits the data into training and testing sets and standardizes the numerical features using StandardScaler.\nOutput:\nThe code creates a linear regression model and fits it to the provided data, establishing a linear relationship between the independent and dependent variables.\nThe code performs quadratic and cubic regression by generating polynomial features from the original data and fitting linear regression models to these features. This enables modeling nonlinear relationships between the independent and dependent variables.\nThe code creates a scatter plot of the data point, It effectively visualizes the linear relationship between position level and salary.\nOutput:\n\nThe code creates a scatter plot of the data points, overlays the predicted quadratic and cubic regression lines. It effectively visualizes the nonlinear relationship between position level and salary and compares the fits of quadratic and cubic regression models.\nOutput:\n\nThe code effectively visualizes the relationship between position level and salary using cubic regression and generates a continuous prediction line for a broader range of position levels.\nOutput:"
+  },
+  {
+    "input": "References",
+    "output": "PyTorchZeroToAll\nPenn State STAT 501"
   }
 ]
