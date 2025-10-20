@@ -7922,5 +7922,29 @@
   {
     "input": "Conclusion",
     "output": "KNNImputerin Scikit-Learn is a powerful tool for handling missing data, offering a more sophisticated alternative to traditional imputation methods. By leveraging the relationships between features, it provides more accurate imputations that can lead to better model performance. However, it is essential to be mindful of its computational demands and sensitivity to outliers. When used appropriately,KNNImputercan significantly enhance yourdata preprocessingpipeline, leading to more robust and reliable machine-learning models."
+  },
+  {
+    "input": "Softmax regression",
+    "output": "Softmax regression(ormultinomial logistic regression) is a generalization oflogistic regressionto the case where we want to handle multiple classes in the target column. In binary logistic regression, the labels were binary, that is forithobservation,\ny_{i} \\in \\{ 0, 1 \\}\nBut consider a scenario where we need to classify an observation out of three or more class labels. For example, in digit classification here, the possible labels are:\ny_{i} \\in \\{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \\}\nIn such cases, we can useSoftmax Regression."
+  },
+  {
+    "input": "Softmax layer",
+    "output": "It is harder to train the model using score values since it is hard to differentiate them while implementing theGradient Descent algorithmfor minimizing the cost function. So, we need some function that normalizes the logit scores as well as makes them easily differentiable. In order to convert the score matrixZto probabilities, we use theSoftmax function. For a vectory, softmax functionS(y)is defined as:\nS\\left ( y_i \\right )=\\frac{e^{y_i}}{\\sum_{j=0}^{n-1}e^{y_i}}\nSo, the softmax function helps us to achieve two functionalities:\nRecall that in the Binary Logistic regression, we used thesigmoid functionfor the same task. The softmax function is nothing but a generalization of the sigmoid function. Now, this softmax function computes the probability that theithtraining sample belongs to classjgiven the logits vectorZias:\nP\\left ( y=j| Z_i \\right )=\\left[S\\left ( Z_i \\right )\\right]_j=\\frac{e^{Z_{ij}}}{\\sum_{p=0}^{k}e^{Z_{ip}}}\nIn vector form, we can simply write:\nP\\left ( y=j| Z_i \\right )=\\left[S\\left ( Z_i \\right )\\right]_j\nFor simplicity, letSidenote the softmax probability vector forithobservation."
+  },
+  {
+    "input": "Cost function",
+    "output": "Now, we need to define a cost function for which, we have to compare the softmax probabilities and one-hot encoded target vector for similarity. We use the concept ofCross-Entropyfor the same. TheCross-entropyis adistance calculation functionthat takes the calculated probabilities from the softmax function and created a one-hot-encoding matrix to calculate the distance. For the right target classes, the distance values will be lesser, and the distance values will be larger for the wrong target classes. We define cross-entropy,D(Si, Ti)forithobservation with softmax probability vector,Si,and one-hot target vector,Tias:\nD\\left ( S_i, T_i \\right )=-\\sum_{j=1}^{k} T_{ij}\\log S_{ij}\nAnd now, the cost function,Jcan be defined as the average cross-entropy.\nJ\\left ( W,b \\right )=\\frac{1}{n}\\sum_{i=1}^{n}D\\left ( S_i, T_i \\right )\nLet us now implementSoftmax Regressionon the MNIST handwritten digit dataset using theTensorFlowlibrary. For a gentle introduction toTensorFlow, follow this tutorial."
+  },
+  {
+    "input": "Importing Libraries and Dataset",
+    "output": "First of all, we import the dependencies.\nTensorFlow allows you to download and read the MNIST data automatically. Consider the code given below. It will download and assign theMNIST_datato the desired variables like it has been done below.\nOutput:\nNow, we try to understand the structure of the dataset. The MNIST data is split into two parts: 60,000 data points of training data, and 10,000 points of validation data. Each image is 28 pixels by 28 pixels. The number of class labels is 10.\nOutput:\nNow let's define some hyperparameters here only so, that we can control them for the whole notebook from here only. Also, we need to reshape the data, as well asone hot encodethe data to get the desired results."
+  },
+  {
+    "input": "Computation Graph",
+    "output": "Now, we create acomputation graph. Defining a computation graph helps us to achieve the functionality of the EagerTensor that is provided by TensorFlow."
+  },
+  {
+    "input": "Running the Computation Graph",
+    "output": "Since we have already built the computation graph, now it's time to run it through a session.\nWe will use the above utility function to calculate the accuracy of the model as the training goes on.\nOutput:\nSome important points to note:\nIn every iteration, a minibatch is selected by choosing a random offset value usingnp.random.randintmethod.\nTo feed the placeholderstf_train_datasetandtf_train_label, we create afeed_dictlike this:\nAlthough many of the functionalities we have implemented from scratch here are provided automatically if one uses TensorFlow. But they have been implemented from scratch to get a better intuition of the mathematical formulas which are used in the Softmax Regression Classifier."
   }
 ]
