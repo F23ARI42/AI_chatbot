@@ -8066,5 +8066,37 @@
   {
     "input": "10. Bayesian Linear Regression",
     "output": "As the name suggests this algorithm is purely based onBayes Theorem. Because of this reason only we do not use the Least Square method to determine the coefficients of the regression model. So, the technique which is used here to find the model weights and parameters relies on features posterior distribution and this provides an extra stability factor to the regression model which is based on this technique.\nHere is the code for simple demonstration of the Bayesian Linear regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Bayesian linear regression model for predictive modeling tasks."
+  },
+  {
+    "input": "Univariate Linear Regression in Python",
+    "output": "UnivariateLinear Regressionis a type of regression in which the target variable depends on only one independent variable. For univariate regression, we use univariate data. For instance, a dataset of points on a line can be considered as univariate data where abscissa can be considered as an input feature and ordinate can be considered as output/target."
+  },
+  {
+    "input": "Example Of Univariate Linear Regression",
+    "output": "For lineY = 2X + 3; the Input feature will be X and Y will be the target.\nConcept:For univariate linear regression, there is only one input feature vector. The line of regression will be in the form of the following:\nhere we try to find the best b0 and b1 by training a model so that our predicted variable y has minimum difference with actual y.\nA univariate linear regression model constitutes of several utility functions. We will define each function one by one and at the end, we will combine them in a class to form a working univariate linear regression model object."
+  },
+  {
+    "input": "Prediction with linear regression",
+    "output": "In this function, we predict the value of y on a given value of x by multiplying and adding the coefficient of regression to the x."
+  },
+  {
+    "input": "Cost function For Univariate Linear Regression",
+    "output": "The cost function computes the error with the current value of regression coefficients. It quantitatively defines how far the model predicted value is from the actual value wrt regression coefficients which have the lowest rate of error.\nJ(b_1, b_0) = \\frac{1}{n} (y_p-y)^2\nWe use square so that positive and negative error does not cancel out each other.\nHere:"
+  },
+  {
+    "input": "Gradient Descent For Parameter Estimation",
+    "output": "We will usegradient descentfor updating our regression coefficient. It is an optimization algorithm that we use to train our model. In gradient descent, we take the partial derivative of the cost function wrt to our regression coefficient and multiply with the learning rate alpha and subtract it from our coefficient to adjust our regression coefficient.\n\\begin {aligned} {J}'b_1 &=\\frac{\\partial J(b_1,b_0)}{\\partial b_1} \\\\ &= \\frac{\\partial}{\\partial b_1} \\left[\\frac{1}{n} (y_p-y)^2 \\right] \\\\ &= \\frac{2(y_p-y)}{n}\\frac{\\partial}{\\partial b_1}\\left [(y_p-y)  \\right ] \\\\ &= \\frac{2(y_p-y)}{n}\\frac{\\partial}{\\partial b_1}\\left [((xb_1+b_0)-y)  \\right ] \\\\ &= \\frac{2(y_p-y)}{n}\\left[\\frac{\\partial(xb_1+b_0)}{\\partial b_1}-\\frac{\\partial(y)}{\\partial b_1}\\right] \\\\ &= \\frac{2(y_p-y)}{n}\\left [ x - 0 \\right ] \\\\ &= \\frac{1}{n}(y_p-y)[2x] \\end {aligned}\n\\begin {aligned} {J}'b_0 &=\\frac{\\partial J(b_1,b_0)}{\\partial b_0} \\\\ &= \\frac{\\partial}{\\partial b_0} \\left[\\frac{1}{n} (y_p-y)^2 \\right] \\\\ &= \\frac{2(y_p-y)}{n}\\frac{\\partial}{\\partial b_0}\\left [(y_p-y)  \\right ] \\\\ &= \\frac{2(y_p-y)}{n}\\frac{\\partial}{\\partial b}\\left [((xW^T+b)-y)  \\right ] \\\\ &= \\frac{2(y_p-y)}{n}\\left[\\frac{\\partial(xb_1+b_0)}{\\partial b_0}-\\frac{\\partial(y)}{\\partial b_0}\\right] \\\\ &= \\frac{2(y_p-y)}{n}\\left [ 1 - 0 \\right ] \\\\ &= \\frac{1}{n}(y_p-y)[2] \\end {aligned}\nSince our cost function has two parametersb_1andb_0we have taken the derivative of the cost function wrt b_1 and then wrt b_0.\nPython function for Gradient Descent."
+  },
+  {
+    "input": "Update Coefficients Of Univariate Linear Regression.",
+    "output": "At each iteration (epoch), the values of the regression coefficient are updated by a specific value wrt to the error from the previous iteration. This updation is very crucial and is the crux of the machine learning applications that you write. Updating the coefficients is done by penalizing their value with a fraction of the error that its previous values caused. This fraction is called the learning rate. This defines how fast our model reaches to point of convergence(the point where the error is ideally 0).\nb_i = b_i - \\alpha * \\left( \\frac{\\partial}{\\partial b} cost(x, y) \\right)"
+  },
+  {
+    "input": "Stop Iterations",
+    "output": "This is the function that is used to specify when the iterations should stop. As per the user, the algorithm stop_iteration generally returns true in the following conditions:\nHaving all the utility functions defined let's see the pseudo-code followed by its implementation:\nPseudocode for linear regression:"
+  },
+  {
+    "input": "Initializing the Model object",
+    "output": "Output:"
   }
 ]
