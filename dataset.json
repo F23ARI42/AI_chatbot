@@ -7834,5 +7834,61 @@
   {
     "input": "Disadvantages of Data Processing in Machine Learning",
     "output": "Time-Consuming: Data processing can be labor-intensive and time-consuming, especially for large datasets.\nError-Prone: Manual data processing or poorly configured tools can introduce errors, such as losing important information or creating biases.\nLimited Data Understanding: Processing data may sometimes result in a loss of insight into the original data, which can affect the model’s understanding of the underlying relationships.\nData processing is an essential part of the machine learning pipeline ensuring that raw data is transformed into a form that machine learning models can understand. While it can be time-consuming and error-prone its benefits in improving model performance, accuracy and reliability makes it best for creating effective machine learning models."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "Importing necessary libraries:\nmath: for mathematical operations\nrandom: for random number generation\npandas: for data manipulation\nnumpy: for scientific computing"
+  },
+  {
+    "input": "2. Encoding Class",
+    "output": "Theencode_classfunction converts class labels in the dataset into numeric values. It assigns a unique numeric identifier to each class."
+  },
+  {
+    "input": "3. Splitting the Data",
+    "output": "Thesplittingfunction is used to split the dataset into training and testing sets based on the given ratio."
+  },
+  {
+    "input": "4. Grouping Data by Class",
+    "output": "ThegroupUnderClassfunction takes the data and returns a dictionary where each key is a class label and the value is a list of data points belonging to that class."
+  },
+  {
+    "input": "5. Calculating Mean and Standard Deviation for Class",
+    "output": "TheMeanAndStdDevfunction takes a list of numbers and calculates the mean and standard deviation.\nTheMeanAndStdDevForClassfunction takes the data and returns a dictionary where each key is a class label and the value is a list of lists, where each inner list contains the mean and standard deviation for each attribute of the class."
+  },
+  {
+    "input": "6. Calculating Gaussian and Class Probabilities",
+    "output": "ThecalculateGaussianProbabilityfunction takes a value, mean, and standard deviation and calculates the probability of the value occurring under a Gaussian distribution with that mean and standard deviation.\nThecalculateClassProbabilitiesfunction takes the information dictionary and a test data point as arguments. It iterates through each class and calculates the probability of the test data point belonging to that class based on the mean and standard deviation of each attribute for that class."
+  },
+  {
+    "input": "7. Predicting for Test Set",
+    "output": "Thepredictfunction takes the information dictionary and a test data point as arguments. It calculates the class probabilities and returns the class with the highest probability.\nThegetPredictionsfunction takes the information dictionary and the test set as arguments. It iterates through each test data point and predicts its class using the predict function."
+  },
+  {
+    "input": "8. Calculating Accuracy",
+    "output": "Theaccuracy_ratefunction takes the test set and the predictions as arguments. It compares the predicted classes with the actual classes and calculates the percentage of correctly predicted data points."
+  },
+  {
+    "input": "9. Loading and Preprocessing Data",
+    "output": "The code then loads the data from a CSV file using pandas and converts it into a list of lists. It then encodes the class labels and converts all attributes to floating-point numbers."
+  },
+  {
+    "input": "10. Splitting Data into Training and Testing Sets",
+    "output": "The code splits the data into training and testing sets using a specified ratio. It then trains the model by calculating the mean and standard deviation for each attribute in each class.\nOutput:"
+  },
+  {
+    "input": "11. Training and Testing the Model",
+    "output": "Calculate mean and standard deviation for each attribute within each class for the training set. Finally, it tests the model on the test set and calculates the accuracy.\nOutput:"
+  },
+  {
+    "input": "12. Evaluating Model",
+    "output": "We will plot different types of visualizations for evaluation:"
+  },
+  {
+    "input": "1. Confusion Matrix",
+    "output": "The confusion matrix summarizes prediction results by showing true positives, false positives, true negatives and false negatives. It helps visualize how well the classifier distinguishes between different classes.\nOutput:"
+  },
+  {
+    "input": "2. Precision, Recall and F1 score",
+    "output": "The F1 score is the harmonic mean of precision and recall, balancing both metrics into a single value. It’s useful when the class distribution is imbalanced or when false positives and false negatives are costly.\nOutput:\nNaive Bayes proves to be an efficient and simple algorithm that works well for classification tasks. It is easy to understand since it is based on Bayes' theorem and is simple to use and analyze."
   }
 ]
