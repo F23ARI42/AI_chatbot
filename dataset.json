@@ -6862,5 +6862,25 @@
   {
     "input": "HeatMap",
     "output": "Here we are using a heat map to check the correlation between all the columns in the dataset. It is a data visualisation technique that shows the magnitude of the phenomenon as colour in two dimensions. The values of correlation can vary from -1 to 1 where -1 means strong negative and +1 means strong positive correlation.\nOutput:"
+  },
+  {
+    "input": "What is K-Means Clustering?",
+    "output": "K-Means clustering is an iterative algorithm that divides data into a predefined number of clusters (K) by partitioning data into K clusters based on feature similarities. It works by minimizing the variance within each cluster ensuring that data points within the same cluster are as similar as possible. The algorithm iteratively assigns data points to the nearest centroid, recalculates the centroids and continues this process until convergence.\nSteps involved in K-Means clustering:\nK-Means clustering helps in test data analysis by grouping similar tests based on features like test scores, difficulty levels, or time taken to solve. By clustering tests, one can gain insights into:\nIdentifying test patterns.\nGrouping similar test items.\nFinding anomalies or outliers."
+  },
+  {
+    "input": "Analysis of test data using K-Means Clustering",
+    "output": "OpenCV provides an efficient implementation of the K-Means algorithm through itscv2.kmeans()function. This function allows us to cluster data points into predefined groups based on their features making it an ideal choice for analyzing test data. By this we can do fast and optimized clustering. Here is the step by step implementation."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We will be usingnumpy,pandasandOpenCVfor this."
+  },
+  {
+    "input": "2. Generating and Visualizing Test Data with Multiple Features",
+    "output": "Let’s start by generating and visualizing random test data using matplotlib. In this case we create two sets of data pointsXandYand visualize them as a histogram.\nnp.random.randint: Generates random integers in the specified range. In this case, it creates two arrays of random integers between 10 and 35 forXand 55 and 70 forY, both with dimensions (25, 2).\nnp.vstack: Stacks arrays vertically (row-wise). It combines theXandYarrays into a single arrayZ.\nZ.reshape: Changes the shape of the array. It reshapes theZarray into a 50x2 array adjusting the dimensions accordingly.\nnp.float32: Converts the arrayZto 32-bit floating-point type for better compatibility with some functions especially in libraries like OpenCV.\nOutput:\nIt shows two distinct clusters of data, with peaks indicating higher frequencies of test data points in specific ranges. The color-coded bars represent different data sets or clusters, and this distribution helps identify patterns in the data, which K-Means clustering can further analyze by grouping similar data points together."
+  },
+  {
+    "input": "3. Applying K-Means Clustering on Test Data",
+    "output": "Now let’s apply the K-Means clustering algorithm to the test data and observe its behavior.\ncv2.TERM_CRITERIA_EPS: Specifies the stopping condition for the K-Means algorithm based on the accuracy of the centroids position.\ncv2.TERM_CRITERIA_MAX_ITER: Specifies the maximum number of iterations the K-Means algorithm will run.\ncv2.kmeans: Performs K-Means clustering on the data. It takesZ(dataset), the number of clusters (2 in this case) and various parameters like the criteria, maximum iterations and the initialization method (KMEANS_RANDOM_CENTERS).\nlabel.ravel(): Flattens the label array to a 1D array and assigns each data point to its corresponding cluster.\nZ[label.ravel() == 0]: Selects the data points assigned to cluster 0 and stores them in arrayA.\nZ[label.ravel() == 1]: Selects the data points assigned to cluster 1 and stores them in arrayB.\nOutput:\nThe plot clearly shows that the K-Means algorithm has successfully grouped the data points into two distinct clusters, with the centroids positioned around the center of each group.\nK-Means clustering is a useful unsupervised machine learning technique especially in applications such as test data analysis. By grouping similar test data points together you can easily identify patterns and trends that provide valuable insights. Although the algorithm is simple and effective it has limitations such as sensitivity to the choice of initial centroids and the requirement for predefining the number of clusters (K)."
   }
 ]
