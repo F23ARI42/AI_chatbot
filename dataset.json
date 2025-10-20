@@ -7758,5 +7758,17 @@
   {
     "input": "NearMiss Algorithm:",
     "output": "Output:\nThe\nNearMiss Algorithm\nhas undersampled the majority instances and made it equal to majority class. Here, the majority class has been reduced to the total number of minority class, so that both classes will have equal number of records.\nOutput:\nThis model is better than the first model because it classifies better and also the recall value of minority class is 95 %. But due to undersampling of majority class, its recall has decreased to 56 %. So in this case, SMOTE is giving me a great accuracy and recall, I’ll go ahead and use that model! :)"
+  },
+  {
+    "input": "K-Nearest Neighbors Classifier using sklearn for Breast Cancer Dataset",
+    "output": "Here's the complete code broken down into steps, from importing libraries to plotting the graphs:"
+  },
+  {
+    "input": "Step 3: Training the model",
+    "output": "Step 4: Evaluating the model"
+  },
+  {
+    "input": "Step 5: Plotting the training and test scores graph",
+    "output": "From the above scatter plot, we can come to the conclusion that the optimum value of k will be around 5."
   }
 ]
