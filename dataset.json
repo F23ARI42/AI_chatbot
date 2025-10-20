@@ -7138,5 +7138,45 @@
   {
     "input": "Conclusion",
     "output": "Machine Learningis now a big part of how companies make their products smarter and more helpful for users. Whether it's Google showing you better search results, Facebook recognizing your friends in photos, or Pinterest suggesting new pins you might like, all of this is made possible with Machine Learning. As more and more companies use this technology, we’ll continue to see better, faster, and more personalized services in our daily lives. Machine Learning is not just the future, it’s already happening all around us!"
+  },
+  {
+    "input": "1.min_samples_leaf",
+    "output": "Definition: This sets the minimum number of samples that must be present in a leaf node. It ensures that the tree doesn’t create nodes with very few samples which could lead to overfitting.\nImpact: A higher value results in fewer but more general leaf nodes which can help in preventing overfitting, especially in cases of noisy data.\nRecommendation: Set between 1-5 for optimal generalization and reduced overfitting."
+  },
+  {
+    "input": "2.n_estimators",
+    "output": "Definition: This defines the number of decision trees in the forest. A higher number of trees usually leads to better performance because it allows the model to generalize better by averaging the predictions of multiple trees.\nImpact: More trees improve accuracy but also increase the time required for training and prediction.\nRecommendation: Use 100-500 trees to ensure good accuracy and model robustness without excessive computation time."
+  },
+  {
+    "input": "3.max_features",
+    "output": "Definition: This controls the number of features to consider when splitting a node. It determines the maximum number of features to be considered for each tree.\nImpact: Fewer features at each split make the model more random which can help reduce overfitting. However less features may lead to underfitting.\nRecommendation: Use \"sqrt\" or \"log2\" for better balance between bias and variance."
+  },
+  {
+    "input": "4.bootstrap",
+    "output": "Definition: This determines whether bootstrap sampling (sampling with replacement) is used when constructing each tree in the forest.\nImpact: If set to True each tree is trained on a random sample of the data making the model more diverse. If False all trees use the full dataset.\nRecommendation: Set to True for better randomness and model robustness which helps in reducing overfitting."
+  },
+  {
+    "input": "5.min_samples_split",
+    "output": "Definition: This defines the minimum number of samples required to split an internal node. It ensures that nodes with fewer samples are not split, helping to keep the tree simpler and more general.\nImpact: A higher value prevents the model from splitting too many nodes with small sample sizes, reducing the risk of overfitting.\nRecommendation: A value between 2-10 is ideal, depending on dataset size and the problem complexity."
+  },
+  {
+    "input": "6.max_samples",
+    "output": "Definition: This specifies the maximum number of samples to draw from the dataset to train each base estimator (tree) when bootstrap=True.\nImpact: Limiting the number of samples per tree speeds up the training process but may reduce accuracy, as each tree is trained on a subset of data.\nRecommendation: Set between 0.5 and 1.0, depending on the dataset size and desired trade-off between speed and accuracy."
+  },
+  {
+    "input": "7.max_depth",
+    "output": "Definition: This sets the maximum depth of each decision tree. The depth of a tree refers to how many levels exist in the tree.\nImpact: Deeper trees can capture more detailed patterns but if the tree grows too deep, it may overfit the data making the model less generalizable to unseen data.\nRecommendation: A max depth between 10-30 is recommended for most problems to prevent overfitting and ensure simplicity."
+  },
+  {
+    "input": "Grid Search",
+    "output": "Definition: A brute-force technique to search through a predefined set of hyperparameter values. The model is trained with every combination of values in the search space.\nImpact: Helps find the best combination of hyperparameters by trying all possible values in the specified grid.\nRecommendation: Use for small datasets or when computational cost is not a major concern."
+  },
+  {
+    "input": "Randomized Search",
+    "output": "Definition: Instead of trying every possible combination, this method randomly samples combinations of hyperparameters from the search space.\nImpact: Faster than grid search and can provide good results without checking every combination.\nRecommendation: Ideal for larger datasets or when you want to quickly find a reasonable set of parameters."
+  },
+  {
+    "input": "Bayesian Optimization",
+    "output": "Definition: A probabilistic model-based approach that finds the optimal hyperparameters by balancing exploration (testing unexplored areas) and exploitation (focusing on areas already known to perform well).\nImpact: More efficient than grid and random search, especially when hyperparameters interact in complex ways.\nRecommendation: Use for complex models or when computational resources are limited."
   }
 ]
