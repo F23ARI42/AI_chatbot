@@ -7178,5 +7178,117 @@
   {
     "input": "Bayesian Optimization",
     "output": "Definition: A probabilistic model-based approach that finds the optimal hyperparameters by balancing exploration (testing unexplored areas) and exploitation (focusing on areas already known to perform well).\nImpact: More efficient than grid and random search, especially when hyperparameters interact in complex ways.\nRecommendation: Use for complex models or when computational resources are limited."
+  },
+  {
+    "input": "Why Bayesian Regression Can Be a Better Choice?",
+    "output": "Bayesian regression employs prior belief or knowledge about the data to \"learn\" more about it and create more accurate predictions. It also takes into account the data's uncertainty and leverages prior knowledge to provide more precise estimates of the data. As a result, it is an ideal choice when the data is complex or ambiguous.\nBayesian regression leverages Bayes' theorem to estimate the parameters of a linear model, incorporating both observed data and prior beliefs about the parameters. Unlikeordinary least squares (OLS) regression, which provides point estimates, Bayesian regression produces probability distributions over possible parameter values, offering a measure of uncertainty in predictions."
+  },
+  {
+    "input": "Core Concepts in Bayesian Regression",
+    "output": "The important concepts in Bayesian Regression are as follows:"
+  },
+  {
+    "input": "Bayes’ Theorem",
+    "output": "Bayes’ theoremdescribes how prior knowledge is updated with new data:\nP(A | B) = \\frac{P(B | A) \\cdot P(A)} {P(B)}\nwhere:\nP(A|B) is the posterior probability after observing data.\nP(B|A) is the likelihood of the data given the parameters.\nP(A) is the prior probability.\nP(B) is the marginal probability of the observed data."
+  },
+  {
+    "input": "Likelihood Function",
+    "output": "The likelihood function represents the probability of the observed data given certain parameter values. Assuming normal errors, the relationship between independent variables X and target variable Y is:\ny = w_₀ + w_₁x_₁ + w_₂x_₂ + ... + w_ₚx_ₚ + \\epsilon\nwhere\\epsilonfollows a normal distribution variance(\\epsilon \\sim N(0, \\sigma^2))."
+  },
+  {
+    "input": "Prior and Posterior Distributions",
+    "output": "Prior P( w ∣ α): Represents prior knowledge about the parameters before observing data.\nPosterior P( w ∣ X ,α ,β−1): Updated beliefs about the parameters after incorporating observed data, derived using Bayes’ theorem."
+  },
+  {
+    "input": "Need for Bayesian Regression",
+    "output": "Bayesian regression offers several advantages over traditional regression techniques:"
+  },
+  {
+    "input": "Bayesian Regression Formulation",
+    "output": "For a dataset with n samples, the linear relationship is:\ny = w_0 + w_1x_1 + w_2x_2 + ... + w_px_p + \\epsilon\nwhere w are regression coefficients and\\epsilon \\sim N(0, \\sigma^2)."
+  },
+  {
+    "input": "Assumptions:",
+    "output": "P(y | x, w, \\sigma^2) = N(f(x,w), \\sigma^2)"
+  },
+  {
+    "input": "Conditional Probability Density Function (PDF)",
+    "output": "The probability density function of Y given X is:\nP(y | x, w, \\sigma^2) = \\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\exp{\\left[-\\frac{(y - f(x,w))^2}{2\\sigma^2}\\right]}\nFor N observations:\nL(Y | X, w, \\sigma^2) = \\prod_{i=1}^{N} P(y_i | x_{i1}, x_{i2}, ..., x_{iP})\nwhich simplifies to:\nL(Y | X, w, \\sigma^2) = \\prod_{i=1}^{N} \\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\exp{\\left[-\\frac{(y_i - f(x_i, w))^2}{2\\sigma^2}\\right]}\nTaking the logarithm of the likelihood function:\n\\ln L(Y | X, w, \\sigma^2) = -\\frac{N}{2} \\ln(2\\pi\\sigma^2) - \\frac{1}{2\\sigma^2} \\sum_{i=1}^{N} (y_i - f(x_i, w))^2"
+  },
+  {
+    "input": "Precision Term",
+    "output": "We defineprecisionβ as:\n\\beta = \\frac{1}{\\sigma^2}\nSubstituting into the likelihood function:\n\\ln L(y | x, w, \\sigma^2) = -\\frac{N}{2} \\ln(2\\pi) + \\frac{N}{2} \\ln(\\beta) - \\frac{\\beta}{2} \\sum_{i=1}^{N} (y_i - f(x_i, w))^2\nThenegative log-likelihoodis:\n-\\ln L(y | x, w, \\sigma^2) = \\frac{\\beta}{2} \\sum_{i=1}^{N} (y_i - f(x_i, w))^2 + \\text{constant}"
+  },
+  {
+    "input": "Maximum Posterior Estimation",
+    "output": "Taking the logarithm of the posterior:\n\\ln P(w | X, \\alpha, \\beta^{-1}) = \\ln L(Y | X, w, \\beta^{-1}) + \\ln P(w | \\alpha)\nSubstituting the expressions:\n\\hat{w} = \\frac{\\beta}{2} \\sum_{i=1}^{N} (y_i - f(x_i, w))^2 + \\frac{\\alpha}{2} w^Tw\nMinimizing this expression gives themaximum posterior estimate, which is equivalent to ridge regression.\nBayesian regression provides aprobabilistic frameworkfor linear regression by incorporating prior knowledge. Instead of estimating a single set of parameters, we obtain a distribution over possible parameters, which enhances robustness in situations with limited data or multicollinearity."
+  },
+  {
+    "input": "When to Use Bayesian Regression?",
+    "output": "Small sample sizes:When data is scarce, Bayesian inference can improve predictions.\nStrong prior knowledge:When domain expertise is available, incorporating priors enhances model reliability.\nHandling uncertainty:If quantifying uncertainty in predictions is essential."
+  },
+  {
+    "input": "Method 1:Bayesian Linear Regression using Stochastic Variational Inference (SVI)inPyro.",
+    "output": "It utilizesStochastic Variational Inference (SVI)to approximate the posterior distribution of parameters (slope, intercept, and noise variance) in a Bayesian linear regression model. TheAdam optimizeris used to minimize theEvidence Lower Bound (ELBO), making the inference computationally efficient."
+  },
+  {
+    "input": "Step 1: Import Required Libraries",
+    "output": "First, we import the necessary Python libraries for performing Bayesian regression usingtorch, pyro, SVI, Trace_ELBO, predictive,Adam, andmatplotlib and seaborn."
+  },
+  {
+    "input": "Step 2: Generate Sample Data",
+    "output": "We create synthetic data for linear regression:\nY = intercept + slope × X + noise\nThe noise follows a normal distribution to simulate real-world uncertainty."
+  },
+  {
+    "input": "Step 3: Define the Bayesian Regression Model",
+    "output": "Priors: Assign normal distributions to the slope and intercept.\nLikelihood: The observations Y follow a normal distribution centered around μ = intercept + slope × X ."
+  },
+  {
+    "input": "Step 4: Define the Variational Guide",
+    "output": "This function approximates the posterior distribution of the parameters:\nUsespyro.paramto learn mean (loc) and standard deviation (scale) for each parameter.\nSamples are drawn from these learned distributions.\nStep 5: Train the Model using SVI\nAdam optimizer is used for parameter updates.\nSVI minimizes the ELBO (Evidence Lower Bound) to approximate the posterior.\nOutput"
+  },
+  {
+    "input": "Step 6: Obtain Posterior Samples",
+    "output": "Predictivefunction samples from the posterior using the trained guide.\nWe extract samples forslope, intercept, and sigma.\nOutput"
+  },
+  {
+    "input": "Step 7: Compute and Display Results",
+    "output": "We plot the distributions of the inferred parameters:slope, intercept, and sigmausing seaborn\nOutput"
+  },
+  {
+    "input": "Method: 2Bayesian Linear Regression usingPyMC3",
+    "output": "In this implementation, we utilizeBayesian Linear RegressionwithMarkov Chain Monte Carlo (MCMC) samplingusingPyMC3, allowing for a probabilistic interpretation of regression parameters and their uncertainties."
+  },
+  {
+    "input": "1.Import Necessary Libraries",
+    "output": "Here, we import the required libraries for the task. These libraries include os, pytensor, pymc, numpy, and matplotlib."
+  },
+  {
+    "input": "2.Clear PyTensor Cache",
+    "output": "PyMC usesPyTensor(formerlyTheano) as the backend for running computations. We clear the cache to avoid any potential issues with stale compiled code"
+  },
+  {
+    "input": "3.Set Random Seed and Generate Synthetic Data",
+    "output": "We combine setting the random seed and generating synthetic data in this step. The random seed ensures reproducibility, and the synthetic data is generated for the linear regression model."
+  },
+  {
+    "input": "4.Define the Bayesian Model",
+    "output": "Now, we define theBayesian modelusingPyMC. Here, we specify the priors for the model parameters (slope, intercept, and sigma), and the likelihood function for the observed data."
+  },
+  {
+    "input": "5.Sample from the Posterior",
+    "output": "After defining the model, we sample from the posterior using MCMC (Markov Chain Monte Carlo). Thepm.sample()function draws samples from the posterior distributions of the model parameters.\nWe setdraws=2000for the number of samples,tune=1000for tuning steps, andcores=1to use a single core for the sampling process."
+  },
+  {
+    "input": "6.Plot the Posterior Distributions",
+    "output": "Finally, we plot the posterior distributions of the parameters (slope, intercept, and sigma) to visualize the uncertainty in their estimates.pm.plot_posterior()plots the distributions, showing the most likely values for each parameter.\nOutput"
+  },
+  {
+    "input": "Advantages of Bayesian Regression",
+    "output": "Effective for small datasets:Works well when data is limited.\nHandles uncertainty:Provides probability distributions instead of point estimates.\nFlexible modeling:Can handle complex relationships and non-linearity.\nRobust against outliers:Unlike OLS, Bayesian regression reduces the impact of extreme values.\nFacilitates model selection:Computes posterior probabilities for different models."
+  },
+  {
+    "input": "Limitations of Bayesian Regression",
+    "output": "Computationally expensive:Requires advanced sampling techniques.\nRequires specifying priors:Poorly chosen priors can affect results.\nNot always necessary:For large datasets, traditional regression often performs adequately."
   }
 ]
