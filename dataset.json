@@ -7394,5 +7394,57 @@
   {
     "input": "Disadvantages of KNN:",
     "output": "Sensitive to the noisy features in the dataset.\nComputationally expansive for the large dataset.\nIt can be biased in the imbalanced dataset.\nRequires the choice of the appropriate value of K.\nSometimes normalization may be required."
+  },
+  {
+    "input": "Prerequisites",
+    "output": "Supervised Machine Learning\nEnsemble Learning\nGradient Boosting\nTree Based Machine Learning Algorithms"
+  },
+  {
+    "input": "LightGBM installations",
+    "output": "Setting up LightGBM involves installing necessary dependencies like CMake and compilers, cloning the repository and building the framework. Once the framework is set up the Python package can be installed using pip to start utilizing LightGBM.\nHow to Install LightGBM on Windows?\nHow to Install LightGBM on Linux?\nHow to Install LightGBM on MacOS?"
+  },
+  {
+    "input": "LightGBM Data Structure",
+    "output": "LightGBM Data Structure API refers to the set of functions and methods provided by the framework for handling and manipulating data structures within the context of machine learning tasks. This API includes functions for creating datasets, loading data from different sources, preprocessing features and converting data into formats suitable for training models with LightGBM. It allows users to interact with data efficiently and seamlessly integrate it into the machine learning workflow."
+  },
+  {
+    "input": "LightGBM Core Parameters",
+    "output": "LightGBM’s performance is heavily influenced by the core parameters that control the structure and optimization of the model. Below are some of the key parameters:\nOne who want to study about the applications of these parameters in details they can follow the below article.\nLightGBM Tree Parameters\nLightGBM Feature Parameters"
+  },
+  {
+    "input": "LightGBM Tree",
+    "output": "A LightGBM tree is a decision tree structure used to predict outcomes. These trees are grown recursively in aleaf-wisemanner, maximizing reduction in loss at each step. Key features of LightGBM trees include:\nLightGBM Leaf-wise tree growth strategy\nLightGBM Gradient-Based Strategy\nLightGBM Histogram-Based Learning\nHandling categorical features efficiently using LightGBM"
+  },
+  {
+    "input": "LightGBM Boosting Algorithms",
+    "output": "LightGBM Boosting Algorithmsuses:\nGradient Boosting Decision Trees (GBDT):builds decision trees sequentially to correct errors iteratively.\nGradient-based One-Side Sampling (GOSS):samples instances with large gradients, optimizing efficiency.\nExclusive Feature Bundling (EFB):bundles exclusive features to reduce overfitting.\nDropouts meet Multiple Additive Regression Trees (DART):introduces dropout regularization to improve model robustness by training an ensemble of diverse models.\nThese algorithms balance speed, memory usage and accuracy."
+  },
+  {
+    "input": "LightGBM Examples",
+    "output": "LightGBM Regression Examples\nLightGBM Binary Classifications Example\nLightGBM Multiclass Classifications Example\nTime Series Using LightGBM\nLightGBM for Quantile regression"
+  },
+  {
+    "input": "Training and Evaluation in LightGBM",
+    "output": "Training in LightGBM involves fitting a gradient boosting model to a dataset. During training, the model iteratively builds decision trees to minimize a specified loss function, adjusting tree parameters to optimize model performance. Evaluation assesses the trained model's performance using metrics such as mean squared error for regression tasks or accuracy for classification tasks.Cross-validationtechniques may be employed to validate model performance on unseen data and prevent overfitting.\nTrain a model using LightGBM\nCross-validation and hyperparameter tuning\nLightGBM evaluation metrics"
+  },
+  {
+    "input": "LightGBM Hyperparameters Tuning",
+    "output": "LightGBMhyperparameter tuninginvolves optimizing the settings that govern the behavior and performance of the model during training. Techniques likegrid search,random searchandBayesian optimizationcan be used to find the optimal set of hyperparameters for your model.\nLightGBM key Hyperparameters\nLightGBM Regularization parameters\nLightGBM Learning Control Parameters"
+  },
+  {
+    "input": "LightGBM Parallel and GPU Training",
+    "output": "LightGBM supportsparallel processingand GPU acceleration which greatly enhances training speed particularly for large-scale datasets. It allows the use of multiple CPU cores or GPUs making it highly scalable."
+  },
+  {
+    "input": "LightGBM Feature Importance and Visualization",
+    "output": "Understanding which features contribute most to your model's predictions is key. Feature importance can be visualized using techniques like SHAP values (SHapley Additive exPlanations) which provide a unified measure of feature importance. This helps in interpreting the model and guiding future feature engineering efforts.\nLightGBM Feature Importance and Visualization\nSHAP (SHapley Additive exPlanations) values for interpretability"
+  },
+  {
+    "input": "Advantages of the LightGBM",
+    "output": "LightGBM offers several key benefits:\nFaster speed and higher accuracy: It outperforms other gradient boosting algorithms on large datasets.\nLow memory usage: Optimized for memory efficiency and handling large datasets with minimal overhead.\nParallel and GPU learning support: Takes advantage of multiple cores or GPUs for faster training.\nEffective on large datasets: Its optimized techniques such as leaf-wise growth and histogram-based learning make it suitable for big data applications."
+  },
+  {
+    "input": "LightGBM vs Other Boosting Algorithms",
+    "output": "A comparison between LightGBM and other boosting algorithms such as Gradient Boosting, AdaBoost, XGBoost and CatBoost highlights:\nLightGBM vs XGBOOST\nGradientBoosting vs AdaBoost vs XGBoost vs CatBoost vs LightGBM\nLightGBM is an outstanding choice for solving supervised learning tasks particularly for classification, regression and ranking problems. Its unique algorithms, efficient memory usage and support for parallel and GPU training give it a distinct advantage over other gradient boosting methods."
   }
 ]
