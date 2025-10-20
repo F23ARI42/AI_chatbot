@@ -7370,5 +7370,29 @@
   {
     "input": "7.Visualize Decision Boundary with Best k",
     "output": "Use the final trained model (best_knn) to predict labels for every point in the 2D mesh grid (xx, yy).\nReshape the predictions (Z) to match the grid’s shape for plotting.\nCreate a plot showing the decision boundary by coloring regions according to predicted classes using contourf.\nOverlay the original data points with different colors representing true classes using sns.scatterplot.\nOutput:\nWe can see that our KNN model is working fine in classifying datapoints."
+  },
+  {
+    "input": "Importing Libraries and Dataset",
+    "output": "Pythonlibraries make it very easy for us to handle the data and perform typical and complex tasks with a single line of code.\nPandas– This library helps to load the data frame in a 2D array format and has multiple functions to perform analysis tasks in one go.\nNumpy– Numpy arrays are very fast and can perform large computations in a very short time.\nMatplotlib/Seaborn– This library is used to draw visualizations.\nSklearn – This module contains multiple libraries having pre-implemented functions to perform tasks from data preprocessing to model development and evaluation.\nNow let's load the dataset using the pandas dataframe. You can download the dataset fromherewhich has been used for illustration purpose in this article.\nOutput:"
+  },
+  {
+    "input": "Standardize the Variables",
+    "output": "Because the KNN classifier predicts the class of a given test observation by identifying the observations that are nearest to it, the scale of the variables matters. Any variables that are on a large scale will have a much larger effect on the distance between the observations, and hence on the KNN classifier than variables that are on a small scale.\nOutput:"
+  },
+  {
+    "input": "Model Development and Evaluation",
+    "output": "Now by using the sklearn library implementation of the KNN algorithm we will train a model on that. Also after the training purpose, we will evaluate our model by using theconfusion matrixandclassification report.\nOutput:"
+  },
+  {
+    "input": "Elbow Method",
+    "output": "Let's go ahead and use the elbow method to pick a goodKValue.\nOutput:\nHere we can observe that the error value is oscillating and then it increases to become saturated approximately. So, let's take the value of K equal to 10 as that value of error is quite redundant.\nOutput:\nNow let's try to evaluate the performance of the model by using the number of clusters for which the error rate is the least.\nOutput:\nGreat!We squeezed some more performance out of our model by tuning it to a betterK value."
+  },
+  {
+    "input": "Advantages of KNN:",
+    "output": "It is easy to understand and implement.\nIt can also handle multiclass classification problems.\nUseful when data does not have a clear distribution.\nIt works on a non-parametric approach."
+  },
+  {
+    "input": "Disadvantages of KNN:",
+    "output": "Sensitive to the noisy features in the dataset.\nComputationally expansive for the large dataset.\nIt can be biased in the imbalanced dataset.\nRequires the choice of the appropriate value of K.\nSometimes normalization may be required."
   }
 ]
