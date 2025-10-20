@@ -7342,5 +7342,33 @@
   {
     "input": "Applications of Machine Learning",
     "output": "Machine Learning is used in many industries to solve problems and improve services. Here are some common real-world applications:\nMachine learning continues to evolve which helps in opening new possibilities and transforming industries by helping smarter, data-driven decisions and automation which was not possible earlier."
+  },
+  {
+    "input": "1.Generating and Visualizing the 2D Data",
+    "output": "We will import libraries likepandas,matplotlib,seabornandscikit learn.\nThe make_moons() function generates a 2D dataset that forms two interleaving half circles.\nThis kind of data is non-linearly separable and perfect for showing how k-NN handles such cases.\nOutput:"
+  },
+  {
+    "input": "2.Train-Test Split and Normalization",
+    "output": "StandardScaler()standardizes the features by removing the mean and scaling to unit variance (z-score normalization).\nThis is important for distance-based algorithms like k-NN as it ensures all features contribute equally to distance calculations.\ntrain_test_split()splits the data into 70% training and 30% testing.\nrandom_state=42ensures reproducibility.\nstratify=ymaintains the same class distribution in both training and test sets which is important for balanced evaluation."
+  },
+  {
+    "input": "3.Fit the k-NN Model and Evaluate",
+    "output": "This creates a k-Nearest Neighbors (k-NN) classifier with k = 5 meaning it considers the 5 nearest neighbors for making predictions.\nfit(X_train, y_train)trains the model on the training data.\npredict(X_test)generates predictions for the test data.\naccuracy_score()compares the predicted labels (y_pred) with the true labels (y_test) and calculates the accuracy i.e the proportion of correct predictions.\nOutput:"
+  },
+  {
+    "input": "4.Cross-Validation to Choose Best k",
+    "output": "Choosing the optimal k-value is critical before building the model for balancing the model's performance.\nAsmaller kvalue makes the model sensitive to noise, leading to overfitting (complex models).\nAlarger kvalue results in smoother boundaries, reducing model complexity but possibly underfitting.\nThis code performs model selection for the k value in the k-NN algorithm using 5-foldcross-validation:\nIt tests values of k from 1 to 20.\nFor each k, a new k-NN model is trained and validated usingcross_val_scorewhich automatically splits the dataset into 5 folds, trains on 4 and evaluates on 1, cycling through all folds.\nThe mean accuracy of each fold is stored incv_scores.\nA line plot shows how accuracy varies with k helping visualize the optimal choice.\nThe best_k is the value of k that gives the highest mean cross-validated accuracy.\nOutput:"
+  },
+  {
+    "input": "5.Training with Best k",
+    "output": "The model is trained on the training set with the optimized k (Here k = 6).\nThe trained model then predicts labels for the unseen test set to evaluate its real-world performance."
+  },
+  {
+    "input": "6. Evaluate Using More Metrics",
+    "output": "Calculate the confusion matrix comparing true labels (y_test) with predictions (y_pred).\nUseConfusionMatrixDisplayto visualize the confusion matrix with labeled classes\nPrint a classification report that includes:\nPrecision:How many predicted positives are actually positive.\nRecall:How many actual positives were correctly predicted.\nF1-score:Harmonic mean of precision and recall.\nSupport: Number of true instances per class.\nOutput:"
+  },
+  {
+    "input": "7.Visualize Decision Boundary with Best k",
+    "output": "Use the final trained model (best_knn) to predict labels for every point in the 2D mesh grid (xx, yy).\nReshape the predictions (Z) to match the grid’s shape for plotting.\nCreate a plot showing the decision boundary by coloring regions according to predicted classes using contourf.\nOverlay the original data points with different colors representing true classes using sns.scatterplot.\nOutput:\nWe can see that our KNN model is working fine in classifying datapoints."
   }
 ]
