@@ -8026,5 +8026,45 @@
   {
     "input": "Conclusion",
     "output": "In conclusion, each type of machine learning serves its own purpose and contributes to the overall role in development of enhanced data prediction capabilities, and it has the potential to change various industries likeData Science. It helps deal with massive data production and management of the datasets."
+  },
+  {
+    "input": "1. Linear Regression",
+    "output": "Linear regression is used for predictive analysis.Linear regressionis a linear approach for modeling the relationship between the criterion or the scalar response and the multiple predictors or explanatory variables. Linear regression focuses on the conditional probability distribution of the response given the values of the predictors. For linear regression, there is a danger ofoverfitting. The formula for linear regression is:\nThis is the most basic form of regression analysis and is used to model a linear relationship between a single dependent variable and one or more independent variables.\nHere, a linear regression model is instantiated to fit a linear relationship between input features (X) and target values (y). This code is used for simple demonstration of the approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a linear regression model for predictive modeling tasks."
+  },
+  {
+    "input": "2. Polynomial Regression",
+    "output": "This is an extension of linear regression and is used to model a non-linear relationship between the dependent variable and independent variables. Here as well syntax remains the same but now in the input variables we include some polynomial or higher degree terms of some already existing features as well. Linear regression was only able to fit a linear model to the data at hand but withpolynomial features, we can easily fit some non-linear relationship between the target as well as input features.\nHere is the code for simple demonstration of the Polynomial regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Polynomial regression model for predictive modeling tasks."
+  },
+  {
+    "input": "3. Stepwise Regression",
+    "output": "Stepwise regressionis used for fitting regression models with predictive models. It is carried out automatically. With each step, the variable is added or subtracted from the set of explanatory variables. The approaches for stepwise regression are forward selection, backward elimination, and bidirectional elimination. The formula for stepwise regression is\nb_{j.std} = b_{j}(s_{x}  s_{y}^{-1})\nHere is the code for simple demonstration of the stepwise regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Stepwise regression model for predictive modeling tasks."
+  },
+  {
+    "input": "4. Decision Tree Regression",
+    "output": "A Decision Tree is the most powerful and popular tool for classification and prediction. ADecision treeis a flowchart-like tree structure, where each internal node denotes a test on an attribute, each branch represents an outcome of the test, and each leaf node (terminal node) holds a class label. There is a non-parametric method used to model a decision tree to predict a continuous outcome.\nHere is the code for simple demonstration of the Decision Tree regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Decision Tree regression model for predictive modeling tasks."
+  },
+  {
+    "input": "5. Random Forest Regression",
+    "output": "Random Forest is anensembletechnique capable of performing both regression and classification tasks with the use of multiple decision trees and a technique called Bootstrap and Aggregation, commonly known asbagging. The basic idea behind this is to combine multiple decision trees in determining the final output rather than relying on individual decision trees.\nRandom Foresthas multiple decision trees as base learning models. We randomly perform row sampling and feature sampling from the dataset forming sample datasets for every model. This part is called Bootstrap.\nHere is the code for simple demonstration of the Random Forest regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Random Forest regression model for predictive modeling tasks."
+  },
+  {
+    "input": "6. Support Vector Regression (SVR)",
+    "output": "Support vector regression (SVR)is a type ofsupport vector machine (SVM)that is used for regression tasks. It tries to find a function that best predicts the continuous output value for a given input value.\nSVR can use both linear and non-linear kernels. A linear kernel is a simple dot product between two input vectors, while a non-linear kernel is a more complex function that can capture more intricate patterns in the data. The choice of kernel depends on the data’s characteristics and the task’s complexity.\nHere is the code for simple demonstration of the Support vector regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Support vector regression model for predictive modeling tasks."
+  },
+  {
+    "input": "7. Ridge Regression",
+    "output": "Ridge regressionis a technique for analyzing multiple regression data. When multicollinearity occurs, least squares estimates are unbiased. This is a regularized linear regression model, it tries to reduce the model complexity by adding a penalty term to the cost function. A degree of bias is added to the regression estimates, and as a result, ridge regression reduces the standard errors.\n\\textrm{Cost} = \\underset{\\beta \\in \\mathbb{R}}{\\textrm{argmin}}\\left\\| i-X\\beta\\right\\|^2 + \\lambda \\left\\| \\beta\\right\\|^2\nHere is the code for simple demonstration of the Ridge regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Ridge regression model for predictive modeling tasks."
+  },
+  {
+    "input": "8. Lasso Regression",
+    "output": "Lasso regressionis a regression analysis method that performs both variable selection andregularization. Lasso regression uses soft thresholding. Lasso regression selects only a subset of the provided covariates for use in the final model.\nThis is another regularized linear regression model, it works by adding a penalty term to the cost function, but it tends to zero out some features' coefficients, which makes it useful for feature selection.\nHere is the code for simple demonstration of the Lasso regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Lasso regression model for predictive modeling tasks."
+  },
+  {
+    "input": "9. ElasticNet Regression",
+    "output": "Linear Regression suffers from overfitting and can’t deal with collinear data. When there are many features in the dataset and even some of them are not relevant to the predictive model. This makes the model more complex with a too-inaccurate prediction on the test set (or overfitting). Such a model with high variance does not generalize on the new data. So, to deal with these issues, we include both L-2 and L-1 norm regularization to get the benefits of both Ridge and Lasso at the same time. The resultant model has better predictive power than Lasso. It performs feature selection and also makes the hypothesis simpler. The modified cost function forElastic-Net Regressionis given below:\n\\frac{1}{m}\\left[\\sum_{l=1}^{m}\\left(y^{(i)}-h\\left(x^{(i)}\\right)\\right)^{2}+\\lambda_{1} \\sum_{j=1}^{n} w_{j}+\\lambda_{2} \\sum_{j=1}^{n} w_{j}^{2}\\right]\nwhere,\nw(j)represents the weight for the jthfeature.\nnis the number of features in the dataset.\nlambda1is the regularization strength for the L1 norm.\nlambda2is the regularization strength for the L2 norm.\nHere is the code for simple demonstration of the Elasticnet regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Elastic Net regression model for predictive modeling tasks."
+  },
+  {
+    "input": "10. Bayesian Linear Regression",
+    "output": "As the name suggests this algorithm is purely based onBayes Theorem. Because of this reason only we do not use the Least Square method to determine the coefficients of the regression model. So, the technique which is used here to find the model weights and parameters relies on features posterior distribution and this provides an extra stability factor to the regression model which is based on this technique.\nHere is the code for simple demonstration of the Bayesian Linear regression approach.\nNote:This code demonstrates the basic workflow of creating, training, and utilizing a Bayesian linear regression model for predictive modeling tasks."
   }
 ]
