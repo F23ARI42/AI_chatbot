@@ -8510,5 +8510,65 @@
   {
     "input": "8. Model Testing and Prediction",
     "output": "Let's check the model for random images.\nimg = image.load_img(image_path, target_size=(200, 200))loads the image and resizes it to 200x200 pixels.\nplt.imshow(img)displays the image.\nimg = image.img_to_array(img)converts the image to a NumPy array.\nimg = np.expand_dims(img, axis=0)adds an extra dimension for batch processing.\nresult = model.predict(img)makes a prediction using the model.\nOutput:\nWe can see that our model is able to predict images correctly, hence our CNN model to predict cats and dogs in images is working fine. For better performance we can use Transfer Learning and perform hyperparameter tuning."
+  },
+  {
+    "input": "Steps to Implement Chain Rule Derivative with Mathematical Notation",
+    "output": "Suppose you have a simple neural network with one input layer (2 features), one hidden layer (2 neurons) and one output layer (1 neuron).Let’s denote:\nInput:x=[x1, x2]\nWeights:W1(input to hidden), W2(hidden to output)\nBiases:b1 (hidden), b2 (output)\nActivation:\\sigma(sigmoid function)\nOutput:z (scalar prediction)"
+  },
+  {
+    "input": "Step 1: Forward Pass (Function Composition)",
+    "output": "Here, a1is the hidden layer’s activation and z is the final output."
+  },
+  {
+    "input": "Step 2: Loss Function",
+    "output": "Let’s use mean squared error (MSE) for training:\nwhere y is the true target."
+  },
+  {
+    "input": "Step 3: Chain Rule for Gradients(Backpropagation)",
+    "output": "1. Output Layer gradient:\n2. Gradient of output w.r.t. parameters:\n3. Chain Rule applied to Output Layer parameters:"
+  },
+  {
+    "input": "Step 4: Parameter Update",
+    "output": "Once we have all gradients, update each parameter with gradient descent (or any modern optimizer):"
+  },
+  {
+    "input": "Application of Chain Rule in Machine Learning",
+    "output": "The chain rule is extensively used in various aspects ofmachine learning, especially in training and optimizing models. Here are some key applications:\nBackpropagation: In neural networks,backpropagationis used to update the weights of the network by calculating the gradient of the loss function with respect to the weights. This process relies heavily on the chain rule to propagate the error backwards through the network layer by layer, efficiently calculating gradients for weight updates.\nGradient Descent Optimization: In optimization algorithms likegradient descent, the chain rule is used to calculate the gradient of the loss function with respect to the model parameters. This gradient is then used to update the parameters in the direction that minimizes the loss.\nAutomatic Differentiation: Many machine learning frameworks, such as TensorFlow and PyTorch, use automatic differentiation to compute gradients.Automatic differentiationrelies on the chain rule to decompose complex functions into simpler functions and compute their derivatives.\nRecurrent Neural Networks (RNNs): InRNNs, which are used for sequence modeling tasks, the chain rule is used to propagate gradients through time. This allows the network to learn from sequences of data by updating the weights based on the error calculated at each time step.\nConvolutional Neural Networks (CNNs): InCNNs, which are widely used for image recognition and other tasks involving grid-like data, the chain rule is used to calculate gradients for the convolutional layers. This allows the network to learn spatial hierarchies of features."
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "Let's see an example using PyTorch,"
+  },
+  {
+    "input": "Step 1: Import Libraries",
+    "output": "Let's import the required libraries,\nTorch:Modern libraries utilize automatic differentiation and GPU acceleration. PyTorch syntax is widely used in research and industry."
+  },
+  {
+    "input": "Step 2: Define the Neural Network Architecture",
+    "output": "We prepare a two-layer neural network (input -> hidden -> output) with sigmoid activation."
+  },
+  {
+    "input": "Step 3: Set Up Input, Weights and Biases",
+    "output": "Weights and biases are automatically initialized."
+  },
+  {
+    "input": "Step 4: Forward Pass: Compute Output",
+    "output": "The forward pass computes network output for given input by passing data through layers and activations.\nOutput:"
+  },
+  {
+    "input": "Step 5: Compute Loss and Apply Chain Rule.",
+    "output": "Modern frameworks useautogradfor derivatives. Let's useMSE lossfor simplicity.\nOutput:"
+  },
+  {
+    "input": "Step 6: Access Computed Gradients (Backpropagation)",
+    "output": "After calling loss.backward(), gradients are stored and can be accessed for optimization:\nOutput:"
+  },
+  {
+    "input": "Advantages",
+    "output": "Automatic Gradient Computation:Enables fast, scalable calculation of gradients, which is essential for training deep neural networks and automating optimization in modern frameworks.\nPractical Backpropagation:Makes efficient backpropagation possible, allowing gradients to be passed through every layer for effective parameter updates.\nSupported by Frameworks:Fully integrated into deep learning libraries likePyTorch,TensorFlowandJAX, which handle chain rule differentiation automatically.\nArchitecture Flexibility:Works seamlessly with a wide variety of architectures, includingCNNs,RNNsandtransformers, supporting diverse machine learning tasks."
+  },
+  {
+    "input": "Limitations",
+    "output": "Vanishing/Exploding Gradients:Repeated application can lead to gradients becoming too small or too large, causing instability during training.\nDifferentiability Requirement:Only applies to functions that are smooth and differentiable; cannot directly handle discrete or non-differentiable operations.\nComputational Cost:For very deep or wide networks, the process can become computationally intensive and memory-heavy."
   }
 ]
