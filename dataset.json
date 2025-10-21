@@ -10346,5 +10346,17 @@
   {
     "input": "Challenges and Limitations of Optimization Algorithms",
     "output": "Non-Convexity: Cost functions of many machine learning algorithms are non-convex which implies that they have a number of local minima and saddle points. Traditional optimization methods cannot guarantee to obtain the global optimum in such complex models.\nHigh Dimensionality:Finding optimal solutions in high-dimensional spaces is challenging, the algorithms and computing resources needed to do so can be expensive.\nOverfitting:Regularization neutralizes overfitting which leads to memorization of training data than the new data. The applied model requirements for optimization should be kept as simple as possible due to the risk of overfitting.\nOptimization is a component needed for the success of any machine learning models. Proper application of optimization algorithms enables one to boost performance and the accurateness of most machine learning applications."
+  },
+  {
+    "input": "Inspiration of the algorithm",
+    "output": "Particle Swarm Optimization (PSO) is a powerful meta-heuristic optimization algorithm and inspired by swarm behavior observed in nature such as fish and bird schooling.  PSO is a Simulation of a simplified social system. The original intent of PSO algorithm was to graphically simulate the graceful but unpredictable choreography of a bird flock.\nIn nature, any of the bird’s observable vicinity is limited to some range. However, having more than one birds allows all the birds in a swarm to be aware of the larger surface of a fitness function.\nLet’s mathematically model, the above-mentioned principles to make the swarm find the global minima of a fitness function"
+  },
+  {
+    "input": "Mathematical model",
+    "output": "Each particle in particle swarm optimization has an associated position, velocity, fitness value.\nEach particle keeps track of the particle_bestFitness_value particle_bestFitness_position.\nA record of global_bestFitness_position and global_bestFitness_value is maintained."
+  },
+  {
+    "input": "Algorithm",
+    "output": "Parameters of problem:\nNumber of dimensions (d)\nLower bound (minx)\nUpper bound (maxx)\nHyperparameters of the algorithm:\nNumber of particles (N)\nMaximum number of iterations (max_iter)\nInertia (w)\nCognition of particle (C1)\nSocial influence of swarm (C2)\nAlgorithm:\nAdvantages of PSO:\nDisadvantages of PSO:"
   }
 ]
