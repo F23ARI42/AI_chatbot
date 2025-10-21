@@ -8682,5 +8682,49 @@
   {
     "input": "Key Factors to Consider for Optimizing Pooling Layer",
     "output": "Pooling Window Size: The size of the pooling window affects the degree of downsampling. A larger window results in more aggressive downsampling but may lose important details.\nStride: The stride determines how much the pooling window moves at each step. A larger stride results in greater dimensionality reduction.\nPadding: In some cases, padding is used to ensure that the pooling operation covers the entire input feature map."
+  },
+  {
+    "input": "Architecture and Working of CGANs",
+    "output": "Conditional GANs extend the basic GAN framework by conditioning both the generator and discriminator on additional information. This conditioning helps to direct the generation process helps in making it more controlled and focused.\n1. Generator in CGANs: The generator creates synthetic data such as images, text or videos. It takes two inputs:\nRandom Noise (z): A vector of random values that adds diversity to generated outputs.\nConditioning Information (y): Extra data like labels or context that guides what the generator produces for example a class label such as \"cat\" or \"dog\".\nThe generator combines the noise and the conditioning information to produce realistic data that matches the given condition. For example if the condition y is \"cat\" the generator will create an image of a cat.\n2. Discriminator in CGANs: The discriminator is a binary classifier that decides whether input data is real or fake. It also receives two inputs:\nReal Data (x): Actual samples from the dataset.\nConditioning Information (y): The same condition given to the generator.\nUsing both the real/fake data and the condition, the discriminator learns to judge if the data is genuine and if it matches the condition. For example if the input is an image labeled \"cat\" the discriminator verifies whether it truly looks like a real cat.\n3. Interaction Between Generator and Discriminator: The generator and discriminator train together through adversarial training:\nThe generator tries to create fake data based on noise (z) and condition (y) that can fool the discriminator.\nThe discriminator attempts to correctly classify real vs. fake data considering the condition (y).\nThe goal of the adversarial process is:\nGenerator: Produce data that the discriminator believes is real.\nDiscriminator: Accurately distinguish between real and fake data.\n4. Loss Function and Training:Training is guided by a loss function that balances the generator and discriminator:\nmin_G max_D V(D,G) = \\mathbb{E}_{x \\sim p_{data} (x)}[logD(x|y)] + \\mathbb{E}_{z \\sim p_{z}}(z)[log(1- D(G(z∣y)))]\nThe first term encourages the discriminator to classify real samples correctly.\nThe second term pushes the generator to produce samples that the discriminator classifies as real.\nHere\\mathbb{E}represents the expected valuep_{data}is the real data distribution andp_{z}is the prior noise distribution.\nAs training progresses both the generator and discriminator improve. This adversarial process results in the generator producing more realistic data conditioned on the input information."
+  },
+  {
+    "input": "Implementing CGAN on CiFAR-10",
+    "output": "We will build and train a Conditional Generative Adversarial Network (CGAN) to generate class-specific images from the CIFAR-10 dataset. Below are the key steps involved:"
+  },
+  {
+    "input": "Step 1: Importing Necessary Libraries",
+    "output": "We will importTensorFlow,NumPy,KerasandMatplotliblibraries for building models, loading data and visualization."
+  },
+  {
+    "input": "Step 2: Loading Dataset and Declaring Variables",
+    "output": "Load the CIFAR-10 dataset using TensorFlow datasets or tf.data.Dataset.\nDefine global variables such as number of epochs, batch size and image dimensions."
+  },
+  {
+    "input": "Step 3: Visualizing Sample Images",
+    "output": "Now we will visualize the images from the dataset to understand class distributions and data shape.\nOutput:"
+  },
+  {
+    "input": "Step 4: Defining Loss Functions and Optimizers",
+    "output": "In the next step we need to define the Loss function and optimizer for the discriminator and generator networks in a Conditional Generative Adversarial Network(CGANS).\nUseBinary Cross-EntropyLoss for both generator and discriminator.\nDefine discriminator loss as sum of real and fake losses.\nThe binary entropy calculates two losses:real_loss: Loss when the discriminator tries to classify real data as real andfake_loss: Loss when the discriminator tries to classify fake data as fake\nd_optimizerandg_optimizerare used to update the trainable parameters of the discriminator and generator during training.\nUseAdam optimizerfor both networks."
+  },
+  {
+    "input": "Step 5: Building the Generator Model",
+    "output": "Input: noise vector (latent space) and label.\nConvert label to a vector using an embedding layer (size 50).\nProcess noise through dense layers withLeakyReLUactivation.\nReshape and concatenate label embedding with noise features.\nUse Conv2DTranspose layers to up-sample into 32×32×3 images.\nOutput layer usestanhactivation to scale pixels between -1 and 1.\nOutput:"
+  },
+  {
+    "input": "Step 6: Building the Discriminator Model",
+    "output": "Input: image and label.\nEmbed label into a 50-dimensional vector.\nReshape and concatenate label embedding with the input image.\nApply two Conv2D layers with LeakyReLU activations to extract features.\nFlatten features, apply dropout to prevent overfitting.\nFinal dense layer withsigmoidactivation outputs probability of real or fake.\nOutput:"
+  },
+  {
+    "input": "Step 7: Creating Training Step Function",
+    "output": "Use TensorFlow’s Gradient Tape to calculate and apply gradients for both networks.\nAlternate training discriminator on real and fake data.\nTrain generator to fool discriminator.\nUse@tf.functionfor efficient graph execution."
+  },
+  {
+    "input": "Step 8: Visualizing Generated Images",
+    "output": "After each epoch we will generate images conditioned on different labels.\nDisplay or save generated images to monitor training progress."
+  },
+  {
+    "input": "Step 9: Train the Model",
+    "output": "At the final step we will start training the model for specified epochs.\nPrint losses regularly to monitor performance.\nLonger training typically results in higher quality images.\nOutput:\nWe can see some details in these pictures. But for better result we can try to run this for more epochs.\nCGANs will play an important role in making AI-generated content more relevant and personalized. They open up exciting possibilities for innovation across industries which helps us create smarter solutions that truly understand our needs."
   }
 ]
