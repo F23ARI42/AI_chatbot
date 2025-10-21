@@ -10490,5 +10490,57 @@
   {
     "input": "Step 6: Example Usage",
     "output": "This sets a random seed for reproducibility creates a sample input tensor with shape (1, 3, 4) runs the self-attention function on it and then prints the resulting output and attention weights.\nOutput:"
+  },
+  {
+    "input": "Working of Self Organizing Maps (SOM)",
+    "output": "Here are the step by step explanation of its working:"
+  },
+  {
+    "input": "1. Initialization",
+    "output": "The weights of the output neurons are randomly initialized. These weights represent the features of each neuron and will be adjusted during training."
+  },
+  {
+    "input": "2. Competition",
+    "output": "For each input vector, SOM computes the Euclidean distance between the input and the weight vectors of all neurons. The neuron with the smallest distance is the winning neuron.\nFormula :D(j) = \\sum_{i=1}^{n} (w_{ij} - x_i)^2\nwhere\nD(j)is the distance for neuron\njandnis the number of features."
+  },
+  {
+    "input": "3. Weight Update",
+    "output": "The winning neuron’s weights are updated to move closer to the input vector. The weights of neighboring neurons are also adjusted but with smaller changes.\nFormula:w_{ij}^{(new)} = w_{ij}^{(old)} + \\alpha \\cdot (x_i - w_{ij}^{(old)})\nwhere\n\\alphais the learning rate\nx_i​ is the input feature."
+  },
+  {
+    "input": "4. Learning Rate Decay",
+    "output": "The learning rate α\\alphaα decreases over time allowing the map to converge to stable values.\nFormula:\\alpha(t+1) = 0.5 \\cdot \\alpha(t)"
+  },
+  {
+    "input": "5. Stopping Condition",
+    "output": "The training stops when the maximum number of epochs is reached or when the weights converge."
+  },
+  {
+    "input": "Implementation of SOM in Python",
+    "output": "Now let’s walk through a Python implementation of the SOM algorithm. The code is divided into blocks for clarity."
+  },
+  {
+    "input": "1. Importing Required Libraries",
+    "output": "We will use the math library to compute the Euclidean distance between the input vector and the weight vector."
+  },
+  {
+    "input": "2. Defining the SOM Class",
+    "output": "In this class, we define two important functions, winner() to compute the winning neuron by calculating the Euclidean distance between the input and weight vectors of each cluster and update() to update the weight vectors of the winning neuron according to the weight update rule."
+  },
+  {
+    "input": "3. Defining the Main Function",
+    "output": "In this section, we define the training data and initialize the weights. We also specify the number of epochs and the learning rate.\nT:This is the training data with four examples, each having four features.\nweights:These are the initial weights for two clusters, each with four features.\nepochs:Specifies the number of iterations for training.\nalpha: The learning rate used for updating weights."
+  },
+  {
+    "input": "4. Training the SOM Network",
+    "output": "Here, we loop through each training example for the specified number of epochs, compute the winning cluster and update the weights. For each epoch and training sample we:\nCompute the winning cluster using the winner() method.\nUpdate the winning cluster’s weights using the update() method."
+  },
+  {
+    "input": "5. Classifying Test Sample",
+    "output": "After training the SOM network, we use a test sample s and classify it into one of the clusters by computing which cluster has the closest weight vector to the input sample. Finally, we print the cluster assignment and the trained weights for each cluster."
+  },
+  {
+    "input": "6. Running the Main Function",
+    "output": "The following block runs the main() function when the script is executed.\nOutput:\nThe output will display which cluster the test sample belongs to and the final trained weights of the clusters.\nCluster 0 is assigned to the test sample [0, 0, 0, 1].\nThe trained weights for both clusters are displayed after 3 epochs."
   }
 ]
