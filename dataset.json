@@ -9950,5 +9950,49 @@
   {
     "input": "Solutions",
     "output": "Long Short-Term Memory (LSTM):Special RNN cells designed to maintain information over longer sequences and mitigate vanishing gradients.\nGradient Clipping:Limits the magnitude of gradients during backpropagation to prevent explosion by normalizing them when exceeding a threshold.\nIn this article, we learned how Backpropagation Through Time (BPTT) enables Recurrent Neural Networks to capture temporal dependencies by updating weights across multiple time steps along with its challenges and solutions."
+  },
+  {
+    "input": "AlexNet Architecture",
+    "output": "Its architecture includes:\n5 convolutional layerswith Max-Pooling applied after the 1st, 2nd and 5th layers to enhance feature extraction.\nOverlapping Max-Poolinguses a 3×3 filter with stride 2 which improved performance by reducing top-1 error by 0.4% and top-5 error by 0.3% compared to non-overlapping pooling.\nFollowed by2 fully connected layerseach using dropout to prevent overfitting.\nEnds with asoftmax layerfor final classification."
+  },
+  {
+    "input": "Implementation of AlexNet for Object Classification",
+    "output": "Here we will see step by step implementation of alexnet model:"
+  },
+  {
+    "input": "1. Import Libraries",
+    "output": "We importtensorflowandmatplotlibfor it."
+  },
+  {
+    "input": "2. Load and Preprocess CIFAR-10 Dataset",
+    "output": "CIFAR-10contains 60,000 32×32 RGB images across 10 classes.\nPixel values are scaled to [0, 1].\nLabels areone-hot encodedfor softmax classification."
+  },
+  {
+    "input": "3. Define the AlexNet Model (Adjusted for CIFAR-10)",
+    "output": "Adjusted to CIFAR-10's 32×32 input size and 10 output classes.\nReduced FC layers from 4096→1024→512 to avoid overfitting on small images.\nUses ReLU, Dropout, BatchNorm and softmax in the final layer."
+  },
+  {
+    "input": "4. Compile the Model",
+    "output": "We useadam optimizer andcategorical_crossentropyfor multi-class classification."
+  },
+  {
+    "input": "5. Train the Model",
+    "output": "Train for 15 epochs, with 20% validation split.\nYou can increase epochs for better accuracy.\nOutput:"
+  },
+  {
+    "input": "6. Evaluate the Model",
+    "output": "Output:"
+  },
+  {
+    "input": "7. Plot Training & Validation Accuracy",
+    "output": "Output:\nWe can see that train and validation accuracy is quit similar in end meaning our model is working fine."
+  },
+  {
+    "input": "Advantages of AlexNet",
+    "output": "Use of ReLU Activation: First major architecture to use ReLU (Rectified Linear Unit) which enabled faster training compared to traditional tanh/sigmoid functions.\nDropout for Regularization: Introduced dropout layers to reduce overfitting by randomly disabling neurons during training.\nGPU Utilization: Split the network across two GPUs, showing how deep learning can benefit from parallel computing for faster training.\nOverlapping Max-Pooling: Used overlapping pooling layers to improve generalization and reduce top-1 and top-5 classification errors."
+  },
+  {
+    "input": "Disadvantages of AlexNet",
+    "output": "Large Model Size: Has around 60 million parameters making it memory-intensive and slow for inference on low-resource devices.\nHigh Computational Cost: Training is computationally expensive even though it was optimized for GPUs.\nManual Architecture Design: The architecture lacks modularity and automation, unlike modern approaches like NAS or EfficientNet.\nNot Optimal for Small Datasets: Tends to overfit on smaller datasets like CIFAR-10 or MNIST without heavy regularization.\nOutdated Compared to Modern Architectures: Lacks innovations like residual connections (ResNet), depthwise separable convolutions (MobileNet) and attention mechanisms (ViT)."
   }
 ]
