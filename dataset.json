@@ -10050,5 +10050,37 @@
   {
     "input": "Comparison Between Gradient Descent Variants",
     "output": "Lets see a quick difference between Batch Gradient Descent, Stochastic Gradient Descent (SGD) and Mini-Batch Gradient Descent."
+  },
+  {
+    "input": "What is Momentum?",
+    "output": "Momentum is a concept from physics where an object’s motion depends not only on the current force but also on its previous velocity. In the context of gradient optimization it refers to a method that smoothens the optimization trajectory by adding a term that helps the optimizer remember the past gradients.\nIn mathematical terms the momentum-based gradient descent updates can be described as:\nWhere:\nv_tis the velocity i.e., a running average of gradients\n\\betais the momentum factor, typically a value between 0 and 1 (often around 0.9)\n\\nabla L(w_t)is the current gradient of the loss function\n\\etais the learning rate"
+  },
+  {
+    "input": "Understanding Hyperparameters:",
+    "output": "Learning Rate (\\eta): The learning rate determines the size of the step taken during each update. It plays a crucial role in both standard gradient descent and momentum-based optimizers.\nMomentum Factor (\\beta): This controls how much of the past gradients are remembered in the current update. A value close to 1 means the optimizer will have more inertia while a value closer to 0 means less reliance on past gradients."
+  },
+  {
+    "input": "Types of Momentum-Based Optimizers",
+    "output": "There are several variations of momentum-based optimizers each with slight modifications to the basic momentum algorithm:"
+  },
+  {
+    "input": "1.Nesterov Accelerated Gradient (NAG)",
+    "output": "Nesterov momentum is an advanced form of momentum-based optimization. It modifies the update rule by calculating the gradient at the upcoming position rather than the current position of the weights.\nThe update rule becomes:\nNAG is considered more efficient than classical momentum because it has a better understanding of the future trajectory, leading to even faster convergence and better performance in some cases."
+  },
+  {
+    "input": "2.AdaMomentum",
+    "output": "AdaMomentum combines the concept of adaptive learning rates with momentum. It adjusts the momentum term based on the recent gradients making the optimizer more sensitive to the landscape of the loss function. This can help in fine-tuning the convergence process."
+  },
+  {
+    "input": "3.RMSProp (Root Mean Square Propagation)",
+    "output": "Although not strictly a momentum-based optimizer in the traditional senseRMSPropincorporates a form of momentum by adapting the learning rate for each parameter. It’s particularly effective when dealing with non-stationary objectives such as in training recurrent neural networks (RNNs)."
+  },
+  {
+    "input": "Advantages",
+    "output": "Faster Convergence: It helps to accelerate the convergence by considering past gradients which helps the model navigate through flat regions more efficiently.\nReduces Oscillation: Traditional gradient descent can oscillate when there are steep gradients in some directions and flat gradients in others. Momentum reduces this oscillation by maintaining the direction of previous updates.\nImproved Generalization: By smoothing the optimization process, momentum-based methods can lead to better generalization on unseen data, preventing overfitting.\nHelps Avoid Local Minima: The momentum term can help the optimizer escape from local minima by maintaining a strong enough \"velocity\" to continue moving past these suboptimal points."
+  },
+  {
+    "input": "Challenges and Considerations",
+    "output": "Choosing Hyperparameters: Selecting the appropriate values for the learning rate and momentum factor can be challenging. Typically a momentum factor of 0.9 is common but it may vary based on the specific problem or dataset.\nPotential for Over-Accumulation: If the momentum term becomes too large it can lead to the optimizer overshooting the minimum, especially in the presence of noisy gradients.\nInitial Momentum: When momentum is initialized it can have a significant impact on the convergence rate. Poor initialization can lead to slow or erratic optimization behavior."
   }
 ]
