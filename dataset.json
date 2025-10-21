@@ -9586,5 +9586,45 @@
   {
     "input": "Limitations",
     "output": "Some of the limitations of KL Divergence are:"
+  },
+  {
+    "input": "1. Input Layer",
+    "output": "Input layer is the first layer in an ANN and is responsible for receiving the raw input data. This layer's neurons correspond to the features in the input data. For example, in image processing, each neuron might represent a pixel value. The input layer doesn't perform any computations but passes the data to the next layer.\nKey Points:\nRole: Receives raw data.\nFunction: Passes data to the hidden layers.\nExample: For an image, the input layer would have neurons for each pixel value."
+  },
+  {
+    "input": "2. Hidden Layers",
+    "output": "Hidden Layers are the intermediate layers between the input and output layers. They perform most of the computations required by the network. Hidden layers can vary in number and size, depending on the complexity of the task.\nEach hidden layer applies a set of weights and biases to the input data, followed by an activation function to introduce non-linearity."
+  },
+  {
+    "input": "3.Output Layer",
+    "output": "Output Layer is the final layer in an ANN. It produces the output predictions. The number of neurons in this layer corresponds to the number of classes in a classification problem or the number of outputs in a regression problem.\nThe activation function used in the output layer depends on the type of problem:\nSoftmax for multi-class classification\nSigmoid for binary classification\nLinear for regression"
+  },
+  {
+    "input": "Types of Hidden Layers in Artificial Neural Networks",
+    "output": "Till now we have covered the basic layers: input, hidden, and output. Let’s now dive into the specific types of hidden layers."
+  },
+  {
+    "input": "1. Dense (Fully Connected) Layer",
+    "output": "Dense (Fully Connected) Layeris the most common type of hidden layer in an ANN. Every neuron in a dense layer is connected to every neuron in the previous and subsequent layers. This layer performs a weighted sum of inputs and applies an activation function to introduce non-linearity. The activation function (like ReLU, Sigmoid, or Tanh) helps the network learn complex patterns.\nRole: Learns representations from input data.\nFunction: Performs weighted sum and activation."
+  },
+  {
+    "input": "2. Convolutional Layer",
+    "output": "Convolutional layersare used in Convolutional Neural Networks (CNNs) for image processing tasks. They apply convolution operations to the input, capturing spatial hierarchies in the data. Convolutional layers use filters to scan across the input and generate feature maps. This helps in detecting edges, textures, and other visual features.\nRole: Extracts spatial features from images.\nFunction: Applies convolution using filters."
+  },
+  {
+    "input": "3. Recurrent Layer",
+    "output": "Recurrent layersare used in Recurrent Neural Networks (RNNs) for sequence data like time series or natural language. They have connections that loop back, allowing information to persist across time steps. This makes them suitable for tasks where context and temporal dependencies are important.\nRole: Processes sequential data with temporal dependencies.\nFunction: Maintains state across time steps."
+  },
+  {
+    "input": "4. Dropout Layer",
+    "output": "Dropout layersare a regularization technique used to prevent overfitting. They randomly drop a fraction of the neurons during training, which forces the network to learn more robust features and reduces dependency on specific neurons. During training, each neuron is retained with a probability p.\nRole: Prevents overfitting.\nFunction: Randomly drops neurons during training."
+  },
+  {
+    "input": "5. Pooling Layer",
+    "output": "Pooling Layeris used to reduce the spatial dimensions of the data, thereby decreasing the computational load and controlling overfitting. Common types of pooling include Max Pooling and Average Pooling.\nUse Cases:Dimensionality reduction in CNNs"
+  },
+  {
+    "input": "6. Batch Normalization Layer",
+    "output": "ABatch Normalization Layernormalizes the output of a previous activation layer by subtracting the batch mean and dividing by the batch standard deviation. This helps in accelerating the training process and improving the performance of the network.\nUse Cases:Stabilizing and speeding up training\nUnderstanding the different types of layers in an ANN is essential for designing effective neural networks. Each layer has a specific role, from receiving input data to learning complex patterns and producing predictions. By combining these layers, we can build powerful models capable of solving a wide range of tasks."
   }
 ]
