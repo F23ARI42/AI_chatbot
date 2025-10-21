@@ -9250,5 +9250,89 @@
   {
     "input": "Applications",
     "output": "Some of the applications of transformers are:\nNLP Tasks: Transformers are used for machine translation, text summarization, named entity recognition and sentiment analysis.\nSpeech Recognition: They process audio signals to convert speech into transcribed text.\nComputer Vision: Transformers are applied to image classification, object detection and image generation.\nRecommendation Systems: They provide personalized recommendations based on user preferences.\nText and Music Generation: Transformers are used for generating text like articles and composing music."
+  },
+  {
+    "input": "1. Training Machine Learning Models",
+    "output": "Neural networksare trained using Gradient Descent (or its variants) in combination withbackpropagation. Backpropagation computes the gradients of theloss function with respect to each parameter (weights and biases) in the network by applying thechain rule.The process involves:\nForward Propagation: Computes the output for a given input by passing data through the layers.\nBackward Propagation: Uses the chain rule to calculate gradients of the loss with respect to each parameter (weights and biases) across all layers.\nGradients are then used by Gradient Descent to update the parameters layer-by-layer, moving toward minimizing the loss function."
+  },
+  {
+    "input": "2. Minimizing the Cost Function",
+    "output": "The algorithm minimizes a cost function, which quantifies the error or loss of the model's predictions compared to the true labels for:"
+  },
+  {
+    "input": "1. Linear Regression",
+    "output": "Gradient descent minimizes theMean Squared Error (MSE)which serves as the loss function to find the best-fit line. Gradient Descent is used to iteratively update the weights (coefficients) and bias by computing the gradient of the MSE with respect to these parameters.\nSince MSE is a convex functiongradient descent guarantees convergence to the global minimum if the learning rate is appropriately chosen.For each iteration:\nThe algorithm computes the gradient of the MSE with respect to the weights and biases.\nIt updates the weights (w) and bias (b) using the formula:\nCalculating the gradient of the log-loss with respect to the weights.\nUpdating weights and biases iteratively to maximize the likelihood of the correct classification:\nw = w - \\alpha \\cdot \\frac{\\partial J(w, b)}{\\partial w}, \\quad b = b - \\alpha \\cdot \\frac{\\partial J(w, b)}{\\partial b}\nThe formula is theparameter update rule for gradient descent, which adjusts the weights w and biases b to minimize a cost function. This process iteratively adjusts the line's slope and intercept to minimize the error."
+  },
+  {
+    "input": "2. Logistic Regression",
+    "output": "In logistic regression, gradient descent minimizes theLog Loss (Cross-Entropy Loss)to optimize the decision boundary for binary classification. Since the output is probabilistic (between 0 and 1), the sigmoid function is applied. The process involves:\nCalculating the gradient of the log-loss with respect to the weights.\nUpdating weights and biases iteratively to maximize the likelihood of the correct classification:\nw = w - \\alpha \\cdot \\frac{\\partial J(w)}{\\partial w}\nThis adjustment shifts the decision boundary to separate classes more effectively."
+  },
+  {
+    "input": "3. Support Vector Machines (SVMs)",
+    "output": "For SVMs, gradient descent optimizes thehinge loss, which ensures a maximum-margin hyperplane. The algorithm:\nCalculates gradients for the hinge loss and the regularization term (if used, such as L2 regularization).\nUpdates the weights to maximize the margin between classes while minimizing misclassification penalties with same formula provided above.\nGradient descent ensures theoptimal placement of the hyperplane to separate classes with the largest possible margin."
+  },
+  {
+    "input": "Gradient Descent Python Implementation",
+    "output": "Diving further into the concept, let's understand in depth, with practical implementation.\nOutput:\nThe number of weight values will be equal to the input size of the model, And the input size in deep Learning is the number of independent input features i.e we are putting inside the model\nIn our case, input features are two so, the input size will also be two, and the corresponding weight value will also be two.\nOutput:\nOutput:"
+  },
+  {
+    "input": "Define the loss function",
+    "output": "Here we are calculating the Mean Squared Error by taking the square of the difference between the actual and the predicted value and then dividing it by its length (i.e n = the Total number of output or target values) which is the mean of squared errors.\nOutput:\nAs we can see from the above right now the Mean Squared Error is 30559.4473. All the steps which are done till now are known as forward propagation.\nNow our task is to find the optimal value of weight w and bias b which can fit our model well by giving very less or minimum error as possible. i.e\nNow to update the weight and bias value and find the optimal value of weight and bias we will do backpropagation. Here the Gradient Descent comes into the role to find the optimal value weight and bias."
+  },
+  {
+    "input": "How the Gradient Descent Algorithm Works",
+    "output": "For the sake of complexity, we can write our loss function for the single row as below\nIn the above function x and y are our input data i.e constant. To find the optimal value of weight w and bias b. we partially differentiate with respect to w and b. This is also said that we will find the gradient of loss function J(w,b) with respect to w and b to find the optimal value of w and b.\n\\begin {aligned} {J}'_w &=\\frac{\\partial J(w,b)}{\\partial w} \\\\ &= \\frac{\\partial}{\\partial w} \\left[\\frac{1}{n} (y_p-y)^2 \\right] \\\\ &= \\frac{2(y_p-y)}{n}\\frac{\\partial}{\\partial w}\\left [(y_p-y)  \\right ] \\\\ &= \\frac{2(y_p-y)}{n}\\frac{\\partial}{\\partial w}\\left [((xW^T+b)-y)  \\right ] \\\\ &= \\frac{2(y_p-y)}{n}\\left[\\frac{\\partial(xW^T+b)}{\\partial w}-\\frac{\\partial(y)}{\\partial w}\\right] \\\\ &= \\frac{2(y_p-y)}{n}\\left [ x - 0 \\right ] \\\\ &= \\frac{1}{n}(y_p-y)[2x] \\end {aligned}\ni.e\n\\begin {aligned} {J}'_w &= \\frac{\\partial J(w,b)}{\\partial w} \\\\ &= J(w,b)[2x] \\end{aligned}\n\\begin {aligned} {J}'_b &=\\frac{\\partial J(w,b)}{\\partial b} \\\\ &= \\frac{\\partial}{\\partial b} \\left[\\frac{1}{n} (y_p-y)^2 \\right] \\\\ &= \\frac{2(y_p-y)}{n}\\frac{\\partial}{\\partial b}\\left [(y_p-y)  \\right ] \\\\ &= \\frac{2(y_p-y)}{n}\\frac{\\partial}{\\partial b}\\left [((xW^T+b)-y)  \\right ] \\\\ &= \\frac{2(y_p-y)}{n}\\left[\\frac{\\partial(xW^T+b)}{\\partial b}-\\frac{\\partial(y)}{\\partial b}\\right] \\\\ &= \\frac{2(y_p-y)}{n}\\left [ 1 - 0 \\right ] \\\\ &= \\frac{1}{n}(y_p-y)[2] \\end {aligned}\ni.e\n\\begin {aligned} {J}'_b &= \\frac{\\partial J(w,b)}{\\partial b} \\\\ &= J(w,b)[2] \\end{aligned}\nHere we have considered the linear regression. So that here the parameters are weight and bias only. But in a fully connected neural network model there can be multiple layers and multiple parameters.  but the concept will be the same everywhere. And the below-mentioned formula will work everywhere.\nHere,\n\\gamma= Learning rate\nJ = Loss function\n\\nabla= Gradient symbol denotes the derivative of loss function J\nParam = weight and bias     There can be multiple weight and bias values depending upon the complexity of the model and features in the dataset\nIn our case:\nIn the current problem, two input features, So, the weight will be two."
+  },
+  {
+    "input": "Implementations of the Gradient Descent algorithm for the above model",
+    "output": "Steps:\nOutput:\nFrom the above graph and data, we can observe the Losses are decreasing as per the weight and bias variations.\nNow we have found the optimal weight and bias values. Print the optimal weight and bias and\nOutput:\nOutput:"
+  },
+  {
+    "input": "Gradient Descent Learning Rate",
+    "output": "Thelearning rateis a critical hyperparameter in the context of gradient descent, influencing the size of steps taken during the optimization process to update the model parameters. Choosing an appropriate learning rate is crucial for efficient and effective model training.\nWhen the learning rate istoo small, the optimization process progresses very slowly. The model makes tiny updates to its parameters in each iteration, leading to sluggish convergence and potentially getting stuck in local minima.\nOn the other hand, anexcessively large learning ratecan cause the optimization algorithm to overshoot the optimal parameter values, leading to divergence or oscillations that hinder convergence.\nAchieving the right balance is essential. A small learning rate might result in vanishing gradients and slow convergence, while a large learning rate may lead to overshooting and instability."
+  },
+  {
+    "input": "Vanishing and Exploding Gradients",
+    "output": "Vanishing and exploding gradientsare common problems that can occur during the training of deep neural networks. These problems can significantly slow down the training process or even prevent the network from learning altogether.\nThe vanishing gradient problem occurs when gradients become too small during backpropagation. The weights of the network are not considerably changed as a result, and the network is unable to discover the underlying patterns in the data. Many-layered deep neural networks are especially prone to this issue. The gradient values fall exponentially as they move backward through the layers, making it challenging to efficiently update the weights in the earlier layers.\nThe exploding gradient problem, on the other hand, occurs when gradients become too large during backpropagation. When this happens, the weights are updated by a large amount, which can cause the network to diverge or oscillate, making it difficult to converge to a good solution.\nWeights Regularzations:The initialization of weights can be adjusted to ensure that they are in an appropriate range. Using a different activation function, such as the Rectified Linear Unit (ReLU), can also help to mitigate the vanishing gradient problem.\nGradient clipping:It involves limiting the maximum and minimum values of the gradient during backpropagation. This can prevent the gradients from becoming too large or too small and can help to stabilize the training process.\nBatch normalization:It can also help to address these problems by normalizing the input to each layer, which can prevent the activation function from saturating and help to reduce the vanishing and exploding gradient problems."
+  },
+  {
+    "input": "Different Variants of Gradient Descent",
+    "output": "There are several variants of gradient descent that differ in the way the step size or learning rate is chosen and the way the updates are made. Here are some popular variants:"
+  },
+  {
+    "input": "Batch Gradient Descent",
+    "output": "Inbatch gradient descent, To update the model parameter values like weight and bias, the entire training dataset is used to compute the gradient and update the parameters at each iteration. This can be slow for large datasets but may lead to a more accurate model. It is effective for convex or relatively smooth error manifolds because it moves directly toward an optimal solution by taking a large step in the direction of the negative gradient of the cost function. However, it can be slow for large datasets because it computes the gradient and updates the parameters using the entire training dataset at each iteration. This can result in longer training times and higher computational costs."
+  },
+  {
+    "input": "Stochastic Gradient Descent (SGD)",
+    "output": "InSGD, only one training example is used to compute the gradient and update the parameters at each iteration. This can be faster than batch gradient descent but may lead to more noise in the updates."
+  },
+  {
+    "input": "Mini-batch Gradient Descent",
+    "output": "InMini-batch gradient descenta small batch of training examples is used to compute the gradient and update the parameters at each iteration. This can be a good compromise between batch gradient descent and Stochastic Gradient Descent, as it can be faster than batch gradient descent and less noisy than Stochastic Gradient Descent."
+  },
+  {
+    "input": "Momentum-based Gradient Descent",
+    "output": "Inmomentum-based gradient descent, Momentum is a variant of gradient descent that incorporates information from the previous weight updates to help the algorithm converge more quickly to the optimal solution. Momentum adds a term to the weight update that is proportional to the running average of the past gradients, allowing the algorithm to move more quickly in the direction of the optimal solution. The updates to the parameters are based on the current gradient and the previous updates. This can help prevent the optimization process from getting stuck in local minima and reach the global minimum faster."
+  },
+  {
+    "input": "Nesterov Accelerated Gradient (NAG)",
+    "output": "Nesterov Accelerated Gradient (NAG) is an extension of Momentum Gradient Descent. It evaluates the gradient at a hypothetical position ahead of the current position based on the current momentum vector, instead of evaluating the gradient at the current position. This can result in faster convergence and better performance."
+  },
+  {
+    "input": "Adagrad",
+    "output": "InAdagrad, the learning rate is adaptively adjusted for each parameter based on the historical gradient information. This allows for larger updates for infrequent parameters and smaller updates for frequent parameters."
+  },
+  {
+    "input": "RMSprop",
+    "output": "InRMSpropthe learning rate is adaptively adjusted for each parameter based on the moving average of the squared gradient. This helps the algorithm to converge faster in the presence of noisy gradients."
+  },
+  {
+    "input": "Adam",
+    "output": "Adamstands for adaptive moment estimation, it combines the benefits of Momentum-based Gradient Descent, Adagrad, and RMSprop the learning rate is adaptively adjusted for each parameter based on the moving average of the gradient and the squared gradient, which allows for faster convergence and better performance on non-convex optimization problems. It keeps track of two exponentially decaying averages the first-moment estimate, which is the exponentially decaying average of past gradients, and the second-moment estimate, which is the exponentially decaying average of past squared gradients. The first-moment estimate is used to calculate the momentum, and the second-moment estimate is used to scale the learning rate for each parameter. This is one of the most popular optimization algorithms for deep learning."
+  },
+  {
+    "input": "Conclusion",
+    "output": "In the intricate landscape of machine learning and deep learning, the journey of model optimization revolves around the foundational concept of gradient descent and its diverse variants. Through the lens of this powerful optimization algorithm, we explored the intricacies of minimizing the cost function, a pivotal task in training models."
   }
 ]
