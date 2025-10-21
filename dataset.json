@@ -11462,5 +11462,37 @@
   {
     "input": "4. Model Initialization",
     "output": "This code defines a2D Convolutional Neural Network (CNN)in PyTorch forimage classificationinto10 classes.\nIn conclusion, batch normalization stands as a technique used in enhancing the training and performance of convolutional neural networks (CNNs).\nFor more detailed explanation regarding the implementation, refer to"
+  },
+  {
+    "input": "Need of Batch Normalization",
+    "output": "Batch Normalization makes sure outputs of each layer stay steady as model learns. This helps model train faster and learn more effectively.\nSolves the problem of internal covariate shift.\nMakes training faster and more stable.\nAllows use of higher learning rates.\nHelps avoid vanishing or exploding gradients.\nCan act like a regularizer sometimes reduce the need for dropout."
+  },
+  {
+    "input": "Fundamentals of Batch Normalization",
+    "output": "In this section we are going to discuss the steps taken to perform batch normalization."
+  },
+  {
+    "input": "Step 1: Compute the Mean and Variance of Mini-Batches",
+    "output": "For mini-batch of activationsx_1​,x_2​,...,x_m​, the meanμ_B​ and variance\\sigma_{B}^{2}of the mini-batch are computed."
+  },
+  {
+    "input": "Step 2: Normalization",
+    "output": "Each activationx_i​is normalized using the computed mean and variance of the mini-batch. The normalization process subtracts the mean\\mu_B​ from each activation and divides by the square root of the variance\\sigma_{B}^{2}​, ensuring that the normalized activations have a zero mean and unit variance.\nAdditionally a small constant\\epsilonis added to the denominator for numerical stability, particularly to prevent division by zero.\n\\widehat{x_i} = \\frac{x_i - \\mu_{B}}{\\sqrt{\\sigma_{B}^{2} +\\epsilon}}"
+  },
+  {
+    "input": "Step 3: Scale and Shift the Normalized Activations",
+    "output": "The normalized activationsx^iare then scaled by a learnable parameter\\gammaand shifted by another learnable parameter\\beta. These parameters allow the model to learn the optimal scaling and shifting of the normalized activations giving the network additional flexibility.\ny_i = \\gamma \\widehat{x_i} + \\beta"
+  },
+  {
+    "input": "Batch Normalization in TensorFlow",
+    "output": "In the code below we built a simple neural network usingTensorFlow. We added Batch Normalization layer usingtf.keras.layers.BatchNormalization(). This layer helps normalize the output or activations from the previous layer"
+  },
+  {
+    "input": "Batch Normalization in PyTorch",
+    "output": "In the following code we have build a simple neural network with batch normalization usingPyTorch. We have define a subclass of 'nn.Module' and added the 'nn.BatchNorm1D' after the first fully connected layer to normalize the activations.\nWe have used 'nn.BatchNorm1D' as the input data is one-dimensional but for two-dimensional data like Convolutional Neural Networks 'BatchNorm2D' is used."
+  },
+  {
+    "input": "Benefits of Batch Normalization",
+    "output": "Faster Convergence:Batch Normalization reduces internal covariate shift, allowing for faster convergence during training.\nHigher Learning Rates:With Batch Normalization, higher learning rates can be used without the risk of divergence.\nRegularization Effect:Batch Normalization introduces a slight regularization effect that reduces the need for adding regularization techniques like dropout.\nBy normalizing the inputs to each layer Batch Normalization helps stabilize the learning process and allows for faster convergence, making training more effective and reducing the need for careful initialization and learning rate tuning."
   }
 ]
