@@ -10970,5 +10970,65 @@
   {
     "input": "Applications",
     "output": "Here are some common applications:\nImage Generation: Creates new realistic images by sampling from learned latent distributions.\nAnomaly Detection:Identifies anomalies by measuring how well input data is reconstructed.\nDimensionality Reduction: Produces low-dimensional latent spaces useful for visualization and clustering.\nNow lets see the practical implementation.\nx_train = np.reshape(x_train, (len(x_train), 28, 28, 1)): Reshapes training images to 28x28 with 1 channel for Conv2D input.\ninput_img = tf.keras.Input(shape=(28, 28, 1)): Defines input layer for grayscale images with shape 28x28x1.\ntf.keras.layers.MaxPooling2D((2, 2), padding='same')(x): Reduces spatial dimensions by half using max pooling with same padding.\ndecoded = tf.keras.layers.Conv2D(1, (3, 3), activation='sigmoid', padding='same')(x): Outputs reconstructed image with 1 channel and sigmoid activation for pixel values between 0 and 1.\nOutput:\nBy choosing the right type of autoencoder, we can solve a range of problems effectively and make the most of our data."
+  },
+  {
+    "input": "1. Feedforward Neural Networks",
+    "output": "Feedforward neural networksare a form of artificial neural network where without forming any cycles between layers or nodes means inputs can pass data through those nodes within the hidden level to the output nodes.\nArchitecture:Made up of layers with unidirectional flow of data i.e., from input through hidden and the output layer.\nTraining:Backpropagation is often used during training for the main aim of reducing the prediction errors.\nApplications:In visual and voice recognition, NLP, financial forecasting and recommending system\nWhen to use:Best for general-purpose tasks like classification and regression. Ideal when data is static and has no sequential dependencies."
+  },
+  {
+    "input": "2. Convolutional Neural Networks (CNNs)",
+    "output": "Convolutional neural networksstructure is focused on processing the grid type data like images and videos by using convolutional layers filtering driving the patterns and spatial hierarchies.\nKey Components:Utilizing convolutional layers, pooling layers and fully connected layers.\nApplications:Used for classification of images, object detection, medical imaging analyzes, autonomous driving and visualization in augmented reality.\nWhen to use:Use when working with image, video or grid-structured data."
+  },
+  {
+    "input": "3. Recurrent Neural Networks (RNNs)",
+    "output": "Recurrent neural networkhandles sequential data in which the current output is a result of previous inputs by looping over themselves to hold internal state (memory).\nArchitecture:Contains recurrent connections that enable feedback loops for processing sequences.\nChallenges:Problems such as vanishing gradients become apparent since they limit capturing interdependence on a long scale.\nApplications:Language translation, open-ended text classification, ones to ones interaction and time series prediction are its applications.\nWhen to use:Use for tasks involving sequences like text, speech or time series."
+  },
+  {
+    "input": "4. Long Short-Term Memory Networks (LSTMs)",
+    "output": "Long Short-Term Memory Networks (LSTMs)are a variant of RNNs. They exhibit memory cells to solve the disappearing gradient issue and keep large ranges of information in their memory.\nKey Features:Capture memory cells in pass information flowing and graduate greediness issue.\nApplications: Value of RNNs is in terms of importing long-term memory into the model like language translation and time-series forecasting.\nWhen to use:Use when you need to model long-term dependencies in sequences."
+  },
+  {
+    "input": "5. Gated Recurrent Units (GRUs)",
+    "output": "Gated Recurrent Units (GRUs)is the second usual variant of RNNs which is working on gating mechanism just like LSTM but with little parameter.\nAdvantages:Vanishing gradient issue is addressed and it is compute-efficient than LSTM.\nApplications:LSTM is also involved in tasks that can be categorized as similar to speech recognition and text monitoring.\nWhen to use:Use when LSTM-like performance is needed but with lower computational cost."
+  },
+  {
+    "input": "6. Radial Basis Function Networks (RBFNs)",
+    "output": "Radial basis function (RBF)networks can be regarded as models which define radial basis functions that are very useful in the function approximation and classification approaches and is used in complex input-output data modelling.\n\nApplications:It includes regression, pattern recognition and system control methods for fast-tracking.\nWhen to use:Good choice for function approximation and small to medium-scale classification tasks."
+  },
+  {
+    "input": "7. Self-Organizing Maps (SOMs)",
+    "output": "Self-Organizing Mapsare unsupervised neural networks, these networks are used for unsupervised cluster generation based on the retaining of topological features of the high dimensional data from an upper dimensional source, transformed into low dimensional form of output data.\nFeatures:Design methods that reduces the dimension of data from the high dimension into a low dimension without loss of the underlying geometry of the data.\nApplications:Visualizing data, discovering customers segments, locating anomalies and selecting needed features.\nWhen to use:Ideal for data visualization, clustering and dimensionality reduction."
+  },
+  {
+    "input": "8. Deep Belief Networks (DBNs)",
+    "output": "The architecture of theDeep Belief Networksis built on many stochastic, latent variables that are used for both deep supervised and unsupervised tasks such as nonlinear feature learning and mid dimensional representation.\nFunction:If you are looking for the most effective architecture of data that can be learned via classification, this algorithm is very useful.\nApplications:Image and voice recognition, natural language understanding and smart devices as recommendations systems.\nWhen to use:Use when you're interested in unsupervised pre-training or deep feature extraction."
+  },
+  {
+    "input": "9. Generative Adversarial Networks (GANs)",
+    "output": "Generative Adversarial Networkshas made up of of two neural networks, the generator and discriminator which compete against each other. The generator creates a fake generated data and the discriminator learns to differentiate the real from and fake data.\nWorking Principle:Generator evolves after each iteration while the fake data being generated. This simultaneously makes the discriminator more discriminating as it determines whether the components are real or generated.\nApplications:They have proved useful not only for pattern generation but also data augmentation, style transfer and learning without any supervision.\nWhen to use:Use when you need to generate realistic synthetic data."
+  },
+  {
+    "input": "10. Autoencoders (AE)",
+    "output": "Autoencodersare feedforward networks (ANNs) that are trained to acquire the most helpful presentations of the information through the process of re-coding the input data. The encoder is pinpointed to precisely map the input into the legal latent space representation while the decoder does the opposite, decoding the space from this representation.\nFunctionality:Help in techniques like dimensionality reduction, information extraction, noise removal and generative modelling the images become comprehensible.\nTypes:Variants include undercomplete, overcomplete and variational autoencoders.\nWhen to use:Use for unsupervised learning tasks like data compression, noise removal and anomaly detection."
+  },
+  {
+    "input": "11. Transformer Networks",
+    "output": "Transformer Networksdo this by way of self-attention mechanism which results into a parallel process used for making the tokenization inputs faster and thus improved capturing of long range dependencies.\nKey Features:Provides better performance than any of the other models due to their capability to process natural language sufficiently and handle tasks related to machine translation, generating text and document summarization.\nApplications:The application of this technology had got more popular, specially in language understanding tasks and image and audio data processing applications of this time and more similar tasks.\nWhen to use:Use for NLP tasks like translation, text generation and summarization."
+  },
+  {
+    "input": "12. Siamese Neural Networks",
+    "output": "Siamese Neural Networkwork with networks of the same structure and an identical architecture. Comparison is being made via a similarity metric that can tell the degree of resemblance the two networks have.\nApplications:Face recognition as the signature, retrieval of information, image similarity comparison and category tasks.\nWhen to use:Ideal when comparing two inputs to determine similarity like face verification."
+  },
+  {
+    "input": "13. Capsule Networks (CapsNet)",
+    "output": "The layers ofCapsule Networksdo not only incorporate localization relations of data but allows multilevel structure by passing the information from lower convolutional layers to higher. They use cyclicals to the items and their bodies too, of course, they do not do that at the same time.\nApplications:Image classification, object detection and scene understanding via the immense visual data exposure.\nWhen to use:Use for image classification where part-to-whole relationships matter."
+  },
+  {
+    "input": "14. Spiking Neural Networks (SNN)",
+    "output": "Main thing related withSpiking Neural Networksis the brain functionality which is processed by action potentials (spikes) in biological neurons in the same way. These are the key factors of \"neuromorphic\" technology which perform the deep learning and avoid another type of processing as well.\nApplications:Neuromorphic processes, learning and computation in spiro-neural computing, cognitive processes modeling and mind-related computing are also carried out with this.\nWhen to use:Use when working on neuromorphic computing and biologically inspired architectures."
+  },
+  {
+    "input": "Applications",
+    "output": "The uses of neural networks are diverse and cut across many distinct industries and domains. Some of its applications are:\nHealthcare:Neural networks play a critical role in medical image analysis, disease diagnosis, personalized treatment plans, drug discovery and healthcare management systems.\nFinance:They have a very strong influence on algorithmic trading, fraud detection, credit scoring, risk management and portfolio optimization.\nEntertainment:They allow development of recommendation systems for movies, music, books and character animation as well as virtual reality experiences.\nManufacturing:They innovate in supply chain management especially in optimizing it, predictive maintenance, quality control processes and industrial automation.\nTransportation:The human brain is incorporated into the auto-piloted cars for the purpose of perception, making decisions and navigation.\nEnvironmental Sciences:They help construct climate models, satellite monitoring and ecological observation."
   }
 ]
