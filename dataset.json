@@ -9058,5 +9058,37 @@
   {
     "input": "Limitations and Challenges",
     "output": "Both architectures are fundamental building blocks in modern deep learning, often combined in approaches to use their respective strengths. Using these basics provides a solid foundation for exploring more advanced neural network architectures translation, speech-to-text conversion and robotic control."
+  },
+  {
+    "input": "Image processing mainly include the following steps:",
+    "output": "1.Importing the image via image acquisition tools;2.Analysing and manipulating the image;3.Output in which result can be altered image or a report which is based on analysing that image."
+  },
+  {
+    "input": "What is an image?",
+    "output": "An image is defined as a two-dimensional function,F(x,y), where x and y are spatial coordinates, and the amplitude ofFat any pair of coordinates (x,y) is called theintensityof that image at that point. When x,y, and amplitude values ofFare finite, we call it adigital image.In other words, an image can be defined by a two-dimensional array specifically arranged in rows and columns.Digital Image is composed of a finite number of elements, each of which elements have a particular value at a particular location.These elements are referred to aspicture elements,image elements,and pixels.APixelis most widely used to denote the elements of a Digital Image."
+  },
+  {
+    "input": "Types of an image",
+    "output": "A 16 bit format is actually divided into three further formats which are Red, Green and Blue. That famous RGB format."
+  },
+  {
+    "input": "Image as a Matrix",
+    "output": "As we know, images are represented in rows and columns we have the following syntax in which images are represented:\n\nThe right side of this equation is digital image by definition. Every element of this matrix is called image element , picture element , or pixel."
+  },
+  {
+    "input": "DIGITAL IMAGE REPRESENTATION IN MATLAB:",
+    "output": "In MATLAB the start index is from 1 instead of 0. Therefore, f(1,1) = f(0,0).henceforth the two representation of image are identical, except for the shift in origin.In MATLAB, matrices are stored in a variable i.e X,x,input_image , and so on. The variables must be a letter as same as other programming languages."
+  },
+  {
+    "input": "PHASES OF IMAGE PROCESSING:",
+    "output": "1.ACQUISITION- It could be as simple as being given an image which is in digital form. The main work involves:a) Scalingb) Color conversion(RGB to Gray or vice-versa)2.IMAGE ENHANCEMENT- It is amongst the simplest and most appealing in areas of Image Processing it is also used to extract some hidden details from an image and is subjective.3.IMAGE RESTORATION- It also deals with appealing of an image but it is objective(Restoration is based on mathematical or probabilistic model or image degradation).4.COLOR IMAGE PROCESSING- It deals with pseudocolor and full color image processing color models are applicable to digital image processing.5.WAVELETS AND MULTI-RESOLUTION PROCESSING- It is foundation of representing images in various degrees.6.IMAGE COMPRESSION-It involves in developing some functions to perform this operation. It mainly deals with image size or resolution.7.MORPHOLOGICAL PROCESSING-It deals with tools for extracting image components that are useful in the representation & description of shape.8.SEGMENTATION PROCEDURE-It includes partitioning an image into its constituent parts or objects. Autonomous segmentation is the most difficult task in Image Processing.9.REPRESENTATION & DESCRIPTION-It follows output of segmentation stage, choosing a representation is only the part of solution for transforming raw data into processed data.10.OBJECT DETECTION AND RECOGNITION-It is a process that assigns a label to an object based on its descriptor."
+  },
+  {
+    "input": "OVERLAPPING FIELDS WITH IMAGE PROCESSING",
+    "output": "According to block 1,if input is an image and we get out image as a output, then it is termed as Digital Image Processing.According to block 2,if input is an image and we get some kind of information or description as a output, then it is termed as Computer Vision.According to block 3,if input is some description or code and we get image as an output, then it is termed as Computer Graphics.According to block 4,if input is description or some keywords or some code and we get description or some keywords as a output,then it is termed as Artificial Intelligence"
+  },
+  {
+    "input": "REFERENCES",
+    "output": "Digital Image Processing (Rafael c. gonzalez)\nReference books:\n\"Digital Image Processing\" by Rafael C. Gonzalez and Richard E. Woods.\"Computer Vision: Algorithms and Applications\" by Richard Szeliski.\"Digital Image Processing Using MATLAB\" by Rafael C. Gonzalez, Richard E. Woods, and Steven L. Eddins."
   }
 ]
