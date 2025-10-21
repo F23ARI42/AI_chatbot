@@ -9398,5 +9398,33 @@
   {
     "input": "Mean Absolute Percentage Error (MAPE)",
     "output": "Expresses error as a percentage, making it scale-independent.\nCan be problematic when actual values are close to zero.\nComparison Table:"
+  },
+  {
+    "input": "Step 1: Import Required Libraries",
+    "output": "Importpytorchandmatplotlib."
+  },
+  {
+    "input": "Step 2: Define the Convolutional Autoencoder Architecture",
+    "output": "Encoder downsamples and learns spatial features.\nDecoder upsamples (reconstructs) to the original image shape.\nSigmoid() ensures the output pixel values are between 0 and 1."
+  },
+  {
+    "input": "Step 3: Data Preparation: Transformers and Dataloader",
+    "output": "Images are resized and converted to tensors.\nDataLoader batches data and shuffles during training."
+  },
+  {
+    "input": "Step 4: Set Device to Cuda(GPU)",
+    "output": "Uses GPU acceleration if available, speeding up training."
+  },
+  {
+    "input": "Step 5: Initialize Model, Loss Function and Optimizer",
+    "output": "Model and optimizer are set up.\nMSELoss computes pixel-wise reconstruction error."
+  },
+  {
+    "input": "Step 6: Training Loop",
+    "output": "For each batch: moves images to device, computes forward pass and loss, updates weights.\nTracks loss for monitoring; prints progress every 5 epochs.\nOutput:"
+  },
+  {
+    "input": "Step 7: Save the Model and Visualize",
+    "output": "Output:\nHere we can see that our Convolutional Autoencoder model is working fine."
   }
 ]
