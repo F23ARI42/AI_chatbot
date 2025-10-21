@@ -8238,5 +8238,29 @@
   {
     "input": "Disadvantages",
     "output": "Some of the disadvantages of PPO are:"
+  },
+  {
+    "input": "Why Non-Linearity is Important",
+    "output": "Real-world data is rarely linearly separable.\nNon-linear functions allow neural networks to formcurved decision boundaries, making them capable of handling complex patterns (e.g., classifying apples vs. bananas under varying colors and shapes).\nThey ensure networks can model advanced problems like image recognition, NLP and speech processing."
+  },
+  {
+    "input": "Mathematical Example",
+    "output": "Consider a neural network with:\nInputs:i1, i2​\nHidden layer:neurons h1​and h2​\nOutput layer:one neuron (output)\nWeights:w1, w2, w3, w4, w5, w6\nBiases:b1​for hidden layer, b2​ for output layer\nThe hidden layer outputs are:\n{h_1} = i_1.w_1 + i_2.w_3 + b_1\n{h_2} = i_1.w_2 + i_2.w_4 + b_2\nThe output before activation is:\nWithout activation, these are linear equations.\nTo introduce non-linearity, we apply a sigmoid activation:\n\\sigma(x) = \\frac{1}{1+e^{-x}}\nThis gives the final output of the network after applying the sigmoid activation function in output layers, introducing the desired non-linearity."
+  },
+  {
+    "input": "1. Linear Activation Function",
+    "output": "Linear Activation Function resembles straight line define by y=x. No matter how many layers the neural network contains if they all use linear activation functions the output is a linear combination of the input.\nThe range of the output spans from(-\\infty \\text{ to } + \\infty).\nLinear activation function is used at just one place i.e. output layer.\nUsing linear activation across all layers makes the network's ability to learn complex patterns limited.\nLinear activation functions are useful for specific tasks but must be combined with non-linear functions to enhance the neural network’s learning and predictive capabilities."
+  },
+  {
+    "input": "2. Non-Linear Activation Functions",
+    "output": "1. Sigmoid Function\nSigmoid Activation Functionis characterized by 'S' shape. It is mathematically defined asA = \\frac{1}{1 + e^{-x}}​. This formula ensures a smooth and continuous output that is essential for gradient-based optimization methods.\nIt allows neural networks to handle and model complex patterns that linear equations cannot.\nThe output ranges between 0 and 1, hence useful for binary classification.\nThe function exhibits a steep gradient when x values are between -2 and 2. This sensitivity means that small changes in input x can cause significant changes in output y which is critical during the training process.\n2. Tanh Activation Function\nTanh function(hyperbolic tangent function) is a shifted version of the sigmoid, allowing it to stretch across the y-axis. It is defined as:\nf(x) = \\tanh(x) = \\frac{2}{1 + e^{-2x}} - 1.\nAlternatively, it can be expressed using the sigmoid function:\n\\tanh(x) = 2 \\times \\text{sigmoid}(2x) - 1\nValue Range: Outputs values from -1 to +1.\nNon-linear: Enables modeling of complex data patterns.\nUse in Hidden Layers: Commonly used in hidden layers due to its zero-centered output, facilitating easier learning for subsequent layers.\n3. ReLU(Rectified Linear Unit)Function\nReLU activationis defined byA(x) = \\max(0,x), this means that if the input x is positive, ReLU returns x, if the input is negative, it returns 0.\nValue Range:[0, \\infty), meaning the function only outputs non-negative values.\nNature: It is a non-linear activation function, allowing neural networks to learn complex patterns and making backpropagation more efficient.\nAdvantage over other Activation:ReLU is less computationally expensive than tanh and sigmoid because it involves simpler mathematical operations. At a time only a few neurons are activated making the network sparse making it efficient and easy for computation.\nd) Leaky ReLU\nf(x) = \\begin{cases} x, & x > 0 \\\\ \\alpha x, & x \\leq 0 \\end{cases}\nLeaky ReLUis similar to ReLU but allows a small negative slope (\\alpha, e.g., 0.01) instead of zero.\nSolves the “dying ReLU” problem, where neurons get stuck with zero outputs.\nRange:(-\\infty, \\infty).\nPreferred in some cases for better gradient flow."
+  },
+  {
+    "input": "3.Exponential Linear Units",
+    "output": "1. Softmax Function\nSoftmax functionis designed to handle multi-class classification problems. It transforms raw output scores from a neural network into probabilities. It works by squashing the output values of each class into the range of 0 to 1 while ensuring that the sum of all probabilities equals 1.\nSoftmax is a non-linear activation function.\nThe Softmax function ensures that each class is assigned a probability, helping to identify which class the input belongs to.\n2. SoftPlus Function\nSoftplus functionis defined mathematically as:A(x) = \\log(1 + e^x).\nThis equation ensures that the output is always positive and differentiable at all points which is an advantage over the traditional ReLU function.\nNature: The Softplus function is non-linear.\nRange: The function outputs values in the range(0, \\infty), similar to ReLU, but without the hard zero threshold that ReLU has.\nSmoothness: Softplus is a smooth, continuous function, meaning it avoids the sharp discontinuities of ReLU which can sometimes lead to problems during optimization."
+  },
+  {
+    "input": "Impact of Activation Functions on Model Performance",
+    "output": "The choice of activation function has a direct impact on the performance of a neural network in several ways:"
   }
 ]
