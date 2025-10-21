@@ -11494,5 +11494,61 @@
   {
     "input": "Benefits of Batch Normalization",
     "output": "Faster Convergence:Batch Normalization reduces internal covariate shift, allowing for faster convergence during training.\nHigher Learning Rates:With Batch Normalization, higher learning rates can be used without the risk of divergence.\nRegularization Effect:Batch Normalization introduces a slight regularization effect that reduces the need for adding regularization techniques like dropout.\nBy normalizing the inputs to each layer Batch Normalization helps stabilize the learning process and allows for faster convergence, making training more effective and reducing the need for careful initialization and learning rate tuning."
+  },
+  {
+    "input": "Understanding Forward Propogation",
+    "output": "InForward propagationinput data moves through each layer of neural network where each neuron applies weighted sum, adds bias, passes the result through anactivation functionand making predictions. This process is crucial beforebackpropagationupdates the weights. It determines the output of neural network with a given set of inputs and current state of model parameters (weights and biases). Understanding this process helps in optimizing neural networks for various tasks like classification, regression and more. Below is the step by step working of forward propagation:"
+  },
+  {
+    "input": "1.Input Layer",
+    "output": "The input data is fed into the network through the input layer.\nEach feature in the input dataset represents a neuron in this layer.\nThe input is usually normalized or standardized to improve model performance."
+  },
+  {
+    "input": "2.Hidden Layers",
+    "output": "The input moves through one or more hidden layers where transformations occur.\nEach neuron in hidden layer computes a weighted sum of inputs and applies activation function to introduce non-linearity.\nEach neuron receives inputs, computes:Z= W X + b, where:Wis the weight matrixXis the input vectorbis the bias term\nWis the weight matrix\nXis the input vector\nbis the bias term\nThe activation function such as ReLU or sigmoid is applied."
+  },
+  {
+    "input": "3.Output Layer",
+    "output": "The last layer in the network generates the final prediction.\nThe activation function of this layer depends on the type of problem:Softmax(for multi-class classification)Sigmoid(for binary classification)Linear(for regression tasks)\nSoftmax(for multi-class classification)\nSigmoid(for binary classification)\nLinear(for regression tasks)"
+  },
+  {
+    "input": "4.Prediction",
+    "output": "The network produces an output based on current weights and biases.\nThe loss function evaluates the error by comparing predicted output with actual values."
+  },
+  {
+    "input": "Mathematical Explanation of Forward Propagation",
+    "output": "Consider a neural network with one input layer, two hidden layers and one output layer."
+  },
+  {
+    "input": "1. Layer 1 (First Hidden Layer)",
+    "output": "The transformation is:A^{[1]} = \\sigma(W^{[1]}X + b^{[1]})where:\nW^{[1]}is the weight matrix,\nXis the input vector,\nb^{[1]}is the bias vector,\n\\sigmais the activation function."
+  },
+  {
+    "input": "2. Layer 2 (Second Hidden Layer)",
+    "output": "A^{[2]} = \\sigma(W^{[2]}A^{[1]} + b^{[2]})"
+  },
+  {
+    "input": "3. Output Layer",
+    "output": "Y = \\sigma(W^{[3]}A^{[2]} + b^{[3]})whereYis the final output. Thus the complete equation for forward propagation is:\nA^{[3]} = \\sigma(\\sigma(\\sigma(X W^{[1]} + b^{[1]}) W^{[2]} + b^{[2]}) W^{[3]} + b^{[3]})\nThis equation illustrates how data flows through the network:\nWeights (W) determine the importance of each input\nBiases (b) adjust activation thresholds\nActivation functions (\\sigma) introduce non-linearity to enable complex decision boundaries."
+  },
+  {
+    "input": "1. Import Required Libraries",
+    "output": "Here we will importNumpyandpandaslibrary."
+  },
+  {
+    "input": "2. Create Sample Dataset",
+    "output": "The dataset consists of CGPA, profile score and salary in LPA.\nXcontains only input features."
+  },
+  {
+    "input": "3. Initialize Parameters",
+    "output": "When initilaizing parametersRandom initializationavoids symmetry issues where neurons learn the same function."
+  },
+  {
+    "input": "4. Define Forward Propagation",
+    "output": "Z=WX+Bcomputes the linear transformation.\nSigmoid activation ensures values remain between 0 and 1."
+  },
+  {
+    "input": "5. Execute Forward Propagation",
+    "output": "Here we will execute the process of forward propagation using the above functions we created.\nOutput:\nEach number represents themodel's predicted probabilitybefore training for the given input. The values represent thesigmoid activation outputwhich ranges between 0 and 1 indicating a probability like score for classification. Understanding forward propagation is crucial for building and optimizing deep learning models as it forms the basis for making predictions before weight adjustments occur during backpropagation"
   }
 ]
