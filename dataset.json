@@ -11398,5 +11398,69 @@
   {
     "input": "Conclusion",
     "output": "Graph Neural Networkshave emerged as a powerful tool for processing and analyzing graph-structured data, finding applications across diverse fields such as social networks, biology, and transportation. As research continues to advance, addressing these limitations will enhance the effectiveness of GNNs, expanding their applicability and performance in real-world scenarios."
+  },
+  {
+    "input": "How Does Batch Normalization Work in CNN?",
+    "output": "Batch normalization works inconvolutional neural networks (CNNs)by normalizing the activations of each layer across mini-batch during training. The working is discussed below:"
+  },
+  {
+    "input": "1. Normalization within Mini-Batch",
+    "output": "In a CNN, each layer receives inputs from multiple channels (feature maps) and processes them through convolutional filters. Batch Normalization operates on each feature map separately, normalizing the activations across the mini-batch.\nDuring training, batch normalization (BN) regularizes the activations of each layer by subtracting the mean and dividing by the standard deviation of each mini-batch.\nMean Calculation:μ_B = \\frac{1}{m}\\sum_{i=1}^{m}{x_i}\nVariance Calculation:\\sigma_{B}^{2} = \\frac{1}{m} \\sum_{i=1}^{m}{(x_i - \\mu_B)^2}\nNormalization:\\widehat{x_i} = \\frac{x_i - \\mu_B}{\\sqrt{\\sigma_{B}^{2} + \\epsilon}}"
+  },
+  {
+    "input": "2. Scaling and Shifting",
+    "output": "After normalization, it adjusts the normalized activations using learned scaling and shifting parameters. These parameters enable the network to instantaneously scale and shift the activations thereby maintaining the network's ability to represent complex patterns in the data.\nScaling:\\gamma \\widehat{x_i}\nShifting:z_i = y_i + \\beta"
+  },
+  {
+    "input": "3. Learnable Parameters",
+    "output": "The parameters\\gammaand\\betaare learned during training through backpropagation. This allows the network to adjust the normalization and ensure that the activations are in the appropriate range for learning."
+  },
+  {
+    "input": "4. Applying Batch Normalization",
+    "output": "It is typically applied after the convolutional and activation layers in a CNN before passing the outputs to the next layer. It can also be applied before or after the activation function, depending on the network architecture."
+  },
+  {
+    "input": "5. Training and Inference",
+    "output": "During training, Batch Normalization calculates the mean and variance of each mini-batch. During testing, it uses the averaged mean and variance that are calculated during training to normalize the activations. This ensures consistent normalization between training and testing."
+  },
+  {
+    "input": "Applying Batch Normalization in CNN model using TensorFlow",
+    "output": "For applying batch normalization layers after the convolutional layers and before the activation functions, we usetensorflow's'tf.keras.layers.BatchNormalization()'."
+  },
+  {
+    "input": "2. Creating Sequential Model",
+    "output": "First Convolutional Block\nConv2D(32):Extracts low-level features (edges, textures).\nBatchNormalization():Stabilizes and speeds up training.\nMaxPooling2D():Reduces spatial size.\nSecond Convolutional Block\nConv2D(64):Learns deeper patterns.\nBatchNormalization():Normalizes activations.\nMaxPooling2D():Further reduces size.\nDense Layers(Classifier)\nFlatten():Converts 3D feature map to 1D.\nDense(64):Learns high-level combinations.\nDense(10, softmax):Outputs probabilities for 10 classes."
+  },
+  {
+    "input": "Applying Batch Normalization in 1D CNN model using PyTorch",
+    "output": "InPyTorch, we can easily apply batch normalization in a CNN model.  For applying BN in 1D Convolutional Neural Network model, we use 'nn.BatchNorm1d()'."
+  },
+  {
+    "input": "2. Defining the Model",
+    "output": "In this step, we structure our model:\nConv1d(3, 16): First convolution layer that transforms 3 input channels to 16 feature maps using 3-sized filters.\nBatchNorm1d(16): Normalizes the 16 output channels to improve training stability.\nConv1d(16, 32): Second convolutional layer, increasing feature channels to 32.\nBatchNorm1d(32): Normalizes the output from the second conv layer.\nLinear(32 * 28, 10): Fully connected layer that maps the flattened feature map to 10 output classes."
+  },
+  {
+    "input": "3. Forward Pass",
+    "output": "Prediction step and input flow:\nself.conv1 -> bn1 -> ReLU:Applies the first convolution and activates.\nself.conv2 -> bn2 -> ReLU:Applies the second convolution and activates.\nview(-1, 32 * 28):Flattens the 3D tensor into 2D for the dense layer.\nself.fc:Final layer that outputs a vector of size 10 (class scores)."
+  },
+  {
+    "input": "4. Initialize Model",
+    "output": "This code defines and creates a simple1D Convolutional Neural Network (CNN1D)in PyTorch for classification tasks."
+  },
+  {
+    "input": "Applying Batch Normalization in 2D CNN model using PyTorch",
+    "output": "For applying Batch Normalization in 2D Convolutional Neural Network model, we use 'nn.BatchNorm2d()'."
+  },
+  {
+    "input": "2. Structuring Model",
+    "output": "In this step, we define the model:\nConv2d(3, 16, 3, 1, 1): Applies 16 filters to a 3-channel image using 3×3 kernels. Padding keeps the image size unchanged.\nBatchNorm2d(16): Normalizes the 16 output feature maps from conv1.\nConv2d(16, 32, 3, 1, 1): Applies 32 filters, again preserving spatial dimensions.\nBatchNorm2d(32): Normalizes the output of conv2.\nLinear(32*28*28, 10): Fully connected layer that flattens the feature map and outputs scores for 10 classes."
+  },
+  {
+    "input": "3. Forward Pass",
+    "output": "Prediction step and input flow:\nConv1 -> BN -> ReLU: First feature extraction block.\nConv2 -> BN -> ReLU: Second feature extraction block.\nview(-1, 32*28*28): Flattens the 3D output to 1D for the dense layer.\nfc: Maps the extracted features to 10 output classes."
+  },
+  {
+    "input": "4. Model Initialization",
+    "output": "This code defines a2D Convolutional Neural Network (CNN)in PyTorch forimage classificationinto10 classes.\nIn conclusion, batch normalization stands as a technique used in enhancing the training and performance of convolutional neural networks (CNNs).\nFor more detailed explanation regarding the implementation, refer to"
   }
 ]
