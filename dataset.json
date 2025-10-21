@@ -10170,5 +10170,85 @@
   {
     "input": "Conclusion",
     "output": "MobileNet V2 is a powerful and efficient neural network architecture designed for mobile and embedded applications. Its innovative design, featuring inverted residuals and linear bottlenecks, enables high performance with low computational requirements. Whether for image classification, object detection, or other vision-based tasks, MobileNet V2 provides a robust solution for deploying AI on resource-constrained devices."
+  },
+  {
+    "input": "Importance of Neural Networks",
+    "output": "Identify Complex Patterns:Recognize intricate structures and relationships in data; adapt to dynamic and changing environments.\nLearn from Data:Handle vast datasets efficiently; improve performance with experience and retraining.\nDrive Key Technologies:Power natural language processing (NLP); enable self-driving vehicles; support automated decision-making systems.\nBoost Efficiency:Streamline workflows and processes; enhance productivity across industries.\nBackbone of AI:Serve as the core driver of artificial intelligence progress; continue shaping the future of technology and innovation."
+  },
+  {
+    "input": "1. Forward Propagation",
+    "output": "When data is input into the network, it passes through the network in the forward direction, from the input layer through the hidden layers to the output layer. This process is known as forward propagation. Here’s what happens during this phase:\n1. Linear Transformation:Each neuron in a layer receives inputs which are multiplied by the weights associated with the connections. These products are summed together and a bias is added to the sum. This can be represented mathematically as:\nwhere\nwrepresents the weights\nxrepresents the inputs\nbis the bias\n2. Activation:The result of the linear transformation (denoted asz) is then passed through an activation function. The activation function is crucial because it introduces non-linearity into the system, enabling the network to learn more complex patterns. Popular activation functions include ReLU, sigmoid and tanh."
+  },
+  {
+    "input": "2. Backpropagation",
+    "output": "After forward propagation, the network evaluates its performance using a loss function which measures the difference between the actual output and the predicted output. The goal of training is to minimize this loss. This is where backpropagation comes into play:\nLoss Calculation:The network calculates the loss which provides a measure of error in the predictions. The loss function could vary; common choices are mean squared error for regression tasks or cross-entropy loss for classification.\nGradient Calculation:The network computes the gradients of the loss function with respect to each weight and bias in the network. This involves applying the chain rule of calculus to find out how much each part of the output error can be attributed to each weight and bias.\nWeight Update:Once the gradients are calculated, the weights and biases are updated using an optimization algorithm like stochastic gradient descent (SGD). The weights are adjusted in the opposite direction of the gradient to minimize the loss. The size of the step taken in each update is determined by the learning rate."
+  },
+  {
+    "input": "3. Iteration",
+    "output": "This process of forward propagation, loss calculation, backpropagation and weight update is repeated for many iterations over the dataset. Over time, this iterative process reduces the loss and the network's predictions become more accurate.\nThrough these steps, neural networks can adapt their parameters to better approximate the relationships in the data, thereby improving their performance on tasks such as classification, regression or any other predictive modeling."
+  },
+  {
+    "input": "Example of Email Classification",
+    "output": "Let's consider a record of an email dataset:\nTo classify this email, we will create a feature vector based on the analysis of keywords such as \"free\" \"win\" and \"offer\"\nThe feature vector of the record can be presented as:\n\"free\": Present (1)\n\"win\": Absent (0)\n\"offer\": Present (1)"
+  },
+  {
+    "input": "How Neurons Process Data in a Neural Network",
+    "output": "In a neural network, input data is passed through multiple layers, including one or more hidden layers. Each neuron in these hidden layers performs several operations, transforming the input into a usable output.\n1. Input Layer:The input layer contains 3 nodes that indicates the presence of each keyword.\n2. Hidden Layer: The input vector is passed through the hidden layer. Each neuron in the hidden layer performs two primary operations: a weighted sum followed by an activation function.\nWeights:\nNeuron H1: [0.5,−0.2,0.3]\nNeuron H2: [0.4,0.1,−0.5]\nInput Vector: [1,0,1]\nWeighted Sum Calculation\nFor H1:  (1×0.5)+(0×−0.2)+(1×0.3)=0.5+0+0.3=0.8\nFor H2:(1×0.4)+(0×0.1)+(1×−0.5)=0.4+0−0.5=−0.1\nActivation Function\nHere we will useReLu activation function:\nH1 Output:ReLU(0.8)= 0.8\nH2 Output:ReLu(-0.1) = 0\n3. Output Layer:The activated values from the hidden neurons are sent to the output neuron where they are again processed using a weighted sum and an activation function.\nOutput Weights:[0.7, 0.2]\nInput from Hidden Layer:[0.8, 0]\nWeighted Sum:(0.8×0.7)+(0×0.2)=0.56+0=0.56\nActivation (Sigmoid):\\sigma(0.56) = \\frac{1}{1 + e^{-0.56}} \\approx 0.636\n4. Final Classification:\nThe output value of approximately0.636indicates the probability of the email being spam.\nSince this value is greater than 0.5, the neural network classifies the email as spam (1)."
+  },
+  {
+    "input": "1. Learning with Supervised Learning",
+    "output": "In supervised learning, a neural network learns from labeled input-output pairs provided by a teacher. The network generates outputs based on inputs and by comparing these outputs to the known desired outputs, an error signal is created. The network iteratively adjusts its parameters to minimize errors until it reaches an acceptable performance level."
+  },
+  {
+    "input": "2. Learning with Unsupervised Learning",
+    "output": "Unsupervised learning involves data without labeled output variables. The primary goal is to understand the underlying structure of the input data (X). Unlike supervised learning, there is no instructor to guide the process. Instead, the focus is on modeling data patterns and relationships, with techniques like clustering and association commonly used."
+  },
+  {
+    "input": "3. Learning with Reinforcement Learning",
+    "output": "Reinforcement learning enables a neural network to learn through interaction with its environment. The network receives feedback in the form of rewards or penalties, guiding it to find an optimal policy or strategy that maximizes cumulative rewards over time. This approach is widely used in applications like gaming and decision-making."
+  },
+  {
+    "input": "Types of Neural Networks",
+    "output": "There are seven types of neural networks that can be used.\nFeedforward Networks:It is a simple artificial neural network architecture in which data moves from input to output in a single direction.\nSinglelayer Perceptron:It has one layer and it applies weights, sums inputs and uses activation to produce output.\nMultilayer Perceptron (MLP):It is a type of feedforward neural network with three or more layers, including an input layer, one or more hidden layers and an output layer. It uses nonlinear activation functions.\nConvolutional Neural Network (CNN):It is designed for image processing. It uses convolutional layers to automatically learn features from input images, enabling effective image recognition and classification.\nRecurrent Neural Network (RNN):Handles sequential data using feedback loops to retain context over time.\nLong Short-Term Memory (LSTM):A type of RNN with memory cells and gates to handle long-term dependencies and avoid vanishing gradients."
+  },
+  {
+    "input": "Implementation of Neural Network using TensorFlow",
+    "output": "Here, we implement simple feedforward neural network that trains on a sample dataset and makes predictions using following steps:"
+  },
+  {
+    "input": "Step 1: Import Necessary Libraries",
+    "output": "Import necessary libraries, primarilyTensorFlowandKeras, along with other required packages such asNumPyandPandasfor data handling."
+  },
+  {
+    "input": "Step 2: Create and Load Dataset",
+    "output": "Create or load a dataset. Convert the data into a format suitable for training (usually NumPy arrays).\nDefine features (X) and labels (y)."
+  },
+  {
+    "input": "Step 3: Create a Neural Network",
+    "output": "Instantiate a Sequential model and add layers. The input layer and hidden layers are typically created usingDenselayers, specifying the number of neurons and activation functions."
+  },
+  {
+    "input": "Step 4: Compiling the Model",
+    "output": "Compile the model by specifying the loss function, optimizer and metrics to evaluate during training. Here we will usebinary crossentropyandadam optimizer."
+  },
+  {
+    "input": "Step 5: Train the Model",
+    "output": "Fit the model on the training data, specifying the number of epochs and batch size. This step trains the neural network to learn from the input data."
+  },
+  {
+    "input": "Step 6: Make Predictions",
+    "output": "Use the trained model to make predictions on new data. Process the output to interpret the predictions like converting probabilities to binary outcomes.\nOutput:"
+  },
+  {
+    "input": "Advantages",
+    "output": "Neural networks are widely used in many different applications because of their many benefits:\nAdaptability:Neural networks are useful for activities where the link between inputs and outputs is complex or not well defined because they can adapt to new situations and learn from data.\nPattern Recognition:Their proficiency in pattern recognition renders them efficacious in tasks like as audio and image identification, natural language processing and other intricate data patterns.\nParallel Processing:Because neural networks are capable of parallel processing by nature, they can process numerous jobs at once which speeds up and improves the efficiency of computations.\nNon-Linearity:Neural networks are able to model and comprehend complicated relationships in data by virtue of the non-linear activation functions found in neurons which overcome the drawbacks of linear models."
+  },
+  {
+    "input": "Limitations",
+    "output": "Neural networks while powerful, are not without drawbacks and difficulties:\nComputational Intensity:Large neural network training can be a laborious and computationally demanding process that demands a lot of computing power.\nBlack box Nature:As \"black box\" models, neural networks pose a problem in important applications since it is difficult to understand how they make decisions.\nOverfitting:Overfitting is a phenomenon in which neural networks commit training material to memory rather than identifying patterns in the data. Although regularization approaches help to alleviate this, the problem still exists.\nNeed for Large datasets:For efficient training, neural networks frequently need sizable, labeled datasets; otherwise, their performance may suffer from incomplete or skewed data."
+  },
+  {
+    "input": "Applications",
+    "output": "Neural networks have numerous applications across various fields:"
   }
 ]
