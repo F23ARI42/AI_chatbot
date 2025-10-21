@@ -8878,5 +8878,41 @@
   {
     "input": "Machine Learning vs Deep Learning",
     "output": "Machine learningand deep learning are two important branches of artificial intelligence, often used for similar tasks but with different capabilities and approaches. This section offers a simple comparison to help understand where each technique fits best and how they differ in real-world use.\nDeep learning is a core part of many technologies we use today. It is making systems smarter and more useful, as technology continues to grow, we expect even more helpful and creative uses of deep learning in the future."
+  },
+  {
+    "input": "Introduction to Neural Networks",
+    "output": "Neural Networks are fundamentals of deep learning inspired by human brain. It consists of layers of interconnected nodes or \"neurons\" each designed to perform specific calculations. These nodes receive input data, process it through various mathematical functions and pass the output to subsequent layers.\nNeural Networks\nBiological Neurons vs Artificial Neurons\nSingle Layer Perceptron\nMulti-Layer Perceptron\nArtificial Neural Networks (ANNs)\nTypes of Neural Networks\nArchitecture and Learning process in neural network"
+  },
+  {
+    "input": "Basic Components of Neural Networks",
+    "output": "The basic components of neural network are:\nLayers in Neural Networks\nWeights and Biases\nForward Propagation\nActivation Functions\nLoss Functions\nBackpropagation\nLearning Rate"
+  },
+  {
+    "input": "Optimization Algorithm in Deep Learning",
+    "output": "Optimization algorithms in deep learningare used to minimize the loss function by adjusting the weights and biases of the model. The most common ones are:\nOptimization algorithms in deep learning\nGradient Descent\nStochastic Gradient Descent (SGD)\nBatch Normalization\nMini-batch Gradient Descent\nAdam (Adaptive Moment Estimation)\nMomentum-based Gradient Optimizer\nAdagrad Optimizer\nRMSProp Optimizer\nA deep learning framework provides tools and APIs for building and training models. Popular frameworks like TensorFlow, PyTorch and Keras simplify model creation and deployment."
+  },
+  {
+    "input": "Types of Deep Learning Models",
+    "output": "Lets see various types of Deep Learning Models:"
+  },
+  {
+    "input": "1. Convolutional Neural Networks (CNNs)",
+    "output": "Convolutional Neural Networks (CNNs)are a class of deep neural networks that are designed for processing grid-like data such as images. They use convolutional layers to automatically detect patterns like edges, textures and shapes in the data.\nDeep Learning Algorithms\nConvolutional Neural Networks (CNNs)\nBasics of Digital Image Processing\nImportance for CNN\nPadding\nConvolutional Layers\nPooling Layers\nFully Connected Layers\nBackpropagation in CNNs\nCNN based Image Classification using PyTorch\nCNN based Images Classification using TensorFlow\nCNN Based Architectures:There are various architectures in CNNs that have been developed for specific kinds of problems such as:\nConvolutional Neural Network (CNN) Architectures\nLeNet-5\nAlexNet\nVGGnet\nVGG-16 Network\nGoogLeNet/Inception\nResNet (Residual Network)\nMobileNet"
+  },
+  {
+    "input": "2. Recurrent Neural Networks (RNNs)",
+    "output": "Recurrent Neural Networks (RNNs) are a class of neural networks that are used for modeling sequence data such as time series or natural language.\nRecurrent Neural Networks (RNNs)\nHow RNN Differs from Feedforward Neural Networks\nBackpropagation Through Time (BPTT)\nVanishing Gradient and Exploding Gradient Problem\nTraining of RNN in TensorFlow\nSentiment Analysis with RNN\nTypes of Recurrent Neural Networks:There are various types of RNN which are as follows:\nTypes of Recurrent Neural Networks\nBidirectional RNNs\nLong Short-Term Memory (LSTM)\nBidirectional Long Short-Term Memory (Bi-LSTM)\nGated Recurrent Units (GRU)"
+  },
+  {
+    "input": "3. Generative Models in Deep Learning",
+    "output": "Generative models generate new data that resembles the training data. The key types of generative models include:\nGenerative Adversarial Networks (GANs)\nAutoencoders\nGAN vs. Transformer Models\nTypes of Generative Adversarial Networks (GANs):GANs consist of two neural networks, the generator and the discriminator that compete with each other. Variants of GANs include:\nDeep Convolutional GAN (DCGAN)\nConditional GAN (cGAN)\nCycle-Consistent GAN (CycleGAN)\nSuper-Resolution GAN (SRGAN)\nStyleGAN\nTypes of Autoencoders:Autoencoders are neural networks used for unsupervised learning that learns to compress and reconstruct data. Various types of Autoencoders include:\nTypes of Autoencoders\nSparse Autoencoder\nDenoising Autoencoder\nConvolutional Autoencoder\nVariational Autoencoder"
+  },
+  {
+    "input": "4. Deep Reinforcement Learning (DRL)",
+    "output": "Deep Reinforcement Learning combines the representation learning power of deep learning with the decision-making ability of reinforcement learning. It helps agents to learn optimal behaviors in complex environments through trial and error using high-dimensional sensory inputs.\nDeep Reinforcement Learning\nReinforcement Learning\nMarkov Decision Processes\nKey Algorithms in Deep Reinforcement Learning\nDeep Q-Networks (DQN)\nREINFORCE\nActor-Critic Methods\nProximal Policy Optimization (PPO)"
+  },
+  {
+    "input": "Practical Applications of Deep Learning",
+    "output": "This Deep Learning tutorial is for both beginners and experienced learners. Whether you're just starting out or want to expand your knowledge, this tutorial will help you understand the key concepts and techniques in Deep Learning."
   }
 ]
