@@ -10446,5 +10446,49 @@
   {
     "input": "Disadvantages",
     "output": "Sensitivity to Hyperparameters:Performance is sensitive to settings like decay rate and epsilon meaning it requires careful tuning.\nPoor Performance with Sparse Data:May struggle with sparse data, leading to slower or inconsistent convergence."
+  },
+  {
+    "input": "Attention in NLP",
+    "output": "The goal of self attention mechanism is to improve performance of traditional models such as encoder decoder models used inRNNs (Recurrent Neural Networks).\nIn traditional encoder decoder models input sequence is compressed into a single fixed-length vector which is then used to generate the output.\nThis works well for short sequences but struggles with long ones because important information can be lost when compressed into a single vector.\nTo overcome this problem self attention mechanism was introduced."
+  },
+  {
+    "input": "Encoder Decoder Model",
+    "output": "An encoder decoder model is used in machine learning tasks that involve sequences like translating sentences, generating text or creating captions for images. Here's how it works:\nEncoder:It takes the input sequence like sentences and processes them. It converts input into a fixed size summary called a latent vector or context vector. This vector holds all the important information from the input sequence.\nDecoder:It then uses this summary to generate an output sequence such as a translated sentence. It tries to reconstruct the desired output based on the encoded information."
+  },
+  {
+    "input": "Self Attention Mechanism",
+    "output": "This mechanism captures long range dependencies by calculating attention between all words in the sequence and helping the model to look at the entire sequence at once. Unlike traditional models that process words one by one it helps the model to find which words are most relevant to each other helpful for tasks like translation or text generation.\nHere’s how the self attention mechanism works:\nAbove procedure is applied to all the input sequences. Mathematically self attention matrix for input matrices (Q, K, V) is calculated as:\nwhereQ, K, Vare the concatenation of query, key and value vectors"
+  },
+  {
+    "input": "Multi Head Attention",
+    "output": "Inmulti headed attentionmechanism, multiple attention heads are used in parallel which allows the model to focus on different parts of the input sequence simultaneously. This approach increases model's ability to capture various relationships between words in the sequence.\nHere’s a step by step breakdown of how multi headed attention works:"
+  },
+  {
+    "input": "Use in Transformer Architecture",
+    "output": "Encoder Decoder Attention:In this layer queries come from the previous decoder layer while the keys and values come from the encoder’s output. This allows each position in the decoder to focus on all positions in the input sequence.\nEncoder Self Attention:This layer receives queries, keys and values from the output of the previous encoder layer. Each position in the encoder looks at all positions from the previous layer to calculate attention scores.\nDecoder Self Attention:Similar to the encoder's self attention but here the queries, keys and values come from the previous decoder layer. Each position can attend to the current and previous positions but future positions are masked to prevent the model from looking ahead when generating the output and this is called masked self attention."
+  },
+  {
+    "input": "Step 1: Install Necessary Libraries",
+    "output": "This line imports numpy for matrix operations and softmax from scipy.special to convert attention scores into probability distributions."
+  },
+  {
+    "input": "Step 2: Extract Dimensions",
+    "output": "This function starts by extracting the input shape: batch size, sequence length and model dimension. It sets d_k, the dimension of keys and queries equal to the model dimension for simplicity."
+  },
+  {
+    "input": "Step 3: Initialize Weight Matrix",
+    "output": "These lines initialize random weight matrices for queries (W_q), keys (W_k) and values (W_v). In real models these are learnable parameters used to project the input into Q, K, and V representations."
+  },
+  {
+    "input": "Step 4: Compute Q, K, V matrices",
+    "output": "These lines project the input X into query (Q), key (K) and value (V) matrices by multiplying with their respective weights. This transforms the input into different views used for computing attention."
+  },
+  {
+    "input": "Step 5: Compute Attention scores and weights",
+    "output": "This computes the final output by weighting the values (V) with the attention scores, aggregating relevant information from the sequence. It then returns both the attention output and the attention weights for further use or analysis."
+  },
+  {
+    "input": "Step 6: Example Usage",
+    "output": "This sets a random seed for reproducibility creates a sample input tensor with shape (1, 3, 4) runs the self-attention function on it and then prints the resulting output and attention weights.\nOutput:"
   }
 ]
