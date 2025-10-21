@@ -10782,5 +10782,101 @@
   {
     "input": "4. Healthcare and Medical Diagnosis",
     "output": "Neural networks are also applied in healthcare such as in diagnosing diseases from medical images like X-rays, MRIs or CT scans:\nWeights: These help the network focus on important features in medical images such as specific areas indicating a tumor or anomaly. This helps the network make more accurate predictions regarding health conditions.\nBiases: Biases allow the network to remain flexible and adaptable to variations in imaging techniques or the patient’s body type, making the system more reliable across different scenarios.\nBy training on thousands of medical images, the neural network learns to identify patterns and make precise diagnoses, aiding medical professionals in early disease detection."
+  },
+  {
+    "input": "What is Deep Learning?",
+    "output": "Deep learningis a subfield ofmachine learning, which is itself a part ofartificial intelligence, that focuses on the use of many layeredneural networksto train themselves on large amounts of  data. Developed based on the idea of biological brains, these networks are able to learn from data without being programmed explicitly, which makes deep learning particularly effective for tasks that involveimages, speech, natural  language, and many other kinds of input data. Traditional machine learning is not as efficient at dealing with complex and unorganized data, and the effectiveness only improves with the size of the dataset and computational resources available, which is where deep learning models excel."
+  },
+  {
+    "input": "Emergence of Deep Learning: A Quick Look Back",
+    "output": "The fascinating field of Deep Learning has been around longer than you might think. It was first introduced  in the1940s, with the development of theperceptronin the late1950sacting as a cornerstone of modern deep learning. The evolution of deep learning has been marked by remarkable breakthroughs, often spurred by progress in computer processing power, the availability of vast amounts of data, and algorithmic refinements."
+  },
+  {
+    "input": "What are Deep Learning Algorithms?",
+    "output": "Thedeep learning algorithmsare a type of specificmachine learning modelsbased on the principles of the human brain. These algorithms apply theartificial neural networksin the processing of data, where each network is consisted of connected nodes or neurons. Deep learning algorithms are different from regular machine learning models because they are able to learn complex patterns from the data sets without needing manual extraction. Because of this, they are very successful in their application areas, which includeimage classification, speech recognition, and natural language processing."
+  },
+  {
+    "input": "1. Convolutional Neural Network (CNN)",
+    "output": "Convolutional Neural Networksare advanced forms of neural networks which are primarily employed in various tasks that involveimages and videos. They are designed to learn features directly from the data, automatically detecting patterns such asedges, textures and shapes, thus making them very useful for applications likeobject detection,medical imagingandfacial recognition."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Convolution Layer:It appliesfilters (kernels)on theinput data (e.g. an image)to identify basic features likeedges or corners. Each filter slides over the image to capture local patterns.\nPooling Layer:After detecting the  features,the pooling layerdown samples the data, retaining only the most significant features, thereby enhancing the computational  efficiency of the model.\nFully Connected Layer:After the convolution and pooling operations, the extracted features are passed through afully connected layerto make the prediction about the class of the input.\nActivation Function:Anactivation functionis a mathematical function that is used in neural networks to introduce non-linearity, and thereby enables the model to learn complex patterns and make better predictions."
+  },
+  {
+    "input": "2. Recurrent Neural Network (RNN)",
+    "output": "RNNsare designed for sequential data such astime series or natural language. Traditional neural networks differ from RNNs as RNNs have a memory thatkeeps information from the previous steps, making them suitable for applications likespeech recognition, language translation, and stock price prediction."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Sequential Processing:RNNs process data one step at a time, andoutput at each step depends on the current input and the previous step's output, effectively capturing temporal patterns.\nHidden States:The states of the RNNs are hidden, being updated after each step, to enable the network to remember past information. These states are also fed into the next step in the sequence.\nWeight Sharing:RNNs use the same weights across time steps, which is useful when dealing with sequences of varying length, and make the models more efficient.\nBackpropagation Through Time (BPTT):In the training phase, RNNs learn to minimize the error from future steps, learning to better predict each part of the sequence by adjusting their weights."
+  },
+  {
+    "input": "3. Long Short-Term Memory (LSTM)",
+    "output": "To overcome thevanishing gradient problem, there is a particular kind of RNN, i.e.,LSTM. It can learn many dependencies in data, and therefore, find its application inlanguage modeling, text generation, and video analysis."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Cell State:The LSTMs keep a state calledcell state which is the long term memory of the network. It can store, update or forget information over time, helping the network keep track of important information.\nForget Gate:This gate decideswhat information from the previous cell state should be discarded, allowing the network to forget some information.\nInput Gate:Itcontrols the input of new information to the cell state, and hence what is added to the memory.\nOutput Gate:This gate controlswhat information from the cell state is outputted to the next layeror time step."
+  },
+  {
+    "input": "4. Auto-Encoders",
+    "output": "Auto-encodersareunsupervised learning modelsused to reduce the dimensionality of data. They learn to compress input data into a lower-dimensional representation and then reconstruct it back to its original form, making them useful for tasks like data compression and anomaly detection."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Encoder:Thenetwork encoderpart of the network is to compress the input data to a lower dimensional representation. It learns the most important characteristics of the input data.\nBottleneck:The bottleneck layer is implemented to make the networklearn a compact representation of the input, identifying crucial characteristics.\nDecoder:Thedecoderattempts to synthesize the original input from the encoded data, trying to make the output match the original input as much as possible.\nLoss Function:The model uses aloss function, such asMean Squared Error, for defining the error between the input and output of the model."
+  },
+  {
+    "input": "5. Deep Belief Network (DBN)",
+    "output": "Deep Belief Networksare composed of multiple layers ofRestricted Boltzmann Machines (RBMs)stacked together. They are often used forfeature learning,image recognition,andunsupervised pretraining."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Layered Structure:DBNsare a kind ofdeep neural networks (DNNs)which are constructed by stacking several layers ofRestricted Boltzmann machines (RBMs). Each RBM is responsible for learning features from the data and increasing the level of complexity with each subsequent layer.\nUnsupervised Pretraining:The layers are pretrained in anunsupervised manner, and each RBM tries to learn the distribution of the data.\nFine-Tuning:After that, the network is fine-tuned for actual labeled data in order to enhance the performance on certain tasks, likeclassification.\nStochastic Units:The RBMs utilizestochastic (probabilistic) units, which determine the activation of each unit by probability, enabling the network to learn complicated, non-linear relationships."
+  },
+  {
+    "input": "6. Generative Adversarial Network (GAN)",
+    "output": "GANsuse two models:a Generatoranda Discriminator. TheGenerator produces the fake data(for ex. images), and theDiscriminator checks if the data is real or fake. GANs are probably the most popular model forcreating realistic images, videos and even deepfakes."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Generator:The Generator istrained on random noiseand learns to create synthetic data that looks similar to real data, e.g. images or text.\nDiscriminator:The Discriminator evaluates the generated data, compares it to real data and provides feedback to the Generator.\nAdversarial Training:The Generator and Discriminator are trained together in anadversarial training processwhere each is attempting to fool the other. The Generator wants to create more plausible data while the Discriminator tries to get better at telling real data from fake.\nLoss Function:The models are trained with aspecific type of loss functionthat determines the discrepancy between the Discriminator's output and the actual class labels to further enhance both networks' training process."
+  },
+  {
+    "input": "7. Self-Organizing Map (SOM)",
+    "output": "Self-Organizing Mapsare a type ofunsupervised learning modelused tomap high-dimensional data to a lower-dimensional grid.They are particularly useful for clustering and visualizing complex data."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Neuron Grid:The network has a grid of neurons, each neuron being a representation of a cluster of similar data points.\nCompetitive Learning:Neurons respond to input data by competing for it, updating the weights of the 'winner' neuron with the input.\nNeighborhood Function:Other neurons nearby the winner also learn their weights, helping the network to learn the similarities in the data, and preserve its structure.\nTopological Preservation:SOMs maintain the topological relationships of the data, so that the similar data points end up near each other on the map."
+  },
+  {
+    "input": "8. Variational Autoencoders (VAEs)",
+    "output": "Variational Autoencodersare aprobabilistic version of autoencodersused for generative tasks. VAEs learn a distribution of the data and generate new data by sampling from that distribution."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Encoder:The encoder is in charge of learning a compressed representation of the input in the form of a probabilistic distribution, typically in terms of the mean and variance.\nLatent Space:This distribution is then used for sampling new data points from the latent space to enable the model to create new data that is completely new.\nDecoder:The decoder learns to reconstruct the data from the sampled latent variables,creating synthetic output.\nKL Divergence:The model learns to minimize theKullback-Leibler divergence, so that the learned distribution is close to a standard prior distribution, like a normal distribution."
+  },
+  {
+    "input": "9. Graph Neural Networks (GNNs)",
+    "output": "Graph Neural Networksare designed to work withgraph-structured data, such associal networks, molecular structures,andrecommendation systems. They capture relationships between nodes and edges in the graph to make predictions or understand the structure."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Node Aggregation:They collect information from their neighbor nodes and give a better representation of their context.\nMessage Passing:Information is passed between adjacent nodes in the graph to capture dependencies and relationships between entities and helping the model learn them.\nGraph Pooling:This mechanism creates a global representation of the graph by learning the information from all of the nodes.\nBackpropagation:The optimization of the node features is achieved through thestandardbackpropagationso as to enhance the learning process and the prediction of graph-based tasks."
+  },
+  {
+    "input": "10. Transformers",
+    "output": "Transformersare widely used inNatural Language Processing (NLP)tasks likemachine translation,text generation, andsentiment analysis. They are based onself-attention mechanismsthat help models capture long-range dependencies in data."
+  },
+  {
+    "input": "Key Mechanisms:",
+    "output": "Self-Attention:Every token in the input sequence is able to learn the relationship of every other token, thuslearning long range dependencieswithout needing any sequence order.\nMulti-Head Attention:Multiple attention mechanisms work in parallel, capturing different types of relationships between tokens.\nPositional Encoding:Since transformers are not sequential in processing the data, positional encodings are employed to provide information about the position of the tokens in the sequence.\nFeedforward Layers:After the attention mechanisms, theinformation is then passed through fully connected layers, which are able to process and transform the data for further tasks like classification or generation."
+  },
+  {
+    "input": "Conclusion",
+    "output": "Deep learning algorithms are at the core of the most transformative advancements in artificial intelligence, powering breakthroughs across industries such as healthcare, finance, autonomous vehicles, and more. These algorithms, from CNNs to Transformers, will be building upon themselves to provide more efficient, accurate, and scalable solutions to complex problems. They are invaluable in driving innovation and progress in AI because of their capacity to analyze vast amounts of data and learn patterns without explicit programming. In the light of growing technology and data availability, these algorithms' potential will be expanded further to reshape the industries and unlock new possible future applications."
   }
 ]
