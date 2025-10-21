@@ -11550,5 +11550,61 @@
   {
     "input": "5. Execute Forward Propagation",
     "output": "Here we will execute the process of forward propagation using the above functions we created.\nOutput:\nEach number represents themodel's predicted probabilitybefore training for the given input. The values represent thesigmoid activation outputwhich ranges between 0 and 1 indicating a probability like score for classification. Understanding forward propagation is crucial for building and optimizing deep learning models as it forms the basis for making predictions before weight adjustments occur during backpropagation"
+  },
+  {
+    "input": "Structure of Fully Connected Layers",
+    "output": "The structure of FC layers is one of the most significant factors that define how it works in a neural network. This structure involves the fact that every neuron in one layer will interconnect with every neuron in the subsequent layer."
+  },
+  {
+    "input": "Key Components of Fully Connected Layers",
+    "output": "A Fully Connected layer is characterized by its dense interconnectivity. Here’s a breakdown of its key components:\nNeurons: Basic units that receive inputs from all neurons of the previous layer and send outputs to all neurons of the subsequent layer.\nWeights: Each connection between neurons has an associated weight indicating the strength and influence of one neuron on another.\nBiases: A bias term for each neuron helps adjust the output along with the weighted sum of inputs.\nActivation Function: Functions like ReLU, Sigmoid or Tanh introduce non-linearity to the model helping it to learn complex patterns and behaviors."
+  },
+  {
+    "input": "Working and Structure of Fully Connected Layers in Neural Networks",
+    "output": "The extensive connectivity allows for comprehensive information processing and feature integration making FC layers essential for tasks requiring complex pattern recognition."
+  },
+  {
+    "input": "Key Operations in Fully Connected Layers",
+    "output": "Each neuron in an FC layer receives inputs from all neurons of the previous layer with each connection having a specific weight and each neuron incorporating a bias. The input to each neuron is a weighted sum of these inputs plus a bias:\nz_j = \\sum_i (w_{ij}.x_i) +b_j\nHerew_{ij}is the weight from neuron i of the previous layer to neuronj,x_i​is the input from neuroniandb_j​is the bias for neuron j\nThe weighted sum is then processed through a non-linear activation function such as ReLU, Sigmoid or Tanh. This step introduces non-linearity enabling the network to learn complex functions:\na_j = f(z_j)\nf denotes the activation function transforming the linear combination of inputs into a non-linear output."
+  },
+  {
+    "input": "Example Configuration",
+    "output": "Consider a neural network transition from a layer with 4 neurons to an FC layer with 3 neurons:\nPrevious Layer(4 neurons) →Fully Connected Layer(3 neurons)\nEach neuron in the FC layer receives inputs from all four neurons of the previous layer resulting in a configuration that involves 12 weights and 3 biases. This design of FC layer helps in transforming and combining features from the input layer hence helping in network's ability to perform complex decision-making tasks."
+  },
+  {
+    "input": "Key Role of Fully Connected Layers in Neural Networks",
+    "output": "The key roles of fully connected layers in neural network are discussed below:"
+  },
+  {
+    "input": "1. Feature Integration and Abstraction",
+    "output": "FC layers consolidate features extracted by earlier layers (e.g., convolutional or recurrent), transforming them into a form suitable for accurate prediction by capturing complex patterns and relationships."
+  },
+  {
+    "input": "2. Decision Making and Output Generation",
+    "output": "Typically used as the final layer in classification or regression tasks, FC layers convert high-level features into output scores. For classification, these scores are passed through Softmax to yield class probabilities."
+  },
+  {
+    "input": "3. Introduction of Non-Linearity",
+    "output": "Activation functions like ReLU, Sigmoid, or Tanh applied in FC layers introduce non-linearity, allowing the network to learn complex, non-linear patterns and generalize effectively."
+  },
+  {
+    "input": "4. Universal Approximation",
+    "output": "According to the Universal Approximation Theorem, an FC layer with enough neurons can approximate any continuous function, showcasing its power in modeling diverse problems."
+  },
+  {
+    "input": "5. Flexibility across Domains",
+    "output": "FC layers are input-agnostic and versatile, applicable to various domains like vision, speech, and NLP, supporting both shallow and deep architectures."
+  },
+  {
+    "input": "6. Regularization and Overfitting Control",
+    "output": "Techniques like Dropout and L2 regularization are crucial in FC layers to prevent overfitting, promoting generalization by reducing reliance on specific neurons or large weights."
+  },
+  {
+    "input": "Advantages of Fully Connected Layers",
+    "output": "Integration of Features: They are capable of combining all features before making predictions, essential for complex pattern recognition.\nFlexibility: FC layers can be incorporated into various network architectures and handle any form of input data provided it is suitably reshaped.\nSimplicity: These layers are straightforward to implement and are supported by all major deep learning frameworks."
+  },
+  {
+    "input": "Limitations of Fully Connected Layers",
+    "output": "Despite their benefits FC layers have several drawbacks:\nHigh Computational Cost: The dense connections can lead to a large number of parameters, increasing both computational complexity and memory usage.\nProne to Overfitting: Due to the high number of parameters they can easily overfit on smaller datasets unless techniques like dropout or regularization are used.\nInefficiency with Spatial Data: Unlike convolutional layers, FC layers do not exploit the spatial hierarchy of images or other structured data, which can lead to less effective learning.\nFully Connected layers are fundamental to the architecture of many neural networks, contributing to their ability to perform tasks ranging from simple classifications to complex pattern recognitions."
   }
 ]
