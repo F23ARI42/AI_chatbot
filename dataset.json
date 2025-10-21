@@ -10370,5 +10370,25 @@
   {
     "input": "2. Calculating MSE using NumPy",
     "output": "Let’s start by manually computing the Mean Squared Error usingNumPy.\nExplanation:This code calculates the Mean Squared Error (MSE) by first finding the difference between the true values (Y_true) and the predicted values (Y_pred). It then squares each of these differences to eliminate negative values and emphasize larger errors. Finally, the code computes the mean of these squared differences to obtain the MSE, which quantifies the average squared difference between the actual and predicted values."
+  },
+  {
+    "input": "1. Simple RNN",
+    "output": "tf.keras.layers.SimpleRNN()is the most basic recurrent layer, where each neuron maintains a hidden state that is updated at each time step. It is useful for short sequences but struggles with long-term dependencies."
+  },
+  {
+    "input": "2. LSTM (Long Short-Term Memory)",
+    "output": "tf.keras.layers.LSTM()solve the vanishing gradient problem in RNNs by introducing three gates: input, forget, and output gates. These gates regulate the flow of information, allowing LSTMs to retain long-term dependencies effectively."
+  },
+  {
+    "input": "3. LSTMCell with RNN",
+    "output": "Instead of using the LSTM layer directly, an LSTMCell can be used within an RNN layer. This provides more flexibility for building custom recurrent architectures."
+  },
+  {
+    "input": "4. GRU (Gated Recurrent Unit)",
+    "output": "tf.keras.layers.GRU()simplify LSTMs by combining the forget and input gates into a single update gate. This reduces computational complexity while maintaining performance.\n5. Stacked RNNs (Deep RNNs)\nStacking multiple recurrent layers enables deeper feature extraction, improving the model’s learning capabilities for complex sequential tasks."
+  },
+  {
+    "input": "6. Bidirectional RNN",
+    "output": "tf.keras.layers.Bidirectional()process input sequences in both forward and backward directions, improving contextual learning.\nRecurrent layers in TensorFlow provide powerful tools for modeling sequential data. While SimpleRNN is effective for small tasks, LSTM and GRU are better suited for long-range dependencies. Using LSTMCell with RNN allows for more customized implementations, while stacked recurrent layers improve feature learning. Bidirectional RNNs further enhance the model’s ability to capture contextual relationships."
   }
 ]
