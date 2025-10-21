@@ -8462,5 +8462,17 @@
   {
     "input": "Applications of Bidirectional Recurrent Neural Networks (BRNNs)",
     "output": "BRNNs are widely used in various natural language processing (NLP) tasks, including:\nSentiment Analysis: By considering both past and future context they can better classify the sentiment of a sentence.\nNamed Entity Recognition (NER): It helps to identify entities in sentences by analyzing the context in both directions.\nMachine Translation: In encoder-decoder models, BRNNs allow the encoder to capture the full context of the source sentence in both directions hence improving translation accuracy.\nSpeech Recognition: By considering both previous and future speech elements it enhance the accuracy of transcribing audio."
+  },
+  {
+    "input": "How Does Binary Cross-Entropy Work?",
+    "output": "Binary Cross-Entropy measures the distance between the true labels and the predicted probabilities. When the predicted probabilityp_i​is close to the actual labely_i, the BCE value is low, indicating a good prediction.\nConversely, when the predicted probability deviates significantly from the actual label, the BCE value is high, indicating a poor prediction. The logarithmic component of the BCE function penalizes wrong predictions more heavily than correct ones."
+  },
+  {
+    "input": "Mathematical Example of Binary Cross-Entropy",
+    "output": "Consider a binary classification problem where we have the following true labelsyand predicted probabilitiespfor a set of observations:\nWe will calculate the Binary Cross-Entropy loss for this set of observations step-by-step.\nHere, True labely_1=1 and Predicted probabilityp_1=0.1\n\\text{Loss}_1 = - \\left( 1 \\cdot \\log(0.9) + (1 - 1) \\cdot \\log(1 - 0.9) \\right) = - \\log(0.9) \\approx -(-0.1054) = 0.1054\nSimilarly, for other classes,\nNext, we sum the individual losses and calculate the average:\n\\text{Total Loss}=0.1054+0.2231+0.2231+0.5108=1.0624\n\\text{Average Loss (BCE)}=\\frac{1.06244}{4}=0.2656\nTherefore, the Binary Cross-Entropy loss for these observations is approximately 0.2656."
+  },
+  {
+    "input": "Implementation of Binary Cross Entropy in Python",
+    "output": "Manual Calculation with NumPy: The functionbinary_cross_entropymanually calculates BCE loss using the formula, averaging individual losses for true labels (y_true) and predicted probabilities (y_pred).\nKeras Calculation: Thebinary_crossentropyfunction fromKerascomputes BCE loss directly and efficiently, taking the same inputs (y_trueandy_pred), with results converted toNumPyformat.\nVerification: The close match between manual (bce_loss) and Keras (bce_loss_keras) calculations validates the manual implementation, ensuring accuracy in computing BCE loss for binary classification models.\nOutput:\nThe manual calculation usingNumPymight have slightly different floating-point precision or rounding behavior compared to the Keras implementation. Keras might use optimized backend operations and higher precision floating-point arithmetic, leading to a very slightly different results.\nUnderstanding and implementing BCE ensures robust evaluation and enhancement of binary classification models, especially in deep learning applications."
   }
 ]
