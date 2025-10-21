@@ -10742,5 +10742,45 @@
   {
     "input": "Practical Applications",
     "output": "SRGAN is widely used in domains such as medical imaging, satellite imagery enhancement and mobile photography. It is especially useful when visual quality takes importance over pixel-perfect accuracy, as in consumer applications where the focus is on improving perceived image quality for viewers.\nIts success has led to several improved variants, including Enhanced SRGAN (ESRGAN) and Real-ESRGAN.\nThese advancements continue to set new standards in single-image super-resolution.\nImage upscaling is becoming more practical and accessible across various applications."
+  },
+  {
+    "input": "1. Weights",
+    "output": "Weights are numerical values assigned to the connections between neurons. They find how much influence each input has on the network’s final output.\nPurpose: During forward propagation, inputs are multiplied by their respective weights before being passed through anactivation function. This helps decide how strongly an input will affect the output.\nLearning Mechanism: During training, weights are updated iteratively throughoptimization algorithmslike gradient descent to minimize the difference between predicted and actual outcomes.\nGeneralization: Well-tuned weights help the network not only make accurate predictions on training data but also generalize to new, unseen data.\nExample:In a neural network predicting house prices, the weight for the \"size of the house\" find how much the house size influences the price prediction. The larger the weight, the bigger the impact size will have on the final result."
+  },
+  {
+    "input": "2. Biases",
+    "output": "Biases are additional parameters that adjust the output of a neuron. Unlike weights, they are not tied to any specific input but instead shift the activation function to better fit the data.\nPurpose: Biases help neurons activate even when the weighted sum of inputs is not enough. This allows the network to recognize patterns that don't necessarily pass through the origin.\nFunctionality: Without biases, neurons would only activate when the input reaches a specific threshold. It makes the network more flexible by enabling activation across a wider range of conditions.\nTraining: During training, biases are updated alongside weights through backpropagation. Together, they fine-tune the model, improving prediction accuracy.\nExample: In a house price prediction network, the bias might ensure that even for a house with a size of zero, the model predicts a non-zero price. This could reflect a fixed value such as land value or other baseline costs."
+  },
+  {
+    "input": "How Neural Networks Learn?",
+    "output": "Neural networks learn through a process involving forward propagation and backpropagation. Let’s see each step:"
+  },
+  {
+    "input": "1. Forward Propagation",
+    "output": "Forward propagationis the initial phase of processing input data through the neural network to produce an output or prediction. Let's see how it works:"
+  },
+  {
+    "input": "2. Backpropagation",
+    "output": "Once the network has made a prediction, it's important to evaluate how accurate that prediction is and make adjustments to improve future predictions. This is wherebackpropagationcomes:"
+  },
+  {
+    "input": "Real-World Applications of Neural Networks",
+    "output": "Neural networks are increasingly used in various fields to solve complex problems. Let's see various examples of how weights and biases play an important role in below applications:"
+  },
+  {
+    "input": "1. Image Recognition",
+    "output": "Neural networks are efficient at tasks like object and image classification. For example, in detecting objects like cats, dogs or even specific facial features:\nWeights: These find which pixels are important. For example, in a picture of a cat, the weights might give more importance to features like ears, whiskers and eyes, helping the network correctly identify the object.\nBiases: They ensure the network remains adaptable despite changes in image conditions. For example, slight shifts in lighting, position or orientation won’t stop the network from recognizing the object.\nBy adjusting weights and biases, the network learns to recognize patterns in data and improve its accuracy in classifying new, unseen images."
+  },
+  {
+    "input": "2. Natural Language Processing (NLP)",
+    "output": "In tasks such as sentiment analysis, language translation and chatbots, neural networks analyze and generate text. For example, understanding customer reviews or translating languages:\nWeights: These decide how important specific words or phrases are in a given context. For example, recognizing the sentiment of the word “happy” in a review versus “sad” helps the network understand the sentiment of the sentence.\nBiases: They help the network to adapt to different sentence structures and tones. This helps the model recognize meaning even when the sentence might be phrased differently.\nTraining the network on large datasets allows it to interpret language effectively, whether it's classifying emotions in reviews or translating text between languages."
+  },
+  {
+    "input": "3. Autonomous Vehicles",
+    "output": "In self-driving cars, neural networks process a range of sensor data (camera, radar, lidar) to make driving decision such as stopping at a red light or avoiding obstacles:\nWeights: The weights help the network focus on important input data such as recognizing pedestrians, road signs and other vehicles, adjusting their significance based on the car’s current needs.\nBiases: Biases ensure that the car can adapt to different driving conditions like fog or night-time driving, ensuring safety and accuracy under varied circumstances.\nBy continuously adjusting the weights and biases, the system learns how to safely navigate complex environments and make real-time decisions."
+  },
+  {
+    "input": "4. Healthcare and Medical Diagnosis",
+    "output": "Neural networks are also applied in healthcare such as in diagnosing diseases from medical images like X-rays, MRIs or CT scans:\nWeights: These help the network focus on important features in medical images such as specific areas indicating a tumor or anomaly. This helps the network make more accurate predictions regarding health conditions.\nBiases: Biases allow the network to remain flexible and adaptable to variations in imaging techniques or the patient’s body type, making the system more reliable across different scenarios.\nBy training on thousands of medical images, the neural network learns to identify patterns and make precise diagnoses, aiding medical professionals in early disease detection."
   }
 ]
