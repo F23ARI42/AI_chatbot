@@ -10542,5 +10542,37 @@
   {
     "input": "6. Running the Main Function",
     "output": "The following block runs the main() function when the script is executed.\nOutput:\nThe output will display which cluster the test sample belongs to and the final trained weights of the clusters.\nCluster 0 is assigned to the test sample [0, 0, 0, 1].\nThe trained weights for both clusters are displayed after 3 epochs."
+  },
+  {
+    "input": "1. Importing Libraries and Dataset",
+    "output": "Here we will be importingnumpy,pandas,Regular Expression (RegEx),scikit learnandtenserflow."
+  },
+  {
+    "input": "2. Loading Dataset",
+    "output": "We will be using swiggy dataset of customer reviews.\npd.read_csv(): Reads the CSV file into a Pandas DataFrame\ndata.columns: Accesses the column names of the DataFrame\ntolist(): Converts the column names from an Index object to a regular Python list\nOutput:"
+  },
+  {
+    "input": "3. Text Cleaning and Sentiment Labeling",
+    "output": "We will clean the review text, create a sentiment label based on ratings and remove any missing values.\ndata[\"Review\"] = data[\"Review\"].str.lower() :Converts all text in the \"Review\" column to lowercase\ndata[\"Review\"] = data[\"Review\"].replace(r'[^a-z0-9\\s]', '', regex=True) :Removes all characters except letters, numbers and spaces from the \"Review\" column\ndata['sentiment'] = data['Avg Rating'].apply(lambda x: 1 if x > 3.5 else 0) :Creates a new \"sentiment\" column with 1 for ratings above 3.5 and 0 otherwise\ndata = data.dropna() :Removes rows that contain any missing values"
+  },
+  {
+    "input": "4. Tokenization and Padding",
+    "output": "We will prepare the text data bytokenizingandpaddingit and extract the target sentiment labels. Tokenizer converts words into integer sequences and padding ensures all input sequences have the same length (max_length).\nmax_features = 5000: Sets the maximum number of words to keep in the tokenizer\nmax_length = 200 :Defines the fixed length for each input sequence after padding\nTokenizer(num_words=max_features) :Initializes the tokenizer to keep the top 5000 words only\ntokenizer.fit_on_texts(data[\"Review\"]) :Builds the word index based on the reviews in the dataset\ntokenizer.texts_to_sequences(data[\"Review\"]) :Converts each review into a sequence of word indexes\npad_sequences(..., maxlen=max_length) :Pads or truncates each sequence to the same length (200)\ny = data['sentiment'].values :Extracts the sentiment labels as a NumPy array for model training"
+  },
+  {
+    "input": "5. Splitting the Data",
+    "output": "We will split the data into training, validation and test sets while maintaining the class distribution.\ntrain_test_split(X, y, test_size=0.2, random_state=42, stratify=y) :Splits data into 80% training and 20% test sets, preserving sentiment class balance\ntrain_test_split(X_train, y_train, test_size=0.1, random_state=42, stratify=y_train): Further splits training data into 90% training and 10% validation sets, keeping class distribution consistent"
+  },
+  {
+    "input": "6. Building RNN Model",
+    "output": "We will build and compile a simple RNN model for binary sentiment classification.\nSequential([...]) :Creates a sequential neural network model\nEmbedding(input_dim=max_features, output_dim=16, input_length=max_length) :Maps input words to 16-dimensional vectors\nSimpleRNN(64, activation='tanh', return_sequences=False) :Adds a recurrent layer with 64 units using tanh activation\nDense(1, activation='sigmoid') :Adds an output layer with one neuron using sigmoid activation for binary output\nmodel.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']) :Configures the model with binary crossentropy loss, Adam optimizer and accuracy metric"
+  },
+  {
+    "input": "7.Training and Evaluating Model",
+    "output": "We will train the model on training data, validate it during training, then evaluate its performance on test data.\nmodel.fit(...) :Trains the model for 5 epochs with batch size 32, validating on the validation set\nmodel.evaluate(X_test, y_test, verbose=0) :Evaluates the trained model on test data without extra output\nprint(f\"Test accuracy: {score[1]:.2f}\") :Prints the test accuracy rounded to two decimal places\nOutput:\nOur model achieved a accuracy of 72%which is great for a RNN model. We can further fine tune it to achieve more accuracy."
+  },
+  {
+    "input": "8. Predicting Sentiment",
+    "output": "We will create a function to preprocess a single review, predict its sentiment and display the result.\nreview_text.lower() :Converts the input review text to lowercase\nre.sub(r'[^a-z0-9\\s]', '', text) :Removes all characters except letters, numbers and spaces\ntokenizer.texts_to_sequences([text]) :Converts the cleaned review into a sequence of word indexes\npad_sequences(seq, maxlen=max_length) :Pads the sequence to the fixed length\nmodel.predict(padded)[0][0] :Predicts the sentiment probability for the review\nReturns \"Positive\" if prediction is 0.5 or above, otherwise \"Negative\" including the probability score\nOutput:\nIn summary the model processes textual reviews through RNN to predict sentiment from raw data. This helps in actionable insights by understanding customer sentiment."
   }
 ]
