@@ -10358,5 +10358,17 @@
   {
     "input": "Algorithm",
     "output": "Parameters of problem:\nNumber of dimensions (d)\nLower bound (minx)\nUpper bound (maxx)\nHyperparameters of the algorithm:\nNumber of particles (N)\nMaximum number of iterations (max_iter)\nInertia (w)\nCognition of particle (C1)\nSocial influence of swarm (C2)\nAlgorithm:\nAdvantages of PSO:\nDisadvantages of PSO:"
+  },
+  {
+    "input": "Mean Squared Error (MSE) Formula",
+    "output": "The formula for the mean squared error is:\nWhere:\ny_iis the actual value (true value).\n\\hat{y_i}is the predicted value (from the model).\nn is the total number of data points.\nExample: Given the actual and predicted values for the regression problem calculate the MSE and RMSE.\nActual Values: [15, 25, 35, 45, 55]\nPredicted Values: [18, 22, 38, 42, 52]\nSolution:\nNow, we sum up the squared errors:\n\\Sigma (yi - pi)^2 = 9 + 9 + 9 + 9 + 9 = 45\nUsing the formula for MSE:\nMSE = \\frac{\\Sigma (yi - pi)^2}{n} = \\frac{45}{5} = 9\nTo calculate RMSE, take the square root of MSE:\nRMSE = \\sqrt{MSE} = \\sqrt{9} = 3\nExample:Consider the given data points: (1,1), (2,1), (3,2), (4,2), (5,4).\nRegression line equation: Y = 0.7X - 0.1"
+  },
+  {
+    "input": "1. Calculating MSE using Scikit-Learn",
+    "output": "Scikit-learn, a popular machine learning library, provides a built-infunctionto calculate MSE, which simplifies the process.\nExplanation:This code calculates the Mean Squared Error (MSE) using Scikit-learn's mean_squared_error function. It takes the true values (Y_true) and predicted values (Y_pred) as inputs, then computes the squared differences between them, averages them, and returns the MSE. This function simplifies the process of calculating MSE compared to manually implementing the steps."
+  },
+  {
+    "input": "2. Calculating MSE using NumPy",
+    "output": "Let’s start by manually computing the Mean Squared Error usingNumPy.\nExplanation:This code calculates the Mean Squared Error (MSE) by first finding the difference between the true values (Y_true) and the predicted values (Y_pred). It then squares each of these differences to eliminate negative values and emphasize larger errors. Finally, the code computes the mean of these squared differences to obtain the MSE, which quantifies the average squared difference between the actual and predicted values."
   }
 ]
