@@ -8414,5 +8414,53 @@
   {
     "input": "5. Training the Model",
     "output": "Now we will train the model we defined in the previous step for three epochs.\nOutput:\nThe model learns well on training data reaching 95.92% accuracy but struggles with validation data staying around 78%. The increasing validation loss shows overfitting meaning the model remembers training data but doesn't generalize well. To fix this we can useL2 regularization,early stoppingor simplify the model to improve real-world performance."
+  },
+  {
+    "input": "Overview of Bidirectional Recurrent Neural Networks (BRNNs)",
+    "output": "A Bidirectional Recurrent Neural Network (BRNN) is an extension of the traditional RNN that processes sequential data in both forward and backward directions. This allows the network to utilize both past and future context when making predictions providing a more comprehensive understanding of the sequence.\nLike a traditional RNN, a BRNN moves forward through the sequence, updating the hidden state based on the current input and the prior hidden state at each time step. The key difference is that a BRNN also has a backward hidden layer which processes the sequence in reverse, updating the hidden state based on the current input and the hidden state of the next time step.\nCompared to unidirectional RNNs BRNNs improve accuracy by considering both the past and future context. This is because the two hidden layers i.e forward and backward complement each other and predictions are made using the combined outputs of both layers."
+  },
+  {
+    "input": "Example:",
+    "output": "In a traditional unidirectional RNN the network might struggle to understand whether \"apple\" refers to the fruit or the company based on the first sentence. However a BRNN would have no such issue. By processing the sentence in both directions, it can easily understand that \"apple\" refers to the fruit, thanks to the future context provided by the second sentence (\"It is very healthy.\")."
+  },
+  {
+    "input": "Working of Bidirectional Recurrent Neural Networks (BRNNs)",
+    "output": "1. Inputting a Sequence: A sequence of data points each represented as a vector with the same dimensionality is fed into the BRNN. The sequence may have varying lengths.\n2. Dual Processing: BRNNs process data in two directions:\nForward direction: The hidden state at each time step is determined by the current input and the previous hidden state.\nBackward direction: The hidden state at each time step is influenced by the current input and the next hidden state.\n3. Computing the Hidden State: A non-linear activation function is applied to the weighted sum of the input and the previous hidden state creating a memory mechanism that allows the network to retain information from earlier steps.\n4. Determining the Output: A non-linear activation function is applied to the weighted sum of the hidden state and output weights to compute the output at each step. This output can either be:\nThe final output of the network.\nAn input to another layer for further processing."
+  },
+  {
+    "input": "Implementation of Bi-directional Recurrent Neural Network",
+    "output": "Here’s a simple implementation of a Bidirectional RNN usingKerasandTensorFlowfor sentiment analysis on theIMDb datasetavailable in keras:"
+  },
+  {
+    "input": "1. Loading and Preprocessing Data",
+    "output": "We first load the IMDb dataset and preprocess it by padding the sequences to ensure uniform length.\nwarnings.filterwarnings('ignore')suppresses any warnings during execution.\nimdb.load_data(num_words=features)loads the IMDb dataset, considering only the top 2000 most frequent words.\npad_sequences(X_train, maxlen=max_len)andpad_sequences(X_test, maxlen=max_len)pad the training and test sequences to a maximum length of 50 words ensuring consistent input size."
+  },
+  {
+    "input": "2. Defining the Model Architecture",
+    "output": "We define a Bidirectional Recurrent Neural Network model using Keras. The model uses an embedding layer with 128 dimensions, a Bidirectional SimpleRNN layer with 64 hidden units and a dense output layer with a sigmoid activation for binary classification.\nEmbedding()layer maps input features to dense vectors of size embedding (128), with an input length of len.\nBidirectional(SimpleRNN(hidden))adds a bidirectional RNN layer with hidden (64) units.\nDense(1, activation='sigmoid')adds a dense output layer with 1 unit and a sigmoid activation for binary classification.\nmodel.compile()configures the model with Adam optimizer, binary cross-entropy loss and accuracy as the evaluation metric."
+  },
+  {
+    "input": "3. Training the Model",
+    "output": "As we have compiled our model successfully and the data pipeline is also ready so, we can move forward toward the process of training our BRNN.\nbatch_size=32defines how many samples are processed together in one iteration.\nepochs=5sets the number of times the model will train on the entire dataset.\nmodel.fit()trains the model on the training data and evaluates it using the provided validation data.\nOutput:"
+  },
+  {
+    "input": "4. Evaluating the Model",
+    "output": "Now as we have our model ready let’s evaluate its performance on the validation data using differentevaluation metrics. For this purpose we will first predict the class for the validation data using this model and then compare the output with the true labels.\nmodel.evaluate(X_test, y_test)evaluates the model's performance on the test data (X_test, y_test), returning the loss and accuracy.\nOutput :\nHere we achieved a accuracy of 74% and we can increase it accuracy by more fine tuning."
+  },
+  {
+    "input": "5. Predict on Test Data",
+    "output": "We will use the model to predict on the test data and compare the predictions with the true labels.\nmodel.predict(X_test)generates predictions for the test data.\ny_pred = (y_pred > 0.5)converts the predicted probabilities into binary values (0 or 1) based on a threshold of 0.5.\nclassification_report(y_test, y_pred, target_names=['Negative', 'Positive'])generates and prints a classification report including precision, recall, f1-score and support for the negative and positive classes.\nOutput:"
+  },
+  {
+    "input": "Advantages of BRNNs",
+    "output": "Enhanced Context Understanding: Considers both past and future data for improved predictions.\nImproved Accuracy: Particularly effective for NLP and speech processing tasks.\nBetter Handling of Variable-Length Sequences: More flexible than traditional RNNs making it suitable for varying sequence lengths.\nIncreased Robustness: Forward and backward processing help filter out noise and irrelevant information, improving robustness."
+  },
+  {
+    "input": "Challenges of BRNNs",
+    "output": "High Computational Cost: Requires twice the processing time compared to unidirectional RNNs.\nLonger Training Time: More parameters to optimize result in slower convergence.\nLimited Real-Time Applicability: Since predictions depend on the entire sequence hence they are not ideal for real-time applications like live speech recognition.\nLess Interpretability: The bidirectional nature of BRNNs makes it more difficult to interpret predictions compared to standard RNNs."
+  },
+  {
+    "input": "Applications of Bidirectional Recurrent Neural Networks (BRNNs)",
+    "output": "BRNNs are widely used in various natural language processing (NLP) tasks, including:\nSentiment Analysis: By considering both past and future context they can better classify the sentiment of a sentence.\nNamed Entity Recognition (NER): It helps to identify entities in sentences by analyzing the context in both directions.\nMachine Translation: In encoder-decoder models, BRNNs allow the encoder to capture the full context of the source sentence in both directions hence improving translation accuracy.\nSpeech Recognition: By considering both previous and future speech elements it enhance the accuracy of transcribing audio."
   }
 ]
