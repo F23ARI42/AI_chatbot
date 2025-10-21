@@ -11606,5 +11606,101 @@
   {
     "input": "Limitations of Fully Connected Layers",
     "output": "Despite their benefits FC layers have several drawbacks:\nHigh Computational Cost: The dense connections can lead to a large number of parameters, increasing both computational complexity and memory usage.\nProne to Overfitting: Due to the high number of parameters they can easily overfit on smaller datasets unless techniques like dropout or regularization are used.\nInefficiency with Spatial Data: Unlike convolutional layers, FC layers do not exploit the spatial hierarchy of images or other structured data, which can lead to less effective learning.\nFully Connected layers are fundamental to the architecture of many neural networks, contributing to their ability to perform tasks ranging from simple classifications to complex pattern recognitions."
+  },
+  {
+    "input": "What is Sentiment Analysis?",
+    "output": "Sentiment analysisis the process of classifying whether a block of text is positive, negative, or neutral. The goal that Sentiment mining tries to gain is to be analysed people’s opinions in a way that can help businesses expand. It focuses not only on polarity (positive, negative & neutral) but also on emotions (happy, sad, angry, etc.). It uses variousNatural Language Processingalgorithms such as Rule-based, Automatic, and Hybrid.\nlet's consider a scenario, if we want to analyze whether a product is satisfying customer requirements, or is there a need for this product in the market. We can use sentiment analysis to monitor that product’s reviews. Sentiment analysis is also efficient to use when there is a large set of unstructured data, and we want to classify that data by automatically tagging it. Net Promoter Score (NPS) surveys are used extensively to gain knowledge of how a customer perceives a product or service. Sentiment analysis also gained popularity due to its feature to process large volumes of NPS responses and obtain consistent results quickly."
+  },
+  {
+    "input": "Why is Sentiment Analysis Important?",
+    "output": "Sentiment analysis is the contextual meaning of words that indicates the social sentiment of a brand and also helps the business to determine whether the product they are manufacturing is going to make a demand in the market or not.\nAccording to the survey,80% of the world’s data is unstructured. The data needs to be analyzed and be in a structured manner whether it is in the form of emails, texts, documents, articles, and many more.\nHere are some key reasons why sentiment analysis is important for business:\nCustomer Feedback Analysis: Businesses can analyze customer reviews, comments, and feedback to understand the sentiment behind them helping in identifying areas for improvement and addressing customer concerns, ultimately enhancing customer satisfaction.\nBrand Reputation Management: Sentiment analysis allows businesses to monitor their brand reputation in real-time.By tracking mentions and sentiments on social media, review platforms, and other online channels, companies can respond promptly to both positive and negative sentiments, mitigating potential damage to their brand.\nProduct Development and Innovation: Understanding customer sentiment helps identify features and aspects of their products or services that are well-received or need improvement. This information is invaluable for product development and innovation, enabling companies to align their offerings with customer preferences.\nCompetitor Analysis: Sentiment Analysis can be used to compare the sentiment around a company's products or services with those of competitors.Businesses identify their strengths and weaknesses relative to competitors, allowing for strategic decision-making.\nMarketing Campaign EffectivenessBusinesses can evaluate the success of their marketing campaigns by analyzing the sentiment of online discussions and social media mentions.Positive sentiment indicates that the campaign is resonating with the target audience, while negative sentiment may signal the need for adjustments."
+  },
+  {
+    "input": "Fine-Grained Sentiment Analysis",
+    "output": "This depends on the polarity base. This category can be designed as very positive, positive, neutral, negative, or very negative. The rating is done on a scale of 1 to 5. If the rating is 5 then it is very positive, 2 then negative, and 3 then neutral."
+  },
+  {
+    "input": "Emotion detection",
+    "output": "The sentiments happy, sad, angry, upset, jolly, pleasant, and so on come under emotion detection. It is also known as a lexicon method of sentiment analysis."
+  },
+  {
+    "input": "Aspect-Based Sentiment Analysis",
+    "output": "It focuses on a particular aspect for instance if a person wants to check the feature of the cell phone then it checks the aspect such as the battery, screen, and camera quality then aspect based is used."
+  },
+  {
+    "input": "Multilingual Sentiment Analysis",
+    "output": "Multilingual consists of different languages where the classification needs to be done as positive, negative, and neutral. This is highly challenging and comparatively difficult."
+  },
+  {
+    "input": "How does Sentiment Analysis work?",
+    "output": "Sentiment Analysis in NLP, is used to determine the sentiment expressed in a piece of text, such as a review, comment, or social media post.\nThe goal is to identify whether the expressed sentiment is positive, negative, or neutral. let's understand the overview in general two steps:"
+  },
+  {
+    "input": "Preprocessing",
+    "output": "Starting with collecting the text data that needs to be analysed for sentiment like customer reviews, social media posts, news articles, or any other form of textual content. The collected text is pre-processed to clean and standardize the data with various tasks:\nRemoving irrelevant information (e.g., HTML tags, special characters).\nTokenization: Breaking the text into individual words or tokens.\nRemoving stop words (common words like \"and,\" \"the,\" etc. that don't contribute much to sentiment).\nStemming or Lemmatization: Reducing words to their root form."
+  },
+  {
+    "input": "Analysis",
+    "output": "Text is converted for analysis using techniques like bag-of-words or word embeddings (e.g., Word2Vec, GloVe).Models are then trained with labeled datasets, associating text with sentiments (positive, negative, or neutral).\nAfter training and validation, the model predicts sentiment on new data, assigning labels based on learned patterns."
+  },
+  {
+    "input": "What are the Approaches to Sentiment Analysis?",
+    "output": "There are three main approaches used:"
+  },
+  {
+    "input": "Rule-based",
+    "output": "Over here, thelexicon method,tokenization, andparsingcome in the rule-based. The approach is that counts the number of positive and negative words in the given dataset. If the number of positive words is greater than the number of negative words then the sentiment is positive else vice-versa."
+  },
+  {
+    "input": "Machine Learning",
+    "output": "This approach works on themachine learningtechnique. Firstly, the datasets are trained and predictive analysis is done. The next process is the extraction of words from the text is done. This text extraction can be done using different techniques such asNaive Bayes,Support Vector machines,hidden Markov model, and conditional random fields like this machine learning techniques are used."
+  },
+  {
+    "input": "Neural Network",
+    "output": "In the last few years neural networks have evolved at a very rate. It involves using artificial neural networks, which are inspired by the structure of the human brain, to classify text into positive, negative, or neutral sentiments. it hasRecurrent neural networks,Long short-term memory,Gated recurrent unit, etc to process sequential data like text."
+  },
+  {
+    "input": "Hybrid Approach",
+    "output": "It is the combination of two or more approaches i.e. rule-based andMachine Learningapproaches. The surplus is that the accuracy is high compared to the other two approaches."
+  },
+  {
+    "input": "Sentiment analysis Use Cases",
+    "output": "Sentiment Analysis has a wide range of applications as:"
+  },
+  {
+    "input": "Social Media",
+    "output": "If for instance the comments on social media side as Instagram, over here all the reviews are analyzed and categorized as positive, negative, and neutral.\nNike, a leading sportswear brand, launched a new line of running shoes with the goal of reaching a younger audience. To understand user perception and assess the campaign's effectiveness, Nike analyzed the sentiment of comments on its Instagram posts related to the new shoes.\nNike collected all comments from the past month on Instagram posts featuring the new shoes.\nA sentiment analysis tool was used to categorize each comment as positive, negative, or neutral.\n\nThe analysis revealed that 60% of comments were positive, 30% were neutral, and 10% were negative. Positive comments praised the shoes' design, comfort, and performance. Negative comments expressed dissatisfaction with the price, fit, or availability."
+  },
+  {
+    "input": "Customer Service",
+    "output": "In the play store, all the comments in the form of 1 to 5 are done with the help of sentiment analysis approaches.\nDuolingo, a popular language learning app, received a significant number of negative reviews on the Play Store citing app crashes and difficulty completing lessons. To understand the specific issues and improve customer service, Duolingo employed sentiment analysis on their Play Store reviews.\nDuolingo collected all app reviews on the Play Store over a specific time period.\nEach review's rating (1-5 stars) and text content were analyzed.\nSentiment analysis tools categorized the text content as positive, negative, or neutral.\n\nThe analysis revealed a correlation between lower star ratings and negative sentiment in the textual reviews. Common themes in negative reviews included app crashes, difficulty progressing through lessons, and lack of engaging content. Positive reviews praised the app's effectiveness, user interface, and variety of languages offered."
+  },
+  {
+    "input": "Marketing Sector",
+    "output": "In the marketing area where a particular product needs to be reviewed as good or bad.\nA company launching a new line of organic skincare products needed to gauge consumer opinion before a major marketing campaign. To understand the potential market and identify areas for improvement, they employed sentiment analysis on social media conversations and online reviews mentioning the products.\nThe company collected social media posts and online reviews mentioning the new skincare line using relevant keywords and hashtags.\nText analysis tools were used to clean and pre-process the data.\nSentiment analysis algorithms categorized each text snippet as positive, negative, or neutral towards the product.\n\nThe analysis revealed an overall positive sentiment towards the product, with 70% of mentions being positive, 20% neutral, and 10% negative. Positive comments praised the product's natural ingredients, effectiveness, and skin-friendly properties. Negative comments expressed dissatisfaction with the price, packaging, or fragrance.\nThe bar graph clearly shows the dominance of positive sentiment towards the new skincare line. This indicates a promising market reception and encourages further investment in marketing efforts."
+  },
+  {
+    "input": "What are the challenges in Sentiment Analysis?",
+    "output": "There are major challenges in the sentiment analysis approach:"
+  },
+  {
+    "input": "Sentiment Analysis Vs Semantic Analysis",
+    "output": "Sentiment analysis and Semantic analysis are both natural language processing techniques, but they serve distinct purposes in understanding textual content."
+  },
+  {
+    "input": "Sentiment Analysis",
+    "output": "Sentiment analysis focuses on determining the emotional tone expressed in a piece of text. Its primary goal is to classify the sentiment as positive, negative, or neutral, especially valuable in understanding customer opinions, reviews, and social media comments. Sentiment analysis algorithms analyse the language used to identify the prevailing sentiment and gauge public or individual reactions to products, services, or events."
+  },
+  {
+    "input": "Semantic Analysis",
+    "output": "Semantic analysis, on the other hand, goes beyond sentiment and aims to comprehend the meaning and context of the text. It seeks to understand the relationships between words, phrases, and concepts in a given piece of content. Semantic analysis considers the underlying meaning, intent, and the way different elements in a sentence relate to each other. This is crucial for tasks such as question answering, language translation, and content summarization, where a deeper understanding of context and semantics is required."
+  },
+  {
+    "input": "Also Check:",
+    "output": "Sentiment Analysis of Hindi Text – Python\nFacebook Sentiment Analysis using python\nTwitter Sentiment Analysis using Python\nSentiment Analysis with Recurrent Neural Networks (RNN)\nEmotion Detection using Bidirectional LSTM\nSentiment Classification Using BERT"
+  },
+  {
+    "input": "Conclusion",
+    "output": "In conclusion, sentiment analysis is a crucial tool in deciphering the mood and opinions expressed in textual data, providing valuable insights for businesses and individuals alike. By classifying text as positive, negative, or neutral, sentiment analysis aids in understanding customer sentiments, improving brand reputation, and making informed business decisions."
   }
 ]
