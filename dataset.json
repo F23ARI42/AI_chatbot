@@ -10574,5 +10574,17 @@
   {
     "input": "8. Predicting Sentiment",
     "output": "We will create a function to preprocess a single review, predict its sentiment and display the result.\nreview_text.lower() :Converts the input review text to lowercase\nre.sub(r'[^a-z0-9\\s]', '', text) :Removes all characters except letters, numbers and spaces\ntokenizer.texts_to_sequences([text]) :Converts the cleaned review into a sequence of word indexes\npad_sequences(seq, maxlen=max_length) :Pads the sequence to the fixed length\nmodel.predict(padded)[0][0] :Predicts the sentiment probability for the review\nReturns \"Positive\" if prediction is 0.5 or above, otherwise \"Negative\" including the probability score\nOutput:\nIn summary the model processes textual reviews through RNN to predict sentiment from raw data. This helps in actionable insights by understanding customer sentiment."
+  },
+  {
+    "input": "Why Use Softplus in Neural Networks?",
+    "output": "The Softplus activation function is particularly useful for the following reasons:"
+  },
+  {
+    "input": "Mathematical Properties of Softplus",
+    "output": "The Softplus function has some important mathematical properties that are helpful for neural networks:\nDerivative of Softplus: The derivative of the Softplus function is thesigmoid function. This property makes Softplus useful in situations where we want to control the smoothness of the gradient, as it has a continuous and smooth derivative.\n\\frac{d}{dx} \\ln(1 + e^x) = \\frac{e^{x}}{(1+e^x)} =\\sigma(x)\nwhere\\sigma(x)is the sigmoid function.\n\nRange: The Softplus function outputs values from 0 to infinity. This ensures that it can be used in situations where positive outputs are desired, such as in regression tasks where the outputs should be non-negative.\nBehavior at Extremes:Asx \\to \\infty, Softplus behaves like a linear function:\nAsx \\to \\infty, Softplus behaves like a linear function:\n\\lim_{x \\to \\infty} \\ln(1 + e^x) \\approx x\nAsx \\to -\\infty, Softplus approaches zero, but never actually reaches zero. This helps to avoid the problem of dead neurons, which is common in ReLU when the input is negative:\n\\lim_{x \\to -\\infty} \\ln(1 + e^x) \\approx 0"
+  },
+  {
+    "input": "When to Use Softplus?",
+    "output": "Softplus is useful when:\nYou need a smooth and continuous activation function.\nYou want to avoid the dying neuron problem that occurs with ReLU.\nThe network deals with both positive and negative inputs, and you want the output to remain non-negative.\nYou prefer a differentiable function throughout the network for smoother gradient-based optimization.\nHowever, for many deep learning models,ReLUorLeaky ReLUmight still be preferred due to their simpler computation and better convergence in certain contexts."
   }
 ]
