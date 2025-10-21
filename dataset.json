@@ -11066,5 +11066,37 @@
   {
     "input": "GRU Networks",
     "output": "Gated Recurrent Units (GRUs)simplify LSTM design by merging gates, reducing parameters while maintaining similar performance. Their efficiency makes them suitable for real-time and resource-constrained tasks. TensorFlow supportsBidirectional GRUs which read sequences both forward and backward and are useful where context from both directions matters.\nThe choice of RNN architecture depends on the specific requirements of the task, available computational resources and the nature of the data. RNNs are valuable for real-time applications, embedded systems and scenarios where the sequential nature of processing is explicitly required."
+  },
+  {
+    "input": "Key Features of GoogLeNet",
+    "output": "The GoogLeNet architecture is very different from previous architectures such asAlexNetand ZF-Net. It uses many different kinds of methods such as:"
+  },
+  {
+    "input": "1. 1×1 Convolutions",
+    "output": "One of the core techniques employed in GoogLeNet is the use of 1×1 convolutions, primarily fordimensionality reduction. These layers help decrease the number of trainable parameters while enabling deeper and more efficient architectures.\nExample Comparison:\nWithout 1×1 Convolution:(14×14×48)×(5×5×480)=112.9M operations"
+  },
+  {
+    "input": "2.Global Average Pooling",
+    "output": "In traditional architectures like AlexNet, fully connected layers at the end introduce a large number of parameters. GoogLeNet replaces these with Global Average Pooling, which computes the average of each feature map (e.g. converting 7×7 maps to 1×1), this significantly reduces the model’s parameter count and solves overfitting.\nBenefits:\nZero additional trainable parameters\nReduces overfitting\nImproves top-1 accuracy by approximately 0.6%"
+  },
+  {
+    "input": "3. Inception Module",
+    "output": "The Inception module is the architectural core of GoogLeNet. It processes the input using multiple types of operationsinparallel, including 1×1, 3×3, 5×5 convolutions and 3×3 max pooling. The outputs from all paths are concatenated depth-wise.\nPurpose:Enables the network to capture features atmultiple scaleseffectively.\nAdvantage:Improves representational power without dramatically increasing computation."
+  },
+  {
+    "input": "4. Auxiliary Classifiers",
+    "output": "To address thevanishing gradientproblem during training, GoogLeNet introduces auxiliary classifiers(intermediate branches that act as smaller classifiers). These are active only during training and help regularize the network.\nStructure of Each Auxiliary Classifier:\nAverage pooling layer (5×5, stride 3)\n1×1 convolution (128 filters, ReLU)\nFully connected layer (1024 units, ReLU)\nDropout layer (dropout rate = 0.7)\nFully connected softmax layer (1000 classes)\nThe auxiliary losses are added to the main loss with a weight of0.3to stabilize training."
+  },
+  {
+    "input": "5. Model Architecture",
+    "output": "GoogLeNet is a22-layer deep network(excluding pooling layers) that emphasizes computational efficiency, making it feasible to run even on hardware with limited resources. Below is Layer by Layer architectural details of GoogLeNet.\nThe architecture also contains two auxiliary classifier layer connected to the output of Inception (4a) and Inception (4d) layers."
+  },
+  {
+    "input": "Inception V1 architecture",
+    "output": "Key highlights of the architecture:\nInput Layer: Accepts a 224×224 RGB image as input.\nInitial Convolutions and Pooling: Applies a series of standard convolutional and max pooling layers to downsample the input and extract low-level features.\nLocal Response Normalization (LRN): Normalizes the feature maps early in the network to improve generalization.\nInception Modules: Each module processes the input through 1×1, 3×3, and 5×5 convolutions, as well as 3×3 max pooling, all in parallel. The outputs are concatenated along the depth dimension, allowing the network to capture both fine and coarse features.\nAuxiliary Classifiers: Appear as smaller branches connected to intermediate layers of the network. Include average pooling, 1×1 convolutions, fully connected layers, and softmax outputs.\nFinal Layers: Uses global average pooling (7×7) to reduce each feature map to a single value. Followed by a fully connected layer and a softmax activation to produce the final classification output."
+  },
+  {
+    "input": "Performance and Results",
+    "output": "Winner of ILSVRC 2014 in both classification and detection tasks\nAchieved a top-5 error rate of 6.67% in image classification\nAn ensemble of six GoogLeNet models achieved 43.9% mAP (mean Average Precision) on the ImageNet detection task"
   }
 ]
