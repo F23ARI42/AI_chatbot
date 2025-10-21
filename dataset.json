@@ -10398,5 +10398,53 @@
   {
     "input": "Results for the Model :",
     "output": "On the ImageNet dataset,  the authors uses a 152-layers ResNet, which is 8 times more deep than VGG19 but still have less parameters. An ensemble of these ResNets generated an error of only3.7%on ImageNet test set, the result which won ILSVRC 2015 competition. On COCO object detection dataset, it also generates a28%relative improvement due to its very deep representation.\nThe result above shows that shortcut connections would be able to solve the problem caused by increasing the layers because as we increase layers from 18 to 34 the error rate on ImageNet Validation Set also decreases unlike the plain network.\n\nBelow are the results on ImageNet Test Set. The3.57%top-5 error rate of ResNet was the lowest and thus ResNet architecture came first in ImageNet classification challenge in 2015.\n\nResidual Networks (ResNet) revolutionized deep learning by introducing skip connections, which allow information to bypass layers, making it easier to train very deep networks. Instead of learning a complex function directly, ResNet focuses on learning residuals . This approach addresses issues like vanishing gradients, enabling models to be deeper and more accurate while improving convergence and performance across tasks like image classification and object detection."
+  },
+  {
+    "input": "Need of RMSProp Optimizer",
+    "output": "RMSProp was developed to address the limitations of previous optimization methods such asSGD (Stochastic Gradient Descent)andAdaGradas SGD uses a constant learning rate which can be inefficient and AdaGrad reduces the learning rate too aggressively.\nRMSProp balances by adapting the learning rates based on a moving average of squared gradients. This approach helps in maintaining a balance between efficient convergence and stability during the training process making RMSProp a widely used optimization algorithm in modern deep learning."
+  },
+  {
+    "input": "How RMSProp Works?",
+    "output": "RMSProp keeps a moving average of the squared gradients to normalize the gradient updates. By doing so it prevents the learning rate from becoming too small which was a drawback in AdaGrad and ensures that the updates are appropriately scaled for each parameter. This mechanism allows RMSProp to perform well even in the presence of non-stationary objectives making it suitable for training deep learning models.\nThe mathematical formulation is as follows:\n1. Compute the gradientg_tat time step t:\n2. Update the moving average of squared gradients:\nwhere\\gammais the decay rate.\n3. Update the parameter\\thetausing the adjusted learning rate:\n​where\\etais the learning rate and\\epsilonis a small constant added for numerical stability."
+  },
+  {
+    "input": "Parameters Used in RMSProp",
+    "output": "Learning Rate (\\eta): Controls the step size during the parameter updates. RMSProp typically uses a default learning rate of 0.001, but it can be adjusted based on the specific problem.\nDecay Rate (\\gamma): Determines how quickly the moving average of squared gradients decays. A common default value is 0.9 which balances the contribution of recent and past gradients.\nEpsilon (\\epsilon): A small constant added to the denominator to prevent division by zero and ensure numerical stability. A typical value for\\epsilonis 1e-8.\nBy carefully adjusting these parameters, RMSProp effectively adapts the learning rates during training, leading to faster and more reliable convergence in deep learning models."
+  },
+  {
+    "input": "Implementing RMSprop in Python using TensorFlow or Keras",
+    "output": "We will use the following code line for initializing the RMSProp optimizer with hyperparameters:\nlearning_rate=0.001:Sets the step size for weight updates. Smaller learning rates result in smaller updates, helping to fine-tune weights and prevent overshooting the minimum loss.\nrho=0.9:The discounting factor for the history of gradients, controlling the influence of past gradients on the current gradient computation."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We are importing libraries to implement RMSprop optimizer, handle datasets, build the model and plot results.\ntensorflow.keras for deep learning components.\nmatplotlib.pyplot for visualization."
+  },
+  {
+    "input": "2. Loading and Preprocessing Dataset",
+    "output": "We load the MNIST dataset, normalize pixel values to [0,1] andone-hot encode labels.\nmnist.load_data()loads images and labels.\nNormalizationimproves training stability.\nto_categorical()converts labels to one-hot vectors."
+  },
+  {
+    "input": "3. Building the Model",
+    "output": "We define a neural network using Sequential with input flattening and dense layers.\nFlatten converts 2D images to 1D vectors.\nDense layers learn patterns withReLUandsoftmaxactivations."
+  },
+  {
+    "input": "4. Compiling the Model",
+    "output": "We compile the model using the RMSprop optimizer for adaptive learning rates, categorical cross-entropy loss for multi-class classification and track accuracy metric.\nRMSprop adjusts learning rates based on recent gradients (parameter rho controls decay rate).\ncategorical_crossentropy suits one-hot encoded labels."
+  },
+  {
+    "input": "5. Training the Model",
+    "output": "We train the model over 10 epochs with batch size 32 and validate on 20% of training data. validation_split monitors model performance on unseen data each epoch.\nOutput:"
+  },
+  {
+    "input": "6. Evaluating and Visualizing Results",
+    "output": "We evaluate test accuracy on unseen test data and plot training and validation loss curves to visualize learning progress.\nOutput:"
+  },
+  {
+    "input": "Advantages",
+    "output": "Adaptive Learning Rates:Adjusts learning rates for each parameter individually, optimizing updates more effectively.\nHandles Non-Stationary Objectives:Efficiently adapts to changing optimal parameter values over time.\nPrevents Learning Rate Decay Problem:Maintains optimal learning rates by using a decay rate unlike AdaGrad.\nImproved Convergence Speed:Faster convergence due to balanced and dynamic learning rates."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Sensitivity to Hyperparameters:Performance is sensitive to settings like decay rate and epsilon meaning it requires careful tuning.\nPoor Performance with Sparse Data:May struggle with sparse data, leading to slower or inconsistent convergence."
   }
 ]
