@@ -11150,5 +11150,61 @@
   {
     "input": "Conclusion",
     "output": "These techniques and architectural choices aim to ensure that gradients during backpropagation are within a reasonable range, enabling deep neural networks to train more effectively and converge to better solutions."
+  },
+  {
+    "input": "Architecture of Variational Autoencoder",
+    "output": "VAE is a special kind of autoencoder that can generate new data instead of just compressing and reconstructing it. It has three main parts:"
+  },
+  {
+    "input": "1. Encoder (Understanding the Input)",
+    "output": "The encoder takes input data like images or text and learns its key features. Instead of outputting one fixed value, it produces two vectors for each feature:\nMean (μ):A central value representing the data.\nStandard Deviation (σ):It is a measure of how much the values can vary.\nThese two values define a range of possibilities instead of a single number."
+  },
+  {
+    "input": "2. Latent Space (Adding Some Randomness)",
+    "output": "Instead of encoding the input as one fixed point it pick a random point within the range given by the mean and standard deviation. This randomness lets the model create slightly different versions of data which is useful for generating new, realistic samples."
+  },
+  {
+    "input": "3. Decoder (Reconstructing or Creating New Data)",
+    "output": "The decoder takes the random sample from the latent space and tries to reconstruct the original input. Since the encoder gives a range, the decoder can produce new data that is similar but not identical to what it has seen."
+  },
+  {
+    "input": "Mathematics behind Variational Autoencoder",
+    "output": "Variational autoencoder uses KL-divergence as its loss function the goal of this is to minimize the difference between a supposed distribution and original distribution of dataset.\nSuppose we have a distributionzand we want to generate the observationxfrom it.  In other words we want to calculatep\\left( {z|x} \\right)We can do it by following way:\nBut, the calculation ofp(x)can be difficult:\nThis usually makes it an intractable distribution. Hence we need to approximatep(z|x)toq(z|x)to make it a tractable distribution. To better approximatep(z|x)toq(z|x)we will minimize theKL-divergence losswhich calculates how similar two distributions are:\nBy simplifying the above minimization problem is equivalent to the following maximization problem :\nThe first term represents the reconstruction likelihood and the other term ensures that our learned distributionqis similar to the true prior distributionp. Thus our total loss consists of two terms one is reconstruction error and other is KL divergence loss:"
+  },
+  {
+    "input": "Implementing Variational Autoencoder",
+    "output": "We will build a Variational Autoencoder using TensorFlow and Keras. The model will be trained on the Fashion-MNIST dataset which contains 28×28 grayscale images of clothing items. This dataset is available directly through Keras."
+  },
+  {
+    "input": "Step 1: Importing Libraries",
+    "output": "First we will be importingNumpy,TensorFlow,Keraslayers andMatplotlibfor this implementation."
+  },
+  {
+    "input": "Step 2: Creating a Sampling Layer",
+    "output": "The sampling layer acts as the bottleneck, taking the mean and standard deviation from the encoder and sampling latent vectors by adding randomness. This allows the VAE to generate varied outputs.\nepsilon = tf.random.normal(shape=tf.shape(mean)): Generate random noise from normal distribution.\nreturn mean + tf.exp(0.5 * log_var) * epsilon: Apply reparameterization trick to sample latent vector."
+  },
+  {
+    "input": "Step 3: Defining Encoder Block",
+    "output": "The encoder takes input images and outputs two vectors: mean and log variance. These describe the distribution from which latent vectors are sampled.\nx = layers.Dense(128, activation=\"relu\")(x): Fully connected layer with 128 units andReLU activation.\nencoder = keras.Model(encoder_inputs, [mean, log_var, z], name=\"encoder\"): Define encoder model from input to outputs.\nOutput:"
+  },
+  {
+    "input": "Step 4: Defining Decoder Block",
+    "output": "Now we will define the architecture of decoder part of our autoencoder which takes sampled latent vectors and reconstructs the image.\nx = layers.Dense(128, activation=\"relu\")(latent_inputs): Dense layer to expand latent vector.\nx = layers.Dense(28 * 28, activation=\"sigmoid\")(x): Output layer to generate 784 pixels with values between 0 and 1.\nOutput:"
+  },
+  {
+    "input": "Step 5: Defining the VAE Model",
+    "output": "Combine encoder and decoder into the VAE model and define the custom training step including reconstruction and KL-divergence losses.\nself.loss_fn = keras.losses.BinaryCrossentropy(from_logits=False): Set reconstruction loss asbinary cross-entropy.\nwith tf.GradientTape() as tape: Record operations for gradient calculation.\nkl_loss = -0.5 * tf.reduce_mean(1 + log_var - tf.square(mean) - tf.exp(log_var)): Calculate KL divergence loss."
+  },
+  {
+    "input": "Step 6: Training the VAE",
+    "output": "Load the Fashion-MNIST dataset and train the model for 10 epochs.\nx_train = np.expand_dims(x_train, -1):Add channel dimension to training images.\nx_test = x_test.astype(\"float32\") / 255.0: Normalize test images.\nx_test = np.expand_dims(x_test, -1): Add channel dimension to test images.\nOutput:"
+  },
+  {
+    "input": "Step 7: Displaying Sampled Images",
+    "output": "Generate new images by sampling points from the latent space and display them.\nz_sample = np.array([[xi, yi]]): Create latent vector from grid point.\nx_decoded = decoder.predict(z_sample): Decode latent vector to image.\nOutput:"
+  },
+  {
+    "input": "Step 8: Displaying Latent Space Clusters",
+    "output": "Encode the test set images and plot their positions in latent space to visualize clusters.\nmean, _, _ = encoder.predict(x_test): Encode test images to latent mean vectors.\nOutput:\nWe can see that our model is working fine."
   }
 ]
