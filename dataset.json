@@ -10878,5 +10878,41 @@
   {
     "input": "Conclusion",
     "output": "Deep learning algorithms are at the core of the most transformative advancements in artificial intelligence, powering breakthroughs across industries such as healthcare, finance, autonomous vehicles, and more. These algorithms, from CNNs to Transformers, will be building upon themselves to provide more efficient, accurate, and scalable solutions to complex problems. They are invaluable in driving innovation and progress in AI because of their capacity to analyze vast amounts of data and learn patterns without explicit programming. In the light of growing technology and data availability, these algorithms' potential will be expanded further to reshape the industries and unlock new possible future applications."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We will be importingPandas,NumPy,Matplotlib,Seaborn,TensorFlow,Keras,NLTKandScikit-learnfor implemntation."
+  },
+  {
+    "input": "2. Loading the Dataset",
+    "output": "You can download the dataset used in this article fromhere. We load the dataset usingpd.read_csv()and display the first 7 rows withdata.head(7). We remove rows where theClass Namecolumn is null to clean the data.\nOutput:\nWe can usedata.shapeto give us dimensions of the dataset."
+  },
+  {
+    "input": "3. Performing Exploratory Data Analysis",
+    "output": "EDAhelps one understand how the data is distributed. To perform EDA one must perform various visualizing techniques so that one can understand the data before building a model.\nWe usesns.countplot()to visualize the count of each category in the ‘Class Name’ column. Theplt.xticks(rotation=90)rotates the x-axis labels for better readability.\nOutput:\nWe create a figure with size 12x5 inches usingplt.subplots():\nUsingplt.subplot(1, 2, 1)we plot a countplot of the Rating column\nUsingplt.subplot(1, 2, 2)we plot a countplot of the Recommended IND column.\nOutput:\nWe create a histogram usingpx.histogram()to show the frequency distribution of Age. The histogram includes a box plot as a marginal plot. Data is colored based on Recommended IND values using green and red colors. Number of bins is set to the range from 18 to 65.fig.update_layout()adjusts the gap between bars.\nOutput:\nThe histogram on the bottom shows age distribution with green bars for recommended individuals and red bars for non-recommended ones. The box plots at the top display the spread and outliers of ages for each recommendation group helping to visualize differences in age distribution between the two groups.\nWe can visualize the distribution of the age columns data along with theRating.\nOutput:\nThe histogram at the bottom represents the count of individuals in each age group with bars color coded by rating from 1 to 5. The boxplots at the top provide a summary of age distribution for each rating showing the median, interquartile range and outliers. It helps to analyze how ratings vary with age groups."
+  },
+  {
+    "input": "4. Prepare the Data to build Model",
+    "output": "Since we are working on the NLP-based dataset it could be valid to use Text columns as the feature. So we select the features that are text and the Rating column is used for Sentiment Analysis. By the above Rating counterplot we can observe that there is too much of an imbalance between the rating. So all the rating above 3 is made as 1 and below 3 as 0."
+  },
+  {
+    "input": "5. Text Preprocessing",
+    "output": "The text data we have comes with too much noise. This noise can be in form of repeated words or commonly used sentences. In text preprocessing we need the text in the same format so we first convert the entire text into lowercase and then performLemmatizationto remove the superposition of the words. Since we need clean text we also remove common words such asStopwordsand punctuation.\nIf you notice at the end of the code, we have created a new column \"Text\" which is of type list. The reason we did this is that we need to perform Tokenization on the entire feature taken to train the model."
+  },
+  {
+    "input": "6. Tokenization",
+    "output": "InTokenizationwe convert the text into Vectors. Keras API supports text pre-processing. This API consists of Tokenizer that takes in the total num_words to create the Word index. OOV stands for out of vocabulary this is triggered when new text is encountered.  Also remember that wefit_on_textsonly on training data and not testing."
+  },
+  {
+    "input": "7. Padding the Text Data",
+    "output": "Keraspreprocessing helps in organizing the text. Padding helps in building models of the same size that further becomes easy to train neural network models. The padding adds extra zeros to satisfy the maximum length to feed a neural network. If the text length exceeds then it can be truncated from either the beginning or end. By default it is pre, we can set it to post or leave it as it is."
+  },
+  {
+    "input": "8. Building a Recurrent Neural Network (RNN) in TensorFlow",
+    "output": "Now that the data is ready, the next step is building a Simple Recurrent Neural network. Before training with SImpleRNN, the data is passed through the Embedding layer to perform the equal size of Word Vectors.\nOutput:"
+  },
+  {
+    "input": "9. Training the Model",
+    "output": "In Tensorflow after developing a model, it needs to be compiled using the three important parameters i.eOptimizer, Loss Function and Evaluation metrics. We will be training the model on thetrain_padwhich we preprocessed and use5 epochsto calculate the accuracy ony_traindataset.\nOutput:\nHere we can see our model got a accuracy of 92.86% which is pretty good for a RNN model."
   }
 ]
