@@ -12034,5 +12034,73 @@
   {
     "input": "Step 5: Creating a DataFrame for Entities",
     "output": "entities = [(ent.text, ent.label_, ent.lemma_) for ent in doc.ents]: Creating a list of tuples where each tuple contains the text, label (type) and lemma (base form) of each named entity found in the processed doc object.\nOutput:\nHere dataframe provides a structured representation of the named entities, their types and lemmatized forms. NER helps organize unstructured text into structured information making it a useful for a wide range of NLP applications."
+  },
+  {
+    "input": "Phases of Natural Language Processing",
+    "output": "It involves a series of phases that work together to process and interpret language with each phase contributing to understanding its structure and meaning."
+  },
+  {
+    "input": "Libraries for NLP",
+    "output": "Some of natural language processing libraries include:\nNLTK (Natural Language Toolkit)\nspaCy\nTextBlob\nTransformers (by Hugging Face)\nGensim\nNLP Libraries in Python."
+  },
+  {
+    "input": "Normalizing Textual Data in NLP",
+    "output": "Text Normalization transforms text into a consistent format improves the quality and makes it easier to process in NLP tasks.\nKey steps in text normalization includes:\n1. Regular Expressions (RE)are sequences of characters that define search patterns.\nText Normalization\nRegular Expressions (RE)\nHow to write Regular Expressions?\nProperties of Regular Expressions\nEmail Extraction using RE\n2. Tokenizationis a process of splitting text into smaller units called tokens.\nTokenization\nWord Tokenization\nRule-based Tokenization\nSubword Tokenization\nDictionary-Based Tokenization\nWhitespace Tokenization\nWordPiece Tokenization\n3. Lemmatizationreduces words to their base or root form.\nLemmatization\n4. Stemmingreduces works to their root by removing suffixes. Types of stemmers include:\nStemming\nPorter Stemmer\nLancaster Stemmer\nSnowball Stemmer\nRule-based Stemming\n5. Stopword removalis a process to remove common words from the document.\nStopword removal\n6. Parts of Speech (POS) Taggingassigns a part of speech to each word in sentence based on definition and context.\nParts of Speech (POS) Tagging"
+  },
+  {
+    "input": "Text Representation and Embedding Techniques in NLP",
+    "output": "Lets see how these techniques works in NLP."
+  },
+  {
+    "input": "Text representation Techniques",
+    "output": "It converts textual data into numerical vectors that are processed by the following methods:\nOne-Hot Encoding\nBag of Words (BOW)\nTerm Frequency-Inverse Document Frequency (TF-IDF)\nN-Gram Language Modeling with NLTK\nLatent Semantic Analysis (LSA)\nLatent Dirichlet Allocation (LDA)"
+  },
+  {
+    "input": "Text Embedding Techniques",
+    "output": "It refers to methods that create dense vector representations of text, capturing semantic meaning including advanced approaches like:\n1. Word Embedding\nWord2Vec(SkipGram,Continuous Bag of Words - CBOW)\nGloVe (Global Vectors for Word Representation)\nfastText\n2. Pre-Trained Embedding\nELMo (Embeddings from Language Models)\nBERT (Bidirectional Encoder Representations from Transformers)\n3. Document Embedding\nDoc2Vec\n4. Advanced Embeddings\nRoBERTa\nDistilBERT"
+  },
+  {
+    "input": "Deep Learning Techniques for NLP",
+    "output": "Deep learning has revolutionized Natural Language Processing by helping models to automatically learn complex patterns from raw text.\nKey deep learning techniques in NLP include:\nDeep learning\nArtificial Neural Networks (ANNs)\nRecurrent Neural Networks (RNNs)\nLong Short-Term Memory (LSTM)\nGated Recurrent Unit (GRU)\nSeq2Seq Models\nTransformer Models"
+  },
+  {
+    "input": "Pre-Trained Language Models",
+    "output": "Pre-trained models can be fine-tuned for specific tasks:\nPre-trained models\nGPT (Generative Pre-trained Transformer)\nTransformers XL\nT5 (Text-to-Text Transfer Transformer)\nTransfer Learning with Fine-tuning"
+  },
+  {
+    "input": "Natural Language Processing Tasks",
+    "output": "Core NLP tasks that help machines understand, interpret and generate human language."
+  },
+  {
+    "input": "1. Text Classification",
+    "output": "Dataset for Text Classification\nText Classification using Naive Bayes\nText Classification using Logistic Regression\nText Classification using RNNs\nText Classification using CNNs"
+  },
+  {
+    "input": "2. Information Extraction",
+    "output": "Named Entity Recognition (NER) using SpaCy\nNamed Entity Recognition (NER) using NLTK\nRelationship Extraction"
+  },
+  {
+    "input": "3. Sentiment Analysis",
+    "output": "What is Sentiment Analysis?\nSentiment Analysis using VADER\nSentiment Analysis using Recurrent Neural Networks (RNN)"
+  },
+  {
+    "input": "4. Machine Translation",
+    "output": "Statistical Machine Translation of Language\nMachine Translation with Transformer"
+  },
+  {
+    "input": "5. Text Summarization",
+    "output": "What is Text Summarization?\nText Summarizations using Hugging Face Model\nText Summarization using Sumy"
+  },
+  {
+    "input": "6. Text Generation",
+    "output": "Text Generation using Fnet\nText Generation using Recurrent Long Short Term Memory Network\nText2Text Generations using HuggingFace Model"
+  },
+  {
+    "input": "Natural Language Processing Chatbots",
+    "output": "NLP chatbots are computer programs designed to interact with users in natural language helps in seamless communication between humans and machines. By using NLP techniques, these chatbots understand, interpret and generate human language.\nWhat is Natural Language Processing (NLP) Chatbots?"
+  },
+  {
+    "input": "Importance of NLP",
+    "output": "Natural Language Processing (NLP) plays an important role in transforming how we interact with technology and understand data. Below are reasons why it’s so important:"
   }
 ]
