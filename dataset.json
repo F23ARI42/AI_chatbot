@@ -12174,5 +12174,41 @@
   {
     "input": "Step 3: Displaying POS Tagging",
     "output": "Print the original sentence then loop through the tokens and display each word with its POS tag.\nOutput:"
+  },
+  {
+    "input": "Installation",
+    "output": "NLTK can be installed simply using pip or by running the following code.\nAccessing Additional Resources:For the usage of additional resources such as recourses of languages other than English - we can run the following in a python script. It has to be done only once when you are running it for the first time in your system.\nNow, having installed NLTK successfully in our system we can perform some basic operations on text data using NLTK."
+  },
+  {
+    "input": "1. Tokenization",
+    "output": "Tokenizationrefers to break down the text into smaller units. It splits paragraphs into sentences and sentences into words. It is one of the initial steps of any NLP pipeline. Let us have a look at the two major kinds of tokenization that NLTK provides:"
+  },
+  {
+    "input": "1.1 Word Tokenization",
+    "output": "It involves breaking down the text into words."
+  },
+  {
+    "input": "1.2 Sentence Tokenization",
+    "output": "It involves breaking down the text into individual sentences.\nIn Python, both these tokenizations can be implemented in NLTK as follows:\nOutput:"
+  },
+  {
+    "input": "2. Stemming and Lemmatization",
+    "output": "When working with natural language, our focus is on understanding the intended meaning behind words. To achieve this, it is essential to reduce words to their root or base form. This process is known ascanonicalization.\nThere are two commonly used techniques for canonicalization:stemmingandlemmatization."
+  },
+  {
+    "input": "2.1 Stemming",
+    "output": "Stemming generates the base word from the given word by removing the affixes of the word. It has a set of pre-defined rules that guide the dropping of these affixes. It must be noted that stemmers might not always result in semantically meaningful base words.  Stemmers are faster and computationally less expensive than lemmatizers.\nIn the following code, we will be stemming words usingPorter Stemmer:\nOutput:\nWe can see that all the variations of the word 'play' have been reduced to the same word, 'play'. In this case, the output is a meaningful word 'play'. However, this is not always the case.\nLet us take an example:\nOutput:\nThe stemmer reduces the word 'communication' to a base word 'commun' which is meaningless in itself."
+  },
+  {
+    "input": "2.2 Lemmatization",
+    "output": "Lemmatization involves grouping together the inflected forms of the same word. This way, we can reach out to the base form of any word which will be meaningful in nature. The base from here is called the Lemma.\nLemmatizers are slower and computationally more expensive than stemmers.\nIn Python, both these tokenizations can be implemented in NLTK as follows:\nOutput:\nNote that in lemmatizers, we need to pass the Part of Speech of the word along with the word as a function argument.\nAlso, lemmatizers always result in meaningful base words.\nLet us take the same example as we took in the case for stemmers.\nOutput:"
+  },
+  {
+    "input": "3. Part of Speech Tagging",
+    "output": "Part of Speech (POS) taggingrefers to assigning each word of a sentence to its part of speech. It is significant as it helps to give a better syntactic overview of a sentence.\nLet's see how NLTK's POS tagger will tag this sentence.\nOutput:"
+  },
+  {
+    "input": "4. Named Entity Recognition (NER)",
+    "output": "Named Entity Recognition (NER)is another important task in Natural Language Processing (NLP) and NLTK provides built-in capabilities to perform it. NER involves identifying and classifying key information in a text such as names of people, places , organizations and more. It’s an important step for information extraction and understanding the meaning of text at a deeper level.\nExample:\"Barack Obama was born in Hawaii in 1961.\"Let’s see how NLTK’s NER module identifies entities in this sentence.\nOutput:\nIn conclusion, the Natural Language Toolkit (NLTK) works as a powerful Python library that has a wide range of tools for Natural Language Processing (NLP). From fundamental tasks like text pre-processing to more advanced operations such as semantic reasoning, NLTK provides an API that aids to all these needs of language-related tasks."
   }
 ]
