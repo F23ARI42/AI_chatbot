@@ -12118,5 +12118,61 @@
   {
     "input": "Edge Cases and Limitations",
     "output": "Ambiguous Sentences: \"I saw her duck\" can mean two different things\nSarcasm and Irony: Hard to detect even for advanced models\nDomain-Specific Terms: Generic models often fail to interpret niche vocabulary\nMultilingual Input: Code-switching in text complicates tokenization and tagging\nNatural Language Understanding enables intelligent interaction between humans and machines. It combines linguistics and machine learning to interpret language at a deeper level. As transformer models continue to evolve and more data becomes available, NLU is becoming more advanced, supporting applications that demand understanding and real-time decision-making."
+  },
+  {
+    "input": "Example of POS Tagging",
+    "output": "Consider the sentence: \"The quick brown fox jumps over the lazy dog.\"\nAfter performing POS Tagging, we get:\nEach word is assigned a tag based on its role in the sentence. For example, \"quick\" and \"brown\" are adjectives that describe the noun \"fox.\""
+  },
+  {
+    "input": "Working of POS Tagging",
+    "output": "Let’s see various steps involved in POS tagging:\nTokenization: The input text is split into individual tokens (words or subwords), this step is necessary for further analysis.\nPreprocessing: The text is cleaned such as converting it to lowercase and removing special characters, to improve accuracy.\nLoading a Language Model: Tools likeNLTKorSpaCyuse pre-trained language models to understand the grammatical rules of the language, these models have been trained on large datasets.\nLinguistic Analysis: The structure of the sentence is analyzed to understand the role of each word in context.\nPOS Tagging: Each word is assigned a part-of-speech label based on its role in the sentence and the context provided by surrounding words.\nEvaluation: The results are checked for accuracy. If there are any errors or misclassifications, they are corrected."
+  },
+  {
+    "input": "Types of POS Tagging",
+    "output": "There are different types and each has its strengths and use cases. Let's see few common methods:"
+  },
+  {
+    "input": "1.Rule-Based Tagging",
+    "output": "Rule-based POS taggingassigns POS tags based on predefined grammatical rules. These rules are crafted based on morphological features (like word endings) and syntactic context, making the approach highly interpretable and transparent.\nExample:\n1. Rule:Assign the POS tag \"Noun\" to words ending in \"-tion\" or \"-ment\".\n2. Sentence:\"The presentation highlighted the key achievements of the project's development.\"\n3. Tagged Output:\n\"presentation\" → Noun (N)\n\"highlighted\" → Verb (V)\n\"development\" → Noun (N)"
+  },
+  {
+    "input": "2.Transformation-Based Tagging (TBT)",
+    "output": "TBT refines POS tags through a series of context-based transformations. Unlike statistical taggers that rely on probabilities or rule-based taggers, it starts with initial tags and improves them iteratively by applying transformation rules.\nExample:\nText:\"The cat chased the mouse.\"\nInitial Tags:\"The\" – DET, \"cat\" – NOUN, \"chased\" – VERB, \"the\" – DET, \"mouse\" – NOUN\nRule Applied:Change “chased” from Verb to Nounbecause it follows “the”.\nUpdated Tags:\"chased\" becomes Noun."
+  },
+  {
+    "input": "3. Statistical POS Tagging",
+    "output": "It uses probabilistic models to assign grammatical categories (e.g noun, verb, adjective) to words in a text. Unlike rule-based methods which rely on handcrafted rules, it learns patterns from large annotated corpora using machine learning techniques.\nThese models calculate the likelihood of a tag based on a word and its context, helping to resolve ambiguities and handle complex grammar. Common models include:\nHidden Markov Models (HMMs)\nConditional Random Fields (CRFs)"
+  },
+  {
+    "input": "Implementing POS Tagging with NLTK",
+    "output": "Let's see step by step process how POS Tagging works with NLTK:"
+  },
+  {
+    "input": "Step 1: Installing Required Resources",
+    "output": "Here we import theNLTKlibrary and download the necessary datasets using nltk.download()."
+  },
+  {
+    "input": "Step 2: Applying POS Tagging",
+    "output": "First we store the sentence and tokenize it into words usingword_tokenize(text). Then we apply POS tagging to the tokenized words usingpos_tag(words).This assigns a part-of-speech to each word."
+  },
+  {
+    "input": "Step 3: Displaying Results",
+    "output": "Now we print the original sentence and loop through the tagged words to show each word with its POS tag.\nOutput:"
+  },
+  {
+    "input": "Implementing POS Tagging with SpaCy",
+    "output": "Let's see step by step process how POS Tagging works with SpaCy:"
+  },
+  {
+    "input": "Step 1: Installing and importing Required Resources",
+    "output": "Here we install and import theSpaCylibrary and install the pre-trained English language model (en_core_web_sm)."
+  },
+  {
+    "input": "Step 2: Defining and Processing the Text",
+    "output": "We store the sentence in a variable and process it withnlp(text)to get linguistic annotations."
+  },
+  {
+    "input": "Step 3: Displaying POS Tagging",
+    "output": "Print the original sentence then loop through the tokens and display each word with its POS tag.\nOutput:"
   }
 ]
