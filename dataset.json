@@ -12274,5 +12274,41 @@
   {
     "input": "Limitations and Considerations",
     "output": "While RoBERTa improves on BERT in several ways it still shares some limitations:\nComputational Cost: Training RoBERTa requires significant GPU resources which can be a barrier for small teams or low-power environments.\nLack of Sentence-Level Understanding: Removing NSP may affect tasks that involve reasoning across multiple sentences.\nData Bias:Like most large language models, RoBERTa can reflect biases present in the training data.\nDespite these challenges, RoBERTa remains a robust and widely used model in modern NLP systems.\nRoBERTa is an example of how training strategies can significantly affect the performance of deep learning models, even without architectural changes. By optimizing BERT's original pretraining procedure, it achieves higher accuracy and improved language understanding across a wide range of NLP tasks."
+  },
+  {
+    "input": "1. CBOW (Continuous Bag of Words)",
+    "output": "The CBOW model predicts the current word given context words within a specific window. The input layer contains the context words and the output layer contains the current word. The hidden layer contains the dimensions we want to represent the current word present at the output layer."
+  },
+  {
+    "input": "2. Skip Gram",
+    "output": "TheSkip gram predicts the surrounding context words within specific window given current word. The input layer contains the current word and the output layer contains the context words. The hidden layer contains the number of dimensions in which we want to represent current word present at the input layer."
+  },
+  {
+    "input": "Implementation of Word2Vec",
+    "output": "We will implement word2vec using Python programming language."
+  },
+  {
+    "input": "1. Importing Required Libraries",
+    "output": "We will import necessaryNLTKandGensimfor building the Word2Vec model and processing text:\nWord2Vecfromgensimto build the word vector model.\nnltk.tokenizehelps in splitting text into sentences and words.\nwarningsis used to suppress irrelevant warnings during execution."
+  },
+  {
+    "input": "2. Loading and Cleaning the Dataset",
+    "output": "We will load the text data from a zip file, clean it by removing newline characters and prepare it for tokenization. We will replace newline characters (\\n) with spaces to ensure the sentences are properly formatted.\nzipfile.ZipFile:reads the zip file.\nopen(file_name):extract the content of the first file inside the zip and decode it.\nOutput:"
+  },
+  {
+    "input": "3. Text Tokenization",
+    "output": "We will tokenize the cleaned text into sentences and words. We will append these tokenized words into a list, where each sentence is a sublist.\nsent_tokenize():Splits the text into sentences.\nword_tokenize():Tokenizes each sentence into words.\n.lower():Converts each word into lowercase to ensure uniformity."
+  },
+  {
+    "input": "4. Building Word2Vec Models",
+    "output": "We will build a Word2Vec model using both CBOW and Skip-Gram architecture one by one.\n4.1. Using CBOW Model\nWe will be using the CBOW architecture:\nmin_count=1:Includes words that appear at least once.\nvector_size=100:Generates word vectors of 100 dimensions.\nwindow=5:Considers a context window of 5 words before and after the target word.\nsg=0:Uses CBOW model (default setting).\n4.2. Using Skip-Gram Model\nWe will be using the Skip-Gram architecture for this model.\nmin_count=1:Includes words that appear at least once.\nvector_size=100:Generates word vectors of 100 dimensions.\nwindow=5:Considers a context window of 5 words.\nsg=1:Enables the Skip-Gram model (predicts context words given a target word)."
+  },
+  {
+    "input": "6. Evaluating Word Similarities",
+    "output": "We will compute the cosine similarity between word vectors to assess semantic similarity. Cosine similarity values range from -1 (opposite) to 1 (very similar), showing how closely related two words are in terms of meaning.\nmodel.wv.similarity(word1, word2): Computes thecosine similaritybetween word1 and word2 based on the trained model.\nOutput :\nOutput indicates the cosine similarities between word vectors ‘alice’, ‘wonderland’ and ‘machines' for different models. One interesting task might be to change the parameter values of ‘size’ and ‘window’ to observe the variations in the cosine similarities."
+  },
+  {
+    "input": "Applications of Word Embedding:",
+    "output": "Text classification:Using word embeddings to increase the precision of tasks such as topic categorization and sentiment analysis.\nNamed Entity Recognition (NER):Using word embeddings semantic context to improve the identification of entities such as names and locations.\nInformation Retrieval:To provide more precise search results, embeddings are used to index and retrieve documents based on semantic similarity.\nMachine Translation:The process of comprehending and translating the semantic relationships between words in various languages by using word embeddings.\nQuestion Answering:Increasing response accuracy and understanding of semantic context in Q&A systems."
   }
 ]
