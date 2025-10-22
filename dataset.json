@@ -12338,5 +12338,61 @@
   {
     "input": "5. Performing Translation (English to French)",
     "output": "We will now perform a translation task using our model. For English-to-French translation the prefix is\"translate English to French:\".\ninput_text: Includes the translation prefix followed by the text to translate.\nTokenization: Convert the input text into token IDs.\nGeneration: Use the model to generate output token IDs.\nDecoding: Convert the output token IDs back into text.\nOutput:\nReal-World Applications of T5:\nChatbots and Conversational AI: T5 can generate human-like responses for virtual assistants.\nText Summarization: Used by news aggregators and research tools to summarize articles.\nLanguage Translation: Provides high-quality translations between multiple languages.\nQuestion Answering: Helps build intelligent Q&A systems.\nIn this article we explored the T5 model highlighting its versatility and effectiveness in various NLP tasks. By treating all tasks as text-to-text problems it simplifies complex workflows and more efficient and unified solutions for different use cases."
+  },
+  {
+    "input": "Importance of Text Preprocessing",
+    "output": "Raw text data is usually noisy and unstructured, containing various inconsistencies such as typos, slang, abbreviations and irrelevant information. Preprocessing helps in:\nImproving Data Quality:Removing noise and irrelevant information ensures that the data fed into the model is clean and consistent.\nEnhancing Model Performance:Well-preprocessed text can lead to better feature extraction, improving the performance of NLP models.\nReducing Complexity:Simplifying the text data can reduce the computational complexity and make the models more efficient."
+  },
+  {
+    "input": "Text Preprocessing Techniques in NLP",
+    "output": "Regular Expressions:Regular expressions (regex)is an important tool in text preprocessing for Natural Language Processing (NLP). They allow for efficient and flexible pattern matching and text manipulation.\nTokenization:Tokenizationis the process of breaking down text into smaller units such as words or sentences. This is an important step in NLP as it transforms raw text into a structured format that can be further analyzed.\nLemmatization and Stemming:Lemmatizationandstemmingare techniques used in NLP to reduce words to their base or root forms. This process is important for tasks like text normalization, information retrieval and text mining.\nParts of Speech (POS):Parts of Speech (POS)tagging involves labeling each word in a sentence with its corresponding part of speech such as noun, verb, adjective etc. This information is crucial for many NLP applications, including parsing, information retrieval and text analysis."
+  },
+  {
+    "input": "Example - Text Preprocessing in NLP",
+    "output": "Now, we will perform the tasks on the sample corpus:"
+  },
+  {
+    "input": "1. Text Cleaning",
+    "output": "We'll convert the text to lowercase, remove punctuation, numbers, special characters and HTML tags.\nDefines a clean_text() function to clean and normalize raw text data for NLP tasks.\nApplies clean_text() to every document in the corpus list using a list comprehension.\nStores the cleaned version of all documents in a new list called cleaned_corpus.\nPrints cleaned_corpus which is ready for tokenization.\nOutput:"
+  },
+  {
+    "input": "2. Tokenization",
+    "output": "Splitting the cleaned text into tokens (words).\nImports word_tokenize to split text into individual words.\nDownloads the necessary NLTK tokenizer model ('punkt_tab' ).\nTokenizes each cleaned document in cleaned_corpus.\nStores the list of tokens for each document in tokenized_corpus.\nPrints the final tokenized output(a list of word lists).\nOutput:"
+  },
+  {
+    "input": "3. Stop Words Removal",
+    "output": "Removing common stop words from the tokens.\nImports the list of English stopwords from nltk.corpus.stopwords.\nDownloads the stopwords corpus using nltk.download('stopwords').\nStores all English stopwords (like \"the\", \"is\", \"and\", etc.) in a set called stop_words for fast lookup.\nIterates over each document in tokenized_corpus and removes all stopwords.\nSaves the cleaned, non-stopword tokens into filtered_corpus.\nPrints the a list of documents.\nOutput:"
+  },
+  {
+    "input": "4. Stemming and Lemmatization",
+    "output": "Reducing words to their base form using stemming and lemmatization.\nImports PorterStemmer and WordNetLemmatizer from NLTK.\nDownloads the wordnet resource required for lemmatization.\nInitializes the stemmer and lemmatizer.\nApplies stemming to each word in filtered_corpus and stores the result in stemmed_corpus.\nApplies lemmatization to each word in filtered_corpus and stores the result in lemmatized_corpus.\nPrints both the stemmed and lemmatized versions of the corpus.\nOutput:"
+  },
+  {
+    "input": "5. Handling Contractions",
+    "output": "Expanding contractions in the text.\nImports the contractions library, which expands shortened words.\nApplies contractions.fix() to each document in cleaned_corpus.\nExpands all contractions in the text for better clarity and consistency.\nStores the output in expanded_corpus.\nPrints a list of documents with all contractions expanded.\nOutput:"
+  },
+  {
+    "input": "6. Handling Emojis and Emoticons",
+    "output": "Converting emojis to their textual representation.\nImports the emoji library for handling emojis in text.\nApplies emoji.demojize() to each document in cleaned_corpus.\nConverts all emojis into descriptive text.\nStores the output in emoji_corpus.\nPrints a list of documents where emojis are replaced with readable names.\nOutput:"
+  },
+  {
+    "input": "7. Spell Checking",
+    "output": "Correcting spelling errors in the text.\nImports the SpellChecker class from the pyspellchecker library.\nInitializes the spell checker with spell = SpellChecker().\nIterates through each word in each tokenized document from tokenized_corpus.\nApplies spell.correction(word) to fix misspelled words.\nStores the corrected words in corrected_corpus.\nPrints the a list of tokenized documents with spelling corrections applied.\nOutput:\nAfter completing all the preprocessing steps, the final corpus is well-prepared for downstream NLP tasks such as feature extraction, text classification or sentiment analysis. This structured pipeline ensures the text is clean, standardized and optimized for modeling, ultimately enhancing the effectiveness and reliability of NLP applications.\nFurther Reading"
+  },
+  {
+    "input": "Regular Expressions",
+    "output": "How to write Regular Expressions?\nProperties of Regular expressions\nRegular Expression\nEmail Extraction using RE"
+  },
+  {
+    "input": "Tokenization",
+    "output": "White Space Tokenization\nDictionary Based Tokenization\nRule-Based Tokenization\nRegular Expression Tokenizer\nSpacy Tokenizer\nTokenization with Textblob\nTokenize text using NLTK\nHow tokenizing works"
+  },
+  {
+    "input": "Stemming",
+    "output": "Porter Stemmer\nLovins Stemmer\nDawson Stemmer\nKrovetz Stemmer\nXerox Stemmer"
+  },
+  {
+    "input": "POS",
+    "output": "Part of Speech – Default Tagging\nPart of speech tagging – word corpus\nPart of Speech Tagging with Stop words using NLTK\nPart of Speech Tagging using TextBlob"
   }
 ]
