@@ -11986,5 +11986,53 @@
   {
     "input": "Challenges and Limitations",
     "output": "While masked language models have achieved impressive results they are not without challenges:\nIn the coming years we can expect masked language models to play an even greater role in shaping how humans interact with machines. From smarter virtual assistants to more accurate translation tools the potential applications of MLMs are virtually limitless."
+  },
+  {
+    "input": "Understanding Named Entity Recognition",
+    "output": "NER helps in detecting specific information and sort it into predefined categories. It plays an important role in enhancing other NLP tasks likepart-of-speech taggingandparsing. Examples of Common Entity Types:\nPerson Names: Albert Einstein\nOrganizations: GeeksforGeeks\nLocations: Paris\nDates and Times: 5th May 2025\nQuantities and Percentages: 50%, $100\nIt helps in handling ambiguity by analyzing surrounding words, structure of sentence and the overall context to make the correct classification. It means context can change based on entity’s meaning.\nExample 1:\nAmazon is expanding rapidly (Organization)\nThe Amazon is the largest rainforest (Location)\nExample 2:\nJordan won the MVP award (Person)\nJordan is a country in the Middle East (Location)"
+  },
+  {
+    "input": "Working of Named Entity Recognition (NER)",
+    "output": "Various steps involves in NER and are as follows:"
+  },
+  {
+    "input": "Methods of Named Entity Recognition",
+    "output": "There are different methods present in NER which are:"
+  },
+  {
+    "input": "1. Lexicon Based Method",
+    "output": "This method uses a dictionary of known entity names. This process involves checking if any of these words are present in a given text. However, this approach isn't commonly used because it requires constant updating and careful maintenance of the dictionary to stay accurate and effective."
+  },
+  {
+    "input": "2. Rule Based Method",
+    "output": "It uses a set of predefined rules which helps in extraction of information. These rules are based on patterns and context. Pattern-based rules focus on the structure and form of words helps in looking at their morphological patterns. On the other hand context-based rules focus on the surrounding words or the context in which a word appears within the text document. This combination of pattern-based and context-based rules increases the accuracy of information extraction in NER."
+  },
+  {
+    "input": "3. Machine Learning-Based Method",
+    "output": "There are two main types of category in this:\nMulti-Class Classification: Trains model on labeled examples where each entity is categorized. In addition to labelling model also requires a deep understanding of context which makes it a challenging task for a simple machine learning algorithm.\nConditional Random Field (CRF): It is implemented by both NLP Speech Tagger andNLTK.It is a probabilistic model that understands the sequence and context of words which helps in making entity prediction more accurate."
+  },
+  {
+    "input": "4. Deep Learning Based Method",
+    "output": "Word Embeddings: Captures the meaning of words in context.\nAutomatic Learning: Deep models learn complex patterns without manual feature engineering.\nHigher Accuracy: Performs well on large varied datasets."
+  },
+  {
+    "input": "Step 1: Installing Libraries",
+    "output": "Firts we need to install necessary libraries. You can run the following commands in command prompt to install them."
+  },
+  {
+    "input": "Step 2: Importing and Loading data",
+    "output": "We will be usingPandasandSpacylibraries to implement this.\nnlp = spacy.load(\"en_core_web_sm\"): Loads the pre-trained \"en_core_web_sm\" SpaCy model and stores it in the variable nlp for text processing tasks."
+  },
+  {
+    "input": "Step 3: Applying NER to a Sample Text",
+    "output": "We have created some random content to implement this you can use any text based on your choice.\ndoc = nlp(content): Processes text stored in content using the nlp model and stores resulting document object in the variable doc for further analysis.\nfor ent in doc.ents: Iterates through the named entities (doc.ents) identified in the processed document and performs actions for each entity.\nOutput:\nIt displays the names of the entities, their start and end positions in the text and their predicted labels."
+  },
+  {
+    "input": "Step 4: Visualizing Entities",
+    "output": "We will highlight the text with their categories using visualizing technique for better understanding.\ndisplacy.render(doc, style=\"ent\"): Visualizing named entities in the processed doc object by highlighting them in the text with their respective categories such as person, organization, location etc.\nOutput:"
+  },
+  {
+    "input": "Step 5: Creating a DataFrame for Entities",
+    "output": "entities = [(ent.text, ent.label_, ent.lemma_) for ent in doc.ents]: Creating a list of tuples where each tuple contains the text, label (type) and lemma (base form) of each named entity found in the processed doc object.\nOutput:\nHere dataframe provides a structured representation of the named entities, their types and lemmatized forms. NER helps organize unstructured text into structured information making it a useful for a wide range of NLP applications."
   }
 ]
