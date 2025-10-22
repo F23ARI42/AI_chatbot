@@ -12394,5 +12394,29 @@
   {
     "input": "POS",
     "output": "Part of Speech – Default Tagging\nPart of speech tagging – word corpus\nPart of Speech Tagging with Stop words using NLTK\nPart of Speech Tagging using TextBlob"
+  },
+  {
+    "input": "Lexical Analysis Phase",
+    "output": "In this phase, input is the source program that is to be read from left to right and the output we get is a sequence of tokens that will be analyzed by the next Syntax Analysis phase. During scanning the source code, white space characters, comments, carriage return characters, preprocessor directives, macros, line feed characters, blank spaces, tabs, etc. are removed. TheLexical analyzeror Scanneralso helps inerror detection. To exemplify, if the source code contains invalid constants, incorrect spelling of keywords, etc. is taken care of by the lexical analysis phase. Regular expressions are used as a standard notation for specifying tokens of a programming language."
+  },
+  {
+    "input": "What is a Token?",
+    "output": "In programming, a token is the smallest unit of meaningful data; it may be an identifier, keyword, operator, or symbol. A token represents a series or sequence of characters that cannot be decomposed further. In languages such as C, some examples of tokens would include:\nKeywords: Those reserved words in C like `int`, `char`, `float`, `const`, `goto`, etc.\nIdentifiers:Names of variables and user-defined functions.\nOperators: `+`, `-`, `*`, `/`, etc.\nDelimiters/Punctuators: Symbols used such as commas \",\" semicolons \";\" braces `{}`.\nBy and large, tokens may be divided into three categories:\nTerminal Symbols (TRM): Keywords and operators.\nLiterals (LIT): Values like numbers and strings.\nIdentifiers (IDN): Names defined by the user.\nLet's understand now how to calculate tokens in a source code (C language):\nExample 1:\nAnswer -Total number of tokens = 5\nExample 2:\nAnswer -Total number of tokens = 14"
+  },
+  {
+    "input": "What is a Lexeme?",
+    "output": "A lexeme is a sequence of source code that matches one of the predefined patterns and thereby forms a valid token. For example, in the expression `x + 5`, both `x` and `5` are lexemes that correspond to certain tokens. These lexemes follow the rules of the language in order for them to be recognized as valid tokens.\nExample:"
+  },
+  {
+    "input": "What is a Pattern?",
+    "output": "A pattern is a rule or syntax that designates how tokens are identified in a programming language. In fact, it is supposed to specify the sequences of characters or symbols that make up valid tokens, and provide guidelines as to how to identify them correctly to the scanner.\nExample of Programming Language (C, C++)"
+  },
+  {
+    "input": "Output of Lexical Analysis Phase",
+    "output": "The output of Lexical Analyzer serves as an input to Syntax Analyzer as a sequence of tokens and not the series of lexemes because during the syntax analysis phase individual unit is not vital but the category or class to which this lexeme belongs is considerable.\nExample:\nThe Lexical Analyzer not only provides a series of tokens but also creates aSymbol Tablethat consists of all the tokens present in the source code except Whitespaces and comments."
+  },
+  {
+    "input": "Conclusion",
+    "output": "Tokens, patterns, and lexemes represent basic elements of any programming language, helping to break down and start making sense of code. Tokens are the basic units of meaningful things; patterns define how such units are identified, whereas the lexemes are actual sequences that match patterns. Basically, understanding these concepts is indispensable in programming and analyzing codes efficiently."
   }
 ]
