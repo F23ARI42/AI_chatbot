@@ -13410,5 +13410,41 @@
   {
     "input": "6. Gensim",
     "output": "Gensimis widely used for topic modeling, document similarity and lemmatization tasks in large text corpora. Its lemmatization relies on the Pattern library and focuses on processing tokens like nouns, verbs, adjectives and adverbs. It is suitable for large-scale text processing.\nInstallation:\nLets see an example,\nOutput:\nWith all these techniques we can easily do Lemmatization in Python and can make real world projects."
+  },
+  {
+    "input": "Lemmatization Techniques",
+    "output": "There are different techniques to perform lemmatization each with its own advantages and use cases:"
+  },
+  {
+    "input": "1. Rule Based Lemmatization",
+    "output": "In rule-based lemmatization, predefined rules are applied to a word to remove suffixes and get the root form. This approach works well for regular words but may not handle irregularities well.\nWhile this method is simple and interpretable, it doesn't account for irregular word forms like \"better\" which should be lemmatized to \"good\"."
+  },
+  {
+    "input": "2. Dictionary-Based Lemmatization",
+    "output": "It uses a predefined dictionary or lexicon such as WordNet to look up the base form of a word. This method is more accurate than rule-based lemmatization because it accounts for exceptions and irregular words.\nBy using dictionaries like WordNet this method can handle a range of words effectively, especially in languages with well-established dictionaries."
+  },
+  {
+    "input": "3. Machine Learning-Based Lemmatization",
+    "output": "It uses algorithms trained on large datasets to automatically identify the base form of words. This approach is highly flexible and can handle irregular words and linguistic nuances better than the rule-based and dictionary-based methods.\nMachine learning-based lemmatizers are more adaptive and can generalize across different word forms which makes them ideal for complex tasks involving diverse vocabularies."
+  },
+  {
+    "input": "Implementation of Lemmatization in Python",
+    "output": "Lets see step by step how Lemmatization works in Python:"
+  },
+  {
+    "input": "Step 1: Installing NLTK and Downloading Necessary Resources",
+    "output": "In Python, theNLTKlibrary provides an easy and efficient way to implement lemmatization. First, we need to install the NLTK library and download the necessary datasets like WordNet and the punkt tokenizer.\nNow lets import the library and download the necessary datasets."
+  },
+  {
+    "input": "Step 2: Lemmatizing Text with NLTK",
+    "output": "Now we can tokenize the text and apply lemmatization using NLTK's WordNetLemmatizer.\nOutput:\nIn this output, we can see that:\n\"cats\" is reduced to its lemma \"cat\" (noun).\n\"running\" remains \"running\" (since no POS tag is provided, NLTK doesn't convert it to \"run\")."
+  },
+  {
+    "input": "Step 3: Improving Lemmatization with Part of Speech (POS) Tagging",
+    "output": "To improve the accuracy of lemmatization, it’s important to specify the correct Part of Speech (POS) for each word. By default, NLTK assumes that words are nouns when no POS tag is provided. However, it can be more accurate if we specify the correct POS tag for each word.\nFor example:\n\"running\" (as a verb) should be lemmatized to \"run\".\n\"better\" (as an adjective) should be lemmatized to \"good\".\nOutput:\nIn this improved version:\n\"children\" is lemmatized to \"child\" (noun).\n\"running\" is lemmatized to \"run\" (verb).\n\"better\" is lemmatized to \"good\" (adjective)."
+  },
+  {
+    "input": "Advantages of Lemmatization with NLTK",
+    "output": "Lets see some key advantages:"
   }
 ]
