@@ -13694,5 +13694,49 @@
   {
     "input": "10. Substitution",
     "output": "The regular expression can replace the string and returns the replaced one using the re.sub method. It is useful when you want to avoid characters such as /, -, ., etc. before storing it to a database. It takes three arguments:\nthe regular expression\nthe replacement string\nthe source string being searched\nLet's have a look at the below code that replaces- characterfrom a credit card number."
+  },
+  {
+    "input": "When to Remove Stopwords",
+    "output": "The decision to remove stopwords depends heavily on the specific NLP task at hand:"
+  },
+  {
+    "input": "Tasks that benefit from stopword removal:",
+    "output": "Text classification and sentiment analysis\nInformation retrieval and search engines\nTopic modelling and clustering\nKeyword extraction"
+  },
+  {
+    "input": "Tasks that require preserving stopwords:",
+    "output": "Machine translation (maintains grammatical structure)\nText summarization (preserves sentence coherence)\nQuestion-answering systems (syntactic relationships matter)\nGrammar checking and parsing\nLanguage modeling presents an interesting middle ground where the decision depends on the specific application requirements and available computational resources."
+  },
+  {
+    "input": "Categories of Stopwords",
+    "output": "Understanding different types of stopwords helps in making informed decisions:\nStandard Stopwords: Common function words like articles (\"a\", \"the\"), conjunctions (\"and\", \"but\") and prepositions (\"in\", \"on\")\nDomain-Specific Stopwords: Context-dependent terms that appear frequently in specific fields like \"patient\" in medical texts\nContextual Stopwords: Words with extremely high frequency in particular datasets\nNumerical Stopwords: Digits, punctuation marks and single characters"
+  },
+  {
+    "input": "Implementation with NLTK",
+    "output": "NLTKprovides robust support for stopword removal across 16 different languages. The implementation involves tokenization followed by filtering:\nSetup: Import NLTK modules and download required resources like stopwords and tokenizer data.\nText preprocessing: Convert the sample sentence to lowercase and tokenize it into words.\nStopword removal: Load English stopwords and filter them out from the token list.\nOutput: Print both the original and cleaned tokens for comparison.\nOutput:"
+  },
+  {
+    "input": "Other Methods for Stopword Removal",
+    "output": "Lets see various methods for stopwords removal:"
+  },
+  {
+    "input": "1. Implementation using SpaCy",
+    "output": "SpaCyoffers a more sophisticated approach with built-in linguistic analysis:\nImports spaCy:Used for natural language processing.\nLoad model:Loads the English NLP model with tokenization and stopword detection.\nProcess text:Converts the sentence into aDocobject with linguistic features.\nRemove stopwords:Filters out common words usingtoken.is_stop.\nPrint output:Displays non-stopword tokens like ['researchers', 'developing', 'advanced', 'algorithms'].\nOutput:"
+  },
+  {
+    "input": "2. Removing stop words with Genism",
+    "output": "We can useGenismfor stopword removal:\nImport function: Brings inremove_stopwordsfrom Gensim.\nDefine text: A sample sentence is used.\nApply stopword removal: Removes common words like “the,” “a”.\nPrint output: Shows original and filtered text.\nOutput:"
+  },
+  {
+    "input": "3. Implementation with Scikit Learn",
+    "output": "We can useScikit Learnfor stopword removal:\nImports necessary modules fromsklearnandnltkfor tokenization and stopword removal.\nDefines a sample sentence\nTokenizes the sentence into individual words using NLTK'sword_tokenize.\nFilters out common English stopwords from the token list.\nPrints both the original and stopword-removed versions of the text.\nOutput:\nAmong all libraries NLTK provides best performance."
+  },
+  {
+    "input": "Advanced Techniques and Custom Stopwords",
+    "output": "Real-world applications often require custom stopword lists tailored to specific domains:\nImports Counter to count word frequencies.\nTokenizes all texts and flattens them into one word list.\nCalculates frequency of each word.\nAdds words to custom stopwords if they exceed a set frequency threshold.\nMerges custom stopwords with NLTK’s default stopword list.\nThis approach identifies domain-specific high-frequency words that may not appear in standard stopword lists but function as noise in particular contexts."
+  },
+  {
+    "input": "Edge Cases and Limitations",
+    "output": "Stopword removal is essential in NLP but must be handled carefully. It requires normalization (e.g., handling case and contractions) and language-specific lists for multilingual text. Removing words like \"not\" or certain prepositions can harm tasks such as sentiment analysis or entity recognition. Over-removal may lose valuable signals while under-removal can keep noise. Its impact varies—beneficial in classification but risky in tasks needing full semantic context.\nModern deep learning approaches sometimes learn to ignore irrelevant words automatically, but traditional machine learning methods and resource-constrained applications still benefit significantly from thoughtful stopword handling."
   }
 ]
