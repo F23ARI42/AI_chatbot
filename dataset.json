@@ -13838,5 +13838,45 @@
   {
     "input": "Conclusion",
     "output": "Text mining extracts valuable insights from unstructured text, aiding decision-making across diverse fields. Despite challenges, its applications in academia, healthcare, business, and more demonstrate its significance in converting textual data into actionable knowledge."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We will be importingnltk,regex,stringand inflect."
+  },
+  {
+    "input": "2. Convert to Lowercase",
+    "output": "We convert the text lowercase to reduce the size of the vocabulary of our text data.\nOutput:"
+  },
+  {
+    "input": "3. Removing Numbers",
+    "output": "We can either remove numbers or convert the numbers into their textual representations. To remove the numbers we can use regular expressions.\nOutput:"
+  },
+  {
+    "input": "4. Converting Numerical Values",
+    "output": "We can also convert the numbers into words. This can be done by using theinflect library.\nOutput:"
+  },
+  {
+    "input": "5. Removing Punctuation",
+    "output": "We remove punctuations so that we don't have different forms of the same word. For example if we don't remove the punctuation thenbeen. been, been!will be treated separately.\nOutput:"
+  },
+  {
+    "input": "6. Removing Whitespace",
+    "output": "We can use the join and split functions to remove all the white spaces in a string.\nOutput:"
+  },
+  {
+    "input": "7. Removing Stopwords",
+    "output": "Stopwordsare words that do not contribute much to the meaning of a sentence hence they can be removed. The NLTK library has a set of stopwords and we can use these to remove stopwords from our text. Below is the list of stopwords available in NLTK\nOutput:"
+  },
+  {
+    "input": "8. Applying Stemming",
+    "output": "Stemmingis the process of getting the root form of a word. Stem or root is the part to which affixes like -ed, -ize, -de, -s, etc are added. The stem of a word is created by removing the prefix or suffix of a word.\nExample:\nThere are mainly three algorithms for stemming. These are the Porter Stemmer, the Snowball Stemmer and the Lancaster Stemmer. Porter Stemmer is the most common among them.\nOutput:"
+  },
+  {
+    "input": "9. Applying Lemmatization",
+    "output": "Lemmatizationis an NLP technique that reduces a word to its root form. This can be helpful for tasks such as text analysis and search as it allows us to compare words that are related but have different forms.\nOutput:\nIn this guide we learned different NLP text preprocessing technique which can be used to make a NLP based application and project."
+  },
+  {
+    "input": "10. POS Tagging",
+    "output": "POS tagging is the process of assigning each word in a sentence its grammatical category, such as noun, verb, adjective or adverb. It helps machines understand the structure and meaning of text, enabling tasks like parsing, information extraction and text analysis.\nOutput:\nWhere,\nNNP: Proper noun\nNN: Noun (singular)\nVBZ: Verb (3rd person singular)\nCC: Conjunction"
   }
 ]
