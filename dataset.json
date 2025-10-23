@@ -13322,5 +13322,69 @@
   {
     "input": "Limitations of Positional Encoding",
     "output": "Despite positional encoding has various advantages, it has a few limitations:\nBy adding important positional information, positional encodings allow Transformer models to understand the relationships and order of tokens which ensures it processes sequential data while parallel processing."
+  },
+  {
+    "input": "What is a Regular Expression?",
+    "output": "Regular Expression is a way of representing regular languages. The algebraic description for regular languages is done using regular expressions. They can define it in the same language that various forms of finite automata can describe. Regular expressions offer something that finite automata do not, i.e. it is a declarative way to express the strings that we want to accept. They act as input for many systems. They are used for string matching in many systems(Java, python, etc.)\nExample:Lexical-analyzer generators, such as Lex or Flex.\nThe widely used operators in regular expressions are Kleene closure(∗), concatenation(.), and Union(+)."
+  },
+  {
+    "input": "Rules for Regular Expressions",
+    "output": "The set of regular expressions is defined by the following rules.\nEvery letter of ∑ can be made into a regular expression, null string, ∈ itself is a regular expression.If r1 and r2 are regular expressions, then (r1), r1.r2, r1+r2, r1*, r1+are also regular expressions.\nExample -∑ = {a, b} and r is a regular expression of language made using these symbols"
+  },
+  {
+    "input": "1. Union",
+    "output": "The union of two regular languages, L1 and L2, which are represented using L1 ∪ L2, is also regular and which represents the set of strings that are either in L1 or L2 or both.\nExample:\nL1 = (1+0).(1+0) = {00 , 10, 11, 01} andL2 = {∈ , 100}then L1 ∪ L2 = {∈, 00, 10, 11, 01, 100}."
+  },
+  {
+    "input": "2. Concatenation",
+    "output": "The concatenation of tworegular languages, L1 and L2, which are represented using L1.L2 is also regular and which represents the set of strings that are formed by taking any string in L1 concatenating it with any string in L2.\nExample:\nL1 = { 0,1 } and L2 = { 00, 11} then L1.L2 = {000, 011, 100, 111}."
+  },
+  {
+    "input": "3. Kleene closure",
+    "output": "If L1 is a regular language, then the Kleene closure i.e. L1* of L1 is also regular and represents the set of those strings which are formed by taking a number of strings from L1 and the same string can be repeated any number of times and concatenating those strings.\nExample:\nL1 = { 0,1} = {∈, 0, 1, 00, 01, 10, 11 .......} , then L* is all strings possible with symbols 0 and 1 including a null string."
+  },
+  {
+    "input": "Algebraic Properties of Regular Expressions",
+    "output": "Kleene closure is an unary operator and Union(+) and concatenation operator(.) are binary operators."
+  },
+  {
+    "input": "1. Closure",
+    "output": "If r1 and r2 are regular expressions(RE), then\nr1*  is a RE\nr1+r2 is a RE\nr1.r2 is a RE"
+  },
+  {
+    "input": "2. Closure Laws",
+    "output": "(r*)* = r*, closing an expression that is already closed does not change the language.\n∅* = ∈, a string formed by concatenating any number of copies of an empty string is empty itself.\nr+=  r.r* = r*r, as r* = ∈ + r + rr+ rrr .... and r.r* = r+ rr + rrr ......\nr* = r*+ ∈"
+  },
+  {
+    "input": "3. Associativity",
+    "output": "If r1, r2, r3 are RE, theni.) r1+ (r2+r3) = (r1+r2) +r3\nFor example: r1 = a , r2 = b , r3 = c, then\nThe resultant regular expression in LHS becomes a+(b+ c) and the regular set for the corresponding RE is {a, b, c}.\nfor the RE in RHS becomes (a+ b) + c and the regular set for this RE is {a, b, c}, which is same in both cases. Therefore, the associativity property holds for union operator.\nii.) r1.(r2.r3)  = (r1.r2).r3\nFor example -r1 = a , r2 = b , r3 = c\nThen the string accepted by RE a.(b.c) is only abc.\nThe string accepted by RE in RHS is (a.b).c is only abc ,which is  same in both cases. Therefore, theassociativity property holds for concatenation operator.\nAssociativity property does not hold for Kleene closure(*) because it is unary operator."
+  },
+  {
+    "input": "4. Identity",
+    "output": "In the case of union operators,\nr + ∅ = ∅ + r = r,\nTherefore,∅is the identity element for a union operator.\nIn the case of  concatenation operator:\nr.x = r , for x= ∈,  r.∈ = r\nTherefore,∈is the identity element for concatenation operator(.)."
+  },
+  {
+    "input": "5. Annihilator",
+    "output": "If r+ x = r  ⇒  r ∪ x= x , there is no annihilator for +\nIn the case of a concatenation operator, r.x = x, when x = ∅, then r.∅ = ∅, therefore ∅ is the annihilator for the (.)operator. For example {a, aa, ab}.{ } = { }"
+  },
+  {
+    "input": "6. Commutative Property",
+    "output": "If r1, r2 are RE, then\nr1+r2 = r2+r1. For example, for r1 =a and r2 =b, then RE a+ b and b+ a are equal.\nr1.r2 ≠ r2.r1. For example, for r1 = a and r2 = b, then  RE a.b is not equal to b.a."
+  },
+  {
+    "input": "7. Distributed Property",
+    "output": "If r1, r2, r3are regular expressions, then\n(r1+r2).r3 = r1.r3 + r2.r3  i.e. Right distribution\nr1.(r2+ r3) = r1.r2 + r1.r3  i.e. left distribution\n(r1.r2) +r3  ≠ (r1+r3)(r2+r3)"
+  },
+  {
+    "input": "8. Idempotent Law",
+    "output": "r1 + r1 = r1  ⇒  r1 ∪ r1 = r1 , therefore the union operator satisfies idempotent property.\nr.r ≠  r ⇒ concatenation operator does not satisfy idempotent property."
+  },
+  {
+    "input": "9. Identities for Regular Expression",
+    "output": "There are many identities for the regular expression. Let p, q and r are regular expressions.\n∅ + r = r\n∅.r= r.∅ = ∅\n∈.r = r.∈ =r\n∈* = ∈ and ∅* = ∈\nr + r = r\nr*.r* = r*\nr.r* = r*.r = r+.\n(r*)*  =  r*\n∈ +r.r* = r* = ∈ + r.r*\n(p.q)*.p = p.(q.p)*\n(p + q)* = (p*.q*)* = (p* + q*)*\n(p+ q).r= p.r+ q.r and r.(p+q) = r.p + r.q"
+  },
+  {
+    "input": "Conclusion",
+    "output": "In conclusion, regular expressions are a versatile and powerful tool for working with text. They allow you to search, match, and manipulate patterns efficiently, making them invaluable in tasks like data validation, text searching, and automated editing. Masteringregular expressionscan greatly enhance your efficiency and problem-solving capabilities. The flexibility and power they offer make them an essential skill in many fields."
   }
 ]
