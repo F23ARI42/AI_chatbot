@@ -13386,5 +13386,29 @@
   {
     "input": "Conclusion",
     "output": "In conclusion, regular expressions are a versatile and powerful tool for working with text. They allow you to search, match, and manipulate patterns efficiently, making them invaluable in tasks like data validation, text searching, and automated editing. Masteringregular expressionscan greatly enhance your efficiency and problem-solving capabilities. The flexibility and power they offer make them an essential skill in many fields."
+  },
+  {
+    "input": "1. WordNet",
+    "output": "WordNetis a large lexical database of the English language and one of the earliest methods for lemmatization in Python. It groups words into sets of synonyms (synsets) which are related to each other. The WordNet is part of the NLTK (Natural Language Toolkit) library and it is widely used for text preprocessing tasks.\nFor installation run the following command:\nLets see an example,\nOutput:"
+  },
+  {
+    "input": "2. WordNet with POS Tagging",
+    "output": "By default, WordNet Lemmatizer assumes words to be nouns. For more accurate lemmatization, especially for verbs and adjectives,Part of Speech (POS) taggingis required. POS tagging tells the lemmatizer whether the word is a noun, verb or adjective. Lets see an example to understand better,\nOutput:"
+  },
+  {
+    "input": "3. TextBlob",
+    "output": "TextBlobis a simpler library built on top of NLTK and Pattern. It provides a convenient API to perform common NLP tasks like lemmatization. TextBlob’s lemmatization is easy to use and requires minimal setup.\nFor installation run the following command:\nLets see an example,\nOutput:"
+  },
+  {
+    "input": "4. TextBlob with POS Tagging",
+    "output": "Using POS tagging with TextBlob ensures that words are lemmatized accurately. By default, TextBlob treats every word as a noun, so for verbs and adjectives, POS tagging can significantly improve lemmatization accuracy. Lets see an example for this,\nOutput:"
+  },
+  {
+    "input": "5. SpaCy",
+    "output": "spaCyis one of the most powerful NLP libraries in Python, known for its speed and ease of use. It provides pre-trained models for tokenization, lemmatization, POS tagging and more. spaCy's lemmatization is highly accurate and works well with complex sentence structures.\nFor installation run the following command:\nLets see an example,\nOutput:"
+  },
+  {
+    "input": "6. Gensim",
+    "output": "Gensimis widely used for topic modeling, document similarity and lemmatization tasks in large text corpora. Its lemmatization relies on the Pattern library and focuses on processing tokens like nouns, verbs, adjectives and adverbs. It is suitable for large-scale text processing.\nInstallation:\nLets see an example,\nOutput:\nWith all these techniques we can easily do Lemmatization in Python and can make real world projects."
   }
 ]
