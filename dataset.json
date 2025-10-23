@@ -13910,5 +13910,29 @@
   {
     "input": "3. Regex  Tokenizer",
     "output": "It customize pattern-based splitting.\nTokenizes based on a regular expression pattern.\n\\w+ matches words and numbers, omitting punctuation completely.\nOutput:\nNLTK provides a useful and user-friendly toolkit for tokenizing text in Python, supporting a range of tokenization needs from basic word and sentence splitting to advanced custom patterns."
+  },
+  {
+    "input": "Working of Layer Normalization",
+    "output": "Let's consider an examplewhere we have three vectors:\nFor each inputxof the layer, Layer Normalization computes the following:"
+  },
+  {
+    "input": "1. Compute Mean and Variance for Each Feature",
+    "output": "Mean and variance are calculated for each input but instead of across the batch, it’s done for the features (i.e per data point):\n\\mu = \\frac{1}{H} \\sum_{i=1}^{H} x_i\n\\sigma^2 = \\frac{1}{H} \\sum_{i=1}^{H} (x_i - \\mu)^2\nwhere,His the number of features (neurons) in the layer,x_i​ is the input for each feature and\\muand\\sigma^2are the computed mean and variance.\nNow, let's compute Mean and Variance for each feature (Per Data Point). Forx_1 = [3.0, 5.0, 2.0, 8.0]:\nSimilarly computer forx_2andx_3:"
+  },
+  {
+    "input": "2. Normalize the Input",
+    "output": "Each feature is then normalized using the formula:\n\\hat{x}_i = \\frac{x_i - \\mu}{\\sqrt{\\sigma^2 + \\epsilon}}\nHere\\epsilonis a small constant added for numerical stability.\nNow, we will normalize each feature in each vector by subtracting the mean and dividing by the standard deviation (square root of the variance) with a small constant\\epsilon = 1e-5added for numerical stability.\nForx_1 = [3.0, 5.0, 2.0, 8.0]:\nx_1' = \\left[ \\frac{3.0 - 4.5}{\\sqrt{5.25 + 1e-5}}, \\frac{5.0 - 4.5}{\\sqrt{5.25 + 1e-5}}, \\frac{2.0 - 4.5}{\\sqrt{5.25 + 1e-5}}, \\frac{8.0 - 4.5}{\\sqrt{5.25 + 1e-5}} \\right]\nWe calculate each normalized value forx_1​:\nx_1' = [−0.6547,0.2182,−1.0911,1.5275]\nForx_2 = [1.0, 3.0, 5.0, 8.0]:\nx_2' = \\left[ \\frac{1.0 - 4.25}{\\sqrt{8.3125 + 1e-5}}, \\frac{3.0 - 4.25}{\\sqrt{8.3125 + 1e-5}}, \\frac{5.0 - 4.25}{\\sqrt{8.3125 + 1e-5}}, \\frac{8.0 - 4.25}{\\sqrt{8.3125 + 1e-5}} \\right]\nWe calculate each normalized value forx_2:\nx_2' = [−1.2568,−0.4834,0.2900,1.4501]\nForx_3 = [3.0, 2.0, 7.0, 9.0]:\nx_3' = \\left[ \\frac{3.0 - 5.25}{\\sqrt{3.6875 + 1e-5}}, \\frac{2.0 - 5.25}{\\sqrt{3.6875 + 1e-5}}, \\frac{7.0 - 5.25}{\\sqrt{3.6875 + 1e-5}}, \\frac{9.0 - 5.25}{\\sqrt{3.6875 + 1e-5}} \\right]\nWe calculate each normalized value forx_3:\nx_3' =[−0.7863,−1.1358,0.6116,1.3106]"
+  },
+  {
+    "input": "3. Apply Scaling and Shifting",
+    "output": "To ensure that the normalized activations can still represent a wide range of values, learnable parameters\\gamma(scaling) and\\beta(shifting) are introduced. Final outputyis computed as:\ny_i = \\gamma \\hat{x}_i + \\beta\nThis allows the network to scale and shift the normalized activations during training.\nHere let’s assume\\gamma = 1.5and\\beta = 0.5. We can apply this scaling and shifting to the normalized values to get the final output for each vector.\nForx_1​:y_1 = [-0.4820, 0.8273, -1.1366, 2.7913]\nForx_2​:y_2 = [-1.3851, -0.2250, 0.9350, 2.6751]\nForx_3​:y_3 = [-0.6795, -1.2037, 1.4174, 2.4658]\nThese are the exact normalized values and the final outputs after applying Layer Normalization."
+  },
+  {
+    "input": "Implementation of Layer Normalization in a Simple Neural Network with PyTorch",
+    "output": "We will be usingPytorchlibrary for its implementation.\nnn.Linear(input_size, output_size): Creates a fully connected layer with the specified input and output dimensions.\nnn.LayerNorm(128): Applies Layer Normalization on the input of size 128.\nforward(self, x): Defines forward pass for the model by applying transformations to the input x step by step.\ntorch.randn(10, 64): Generates a tensor of size (10, 64) filled with random values from a normal distribution.\ntorch.relu(x): AppliesReLU(Rectified Linear Unit) activation function element-wise to x.\nOutput:"
+  },
+  {
+    "input": "Applications of Layer Normalization",
+    "output": "Layer Normalization is commonly used in various deep learning architectures:\nLayer normalization is effective in scenarios where Batch Normalization would not be practical such as with small batch sizes or sequential models like RNNs. It helps to ensure a smoother and faster training process which leads to better performance across wide range of applications."
   }
 ]
