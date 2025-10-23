@@ -13290,5 +13290,37 @@
   {
     "input": "Limitations of Tokenization",
     "output": "Unable to capture the meaning of the sentence hence, results in ambiguity.\nChinese, Japanese, Arabic, lack distinct spaces between words. Hence, absence of clear boundaries that complicates the process of tokenization.\nTough to decide how to tokenize text that may include more than one word, for example email address, URLs and special symbols"
+  },
+  {
+    "input": "Example of Positional Encoding",
+    "output": "Suppose we have a Transformer model which translates English sentences into French.\nBefore the sentence is fed into the Transformer model it gets tokenized where each word is converted into a token. Let's assume the tokens for this sentence are:\nAfter that each token is mapped to a high-dimensional vector representation through an embedding layer. These embeddings encode semantic information about the words in the sentence. However they lack information about the order of the words.\nwhere eachEi​is a 4-dimensional vector. This is where positional encoding plays an important role. To help the model to understand the order of words in a sequence these are added to the word embeddings and they assign each token a unique representation based on its position in the sequence."
+  },
+  {
+    "input": "How Does Positional Encoding Work?",
+    "output": "The most common method for calculating positional encodings is based on sinusoidal functions. The intuition behind using sine and cosine functions is that they provide a smooth, periodic encoding of positions that allows for easy interpolation and generalization across sequences of varying lengths."
+  },
+  {
+    "input": "Sinusoidal Positional Encoding Formula",
+    "output": "For each position (pos) in the sequence and each dimensioniin the positional encoding vector, the following formula is used:\nWhere:\nPE_{pos, 2i}: The positional encoding at positionposfor the2i^{th}dimension.\npos: The position of the token in the sequence (starting from 0).\ni: The index of the dimension within the positional encoding vector (for eachi, we have two formulas: one for2i(sine) and another for2i+1(cosine)).\nd_{\\text{model}}: The dimensionality of the model (the embedding size e.g 512, 1024, etc).\nThe exponential term10000^{\\frac{2i}{d_{\\text{model}}}}: This controls how the sine wave's frequency changes with the dimension.\nThese formulas use sine and cosine functions to create wave-like patterns that changes across the sequence positions. Using sine for even indices and cosine for odd indices helps in getting a combination of features that can effectively represent positional information across different sequence lengths."
+  },
+  {
+    "input": "Example with Dimensionality",
+    "output": "We will now calculate the positional encodings for the positions 1, 2 till 6 in a sequence. For simplicity, let's assume that we are working with a 4-dimensional embedding.\n1. Positional Encoding for Token at Position 1:Forp=1(the first token), the positional encoding values will be:\n\\text{PE}(1) = \\left[\\sin\\left(\\frac{1}{10000^{2 \\times 0/4}}\\right), \\cos\\left(\\frac{1}{10000^{2 \\times 0/4}}\\right), \\sin\\left(\\frac{1}{10000^{2 \\times 1/4}}\\right), \\cos\\left(\\frac{1}{10000^{2 \\times 1/4}}\\right)\\right]\nHere the first pair of values is generated using the sine and cosine functions for the first dimension and the second pair is for the second dimension.\n2. Positional Encoding for Token at Position 2:Similarly forp=2(the second token), we calculate the positional encoding values:\n\\text{PE}(2) = \\left[\\sin\\left(\\frac{2}{10000^{2 \\times 0/4}}\\right), \\cos\\left(\\frac{2}{10000^{2 \\times 0/4}}\\right), \\sin\\left(\\frac{2}{10000^{2 \\times 1/4}}\\right), \\cos\\left(\\frac{2}{10000^{2 \\times 1/4}}\\right)\\right]\nThese values provide positional information for the second token in the sequence. In the same way we will do till 5th position.\n3. Positional Encoding for Token at Position 6:Forp=6(the sixth token), the positional encoding is calculated in the same way:\n\\text{PE}(6) = \\left[\\sin\\left(\\frac{6}{10000^{2 \\times 0/4}}\\right), \\cos\\left(\\frac{6}{10000^{2 \\times 0/4}}\\right), \\sin\\left(\\frac{6}{10000^{2 \\times 1/4}}\\right), \\cos\\left(\\frac{6}{10000^{2 \\times 1/4}}\\right)\\right]\nOnce these positional encodings are calculated for each token at its corresponding position, they are added element-wise to the word embeddings. This process ensures that the final token embedding contains both semantic information (from the word embedding) and positional information (from the positional encoding)."
+  },
+  {
+    "input": "Implementation of Positional Encoding in Transformers",
+    "output": "Here we will be usingNumpyandTensorflowlibraries for its implementations.\nangle_rads = np.arange(position)[:, np.newaxis] / np.power(10000, (2 * (np.arange(d_model)[np.newaxis, :] // 2)) / np.float32(d_model)) :Calculate angle values based on position and model dimension.\nposition = 50, d_model = 512 :Set the sequence length (number of positions) and dimensionality of the model respectively.\nOutput:\nArray provided is the positional encodings generated by thepositional_encodingfunction for a sequence of length 10 and a model dimensionality of 512. Each row in the array corresponds to a position in the sequence and each column represents a dimension in the model."
+  },
+  {
+    "input": "Applications of Positional Encoding",
+    "output": "Positional encoding plays an important role in various transformer-based models particularly in tasks that involve sequential data. Some common applications include:"
+  },
+  {
+    "input": "Importance of Positional Encoding",
+    "output": "Positional encodings are important in Transformer models for various reasons:"
+  },
+  {
+    "input": "Limitations of Positional Encoding",
+    "output": "Despite positional encoding has various advantages, it has a few limitations:\nBy adding important positional information, positional encodings allow Transformer models to understand the relationships and order of tokens which ensures it processes sequential data while parallel processing."
   }
 ]
