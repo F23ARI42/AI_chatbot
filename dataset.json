@@ -13894,5 +13894,21 @@
   {
     "input": "3. Tokenization with Part-of-Speech Tagging and Lemmatization",
     "output": "Here we see how to process text, extract token information likepart-of-speech (POS) taggingand obtain the lemmatized form of each token.\nOutput:\nThespacy.explain()function provides a description of the POS tag for each token. The model performs tokenization, POS tagging and lemmatization automatically when we process the text with NLP."
+  },
+  {
+    "input": "Basic Implementation",
+    "output": "Let's see the implementation of Tokenization using NLTK in Python,\nInstall the “punkt” tokenizer models needed for sentence and word tokenization.\nsent_tokenize() splits a string into a list of sentences, handling punctuation and abbreviations.\nOutput:\nword_tokenize() splits a sentence into words and punctuation marks as separate tokens.\nHandles contractions, punctuation, numbers and more.\nOutput:\nLets see some more Examples,"
+  },
+  {
+    "input": "1. WordPunctTokenizer",
+    "output": "ItSplits text into alphabetic and non-alphabetic characters,\nSeparates all sequences of word characters and punctuation into tokens.\nEspecially splits contractions (Don't becomes Don, ', t).\nSplits E-mails into E, -, mails.\nOutput:"
+  },
+  {
+    "input": "2. TreebankWordTokenizer",
+    "output": "It is suitable for linguistic analysis, handles punctuation and contractions.\nMimics Penn Treebank-style tokenization, which is commonly used for NLP linguistic analysis.\nHandles certain English grammatical structures more “intelligently.”\nOutput:"
+  },
+  {
+    "input": "3. Regex  Tokenizer",
+    "output": "It customize pattern-based splitting.\nTokenizes based on a regular expression pattern.\n\\w+ matches words and numbers, omitting punctuation completely.\nOutput:\nNLTK provides a useful and user-friendly toolkit for tokenizing text in Python, supporting a range of tokenization needs from basic word and sentence splitting to advanced custom patterns."
   }
 ]
