@@ -13034,5 +13034,25 @@
   {
     "input": "Steps in Syntax Analysis Phase",
     "output": "The Syntax Analysis phase, also known as parsing, is a crucial step in the compilation process where the structure of the source code is verified according to the grammar of the programming language.\nParsing:The tokens are analyzed according to the grammar rules of the programming language, and a parse tree or AST is constructed that represents the hierarchical structure of the program.\nError handling:If the input program contains syntax errors, the syntax analyzer detects and reports them to the user, along with an indication of where the error occurred.\nSymbol table creation:The syntax analyzer creates a symbol table, which is a data structure that stores information about the identifiers used in the program, such as their type, scope, and location."
+  },
+  {
+    "input": "How does it Work?",
+    "output": "Latent Semantic Analysis (LSA) works by first creating a Document term matrix showing word frequencies. It then uses Singular Value Decomposition (SVD) to reduce dimensions capturing important patterns and removing noise. This helps in identifying hidden relationships between words and documents based on meaning not just exact word matches."
+  },
+  {
+    "input": "1. Document term matrix",
+    "output": "The first step in LSA is to create a Document Term Matrix (DTM).\nThis is a table where each row represents a word each column represents a document and each cell shows how many times that word appears in that document.\nSometimes instead of raw counts we use TF-IDF scores to give more importance to rare and meaningful words. This matrix is the foundation for analyzing patterns in word usage across documents."
+  },
+  {
+    "input": "2. Dimensionality Reduction",
+    "output": "Once the DTM is created it's usually very large and sparse.\nTo simplify, it appliesSingular Value Decomposition (SVD)technique which breaks the matrix into three smaller matrices and we keep only the top k components that capture the most important patterns.\nThis step reduces noise and focuses on the core structure of the data revealing hidden topics that link related words and documents."
+  },
+  {
+    "input": "3. Analyse Semantic Relationships",
+    "output": "After dimensionality reduction each word and each document is now represented in a smaller semantic space based on the topics identified.\nWords that appear in similar contexts end up close together in this space even if they are not exactly the same.\nThis helps LSA detect synonyms and understand conceptual similarity between different terms."
+  },
+  {
+    "input": "4. Document comparison",
+    "output": "Now that documents are represented in this semantic space it's easy to compare them using measures like cosine similarity.\nDocuments that talk about similar topics will be close together even if they use different words.\nThis makes LSA useful for tasks like clustering, ranking search results and grouping similar articles even when the vocabulary differs."
   }
 ]
