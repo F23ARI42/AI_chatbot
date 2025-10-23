@@ -13114,5 +13114,113 @@
   {
     "input": "Performing NER in NLP",
     "output": "Code showing the NER using nltk library-\nOutput:\nIn this code, we first define the text to be analyzed and tokenize it into words using nltk.word_tokenize(text). We then apply part-of-speech tagging to the tokens using nltk.pos_tag(tokens). Finally, we apply named entity recognition to the tagged words using nltk.chunk.ne_chunk(tagged).\nThe output of this code for the sample text \"GeeksforGeeks is a recognized platform for online learning in India\" is:\nThis shows that NLTK was able to recognize\"GeeksforGeeks\"as anorganizationand\"India\"as ageographic location."
+  },
+  {
+    "input": "1. Common Terminologies",
+    "output": "Let us understand what some of the below mentioned terms mean before moving forward.\nCorpus:It is a large and structured set of text documents, used for training or analyzing language models. It can range from a collection of articles, tweets, emails, or any other form of textual data.\nVector:It is the numerical representation of text data that enables machines to process and understand language.\nModel:It is a machine learning or statistical algorithm that learns from data to make predictions or extract patterns.\nTopic Modelling:It is an unsupervised learning technique used to discover abstract topics within a collection of documents. It assumes that each document is a mixture of various topics, and each topic is a mixture of words.\nTopic:It is a collection of words that frequently appear together and represent a coherent idea or subject. For instance, words like \"doctor,\" \"hospital,\" and \"medicine\" might form a health-related topic.\nNow that we have the basic idea of the terminologies let's start with the use of Gensim package."
+  },
+  {
+    "input": "2. Installation of NLP Gensim Library",
+    "output": "First Install the library using the following command\nNow, import the library and check the version to verify installation."
+  },
+  {
+    "input": "3. Create a Corpus from a given Dataset",
+    "output": "You need to follow these steps to create your corpus:\nLoad your Dataset\nPreprocess the Dataset\nCreate a Dictionary\nCreate Bag of Words Corpus"
+  },
+  {
+    "input": "3.1 Load your Dataset",
+    "output": "You can have a .txt file as your dataset or you can also load datasets using the Gensim Downloader API. Here, we have loaded a text file.\nGensim Downloader API:This is a module available in the Gensim library which is an API for downloading, getting information and loading datasets/models.\nHere, we are going to consider a text file as raw dataset with some text."
+  },
+  {
+    "input": "3.2 Preprocess the Dataset",
+    "output": "Text preprocessing:In natural language preprocessing, text preprocessing is the practice of cleaning and preparing text data. For this purpose we will use the simple_preprocess( ) function. This function returns a list of tokens after tokenizing and normalizing them. The file was loaded as an object, preprocessed to get a list of tokens and the simple_preprocess function returns a list of each sentence.\nOutput"
+  },
+  {
+    "input": "3.3 Create a Dictionary",
+    "output": "Now we have our preprocessed data which can be converted into a dictionary by using the corpora.Dictionary( ) function. This dictionary is a map for unique tokens.\nOutput\nSaving Dictionary on Disk or as Text File:You can save/load your dictionary on the disk as well as a text file as mentioned below."
+  },
+  {
+    "input": "3.4 Create Bag of Words Corpus",
+    "output": "Once we have the dictionary we can create aBag of Wordcorpus using the doc2bow( ) function. This function counts the number of occurrences of each distinct word, convert the word to its integer word id and then the result is returned as a sparse vector.\nOutput\nSaving Corpus on Disk:Now, save/load the corpus"
+  },
+  {
+    "input": "4. Create a TFIDF matrix in Gensim",
+    "output": "TFIDF:Stands forTerm Frequency - Inverse Document Frequency. It is a commonly used natural language processing model that helps you determine the most important words in each document in a corpus. This was designed for a modest-size corpora.Some words might not be stopwords but may occur more often in the documents and may be of less importance. Hence these words need to be removed or down-weighted in importance. The TFIDF model takes the text that share a common language and ensures that most common words across the entire corpus don't show as keywords."
+  },
+  {
+    "input": "4.1 Building a BOW corpus",
+    "output": "You can build a TFIDF model using Gensim and the corpus you developed previously as:\nOutput"
+  },
+  {
+    "input": "4.2Applying TF-IDF Model",
+    "output": "Output\nYou can see that the words occurring frequently across the documents now have lower weights assigned."
+  },
+  {
+    "input": "5. Creating Bigrams and Trigrams with Gensim",
+    "output": "Many words tend to occur in the content together. The words when occur together have a different meaning than as individuals.\nExample: Beatboxing --> the word beat and boxing individually have meanings of their own but these together have a different meaning.\nBigrams:Group of two words\nTrigrams:Group of three words"
+  },
+  {
+    "input": "5.1 Loading Dataset using Gensim Downloader API",
+    "output": "We will be building bigrams and trigrams using the text8 dataset here which can be downloaded using the Gensim downloader API."
+  },
+  {
+    "input": "5.2 Building Bigram using Phraser Model",
+    "output": "Here, we are building a bigram using Phraser Model."
+  },
+  {
+    "input": "5.3 Building Trigram using Phraser Model",
+    "output": "To create a Trigram we simply pass the above obtained bigram model to the same function.\nOutput"
+  },
+  {
+    "input": "6. Create Word2Vec model using Gensim",
+    "output": "The ML/DL algorithms cannot access text directly which is why we need some numerical representation so that these algorithms can process the data. In simple Machine Learning applications CountVectorizer and TFIDF are used which do not preserve the relationship between the words.Word2Vec:Method to represent text to generateWord Embeddingswhich map all the words present in a language into a vector space of a given dimension. We can perform mathematical operations on these vectors which help preserve the relationship between the words.\nExample: queen - women + man = king\nPre-built word embedding models like word2vec, GloVe, fasttext etc. can be downloaded using the Gensim downloader API.\nSometimes you may not find word embeddings for certain words in your document. So you can train your model."
+  },
+  {
+    "input": "6.1 Train the model",
+    "output": "Output\nYou can also use the most_similar( ) function to find similar words to a given word.\nOutput"
+  },
+  {
+    "input": "6.2 Update the model",
+    "output": "Output"
+  },
+  {
+    "input": "7. Create Doc2Vec model using Gensim",
+    "output": "In contrast to the Word2Vec model, theDoc2Vecmodel gives the vector representation for an entire document or group of words. With the help of this model, we can find the relationship among different documents such as"
+  },
+  {
+    "input": "7.1 Train the model",
+    "output": "Load the dataset, Define a function to list the tagged documents, and train the dataset.\nOutput"
+  },
+  {
+    "input": "7.2 Update the model Code",
+    "output": "Initialize the model, build the vocabulary, Train the Doc2Vec model and Analyze the output.\nOutput"
+  },
+  {
+    "input": "8.1 Illustration of NLP Topic-based Categorization",
+    "output": "You have a document which consists of words like: bat, car, racquet, score, glass, drive, cup, keys, water, game, steering, liquid, etc. These can be grouped into different topics similar to following table.\nSome of the Topic Modelling Techniques are:\nLatent Dirichlet Allocation (LDA)\nLatent Semantic Indexing (LSI)"
+  },
+  {
+    "input": "8.2 Topic Modelling using LDA",
+    "output": "LDA is a popular method for topic modelling which considers each document as a collection of topics in a certain proportion. We need to take out the good quality of topics such as how segregated and meaningful they are. The good quality topics depend on-\n8.2.1 Prepare the DataThis is done by removing thestopwordsand thenlemmatizingit. In order to lemmatize using Gensim, we need to first download the pattern package and the stopwords.Let's install pattern package and import nltk library\nNow, we will importnltkand key components.\nHere, we have pre-processed the data by removing stopwords and lemmatization.\nOutput\n8.2.2 Create Dictionary and CorpusThe processed data will now be used to create the dictionary and corpus.\n8.2.3 Train LDA modelWe will be training the LDA model with 5 topics using the dictionary and corpus created previously. Here the LdaModel( ) function is used but you can also use the LdaMulticore( ) function as it allows parallel processing.\nOutput\nThe words which can be seen in more than one topic and are of less relevance can be added to the stopwords list.8.2.4 Interpret the OutputThe LDA model majorly gives us information regarding 3 things:"
+  },
+  {
+    "input": "8.3 Topic Modelling using LSI",
+    "output": "To create the model with LSI just follow the steps same as with LDA. The only difference will be while training the model. Use the LsiModel( ) function instead of the LdaMulticore( ) or LdaModel( ). We trained the model using LSI and then printed the topics."
+  },
+  {
+    "input": "9.Compute Similarity Matrices",
+    "output": "Cosine Similarity:It is a measure of similarity between two non-zero vectors of an inner product space. It is defined to equal the cosine of the angle between them.Soft Cosine Similarity:It is similar to cosine similarity but the difference is that cosine similarity considers the vector space model(VSM) features as independent whereas soft cosine proposes to consider the similarity of features in VSM.We need to take a word embedding model to compute soft cosines.Here we are using the pre-trained word2vec model.\nOutput\nSome of the similarity and distance metrics which can be calculated for this word embedding model are mentioned below:"
+  },
+  {
+    "input": "10. Text Summarization using Gensim",
+    "output": "The summarize( ) function implements thetext rank summarization.You do not have to generate a tokenized list by splitting the sentences as that is already handled by the gensim.summarization.textcleaner module.\nOutput"
+  },
+  {
+    "input": "11. Extracting Important Keywords from Text",
+    "output": "You can get the Important keywords from the paragraph.\nOutput\nGensim library comes most handy while working on language processing."
+  },
+  {
+    "input": "Related Articles:",
+    "output": "Word2Vec using Gensim\nTopic Modelling using Latent Dirichlet Allocation (LDA)\nWord Embedding and Cosine Similarity using Gensim"
   }
 ]
