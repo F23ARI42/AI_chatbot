@@ -12738,5 +12738,73 @@
   {
     "input": "Performance Considerations",
     "output": "Efficiency:Regular expressions are powerful and flexible but can be slower on large datasets or complex patterns. For simple punctuation removal, the performance difference might be negligible, but it's important to profile your code if processing large volumes of text.\nAccuracy:While removing punctuation is generally straightforward, using methods like regular expressions allows for more nuanced control over which characters to remove or keep. This can be important in domains where certain punctuation marks carry semantic weight (e.g., financial texts with dollar signs).\nReadability vs. Speed:The RegexpTokenizer approach is more readable and directly suited to NLP tasks but might be slightly less efficient than custom regular expressions or list comprehensions due to its overhead. However, the difference in speed is usually minor compared to the benefits of code clarity and maintainability.\nRemoving punctuation is a foundational step in preprocessing text for Natural Language Processing (NLP) tasks. It simplifies the dataset, reducing complexity and allowing models to focus on the semantic content of the text. Techniques using the Natural Language Toolkit (NLTK) and regular expressions offer flexibility and efficiency, catering to various requirements and performance considerations."
+  },
+  {
+    "input": "What is Skip-Gram?",
+    "output": "Inskip-gramarchitecture ofword2vec, the input is thecenter wordand the predictions are the context words. Consider an array of words W, if W(i) is the input (center word), then W(i-2), W(i-1), W(i+1), and W(i+2) are the context words if thesliding window sizeis 2."
+  },
+  {
+    "input": "Neural Network Architecture",
+    "output": "Ourneural networkarchitecture is defined, now let's do some math to derive the equations needed forgradient descent."
+  },
+  {
+    "input": "Loss Function",
+    "output": "Take the negative log-likelihood of this function to get our loss function.\nE = - \\log{ \\left( \\prod_{c=1}^{C} \\frac{e^{u_{j_c^*}}}{\\sum_{j'=1}^{V} e^{u_{j'}}} \\right) }\nLet t be the actual output vector from our training data.\nE = -\\sum_{c=1}^{C} u_{j_c^*} + C \\log{\\sum_{j'=1}^{V} e^{u_{j'}}}"
+  },
+  {
+    "input": "Back Propagation",
+    "output": "The parameters to be adjusted are in the matrices W and W', hence we have to find the partial derivatives of our loss function with respect to W and W' to apply the gradient descent algorithm."
+  },
+  {
+    "input": "Implementing Word2Vec (Skip-gram) Model in Python",
+    "output": "In this section, we are going to step by step implement a simple skip-gram model for word2vec in python using nympy operations."
+  },
+  {
+    "input": "Step 1: Importing Libraries and Setting Up Environment",
+    "output": "We begin by importing the necessary libraries, includingnumpyfor numerical computations andnltkfor natural language processing. Additionally, we download the NLTK stopwords dataset."
+  },
+  {
+    "input": "Step 2: Defining the Softmax Function",
+    "output": "The softmax function is used to convert raw scores (logits) into probabilities. It is commonly used in the output layer of a neural network for classification problems."
+  },
+  {
+    "input": "Step 3: Creating the Word2Vec Class",
+    "output": "We define theword2vecclass, which will contain methods for initializing weights, performing forward propagation, backpropagation, training, and prediction."
+  },
+  {
+    "input": "Step 4: Forward Propagation",
+    "output": "The forward propagation method calculates the hidden layer activations and the output layer probabilities using the softmax function."
+  },
+  {
+    "input": "Step 5: Backpropagation",
+    "output": "The backpropagation method adjusts the weights based on the error between the predicted output and the actual context words. It calculates the gradients and updates the weight matrices."
+  },
+  {
+    "input": "Step 6: Training the Model",
+    "output": "The train method iterates over the training data for a specified number of epochs. In each epoch, it performs forward propagation, backpropagation, and computes the loss."
+  },
+  {
+    "input": "Step 7: Prediction",
+    "output": "The predict method takes a word and returns the top context words based on the trained model. It uses the forward propagation method to get the probabilities and sorts them to find the most likely context words."
+  },
+  {
+    "input": "Step 8: Preprocessing the Corpus",
+    "output": "The preprocessing function cleans and prepares the text data by removing stopwords and punctuation, and converting words to lowercase."
+  },
+  {
+    "input": "Step 9: Preparing Data for Training",
+    "output": "The prepare_data_for_training function creates the training data by generating one-hot encoded vectors for the center and context words based on the window size."
+  },
+  {
+    "input": "Step 10: Running the Training and Prediction",
+    "output": "Finally, we run the preprocessing, training, and prediction steps. We define a corpus, preprocess it, prepare the training data, train the model, and make predictions."
+  },
+  {
+    "input": "Complete Implementation",
+    "output": "Output:\nThe function correctly identifies \"earth\", \"around\", and \"sun\" as the top context words for \"around\" based on the trained model, demonstrating the relationships captured by the word embeddings."
+  },
+  {
+    "input": "Conclusion",
+    "output": "This implementation demonstrates how to build a simple skip-gram model for word2vec using basic numpy operations. The model learns word embeddings by minimizing the loss function through gradient descent, effectively capturing relationships between words in the corpus. The output shows the top context words for a given input word, illustrating the model's ability to understand and predict word associations based on the learned embeddings."
   }
 ]
