@@ -13982,5 +13982,41 @@
   {
     "input": "Conclusion",
     "output": "Topic modelling has emerged as a powerful device for extracting meaningful insights from large and unstructured datasets, records of text information. By uncovering the hidden thematic structures within documents, topic modelling allows researchers, entrepreneurs, and decision-makers to benefit a deeper information of the underlying patterns and trends, ultimately using extra knowledgeable and strategic decision-making. As the volume and complexity of records keep growing, the importance of advanced analytics strategies like subject matter modelling will most effective hold to increase, making it an essential skill for everyone interested by leveraging the electricity of data to pressure innovation anddevelopment."
+  },
+  {
+    "input": "Understanding Word Embeddings",
+    "output": "Word Embeddingsare essential in NLP as they convert text into numerical representations, enabling machines to understand and analyze human language. Popular approaches include Word2Vec, GloVe, and FastText. Word2Vec, developed by Mikolov and his team at Google, introduced the Continuous Bag of Words (CBOW) and Skip-Gram models, which significantly advanced text processing. CBOW predicts a target word from its context, while Skip-Gram predicts context words from a target word. These models are valued for their simplicity, computational efficiency, and ability to produce high-quality embeddings, making them foundational in modern NLP."
+  },
+  {
+    "input": "What is Continuous Bag of Words (CBOW)?",
+    "output": "Continuous Bag of Words (CBOW)is aneural networkmodel used for natural language processing tasks, primarily for word embedding. It belongs to the family of neural network architectures calledWord2Vec, which aims to represent words in a continuous vector space.\nIn CBOW, the model predicts the current word based on the context of surrounding words. CBOW predicts the target word from its context. The architecture typically consists of an input layer, a hidden layer, and an output layer.\nInput Layer:It represents the context words encoded as one-hot vectors.\nHidden Layer:This layer processes the input and performs non-linear transformations to capture the semantic relationships between words.\nOutput Layer:It produces a probability distribution over the vocabulary, with each word assigned a probability of being the target word given its context."
+  },
+  {
+    "input": "What is Skip-Gram Model?",
+    "output": "TheSkip-Gram modelis another neural network architecture within the Word2Vec framework for generating word embeddings. Unlike Continuous Bag of Words (CBOW), Skip-Gram predicts context words given a target word. It's designed to learn the representation of a word by predicting the surrounding words in its context.\nInput Layer:It takes a single word (the target word) encoded as a one-hot vector.\nHidden Layer:This layer transforms the input word into a distributed representation in the hidden layer.\nOutput Layer:It predicts the context words (surrounding words) based on the representation learned in the hidden layer."
+  },
+  {
+    "input": "How They Work",
+    "output": "CBOW: Predicts the target word given a set of context words (surrounding words). For example, with the sentence \"India wins next world cup\" and a window size of 3, CBOW would use the context[\"India\", \"wins\", \"next\"]to predict the target word\"world\".\nSkip-Gram: Predicts the surrounding context words given a single target word. Using the same sentence and window size, if\"India\"is the target word, Skip-Gram tries to predict its context words:[\"wins\", \"next\", \"world\"]."
+  },
+  {
+    "input": "Python Code Example (Using Gensim)",
+    "output": "The code uses the Gensim library to train Word2Vec models on a sample sentence. Gensim is a Python library for efficient topic modeling and creating word embeddings from large text data.\nOutput\nBelow is the code where it creates two models:\nCBOW model(sg=0): Predicts a target word based on its surrounding context words. For example, given the context[\"wins\", \"next\", \"world\"], it tries to predict\"India\".\nSkip-Gram model(sg=1): Predicts the context words given a target word. For example, given the target word\"India\", it tries to predict its surrounding words like\"wins\",\"next\", and\"world\".\nOutput"
+  },
+  {
+    "input": "Advantages",
+    "output": "Trains faster and is more efficient on large datasets.\nPerforms well with frequent words and captures word similarity"
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Struggles with rare words and does not preserve word order.\nProne to overfitting frequent words."
+  },
+  {
+    "input": "Advantages",
+    "output": "Excels with rare words and captures better semantic relationships.\nLess sensitive to frequent word overfitting and can handle larger context windows."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Slower training and more computationally intensive due to multiple predictions per target word.\nLarger model size."
   }
 ]
