@@ -13738,5 +13738,33 @@
   {
     "input": "Edge Cases and Limitations",
     "output": "Stopword removal is essential in NLP but must be handled carefully. It requires normalization (e.g., handling case and contractions) and language-specific lists for multilingual text. Removing words like \"not\" or certain prepositions can harm tasks such as sentiment analysis or entity recognition. Over-removal may lose valuable signals while under-removal can keep noise. Its impact varies—beneficial in classification but risky in tasks needing full semantic context.\nModern deep learning approaches sometimes learn to ignore irrelevant words automatically, but traditional machine learning methods and resource-constrained applications still benefit significantly from thoughtful stopword handling."
+  },
+  {
+    "input": "1. Whitespace Tokenization",
+    "output": "The simplest method splits text using whitespace characters. While efficient, it may leave punctuation attached to tokens.\nOutput:"
+  },
+  {
+    "input": "2. Regular Expression Tokenization",
+    "output": "Regular expressions (regex)offer flexibility for extracting structured patterns like email addresses or identifiers.\nOutput:\nThis method is ideal for structured data but requires careful rule design to avoid false matching."
+  },
+  {
+    "input": "3. Punctuation-Based Tokenization",
+    "output": "This method removes or uses punctuation as delimiters for splitting text. It's often used to simplify further analysis.\nOutput:\nWhile useful, this method may eliminate important punctuation if not handled carefully."
+  },
+  {
+    "input": "4. Language-Specific Tokenization",
+    "output": "Languages like Sanskrit, Chinese or German often require special handling due to script or grammar differences.\nOutput:\nLanguage-specific models handle morphology and context better but often rely on external libraries and pre-trained data."
+  },
+  {
+    "input": "5. Hybrid Tokenization",
+    "output": "In practice, combining multiple rules improves coverage. Structured patterns can be extracted using regex, followed by standard tokenization.\nOutput:\nHybrid tokenization is highly adaptable but requires thoughtful rule ordering to prevent conflicts."
+  },
+  {
+    "input": "6. Tokenization with NLP Libraries",
+    "output": "Rather than building from scratch, libraries likeNLTKandspaCyprovide robust tokenizers that incorporate rule-based logic with language awareness.\nOutput:\nNLTK handles common punctuation and sentence boundaries effectively with pre-defined patterns.\nOutput:\nspaCy is optimized for speed and accuracy, automatically handling edge cases like URLs and contractions."
+  },
+  {
+    "input": "Limitations",
+    "output": "Whitespace and punctuation methods may leave attached symbols or split wrongly.\nRegex-based approaches can be brittle if rules are overly specific or poorly structured.\nLanguage-specific models may require external dependencies and setup time.\nRule conflicts may occur in hybrid tokenization if ordering is not handled carefully.\nRule-based tokenization offers a customizable approach to text segmentation. While modern models may automate tokenization, understanding and applying rule-based techniques remains vital especially when control or domain-specific adaptation is required."
   }
 ]
