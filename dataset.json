@@ -13482,5 +13482,25 @@
   {
     "input": "When to Use WhitespaceTokenizer",
     "output": "Ideal scenarios:\nProcessing English or space-separated languages\nQuick prototyping and experimentation\nIntegration with existing NLTK workflows\nBaseline tokenization for comparative analysis\nConsider alternatives for:\nLanguages without clear word boundaries\nText requiring sophisticated linguistic analysis\nDomain-specific tokenization needs (URLs, emails etc.)\nPerformance-critical applications where built-in methods suffice"
+  },
+  {
+    "input": "Implementing Tokenization using TextBlob",
+    "output": "TextBlob is a simple NLP library built on top ofNLTK (Natural Language Toolkit)and Pattern. It provides easy-to-use APIs for common NLP tasks like tokenization, part-of-speech tagging, noun phrase extraction, translation and many more. It offers two main types of tokenization:"
+  },
+  {
+    "input": "1. Downloading Necessary Library",
+    "output": "Before starting we need to install TextBlob. You can easily install it using following command in command-line interface (CLI):\nOnce installed you also need to download the necessary NLTK corpora which are used for various TextBlob operations such as tokenization. Run this Python code to download the corpora:\nOutput:"
+  },
+  {
+    "input": "2. Tokenizing Text into Words",
+    "output": "Let’s start by tokenizing text into words. We will use theTextBlobclass to create a TextBlob object which allows us to easily manipulate the text.\nWe created aTextBlobobject with a sample text.\nThewordsproperty ofTextBlobobject returns a list of words in the text breaking the sentence into individual tokens i.e words.\nIt handles punctuation automatically so punctuation marks are excluded from the list of words.\nOutput:"
+  },
+  {
+    "input": "3. Tokenizing Text into Sentences",
+    "output": "Now we will tokenize text into sentences. To do this you can use thesentencesproperty of theTextBlobobject.\nWe used thesentences()property to break the text into two individual sentences.\nTextBlob recognizes sentence boundaries and tokenizes the text accordingly.\nOutput:"
+  },
+  {
+    "input": "4. Working with Tokenized Data",
+    "output": "Once you've tokenized the text into words or sentences you can perform further processing on the tokens. Here are a few common operations you can do with tokenized data:\nHere we downloaded a list of stop words using NLTK's stopwords corpus and filtered out the stop words from the tokenized words list.\nTokenization is a important step in NLP and TextBlob simplifies this process in Python. With TextBlob you can easily tokenize text into words and sentences and perform further operations such as filtering stop words and analyzing word frequencies."
   }
 ]
