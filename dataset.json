@@ -13222,5 +13222,73 @@
   {
     "input": "Related Articles:",
     "output": "Word2Vec using Gensim\nTopic Modelling using Latent Dirichlet Allocation (LDA)\nWord Embedding and Cosine Similarity using Gensim"
+  },
+  {
+    "input": "What is Tokenization in NLP?",
+    "output": "Natural Language Processing (NLP)is a subfield ofArtificial Intelligence, information engineering, and human-computer interaction. It focuses on how to process and analyze large amounts of natural language data efficiently. It is difficult to perform as the process of reading and understanding languages is far more complex than it seems at first glance.\nTokenizationis a foundation step in NLP pipeline that shapes the entire workflow.\nInvolves dividing a string or text into a list of smaller units known as tokens.\nUses a tokenizer to segment unstructured data and natural language text into distinct chunks of information, treating them as different elements.\nTokens: Words or Sub-words in the context of natural language processing. Example: A word is a token in a sentence, A character is a token in a word, etc.\nApplication: Multiple NLP tasks,text processing,language modelling, andmachine translation."
+  },
+  {
+    "input": "Types of Tokenization",
+    "output": "Tokenization can be classified into several types based on how the text is segmented. Here are some types of tokenization:"
+  },
+  {
+    "input": "1. Word Tokenization",
+    "output": "Word tokenization is the most commonly used method where text is divided into individual words. It works well for languages with clear word boundaries, like English. For example, \"Machine learning is fascinating\" becomes:"
+  },
+  {
+    "input": "2. Character Tokenization",
+    "output": "In Character Tokenization, the textual data is split and converted to a sequence of individual characters. This is beneficial for tasks that require a detailed analysis, such as spelling correction or for tasks with unclear boundaries. It can also be useful for modelling character-level language.\nExample"
+  },
+  {
+    "input": "3. Sub-word Tokenization",
+    "output": "This strikes a balance between word and character tokenization by breaking down text into units that are larger than a single character but smaller than a full word.  This is useful when dealing with morphologically rich languages or rare words.\nExample\nSub-word tokenizationhelps to handle out-of-vocabulary words in NLP tasks and for languages that form words by combining smaller units."
+  },
+  {
+    "input": "4. Sentence Tokenization",
+    "output": "Sentence tokenization is also a common technique used to make a division of paragraphs or large set of sentences into separated sentences as tokens. This is useful for tasks requiring individual sentence analysis or processing."
+  },
+  {
+    "input": "5. N-gram Tokenization",
+    "output": "N-gram tokenization splits words into fixed-sized chunks (size = n) of data."
+  },
+  {
+    "input": "Need of Tokenization",
+    "output": "Tokenization is an essential step intext processingand natural language processing (NLP) for several reasons. Some of these are listed below:\nEffective Text Processing:Reduces the size of raw text, resulting in easy and efficient statistical and computational analysis.\nFeature extraction:Text data can be represented numerically for algorithmic comprehension by using tokens as features in ML models.\nInformation Retrieval:Tokenization is essential for indexing and searching in systems that store and retrieve information efficiently based on words or phrases.\nText Analysis:Used insentiment analysisandnamed entity recognition, to determine the function and context of individual words in a sentence.\nVocabulary Management:Generates a list of distinct tokens, Helps manage a corpus's vocabulary.\nTask-Specific Adaptation:Adapts to need of particular NLP task, Good for summarization and machine translation."
+  },
+  {
+    "input": "Sentence Tokenizationusing sent_tokenize",
+    "output": "The code snippet usessent_tokenizefunction from NLTK library. Thesent_tokenizefunction is used to segment a given text into a list of sentences.\nOutput:\nHowsent_tokenizeworks:The sent_tokenize function uses an instance of PunktSentenceTokenizer from the nltk.tokenize.punkt module, which is already been trained and thus very well knows to mark the end and beginning of sentence at what characters and punctuation."
+  },
+  {
+    "input": "Sentence Tokenization using PunktSentenceTokenizer",
+    "output": "It is efficient to use 'PunktSentenceTokenizer' to  from the NLTK library. The Punkt tokenizer is a data-driven sentence tokenizer that comes with NLTK. It is trained on large corpus of text to identify sentence boundaries.\nOutput:"
+  },
+  {
+    "input": "Tokenize sentence of different language",
+    "output": "Sentences from different languages can also be tokenized using different pickle file other than English.\nIn the following code snippet, we have used NLTK library to tokenize a Spanish text into sentences using pre-trained Punkt tokenizer for Spanish.\nThe Punkt tokenizer: Data-driven ML-based tokenizer to identify sentence boundaries.\nOutput:"
+  },
+  {
+    "input": "Word Tokenization using work_tokenize",
+    "output": "The code snipped uses the word_tokenize function from NLTK library to tokenize a given text into individual words.\nThe word_tokenize function is helpful for breaking down a sentence or text into its constituent words.\nEases analysis or processing at the word level in natural language processing tasks.\nOutput:\nHowword_tokenizeworks:word_tokenize() function is a wrapper function that calls tokenize() on an instance of the TreebankWordTokenizer class."
+  },
+  {
+    "input": "Word Tokenization Using TreebankWordTokenizer",
+    "output": "The code snippet uses the TreebankWordTokenizer from the Natural Language Toolkit (NLTK) to tokenize a given text into individual words.\nOutput:\nThese tokenizers work by separating the words using punctuation and spaces. And as mentioned in the code outputs above, it doesn't discard the punctuation, allowing a user to decide what to do with the punctuations at the time of pre-processing."
+  },
+  {
+    "input": "Word Tokenization using WordPunctTokenizer",
+    "output": "TheWordPunctTokenizeris one of the NLTK tokenizers that splits words based on punctuation boundaries. Each punctuation mark is treated as a separate token.\nOutput:"
+  },
+  {
+    "input": "Word Tokenization using Regular Expression",
+    "output": "The code snippet uses the RegexpTokenizer from theNatural Language Toolkit (NLTK)to tokenize a given text based on a regular expression pattern.\nOutput:\nUsing regular expressions allows for more fine-grained control over tokenization, and you can customize the pattern based on your specific requirements."
+  },
+  {
+    "input": "More Techniques for Tokenization",
+    "output": "We have discussed the ways to implement how can we perform tokenization using NLTK library. We can also implement tokenization using following methods and libraries:\nSpacy:Spacyis NLP library that provide robust tokenization capabilities.\nBERT tokenizer:BERTuses Word Piece tokenizer, which is a type of sub-word tokenizer for tokenizing input text. Using regular expressions allows for more fine-grained control over tokenization, and you can customize the pattern based on your specific requirements.\nByte-Pair Encoding:Byte Pair Encoding (BPE)is a data compression algorithm that has also found applications in the field of natural language processing, specifically for tokenization. It is a Sub-word Tokenizationtechnique that works by iteratively merging the most frequent pairs of consecutive bytes (or characters) in a given corpus.\nSentence Piece:Sentence Pieceis another sub-word tokenization algorithm commonly used for natural language processing tasks. It is designed to be language-agnostic and works by iteratively merging frequent sequences of characters or sub words in a given corpus."
+  },
+  {
+    "input": "Limitations of Tokenization",
+    "output": "Unable to capture the meaning of the sentence hence, results in ambiguity.\nChinese, Japanese, Arabic, lack distinct spaces between words. Hence, absence of clear boundaries that complicates the process of tokenization.\nTough to decide how to tokenize text that may include more than one word, for example email address, URLs and special symbols"
   }
 ]
