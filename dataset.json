@@ -13878,5 +13878,21 @@
   {
     "input": "10. POS Tagging",
     "output": "POS tagging is the process of assigning each word in a sentence its grammatical category, such as noun, verb, adjective or adverb. It helps machines understand the structure and meaning of text, enabling tasks like parsing, information extraction and text analysis.\nOutput:\nWhere,\nNNP: Proper noun\nNN: Noun (singular)\nVBZ: Verb (3rd person singular)\nCC: Conjunction"
+  },
+  {
+    "input": "Implementation of Tokenization Using SpaCy",
+    "output": "Here, we’ll see how to implement tokenization usingSpaCy."
+  },
+  {
+    "input": "1. Blank Model Tokenization",
+    "output": "Here, we are using SpaCy's blank model (spacy.blank(\"en\")) which initializes a minimal pipeline without pre-trained components like part-of-speech tagging or named entity recognition. This example shows a basic tokenization functionality.\nOutput:"
+  },
+  {
+    "input": "2. Displaying the Pipeline Components",
+    "output": "We use the pre-traineden_core_web_smmodel which includes various components for NLP tasks. After loading the model, we can display the available components in the pipeline.\nOutput:"
+  },
+  {
+    "input": "3. Tokenization with Part-of-Speech Tagging and Lemmatization",
+    "output": "Here we see how to process text, extract token information likepart-of-speech (POS) taggingand obtain the lemmatized form of each token.\nOutput:\nThespacy.explain()function provides a description of the POS tag for each token. The model performs tokenization, POS tagging and lemmatization automatically when we process the text with NLP."
   }
 ]
