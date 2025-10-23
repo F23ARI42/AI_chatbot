@@ -12542,5 +12542,53 @@
   {
     "input": "Code Implementation of CBOW",
     "output": "Let's implement a word embedding to show the similarity of words using the CBOW model. In this article I have defined my own corpus of words, you use any dataset. First, we will import all the necessary libraries and load the dataset. Next, we will tokenize each word and convert it into a vector of integers.\nOutput:\nNow, we will build the CBOW model having window size = 2.\nNext, we will use the model to visualize the embeddings.\nOutput:\n\nThis visualization allows us to observe the similarity of the words based on their embeddings. Words that are similar in meaning or context are expected to be close to each other in the plot."
+  },
+  {
+    "input": "What is Data Mining?",
+    "output": "Data mining is the process of extracting insights from large datasets using statistical and computational techniques. It can involve structured, semi-structured or unstructured data stored in databases, data warehouses or data lakes. The goal is to uncover hidden patterns and relationships to support informed decision-making and predictions using methods like clustering, classification, regression and anomaly detection.\nData mining is widely used in industries such as marketing, finance, healthcare and telecommunications. For example, it helps identify customer segments in marketing or detect disease risk factors in healthcare. However, it also raises ethical concerns particularly regarding privacy and the misuse of personal data, requiring careful safeguards."
+  },
+  {
+    "input": "1. Introduction to Data Mining",
+    "output": "In this section we will introduce Data Mining explaining what it is and its key objectives. It involves extracting useful insights from large datasets using various techniques like clustering, classification and association rule mining.\nIntroduction to Data\nWhat is Data Mining?\nChallenges of Data Mining\nApplication in Data Mining"
+  },
+  {
+    "input": "2. Extract Transform Load (ETL)",
+    "output": "ETL stands for Extract, Transform and Load which are the three fundamental steps in data processing. This process helps in collecting, cleaning and organizing data for analysis. In this section we will"
+  },
+  {
+    "input": "2.1. Extract",
+    "output": "The extraction process involves gathering raw data from various sources such as databases, APIs or data lakes. The goal is to retrieve data in its original form which will later be processed for analysis.\nWhat is Data Collection?\nData Collection Methods\nWhat is Data Quality ?\nAggregation\nData Lake"
+  },
+  {
+    "input": "2.2. Transform",
+    "output": "Transformation step involves cleaning and structuring the data. This can include removing inconsistencies, handling missing values and converting the data into a format suitable for analysis like normalization, aggregation, etc.\nIntroduction to Data Preprocessing\nData Cleaning\nDifference between Data Cleaning and Data Processing\nData Integration\nData Transformation\nData Reduction\nFeature Selection\nFeature Extraction"
+  },
+  {
+    "input": "2.3. Load",
+    "output": "In the loading phase, the transformed data is stored in a target database or data warehouse making it ready for further analysis and use in decision-making processes.\nData Warehousing\nData Warehouse Architectures\nMeta Data\nComponents and Implementation for Data Warehouse\nETL Process in Data Warehouse\nDifference between ELT and ETL"
+  },
+  {
+    "input": "3. EDA (Exploratory Data Analysis)",
+    "output": "EDA is an important step in data analysis that helps you understand the underlying structure of your data through statistical and graphical techniques."
+  },
+  {
+    "input": "3.1. Statistics and Graphs",
+    "output": "This involves summarizing the key features of the dataset using descriptive statistics (mean, median, standard deviation) and visualizations such as histograms, bar charts and box plots.\nStatistics\nTypes of Graphs in Statistics"
+  },
+  {
+    "input": "3.2. Trend Analysis",
+    "output": "Trend analysis focuses on identifying patterns over time or sequences in the data. This helps to understand how data points evolve and predict future behavior or outcomes.\nFrequent pattern mining\nMarket Basket Analysis\nApriori Algorithm\nFrequent Pattern-Growth Algorithm"
+  },
+  {
+    "input": "4. Data Mining Techniques",
+    "output": "In this section we will explore various data mining techniques such as clustering, classification and regression that are applied to data in order to uncover insights and predict future trends."
+  },
+  {
+    "input": "4.1 Classification and Prediction",
+    "output": "In this section we will cover methods used for classification and prediction in Data Mining. These methods help in predicting outcomes based on historical data.\nWhat is Prediction?\nComparing Classification and Prediction methods\nBayes Classification Methods\nRule-Based Classification\nk-Nearest-Neighbor Classifiers"
+  },
+  {
+    "input": "4.2. Clustering and Cluster Analysis",
+    "output": "In this section we will explore Clustering techniques which are used to group similar data points into clusters, uncovering patterns in large datasets.\nClustering\nPartitioning Methods\nHierarchical Methods\nCluster Analysis\nAssociative Classification\nWith this tutorial you will have in depth knowledge of data mining and can apply it in real world."
   }
 ]
