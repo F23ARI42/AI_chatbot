@@ -14054,5 +14054,49 @@
   {
     "input": "Disadvantages",
     "output": "It can be memory intensive.\nIt is corpus dependent. Any underlying bias will affect your model.\nIt cannot distinguish between homophones. E.g.: brake/break, cell/sell, etc."
+  },
+  {
+    "input": "Primary Approaches to Word Sense Disambiguation",
+    "output": "WSD techniques can be categorized into three main approaches, each with distinct methodologies and use cases."
+  },
+  {
+    "input": "1. Knowledge-Based Methods",
+    "output": "Knowledge-based approaches utilize lexical resources such as dictionaries and semantic networks to determine word meanings. TheLesk algorithmworks over this approach.\nCompare context words with dictionary definitions of candidate senses\nCalculate overlap between contextual words and definitional content\nSelect the sense with maximum overlap score\nAdvantages:\nDoes not require annotated training data\nLeverages existing linguistic knowledge bases\nProvides interpretable disambiguation decisions\nThe Lesk algorithm assumes that words used together in coherent text will have semantic relationships reflected in their dictionary definitions."
+  },
+  {
+    "input": "2. Supervised Learning Methods",
+    "output": "Supervised approaches treat WSD as aclassificationproblem, trainingmachine learningmodels on datasets where word instances have been manually annotated with correct senses.\nKey characteristics:\nRequires substantial amounts of sense-annotated training data\nEmploys standard machine learning algorithms such as support vector machines, decision trees or neural networks\nUses contextual features including surrounding words and syntactic relationships\nTraining process:\nExtract features from annotated examples\nTrain classifier to map feature vectors to sense labels\nApply trained model to disambiguate new instances\nWhile supervised methods achieve high accuracy, they face the challenge of obtaining sufficient annotated data for all word-sense combinations."
+  },
+  {
+    "input": "3. Unsupervised Learning Methods",
+    "output": "Unsupervised approaches operate without sense-labeled training data, instead relying on distributional patterns in large text corpora.\nFundamental principle:\nWords appearing in similar contexts tend to have similar meanings\nCluster word occurrences based on contextual similarity\nAssign sense labels to resulting clusters\nModern techniques:\nUtilize word embeddings and contextualized representations\nEmploy clustering algorithms to group similar contexts\nLeverage large-scale language models for contextual understanding\nThese methods are particularly valuable when annotated data is scarce or unavailable for specific domains or languages."
+  },
+  {
+    "input": "1. Creating the Class and Sense Inventory",
+    "output": "We create a BasicWSD class which stores a sense inventory for target words. Each word has multiple meanings and each sense is associated with keywords that help identify it.\nself.sense_inventory:Stores each ambiguous word along with its senses and their associated keywords.\nself.stop_words:Stores common words (e.g., the and, of) to be ignored during processing."
+  },
+  {
+    "input": "2. Preprocessing the Input Sentence",
+    "output": "We define a method to clean up the input sentence. It removes unnecessary words and punctuation so that only meaningful context remains.\nsentence.lower():Converts all characters to lowercase for consistency.\nsentence.replace(ch, \"\"):Removes punctuation symbols.\nsentence.split():Splits the sentence into words and filters out stop words and single-character tokens."
+  },
+  {
+    "input": "3. Disambiguating the Target Word",
+    "output": "We now add the method that predicts the correct sense of the target word. It compares context words with keywords for each sense.\ncontext = . :Extracts all context words except the target word.\nscores[sense] = len(set(context) & set(keywords)):Counts how many context words match each sense's keywords.\nmax(scores, key=scores.get):Selects the sense with the highest overlap score."
+  },
+  {
+    "input": "4. Testing the Implementation",
+    "output": "We create an object of the class and test it with sample sentences.\nwsd.disambiguate(word, sentence):Returns the predicted sense and the overlap scores for each possible sense.\nThe output displays the original sentence, the target word, predicted sense and a breakdown of scores.\nOutput:\nWe can see from the output that:\n1. Financial context example:\nSentence: \"I need to deposit money into my savings account at the bank\"\nPredicted sense: \"financial\" (overlaps: money, deposit, account, savings)\nConfidence score: 4 matching words\n2. Geographical context example:\nSentence: \"The fisherman stood on the river bank casting his line\"\nPredicted sense: \"geographical\" (overlaps: river, fishing)\nConfidence score: 2 matching words"
+  },
+  {
+    "input": "Challenges and Limitations",
+    "output": "The basic approach faces several constraints:\nLimited coverage:Only handles predefined words with manually curated sense inventories\nShallow semantic understanding:Simple word overlap cannot capture deeper semantic relationships\nContext dependency:Requires sufficient contextual clues for accurate disambiguation"
+  },
+  {
+    "input": "Broader WSD Challenges",
+    "output": "Data sparsity: As many word-sense combinations appear infrequently in training corpora, making supervised learning difficult for rare senses.\nSense granularity :Different lexical resources may define sense boundaries differently. Fine-grained sense distinctions are typically more difficult to disambiguate than coarse-grained categories.\nDomain adaptation: Models trained on general text often perform poorly when applied to specialized domains such as medical, legal or technical texts."
+  },
+  {
+    "input": "Applications and Future Directions",
+    "output": "WSD technology finds practical application across numerous domains:\nMachine Translation:Accurate sense identification improves translation quality by selecting appropriate target language equivalents for ambiguous source words.\nInformation Retrieval:Search engines employ WSD to better understand user query intent and retrieve more relevant documents.\nContent Analysis:Text processing systems benefit from precise word meanings for tasks such as sentiment analysis, topic modeling and document classification."
   }
 ]
