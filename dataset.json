@@ -13502,5 +13502,197 @@
   {
     "input": "4. Working with Tokenized Data",
     "output": "Once you've tokenized the text into words or sentences you can perform further processing on the tokens. Here are a few common operations you can do with tokenized data:\nHere we downloaded a list of stop words using NLTK's stopwords corpus and filtered out the stop words from the tokenized words list.\nTokenization is a important step in NLP and TextBlob simplifies this process in Python. With TextBlob you can easily tokenize text into words and sentences and perform further operations such as filtering stop words and analyzing word frequencies."
+  },
+  {
+    "input": "Regex Module in Python",
+    "output": "Python has a built-in module named \"re\"that is used for regular expressions in Python. We can import this module by usingimport statement.\nImporting re module in Python using following command:"
+  },
+  {
+    "input": "How to Use RegEx in Python?",
+    "output": "You can use RegEx in Python after importing re module.\nExample:\nThis Python code uses regular expressions to search for the word\"portal\"in the given string and then prints the start and end indices of the matched word within the string.\nBefore starting with the Python regex module let's see how to actually write regex using metacharacters or special sequences."
+  },
+  {
+    "input": "RegEx Functions",
+    "output": "The re module in Python provides various functions that help search, match, and manipulate strings using regular expressions.\nBelow are main functions available in the re module:\nLet's see the working of these RegEx functions with definition and examples:"
+  },
+  {
+    "input": "1. re.findall()",
+    "output": "Returns all non-overlapping matches of a pattern in the string as a list. It scans the string from left to right.\nExample:This code uses regular expression\\d+to find all sequences of one or more digits in the given string."
+  },
+  {
+    "input": "2. re.compile()",
+    "output": "Compiles a regex into a pattern object, which can be reused for matching or substitutions.\nExample 1:This pattern[a-e]matches all lowercase letters between 'a' and 'e', in the input string\"Aye, said Mr. Gibenson Stark\".The output should be['e', 'a', 'd', 'b', 'e'], which are matching characters.\nExplanation:\nFirst occurrence is 'e' in \"Aye\" and not 'A', as it is Case Sensitive.\nNext Occurrence is 'a' in \"said\", then 'd' in \"said\", followed by 'b' and 'e' in \"Gibenson\", the Last 'a' matches with \"Stark\".\nMetacharacter backslash '\\' has a very important role as it signals various sequences. If the backslash is to be used without its special meaning as metacharacter, use'\\\\'\nExample 2:The code uses regular expressions to find and list all single digits and sequences of digits in the given input strings. It finds single digits with\\dand sequences of digits with\\d+.\nExample 3:Word and non-word characters\n\\wmatches a single word character.\n\\w+matches a group of word characters.\n\\Wmatches non-word characters.\nExample 4:The regular expression pattern 'ab*' to find and list all occurrences of 'ab' followed by zero or more 'b' characters. In the input string \"ababbaabbb\". It returns the following list of matches: ['ab', 'abb', 'abbb'].\nExplanation:\nOutput 'ab', is valid because of single 'a' accompanied by single 'b'.\nOutput 'abb', is valid because of single 'a' accompanied by 2 'b'.\nOutput 'a', is valid because of single 'a' accompanied by 0 'b'.\nOutput 'abbb', is valid because of single 'a' accompanied by 3 'b'."
+  },
+  {
+    "input": "3. re.split()",
+    "output": "Splits a string wherever the pattern matches. The remaining characters are returned as list elements.\nSyntax:\npattern:Regular expression to match split points.\nstring:The input string to split.\nmaxsplit (optional):Limits the number of splits. Default is 0 (no limit).\nflags (optional):Apply regex flags like re.IGNORECASE.\nExample 1: Splitting by non-word characters or digits\nThis example demonstrates how to split a string using different patterns like non-word characters (\\W+), apostrophes, and digits (\\d+).\nExample 2: Using maxsplit and flags\nThis example shows how to limit the number of splits using maxsplit, and how flags can control case sensitivity."
+  },
+  {
+    "input": "4. re.sub()",
+    "output": "The re.sub() function replaces all occurrences of a pattern in a string with a replacement string.\nSyntax:\npattern: The regex pattern to search for.\nrepl: The string to replace matches with.\nstring: The input string to process.\ncount(optional): Maximum number of substitutions (default is 0, which means replace all).\nflags (optional): Regex flags like re.IGNORECASE.\nExample 1:The following examples show different ways to replace the pattern 'ub' with '~*', using various flags and count values."
+  },
+  {
+    "input": "5. re.subn()",
+    "output": "re.subn() function works just likere.sub(), but instead of returning only the modified string, it returns a tuple:(new_string, number_of_substitutions)\nSyntax:\nExample: Substitution with count\nThis example shows how re.subn() gives both the replaced string and the number of times replacements were made."
+  },
+  {
+    "input": "6. re.escape()",
+    "output": "re.escape() function adds a backslash (\\) before all special characters in a string. This is useful when you want to match a string literally, including any characters that have special meaning in regex (like ., *, [, ], etc.).\nSyntax:\nExample: Escaping special characters\nThis example shows how re.escape() treats spaces, brackets, dashes, and tabs as literal characters."
+  },
+  {
+    "input": "7. re.search()",
+    "output": "The re.search() function searches for the first occurrence of a pattern in a string. It returns amatch objectif found, otherwiseNone.\nExample: Search and extract values\nThis example searches for a date pattern with a month name (letters) followed by a day (digits) in a sentence."
+  },
+  {
+    "input": "Meta-characters",
+    "output": "Metacharacters are special characters in regular expressions used to define search patterns. The re module in Python supports several metacharacters that help you perform powerful pattern matching.\nBelow is a quick reference table:\nLet's discuss each of these metacharacters in detail:"
+  },
+  {
+    "input": "1. \\ - Backslash",
+    "output": "The backslash (\\) makes sure that the character is not treated in a special way. This can be considered a way of escaping metacharacters.\nFor example, if you want to search for the dot(.) in the string then you will find that dot(.) will be treated as a special character as is one of the metacharacters (as shown in the above table). So for this case, we will use the backslash(\\) just before the dot(.) so that it will lose its specialty. See the below example for a better understanding.\nExample:The first search (re.search(r'.', s)) matches any character, not just the period, while the second search (re.search(r'\\.', s)) specifically looks for and matches the period character."
+  },
+  {
+    "input": "2. [] - Square Brackets",
+    "output": "Square Brackets ([]) represent a character class consisting of a set of characters that we wish to match. For example, the character class [abc] will match any single a, b, or c.\nWe can also specify a range of characters using - inside the square brackets. For example,\n[0, 3] is sample as [0123]\n[a-c] is same as [abc]\nWe can also invert the character class using the caret(^) symbol. For example,\n[^0-3] means any character except 0, 1, 2, or 3\n[^a-c] means any character except a, b, or c\nExample:In this code, you're using regular expressions to find all the characters in the string that fall within the range of 'a' to 'm'. There.findall()function returns a list of all such characters. In the given string, the characters that match this pattern are: 'c', 'k', 'b', 'f', 'j', 'e', 'h', 'l', 'd', 'g'."
+  },
+  {
+    "input": "3. ^ - Caret",
+    "output": "Caret (^) symbol matches the beginning of the string i.e. checks whether the string starts with the given character(s) or not. For example -\n^g will check if the string starts with g such as geeks, globe, girl, g, etc.\n^ge will check if the string starts with ge such as geeks, geeksforgeeks, etc.\nExample:This code uses regular expressions to check if a list of strings starts with\"The\". If a string begins with\"The,\" it's marked as \"Matched\"otherwise, it's labeled as\"Not matched\"."
+  },
+  {
+    "input": "4. $ - Dollar",
+    "output": "Dollar($) symbol matches the end of the string i.e checks whether the string ends with the given character(s) or not. For example-\ns$ will check for the string that ends with a such as geeks, ends, s, etc.\nks$ will check for the string that ends with ks such as geeks, geeksforgeeks, ks, etc.\nExample:This code uses a regular expression to check if the string ends with\"World!\".If a match is found, it prints\"Match found!\"otherwise, it prints\"Match not found\"."
+  },
+  {
+    "input": "5. . - Dot",
+    "output": "Dot(.) symbol matches only a single character except for the newline character (\\n). For example -\na.b will check for the string that contains any character at the place of the dot such as acb, acbd, abbb, etc\n.. will check if the string contains at least 2 characters\nExample:This code uses a regular expression to search for the pattern\"brown.fox\"within the string. The dot (.) in the pattern represents any character. If a match is found, it prints\"Match found!\"otherwise, it prints\"Match not found\"."
+  },
+  {
+    "input": "6. | - Or",
+    "output": "The | operator means either pattern on its left or right can match. a|b will match any string that contains a or b such as acd, bcd, abcd, etc."
+  },
+  {
+    "input": "7. ? - Question Mark",
+    "output": "The question mark (?) indicates that the preceding element should be matched zero or one time. It allows you to specify that the element is optional, meaning it may occur once or not at all.\nFor example, ab?c will be matched for the string ac, acb, dabc but will not be matched for abbc because there are two b. Similarly, it will not be matched for abdc because b is not followed by c."
+  },
+  {
+    "input": "8.* - Star",
+    "output": "Star (*) symbol matches zero or more occurrences of the regex preceding the * symbol.\nFor example,ab*c will be matched for the string ac, abc, abbbc, dabc, etc. but will not be matched for abdc because b is not followed by c."
+  },
+  {
+    "input": "9. + - Plus",
+    "output": "Plus (+) symbol matches one or more occurrences of the regex preceding the + symbol.\nFor example, ab+c will be matched for the string abc, abbc, dabc, but will not be matched for ac, abdc, because there is no b in ac and b, is not followed by c in abdc."
+  },
+  {
+    "input": "10. {m, n} - Braces",
+    "output": "Braces match any repetitions preceding regex from m to n both inclusive.\nFor example,  a{2, 4} will be matched for the string aaab, baaaac, gaad, but will not be matched for strings like abc, bc because there is only one a or no a in both the cases."
+  },
+  {
+    "input": "11. (<regex>) - Group",
+    "output": "Group symbol is used to group sub-patterns.\nFor example, (a|b)cd will match for strings like acd, abcd, gacd, etc."
+  },
+  {
+    "input": "Special Sequences",
+    "output": "Special sequences do not match for the actual character in the string instead it tells the specific location in the search string where the match must occur. It makes it easier to write commonly used patterns."
+  },
+  {
+    "input": "Sets for character matching",
+    "output": "ASetis a set of characters enclosed in '[]' brackets. Sets are used to match a single character in the set of characters specified between brackets. Below is the list of Sets:"
+  },
+  {
+    "input": "Match Object",
+    "output": "A Match object contains all the information about the search and the result and if there is no match found then None will be returned. Let's see some of the commonly used methods and attributes of the match object."
+  },
+  {
+    "input": "1. Getting the string and the regex",
+    "output": "match.re attribute returns the regular expression passed and match.string attribute returns the string passed.\nExample:\nThe code searches for the letter \"G\" at a word boundary in the string \"Welcome to GeeksForGeeks\" and prints the regular expression pattern(res.re)and the original string(res.string)."
+  },
+  {
+    "input": "2. Getting index of matched object",
+    "output": "start()method returns the starting index of the matched substring\nend()method returns the ending index of the matched substring\nspan()method returns a tuple containing the starting and the ending index of the matched substring\nExample: Getting index of matched object\nThe code searches for substring \"Gee\" at a word boundary in string \"Welcome to GeeksForGeeks\" and prints start index of the match (res.start()), end index of the match (res.end()) and span of the match (res.span())."
+  },
+  {
+    "input": "3. Getting matched substring",
+    "output": "group() method returns the part of the string for which the patterns match. See the below example for a better understanding.\nExample:Getting matched substring\nThe code searches for a sequence of two non-digit characters followed by a space and the letter 't' in the string \"Welcome to GeeksForGeeks\" and prints the matched text usingres.group().\nIn the above example, our pattern specifies for the string that contains at least 2 characters which are followed by a space, and that space is followed by at."
+  },
+  {
+    "input": "Basic RegEx Patterns",
+    "output": "Let's understand some of the basic regular expressions. They are as follows:"
+  },
+  {
+    "input": "1. Character Classes",
+    "output": "Character classes allow matching any one character from a specified set. They are enclosed in square brackets []."
+  },
+  {
+    "input": "2. Ranges",
+    "output": "In RegEx, a range allows matching characters or digits within a span using - inside []. For example, [0-9] matches digits, [A-Z] matches uppercase letters."
+  },
+  {
+    "input": "3. Negation",
+    "output": "Negation in a character class is specified by placing a ^ at the beginning of the brackets, meaning match anything except those characters.\nSyntax:\nExample:"
+  },
+  {
+    "input": "3. Shortcuts",
+    "output": "Shortcuts are shorthand representations for common character classes. Let's discuss some of the shortcuts provided by the regular expression engine.\n\\w - matches a word character\n\\d - matches digit character\n\\s - matches whitespace character (space, tab, newline, etc.)\n\\b - matches a zero-length character"
+  },
+  {
+    "input": "4. Beginning and End of String",
+    "output": "The ^ character chooses the beginning of a string and the $ character chooses the end of a string."
+  },
+  {
+    "input": "5. Any Character",
+    "output": "The . character represents any single character outside a bracketed character class."
+  },
+  {
+    "input": "6. Optional Characters",
+    "output": "Regular expression engine allows you to specify optional characters using the ? character. It allows a character or character class either to present once or else not to occur. Let's consider the example of a word with an alternative spelling - color or colour."
+  },
+  {
+    "input": "7. Repetition",
+    "output": "Repetition enables you to repeat the same character or character class. Consider an example of a date that consists of day, month, and year. Let's use a regular expression to identify the date (mm-dd-yyyy).\nHere, the regular expression engine checks for two consecutive digits. Upon finding the match, it moves to the hyphen character. After then, it checks the next two consecutive digits and the process is repeated.\nLet's discuss three other regular expressions under repetition."
+  },
+  {
+    "input": "7.1  Repetition ranges",
+    "output": "The repetition range is useful when you have to accept one or more formats. Consider a scenario where both three digits, as well as four digits, are accepted. Let's have a look at the regular expression."
+  },
+  {
+    "input": "7.2  Open-Ended Ranges",
+    "output": "There are scenarios where there is no limit for a character repetition. In such scenarios, you can set the upper limit as infinitive. A common example is matching street addresses. Let's have a look"
+  },
+  {
+    "input": "7.3  Shorthand",
+    "output": "Shorthand characters allow you to use + character to specify one or more ({1,}) and * character to specify zero or more ({0,}."
+  },
+  {
+    "input": "8. Grouping",
+    "output": "Grouping is the process of separating an expression into groups by using parentheses, and it allows you to fetch each individual matching group.\nLet's see some of its functionality."
+  },
+  {
+    "input": "8.1 Return the entire match",
+    "output": "The re module allows you to return the entire match using thegroup()method"
+  },
+  {
+    "input": "8.2  Return a tuple of matched groups",
+    "output": "You can use groups() method to return a tuple that holds individual matched groups"
+  },
+  {
+    "input": "8.3 Retrieve a single group",
+    "output": "Upon passing the index to a group method, you can retrieve just a single group."
+  },
+  {
+    "input": "8.4 Name your groups",
+    "output": "The re module allows you to name your groups. Let's look into the syntax."
+  },
+  {
+    "input": "8.5 Individual match as a dictionary",
+    "output": "We have seen how regular expression provides a tuple of individual groups. Not only tuple, but it can also provide individual match as a dictionary in which the name of each group acts as the dictionary key."
+  },
+  {
+    "input": "9. Lookahead",
+    "output": "In the case of a  negated character class, it won't match if a character is not present to check against the negated character. We can overcome this case by using lookahead; it accepts or rejects a match based on the presence or absence of content.\nLookahead can also disqualify the match if it is not followed by a particular character. This process is called a positive lookahead, and can be achieved by simply replacing ! characterwith = character."
+  },
+  {
+    "input": "10. Substitution",
+    "output": "The regular expression can replace the string and returns the replaced one using the re.sub method. It is useful when you want to avoid characters such as /, -, ., etc. before storing it to a database. It takes three arguments:\nthe regular expression\nthe replacement string\nthe source string being searched\nLet's have a look at the below code that replaces- characterfrom a credit card number."
   }
 ]
