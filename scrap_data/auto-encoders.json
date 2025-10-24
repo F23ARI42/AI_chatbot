@@ -1,0 +1,74 @@
+[
+  {
+    "input": "Architecture of Autoencoder",
+    "output": "An autoencoder’s architecture consists of three main components that work together to compress and then reconstruct data which are as follows:"
+  },
+  {
+    "input": "1. Encoder",
+    "output": "It compress the input data into a smaller, more manageable form by reducing its dimensionality while preserving important information. It has three layers which are:\nInput Layer: This is where the original data enters the network. It can be images, text features or any other structured data.\nHidden Layers: These layers perform a series of transformations on the input data. Each hidden layer applies weights andactivation functionsto capture important patterns, progressively reducing the data's size and complexity.\nOutput(Latent Space): The encoder outputs a compressed vector known as the latent representation or encoding. This vector captures the important features of the input data in a condensed form helps in filtering out noise and redundancies."
+  },
+  {
+    "input": "2.Bottleneck (Latent Space)",
+    "output": "It is the smallest layer of the network which represents the most compressed version of the input data. It serves as the information bottleneck which force the network to prioritize the most significant features. This compact representation helps the model learn the underlying structure and key patterns of the input helps in enabling better generalization and efficient data encoding."
+  },
+  {
+    "input": "3.Decoder",
+    "output": "It is responsible for taking the compressed representation from the latent space and reconstructing it back into the original data form.\nHidden Layers: These layers progressively expand the latent vector back into a higher-dimensional space. Through successive transformations decoder attempts to restore the original data shape and details\nOutput Layer: The final layer produces the reconstructed output which aims to closely resemble the original input. The quality of reconstruction depends on how well the encoder-decoder pair can minimize the difference between the input and output during training."
+  },
+  {
+    "input": "Loss Function in Autoencoder Training",
+    "output": "During training an autoencoder’s goal is to minimize the reconstruction loss which measures how different the reconstructed output is from the original input. The choice of loss function depends on the type of data being processed:\nMean Squared Error (MSE): This is commonly used for continuous data. It measures the average squared differences between the input and the reconstructed data.\nBinary Cross-Entropy: Used for binary data (0 or 1 values). It calculates the difference in probability between the original and reconstructed output.\nDuring training the network updates its weights usingbackpropagationto minimize this reconstruction loss. By doing this it learns to extract and retain the most important features of the input data which are encoded in the latent space."
+  },
+  {
+    "input": "Efficient Representations in Autoencoders",
+    "output": "Constraining an autoencoder helps it learn meaningful and compact features from the input data which leads to more efficient representations. After training only the encoder part is used to encode similar data for future tasks. Various techniques are used to achieve this are as follows:\nKeep Small Hidden Layers: Limiting the size of each hidden layer forces the network to focus on the most important features. Smaller layers reduce redundancy and allows efficient encoding.\nRegularization: Techniques likeL1 or L2 regularizationadd penalty terms to the loss function. This prevents overfitting by removing excessively large weights which helps in ensuring the model to learns general and useful representations.\nDenoising:In denoising autoencodersrandom noise is added to the input during training. It learns to remove this noise during reconstruction which helps it focus on core, noise-free features and helps in improving robustness.\nTuning the Activation Functions: Adjusting activation functions can promote sparsity by activating only a few neurons at a time. This sparsity reduces model complexity and forces the network to capture only the most relevant features."
+  },
+  {
+    "input": "Types of Autoencoders",
+    "output": "Lets see different types of Autoencoders which are designed for specific tasks with unique features:"
+  },
+  {
+    "input": "1. Denoising Autoencoder",
+    "output": "Denoising Autoencoderis trained to handle corrupted or noisy inputs, it learns to remove noise and helps in reconstructing clean data. It prevent the network from simply memorizing the input and encourages learning the core features."
+  },
+  {
+    "input": "2. Sparse Autoencoder",
+    "output": "Sparse Autoencodercontains more hidden units than input features but only allows a few neurons to be active simultaneously. This sparsity is controlled by zeroing some hidden units, adjusting activation functions or adding a sparsity penalty to the loss function."
+  },
+  {
+    "input": "3. Variational Autoencoder",
+    "output": "Variational autoencoder (VAE)makes assumptions about the probability distribution of the data and tries to learn a better approximation of it. It usesstochastic gradient descentto optimize and learn the distribution of latent variables. They used for generating new data such as creating realistic images or text.\nIt assumes that the data is generated by a Directed Graphical Model and tries to learn an approximation toq_{\\phi}(z|x)to the conditional propertyq_{\\theta}(z|x)where\\phiand\\thetaare the parameters of the encoder and the decoder respectively."
+  },
+  {
+    "input": "4. Convolutional Autoencoder",
+    "output": "Convolutional autoencoderuses convolutional neural networks (CNNs) which are designed for processing images. The encoder extracts features using convolutional layers and the decoder reconstructs the image throughdeconvolutionalso called as upsampling."
+  },
+  {
+    "input": "Implementation of Autoencoders",
+    "output": "We will create a simple autoencoder with two Dense layers: an encoder that compresses images into a 64-dimensional latent vector and a decoder that reconstructs the original image from this compressed form."
+  },
+  {
+    "input": "Step 1: Import necessary libraries",
+    "output": "We will be usingMatplotlib,NumPy,TensorFlowand the MNIST dataset loader for this."
+  },
+  {
+    "input": "Step 2: Load the MNIST dataset",
+    "output": "We will be loading the MNIST dataset which is inbuilt dataset and normalize pixel values to [0,1] also reshape the data to fit the model.\nOutput:"
+  },
+  {
+    "input": "Step 3: Define a basic Autoencoder",
+    "output": "Creating a simple autoencoder class with an encoder and decoder usingKeras Sequentialmodel.\nlayers.Input(shape=(28, 28, 1)): Input layer expecting grayscale images of size 28x28.\nlayers.Dense(latent_dimensions, activation='relu'):Dense layer that compresses the input to the latent space usingReLUactivation.\nlayers.Dense(28 * 28, activation='sigmoid'):Dense layer that expands the latent vector back to the original image size withsigmoidactivation."
+  },
+  {
+    "input": "Step 4: Compiling and Fitting Autoencoder",
+    "output": "Here we compile the model usingAdam optimizerandMean Squared Errorloss also we train for 10 epochs with batch size 256.\nlatent_dimensions = 64: Sets the size of the compressed latent space to 64.\nOutput:"
+  },
+  {
+    "input": "Step 5: Visualize original and reconstructed data",
+    "output": "Now compare original images and their reconstructions from the autoencoder.\nencoded_imgs = autoencoder.encoder(x_test).numpy(): Passes test images through the encoder to get their compressed latent representations as NumPy arrays.\ndecoded_imgs = autoencoder.decoder(encoded_imgs).numpy(): Reconstructs images by passing the latent representations through the decoder and converts them to NumPy arrays.\nOutput:\nThe visualization compares original MNIST images (top row) with their reconstructed versions (bottom row) showing that the autoencoder effectively captures key features despite some minor blurriness."
+  },
+  {
+    "input": "Limitations",
+    "output": "Autoencoders are useful but also have some limitations:\nMemorizing Instead of Learning Patterns: It can sometimes memorize the training data rather than learning meaningful patterns which reduces their ability to generalize to new data.\nReconstructed Data Might Not Be Perfect: Output may be blurry or distorted with noisy inputs or if the model architecture lacks sufficient complexity to capture all details.\nRequires a Large Dataset and Good Parameter Tuning: It require large amounts of data and careful parameter tuning (latent dimension size, learning rate, etc) to perform well. Insufficient data or poor tuning can result in weak feature representations."
+  }
+]
