@@ -1,0 +1,82 @@
+[
+  {
+    "input": "When to Optimize?",
+    "output": "Optimization of the code is often performed at the end of the development stage since it reduces readability and adds code that is used to increase performance."
+  },
+  {
+    "input": "Why Optimize?",
+    "output": "Optimizing an algorithm is beyond the scope of the code optimization phase. So the program is optimized. And it may involve reducing the size of the code. So, optimization helps to:\nReduce the space consumed and increases the speed of compilation.\nManually analyzing datasets involves a lot of time. Hence, we make use of software like Tableau for data analysis. Similarly, manually performing the optimization is also tedious and is better done using a code optimizer.\nAn optimized code often promotes re-usability."
+  },
+  {
+    "input": "Types of Code Optimization",
+    "output": "The optimization process can be broadly classified into two types:\nMachine Independent Optimization:This code optimization phase attempts to improve theintermediate codeto get a better target code as the output. The part of the intermediate code which is transformed here does not involve any CPU registers or absolute memory locations.\nMachine Dependent Optimization:Machine-dependent optimization is done after thetarget codehas been generated and when the code is transformed according to the target machine architecture. It involves CPU registers and may have absolute memory references rather than relative references. Machine-dependent optimizers put efforts to take maximumadvantageof the memory hierarchy."
+  },
+  {
+    "input": "Ways to Optimize Code",
+    "output": "There are several ways to optimize code. Some of them are mentioned below."
+  },
+  {
+    "input": "3. Constant Propagation:",
+    "output": "If the value of a variable is a constant, then replace the variable with the constant. The variable may not always be a constant.\nExample:"
+  },
+  {
+    "input": "4. Constant Folding:",
+    "output": "Consider an expression : a = b op c and the values b and c are constants, then the value of a can be computed at compile time.\nExample:"
+  },
+  {
+    "input": "5. Copy Propagation:",
+    "output": "It is extension of constant propagation.\nAfter a is assigned to x, use a to replace x till a is assigned again to another variable or value or expression.\nIt helps in reducing the compile time as it reduces copying.\nExample :"
+  },
+  {
+    "input": "6. Common Sub Expression Elimination:",
+    "output": "In the above example, a*b and x*b is a common sub expression."
+  },
+  {
+    "input": "7. Dead Code Elimination:",
+    "output": "Copy propagation often leads to making assignment statements into dead code.\nA variable is said to be dead if it is never used after its last definition.\nIn order to find the dead variables, a data flow analysis should be done.\nExample:"
+  },
+  {
+    "input": "8. Unreachable Code Elimination:",
+    "output": "First, Control Flow Graph should be constructed.\nThe block which does not have an incoming edge is an Unreachable code block.\nAfter constant propagation and constant folding, the unreachable branches can be eliminated."
+  },
+  {
+    "input": "9. Function Inlining:",
+    "output": "Here, a function call is replaced by the body of the function itself.\nThis saves a lot of time in copying all the parameters, storing the return address, etc."
+  },
+  {
+    "input": "10. Function Cloning:",
+    "output": "Here, specialized codes for a function are created for different calling parameters.\nExample:Function Overloading"
+  },
+  {
+    "input": "11. Induction Variable and Strength Reduction:",
+    "output": "An induction variable is used in the loop for the following kind of assignment i = i + constant. It is a kind of Loop Optimization Technique.\nStrength reduction means replacing the high strength operator with a low strength.\nExamples:"
+  },
+  {
+    "input": "1. Code Motion or Frequency Reduction:",
+    "output": "The evaluation frequency of expression is reduced.\nThe loop invariant statements are brought out of the loop.\nExample:"
+  },
+  {
+    "input": "2. Loop Jamming",
+    "output": "Two or more loops are combined in a single loop. It helps in reducing the compile time.\nExample:"
+  },
+  {
+    "input": "3. Loop Unrolling",
+    "output": "It helps in optimizing the execution time of the program by reducing the iterations.\nIt increases the program's speed by eliminating the loop control and test instructions.\nExample:"
+  },
+  {
+    "input": "Where to Apply Optimization?",
+    "output": "Now that we learned the need for optimization and its two types,now let's see where to apply these optimization.\nSource program:Optimizing the source program involves making changes to the algorithm or changing the loop structures. The user is the actor here.\nIntermediate Code:Optimizing the intermediate code involves changing the address calculations and transforming the procedure calls involved. Here compiler is the actor.\nTarget Code:Optimizing the target code is done by the compiler. Usage of registers, and select and move instructions are part of the optimization involved in the target code.\nLocal Optimization:Transformations are applied to small basic blocks of statements. Techniques followed are  Local Value Numbering and Tree Height Balancing.\nRegional Optimization:Transformations are applied to Extended Basic Blocks. Techniques followed are Super Local Value Numbering and Loop Unrolling.\nGlobal Optimization:Transformations are applied to large program segments that include functions, procedures, and loops. Techniques followed are Live Variable Analysis and Global Code Replacement.\nInterprocedural Optimization:As the name indicates, the optimizations are applied inter procedurally. Techniques followed are Inline Substitution and Procedure Placement."
+  },
+  {
+    "input": "Advantages of Code Optimization",
+    "output": "Improved performance:Code optimization can result in code that executes faster and uses fewer resources, leading to improved performance.\nReduction in code size:Code optimization can help reduce the size of the generated code, making it easier to distribute and deploy.\nIncreased portability:Code optimization can result in code that is more portable across different platforms, making it easier to target a wider range of hardware and software.\nReduced power consumption:Code optimization can lead to code that consumes less power, making it more energy-efficient.\nImproved maintainability:Code optimization can result in code that is easier to understand and maintain, reducing the cost of software maintenance."
+  },
+  {
+    "input": "Disadvantages of Code Optimization",
+    "output": "Increased compilation time:Code optimization can significantly increase the compilation time, which can be a significant drawback when developing large software systems.\nIncreased complexity:Code optimization can result in more complex code, making it harder to understand and debug.\nPotential for introducing bugs:Code optimization can introduce bugs into the code if not done carefully, leading to unexpected behavior and errors.\nDifficulty in assessing the effectiveness:It can be difficult to determine the effectiveness of code optimization, making it hard to justify the time and resources spent on the process."
+  },
+  {
+    "input": "Conclusion",
+    "output": "The Code optimization is a vital component of compiler design that focuses on the refining and enhancing the performance of generated machine code. Through various techniques like loop optimization, dead code elimination and constant folding, compilers can produce the more efficient code that executes faster and uses fewer resources. The Effective optimization contributes significantly to the overall efficiency and performance of software applications."
+  }
+]
