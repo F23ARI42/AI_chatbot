@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Implementing Cat and Dog Classification using CNN",
+    "output": "By following these steps we will gain insights into how CNNs work, how to preprocess image data and how to train an efficient classification model with high accuracy."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We will import the required libraries such asNumpy,Pandas,Matplotlib,Scikit-learn,OpenCV,TensorFlow."
+  },
+  {
+    "input": "2. Importing Dataset",
+    "output": "We will be using Kaggle dataset for this which is in the format of a zip file containing 2 folders : Cat and Dog. Further each folder contains 12500 images of respective animals. So to import and unzip the file and we can run the below code.\nThe ZipFile module extracts dataset files from the zip archive.\nExtracted data is stored in the 'dog-vs-cat-classification' folder."
+  },
+  {
+    "input": "3. Visualizating the Data",
+    "output": "We will try to understand and visualize some images which have been provided to us to build the classifier for each class. We extract image paths and loads them using Matplotlib and plot grid visualization using subplot().\nfig = plt.gcf()gets the current figure.\nfig.set_size_inches(16, 16)sets the figure size.\ncat_diranddog_dirdefine paths to the cat and dog image directories.\ncat_namesanddog_nameslist the image files in each directory.\ncat_imagesanddog_imagesselect images based on pic_index.\nplt.subplot(4, 4, i+1)creates a 4x4 grid for images.\nsp.axis('Off')hides the axis.\nmpimg.imread(img_path)reads each image and plt.imshow(img) displays it.\nplt.show()shows the grid of images.\nOutput :"
+  },
+  {
+    "input": "4. Splitting Dataset",
+    "output": "We split the dataset into training and validation sets.\nimage_dataset_from_directory:is used for data augmentation and scaling images.\nThe dataset is split into 90% training and 10% validation.\ntarget_size=(200, 200):Resizes images to 200x200 pixels.\nbatch_size=32:Defines the number of images per batch.\nOutput :"
+  },
+  {
+    "input": "5. Model Architecture",
+    "output": "The model will contain the following Layers:\nConv2D layers:extract image features like edges, shapes and textures.\nMaxPooling2D:reduces image dimensions while retaining important information.\nBatchNormalization:helps stabilize training and speed up convergence.\nDropout layers:prevent overfitting.\nsigmoid activation:outputs a binary classification as Cat or Dog.\nWe can see the models architecture using model.summary() function.\nOutput :"
+  },
+  {
+    "input": "7. Model Compilation and Training",
+    "output": "Now we will compile and train our model. We used Binary Crossentropy Loss Function for binary classification problems with Adam optimizer.\nmodel.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])compiles the model with binary cross-entropy loss, Adam optimizer and accuracy as the metric.\nhistory = model.fit(train_datagen, epochs=10, validation_data=test_datagen)trains the model for 10 epochs using the training data and validates it using the test data.\nOutput :\nThe model is working fine with epochs = 10 but we can fine tune hyperparameter for better results."
+  },
+  {
+    "input": "8. Model Evaluation",
+    "output": "Let’s visualize the training and validation accuracy with each epoch.\nhistory_df = pd.DataFrame(history.history)converts the training history into a DataFrame.\nhistory_df.loc[:, ['loss', 'val_loss']].plot()plots the training and validation loss.\nhistory_df.loc[:, ['accuracy', 'val_accuracy']].plot()plots the training and validation accuracy.\nOutput :\nThe loss graph shows fluctuating training and validation losses with a spike in validation loss around epoch 3 showing potential overfitting. The accuracy graph reveals that training accuracy improves steadily. Validation accuracy fluctuates indicating that the model may not be generalizing well."
+  },
+  {
+    "input": "8. Model Testing and Prediction",
+    "output": "Let's check the model for random images.\nimg = image.load_img(image_path, target_size=(200, 200))loads the image and resizes it to 200x200 pixels.\nplt.imshow(img)displays the image.\nimg = image.img_to_array(img)converts the image to a NumPy array.\nimg = np.expand_dims(img, axis=0)adds an extra dimension for batch processing.\nresult = model.predict(img)makes a prediction using the model.\nOutput:\nWe can see that our model is able to predict images correctly, hence our CNN model to predict cats and dogs in images is working fine. For better performance we can use Transfer Learning and perform hyperparameter tuning."
+  }
+]
