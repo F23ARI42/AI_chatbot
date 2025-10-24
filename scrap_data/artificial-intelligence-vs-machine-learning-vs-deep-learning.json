@@ -1,0 +1,18 @@
+[
+  {
+    "input": "1. Artificial Intelligence (AI)",
+    "output": "Artificial intelligenceis the field of computer science focused on creating systems that can perform tasks requiring human-like intelligence such as reasoning, problem-solving, planning and understanding natural language. It includes rule-based systems as well as data-driven approaches like ML and DL.\nThe broadest field covering ML, DL, robotics and NLP.\nMimics human cognitive abilities like learning and decision-making.\nDivided into Narrow AI (task-specific) and General AI (human-level, not yet achieved).\nStill evolving but already powerful in real-world use cases.\nExamples: Sophia robot, AI chatbots, fraud detection, medical diagnosis."
+  },
+  {
+    "input": "2. Machine Learning (ML)",
+    "output": "Machine Learningis a branch of AI that enables systems to learn from data and improve their performance without being explicitly programmed. Instead of following fixed rules, ML algorithms analyze past data, detect patterns and use them to make predictions or decisions in new situations.\nLearns from structured and labeled datasets.\nRequires human input for training and corrections.\nUses algorithms such as regression, clustering and decision trees.\nImproves accuracy with more data.\nExamples: Amazon recommendations, Netflix suggestions, spam detection."
+  },
+  {
+    "input": "3. Deep Learning (DL)",
+    "output": "Deep Learningis a subset of machine learning that uses artificial neural networks with many layers to automatically learn complex patterns from large datasets. Unlike traditional ML, it can extract features on its own making it useful for handling unstructured data such as images, speech and text.\nBuilt on neural networks inspired by the human brain.\nLearns automatically with minimal human guidance.\nNeeds massive datasets and high computational power.\nExcels in tasks like vision, speech and natural language.\nExamples: Self-driving cars, facial recognition, voice assistants."
+  },
+  {
+    "input": "AI vs. ML vs. DL",
+    "output": "Let's see the differences between them:"
+  }
+]
