@@ -1,0 +1,18 @@
+[
+  {
+    "input": "1. Max Pooling",
+    "output": "Max pooling selects the maximum element from the region of the feature map covered by the filter. Thus, the output after max-pooling layer would be a feature map containing the most prominent features of the previous feature map.\nMax pooling layer preserves the most important features (edges, textures, etc.) and provides better performance in most cases.\n\nMax Pooling in Keras:\nOutput:"
+  },
+  {
+    "input": "2. Average Pooling",
+    "output": "Average pooling computes the average of the elements present in the region of feature map covered by the filter. Thus, while max pooling gives the most prominent feature in a particular patch of the feature map, average pooling gives the average of features present in a patch.\nAverage pooling provides a more generalized representation of the input. It is useful in the cases where preserving the overall context is important.\n\nAverage Pooling using Keras:\nOutput:"
+  },
+  {
+    "input": "3. Global Pooling",
+    "output": "Global pooling reduces each channel in the feature map to a single value, producing a1 \\times 1 \\times n_coutput. This is equivalent to applying a filter of sizen_h × n_w.\nThere are two types of global pooling:\nGlobal Max Pooling: Takes the maximum value across the entire feature map.\nGlobal Average Pooling: Computes the average of all values in the feature map.\nGlobal Pooling using Keras:\nOutput:"
+  },
+  {
+    "input": "Key Factors to Consider for Optimizing Pooling Layer",
+    "output": "Pooling Window Size: The size of the pooling window affects the degree of downsampling. A larger window results in more aggressive downsampling but may lose important details.\nStride: The stride determines how much the pooling window moves at each step. A larger stride results in greater dimensionality reduction.\nPadding: In some cases, padding is used to ensure that the pooling operation covers the entire input feature map."
+  }
+]
