@@ -1,0 +1,30 @@
+[
+  {
+    "input": "Understanding Bidirectional LSTM (BiLSTM)",
+    "output": "A Bidirectional LSTM (BiLSTM) consists of two separate LSTM layers:\nForward LSTM: Processes the sequence from start to end\nBackward LSTM: Processes the sequence from end to start\nThe outputs of both LSTMs are then combined to form the final output. Mathematically, the final output at timetis computed as:\nWhere:\np_t: Final probability vector of the network.\np_{tf}: Probability vector from the forward LSTM network.\np_{tb}: Probability vector from the backward LSTM network.\nThe following diagram represents the BiLSTM layer:\n\nHere:\nX_iis the input token\nY_iis the output token\nAandA'are Forward and backward LSTM units\nThe final output ofY_iis the combination ofAandA'LSTM nodes."
+  },
+  {
+    "input": "Implementation: Sentiment Analysis Using BiLSTM",
+    "output": "Now let us look into an implementation of a review system using BiLSTM layers in Python using Tensorflow. We would be performing sentiment analysis on the IMDB movie review dataset. We would implement the network from scratch and train it to identify if the review is positive or negative."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We will be using python libraries likenumpy,pandas,matplotlibandtensorflowlibraries for building our model."
+  },
+  {
+    "input": "2. Loading and Preparing the IMDB Dataset",
+    "output": "We will load IMDB dataset from tensorflow which contains 25,000 labeled movie reviews for training and testing. Shuffling ensures that the model does not learn patterns based on the order of reviews.\nPrinting a sample review and its label from the training set.\nOutput:"
+  },
+  {
+    "input": "3. Performing Text Vectorization",
+    "output": "We will first performtext vectorizationand let the encoder map all the words in the training dataset to a token. We can also see in the example below how we can encode and decode the sample review into a vector of integers.\nvectorize_layer :tokenizes and normalizes the text. It converts words into numeric values for the neural network to process easily."
+  },
+  {
+    "input": "4. Defining Model Architecture (BiLSTM Layers)",
+    "output": "We define the model for sentiment analysis. The first layer, Text Vectorization, converts input text into token indices. These tokens go through an embedding layer that maps words into trainable 32-dimensional vectors. During training, these vectors adjust so that words with similar meanings have similar representations.\nThe Bidirectional LSTM layers process these sequences from both directions to capture context:\nThe first Bidirectional LSTM has 32 units and outputs sequences.\nA dropout layer with rate 0.4 helps prevent overfitting.\nThe second Bidirectional LSTM has 16 units and refines the learned features.\nAnother dropout layer with rate 0.4 follows.\nThe Dense layers then perform classification:\nA dense layer with 16 neurons andReLU activationlearns patterns from LSTM output.\nThe final dense layer with a single neuron outputs the sentiment prediction.\nOutput:"
+  },
+  {
+    "input": "5. Training the Model",
+    "output": "Now we will train the model we defined in the previous step for three epochs.\nOutput:\nThe model learns well on training data reaching 95.92% accuracy but struggles with validation data staying around 78%. The increasing validation loss shows overfitting meaning the model remembers training data but doesn't generalize well. To fix this we can useL2 regularization,early stoppingor simplify the model to improve real-world performance."
+  }
+]
