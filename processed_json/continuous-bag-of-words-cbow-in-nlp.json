@@ -1,0 +1,18 @@
+[
+  {
+    "input": "What is a Continuous Bag of Words (CBOW)?",
+    "output": "Continuous Bag of Words (CBOW) is a popular natural language processing technique used to generate word embeddings.Word embeddingsare important for many NLP tasks because they capture semantic and syntactic relationships between words in a language. CBOW is a neural network-based algorithm that predicts a target word given its surrounding context words. It is a type of \"unsupervised\" learning, meaning that it can learn from unlabeled data, and it is often used to pre-train word embeddings that can be used for various NLP tasks such assentiment analysis,text classification, andmachine translation."
+  },
+  {
+    "input": "Is there any difference between  Bag-of-Words (BoW) model and the Continuous Bag-of-Words (CBOW)?",
+    "output": "The Bag-of-Words model and the Continuous Bag-of-Words model are both techniques used in natural language processing to represent text in a computer-readable format, but they differ in how they capture context.\nThe BoW model represents text as a collection of words and their frequency in a given document or corpus. It does not consider the order or context in which the words appear, and therefore, it may not capture the full meaning of the text. The BoW model is simple and easy to implement, but it has limitations in capturing the meaning of language.\nIn contrast, the CBOW model is a neural network-based approach that captures the context of words. It learns to predict the target word based on the words that appear before and after it in a given context window. By considering the surrounding words, the CBOW model can better capture the meaning of a word in a given context."
+  },
+  {
+    "input": "Architecture of the CBOW model",
+    "output": "The CBOW model uses the context words around the target word in order to predict it. Consider the above example\"She is a great dancer.\"The CBOW model converts this phrase into pairs of context words and target words. The word pairings would appear like this([she, a], is), ([is, great], a) ([a, dancer], great)having window size=2.\n\nThe model considers the context words and tries to predict the target term. The four 1∗W input vectors will be passed to the input layer if have four words as context words are used to predict one target word. The hidden layer will receive the input vectors and then multiply them by a W∗N matrix. The 1∗N output from the hidden layer finally enters the sum layer, where the vectors are element-wise summed before a final activation is carried out and the output is obtained from the output layer."
+  },
+  {
+    "input": "Code Implementation of CBOW",
+    "output": "Let's implement a word embedding to show the similarity of words using the CBOW model. In this article I have defined my own corpus of words, you use any dataset. First, we will import all the necessary libraries and load the dataset. Next, we will tokenize each word and convert it into a vector of integers.\nOutput:\nNow, we will build the CBOW model having window size = 2.\nNext, we will use the model to visualize the embeddings.\nOutput:\n\nThis visualization allows us to observe the similarity of the words based on their embeddings. Words that are similar in meaning or context are expected to be close to each other in the plot."
+  }
+]
