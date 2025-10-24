@@ -1,0 +1,18 @@
+[
+  {
+    "input": "How does NLG work",
+    "output": "A typical NLG pipeline consists of the following stages:"
+  },
+  {
+    "input": "Techniques for Evaluating NLG Systems",
+    "output": "Evaluating the effectiveness of generated text is a complex but critical task. Common evaluation techniques include:"
+  },
+  {
+    "input": "Differences between NLP, NLG and NLU",
+    "output": "Natural Language Processing (NLP), Natural Language Generation (NLG) and Natural Language Understanding (NLU) are three distinct but linked areas of natural language processing. Here's a brief overview of the differences between them:"
+  },
+  {
+    "input": "Applications of Natural Language Generation",
+    "output": "Natural Language Generation has seen increasing usage across domains where large volumes of structured data need to be communicated in a human-readable form:"
+  }
+]
