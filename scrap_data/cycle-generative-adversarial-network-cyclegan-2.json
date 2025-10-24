@@ -1,0 +1,30 @@
+[
+  {
+    "input": "Architecture of CycleGAN",
+    "output": "1. Generators:Create new images in the target style.\n\nCycleGAN has two generators G and F:\nG transforms images from domain X like photos to domain Y like artwork.\nF transforms images from domain Y back to domain X.\nThe generator mapping functions are as follows:\nwhereXis the input image distribution andYis the desired output distribution such as Van Gogh styles.\n2. Discriminators:Decide if images are real (from dataset) or fake (generated).\nThere are two discriminatorsDₓandDᵧ.\nDₓdistinguishes between real images fromXand generated images fromF(y).\nDᵧdistinguishes between real images fromYand generated images fromG(x).\nTo further regularize the mappings the CycleGAN uses two more loss function in addition to adversarial loss.\n1. Forward Cycle Consistency Loss: Ensures that when we apply G and then F to an image we get back the original image\nFor example: .x --> G(x) -->F(G(x)) \\approx x\n2. Backward Cycle Consistency Loss: Ensures that when we applyFand thenGto an image we get back the original image.\nFor example:x \\xrightarrow{G} G(x) \\xrightarrow{F} F(G(x)) \\approx x"
+  },
+  {
+    "input": "Generator Architecture",
+    "output": "Each CycleGAN generator has three main sections:\nGenerator Structure:\nc7s1-k: 7×7 convolution layer with k filters.\ndk: 3×3 convolution with stride 2 (down-sampling).\nRk: Residual block with two 3×3 convolutions.\nuk: Fractional-stride deconvolution (up-sampling)."
+  },
+  {
+    "input": "Discriminator Architecture (PatchGAN)",
+    "output": "In CycleGAN the discriminator uses a PatchGAN instead of a regular GAN discriminator.\nThis lets PatchGAN focus on local details such as textures and small patterns rather than the whole image at once it helps in improving the quality of generated images.\nDiscriminator Structure:\nCk: 4×4 convolution with k filters, InstanceNorm and LeakyReLU except the first layer.\nThe final layer produces a 1×1 output and marking real vs. fake patches."
+  },
+  {
+    "input": "Cost Function in CycleGAN",
+    "output": "CycleGAN uses a cost function or loss function to help the training process. The cost function is made up of several parts:\nAdversarial Loss:We apply adversarial loss to both our mappings of generators and discriminators. This adversary loss is written as :\nCycle Consistency Loss: Given a random set of images adversarial network can map the set of input image to random permutation of images in the output domain which may induce the output distribution similar to target distribution. Thus adversarial mapping cannot guarantee the input xito yi. For this to happen we proposed that process should be cycle-consistent. This loss function used in Cycle GAN to measure the error rate of  inverse mapping G(x) -> F(G(x)). The behavior induced by this loss function cause closely matching the real input (x) and F(G(x))\nThe Cost function we used is the sum of adversarial loss and cyclic consistent loss:\nand our aim is :"
+  },
+  {
+    "input": "Applications",
+    "output": "1. Collection Style Transfer:CycleGAN can learn to mimic the style of entire collections of artworks like Van Gogh, Monet or Cezanne rather than just transferring the style of a single image. Therefore it can generate different  styles such as : Van Gogh, Cezanne, Monet and Ukiyo-e. This capability makes CycleGAN particularly useful for generating diverse artwork.\n2. Object Transformation: CycleGAN can transform objects between different classes, such as turning zebras into horses, apples into oranges or vice versa. This is especially useful for creative industries and content generation.\nApple <---> Oranges:\n\n3. Seasonal Transfer: CycleGAN can be used for seasonal image transformation, such as converting winter photos to summer scenes and vice versa. For instance, it was trained on photos of Yosemite in both winter and summer to enable this transformation.\n\n4. Photo Generation from Paintings: CycleGAN can transform a painting into a photo and vice versa. This is useful for artistic applications where you want to blend the look of photos with artistic styles. This loss can be defined as :\n\n5. Photo Enhancement: CycleGAN can enhance photos taken with smartphone cameras which typically have a deeper depth of field to look like those taken with DSLR cameras which have a shallower depth of field. This application is valuable for image quality improvement."
+  },
+  {
+    "input": "Evaluating CycleGAN’s Performance",
+    "output": "AMT Perceptual Studies: It involve real people reviewing generated images to see if they look real. This is like a voting system where participants on Amazon Mechanical Turk compare AI-created images with actual ones.\nFCN Scores: It help to measure accuracy especially in datasets like Cityscapes. These scores check how well the AI understands objects in images by evaluating pixel accuracy and IoU (Intersection over Union) which measures how well the shapes of objects match real."
+  },
+  {
+    "input": "Drawbacks and Limitations",
+    "output": "CycleGAN is great at modifying textures like turning a horse’s coat into zebra stripes but cannot significantly change object shapes or structures.\nThe model is trained to change colors and patterns rather than reshaping objects and make structural modifications difficult.\nSometimes it give the unpredictable results like the generated images may look unnatural or contain distortions."
+  }
+]
