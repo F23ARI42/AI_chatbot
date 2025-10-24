@@ -1,0 +1,26 @@
+[
+  {
+    "input": "What is Contarctive AutoEncoder?",
+    "output": "Contractive Autoencoder was proposed by researchers at the University of Toronto in 2011 in the paper Contractive auto-encoders: Explicit invariance during feature extraction. The idea behind that is to make the autoencoders robust to small changes in the training dataset.\nTo deal with the above challenge that is posed by basic autoencoders, the authors proposed adding another penalty term to the loss function of autoencoders. We will discuss this loss function in detail."
+  },
+  {
+    "input": "Loss Function of Contactive AutoEncoder",
+    "output": "Contractive autoencoder adds an extra term in the loss function of autoencoder, it is given as:\n\\lVert J_h(X) \\rVert_F^2 = \\sum_{ij} \\left( \\frac{\\partial h_j(X)}{\\partial X_i} \\right)^2\ni.e. the above penalty term is the Frobenius Norm of the encoder, theFrobenius normis just a generalization of theEuclidean norm.\nIn the above penalty term, we first need to calculate theJacobian matrixof the hidden layer, calculating a Jacobian of the hidden layer with respect to input is similar to gradient calculation. Let's first calculate the Jacobian of the hidden layer:\n\\begin{aligned}Z_j &= W_i X_i \\\\ h_j &= \\phi(Z_j)\\end{aligned}\nwhere \\phi is non-linearity. Now, to get the jth hidden unit, we need to get the dot product of the ithfeature vector and the corresponding weight. For this, we need to apply the chain rule.\n\\begin{aligned}\n\\frac{\\partial h_j}{\\partial X_i} &= \\frac{\\partial \\phi(Z_j)}{\\partial X_i} \n\\\\ &= \\frac{\\partial \\phi(W_i X_i)}{\\partial W_i X_i} \\frac{\\partial W_i X_i}{\\partial X_i} \n\\\\ &= [\\phi(W_i X_i)(1 - \\phi(W_i X_i))] \\, W_{i} \n\\\\ &= [h_j(1 - h_j)] \\, W_i\n\\end{aligned}\nThe above method is similar to how we calculate the gradient descent, but there is one major difference, that is we take h(X) as a vector-valued function, each as a separate output. Intuitively, For example, we have 64 hidden units, then we have 64 function outputs, and so we will have a gradient vector for each of that 64 hidden units.\nLet diag(x) be thediagonal matrix, the matrix from the above derivative is as follows:\n\\frac{\\partial h}{\\partial X} = diag[h(1 - h)] \\, W^T\nNow, we place the diag(x) equation to the above equation and simplify:\n\\begin{aligned}\\lVert J_h(X) \\rVert_F^2 &= \\sum_{ij} \\left( \\frac{\\partial h_j}{\\partial X_i} \\right)^2 \\\\[10pt] &= \\sum_i \\sum_j [h_j(1 - h_j)]^2 (W_{ji}^T)^2 \\\\[10pt] &= \\sum_j [h_j(1 - h_j)]^2 \\sum_i (W_{ji}^T)^2 \\\\[10pt]\\end{aligned}"
+  },
+  {
+    "input": "Relationship with Sparse Autoencoder",
+    "output": "In sparse autoencoder, our goal is to have the majority of components of representation close to 0, for this to happen, they must be lying in the left saturated part of thesigmoidfunction, where their corresponding sigmoid value is close to 0 with a very small first derivative, which in turn leads to the very small entries in the Jacobian matrix. This leads to highly contractive mapping in the sparse autoencoder, even though this is not the goal in sparse Autoencoder."
+  },
+  {
+    "input": "Relationship with Denoising Autoencoder",
+    "output": "The idea behind denoising autoencoder is just to increase the robustness of the encoder to the small changes in the training data which is quite similar to the motivation of Contractive Autoencoder. However, there is some difference:\nCAEs encourage robustness of representation f(x), whereas DAEs encourage robustness of reconstruction, which only partially increases the robustness of representation.\nDAE increases its robustness by stochastically training the model for the reconstruction, whereas CAE increases the robustness of the first derivative of the Jacobian matrix."
+  },
+  {
+    "input": "Train the model",
+    "output": "Output:"
+  },
+  {
+    "input": "Generate results",
+    "output": "Output:"
+  }
+]
