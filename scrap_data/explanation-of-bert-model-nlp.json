@@ -1,0 +1,66 @@
+[
+  {
+    "input": "What is BERT?",
+    "output": "BERT (Bidirectional Encoder Representations from Transformers)leverages a transformer-based neural network to understand and generate human-like language. BERT employs an encoder-only architecture. In the originalTransformer architecture,there are both encoder and decoder modules. The decision to use an encoder-only architecture in BERT suggests a primary emphasis on understanding input sequences rather than generating output sequences.\nTraditional language models process text sequentially, either from left to right or right to left. This method limits the model's awareness to the immediate context preceding the target word. BERT uses a bi-directional approach considering both the left and right context of words in a sentence, instead of analyzing the text sequentially, BERT looks at all the words in a sentence simultaneously."
+  },
+  {
+    "input": "Pre-training BERT Model",
+    "output": "The BERT model undergoes Pre-training on Large amounts of unlabeled text to learn contextual embeddings.\nBERT is pre-trained on large amount of unlabeled text data. The model learns contextual embeddings, which are the representations of words that take into account their surrounding context in a sentence.\nBERT engages in various unsupervised pre-training tasks. For instance, it might learn to predict missing words in a sentence (Masked Language Model or MLM task), understand the relationship between two sentences, or predict the next sentence in a pair."
+  },
+  {
+    "input": "Workflow of BERT",
+    "output": "BERT is designed to generate a language model so, only the encoder mechanism is used. Sequence of tokens are fed to the Transformer encoder. These tokens are first embedded into vectors and then processed in the neural network. The output is a sequence of vectors, each corresponding to an input token, providing contextualized representations. When training language models, defining a prediction goal is a challenge. Many models predict the next word in a sequence, which is a directional  approach and may limit context learning.\nBERT addresses this challenge with two innovative training strategies:"
+  },
+  {
+    "input": "1. Masked Language Model (MLM)",
+    "output": "In BERT's pre-training process, a portion of words in each input sequence is masked and the model is trained to predict the original values of these masked words based on the context provided by the surrounding words."
+  },
+  {
+    "input": "2. Next Sentence Prediction (NSP)",
+    "output": "BERT predicts if the second sentence is connected to the first. This is done by transforming the output of the [CLS] token into a 2×1 shaped vector using a classification layer, and then calculating the probability of whether the second sentence follows the first using SoftMax."
+  },
+  {
+    "input": "Why to train Masked LM and Next Sentence Prediction together?",
+    "output": "Masked LM helps BERT to understand the context within a sentence andNext Sentence Predictionhelps BERT grasp the connection or relationship between pairs of sentences. Hence, training both the strategies together ensures that BERT learns a broad and comprehensive understanding of language, capturing both details within sentences and the flow between sentences."
+  },
+  {
+    "input": "Fine-Tuning on Labeled Data",
+    "output": "We perform Fine-tuning on labeled data for specificNLPtasks.\nAfter the pre-training phase, the BERT model, armed with its contextual embeddings, is fine-tuned for specific natural language processing (NLP) tasks. This step tailors the model to more targeted applications by adapting its general language understanding to the nuances of the particular task.\nBERT is fine-tuned using labeled data specific to the downstream tasks of interest. These tasks could include sentiment analysis, question-answering,named entity recognition, or any other NLP application. The model's parameters are adjusted to optimize its performance for the particular requirements of the task at hand.\nBERT's unified architecture allows it to adapt to various downstream tasks with minimal modifications, making it a versatile and highly effective tool innatural language understandingand processing."
+  },
+  {
+    "input": "BERT Architecture",
+    "output": "The architecture of BERT is a multilayer bidirectional transformer encoder which is quite similar to the transformer model. A transformer architecture is an encoder-decoder network that usesself-attentionon the encoder side and attention on the decoder side.\nThis model takes the CLS token as input first, then it is followed by a sequence of words as input. Here CLS is a classification token. It then passes the input to the above layers. Each layer appliesself-attentionand passes the result through a feedforward network after then it hands off to the next encoder. The model outputs a vector of hidden size (768 for BERT BASE). If we want to output a classifier from this model we can take the output corresponding to the CLS token.\nNow, this trained vector can be used to perform a number of tasks such as classification, translation, etc. For Example, the paper achieves great results just by using a single layerNeural Networkon the BERT model in the classification task."
+  },
+  {
+    "input": "How to use BERT model in NLP?",
+    "output": "BERT can be used for various natural language processing (NLP) tasks such as:"
+  },
+  {
+    "input": "1. Classification Task",
+    "output": "BERT can be used for classification task likesentiment analysis, the goal is to classify the text into different categories (positive/ negative/ neutral), BERT can be employed by adding a classification layer on the top of the Transformer output for the [CLS] token.\nThe [CLS] token represents the aggregated information from the entire input sequence. This pooled representation can then be used as input for a classification layer to make predictions for the specific task."
+  },
+  {
+    "input": "2. Question Answering",
+    "output": "In question answering tasks, where the model is required to locate and mark the answer within a given text sequence, BERT can be trained for this purpose.\nBERT is trained for question answering by learning two additional vectors that mark the beginning and end of the answer. During training, the model is provided with questions and corresponding passages, and it learns to predict the start and end positions of the answer within the passage."
+  },
+  {
+    "input": "3. Named Entity Recognition (NER)",
+    "output": "BERT can be utilized for NER, where the goal is to identify and classify entities (e.g., Person, Organization, Date) in a text sequence.\nA BERT-based NER model is trained by taking the output vector of each token form the Transformer and feeding it into a classification layer. The layer predicts the named entity label for each token, indicating the type of entity it represents."
+  },
+  {
+    "input": "How to Tokenize and Encode Text using BERT?",
+    "output": "To tokenize and encode text using BERT, we will be using the 'transformer' library in Python.\nCommand to install transformers:\nWe will load the pretrained BERT tokenize with a cased vocabulary using BertTokenizer.from_pretrained(\"bert-base-cased\").\ntokenizer.encode(text) tokenizes the input text and converts it into a sequence of token IDs.\nprint(\"Token IDs:\", encoding) prints the token IDs obtained after encoding.\ntokenizer.convert_ids_to_tokens(encoding) converts the token IDs back to their corresponding tokens.\nprint(\"Tokens:\", tokens) prints the tokens obtained after converting the token IDs\nOutput\nThe tokenizer.encode method adds the special [CLS] - classification and [SEP] - separator tokens at the beginning and end of the encoded sequence. In the token IDs section, token id: 101 refers to the start of the sentence and token id: 102 represents the end of the sentence."
+  },
+  {
+    "input": "Application of BERT",
+    "output": "BERT is used for various applications. Some of these are:"
+  },
+  {
+    "input": "BERT vs GPT",
+    "output": "The difference between BERT and GPT are as follows:"
+  },
+  {
+    "input": "Related Articles",
+    "output": "How to Generate Word Embedding using BERT?\nSentiment Classification Using BERT\nToxic Comment Classification using BERT\nFine-tuning BERT for Sentiment Analysis\nSentence Similarity using BERT\nBART Model for Text Auto Completion in NLP"
+  }
+]
