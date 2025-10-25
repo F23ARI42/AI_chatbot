@@ -1,0 +1,34 @@
+[
+  {
+    "input": "Need For Transformers Model in Machine Learning",
+    "output": "Transformer Architecture uses self-attention to transform one whole sentence into a single sentence. This is useful because older models work step by step and it helps overcome the challenges seen in models like RNNs and LSTMs. Traditional models likeRNNs (Recurrent Neural Networks)suffer from thevanishing gradient problemwhich leads to long-term memory loss. RNNs process text sequentially meaning they analyze words one at a time.\nFor example:\nWhile adding more memory cells inLSTMs (Long Short-Term Memory networks)helped address the vanishing gradient issue they still process words one by one. This sequential processing means LSTMs can't analyze an entire sentence at once.\nFor example:\nTraditional models struggle with this context dependence, whereas Transformer model through its self-attention mechanism processes the entire sentence in parallel addressing these issues and making it significantly more effective at understanding context."
+  },
+  {
+    "input": "1. Self Attention Mechanism",
+    "output": "Theself attention mechanismallows transformers to determine which words in a sentence are most relevant to each other. This is done using a scaled dot-product attention approach:\nEach word in a sequence is mapped to three vectors:\nQuery (Q)\nKey (K)\nValue (V)\nAttention scores are computed as:\\text{Attention}(Q, K, V) = \\text{softmax} \\left( \\frac{QK^T}{\\sqrt{d_k}} \\right) V\nThese scores determine how much attention each word should pay to others."
+  },
+  {
+    "input": "2. Positional Encoding",
+    "output": "Unlike RNNs, transformers lack an inherent understanding of word order since they process data in parallel. To solve this problemPositional Encodingsare added to token embeddings providing information about the position of each token within a sequence."
+  },
+  {
+    "input": "3. Multi-Head Attention",
+    "output": "Instead of one attention mechanism, transformers use multiple attention heads running in parallel. Each head captures different relationships or patterns in the data, enriching the model’s understanding."
+  },
+  {
+    "input": "4. Position-wise Feed-Forward Networks",
+    "output": "The Feed-Forward Networks consist of two linear transformations with aReLU activation. It is applied independently to each position in the sequence.\nMathematically:\nThis transformation helps refine the encoded representation at each position."
+  },
+  {
+    "input": "5. Encoder-Decoder Architecture",
+    "output": "Theencoder-decoderstructure is key to transformer models. The encoder processes the input sequence into a vector, while the decoder converts this vector back into a sequence. Each encoder and decoder layer includes self-attention and feed-forward layers. In the decoder, an encoder-decoder attention layer is added to focus on relevant parts of the input.\nThe encoder consists of multiple layers (typically 6 layers). Each layer has two main components:\nSelf-Attention Mechanism:Helps the model understand word relationships.\nFeed-Forward Neural Network:Further transforms the representation.\nThe decoder also consists of 6 layers but with an additional encoder-decoder attention mechanism. This allows the decoder to focus on relevant parts of the input sentence while generating output."
+  },
+  {
+    "input": "Intuition with Example",
+    "output": "For instance in the sentence \"The cat didn't chase the mouse, because it was not hungry\" the word 'it' refers to 'cat'. The self-attention mechanism helps the model correctly associate 'it' with 'cat' ensuring an accurate understanding of sentence structure."
+  },
+  {
+    "input": "Applications",
+    "output": "Some of the applications of transformers are:\nNLP Tasks: Transformers are used for machine translation, text summarization, named entity recognition and sentiment analysis.\nSpeech Recognition: They process audio signals to convert speech into transcribed text.\nComputer Vision: Transformers are applied to image classification, object detection and image generation.\nRecommendation Systems: They provide personalized recommendations based on user preferences.\nText and Music Generation: Transformers are used for generating text like articles and composing music."
+  }
+]
