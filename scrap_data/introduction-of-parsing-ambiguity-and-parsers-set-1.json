@@ -1,0 +1,30 @@
+[
+  {
+    "input": "What is the Role of Parser?",
+    "output": "A parser performs syntactic and semantic analysis of source code, converting it into an intermediate representation while detecting and handling errors."
+  },
+  {
+    "input": "Types of Parsing",
+    "output": "The parsing is divided into two types, which are as follows:\nTop-down Parsing\nBottom-up Parsing"
+  },
+  {
+    "input": "Top-Down Parsing",
+    "output": "Top-down parsing is a method of building a parse tree from the start symbol (root) down to the leaves (end symbols). The parser begins with the highest-level rule and works its way down, trying to match the input string step by step.\nProcess: The parser starts with the start symbol and looks for rules that can help it rewrite this symbol. It keeps breaking down the symbols (non-terminals) into smaller parts until it matches the input string.\nLeftmost Derivation: In top-down parsing, the parser always chooses the leftmost non-terminal to expand first, following what is called leftmost derivation. This means the parser works on the left side of the string before moving to the right.\nOther Names: Top-down parsing is sometimes called recursive parsing or predictive parsing. It is called recursive because it often uses recursive functions to process the symbols.\nTop-down parsing is useful for simple languages and is often easier to implement. However, it can have trouble with more complex or ambiguous grammars.\nTop-down parsers can be classified into two types based on whether they use backtracking or not:"
+  },
+  {
+    "input": "1.Top-down Parsing with Backtracking",
+    "output": "In this approach, the parser tries different possibilities when it encounters a choice, If one possibility doesn’t work (i.e., it doesn’t match the input string), the parser backtracks to the previous decision point and tries another possibility.\nExample: If the parser chooses a rule to expand a non-terminal, and it doesn't work, it will go back, undo the choice, and try a different rule.\nAdvantage: It can handle grammars where there are multiple possible ways to expand a non-terminal.\nDisadvantage: Backtracking can be slow and inefficient because the parser might have to try many possibilities before finding the correct one."
+  },
+  {
+    "input": "2.Top-down Parsing without Backtracking",
+    "output": "In this approach, the parser does not backtrack. It tries to find a match with the input using only the first choice it makes, If it doesn’t match the input, it fails immediately instead of going back to try another option.\nExample: The parser will always stick with its first decision and will not reconsider other rules once it starts parsing.\nAdvantage: It is faster because it doesn’t waste time going back to previous steps.\nDisadvantage: It can only handle simpler grammars that don’t require trying multiple choices.\nRead more aboutclassification of top-down parser."
+  },
+  {
+    "input": "Bottom-Up Parsing",
+    "output": "Bottom-up parsing is a method of building a parse tree starting from the leaf nodes (the input symbols) and working towards the root node (the start symbol). The goal is to reduce the input string step by step until we reach the start symbol, which represents the entire language.\nProcess: The parser begins with the input symbols and looks for patterns that can be reduced to non-terminals based on the grammar rules. It keeps reducing parts of the string until it forms the start symbol.\nRightmost Derivation in Reverse: In bottom-up parsing, the parser traces the rightmost derivation of the string but works backwards, starting from the input string and moving towards the start symbol.\nShift-Reduce Parsing: Bottom-up parsers are often called shift-reduce parsers because they shift (move symbols) and reduce (apply rules to replace symbols) to build the parse tree.\nBottom-up parsing is efficient for handling more complex grammars and is commonly used in compilers. However, it can be more challenging to implement compared to top-down parsing.\nGenerally,bottom-up parsingis categorized into the following types:\n1. LR parsing/Shift Reduce Parsing:Shift reduce Parsing is a process of parsing a string to obtain the start symbol of the grammar.\nLR(0)\nSLR(1)\nLALR\nCLR\n2. Operator Precedence Parsing:The grammar defined using operator grammar is known as operator precedence parsing. Inoperator precedence parsingthere should be no null production and two non-terminals should not be adjacent to each other."
+  },
+  {
+    "input": "Difference Between Bottom-Up and Top-Down Parser",
+    "output": "Read more aboutDifference Between Bottom-Up and Top-Down Parser."
+  }
+]
