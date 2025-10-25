@@ -1,0 +1,50 @@
+[
+  {
+    "input": "Import Libraries:",
+    "output": "We start by importing all necessary modules.\nWe import 'tensorflow'to access the core TensorFlow functionality, 'Tokenizer'to preprocess text data by tokenizing it into sequences, and 'pad_sequences'to pad the sequences to a fixed length."
+  },
+  {
+    "input": "Data Collection:",
+    "output": "Then, we need a dataset consisting of labeled examples where each example contains a text input and its corresponding intent label. For example, we consider a dataset from kaggle Chatbots: Intent Recognition Dataset, it is in JSON format and perfect for intent recognition model.\nOutput:\nWe load data from JSON file like shown above."
+  },
+  {
+    "input": "Data Cleaning:",
+    "output": "We can't directly process this data. First, we have to clean it, this usually includes, removing punctuation marks or anything which might produce unwanted results. This is also done to reduce number of tokens, as we don't want to tokenize everything.\nWe define a function to clean sentence provided to it, by removing punctuations. This can also be done by using Regular Expression module in python."
+  },
+  {
+    "input": "Data Preprocessing:",
+    "output": "The next step is to preprocess the data to make it suitable for training a neural network. This usually involves tokenization, which means breaking down each input sentence into individual words or sub-words.\nBut before we do that, we need to prepare data in a format {intent : text data}\nWe have created a dataset which is ready to be preprocessed, we can see sample data below:\nOutput:"
+  },
+  {
+    "input": "Tokenization and Embedding",
+    "output": "Now, our data is ready to be tokenized, with the help of inbuilt TensorFlow tokenizer, We can make both tokenization and embedding.\nOutput:"
+  },
+  {
+    "input": "Feature Extraction:",
+    "output": "Neural network cannot process sentences, so numerical representation of sentences have to be provided to it, this is done by doing Feature Extraction, for that we map all words with their indexes and create a matrix mapping it to its category (intent).\nOutput:"
+  },
+  {
+    "input": "One-Hot Encoding",
+    "output": "Apply One-Hot Encoding for categorical_target\nOutput:"
+  },
+  {
+    "input": "Model Building:",
+    "output": "First step of building a model is defining hyperparameters, in simple words they are settings which we predefine before training our model. They include parameters like no. of epochs, embedding dimensions, size of vocabulary, and target length. They can be adjusted accordingly, to increase performance of model.\nOutput:\nAs both input dimension and output dimension are same, we can proceed with building our model.\nNow, we can define the architecture of our neural network using TensorFlow. A common model for intent recognition is the recurrent neural network (RNN) or its variant, the long short-term memory (LSTM) network. These networks can handle sequential data, such as sentences, effectively. We can also use pre-trained models like BERT or GPT to achieve better performance.\nHere we are using a RNN, by using 'Sequential' model from TensorFlow's Keras API.  It consists of an embedding layer, an LSTM layer for sequence processing, and two dense layers for classification. You can see model summary below.\nOutput:"
+  },
+  {
+    "input": "Training:",
+    "output": "With the model architecture defined, we can start training the network using our labeled dataset. During training, the model adjusts its internal parameters to minimize the difference between its predicted intents and the true intents in the training data. This process involves forward propagation, where the model makes predictions, and backward propagation, where the model's parameters are updated based on the prediction errors.\nOutput:\nHere we train the model by fitting it to the padded sequences and its respective categorical sequence. The model adjusts its internal parameters to minimize the difference between its predicted intents and the true intents in the training data. The training is performed for a specified number of epochs, and might stop early if there is no improvement in it's loss after 4 consecutive epochs."
+  },
+  {
+    "input": "Evaluate:",
+    "output": "To check if our model works correctly, we give it unseen data along with labels and check if it works correctly or not. Thus, we give text inputs along with it's intent and we test our model, this is known as evaluation of model. It is important step which helps predict accuracy of model, or if it is overfit or underfit.\nOutput:"
+  },
+  {
+    "input": "Predict:",
+    "output": "We have finished training our model and can now use it to make predictions on new, unseen sentences. Given an input sentence, the model processes it using the learned parameters and produces a probability distribution over the possible intents. The intent with the highest probability is considered the predicted intent."
+  },
+  {
+    "input": "Chatbots: Intent Recognition",
+    "output": "We have defined a function response to predict intent and give appropriate response. This is a loop to take input from user recognize intent and give appropriate response.\nOutput:"
+  }
+]
