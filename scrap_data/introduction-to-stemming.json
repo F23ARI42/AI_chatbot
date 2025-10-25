@@ -1,0 +1,42 @@
+[
+  {
+    "input": "Types of Stemmer in NLTK",
+    "output": "Python'sNLTK (Natural Language Toolkit)provides various stemming algorithms each suitable for different scenarios and languages. Lets see an overview of some of the most commonly used stemmers:"
+  },
+  {
+    "input": "1. Porter's Stemmer",
+    "output": "Porter's Stemmeris one of the most popular and widely used stemming algorithms. Proposed in 1980 by Martin Porter, this stemmer works by applying a series of rules to remove common suffixes from English words. It is well-known for its simplicity, speed and reliability. However, the stemmed output is not guaranteed to be a meaningful word and its applications are limited to the English language.\nExample:\n'agreed' → 'agree'\nRule: If the word has a suffixEED(with at least one vowel and consonant) remove the suffix and change it toEE.\nAdvantages:\nVery fast and efficient.\nCommonly used for tasks like information retrieval and text mining.\nLimitations:\nOutputs may not always be real words.\nLimited to English words.\nNow lets implement Porter's Stemmer in Python, here we will be using NLTK library.\nOutput:"
+  },
+  {
+    "input": "2. Snowball Stemmer",
+    "output": "TheSnowball Stemmeris an enhanced version of the Porter Stemmer which was introduced by Martin Porter as well. It is referred to as Porter2 and is faster and more aggressive than its predecessor. One of the key advantages of this is that it supports multiple languages, making it a multilingual stemmer.\nExample:\n'running' → 'run'\n'quickly' → 'quick'\nAdvantages:\nMore efficient than Porter Stemmer.\nSupports multiple languages.\nLimitations:\nMore aggressive which might lead to over-stemming.\nNow lets implement Snowball Stemmer in Python, here we will be using NLTK library.\nOutput:"
+  },
+  {
+    "input": "3. Lancaster Stemmer",
+    "output": "TheLancaster Stemmeris known for being more aggressive and faster than other stemmers. However, it’s also more destructive and may lead to excessively shortened stems. It uses a set of external rules that are applied in an iterative manner.\nExample:\n'running' → 'run'\n'happily' → 'happy'\nAdvantages:\nVery fast.\nGood for smaller datasets or quick preprocessing.\nLimitations:\nAggressive which can result in over-stemming.\nLess efficient than Snowball in larger datasets.\nNow lets implement Lancaster Stemmer in Python, here we will be using NLTK library.\nOutput:"
+  },
+  {
+    "input": "4. Regexp Stemmer",
+    "output": "The Regexp Stemmer or Regular Expression Stemmer is a flexible stemming algorithm that allows users to define custom rules usingregular expressions (regex). This stemmer can be helpful for very specific tasks where predefined rules are necessary for stemming.\nExample:\n'running' → 'runn'\nCustom rule: r'ing$' removes the suffix ing.\nAdvantages:\nHighly customizable using regular expressions.\nSuitable for domain-specific tasks.\nLimitations:\nRequires manual rule definition.\nCan be computationally expensive for large datasets.\nNow let's implement Regexp Stemmer in Python, here we will be using NLTK library.\nOutput:"
+  },
+  {
+    "input": "5.Krovetz Stemmer",
+    "output": "The Krovetz Stemmer was developed by Robert Krovetz in 1993. It is designed to be more linguistically accurate and tends to preserve meaning more effectively than other stemmers. It includes steps like converting plural forms to singular and removing ing from past-tense verbs.\nExample:\n'children' → 'child'\n'running' → 'run'\nAdvantages:\nMore accurate, as it preserves linguistic meaning.\nWorks well with both singular/plural and past/present tense conversions.\nLimitations:\nMay be inefficient with large corpora.\nSlower compared to other stemmers."
+  },
+  {
+    "input": "Stemming vs. Lemmatization",
+    "output": "Let's see the tabular difference between Stemming andLemmatizationfor better understanding:"
+  },
+  {
+    "input": "Applications of Stemming",
+    "output": "Stemming plays an important role in many NLP tasks. Some of its key applications include:"
+  },
+  {
+    "input": "Challenges in Stemming",
+    "output": "While stemming is beneficial but also it has some challenges:\nThese challenges can be solved by fine-tuning the stemming process or using lemmatization when necessary."
+  },
+  {
+    "input": "Advantages of Stemming",
+    "output": "Stemming provides various benefits which are as follows:"
+  }
+]
