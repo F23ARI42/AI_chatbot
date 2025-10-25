@@ -1,0 +1,18 @@
+[
+  {
+    "input": "What is a Token?",
+    "output": "A token is a sequence of characters that can be treated as a unit in the grammar of the programming languages."
+  },
+  {
+    "input": "Categories of Tokens",
+    "output": "Keywords:In C programming, keywords are reserved words with specific meanings used to define the language's structure like if, else, for, and void. These cannot be used as variable names or identifiers, as doing so causes compilation errors. C programming has a total of 32 keywords.\nIdentifiers:Identifiers in C are names for variables, functions, arrays, or other user-defined items. They must start with a letter or an underscore (_) and can include letters, digits, and underscores. C is case-sensitive, so uppercase and lowercase letters are different. Identifiers cannot be the same as keywords like if, else or for.\nConstants:Constants are fixed values that cannot change during a program's execution, also known as literals. In C, constants include types like integers, floating-point numbers, characters, and strings.\nOperators:Operators are symbols in C that perform actions on variables or other data items, called operands.\nSpecial Symbols:Special symbols in C are compiler tokens used for specific purposes, such as separating code elements or defining operations. Examples include;(semicolon) to end statements,,(comma) to separate values,{}(curly braces) for code blocks, and [] (square brackets) for arrays. These symbols play a crucial role in the program's structure and syntax.\nRead more aboutTokens."
+  },
+  {
+    "input": "What is a Lexeme?",
+    "output": "A lexeme is an actual string of characters that matches with a pattern and generates a token.eg- “float”, “abs_zero_Kelvin”, “=”, “-”, “273”, “;” ."
+  },
+  {
+    "input": "How Lexical Analyzer Works?",
+    "output": "Tokens in a programming language can be described using regular expressions. A scanner, or lexical analyzer, uses a Deterministic Finite Automaton (DFA) to recognize these tokens, as DFAs are designed to identify regular languages. Each final state of the DFA corresponds to a specific token type, allowing the scanner to classify the input. The process of creating a DFA from regular expressions can be automated, making it easier to handle token recognition efficiently.\nRead more aboutWorking of Lexical Analyzer in Compiler.\nThe lexical analyzer identifies the error with the help of the automation machine and the grammar of the given language on which it is based like C, C++, and gives row number and column number of the error.\nSuppose we pass a statement through lexical analyzer:a = b + c;\nIt will generate token sequence like this:id=id+id; Where each id refers to it’s variable in the symbol table referencing all details For example, consider the program\nAll the valid tokens are:\nAbove are the valid tokens. You can observe that we have omitted comments. As another example, consider below printf statement.There are 5 valid token in this printf statement.\nQuiz on Lexical Analysis"
+  }
+]
