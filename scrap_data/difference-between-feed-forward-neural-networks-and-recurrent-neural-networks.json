@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Feed-Forward Neural Networks",
+    "output": "Feed-forward neural networksis a type of neural network where the connections between nodes do not form cycles. It processes input data in one direction i.e from input to output, without any feedback loops.\nNo memory of previous inputs.\nBest suited for static data (e.g., images).\nSimple and fast to train.\nCannot handle sequences or time dependencies."
+  },
+  {
+    "input": "Basic Example:",
+    "output": "Used in classification tasks like identifying handwritten digits using the MNIST dataset."
+  },
+  {
+    "input": "Recurrent Neural Networks",
+    "output": "Recurrent neural networksadd a missing element from feed-forward networks i.e memory. They can remember information from previous steps, making them ideal for sequential data where context matters.\nHas memory of previous inputs using hidden states.\nIdeal for sequential data like text, speech, time series.\nCan suffer from vanishing gradient problems.\nMore complex and slower to train."
+  },
+  {
+    "input": "Basic Example:",
+    "output": "Used in language modeling such as predicting the next word in a sentence."
+  },
+  {
+    "input": "Feed-Forward Networks are ideal for:",
+    "output": "Image classification where each image is independent\nMedical diagnosis where patient symptoms don't depend on previous patients\nCredit scoring as current application doesn't depend on previous applications\nAny problem where inputs are independent"
+  },
+  {
+    "input": "RNNs are ideal for:",
+    "output": "Language translation where word order matters\nStock price prediction as today's price depends on yesterday's\nWeather forecasting as tomorrow's weather depends on today's\nSpeech recognition"
+  },
+  {
+    "input": "Feed-Forward Networks",
+    "output": "Simple Structure: Feed-forward networks follow a straight path from input to output. This makes them easier to implement and tune.\nParallel Computation: Inputs can be processed in batches, enabling fast training using modern hardware.\nEfficient Backpropagation: They use standard backpropagation which is stable and well-supported across frameworks.\nLower Resource Use: No memory of past inputs means less overhead during training and inference."
+  },
+  {
+    "input": "Recurrent Neural Networks",
+    "output": "Sequential Nature: RNNs process data step-by-step, this limits parallelism and slows down training.\nHarder to Train: Training usesBackpropagation Through Time (BPTT)which can be unstable and slower.\nCaptures Temporal Patterns: They are suited for sequential data but require careful tuning to learn long-term dependencies.\nHigher Compute Demand: Maintaining hidden states and learning over time steps makes RNNs more resource-intensive."
+  },
+  {
+    "input": "Limitations and Challenges",
+    "output": "Both architectures are fundamental building blocks in modern deep learning, often combined in approaches to use their respective strengths. Using these basics provides a solid foundation for exploring more advanced neural network architectures translation, speech-to-text conversion and robotic control."
+  }
+]
