@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Steps to Deploy a Machine Learning Model Using Streamlit",
+    "output": "Let’s train a machine learning model to classify Iris flowers and then deploy it with Streamlit. Firstly we need to install the following:"
+  },
+  {
+    "input": "1. Importing Libraries and Dataset",
+    "output": "We'll importpandasandscikit learnlibrary and then import Iris dataset which contains data on three species of Iris flowers. Each entry includes measurements of the flowers' sepal length, sepal width, petal length and petal width. You can download the dataset from here.Iris Dataset"
+  },
+  {
+    "input": "2. Training the Model",
+    "output": "We’ll start by loading and preparing the dataset. Since the goal of this article is deployment we will do only basic preprocessing but feel free to make changes. We will use aRandom Forest Classifierfor this example but other classifiers like Logistic Regression or Support Vector Machine can also be used.\nWe get an accuracy of95.55%which is pretty good. Now in order to use this model to predict other unknown data, we need to save it. We can save it by using pickle which is used for serializing and deserializing a Python object structure."
+  },
+  {
+    "input": "3. Saving the Model",
+    "output": "Now that the model is trained we need to save it so it can be used for predictions later. We can use thepicklelibrary to serialize the model and save it as .pkl file.\nThis will create aclassifier.pklin your working directory which contains the trained model."
+  },
+  {
+    "input": "4. Deploying with Streamlit",
+    "output": "Next let’s deploy the model using Streamlit. Create a new Python file likeapp.pyand add the following code\nThis code creates a simple web app where users can input flower measurements and the model will predict the Iris species based on those values"
+  },
+  {
+    "input": "5. Running the App",
+    "output": "To run the app open your terminal and type:\nThis will launch the Streamlit app in your browser. You can enter flower measurements, click \"Predict,\" and the model will output the predicted species\nOutput:\nDeploying machine learning models with Streamlit is fast, simple and perfect for creating interactive applications. With just a few lines of code you can turn your machine learning model into a user-friendly web application.For more detail refer to:\nDiabetes Prediction Machine Learning Project Using Python Streamlit\nData Science Apps Using Streamlit\nHow to use PyGWalker with Streamlit in Python"
+  }
+]
