@@ -1,0 +1,58 @@
+[
+  {
+    "input": "Architecture of DAE",
+    "output": "The denoising autoencoder (DAE) architecture resembles a standardautoencoderand consists of two main components:"
+  },
+  {
+    "input": "Encoder",
+    "output": "A neural network (one or more layers) that transforms noisy input data into a lower-dimensional encoding.\nNoise can be introduced by adding Gaussian noise or randomly masking/missing some inputs."
+  },
+  {
+    "input": "Decoder",
+    "output": "A neural network (one or more layers) that reconstructs the original data from the encoding.\nThe loss is calculated between the decoder’s output and the original clean input, not the noisy one."
+  },
+  {
+    "input": "Step-by-Step Implementation of DAE",
+    "output": "Let's implement DAE in PyTorch for MNIST dataset."
+  },
+  {
+    "input": "Step 1: Import Libraries",
+    "output": "Lets import the necessary libraries,\ntorch: CorePyTorchlibrary for deep learning.\ntorch.utils.data: For handling custom datasets and loaders.\ntorch.nn: Provides modules for buildingneural networks, such as layers and activations.\ntorch.optim: Contains optimization algorithms, likeAdam.\ntorchvision.datasets: Includes popular computer vision datasets, such asMNIST.\ntorchvision.transforms: For preprocessing transforms (e.g., normalization, tensor conversion).\nmatplotlib.pyplot:Matplotlib pyplotis used for data and result visualization.\nSet up the device to use GPU if available otherwise CPU."
+  },
+  {
+    "input": "Step 2: Load the Dataset and Define Dataloader",
+    "output": "We prepare the MNIST handwritten digits dataset:\ntransforms.Compose: Creates a pipeline of transformations.\nToTensor(): Converts PIL Images or numpy arrays to PyTorch tensors.\nNormalize(0, 1): (For MNIST, actually not changing the scale, but prepares the tensor for potential mean/variance normalization.)\ndatasets.MNIST: Downloads and loads the MNIST dataset for training and testing.\nDataLoader: Enables efficient batch processing and optional shuffling during training."
+  },
+  {
+    "input": "Step 3: Define Denoising Autoencoder(DAE) Model",
+    "output": "We design a neural network with an encoder and decoder:\nEncoder: Three fully connected layers reduce the input (flattened image) from 784 dimensions down to 128.\nDecoder: Three layers expand the compressed encoding back to 784.\nnn.Linear:A fully connected neural network layer that applies a linear transformation to input data.\nnn.ReLU:The Rectified Linear Unit activation function that replaces negative values with zero.\nnn.Sigmoid:The Sigmoid activation function that squashes values to the range (0, 1).\nself.relu:An instance of nn.ReLU used to apply the ReLU activation function to layer outputs.\nself.sigmoid:An instance of nn.Sigmoid used to apply the Sigmoid activation to layer outputs."
+  },
+  {
+    "input": "Step 4: Define the Training Function",
+    "output": "We define the Training function in which:\nFor each batch, addGaussian noiseto simulate corruption.\nForward the noisy batch through the model.\nCompute the loss usingMean Squared Errorbetween the output and original.\nPerform backpropagation and optimize weights.\nPrint progress and average epoch loss."
+  },
+  {
+    "input": "Step 5: Initialize Model, Optimizer and Loss Function",
+    "output": "We need to initialize the model along with the optimizer and Loss Function,\nInstantiate the DAE model and move to the selected device.\nUseAdam optimizerwith learning rate 0.01.\nSet reconstruction loss toMean Squared Error."
+  },
+  {
+    "input": "Step 6: Train the Model",
+    "output": "Loop over the dataset for the given number ofepochs, invoking the training function.\nOutput:"
+  },
+  {
+    "input": "Step 7: Evaluate and Visualize the Model",
+    "output": "We evaluate the predictions of the model and also visualize the results,\nTake a small batch from the test set.\nAdd noise and reconstruct using the trained autoencoder.\nPlot noisy, reconstructed and original images side by side.\nOutput:\nRow 1: Noisy images (input)Row 2: Denoised outputs (autoencoder reconstructions)Row 3: Original images (target, uncorrupted)"
+  },
+  {
+    "input": "Applications of DAE",
+    "output": "Image Denoising: Removing noise from images to restore clear, high-quality visuals.\nData Imputation: Filling in missing values or reconstructing incomplete data entries.\nFeature Extraction: Learning robust features that improve performance for tasks like classification and clustering.\nAnomaly Detection: Identifying outliers by measuring reconstruction errors on new data.\nSignal and Audio Denoising: Cleaning noisy sensor or audio signals, such as in speech or biomedical recordings."
+  },
+  {
+    "input": "Advantages",
+    "output": "Help models learn robust, meaningful features that are less sensitive to noise or missing data.\nReduce the risk of merely copying input data (identity mapping), especially when compared to basic autoencoders.\nImprove performance on tasks such as image denoising, data imputation and anomaly detection by reconstructing clean signals from corrupted inputs.\nEnhance the generalizability of learned representations, making models more useful for downstream tasks."
+  },
+  {
+    "input": "Limitations",
+    "output": "May require careful tuning of the type and level of noise added to the inputs for optimal performance.\nCan be less effective if the noise model used during training does not match the type of corruption seen in real-world data.\nHigh computational cost, especially with large datasets or deep architectures.\nLike other unsupervised methods, provide no guarantees that learned features will be directly useful for specific downstream supervised tasks."
+  }
+]
