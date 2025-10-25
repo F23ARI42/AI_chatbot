@@ -1,0 +1,22 @@
+[
+  {
+    "input": "Dependency Parsing",
+    "output": "Dependency parsing is anatural language processingtechnique used to understand the grammatical structure of a sentence by showing how words are connected to each other.\nInstead of focusing on phrases like in phrase structure parsing, dependency parsing builds direct links between individual words. Each word depends on another word that acts as its head.\nFor example, in the sentence “She eats an apple,” the main verb “eats” is the root, “She” depends on “eats” as its subject and “apple” depends on “eats” as its object.\nThis creates a clear map of relationships that makes it easier for machines to understand meaning and extract who is doing what to whom.\nDependency parsing is very useful for tasks like information extraction, question answering and building chatbots because it helps the computer see the real roles words play in a sentence."
+  },
+  {
+    "input": "Step 1: Install Necessary Libraries",
+    "output": "This step installs theSpaCylibrary and downloads the small English language model en_core_web_sm.\nIt prepares your environment to perform NLP tasks like tokenization, parsing and named entity recognition."
+  },
+  {
+    "input": "Step 2: Load and Preview Dataset",
+    "output": "This step reads the CSV file into a pandas DataFrame selecting only the text column which contains the tweets.\nHere we have used Sentiment140 dataset with 1.6 million tweets you can download it from Kaggle.\nIt then displays the first few rows to verify that the data has loaded correctly.\nOutput:"
+  },
+  {
+    "input": "Step 3: Tokenize and Parse Text",
+    "output": "This step loads the SpaCy NLP pipeline and processes the first five tweets.\nFor each tweet it tokenizes the text and prints each token along with its head word, dependency relation and part of speech tag to understand the grammatical structure.\nOutput:"
+  },
+  {
+    "input": "Step 4: Extract and Store Dependencies",
+    "output": "This step processes the first five tweets, extracts dependency information for each token and stores the results in a list.\nIt then creates a new DataFrame with the original text and its corresponding dependencies for easy inspection and analysis.\nOutput:"
+  }
+]
