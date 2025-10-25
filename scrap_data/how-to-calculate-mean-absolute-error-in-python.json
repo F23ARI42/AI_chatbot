@@ -1,0 +1,34 @@
+[
+  {
+    "input": "What is Mean Absolute Error (MAE)?",
+    "output": "Mean Absolute Error calculates the average difference between the calculated values and actual values. It is also known as scale-dependent accuracy as it calculates error in observations taken on the same scale used to predict the accuracy of the machine learning model.\nThe Mathematical Formula for MAE is:\nWhere,\ny_i:Actual value for the ith observation\n\\hat{y}: Calculated value for the ithobservation\nn: Total number of observations"
+  },
+  {
+    "input": "Method 1: Manual Calculation of MAE",
+    "output": "Mean Absolute Error (MAE) is calculated by taking the summation of the absolute difference between the actual and calculated values of each observation over the entire array and then dividing the sum obtained by the number of observations in the array.\nExample:\nOutput:"
+  },
+  {
+    "input": "Method 2: Calculating MAE Usingsklearn.metrics",
+    "output": "Thesklearn.metricsmodule in Python provides various tools to evaluate the performance of machine learning models. One of the methods available ismean_absolute_error(), which simplifies the calculation of MAE by handling all the necessary steps internally. This method ensures accuracy and efficiency, especially when working with large datasets.\nSyntax:\nWhere,\nactual: Array of actual values as first argument\ncalculated: Array of predicted/calculated values as second argument\nIt will return the mean absolute error of the given arrays.\nExample:\nOutput:"
+  },
+  {
+    "input": "Why to Choose Mean Absolute Error?",
+    "output": "Interpretability: Since MAE is in the same unit as the target variable, it's easy to understand. For instance, an MAE of 5 in a house price prediction model indicates an average error of $5,000.\nRobustness to Outliers: Unlike metrics that square the errors (like MSE), MAE doesn't disproportionately penalize larger errors, making it less sensitive to outliers.\nSimplicity: MAE provides a straightforward measure of average error, facilitating quick assessments of model performance."
+  },
+  {
+    "input": "MAE vs. Other Error Metrics",
+    "output": "Understanding how MAE compares to other error metrics is crucial for selecting the appropriate evaluation measure."
+  },
+  {
+    "input": "Mean Squared Error (MSE)",
+    "output": "Squares the errors, penalizing larger errors more heavily.\nMore sensitive to outliers compared to MAE.\nUseful when large errors are particularly undesirable."
+  },
+  {
+    "input": "Root Mean Squared Error (RMSE)",
+    "output": "Provides error in the same units as the target variable.\nLike MSE, it penalizes larger errors more than MAE."
+  },
+  {
+    "input": "Mean Absolute Percentage Error (MAPE)",
+    "output": "Expresses error as a percentage, making it scale-independent.\nCan be problematic when actual values are close to zero.\nComparison Table:"
+  }
+]
