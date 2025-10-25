@@ -1,0 +1,46 @@
+[
+  {
+    "input": "Step 1: Importing Libraries and Setting Up",
+    "output": "To build our model, we first importPyTorchlibraries and prepare the environment for visualization and data handling.\ntorch (PyTorch):Enables building, training and running deep learning models using tensors.\ntorchvision:Supplies standard vision datasets, image transforms and visualization utilities.\nmatplotlib.pyplot:Plots images, graphs and visual representations of data and results.\nnumpy:Provides efficient array operations and mathematical utilities for data processing.\nssl:Adjusts security settings to bypass certificate errors during dataset downloads.\nSet up global plot parameters and SSL context to prevent download errors.\nOutput:"
+  },
+  {
+    "input": "Step 2: Defining Data Transformations and Loading CIFAR-10",
+    "output": "We define a normalization transformation, scaling pixel values to have mean 0.5 and standard deviation 0.5 per channel. We then download and load the CIFAR-10 dataset for both training and testing, applying the transform."
+  },
+  {
+    "input": "Step 3: Creating Data Loaders",
+    "output": "Set batch size to 128 for efficiency.\nCreate data loaders for both train and test sets to manage batching and easy iteration."
+  },
+  {
+    "input": "Step 4: Visualizing Sample Images",
+    "output": "Obtain a batch of images and labels from the train loader.\nDisplay a grid of 25 training images for visual confirmation of the data pipeline.\nOutput:"
+  },
+  {
+    "input": "Step 5: Analyzing Dataset Class Distribution",
+    "output": "Collect all class labels from training data.\nCount occurrences for every class and visualize with a bar chart, revealing class balance.\nOutput:"
+  },
+  {
+    "input": "Step 6: Building the CNN Architecture",
+    "output": "Build a convolutional neural network (CNN) using PyTorch modules:\nThree sets of convolution, activation (ReLU) and max pooling layers.\nFlatten the features and add two fully connected layers.\nOutput layer predicts class scores for 10 classes."
+  },
+  {
+    "input": "Step 7: Configuring the Training Process",
+    "output": "Select computation device: GPU if available, otherwise CPU.\nInstantiate the model and move it to the selected device.\nNumber of training epochs (50)"
+  },
+  {
+    "input": "Step 8: Training the Model",
+    "output": "Train the CNN through all epochs.\nSet model to training mode.\nFor each batch, move data to device, compute predictions and loss, backpropagate and update parameters.\nAccumulate and record mean loss per epoch.\nOutput:"
+  },
+  {
+    "input": "Step 9: Plotting Training Loss",
+    "output": "Visualizing the learning curve by plotting average loss against every epoch.\nOutput:"
+  },
+  {
+    "input": "Step 10: Evaluating Model Accuracy",
+    "output": "Switch model to evaluation mode and disable gradient calculations.\nFor each test batch, compute predictions and accumulate number of correct classifications.\nCalculate and print total accuracy as percentage of correctly classified test images."
+  },
+  {
+    "input": "Step 11: Visualizing Model Predictions",
+    "output": "From a test batch, select a few images and gather their actual and predicted class names.\nShow these images using a grid, with a title indicating both actual and predicted labels.\nOutput:\nWe can see that our model is working fine and making right predictions."
+  }
+]
