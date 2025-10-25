@@ -1,0 +1,62 @@
+[
+  {
+    "input": "Understanding FastText Architecture",
+    "output": "FastText extends theSkip-gram and CBOWmodels by representing words as bags of character n-grams rather than atomic units. This fundamental shift allows the model to generate embeddings for previously unseen words and capture morphological relationships between related terms."
+  },
+  {
+    "input": "The Subword Approach",
+    "output": "Traditional word embedding models treat each word as an indivisible token. FastText breaks words into character n-grams, enabling it to understand word structure and meaning at a granular level.\nConsider the word \"running\":\n3-grams:<ru, run, unn, nni, nin, ing, ng>\n4-grams:<run, runn, unni, nnin, ning, ing>\n5-grams:<runn, runni, unnin, nning, ning>\nThe angle brackets indicate word boundaries, helping the model distinguish between subwords that appear at different positions."
+  },
+  {
+    "input": "Hierarchical Softmax Optimization",
+    "output": "FastText employs hierarchical softmax instead of standardsoftmaxfor computational efficiency. Rather than computing probabilities across all vocabulary words, it constructs a binary tree where each leaf represents a word and internal nodes represent probability distributions.\nKey advantages of hierarchical softmax:\nReduces time complexity from O(V) to O(log V) where V is vocabulary size\nUses Huffman coding to optimize frequent word access\nMaintains prediction accuracy while significantly improving training speed"
+  },
+  {
+    "input": "Step 1: Installing and Importing FastText",
+    "output": "Install FastText using pip and import the required libraries:"
+  },
+  {
+    "input": "Step 2: Creating Training Data",
+    "output": "Prepares example sentences related to royalty, exercise and reading.\nWrites each sentence in lowercase into a text file for FastText training.\nOutput:"
+  },
+  {
+    "input": "Step 3: Training a Basic FastText Model",
+    "output": "Trains a skipgram model using FastText on the created text file.\nSaves the trained word vector model to a .bin file.\nOutput:"
+  },
+  {
+    "input": "Step 4: Getting Word Vectors",
+    "output": "Retrieves vector representations of words using the trained model.\nShows vector values for known and out-of-vocabulary (OOV) words.\nOutput:"
+  },
+  {
+    "input": "Step 5: Finding Similar Words",
+    "output": "Uses the model to find top-k words most similar to a given query word.\nDisplays similar words along with their similarity scores.\nOutput:"
+  },
+  {
+    "input": "Step 6: Text Classification Implementation",
+    "output": "Creates labeled movie review data with __label__ prefixes for classification.\nStores the data in movie_reviews.txt.\nOutput:"
+  },
+  {
+    "input": "Step 7: Training Text Classifier",
+    "output": "Trains a FastText supervised model for sentiment classification.\nSaves the trained model to a file named text_classifier.bin.\nOutput:"
+  },
+  {
+    "input": "Step 8: Making Predictions",
+    "output": "Output:"
+  },
+  {
+    "input": "Edge Cases",
+    "output": "Character encoding issues: FastText requires consistent UTF-8 encoding across training and inference data. Mixed encodings can lead to inconsistent subword generation.\nOptimal n-gram range: The choice of minimum and maximum n-gram lengths depends on the target language. For English, 3-6 character n-grams typically work well, while morphologically rich languages may benefit from longer ranges.\nTraining data quality: FastText is sensitive to preprocessing decisions. Inconsistent tokenization or normalization can degrade model quality, particularly for subword-based features."
+  },
+  {
+    "input": "Practical Applications",
+    "output": "FastText excels in scenarios requiring robust of morphological variations and out-of-vocabulary words. It's particularly effective for:\nMultilingual applicationswhere training data may be limited for some languages\nDomain-specific textwith specialized vocabulary not found in general corpora\nReal-time systemsrequiring fast inference and low memory overhead\nText classification taskswhere subword information provides discriminative features\nThe library's combination of efficiency and linguistic sophistication makes it a valuable tool for production NLP systems, especially when dealing with diverse or evolving vocabularies where traditional word-level approaches fall short."
+  },
+  {
+    "input": "Key Advantages",
+    "output": "OOV handling: Generates embeddings for unseen words through subword information\nMorphological awareness: Captures relationships between word variants (run, running, runner)\nComputational efficiency: Fast training and inference through hierarchical softmax\nLanguage flexibility: Works well with morphologically rich languages"
+  },
+  {
+    "input": "Limitations",
+    "output": "Memory overhead: Requires more storage than traditional embeddings due to subword information\nHyperparameter sensitivity: N-gram range (minn, maxn) significantly affects performance\nLimited semantic depth: May not capture complex semantic relationships as well as transformer-based models"
+  }
+]
