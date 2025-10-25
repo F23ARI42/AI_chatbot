@@ -1,0 +1,46 @@
+[
+  {
+    "input": "Table of Content",
+    "output": "1. Self-Driving Rovers on Mars - The Spirit and Opportunity Rovers\n2. Medicine in Space - Exploration Medical Capability (ExMC)\n3. Finding Other Planets in the Universe - Planetary Spectrum Generator\n4. A Robotic Astronaut - The Robonaut\n5. Navigation on the Moon - Deep Learning Planetary Navigation"
+  },
+  {
+    "input": "1. Self-Driving Rovers on Mars - The Spirit and Opportunity Rovers",
+    "output": "Did you think that Tesla, Google, Uber, etc. were the first ones to heavily invest in self-driving cars? Well, think again!!! In fact, NASA created the technology forautonomous drivingfor Mars Rovers almost a decade ago. A Machine Learning navigation and driving system for self-driving Mars rovers known asAutoNavwas actually used in theSpiritandOpportunityrovers which landed on Mars as early as 2004. Another rover launched in 2011,Curiosityalso uses Autonav and it is a rover that is still exploring Mars to date with the mission of finding water and other factors that might make Mars suitable for human exploration in the future! Now you would think that driving on Mars is comparatively easier than driving on the congested roads of Earth. But it’s not so easy! While AutoNav does not have to worry about the rover hitting other vehicles or humans (There is no life found on Mars yet!), the surface of Mars is very rocky so the navigation system has to make sure that the rover does not hit rocks or slippery sand dunes that would trap it permanently.\nAnother application of Machine Learning in the Mars rovers is an algorithm calledAEGIS(Autonomous Exploration for Gathering Increased Science) which identifies Martian rock formations that might be interesting on their own by using Machine Learning This is because the rover cannot send all the pictures of Mars it snaps back on Earth because there is only limited communication possible. So AEGIS decides which pictures might be interesting or important and then the rover sends them back to Earth for the NASA scientists to study."
+  },
+  {
+    "input": "2. Medicine in Space - Exploration Medical Capability (ExMC)",
+    "output": "Now that astronauts are moving further and further into space beyond the Earth's orbit, what will happen if they need medical help? They will obviously not be able to return to Earth for a check-up with a doctor! For this reason, NASA is working on theExploration of Medical Capabilitythat will use Machine Learning to develop healthcare options based on the anticipated future medical needs of the astronauts. These healthcare options will be created by certified doctors and surgeons and they will learn and evolve with time according to the astronaut experiences.\nAll in all, the main aim of the Exploration Medical Capability is that astronauts stay fit and healthy in space (Especially on long and far-away missions). And unlike what comic books tell you about space, some of the common health risks associated with space travel areradiation hazards, harsh environmental challenges, issues due to gravitational changes,etc. In these situations, the astronauts cannot directly contact doctors on Earth as there is a time lag and so the ExMC uses machine learning to provide self-reliant autonomous medical care with the help of remote medical technologies."
+  },
+  {
+    "input": "3. Finding Other Planets in the Universe - Planetary Spectrum Generator",
+    "output": "I am sure I don't need to tell you that the universe is huge! NASA believes that there are around100 billionstars in the galaxy and out of them about40 billionmay have life. This is not science fiction, NASA actually believes we may find aliens one day! But for discovering aliens, NASA first needs to discover more and more new planets in different solar systems. Once theseexoplanetsare discovered, then NASA measures the atmospheric spectrum of these planets to find if there is any possibility of life. While these steps are complicated enough, the problem is that there is no real data available for experimentation! So NASA scientists just generate the required data and that's where Machine Learning comes in. ThePlanetary Spectrum Generatoris a tool that NASA uses to create3-D orbitsandatmospheric propertiesof the exoplanets they find. To create a working model for the solar system, scientists uselinear regressionas well asconvolutional neural networks. Then further fine-tuning is conducted on the model before it is ready for training.\nThe above image demonstrates the results generated for an exoplanet that demonstrate the amount of water and methane in the atmosphere. As you can see in the CH4 and H2O graph, the black lines denote the predictions that were made using Machine Learning and the red lines indicate the actual findings. As you can see the trained ML model is quite accurate in this situation!"
+  },
+  {
+    "input": "4. A Robotic Astronaut - The Robonaut",
+    "output": "Did you think that astronauts could only be humans?!! Well, normally you would be right but NASA has developed arobotic astronautnow. Science fiction is finally coming true! TheRobonautwas primarily developed to work alongside the astronauts in space and help them in completing tasks that were quite dangerous for humans. This was necessary as it would increase NASA's capacity for research and discovery in space which would, in turn, allow us to learn more about the solar system and all of this has become easy with machine learning.\n\nAs you can see from this image, Robonaut is now an essential helper in space! To achieve this, Robonaut basically usesMachine Learningto \"think\" for itself. So the scientists or astronauts can give tasks to the Robonaut and figures out how to perform them. In general, Robonaut also has many advantages over normal humans likeadvanced sensors, insanely high speeds, compact design,and muchhigher flexibility. There is a lot of advanced technology that was used to develop Robonaut which includes touch sensors at its fingertips, a full neck travel range, a high-resolution camera, Infra-Red systems, advanced finger and thumb movement, etc."
+  },
+  {
+    "input": "5. Navigation on the Moon - Deep Learning Planetary Navigation",
+    "output": "What would happen if you got lost on Earth? Well, nothing much! You could just use GPS to reach your destination without a problem. But what if you got lost on the Moon?! Well, you’d better hope someone finds you because GPS doesn't work on the moon! Or at least it didn’t until now!!! Currently, theNASA Frontier Development Labis working on a project to provide navigation on the surface of celestial bodies including the moon! This project basically aims to provide GPS even on the lunar surface, just without using multiple very expensive satellites! And that is not an easy task keeping in mind the rocky and barren lunar surface:\n\nThis is done by feeding a Machine Learning System lots of images of the moon(2.4 million in this case which luckily NASA already has!)and then creating a virtual version of the moon using neural networks. Then if you are lost on the Moon, you can take images of your surroundings and the Machine Learning System will be able to triangulate your location on the moon by comparing your images with the already created image database of the lunar surface that constitutes the virtual moon. While this technique isn't perfect (yet!), it is still much better than anything already available and can be used on any planetary surface, not just the moon. And NASA is already hopeful that it can be used on Mars next just in case anybody gets lost on the red planet!"
+  },
+  {
+    "input": "1. Image and Data Analysis:",
+    "output": "NASA uses machine learning to analyze large amounts of data and images collected by space missions. For example, NASA uses machine learning algorithms to analyze images of Mars to identify areas that may contain signs of past or present microbial life."
+  },
+  {
+    "input": "2. Spacecraft Autonomy:",
+    "output": "Machine learning algorithms help spacecraft operate autonomously and make decisions without human intervention. For example, NASA’s Mars rover uses machine learning algorithms to analyze the terrain and decide the best path to take."
+  },
+  {
+    "input": "3. Predictive Maintenance",
+    "output": "NASA uses machine learning to predict when components of spacecraft or satellites may fail, allowing for preventative maintenance to be conducted before any issues arise."
+  },
+  {
+    "input": "4. Earth Observation",
+    "output": "NASA uses machine learning to analyze data from satellites and sensors to monitor and predict weather patterns, natural disasters, and climate change."
+  },
+  {
+    "input": "5. Space Mission Planning",
+    "output": "NASA uses machine learning to plan space missions, such as determining the best launch windows and trajectories.\nOverall, machine learning plays an essential role in helping NASA to analyze large amounts of data and automate tasks, enabling space exploration and scientific discovery"
+  }
+]
