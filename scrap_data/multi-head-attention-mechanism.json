@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Understanding Attention Mechanism",
+    "output": "Before diving into multi-head attention, let’s first understand the standardself-attention mechanism, also known asscaled dot-product attention.\nGiven a set of input vectors, self-attention computes attention scores to determine how much focus each element in the sequence should have on the others. This is done using three key matrices:\nQuery (Q)– Represents the current word's relationship with others.\nKey (K)– Represents the words that are being compared against.\nValue (V)– Contains the actual word representations.\nThe self-attention is computed as:"
+  },
+  {
+    "input": "What is Multi-Head Attention?",
+    "output": "Multi-head attention extends self-attention bysplitting the input into multiple heads, enabling the model to capture diverse relationships and patterns.\nInstead of using a single set ofQ, K, Vmatrices, the input embeddings are projected into multiple sets (heads), each with its ownQ, K, V:\nMathematically, multi-head attention is expressed as:\nwhere:\nW^Ois a final weight matrix to project the concatenated output back into the model’s required dimensions."
+  },
+  {
+    "input": "Why Use Multiple Attention Heads?",
+    "output": "Multi-head attention provides several advantages:\nCaptures different relationships: Different heads attend to different aspects of the input.\nImproves learning efficiency: By operating in parallel, multiple heads allow for better learning of dependencies.\nEnhances robustness: The model doesn’t rely on a single attention pattern, reducing overfitting."
+  },
+  {
+    "input": "Multi-Head Attention in Transformers",
+    "output": "Multi-head attention is used in several places within aTransformer model:\n1. Encoder Self-Attention: This allows the encoder to learn contextual relationships within the input sequence. Each word (or token) in the input attends to every other word, helping the model to understand dependencies regardless of their distance in the sequence.\n2. Decoder Self-Attention: In the decoder, self-attention ensures that each position in the output sequence can attend only to previous positions (with a masking mechanism), preventing the decoder from “seeing” future tokens during training. This helps in generating sequences in an autoregressive manner while focusing on relevant parts of what has been generated so far.\n3. Encoder-Decoder Attention: This layer lets the decoder attend over the encoder's output. It helps the decoder to align and focus on the appropriate input tokens when generating each output token, enabling sequence-to-sequence tasks like translation."
+  },
+  {
+    "input": "Step 1: Imports",
+    "output": "Importing all necessary libraries for tensor manipulations and neural network building."
+  },
+  {
+    "input": "Step 2: Scaled Dot-Product Attention Function",
+    "output": "This is thecore of self-attention:\n\\mathrm{Attention}(Q, K, V) = \\mathrm{softmax}\\left( \\frac{Q K^\\top}{\\sqrt{d_k}} \\right) V\nQ, K, V are queries, keys, values derived from the same source in self-attention.\nIt results in values i.e the weighted sum for each position and head.\nSoftmax ensures the attention weights sum to 1.\nIf masking, irrelevant positions (like future tokens or padding) get large negative values in logits, so after softmax attention there is 0."
+  },
+  {
+    "input": "Step 3: Multi-Head Attention Class",
+    "output": "Every step mimics the original Transformer:\nProject to QKV,\nReshape for multiple heads,\nSplit into Q, K, V,\nCompute attention,\nConcatenate heads,\nLinear output."
+  },
+  {
+    "input": "4. Example: Run With Printouts",
+    "output": "Output"
+  },
+  {
+    "input": "Applications of Multi-Head Attention",
+    "output": "Multi-head attention is widely used in various domains:\n1.Natural Language Processing(NLP)\nMachine translation (e.g., Google Translate)\nText summarization\nChatbots and conversational AI\n2.Computer Vision: Vision Transformers (ViTs) for image recognition\n3.Speech Processing: Speech-to-text models (e.g., Whisper by OpenAI)\nThemulti-head attention mechanismis one of the most powerful innovations in deep learning. By attending to multiple aspects of the input sequence in parallel, it enablesbetter representation learning,enhanced contextual understandingandimproved performanceacross NLP, vision and speech tasks."
+  }
+]
