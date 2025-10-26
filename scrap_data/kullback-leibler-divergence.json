@@ -1,0 +1,54 @@
+[
+  {
+    "input": "Mathematical Implementation",
+    "output": "Mathematical Implementation of KL Divergence for discrete and continuous distributions:\n1. Discrete Distributions:\nFor two discrete probability distributions P = {p1, p2, ..., pn} and {q1, q2, ...., qn} over the same set:\nStep by step:\nFor each outcome i, compute pilog(pi/ qi).\nSum all these terms to get the total KL divergence.\n2. Continuous Distributions:\nFor continuous probability density functions p(x) and q(x):\nIntegration replaces summation for continuous variables.\nGives the expected extra information in nats or bits required when assuming q(x) instead of p(x)."
+  },
+  {
+    "input": "Properties",
+    "output": "Properties of KL Divergence are:\n1. Non Negativity:KL divergence is always non negative and equals zero if and only if P=Q almost everywhere.\nD_{\\mathrm{KL}}(P \\parallel Q) \\ge 0\n2. Asymmetry:KL divergence is not symmetric so it is not a true distance metric.\nD_{\\mathrm{KL}}(P \\parallel Q) \\neq D_{\\mathrm{KL}}(Q \\parallel P)\n3. Additivity for Independent Distributions:\nIf X and Y are independent:\nD_{\\mathrm{KL}}(P_{X,Y} \\parallel Q_{X,Y}) = D_{\\mathrm{KL}}(P_X \\parallel Q_X) + D_{\\mathrm{KL}}(P_Y \\parallel Q_Y)\n4. Invariance under Parameter Transformations:KL divergence remains the same under bijective transformations of the random variable.\n5. Expectation Form:It can be interpreted as the expected logarithmic difference between probabilities under P and Q.\nD_{\\mathrm{KL}}(P \\parallel Q) = \\mathbb{E}_{x \\sim P} \\Big[ \\log \\frac{P(x)}{Q(x)} \\Big]"
+  },
+  {
+    "input": "Implementation",
+    "output": "Suppose there are two boxes that contain 4 types of balls (green, blue, red, yellow). A ball is drawn from the box randomly having the given probabilities. Our task is to calculate the difference of distributions of two boxes i.e KL divergence."
+  },
+  {
+    "input": "Step 1: Probability Distributions",
+    "output": "Defining the probability distributions:\nbox_1 and box_2 are two discrete probability distributions.\nEach value represents the probability of picking a colored ball from a box: green, blue, red, yellow.\nFor example, in box_1, the probability of picking a green ball is 0.25."
+  },
+  {
+    "input": "Step 2: Import Libraries",
+    "output": "Importing libraries likeNumpyand rel_entr fromScipy."
+  },
+  {
+    "input": "Step 3: Custom KL Divergence Function",
+    "output": "Defining a custom KL divergence function:\n1. Formula used:\nD_{\\mathrm{KL}}(P \\parallel Q) = \\sum_i P(i) \\log \\frac{P(i)}{Q(i)}\n2. Step by step:\nLoop through each probability in distributions a and b.\nCompute the term: a[i]⋅log(a[i]/b[i]).\nSum all these terms."
+  },
+  {
+    "input": "Step 4: Calculate KL Divergence Manually",
+    "output": "Calculating KL divergence manually:\nkl_divergence(box_1, box_2) calculatesD_{\\mathrm{KL}}(\\text{box}_1 \\parallel \\text{box}_2)\nkl_divergence(box_2, box_1) calculatesD_{\\mathrm{KL}}(\\text{box}_2 \\parallel \\text{box}_1)\nKL divergence is asymmetric so the two results are usually different."
+  },
+  {
+    "input": "Step 5: KL Divergence of a Distribution with Itself",
+    "output": "Here,D_{\\mathrm{KL}}(P \\parallel P) = 0for any distribution P.\nThis is because the distribution is identical so there is no divergence.\nOutput:"
+  },
+  {
+    "input": "Step 6: Use Scipy'srel_entrFunction",
+    "output": "Using Scipy's module to compute KL Divergence.\nrel_entr(a, b) computes the element wise KL divergence term:\n\\text{rel\\_entr}(a_i, b_i) = a_i \\log \\frac{a_i}{b_i}\nsum(rel_entr(box_1, box_2)) sums all the terms to get the total KL divergence.\nUsing rel_entr is more efficient and avoids manually looping over the array.\nResults from rel_entr should match the manual calculation.\nOutput:"
+  },
+  {
+    "input": "Applications",
+    "output": "Some of the applications of KL Divergence are:"
+  },
+  {
+    "input": "Use of KL Divergence in AI",
+    "output": "Some specific use cases of KL Divergence in AI are:"
+  },
+  {
+    "input": "KL Divergence vs Other Distance Measures",
+    "output": "Comparison table of KL Divergence with Other Distance Measures:"
+  },
+  {
+    "input": "Limitations",
+    "output": "Some of the limitations of KL Divergence are:"
+  }
+]
