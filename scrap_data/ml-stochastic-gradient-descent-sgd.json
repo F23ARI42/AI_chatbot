@@ -1,0 +1,42 @@
+[
+  {
+    "input": "Working of Stochastic Gradient Descent",
+    "output": "In traditional gradient descent, the gradients are computed based on the entire dataset which can be computationally expensive for large datasets.\nIn Stochastic Gradient Descent, the gradient is calculated for each training example (or a small subset of training examples) rather than the entire dataset.\nStochastic Gradient Descent update rule is:\nWhere:\nx_i​ andy_i​ represent the features and target of the i-th training example.\nThe gradient\\nabla_\\theta J(\\theta; x_i, y_i)is now calculated for a single data point or a small batch.\nThe key difference from traditional gradient descent is that, in SGD, the parameter updates are made based on a single data point, not the entire dataset. The random selection of data points introduces stochasticity which can be both an advantage and a challenge."
+  },
+  {
+    "input": "1. Generating the Data",
+    "output": "In this step, we generate synthetic data for the linear regression problem. The data consists of feature X and the target y where the relationship is linear, i.e., y = 4 + 3 * X + noise.\nX is a random array of 100 samples between 0 and 2.\ny is the target, calculated using a linear equation with a little random noise to make it more realistic.\nFor alinear regressionwith one feature, the model is described by the equation:\nWhere:\n\\theta_0​ is the intercept (the bias term),\n\\theta_1is the slope or coefficient associated with the input featureX."
+  },
+  {
+    "input": "2. Defining the SGD Function",
+    "output": "Here we define the core function for Stochastic Gradient Descent (SGD). The function takes the input data X and y. It initializes the model parameters, performs stochastic updates for a specified number of epochs and records the cost at each step.\ntheta (\\theta) is the parameter vector (intercept and slope) initialized randomly.\nX_bias is the augmentedXwith a column of ones added for the bias term (intercept).\nIn each epoch, the data is shuffled and for each mini-batch (or single sample), the gradient is calculated and the parameters are updated. The cost is calculated as the mean squared error and the history of the cost is recorded to monitor convergence."
+  },
+  {
+    "input": "3: Train the Model Using SGD",
+    "output": "In this step, we call the sgd() function to train the model. We specify the learning rate, number of epochs and batch size for SGD.\nOutput:"
+  },
+  {
+    "input": "4. Visualizing the Cost Function",
+    "output": "After training, we visualize how the cost function evolves over epochs. This helps us understand if the algorithm is converging properly.\nOutput:"
+  },
+  {
+    "input": "5. Plotting the Data and Regression Line",
+    "output": "We will visualize the data points and the fitted regression line after training. We plot the data points as blue dots and the predicted line (from the final\\theta) as a red line.\nOutput:"
+  },
+  {
+    "input": "6. Printing the Final Model Parameters",
+    "output": "After training, we print the final parameters of the model which include the slope and intercept. These values are the result of optimizing the model using SGD.\nOutput:\nThe final parameters returned by the model are:\nThen the fitted linear regression model will be:\nThis means:\nWhen X=0, y=4.3(the intercept or bias term).\nFor each unit increase inX, ywill increase by 3.4 units (the slope or coefficient)."
+  },
+  {
+    "input": "Applications",
+    "output": "SGD and its variants are widely used across various domains of machine learning:\nDeep Learning: In training deep neural networks, SGD is the default optimizer due to its efficiency with large datasets and its ability to work with large models.\nNatural Language Processing (NLP): Models like Word2Vec and transformers are trained using SGD variants to optimize large models on vast text corpora.\nComputer Vision: For tasks such as image classification, object detection and segmentation, SGD has been fundamental in training convolutional neural networks (CNNs).\nReinforcement Learning: SGD is also used to optimize the parameters of models used in reinforcement learning, such as deep Q-networks (DQNs) and policy gradient methods."
+  },
+  {
+    "input": "Advantages",
+    "output": "Efficiency: Because it uses only one or a few data points to calculate the gradient, SGD can be much faster, especially for large datasets. Each step requires fewer computations, leading to quicker convergence.\nMemory Efficiency: Since it does not require storing the entire dataset in memory for each iteration, SGD can handle much larger datasets than traditional gradient descent.\nEscaping Local Minima: The noisy updates in SGD, caused by the stochastic nature of the algorithm, can help the model escape local minima or saddle points, potentially leading to better solutions in non-convex optimization problems.\nOnline Learning: SGD is well-suited for online learning where the model is trained incrementally as new data comes in, rather than on a static dataset."
+  },
+  {
+    "input": "Challenges",
+    "output": "Noisy Convergence: Since the gradient is estimated based on a single data point (or a small batch), the updates can be noisy, causing the cost function to fluctuate rather than steadily decrease. This makes convergence slower and more erratic than in batch gradient descent.\nLearning Rate Tuning: SGD is highly sensitive to the choice of learning rate. A learning rate that is too large may cause the algorithm to diverge while one that is too small can slow down convergence. Adaptive methods like Adam and RMSprop address this by adjusting the learning rate dynamically during training.\nLong Training Times: While each individual update is fast, the convergence might take a longer time overall since the steps are more erratic compared to batch gradient descent."
+  }
+]
