@@ -1,0 +1,58 @@
+[
+  {
+    "input": "Introduction to LeNet-5",
+    "output": "LeNet-5 is aconvolutional neural network (CNN)architecture that introduced several key features and innovations that have become standard in modern deep learning. It demonstrated the effectiveness of CNNs for image recognition tasks and introduced key concepts such as convolution, pooling, and hierarchical feature extraction that underpin modern deep learning models.\nOriginally designed forhandwritten digit recognition, the principles behind LeNet-5 have been extended to various applications, including:\nHandwriting recognition in postal services and banking.\nObject and face recognition in images and videos.\nAutonomous driving systems for recognizing and interpreting road signs."
+  },
+  {
+    "input": "Architecture of LeNet-5",
+    "output": "The architecture of LeNet 5 contains 7 layers excluding the input layer. Here is a detailed breakdown of the LeNet-5 architecture:"
+  },
+  {
+    "input": "1. Input Layer",
+    "output": "Input Size: 32x32 pixels.\nThe input is larger than the largest character in the database, which is at most 20x20 pixels, centered in a 28x28 field. The larger input size ensures that distinctive features such as stroke endpoints or corners can appear in the center of the receptive field of the highest-level feature detectors.\nNormalization: Input pixel values are normalized such that the background (white) corresponds to a value of 0, and the foreground (black) corresponds to a value of 1. This normalization makes the mean input roughly 0 and the variance roughly 1, which accelerates the learning process."
+  },
+  {
+    "input": "2.Layer C1 (Convolutional Layer)",
+    "output": "Feature Maps: 6 feature maps.\nConnections: Each unit is connected to a 5x5 neighborhood in the input, producing 28x28 feature maps to prevent boundary effects.\nParameters: 156 trainable parameters and 117,600 connections."
+  },
+  {
+    "input": "3. Layer S2 (Subsampling Layer)",
+    "output": "Feature Maps: 6 feature maps.\nSize: 14x14 (each unit connected to a 2x2 neighborhood in C1).\nOperation: Each unit adds four inputs, multiplies by a trainable coefficient, adds a bias, and applies a sigmoid function.\nParameters: 12 trainable parameters and 5,880 connections."
+  },
+  {
+    "input": "4.Layer C3 (Convolutional Layer)",
+    "output": "Feature Maps: 16 feature maps.\nConnections: Each unit is connected to several 5x5 neighborhoods at identical locations in a subset of S2’s feature maps.\nParameters and Connections: Connections are partially connected to force feature maps to learn different features, with 1,516 trainable parameters and 151,600 connections."
+  },
+  {
+    "input": "5.Layer S4 (Subsampling Layer)",
+    "output": "Feature Maps: 16 feature maps.\nSize: 7x7 (each unit connected to a 2x2 neighborhood in C3).\nParameters: 32 trainable parameters and 2,744 connections."
+  },
+  {
+    "input": "6.Layer C5 (Convolutional Layer)",
+    "output": "Feature Maps: 120 feature maps.\nSize: 1x1 (each unit connected to a 5x5 neighborhood on all 16 of S4’s feature maps, effectively fully connected due to input size).\nParameters: 48,000 trainable parameters and 48,000 connections."
+  },
+  {
+    "input": "7.Layer F6 (Fully Connected Layer)",
+    "output": "Units: 84 units.\nConnections: Each unit is fully connected to C5, resulting in 10,164 trainable parameters.\nActivation: Uses a scaled hyperbolic tangent functionf(a) = A\\tan (Sa), where A = 1.7159 and S = 2/3"
+  },
+  {
+    "input": "8.Output Layer",
+    "output": "In the output layer of LeNet, each class is represented by an Euclidean Radial Basis Function (RBF) unit. Here's how the output of each RBF unity_iis computed:\nIn this equation:\nx_jrepresents the inputs to the RBF unit.\nw_{ij}represents the weights associated with each input.\nThe summation is over all inputs to the RBF unit.\nIn essence, the output of each RBF unit is determined by the Euclidean distance between its input vector and its parameter vector. The larger the distance between the input pattern and the parameter vector, the larger the RBF output. This output can be interpreted as a penalty term measuring the fit between the input pattern and the model of the class associated with the RBF unit."
+  },
+  {
+    "input": "Detailed Explanation of the Layers",
+    "output": "Convolutional Layers (Cx): These layers apply convolution operations to the input, using multiple filters to extract different features. The filters slide over the input image, computing the dot product between the filter weights and the input pixels. This process captures spatial hierarchies of features, such as edges and textures.\nSubsampling Layers (Sx): These layers perform pooling operations (average pooling in the case of LeNet-5) to reduce the spatial dimensions of the feature maps. This helps to control overfitting, reduce the computational load, and make the representation more compact.\nFully Connected Layers (Fx): These layers are densely connected, meaning each neuron in these layers is connected to every neuron in the previous layer. This allows the network to combine features learned in previous layers to make final predictions."
+  },
+  {
+    "input": "3. Define LeNet-5 Model",
+    "output": "Create a new instance of a model object using sequential model API. Then add layers to the neural network as per the LeNet-5 architecture discussed earlier. Finally, compile the model with the ‘categorical_crossentropy’ loss function and ‘SGD’ cost optimization algorithm. When compiling the model, add metrics=[‘accuracy’] as one of the parameters to calculate the accuracy of the model."
+  },
+  {
+    "input": "4. Evaluate the Model and Visualize the process",
+    "output": "We can train the model by calling the model.fit function and pass in the training data, the expected output, the number of epochs, and batch size. Additionally, Keras provides a facility to evaluate the loss and accuracy at the end of each epoch. For this purpose, we can split the training data using the ‘validation_split’ argument or use another dataset using the ‘validation_data’ argument. We will use our training dataset to evaluate the loss and accuracy after every epoch.\nWe can test the model by calling model.evaluate and passing in the testing data set and the expected output. We will visualize the training process by plotting the training accuracy and loss after each epoch.\nOutput:"
+  },
+  {
+    "input": "Summary of LeNet-5 Architecture",
+    "output": "The overall architecture of LeNet-5, with its combination of convolutional, subsampling, and fully connected layers, was designed to be both computationally efficient and effective at capturing the hierarchical structure of handwritten digit images. The careful normalization of input values and the structured layout of receptive fields contribute to the network's ability to learn and generalize from the training data effectively."
+  }
+]
