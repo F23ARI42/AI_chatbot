@@ -1,0 +1,58 @@
+[
+  {
+    "input": "Working of Mini-Batch Gradient Descent",
+    "output": "Mini-batch gradient descent is a optimization method that updates model parameters using small subsets of the training data called mini-batches. This technique offers a middle path between the high variance of stochastic gradient descent and the high computational cost of batch gradient descent. They are used to perform each update, making training faster and more memory-efficient. It also helps stabilize convergence and introduces beneficial randomness during learning.\nIt is often preferred in modern machine learning applications because it combines the benefits of both batch and stochastic approaches.\nKey advantages of mini-batch gradient descent:\nComputational Efficiency:Supports parallelism and vectorized operations on GPUs or TPUs.\nFaster Convergence:Provides more frequent updates than full-batch which improves speed.\nNoise Reduction:Less noisy than stochastic updates which leads to smoother convergence.\nBetter Generalization:Introduces slight randomness to help escape local minima.\nMemory Efficiency:Doesn’t require loading the entire dataset into memory."
+  },
+  {
+    "input": "Algorithm:",
+    "output": "Let:\n\\theta= model parameters\nmax_iters= number of epochs\n\\eta= learning rate\nFor itr=1,2,3,…,max_iters:\nShuffle the training data. It is optional but often done for better randomness in mini-batch selection.\nSplit the dataset into mini-batches of sizeb.\nFor each mini-batch (X_{mini},y_{mini}):\n1. Forward Pass on the batch X_mini:\nMake predictions on the mini-batch\nCompute error in predictionsJ(θ)with the current values of the parameters\n2. Backward Pass:\nCompute gradient:\n3. Update parameters:\nGradient descent rule:"
+  },
+  {
+    "input": "Python Implementation",
+    "output": "Here we will use Mini-Batch Gradient Descent forLinear Regression."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We begin by importing libraries likeNumpyandMatplotlib.pyplot"
+  },
+  {
+    "input": "2. Generating Synthetic 2D Data",
+    "output": "Here, we generate 8000 two-dimensional data points sampled from a multivariate normal distribution:\nThe data is centered at the point (5.0, 6.0).\nThecovmatrix defines the variance and correlation between the features. A value of0.95indicates a strong positive correlation between the two features."
+  },
+  {
+    "input": "3. Visualizing Generated Data",
+    "output": "Output:"
+  },
+  {
+    "input": "4. Splitting Data",
+    "output": "We split the data into training and testing sets:\nOriginal data shape:(8000, 2)\nNew shape after adding bias:(8000, 3)\n90% of the data is used for training and 10% for testing."
+  },
+  {
+    "input": "5. Displaying Datasets",
+    "output": "Output:"
+  },
+  {
+    "input": "6. Defining Core Functions of Linear Regression",
+    "output": "Hypothesis(X, theta): Computes the predicted output using the linear model h(X)=X⋅θ\nGradient(X, y, theta):Calculates the gradient of the cost function which is used to update model parameters during training.\nCost(X, y, theta):Computes theMean Squared Error (MSE)."
+  },
+  {
+    "input": "7. Creating Mini-Batches for Training",
+    "output": "This function divides the dataset intorandom mini-batchesused during training:\nCombines the feature matrix X and target vector y, then shuffles the data to introduce randomness.\nSplits the shuffled data into batches of size batch_size.\nEach mini-batch is a tuple (X_mini, Y_mini) used for one update step in mini-batch gradient descent.\nAlso handles the case where data isn’t evenly divisible by the batch size by including the leftover samples in an extra batch."
+  },
+  {
+    "input": "8. Mini-Batch Gradient Descent Function",
+    "output": "This function performs mini-batch gradient descent to train the linear regression model:\nInitialization: Weightsthetaare initialized to zeros and an empty listerror_listtracks the cost over time.\nTraining Loop: For a fixed number of iterations (max_iters), the dataset is divided into mini-batches.\nEach mini-batch:computes the gradient, updatesthetato reduce cost and records the current error for tracking training progress."
+  },
+  {
+    "input": "9. Training and Visualization",
+    "output": "The model is trained usinggradientDescent()on the training data. After training:\ntheta[0] is the bias term (intercept).\ntheta[1:] contains the feature weights (coefficients).\nThe plot shows how the cost decreases as the model learns, showing convergence of the algorithm.\nThis provides a visual and quantitative insight into how well the mini-batch gradient descent is optimizing the regression model.\nOutput:"
+  },
+  {
+    "input": "10. Final Prediction and Evaluation",
+    "output": "Prediction: The hypothesis() function is used to compute predicted values for the test set.\nVisualization:\nA scatter plot shows actual test values.\nA line plot overlays the predicted values, helping to visually assess model performance.\nEvaluation:\nComputesMean Absolute Error (MAE)to measure average prediction deviation.\nA lower MAE indicates better accuracy of the model.\nOutput:\nThe orange line represents the final hypothesis function i.e θ[0] + θ[1] * X_test[:, 1] + θ[2] * X_test[:, 2] = 0\nThis is the linear equation learned by the model where:\nθ[0]is the bias (intercept)\nθ[1]is the weight for the first feature\nθ[2]is the weight for the second feature"
+  },
+  {
+    "input": "Comparison Between Gradient Descent Variants",
+    "output": "Lets see a quick difference between Batch Gradient Descent, Stochastic Gradient Descent (SGD) and Mini-Batch Gradient Descent."
+  }
+]
