@@ -1,0 +1,14 @@
+[
+  {
+    "input": "K-Nearest Neighbors Classifier using sklearn for Breast Cancer Dataset",
+    "output": "Here's the complete code broken down into steps, from importing libraries to plotting the graphs:"
+  },
+  {
+    "input": "Step 3: Training the model",
+    "output": "Step 4: Evaluating the model"
+  },
+  {
+    "input": "Step 5: Plotting the training and test scores graph",
+    "output": "From the above scatter plot, we can come to the conclusion that the optimum value of k will be around 5."
+  }
+]
