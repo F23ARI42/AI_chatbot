@@ -1,0 +1,70 @@
+[
+  {
+    "input": "Introduction",
+    "output": "Introduction to Machine Learning\nWhat is Machine Learning?\nML – Applications\nDifference between ML and AI\nBest Python Libraries for Machine Learning"
+  },
+  {
+    "input": "Data Processing",
+    "output": "Understanding Data Processing\nGenerate test datasets\nCreate Test DataSets using Sklearn\nData Preprocessing\nData Cleansing\nLabel Encoding of datasets\nOne Hot Encoding of datasets\nHandling Imbalanced Data with SMOTE and Near Miss Algorithm in Python"
+  },
+  {
+    "input": "Supervised learning",
+    "output": "Types of Learning – Supervised Learning\nGetting started with Classification\nTypes of Regression Techniques\nClassification vs Regression"
+  },
+  {
+    "input": "Linear Regression",
+    "output": "Introduction to Linear Regression\nImplementing Linear Regression\nUnivariate Linear Regression\nMultiple Linear Regression\nLinear Regression using sklearn\nLinear Regression Using Tensorflow\nLinear Regression using PyTorch\nBoston Housing Kaggle Challenge with Linear Regression [Project]"
+  },
+  {
+    "input": "Polynomial Regression",
+    "output": "Polynomial Regression ( From Scratch using Python )\nPolynomial Regression\nPolynomial Regression for Non-Linear Data\nPolynomial Regression using Turicreate"
+  },
+  {
+    "input": "Logistic Regression",
+    "output": "Understanding Logistic Regression\nImplementing Logistic Regression\nLogistic Regression using Tensorflow\nSoftmax Regression using TensorFlow\nSoftmax Regression Using Keras"
+  },
+  {
+    "input": "Naive Bayes",
+    "output": "Naive Bayes Classifiers\nNaive Bayes Scratch Implementation using Python\nComplement Naive Bayes (CNB) Algorithm\nApplying Multinomial Naive Bayes to NLP Problems"
+  },
+  {
+    "input": "Support Vector",
+    "output": "Support Vector Machine Algorithm\nSupport Vector Machines(SVMs) in Python\nSVM Hyperparameter Tuning using GridSearchCV\nCreating linear kernel SVM in Python\nMajor Kernel Functions in Support Vector Machine (SVM)\nUsing SVM to perform classification on a non-linear dataset"
+  },
+  {
+    "input": "Decision Tree",
+    "output": "Decision Tree\nImplementing Decision tree\nDecision Tree Regression using sklearn"
+  },
+  {
+    "input": "Random Forest",
+    "output": "Random Forest Regression in Python\nRandom Forest Classifier using Scikit-learn\nHyperparameters of Random Forest Classifier\nVoting Classifier using Sklearn\nBagging classifier"
+  },
+  {
+    "input": "K-nearest neighbor (KNN)",
+    "output": "K Nearest Neighbors with Python | ML\nImplementation of K-Nearest Neighbors from Scratch using Python\nK-nearest neighbor algorithm in Python\nImplementation of KNN classifier using Sklearn\nImputation using the KNNimputer()\nImplementation of KNN using OpenCV"
+  },
+  {
+    "input": "Unsupervised Learning",
+    "output": "Types of Learning – Unsupervised Learning\nClustering in Machine Learning\nDifferent Types of Clustering Algorithm\nK means Clustering – Introduction\nElbow Method for optimal value of k in KMeans\nK-means++ Algorithm\nAnalysis of test data using K-Means Clustering in Python\nMini Batch K-means clustering algorithm\nMean-Shift Clustering\nDBSCAN – Density based clustering\nImplementing DBSCAN algorithm using Sklearn\nFuzzy Clustering\nSpectral Clustering\nOPTICS Clustering\nOPTICS Clustering Implementing using Sklearn\nHierarchical clustering (Agglomerative and Divisive clustering)\nImplementing Agglomerative Clustering using Sklearn\nGaussian Mixture Model"
+  },
+  {
+    "input": "Projects using Machine Learning",
+    "output": "Rainfall prediction using Linear regression\nIdentifying handwritten digits using Logistic Regression in PyTorch\nKaggle Breast Cancer Wisconsin Diagnosis using Logistic Regression\nImplement Face recognition using k-NN with scikit-learn\nCredit Card Fraud Detection\nImage compression using K-means clustering"
+  },
+  {
+    "input": "Applications of Machine Learning",
+    "output": "How Does Google Use Machine Learning?\nHow Does NASA Use Machine Learning?\nTargeted Advertising using Machine Learning\nHow Machine Learning Is Used by Famous Companies?"
+  },
+  {
+    "input": "Applications Based on Machine Learning",
+    "output": "Machine Learning is the most rapidly evolving technology; we are in the era of AI and ML. It is used to solve many real-world problems which cannot be solved with the standard approach. Following are some applications of ML.\nSentiment analysis\nFraud detection\nError detection and prevention\nWeather forecasting and prediction\nSpeech synthesis\nRecommendation of products to customers in online shopping.\nStock market analysis and forecasting\nSpeech recognition\nFraud prevention\nCustomer segmentation\nObject recognition\nEmotion analysis"
+  },
+  {
+    "input": "Machine Learning Basic and Advanced - Self Paced Course",
+    "output": "Understanding the core idea of building systems has now become easier. With ourMachine Learning Basic and Advanced - Self Paced Course, you will not only learn about the concepts of machine learning but will gain hands-on experience implementing effective techniques. This Machine Learning course will provide you with the skills needed to become a successful Machine Learning Engineer today. Enrol now!"
+  },
+  {
+    "input": "Conclusion",
+    "output": "Well, this is the end of this write-up here you will get all the details as well as all the resources about machine learning with Python tutorial. We are sure that this Python machine learning guide will provide a solid foundation in the field of machine learning."
+  }
+]
