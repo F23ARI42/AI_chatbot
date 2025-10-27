@@ -14506,5 +14506,53 @@
   {
     "input": "Step 10: Building an Interactive Gradio App",
     "output": "We can create an interactive Gradio app to translate English sentences to Hindi.\nOutput:\nUsing Transformers to translate languages shows how AI can transform the way we connect and share ideas."
+  },
+  {
+    "input": "Sumy for Text Summarization",
+    "output": "Sumy brings several advantages that make it useful for various text summarization tasks. The library supports multiple summarization algorithms including Luhn, Edmundson, LSA, LexRank and KL-summarizers which give us the flexibility to choose the approach that best fits your data. It integrates with other NLP libraries and requires minimal setup, making it accessible even for beginners. The library handles large documents efficiently and can be customized to meet summarization requirements."
+  },
+  {
+    "input": "Setting Up Sumy",
+    "output": "Getting Sumy up and running is straightforward. We can install it through PyPI using pip:"
+  },
+  {
+    "input": "Text Preprocessing",
+    "output": "Before summarization, lets see text preprocessing techniques that are required to summarize a document or text. Sumy provides built-in capabilities to prepare text for effective summarization."
+  },
+  {
+    "input": "Tokenization with Sumy",
+    "output": "Tokenizationbreaks down text into manageable units like sentences or words. This process helps the summarization algorithms understand text structure and meaning more effectively.\nTokenizer splits text into sentences first, then words\nPunctuation is automatically handled and removed\nLanguage-specific tokenization rules are applied\nOutput:"
+  },
+  {
+    "input": "Stemming for Word Normalization",
+    "output": "Stemmingreduces words to their root forms, helping algorithms recognize that words like \"running\" \"runs\" and \"ran\" are variations of the same concept.\nStemming normalizes word variations\nImproves algorithm accuracy by grouping related terms\nEssential for frequency-based summarization methods\nOutput:"
+  },
+  {
+    "input": "Summarization Algorithms in Sumy",
+    "output": "Sumy provides several algorithms, each with different approaches to identifying important sentences. Let's explore the most effective ones."
+  },
+  {
+    "input": "1. Luhn Summarizer: Frequency-Based Approach",
+    "output": "TheLuhn algorithmranks sentences based on the frequency of significant words. It identifies important terms by filtering out stop words and focuses on sentences containing these high-frequency terms.\nSets up the Luhn summarizer using the Sumy library with English stemming and stop words.\nDefines a functionluhn_summarize()that takes text and returns a short summary.\nDemonstrates the function with a sample paragraph and prints the top 2 sentences that capture the meaning of paragraph.\nOutput:"
+  },
+  {
+    "input": "2. Edmundson Summarizer: Customizable Word Weighting",
+    "output": "The Edmundson algorithm allows fine-tuned control over summarization by using bonus words (emphasized), stigma words (de-emphasized) and null words (ignored).\nUses the Edmundson summarizer from the Sumy library with English stemmer and stop words.\nAllows custom emphasis through bonus_words and stigma_words to guide what content gets prioritized or downplayed.\nRuns a summarization example with a focus on AI-related terms and prints lines with most weighted words.\nOutput:"
+  },
+  {
+    "input": "3. LSA Summarizer: Semantic Understanding",
+    "output": "Latent Semantic Analysis (LSA)goes beyond simple word frequency by understanding relationships and context between terms. This approach often produces more coherent and contextually accurate summaries. The code given below:\nUses the LSA (Latent Semantic Analysis) summarizer from the Sumy library.\nConverts the input text into a format suitable for summarization using a parser and tokenizer.\nApplies LSA to extract key sentences based on underlying semantic structure.\nPrints a 2-sentence summary from the given text.\nOutput:"
+  },
+  {
+    "input": "Performance Considerations",
+    "output": "Time Complexity:\nLuhn:O(n²) where n is the number of sentences\nEdmundson: O(n²) with additional overhead for custom word processing\nLSA: O(n³) due to matrix decomposition operations\nSpace Complexity:\nAll algorithms:O(n×m) where n is sentences and m is vocabulary size\nLSA requires additional space for matrix operations"
+  },
+  {
+    "input": "Practical Applications and Limitations",
+    "output": "Sumy works well for:\nNews articles and blog posts\nResearch paper abstracts\nTechnical documentation\nLegal document summaries\nBut, it has limitations too:\nMight struggle with highly technical or domain-specific content\nPerformance depends on text structure and sentence quality\nLimited effectiveness on very short texts"
+  },
+  {
+    "input": "Choosing the Right Algorithm",
+    "output": "The key to effective summarization with Sumy lies in understanding our text characteristics and choosing the algorithm that best matches specific requirements. Experimenting with different approaches and sentence counts will help us find the optimal configuration for the use case."
   }
 ]
