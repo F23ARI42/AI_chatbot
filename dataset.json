@@ -15434,5 +15434,21 @@
   {
     "input": "Considerations and Limitations",
     "output": "Input Size Limit: T5 has a maximum input length (1024 tokens for t5-small), so long texts must be truncated.\nComputational Cost: Larger models like t5-large provide better performance but require more memory and time.\nBias and Hallucination: Like all large language models, T5 may sometimes generate inaccurate or biased summaries.\nAs transformer models continue to improve, summarization systems will become even more fluent and aligned with human expectations. Whether summarizing legal documents or social media threads, models like T5 offer a reliable and scalable solution."
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "Let's see the implementation of text2text generator using HuggingFace Model,"
+  },
+  {
+    "input": "Step 1: Install Required Libraries",
+    "output": "Use below command to installHugging Face Transformers library"
+  },
+  {
+    "input": "Step 2: Import and Prepare the Model",
+    "output": "Loads the tokenizer and model forgoogle/flan-ul2.\nMoves the model to GPU if available for much faster processing.\nOutput:"
+  },
+  {
+    "input": "Step 4:Give prompts and Check Result",
+    "output": "1. Summarization\nOutput:\n2. Translation\nOutput:\n3. Paraphrasing\nOutput:\n4. Question-Generation\nOutput:\n5. Sentiment Analysis\nOutput :\nWe ca see that our Text2text generation model using hugging face is working fine."
   }
 ]
