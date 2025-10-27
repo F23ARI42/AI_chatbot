@@ -14586,5 +14586,37 @@
   {
     "input": "8. Generate Sample Text",
     "output": "We can generate same text using our trained model now.\nHere we can see model is working fine and now can be used for generating text using GRU."
+  },
+  {
+    "input": "N-gram",
+    "output": "N-gram is a language modelling technique that is defined as the contiguous sequence of n items from a given sample of text or speech. The N-grams are collected from a text or speech corpus. Items can be:\nWords like “This”, “article”, “is”, “on”, “NLP” → unigrams\nWord pairs likw “This article”, “article is”, “is on”, “on NLP” → bigrams\nTriplets (trigrams) or larger combinations"
+  },
+  {
+    "input": "N-gram Language Model",
+    "output": "N-gram models predict the probability of a word given the previous n−1 words. For example, a trigram model uses the preceding two words to predict the next word:\nGoal:Calculatep ( w | h ), the probability that the next word isw, given context/historyh.\nExample:For the phrase:“This article is on…”, if  we want to predict the likelihood of“NLP”as the next word:"
+  },
+  {
+    "input": "Chain Rule of Probability",
+    "output": "The probability of a sequence of words is computed as:"
+  },
+  {
+    "input": "Markov Assumption",
+    "output": "To reduce complexity, N-gram models assume the probability of a word depends only on the previous n−1 words."
+  },
+  {
+    "input": "Evaluating Language Models",
+    "output": "1. Entropy:Measures the uncertainty or information content in a distribution.\nIt always give non negative.\n2. Cross-Entropy:Measures how well a probability distribution predicts a sample from test data.\nUsually ≥ entropy; reflects model “surprise” at the test data.\n3. Perplexity:Exponential of cross-entropy; lower values indicate a better model."
+  },
+  {
+    "input": "Implementing N-Gram Language Modelling in NLTK",
+    "output": "words = nltk.word_tokenize(' '.join(reuters.words())): tokenizes the entire Reuters corpus into words\ntri_grams = list(trigrams(words)):creates 3-word sequences from the tokenized words\nmodel = defaultdict(lambda: defaultdict(lambda: 0)):initializes nested dictionary for trigram counts\nmodel[(w1, w2)][w3] += 1:counts occurrences of third word w3 after (w1, w2)\nmodel[w1_w2][w3] /= total_count:converts counts to probabilities\nreturn max(next_word_probs, key=next_word_probs.get):returns the most likely next word based on highest probability\nOutput:"
+  },
+  {
+    "input": "Advantages",
+    "output": "Simple and Fast:Easy to build and fast to run for small n.\nInterpretable:Easy to understand and debug.\nGood Baseline:Useful as a starting point for many NLP tasks."
+  },
+  {
+    "input": "Limitations",
+    "output": "Limited Context:Only considers a few previous words, missing long-range dependencies.\nData Sparsity:Needs lots of data; rare n-grams are common as n increases.\nHigh Memory:Bigger n-gram models require lots of storage.\nPoor with Unseen Words:Struggles with new or rare words unless smoothing is applied."
   }
 ]
