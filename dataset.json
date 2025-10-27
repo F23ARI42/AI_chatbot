@@ -14966,5 +14966,21 @@
   {
     "input": "Disadvantages of RNNs for Text Classification",
     "output": "Despite being useful, RNNs have some limitations when used for text classification:\nBy mastering RNNs we can create models that efficiently process and classify complex text data so that we can understand patterns and structures of language."
+  },
+  {
+    "input": "Implementing Rule-Based Stemming Technique",
+    "output": "Here, we are defining a simple rule-based stemmer function. The functionrule_based_stemmertakes a word and applies predefined suffix-stripping rules to stem the word, removing common English suffixes like 'ing', 'ed', 'ly', 'es', and 's'. If no rule applies, it returns the word unchanged.\nOutput:"
+  },
+  {
+    "input": "How Rule-Based Stemming Works",
+    "output": "Rule-based stemming operates by checking each word against a list of rules that specify which endings can be removed. The algorithm applies these rules iteratively until no more changes can be made. For example, it can transform \"running\" into \"run\" and \"happily\" into \"happi.\" The process continues until the word no longer matches any suffix in the rule set."
+  },
+  {
+    "input": "Key Features and Benefits of Rule-Based Stemming",
+    "output": "It removes common endings from words like \"jumping\" to \"jump.\"\nIt uses a specific set of rules for stemming.\nThe algorithm processes large datasets quickly.\nRule-based stemming is simple and easy to understand, making it accessible for beginners.\nIt works quickly, which is beneficial when handling large volumes of text data.\nIt effectively reduces many common English words to their root forms."
+  },
+  {
+    "input": "Limitations of Rule-Based Stemming",
+    "output": "It may miss some relevant word variations.\nMaintaining extensive rules can be challenging.\nIt can incorrectly stem different words or fail to reduce similar ones properly.\nIt is primarily designed for English, with less effectiveness in other languages. The algorithm can produce stems that are not meaningful, such as turning \"university\" into \"univers.\""
   }
 ]
