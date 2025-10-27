@@ -14842,5 +14842,25 @@
   {
     "input": "Step 5: Understanding the Output",
     "output": "1st Statement:The text has 20.7% negative, 51.9% neutral and 27.4% positive sentiment. The compound score of 0.4404 shows a positive sentiment.\n2nd Statement:With 0% negative, 47.1% neutral and 52.9% positive. The compound score of 0.5423 also shows a positive sentiment.\n3rd Statement:The text has 40.8% negative, 39.5% neutral and 19.7% positive with a compound score of -0.3818 indicating a negative sentiment.\nVADER is a great tool for efficiently analyzing sentiment in various types of user-generated content which helps businesses and researchers to gain deeper insights into public opinions and emotions expressed in short-form texts."
+  },
+  {
+    "input": "Return:",
+    "output": "Polarity:A score between -1 (negative) and 1 (positive) showing how positive or negative the text is.\nSubjectivity:A score between 0 (factual) and 1 (opinion-based) showing how subjective or objective the text is.\nLets see some more examples:"
+  },
+  {
+    "input": "Example 1: Negative Sentiment",
+    "output": "Here, we analyze a sentence that expresses a strong negative sentiment. The polarity score reflects the negative tone while the subjectivity shows opinion-based statement.\nOutput:\nPolarity:-0.8 shows a negative sentiment.\nSubjectivity:0.9 shows the text is highly opinion-based."
+  },
+  {
+    "input": "Example 2: Neutral Sentiment",
+    "output": "In this example, we’ll analyze a neutral sentence that conveys factual information without expressing any strong opinion or emotion. It will show how TextBlob classifies a sentence with no sentiment bias.\nOutput:\nPolarity:0.0 means neutral.\nSubjectivity:0.0 shows it's factual."
+  },
+  {
+    "input": "Example 3: Mixed Sentiment",
+    "output": "Here the sentence presents a neutral sentiment but is more opinion-based than factual. The polarity score remains neutral while the subjectivity score reflects an opinion or preference.\nOutput:\nPolarity = 0.0:This shows a neutral sentiment.\nSubjectivity = 0.7:The text is more opinion-based than factual as it's expressing a preference."
+  },
+  {
+    "input": "Practical Use Cases",
+    "output": "This can be useful in various applications including:"
   }
 ]
