@@ -14406,5 +14406,41 @@
   {
     "input": "Conclusion",
     "output": "So we can conclude that, generating Word embeddings is very much necessary for various NLP task. The size of output of the word embedding may be huge but they are can capture the meaning of each token present in the sentence which can play an essential role in sentiment analysis and text classification."
+  },
+  {
+    "input": "Vocabulary Explosion and Rare Words",
+    "output": "Consider processing the sentence \"The bioengineering startup developed unbreakable materials.\" A traditional word-level tokenizer would need separate entries for \"bioengineering\", \"startup\", \"unbreakable\" and \"materials\". If any of these words weren't in the training vocabulary, the model would fail.\nKey challenges in traditional tokenization:\nVocabulary grows exponentially with text corpus size\nTechnical terms and proper nouns create endless edge cases\nMemory requirements become prohibitive for large vocabularies\nModel training becomes computationally expensive\nWordPiece solves this by breaking words into meaningful subunits. Instead of treating \"unbreakable\" as a single unknown token, it breaks it down into recognizable pieces: [\"un\", \"##break\", \"##able\"]. The \"##\" prefix indicates that a token continues from the previous piece, preserving word boundaries and also enabling flexible decomposition.\nThis approach ensures that even completely new words can be understood through their constituent parts which results in improving model robustness and generalization."
+  },
+  {
+    "input": "How WordPiece Tokenization Works",
+    "output": "The algorithm follows a data-driven approach to build its vocabulary. It starts with individual characters and gradually merges the most frequently occurring pairs until reaching a target vocabulary size."
+  },
+  {
+    "input": "Algorithm steps:",
+    "output": "Initialize vocabulary with all individual characters\nCount frequency of all adjacent symbol pairs in the corpus\nMerge the most frequent pair into a single token\nUpdate the corpus with the new merged token\nRepeat until reaching desired vocabulary size (typically 30K-50K tokens)\nDuring actual tokenization, WordPiece uses a greedy longest-match strategy. For each word, it finds the longest possible subword that exists in its vocabulary then marks it as a token and repeats for the remaining characters.\nTokenization process:\nStart from the beginning of each word\nFind the longest matching subword in vocabulary\nAdd it to the token list with appropriate prefix\nMove to the next unprocessed characters\nContinue until the entire word is processed\nThis statistical foundation ensures that common patterns naturally emerge as single tokens while rare combinations get broken into more familiar components."
+  },
+  {
+    "input": "Wordpiece Implementation",
+    "output": "Let's implement basic WordPiece tokenization using thetransformers library. This example focuses on core functionality without unnecessary complexity.\nImports BertTokenizer and loads the pre-trained bert-base-uncased model which applies WordPiece tokenization and lowercases input text.\nDefines a function simple_tokenize(text) to show how BERT tokenizes input into subwords and maps them to token IDs.\nTokenizes the full sentence, prints the resulting WordPiece tokens and converts them into their corresponding vocabulary IDs.\nSplits the input into individual words and shows how each word is broken down into subword tokens by BERT.\nTests the function on three sample sentences to illustrate handling of rare, compound and complex words, with clear separation between examples.\nOutput:"
+  },
+  {
+    "input": "Vocabulary Comparison Analysis",
+    "output": "To understand WordPiece's efficiency, let's compare it with traditional word-level tokenization using a practical example.\nThe function compares WordPiece tokenization (using BERT) with basic word-level tokenization on a list of input texts.\nIt collects the total and unique tokens from both methods.\nWordPiece tokens are generated usingtokenizer.tokenize()while word-level tokens usetext.lower().split().\nIt calculates a compression ratio as the total word count divided by the total WordPiece count.\nThe results show how WordPiece reduces vocabulary size by reusing subword units.\nSample sentences are used to demonstrate and print the comparison.\nOutput:\nThe compression ratio shows WordPiece's representational efficiency. While word-level tokenization might need 1000+ unique tokens for a technical corpus, WordPiece achieves the same coverage with 300-400 tokens."
+  },
+  {
+    "input": "Practical Limitations",
+    "output": "WordPiece tokenization has limitations that we should understand before implementation."
+  },
+  {
+    "input": "1. Character handling issues:",
+    "output": "Unknown Unicode characters map to [UNK] tokens\nInformation loss occurs with unsupported character sets\nEmoji and special symbols may not tokenize intuitively\nTo resolve this ensure training data covers expected character ranges"
+  },
+  {
+    "input": "2. Language-specific challenges:",
+    "output": "Struggles with languages lacking clear word boundaries (Chinese, Japanese)\nMorphologically rich languages may over-segment\nLanguages that form words by combining many smaller units often produce long token sequences during processing."
+  },
+  {
+    "input": "3. Vocabulary limitations:",
+    "output": "Fixed vocabulary cannot adapt to new domains without retraining\nSpecialized terminology may produce many [UNK] tokens\nDomain shift can significantly degrade performance\nMedical/legal texts often require domain-specific vocabularies\nWordPiece tokenization has enabled the success of modern transformer models by balancing vocabulary coverage with computational efficiency. Its approach ensures that language patterns emerge naturally while maintaining robustness against unknown words."
   }
 ]
