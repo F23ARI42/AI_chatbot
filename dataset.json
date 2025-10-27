@@ -14146,5 +14146,9 @@
   {
     "input": "5. Example Usage",
     "output": "Finally we demonstrate the usage of thelearn_bpeandapply_bpefunctions with a sample corpus. We first learn the BPE merges from the corpus\"ab bc bcd cde\"and then apply the learned merges to the word\"bcd\".\nOutput:\nLearned mergesshow the most common pairs of characters that were combined into new subwords. These pairs were merged during the training process to create subword units. When applying BPE to the word\"bcd\"learned merges split it into the subwords['<b', 'cd', '>']."
+  },
+  {
+    "input": "Installation",
+    "output": "Install chatterbot using Python Package Index(PyPi) with this command\nBelow is the implementation.\nOutput:"
   }
 ]
