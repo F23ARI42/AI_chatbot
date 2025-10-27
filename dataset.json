@@ -15302,5 +15302,53 @@
   {
     "input": "Step 7. Manual Testing Function to Classify Text Messages",
     "output": "To simplify the use of this model for predicting the category of new messages we create a function that takes a text input and classifies it as spam or ham.\nOutput:\nThis function first vectorizes the input text using the previously fitted CountVectorizer then predicts the category using the trained logistic regression model, and finally returns the prediction as a human-readable label.\nThis experiment demonstrates that logistic regression is a powerful tool for classifying text even with a simple approach. Using the SMS Spam Collection dataset we achieved an impressive accuracy of 97.6%. This shows that the model successfully learned to distinguish between spam and legitimate text messages based on word patterns."
+  },
+  {
+    "input": "Implementing FNet for Text Generation in Python",
+    "output": "Lets see the implementation of FNet for text generation:"
+  },
+  {
+    "input": "Step 1: Installing and Importing Libraries",
+    "output": "We will install below libraries if they are not available in our environment using:\nHere we will be usingPyTorch,NumpyandPandaslibraries for the implementation.\nAdditionally we define the device variable that ensures computation is done on GPU if available otherwise it defaults to CPU.\nOutput:"
+  },
+  {
+    "input": "Step 2: Loading Data",
+    "output": "Here we will load thewikitext-103-raw-v1version of the WikiText dataset which contains text data from Wikipedia articles, without any additional processing applied to it. Also we'll be using thedatasets librarywhich makes it easy to access and work with datasets from Hugging Face."
+  },
+  {
+    "input": "Step 3: Data Preprocessing",
+    "output": "Before feeding the raw text into the model, it's important to clean and preprocess the data. Here we decalare apreprocess_textfunction which will:\nMake all the words in the sentence lowercase\nRemove any special characters\nReplace any multiple white spaces\nAfter defining thepreprocess_textfunction, we apply it to each text sample in the dataset using themapfunction from the datasets library. Additionally, we use thefilterfunction to keep only those text sequences that have more than 20 words, ensuring that we discard any short, irrelevant sequences."
+  },
+  {
+    "input": "Step 4: Tokenization",
+    "output": "For tokenization, we use a pretrained tokenizer from Hugging Face. Thedistilbert-base-uncased-finetuned-sst-2-englishtokenizer is loaded usingAutoTokenizer.from_pretrained(). This converts raw text into tokenized sequences suitable for model training.\nTokenization Function:Define a function to tokenize each sentence.\nApply Tokenizer:Use themap()function to apply the tokenizer across the dataset.\nRemove Original Text:Remove the original text column usingremove_columns()to retain only tokenized inputs.\nPadding:Ensure consistent input lengths across batches withDataCollatorWithPadding."
+  },
+  {
+    "input": "Step 5: Embedding and Positional Encoding",
+    "output": "Here we create two class, One for positional encoding and one for embedding.\nPositional Encoding:Generate positional encodings to provide the model with information about token positions.\nEmbedding:ThePositionalEmbeddingclass takes tokenized inputs, embeds them and adds thepositional encodingto capture sequential information effectively."
+  },
+  {
+    "input": "Step 6: Create FNet Encoder",
+    "output": "TheFNetEncoder is designed based on the FNet architecture, using Fourier Transforms to process the input sequence.\nFourier Transform:Appliesfft.fft2to the input and the real part of the result is added back to the original input.\nNormalization:After applying Fourier Transform, layer normalization (self.layernorm_1) is used.\nDense Projection:Two linear layers withReLUactivation (self.dense_proj) project the input into a different dimension.\nFinal Normalization:A second layer normalization (self.layernorm_2) is applied to the output."
+  },
+  {
+    "input": "Step 7 : Create FnetDecoder",
+    "output": "The FNet Decoder is designed based on the FNet architecture and includes multi-head attention mechanisms to process the input sequence.\nMulti-Head Attention: self.attention_1attends to decoder inputs with a causal mask to prevent future token information whileself.attention_2attends to encoder outputs with an optional key padding mask.\nNormalization:Layer normalization is applied after each attention mechanism to stabilize intermediate representations.\nDense Projection:Two linear layers with ReLU activation (self.dense_proj) project the output to a different dimension.\nFinal Normalization:A second layer normalization (self.layernorm_3) is applied to the final output."
+  },
+  {
+    "input": "Step 8: FNet Model",
+    "output": "The FNet Model combines positional encoding, FNet encoder and FNet decoder components.\nInitialization (__init__ method): Initializes model with parameters likeembed_dim,latent_dim,num_headsandvocab_size.\nEncoder:Processesencoder_inputsthrough positional encoding and four FNetEncoder layers sequentially.\nDecoder:Processesdecoder_inputs, encoder_output and attention mask through four FNetDecoder layers.\nForward Pass:Takesencoder_inputs,decoder_inputsandattention maskand passes them through encoder and decoder layers to get the final output."
+  },
+  {
+    "input": "Step 9: Initialize Model",
+    "output": "In this step, we initialize the model by declaring the necessary hyperparameters and passing them to the model class.\nmax_length: Maximum sequence length for inputs.\nvocab_size: Size of the vocabulary.\nembed_dim: Embedding dimension for tokens.\nlatent_dim: Dimension of the latent space.\nnum_heads: Number of attention heads in multi-head attention.\nModel Initialization:Instantiate the FNet model with the defined hyperparameters."
+  },
+  {
+    "input": "Step 10: Train the Model",
+    "output": "Here we train the model by defining the optimizer, loss function and iterating through the training data.\nOptimizer: We use theAdam optimizerto update the model's parameters during training which adapts the learning rate based on the gradient.\nLoss Function:Cross Entropy Lossis used as the loss function which is applied in classification tasks like sequence generation.\nGradient Calculation:Before each step, gradients are zeroed using optimizer.zero_grad().\nBackpropagation:Gradients are calculated usingloss.backward()and the optimizer updates the model's weights withoptimizer.step().\nTraining Loop:The training process is repeated for 10 epochs during which the model learns to predict the output sequences more accurately.\nOutput:"
+  },
+  {
+    "input": "Step 11: Use Model for Text Generation",
+    "output": "To perform text generation using a Transformer decoder, we can useautoregressive decodingwhere we iteratively generate one token at a time by sampling from the model's output distribution and feeding the sampled token back into the input for the next step. We use the encoder part of the model to generate context vector for a given input token.\nOutput:\nIn order to get a better output we need to train the model with large amount of data and for significant time which will require GPUs."
   }
 ]
