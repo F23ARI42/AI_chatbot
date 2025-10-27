@@ -15350,5 +15350,37 @@
   {
     "input": "Step 11: Use Model for Text Generation",
     "output": "To perform text generation using a Transformer decoder, we can useautoregressive decodingwhere we iteratively generate one token at a time by sampling from the model's output distribution and feeding the sampled token back into the input for the next step. We use the encoder part of the model to generate context vector for a given input token.\nOutput:\nIn order to get a better output we need to train the model with large amount of data and for significant time which will require GPUs."
+  },
+  {
+    "input": "Implementation in Python",
+    "output": "Text generation is a part of NLP where we train our model on dataset that involves vast amount of textual data and our LSTM model will use it to train model. Here is the step by step implementation of text generation:"
+  },
+  {
+    "input": "1. Importing Required Libraries",
+    "output": "We will import the following libraries:\nTensorFlow: For building and training the deep learning model.\nNumPy: For numerical operations on arrays.\nPandas: For loading and processing the CSV dataset.\nrandom,sys: Used in text generation and output handling."
+  },
+  {
+    "input": "2. Loading the Dataset",
+    "output": "You can download dataset fromhere. It contains vast amount of textual data for training.\npd.read_csv():Reads the CSV file into a DataFrame.\ndf['text'].dropna():Drops rows with missing text entries.\n\" \".join():Concatenates all text rows into a single string for training.\n.lower():Converts text to lowercase for consistency.\nOutput:"
+  },
+  {
+    "input": "3. Creating Vocabulary and Character Mappings",
+    "output": "We will create vocabulary of unique characters and implement character to index mapping and vise-versa.\nsorted(set(text)):Extracts unique characters and sorts them to form the vocabulary.\nchar2idx: Maps each character to a unique integer index.\nidx2char: Maps integers back to characters and is used during text generation.\ntext_as_int: Converts the entire text into a sequence of integer indices.\nOutput:"
+  },
+  {
+    "input": "4. Pre-processing the Data",
+    "output": "We will ceate dataset from integer encoded text and split sequences into input and target. Then we will shuffle and  divide the dataset into batches.\nseq_length:Defines the length of input sequences for the model.\ntf.data.Dataset.from_tensor_slices():Converts the integer sequence into a TensorFlow dataset.\nbatch(seq_length + 1):Creates sequences of length 101 where first 100 are input and the last is the target.\nsplit_input_target():Splits each sequence into input and target (next character).\nshuffle() and batch():Randomizes data order and creates batches for training."
+  },
+  {
+    "input": "5. Building the LSTM Model",
+    "output": "We will build a LSTM model with the following layers and compile the model. We will be usingRMSpropoptimizer in this model.\nEmbedding layer:Converts integer indices into dense vectors of length embedding_dim.\nLSTM layer:Processes sequences capturing temporal dependencies with rnn_units memory cells. return_sequences=True outputs sequence at each timestep.\nDense layer:Produces output logits for all characters in the vocabulary to predict the next character.\nOutput:"
+  },
+  {
+    "input": "6. Training the LSTM model",
+    "output": "We will train our model on20 Epochsto use it for predictions.\nmodel.fit():Trains the model on the dataset for 20 epochs.\nhistory:Stores training metrics for later analysis.\nOutput:"
+  },
+  {
+    "input": "7. Generating new random text",
+    "output": "Wewill try to generate some texts using our model.\nstart_string:Initial seed text to start generation.\ntemperature:Controls randomness; lower values make output more predictable, higher values more creative.\nmodel.reset_states():Clears LSTM states before generation.\ntf.random.categorical():Samples the next character probabilistically from the model’s predictions.\nReturns:The seed text plus generated characters.\nOutput:\nHere we generate 200 characters of text with a diversity of 0.8 after training. But we can further tune this model to generate better sentences."
   }
 ]
