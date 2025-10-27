@@ -15110,5 +15110,33 @@
   {
     "input": "Context insensitivity:",
     "output": "\"saw\" (past tense of see) vs \"saw\" (cutting tool) - same stem\n\"lead\" (metal) vs \"lead\" (guide) - different meanings, same processing\nHomonyms create ambiguous results"
+  },
+  {
+    "input": "Key Features of spaCy",
+    "output": "Speed and Efficiency:spaCy is engineered for performance, with much of its core written in Cython to deliver C-like speed for Python programs. This makes it ideal for processing large-scale text data.\nAccuracy:spaCy provides highly accurate models for tasks like dependency parsing andnamed entity recognition (NER), often within 1% of the top-performing frameworks.\nProduction-Readiness:Its design philosophy emphasizes reliability and ease of integration into production systems.\nExtensibility:spaCy supports custom components and workflows, allowing users to tailor the processing pipeline to specific needs.\nRich Ecosystem:Since its release in 2015, spaCy has become an industry standard, supported by a wide array of plugins and integrations."
+  },
+  {
+    "input": "Core Concepts and Data Structures",
+    "output": "spaCy processes text using a centralLanguageclass, typically instantiated as nlp. When you pass raw text to this object, it produces aDocobject, which contains a sequence of tokens and all their linguistic annotations. TheDocobject is the main container, and its data is accessed viaToken(individual words or symbols) andSpan(slices of the document)."
+  },
+  {
+    "input": "spaCy’s Processing Pipeline",
+    "output": "spaCy uses a modular processing pipeline that sequentially applies various components to the input text. The default pipeline typically includes:\nTokenizer:Splits text into tokens (words, punctuation, etc.).\nTagger:Assigns part-of-speech (POS) tags.\nParser:Performs dependency parsing to analyze grammatical relationships.\nNER (Entity Recognizer):Identifies and labels named entities (persons, organizations, locations, etc.).\nLemmatizer:Assigns base forms to words.\nText Categorizer:Assigns categories or labels to documents. Each component modifies theDocobject in place, passing it along the pipeline for further processing."
+  },
+  {
+    "input": "Main NLP Tasks Supported by spaCy",
+    "output": "spaCy provides out-of-the-box support for a wide range of NLP tasks:\nTokenization:Breaking text into individual words, punctuation, and symbols.\nPart-of-Speech Tagging:Identifying grammatical roles of words.\nDependency Parsing:Analyzing syntactic relationships between words.\nNamed Entity Recognition (NER):Extracting entities such as names, organizations, and locations.\nLemmatization:Reducing words to their base forms.\nText Classification:Assigning documents to predefined categories (e.g., spam detection, sentiment analysis).\nEntity Linking:Connecting recognized entities to knowledge bases like Wikipedia.\nRule-based Matching:Finding token sequences based on patterns, similar to regular expressions.\nSimilarity:Comparing words, phrases, or documents for semantic similarity.\nCustom Pipelines:Users can add custom components for specialized tasks."
+  },
+  {
+    "input": "Step-by-Step Installation of spaCy",
+    "output": "Step 1: Upgrade pip, setuptools, and wheel (Recommended)\nThis ensures you have the latest package management tools\nStep 2: Install or Upgrade spaCy\nInstall the latest version of spaCy using pip. This command also upgrades spaCy if it's already installed.\nOutput\nStep 3: Download a spaCy Language Model\nspaCy requires a language model for processing text. For English, the most common models are:\nen_core_web_sm (small, fast, less accurate)\nen_core_web_md (medium, more accurate, larger)\nen_core_web_lg (large, most accurate, largest)\nThe small model is usually sufficient for most tasks and is fastest to download: Replace en_core_web_sm with en_core_web_md or en_core_web_lg if you need a larger model.\nOutput:"
+  },
+  {
+    "input": "Example",
+    "output": "Here’s a simple example demonstrating spaCy’s core capabilities\nSteps :\nImport & Load:Import spaCy and load the English model.\nProcess Text:Analyze a sentence to create adocobject.\nTokenization & POS:Loop through words to print their text, part-of-speech, and syntactic role.\nNER:Loop through entities to print their text and type (e.g., organization, money).\nOutput"
+  },
+  {
+    "input": "Use Cases and Applications",
+    "output": "spaCy is widely used in:\nInformation extraction from unstructured text.\nDocument classification (e.g., spam detection, sentiment analysis).\nAutomated question answering.\nText summarization (with additional techniques).\nEntity linking and knowledge base construction.\nPreprocessing for machine translation systems.\nIts speed, accuracy, and ease of use make it suitable for both research and deployment in production environments."
   }
 ]
