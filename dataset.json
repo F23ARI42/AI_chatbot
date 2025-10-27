@@ -14458,5 +14458,53 @@
   {
     "input": "Limitations of Lancaster Stemmer",
     "output": "The aggressive nature of the algorithm can result in stems that are not meaningful, such as reducing \"university\" and \"universe\" to \"univers.\"\nPrimarily optimized for English, its performance may degrade with other languages.\nDue to its aggressive stemming, it can conflate words with different meanings into the same stem, leading to potential ambiguity."
+  },
+  {
+    "input": "Understanding Transformers",
+    "output": "Transformeris a deep learning model used in natural language processing (NLP) because it can understand how words in a sentence relate to each other even if they are far apart. It has two main parts:\nThe most important feature of Transformers isself-attentionwhich helps the model focus on the right words while translating. Unlike older models that process words one by one, it look at the whole sentence at the same time which makes them faster and more efficient. In this article we will be using a pre-trained Transformer model from Helsinki-NLP which is an open-source project that offers many translation models."
+  },
+  {
+    "input": "Implementation",
+    "output": "Transformers have improved the quality and efficiency of machine translation models. Here we will be using hugging Face's transformer models to perform English to Hindi translation."
+  },
+  {
+    "input": "Step 1: Installing Libraries",
+    "output": "Before starting make sure that we have the required libraries installed in our environment. If not then use the following commands to install them:\nWe will use cfilt/iitb-english-hindi dataset available on Hugging face."
+  },
+  {
+    "input": "Step 2: Loading the Dataset",
+    "output": "Load the dataset from Hugging Face. It provides splits like \"train\", \"validation\" and \"test\" which we will use to train and evaluate our model."
+  },
+  {
+    "input": "Step 3: Load Model and Tokenizer",
+    "output": "We will be using the pre-trained model Helsinki-NLP/opus-mt-en-hi for English to Hindi translation. The AutoTokenizer and AutoModelForSeq2SeqLM classes from the Hugging Face transformers library allow us to load the tokenizer and model. The tokenizer converts text to tokens and the model performs the translation."
+  },
+  {
+    "input": "Step 4: Example Translation",
+    "output": "Test the model with a sentence from the validation set. The input sequence is: 'Rajesh Gavre, the President of the MNPA teachers association, honoured the school by presenting the award'.\nOutput:\nLet's check the expected output using the following code.\nOutput:"
+  },
+  {
+    "input": "Step 5: Tokenize the Dataset",
+    "output": "To fine-tune the model, we need to preprocess the dataset. This involvestokenizingboth the input (English) and target (Hindi) sentences and check that they are properly formatted for the model.\nWe map each of the examples of our dataset using the mapfunction.\ntokenized_datasets_validation = dataset['validation'].map(...): Apply the preprocess_function to the validation split of the dataset in batches, removing original columns and processing 2 samples per batch.\ntokenized_datasets_test = dataset['test'].map(...): Apply the preprocess_function similarly to the test split, with the same batching and column removal settings."
+  },
+  {
+    "input": "Step 6: Define the Data Collator",
+    "output": "DataCollatorForSeq2Seq helps to batch the tokenized data with proper padding and formatting forseq2seqtraining. It handles tasks such as padding sequences to the maximum length in a batch helps in creating attention masks and organizing the data."
+  },
+  {
+    "input": "Step 7: Set Model Training Parameters",
+    "output": "To fine-tune the model, we need to specify training parameters. In this case, we freeze some layers and train only the last few layers to fine-tune the model effectively.\nnum_layers_to_freeze = 10: Define the number of layers at the end of the encoder and decoder to keep trainable."
+  },
+  {
+    "input": "Step 8: Evaluate the Model",
+    "output": "We use SacreBLEU for evaluating the model's performance.BLEU (Bilingual Evaluation Understudy)is a metric used for evaluating machine translation models.\nif isinstance(preds, tuple): preds = preds[0]: Handle cases where predictions come as a tuple by selecting the first element.\ndecoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True): Convert predicted token IDs back to text ignoring special tokens."
+  },
+  {
+    "input": "Step 9: Train the Model",
+    "output": "We define the training parameters using Seq2SeqTrainingArgumentsfrom Hugging Face.\ntraining_args = Seq2SeqTrainingArguments(...): Define the training configuration with specific options like batch size, learning rate and mixed precision.\ngradient_checkpointing=True: Enable gradient checkpointing to reduce memory usage during training.\npush_to_hub=False: Disable pushing the trained model to the Hugging Face Hub.\nWe start training with Seq2SeqTrainer.\ntrainer = Seq2SeqTrainer(...): Create a trainer object by providing the model, training arguments, datasets, data collator, tokenizer and metric computation function.\nOutput:"
+  },
+  {
+    "input": "Step 10: Building an Interactive Gradio App",
+    "output": "We can create an interactive Gradio app to translate English sentences to Hindi.\nOutput:\nUsing Transformers to translate languages shows how AI can transform the way we connect and share ideas."
   }
 ]
