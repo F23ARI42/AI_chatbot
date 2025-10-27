@@ -14774,5 +14774,21 @@
   {
     "input": "Comparison with Other Models",
     "output": "ELMo introduced the idea of context in word meanings and still influences modern NLP although it has been surpassed by transformer-based models like BERT and RoBERTa in recent years."
+  },
+  {
+    "input": "Implementing Porter Stemmer",
+    "output": "You can easily implement the Porter Stemmer using Python'sNatural Language Toolkit (NLTK).\nOutput:"
+  },
+  {
+    "input": "How the Porter Stemmer Works",
+    "output": "ThePorter Stemmerworks by applying a series of rules to remove suffixes from words in five steps. It identifies and strips common endings, reducing words to theirbase forms (stems).For example, \"eating\" becomes \"eat\" and  \"happily\" becomes \"happi.\" This helps in text analysis by standardizing word forms."
+  },
+  {
+    "input": "Key Features & Benefits of Porter Stemmer",
+    "output": "The algorithm takes off common endings like \"-ing,\" \"-ed,\" and \"-ly,\" changing \"running\" to \"run\" and \"happily\" to \"happi.\"\nThe stemming process uses several steps to deal with different suffixes, making sure only the right ones are removed.\nIt counts groups of consonants in a word to help decide if certain endings should be taken off.\nThe Lancaster Stemmer is easy to implement and understand, making it beginner-friendly.\nIt processes text quickly, which is useful for handling large amounts of data.\nIt provides good results for most common English words and is widely used in NLP projects.\nBy simplifying words to their base forms, it reduces the number of unique words in a dataset, making analysis easier."
+  },
+  {
+    "input": "Limitations of Porter Stemmer",
+    "output": "It can produce stems that are not meaningful, such as turning \"iteration\" into \"iter.\"\nThe algorithm is primarily designed for English and may not work well with other languages.\nCompared to other stemmers , it may remove suffixes more aggressively, making words more similar to each other.\nDifferent words may be reduced to the same stem, resulting in a loss of meaning."
   }
 ]
