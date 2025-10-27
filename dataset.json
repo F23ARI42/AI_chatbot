@@ -14150,5 +14150,37 @@
   {
     "input": "Installation",
     "output": "Install chatterbot using Python Package Index(PyPi) with this command\nBelow is the implementation.\nOutput:"
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We will need to import the necessary libraries likescikit-learn,PandasandNumpy.\nCountVectorizerto convert text data into numerical features using word counts.\nMultinomialNB: The Naive Bayes classifier for multinomial data and is ideal for text classification."
+  },
+  {
+    "input": "2. Loading the Dataset",
+    "output": "Here we will  load our dataset."
+  },
+  {
+    "input": "3. Splitting the Data",
+    "output": "Now we split the dataset into training and testing sets. The training set is used to train the model while the testing set is used to evaluate its performance.\ntrain_test_split: Splits the data into training (80%) and testing (20%) sets.\nrandom_state: ensures reproducibility."
+  },
+  {
+    "input": "4. Text Preprocessing: Converting Text to Numeric Features",
+    "output": "We need to convert the text data into numerical format before feeding it to the model. We useCountVectorizerto convert the text into a matrix of token counts.\nCountVectorizer(): Converts the raw text into a matrix of word counts.\nfit_transform(): Learns the vocabulary from the training data and transforms the text into vector.\ntransform():Applies the learned vocabulary from the training data to the test data."
+  },
+  {
+    "input": "5. Training the Naive Bayes Classifier",
+    "output": "With the data now in the right format we train the Naive Bayes classifier on the training data. Here we useMultinomial Naive Bayes."
+  },
+  {
+    "input": "6. Making Predictions",
+    "output": "Now that the model is trained we can use it to predict the labels for the test data usingX_test_vectorized."
+  },
+  {
+    "input": "7. Evaluating the Model",
+    "output": "After making predictions we need to evaluate the model's performance. We'll calculate the accuracy and confusion matrix to understand how well the model is performing.\naccuracy_score():Calculates the accuracy of the model by comparing the predicted labels (y_pred) with the true labels (y_test).\nconfusion_matrix(): Generates a confusion matrix to visualize how well the model classifies each category.\nOutput:\nThe accuracy of the model is approximately88%meaning it correctly predicted the categories for about 88% of the test data.\nLooking at the confusion matrix heatmap we can see the model made correct predictions forSports (2),Technology (5),Politics (2)andEntertainment (6).Heatmap shows these values with darker colors representing correct predictions. However there were some misclassifications."
+  },
+  {
+    "input": "8. Prediction on Unseen Data",
+    "output": "Output:\nHere we can see our model is working fine and can predict on unseen data accurately. Naive Bayes is a useful model for text classification tasks especially when the dataset is large and the features (words) are relatively independent."
   }
 ]
