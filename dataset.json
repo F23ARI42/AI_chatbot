@@ -15382,5 +15382,25 @@
   {
     "input": "7. Generating new random text",
     "output": "Wewill try to generate some texts using our model.\nstart_string:Initial seed text to start generation.\ntemperature:Controls randomness; lower values make output more predictable, higher values more creative.\nmodel.reset_states():Clears LSTM states before generation.\ntf.random.categorical():Samples the next character probabilistically from the model’s predictions.\nReturns:The seed text plus generated characters.\nOutput:\nHere we generate 200 characters of text with a diversity of 0.8 after training. But we can further tune this model to generate better sentences."
+  },
+  {
+    "input": "Extractive Summarization",
+    "output": "Extractive summarizationalgorithms automatically generate summaries by selecting and combining key passages from the original text. Unlike human summarizers, these models focus on extracting the most important sentences without creating new content. The goal is to preserve the meaning of the original text while condensing it.\nTheTextRank algorithmis widely used forextractive summarizationtasks. By ranking sentences based on their relevance and importance, it can generate a concise summary. Let's explore how this algorithm works with a sample text."
+  },
+  {
+    "input": "Utilizing TextRank Algorithm for Extractive Text Summarization",
+    "output": "TextRankis implemented in the spaCy library. With the help ofPyTextRank, a spaCy extension, we can efficiently apply the TextRank algorithm to summarize text. While extractive summarization provides a modified version of the original text by retaining key phrases, it does not generate entirely new content.\nTo installspaCyand the required language model, run the following commands:\nTo installPyTextRank, run:\nHere’s a simple implementation ofspaCyandPyTextRankfor automatic text summarization. The code installs the required packages, downloads the spaCy language model, and processes a lengthy text to extract key phrases and sentences. The summary is limited to two key phrases and two sentences.\nOutput:"
+  },
+  {
+    "input": "Abstractive Summarization",
+    "output": "Abstractive summarizationgenerates entirely new sentences to convey key ideas from the original text. Unlikeextractive summarization, which selects and rearranges sentences from the original content,abstractive methodsrephrase information in a more concise and coherent manner, often using new vocabulary that wasn't present in the original.\nAbstractive summarization has gained prominence with the advent ofTransformer models, which have revolutionized NLP tasks. Initially, models based onrecurrent neural networks (RNNs)were used for text summarization, butTransformersintroduced a unique architecture that significantly improved performance."
+  },
+  {
+    "input": "PEGASUS: A Transformer Model for Text Summarization",
+    "output": "PEGASUSis a Transformer-based model designed specifically for text summarization. Unlike other models, PEGASUS uses a unique pre-training strategy where critical sentences aremaskedduring training. The model is then tasked with generating these hidden sentences, which enables it to create more accurate and coherent summaries.\nTo use the PEGASUS model for text summarization, you need to install the following libraries and frameworks:\nOnce the dependencies are installed, you can begin summarizing text with the PEGASUS model. Below is an example code snippet that uses theHugging Face Transformerslibrary to load the model, tokenize the input text, generate a summary, and display it.\nOutput:"
+  },
+  {
+    "input": "Conclusion",
+    "output": "The future of text summarization looks promising, with advancements in both extractive and abstractive methods, powered by models like PEGASUS. As these techniques evolve, they will enable more accurate and intuitive summarization, transforming how we process vast amounts of information. This progress highlights the growing potential of AI in enhancing human comprehension and knowledge management."
   }
 ]
