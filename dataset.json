@@ -14442,5 +14442,21 @@
   {
     "input": "3. Vocabulary limitations:",
     "output": "Fixed vocabulary cannot adapt to new domains without retraining\nSpecialized terminology may produce many [UNK] tokens\nDomain shift can significantly degrade performance\nMedical/legal texts often require domain-specific vocabularies\nWordPiece tokenization has enabled the success of modern transformer models by balancing vocabulary coverage with computational efficiency. Its approach ensures that language patterns emerge naturally while maintaining robustness against unknown words."
+  },
+  {
+    "input": "Implementing Lancaster Stemming",
+    "output": "You can easily implement the Lancaster Stemmer using Python. Here’s a simple example using the 'stemming' library, which can be installed using the following command:\nNow, proceed with the implementation:\nOutput:"
+  },
+  {
+    "input": "How the Lancaster Stemmer Works?",
+    "output": "The Lancaster Stemmer works by repeatedly applying a set of rules to remove endings from words until no more changes can be made. It simplifies words like \"running\" or \"runner\" into their root form, such as \"run\" or even \"r\" depending on how aggressively the algorithm applies its rules."
+  },
+  {
+    "input": "Key Features and Benefits of Lancaster Stemmer",
+    "output": "The Lancaster Stemmer is designed for speed, making it suitable for processing large datasets quickly.\nIt reduces the diversity of word forms by consolidating various forms into a single root, enhancing the efficiency of search operations.\nUtilizing over 100 rules, it can handle complex word forms that might be overlooked by less comprehensive stemmers.\nThe stemmer is straightforward to implement in programming environments, making it accessible for beginners."
+  },
+  {
+    "input": "Limitations of Lancaster Stemmer",
+    "output": "The aggressive nature of the algorithm can result in stems that are not meaningful, such as reducing \"university\" and \"universe\" to \"univers.\"\nPrimarily optimized for English, its performance may degrade with other languages.\nDue to its aggressive stemming, it can conflate words with different meanings into the same stem, leading to potential ambiguity."
   }
 ]
