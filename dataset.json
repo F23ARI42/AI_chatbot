@@ -14982,5 +14982,33 @@
   {
     "input": "Limitations of Rule-Based Stemming",
     "output": "It may miss some relevant word variations.\nMaintaining extensive rules can be challenging.\nIt can incorrectly stem different words or fail to reduce similar ones properly.\nIt is primarily designed for English, with less effectiveness in other languages. The algorithm can produce stems that are not meaningful, such as turning \"university\" into \"univers.\""
+  },
+  {
+    "input": "Bidirectional Representation for Transformers (BERT)",
+    "output": "BERTis a powerful technique fornatural language processingthat can improve how well computers comprehend human language. The foundation of BERT is the idea of exploiting bidirectional context to acquire complex and insightful word and phrase representations. By simultaneously examining both sides of a word's context, BERT can capture a word's whole meaning in its context, in contrast to earlier models that only considered the left or right context of a word. This enables BERT to deal with ambiguous and complex linguistic phenomena including polysemy, co-reference, and long-distance relationships.\nFor that, the paper also proposed the architecture of different tasks. In this post, we will be usingBERTarchitecture for Sentiment classification tasks specifically the architecture used for the CoLA (Corpus of Linguistic Acceptability) binary classification task.\nBERThas proposed two versions:\nBERT (BASE): 12 layers of encoder stack with 12 bidirectional self-attention heads and 768 hidden units.\nBERT (LARGE): 24 layers of encoder stack with 24 bidirectional self-attention heads and 1024 hidden units.\nFor TensorFlow implementation, Google has provided two versions of both the BERT BASE and BERT LARGE: Uncased and Cased. In an uncased version, letters are lowercase before WordPiece tokenization."
+  },
+  {
+    "input": "Step 2: Load the dataset",
+    "output": "Output\nOutput:\nOutput:\nOutput:\nOutput:\nHere 0 means Negative and 1 means Positive\nLoad the training datasets\nOutput:\nOutput:"
+  },
+  {
+    "input": "Step 3: Preprocessing",
+    "output": "Output:\nApply text_cleaning\nPositive Reviews\nOutput:\nNegative Reviews\nOutput:\nSeparate input text and target sentiment of both train and test"
+  },
+  {
+    "input": "Step 4: Tokenization & Encoding",
+    "output": "BERTtokenization is used to convert the raw text into numerical inputs that can be fed into the BERT model. It tokenized the text and performs some preprocessing to prepare the text for the model's input format. Let's understand some of the key features of the BERT tokenization model.\nBERT tokenizer splits the words into subwords or workpieces. For example,  the word \"geeksforgeeks\" can be split into \"geeks\" \"##for\", and\"##geeks\". The \"##\" prefix indicates that the subword is a continuation of the previous one. It reduces the vocabulary size and helps the model to deal with rare or unknown words.\nBERT tokenizer adds special tokens like [CLS], [SEP], and [MASK] to the sequence. These tokens have special meanings like :[CLS] is used for classifications and to represent the entire input in the case of sentiment analysis,[SEP] is used as a separator i.e. to mark the boundaries between different sentences or segments,[MASK] is used for masking i.e. to hide some tokens from the model during pre-training.\n[CLS] is used for classifications and to represent the entire input in the case of sentiment analysis,\n[SEP] is used as a separator i.e. to mark the boundaries between different sentences or segments,\n[MASK] is used for masking i.e. to hide some tokens from the model during pre-training.\nBERT tokenizer gives their components as outputs:input_ids: The numerical identifiers of the vocabulary tokenstoken_type_ids: It identifies which segment or sentence each token belongs to.attention_mask: It flags that inform the model which tokens to pay attention to and which to disregard.\ninput_ids: The numerical identifiers of the vocabulary tokens\ntoken_type_ids: It identifies which segment or sentence each token belongs to.\nattention_mask: It flags that inform the model which tokens to pay attention to and which to disregard.\nOutput:"
+  },
+  {
+    "input": "Step 5: Build the classification model",
+    "output": "Output:\nIf the task at hand is similar to the one on which the checkpoint model was trained, we can use TFBertForSequenceClassification to provide predictions without further training.\nOutput:"
+  },
+  {
+    "input": "Step 6:Evaluate the model",
+    "output": "Output:\nOutput:\nOutput:"
+  },
+  {
+    "input": "Step 7: Prediction with user inputs",
+    "output": "Output:\nYou can download the source code:Sentiment Classification Using BERT"
   }
 ]
