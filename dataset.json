@@ -14310,5 +14310,37 @@
   {
     "input": "Advantages of Doc2Vec",
     "output": "Doc2Vec can capture the semantic meaning of entire documents or paragraphs, unlike traditionalbag-of-wordsmodels that treat each word independently.\nIt can be used to generate document embeddings, which can be used for a variety of downstream tasks such as document classification,clustering, and similarity search.\nDoc2Vec can handle unseen words by leveraging the context in which they appear in the document corpus, unlike methods such asTF-IDFthat rely on word frequency in the corpus.\nIt can be trained on large corpora using parallel processing, making it scalable to big data applications.\nIt is flexible and can be easily customized by adjusting varioushyperparameterssuch as thedimensionalityof the document embeddings, the number of training epochs, and the training algorithm."
+  },
+  {
+    "input": "Preparing the dataset",
+    "output": "Thesentencecolumn has text and thelabelcolumn has the sentiment of the text - 0 for negative and 1 for positive. We first load the dataset followed by, some preprocessing before tuning the model."
+  },
+  {
+    "input": "Split dataset:",
+    "output": "After loading the data, split the data into train, validation ad test data. We are taking the 70:15:15 ratio for this division. The inbuilt function of sklearn is being used below to split the data. We use stratified attributes to ensure that the proportion of the categories remains the same after splitting the data."
+  },
+  {
+    "input": "Load pre-trained BERT model and tokenizer",
+    "output": "Next, we proceed with loading the pre-trained BERT model and tokenizer. We would use the tokenizer to convert the text into a format(which has input ids, attention masks) that can be sent to the model."
+  },
+  {
+    "input": "Deciding the padding length",
+    "output": "If we take the padding length as the maximum length of text found in the training texts, it might leave the training data sparse. Taking the least length would in turn lead to loss of information. Hence, we would plot the graph and see the \"average\" length and set it as the padding length to trade-off between the two extremes."
+  },
+  {
+    "input": "Tokenizing the data",
+    "output": "Tokenize the data and encode sequences using the BERT tokenizer."
+  },
+  {
+    "input": "Defining the model",
+    "output": "We first freeze the BERT pre-trained model, and then add layers as shown in the following code snippets:\nAlso, add an optimizer to enhance the performance:\nThen compute class weights, and send them as parameters while defining loss function to ensure imbalance in the dataset is handled well while computing the loss."
+  },
+  {
+    "input": "Training the model",
+    "output": "After defining the model, define a function to train the model (fine-tune, in this case):\nNow, define another function that would evaluate the model on validation data."
+  },
+  {
+    "input": "Test the data",
+    "output": "After fine-tuning the model, test it on the test dataset. Print a classification report to get a better picture of the model's performance.\nAfter testing, we would get the results as follows:\nLink to the full code ishere."
   }
 ]
