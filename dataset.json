@@ -14810,5 +14810,9 @@
   {
     "input": "4. Customizing Named Entity Recognition",
     "output": "Here we manually add a new named entity to spaCy's output. This technique is useful when you want to recognize specific terms that are not in the pre-trained model.\nWe useSpanto define the new entity.\nThe entity is added todoc.entsto update the output.\nOutput:\nHere \"Tesla\" wasmanually addedas an organization. In a full NER training setup you can retrain the model using annotated datasets.\nNamed Entity Recognition (NER) is an essential tool for extracting valuable insights from unstructured text for better automation and analysis across industries. spaCy’s flexible capabilities allow developers to quickly implement and customize entity recognition for specific applications. It also offers an efficient and scalable solution for handling named entity recognition in real-world text processing.\nYou can download source code fromhere."
+  },
+  {
+    "input": "Syntax:",
+    "output": "Here we give text in word_tokenize and it return word tokens\nNLTK offers useful and flexible tokenization tools that form the backbone of many NLP workflows. By understanding the differences between word-level tokenization with word_tokenize users can choose when to use it for general text analysis to specialized linguistic applications."
   }
 ]
