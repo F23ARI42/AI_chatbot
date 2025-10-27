@@ -14814,5 +14814,33 @@
   {
     "input": "Syntax:",
     "output": "Here we give text in word_tokenize and it return word tokens\nNLTK offers useful and flexible tokenization tools that form the backbone of many NLP workflows. By understanding the differences between word-level tokenization with word_tokenize users can choose when to use it for general text analysis to specialized linguistic applications."
+  },
+  {
+    "input": "What is VADER?",
+    "output": "VADER (Valence Aware Dictionary and sEntiment Reasoner)is asentiment analysistool which is designed to analyze social media text and informal language. Unlike traditional sentiment analysis methods it is best at detecting sentiment in short pieces of text like tweets, product reviews or user comments which contain slang, emojis and abbreviations. It uses a pre-built lexicon of words associated with sentiment values and applies specific rules to calculate sentiment scores."
+  },
+  {
+    "input": "How VADER Works?",
+    "output": "VADER works by analyzing thepolarityof words and assigning a sentiment score to each word based on its emotional value. These individual word scores are then combined to calculate an overall sentiment score for the entire text.\nIt usescompound scorewhich is a normalized value between -1 and +1 representing the overall sentiment:\nCompound score > 0.05: Positive sentiment\nCompound score < -0.05: Negative sentiment\nCompound score between -0.05 and 0.05: Neutral sentiment"
+  },
+  {
+    "input": "Step 1: Installing the vaderSentiment Library",
+    "output": "We need to installvaderSentimentlibrary which is required for sentiment analysis. We can use the following command to install it:"
+  },
+  {
+    "input": "Step 2: Importing the SentimentIntensityAnalyzer Class",
+    "output": "VADER uses theSentimentIntensityAnalyzerclass for analyzing sentiment. This class provides the functionality to find sentiment scores of a given text."
+  },
+  {
+    "input": "Step 3: Creating a Function to Calculate Sentiment Scores",
+    "output": "The functionsentiment_scores()will take a sentence as input and calculate the sentiment scores using VADER."
+  },
+  {
+    "input": "Step 4: Test the Sentiment Analysis Function",
+    "output": "Now let’s check thesentiment_scores()function with some example sentences. We will call the function with different sentences to see how VADER analyzes the sentiment.\nOutput :"
+  },
+  {
+    "input": "Step 5: Understanding the Output",
+    "output": "1st Statement:The text has 20.7% negative, 51.9% neutral and 27.4% positive sentiment. The compound score of 0.4404 shows a positive sentiment.\n2nd Statement:With 0% negative, 47.1% neutral and 52.9% positive. The compound score of 0.5423 also shows a positive sentiment.\n3rd Statement:The text has 40.8% negative, 39.5% neutral and 19.7% positive with a compound score of -0.3818 indicating a negative sentiment.\nVADER is a great tool for efficiently analyzing sentiment in various types of user-generated content which helps businesses and researchers to gain deeper insights into public opinions and emotions expressed in short-form texts."
   }
 ]
