@@ -14118,5 +14118,33 @@
   {
     "input": "How to write regular expressions?",
     "output": "There are certain elements  used to write regular expressions as mentioned below:\nThese symbols act as repeaters and tell the computer that the preceding character is to be used for more than just one time.\nIt tells the computer to match the preceding character (or set of characters) for 0 or more times (upto infinite).\nIt tells the computer to repeat the preceding character (or set of characters) at atleast one or more times(up to infinite).\nIt tells the computer to repeat the preceding character (or set of characters) for as many times as the value inside this bracket.\nThe dot symbol can take the place of any other symbol, that is why it is called the wildcard character.\nThis symbol tells the computer that the preceding character may or may not be present in the string to be matched.\nThe caret symbol tells the computer that the match must start at the beginning of the string or line.\n8.  The dollar ( $ ) symbol\nIt tells the computer that the match must occur at the end of the string or before \\n at the end of the line or string.\n9. Character Classes\nA character class matches any one of a set of characters. It is used to match the most basic element of a language like a letter, a digit, a space, a symbol, etc.\nMatches any single character that is not in set_of_characters. By default, the match is case-sensitive.\nMatches any single character in the range from first to last.\nIf you want to match for the actual ‘+’, ‘.’ etc characters, add a backslash( \\ ) before that character. This will tell the computer to treat the following character as a search character and consider it for a matching pattern.\nA set of different symbols of a regular expression can be grouped together to act as a single unit and behave as a block, for this, you need to wrap the regular expression in the parenthesis( ).\nMatches any one element separated by the vertical bar (|) character.\nBackreference:allows a previously matched sub-expression(expression captured or enclosed within circular brackets ) to be identified subsequently in the same regular expression. \\n means that group enclosed within the n-th bracket will be repeated at current position.\nInline comment: The comment ends at the first closing parenthesis.\nX-mode comment.The comment starts at an unescaped # and continues to the end of the line."
+  },
+  {
+    "input": "Concepts related to BPE",
+    "output": "To understand BPE better, it’s important to know its key concepts:"
+  },
+  {
+    "input": "How Byte-Pair Encoding (BPE) works?",
+    "output": "Suppose we have a text corpus with the following four words: \"ab\", \"bc\", \"bcd\" and \"cde\".  We begin by calculating the frequencies of each byte (character). Initial vocabulary consists of all the unique characters in the corpus like {\"a\", \"b\", \"c\", \"d\", \"e\"}.\n\"b\"appears3 times.\n\"c\"appears3 times.\n\"d\"appears2 times.\n\"a\"and\"e\"appear once.\nUpdate the frequency counts of all the bytes or characters that contain \"bc\":\n\"b\"'s frequency decreases to1because the pair\"bc\"now represents both\"b\"and\"c\"together.\nSimilarly,\"c\"'s frequency drops to 1 as well.\nAdd \"bc\" to the vocabulary:\nThis representation helps in reducing the vocabulary size while maintaining the original meaning and structure of the text."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We will be usingdefaultdictfromcollectionsto easily manage the frequency of character pairs and subword units. This is important for storing and updating vocabulary during the BPE process."
+  },
+  {
+    "input": "2. Initializing Vocabulary with Character Pairs",
+    "output": "learn_bpefunction is designed to learn and return the most frequent character pairs from the input text. It also merges these frequent pairs iteratively.\nLoop splits each word into characters and adds start (<) and end (>) markers to each word.\ndefaultdict(int)to initialize frequency counts of words automatically to zero.\npairrefers to each consecutive character pair in the word.\nWe count the occurrence of each pair in thevocab."
+  },
+  {
+    "input": "3. Finding the Most Frequent Pair and Merging",
+    "output": "We iterate through the vocabulary to find the most frequent adjacent character pair and perform the merge.Process repeats for a defined number of merges(num_merges).\nmost_frequent = max(vocab, key=lambda x: vocab[x]): Finds the pair with the highest frequency.\nWe then store this pair in themergeslist.\nWe create a new vocabulary where we replace occurrences of the pair with a new merged character."
+  },
+  {
+    "input": "4. Applying the Learned Merges",
+    "output": "In theapply_bpefunction, we take a word and apply the previously learned merges. We iterate over the list of merges in reverse order, merging the pairs in the text. For each merge we look for matching adjacent character pairs and replace them with the merged character."
+  },
+  {
+    "input": "5. Example Usage",
+    "output": "Finally we demonstrate the usage of thelearn_bpeandapply_bpefunctions with a sample corpus. We first learn the BPE merges from the corpus\"ab bc bcd cde\"and then apply the learned merges to the word\"bcd\".\nOutput:\nLearned mergesshow the most common pairs of characters that were combined into new subwords. These pairs were merged during the training process to create subword units. When applying BPE to the word\"bcd\"learned merges split it into the subwords['<b', 'cd', '>']."
   }
 ]
