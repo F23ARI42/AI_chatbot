@@ -15450,5 +15450,53 @@
   {
     "input": "Step 4:Give prompts and Check Result",
     "output": "1. Summarization\nOutput:\n2. Translation\nOutput:\n3. Paraphrasing\nOutput:\n4. Question-Generation\nOutput:\n5. Sentiment Analysis\nOutput :\nWe ca see that our Text2text generation model using hugging face is working fine."
+  },
+  {
+    "input": "Some of the features of the TextaCy module are as follows:",
+    "output": "It provides the facility of text cleaning and preprocessing by replacing and removing punctuation, extra whitespaces, numbers, etc from the text before processing it with spaCy.\nIt includes automatic language detection and tokenizes and vectorizes the documents and then train and interpret the topic models.\nCustom extensions can be added to extend the main functionality of spaCy for working with one or more documents.\nLoad prepared datasets that contain both text content and information, such as Reddit comments, Congressional speeches, and historical books.\nIt provides facility to extract features such as n-grams, entities, acronyms, keyphrases and SVO triples as structured data from processed documents.\nStrings and sequences can be compared using a variety of similar metrics.\nCalculates text readability and lexical variety data, such as the Type-Token Ratio, Multilingual Flesch Reading Ease, and Flesch-Kincaid Grade Level."
+  },
+  {
+    "input": "Installation of TextaCy module:",
+    "output": "We can install the textaCy module using pip.\nIf someone uses conda then write the following command -"
+  },
+  {
+    "input": "Examples of some of its features:",
+    "output": "Here we will see some of the notable features of textaCy module."
+  },
+  {
+    "input": "Remove Punctuation",
+    "output": "Using the preprocessing class of textacy module we can easily remove punctuation from our text.\nThe text used here is a randomly generated text from an external website. Firstly, we importedpreprocessingclass oftextacymodule and then used theremoveandpunctuationmethods to remove the punctuations.\nOutput:"
+  },
+  {
+    "input": "Remove unnecessary Whitespace",
+    "output": "We can remove unnecessary whitespaces from our text. It will remove all the extra spaces we have and cut them all to only a single space after each word.\nHere we used thenormalizeclass andwhitespacemethod to remove whitespaces.\nOutput:\nIn the output, we can see all the excess whitespace is being removed but the punctuations are still there. So if we want to remove that too then we can amalgamate both operations."
+  },
+  {
+    "input": "Removing Punctuation and Whitespace together",
+    "output": "Output:"
+  },
+  {
+    "input": "Partition a text",
+    "output": "Sometimes the text we receive or use is 'raw' means unstructured, messy, etc, so before analysis, in the preprocessing stage, we might need to clean them up and partition them based on certain criteria.\nOutput:\nNow the output looks a bit complex because the text used here was not appropriate for this cause. But as I have used the text which was already punctuation and whitespace free we can't see any punctuation or extra whitespace. The blank spaces created here are due to the window_width, all the whitespace that was there in the text has been removed alongside the punctuation.\nThe below section shows the result if we don't remove the punctuation or whitespace earlier, I didn't include the entire output as it is big and as all the punctuation is available alongside whitespace it would look messy."
+  },
+  {
+    "input": "Replace URLs from text with other text",
+    "output": "We can remove any unnecessary URLs from our text and replace it with some other text -\nOutput:"
+  },
+  {
+    "input": "Replace emails with other text",
+    "output": "Output:"
+  },
+  {
+    "input": "Replace phone number",
+    "output": "Output:\nIf we pass more than one number then this will replace all of them withNUM.\nOutput -"
+  },
+  {
+    "input": "Replace any number",
+    "output": "Output:"
+  },
+  {
+    "input": "Remove texts surrounded by Brackets and the brackets too:",
+    "output": "Output:\nWe can also pass an keyworded argument calledonlyand pass a list of type brackets we only want to be removed. It supports three valuessquare, curly  , round.\nOutput:"
   }
 ]
