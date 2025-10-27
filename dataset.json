@@ -15266,5 +15266,41 @@
   {
     "input": "Best Practices:",
     "output": "Use dropout layers (0.2–0.5): Randomly dropping connections during training reduces overfitting and helps the network to learn more robust features.\nApply L2 regularization: Adds a penalty to the loss function for large weights in dense layers, promoting simpler models that generalize better.\nImplement early stopping: Stops training when validation loss stops improving, preventing unnecessary epochs and reducing overfitting risk.\nEmploy multiple filter sizes: Using different kernel sizes in convolutional layers captures patterns of varying lengths (e.g., bi-grams, tri-grams), improving feature extraction."
+  },
+  {
+    "input": "Logistic Regression Working for Text Classification",
+    "output": "Logistic Regressionis a statistical method used forbinary classificationproblems and it can also be extended to handle multi-class classification. When applied to text classification, the goal is to predict the category or class of a given text document based on its features. Below are the steps for text classification in logistic regression.\n1. Text Representation:\nBefore applying logistic regression text data should be converted as numerical features known astext vectorization.\nCommon techniques for text vectorization includeBag of Words (BoW),Term Frequency-Inverse Document Frequency (TF-IDF), or more advanced methods like word embeddings (Word2Vec,GloVe) or deep learning-based embeddings.\n2. Feature Extraction:\nOnce data is represented numerically, these representations can be used as features for model.\nFeatures could be the counts of words in BoW, the weighted values in TF-IDF, or the numerical vectors in embeddings.\n3. Logistic Regression Model:\nLogistic Regression models the relationship between the features and the probability of belonging to a particular class using the logistic function.\nThe logistic function (also called the sigmoid function) maps any real-valued number into the range [0, 1], which is suitable for representing probabilities.\nThe logistic regression model calculates a weighted sum of the input features and applies the logistic function to obtain the probability of belonging to the positive class."
+  },
+  {
+    "input": "Logistic Regression Text Classification with Scikit-Learn",
+    "output": "We'll use the popularSMS Collection Dataset, consists of a collection of SMS (Short Message Service) messages, which are labeled as either \"ham\" (non-spam) or \"spam\" based on their content. The implementation is designed to classify text messages into two categories: spam (unwanted messages) and ham (legitimate messages) using a logistic regression model. The process is broken down into several key steps:"
+  },
+  {
+    "input": "Step 1. Import Libraries",
+    "output": "The first step involves importing necessary libraries.\nPandasis used for data manipulation.\nCountVectorizerfor converting text data into a numeric format.\nVarious functions fromsklearn.model_selectionandsklearn.linear_modelfor creating and training the model.\nfunctions fromsklearn.metricsto evaluate the model's performance."
+  },
+  {
+    "input": "Step 2. Load and Prepare the Data",
+    "output": "Load the dataset from a CSV file and rename columns for clarity.\nlatin-1 encodingis specified to handle anynon-ASCIIcharacters that may be present in the file\nMap labels from text to numeric values (0 for ham, 1 for spam), making it suitable for model training."
+  },
+  {
+    "input": "Step 3. Text Vectorization",
+    "output": "Convert text data into a numeric format usingCountVectorizer, which transforms the text into a sparse matrix of token counts."
+  },
+  {
+    "input": "Step 4. Split Data into Training and Testing Sets",
+    "output": "Divide the dataset into training and testing sets to evaluate the model's performance on unseen data."
+  },
+  {
+    "input": "Step 5. Train the Logistic Regression Model",
+    "output": "Create and train the logistic regression model using the training set.\nOutput:"
+  },
+  {
+    "input": "Step 6. Model Evaluation",
+    "output": "Use the trained model to make predictions on the test set and evaluate the model's accuracy and confusion matrix to understand its performance better.\nOutput:\nThe model is 97.4% correct on unseen data. TheConfusion Matrixstated:\n1199 messages correctly classified as 'ham'.\n159 messages correctly classified as 'spam'.\n32 'ham' messages wrongly labeled as 'spam'\nand 3 'spam' wrongly labeled as 'ham'."
+  },
+  {
+    "input": "Step 7. Manual Testing Function to Classify Text Messages",
+    "output": "To simplify the use of this model for predicting the category of new messages we create a function that takes a text input and classifies it as spam or ham.\nOutput:\nThis function first vectorizes the input text using the previously fitted CountVectorizer then predicts the category using the trained logistic regression model, and finally returns the prediction as a human-readable label.\nThis experiment demonstrates that logistic regression is a powerful tool for classifying text even with a simple approach. Using the SMS Spam Collection dataset we achieved an impressive accuracy of 97.6%. This shows that the model successfully learned to distinguish between spam and legitimate text messages based on word patterns."
   }
 ]
