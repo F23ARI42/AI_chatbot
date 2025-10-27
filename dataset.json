@@ -15558,5 +15558,45 @@
   {
     "input": "Conclusion",
     "output": "In conclusion, pretrained models in NLP, such as BERT, GPT-2, ELMo, Transformer-XL, and RoBERTa, have revolutionized language understanding and application development. These models, trained on extensive datasets, provide a foundational basis for various NLP tasks, offering efficiency and superior performance."
+  },
+  {
+    "input": "1. Installing and Importing Required Libraries",
+    "output": "First, we will install the Hugging Face transformers library. Thetransformerslibrary from Hugging Face provides pre-trained models and tokenizers.\nWe are importingPyTorchfor tensor operations and model training.\nDataLoader and TensorDataset help load and batch data efficiently during training.\ntorch.nn.functional provides functions like softmax for calculating prediction probabilities.\nAdamW is the optimizer suited for transformer models.\nBertTokenizer converts text into tokens that BERT can understand.\nBertForSequenceClassification loads the BERT model adapted for classification tasks."
+  },
+  {
+    "input": "2. Loading the Pre-Trained BERT Model and Tokenizer",
+    "output": "We load thebert-base-uncased model and its tokenizer. The tokenizer converts raw text into input IDs and attention masks which BERT requires.\nBertTokenizer.from_pretrained(): Prepares text for BERT input.\nBertForSequenceClassification.from_pretrained():Loads BERT configured for classification tasks with two output labels like positive and negative.\nMove the model to GPU if available:"
+  },
+  {
+    "input": "3. Preparing the Training Dataset",
+    "output": "We create a small labeled dataset for sentiment analysis. Here:\n1 represents positive sentiment\n0 represent negative sentiment."
+  },
+  {
+    "input": "4. Tokenizing the Dataset",
+    "output": "Thetokenizerprocesses text into fixed-length sequences, adding padding and truncation as needed.\npadding=True:Ensures all input sequences have the same length.\ntruncation=True:Shortens long sentences beyond max_length=128."
+  },
+  {
+    "input": "5. Creating a DataLoader for Efficient Training",
+    "output": "Data is wrapped in TensorDataset and loaded into DataLoader to enable mini-batch training which improves training efficiency and stability.\nTensorDataset(): Combines input IDs, attention masks and labels into a dataset.\nDataLoader():Loads data in mini-batches to improve efficiency."
+  },
+  {
+    "input": "6. Defining the Optimizer",
+    "output": "We use the AdamW optimizer which works well with transformer models."
+  },
+  {
+    "input": "7. Training the model",
+    "output": "The training loop iterates over batches, computing loss and gradients, updating model weights and tracking accuracy.\noptimizer.zero_grad():Clears gradients before each batch.\nmodel(...):Runs forward pass and calculates loss.\nloss.backward():Backpropagates the error.\noptimizer.step():Updates model weights based on gradients.\ntorch.argmax(F.softmax(...)):Determines predicted class.\nOutput:"
+  },
+  {
+    "input": "7. Saving and Loading the Fine-Tuned Model",
+    "output": "We can save the model using torch.save() function. The model’s state dictionary is saved and can be reloaded later for inference or further training.\nSaving the model:\nLoading the fine-tuned model:"
+  },
+  {
+    "input": "8. Creating test data for Evaluation",
+    "output": "We prepare a test dataset and run the fine-tuned model to measure accuracy and make predictions on new text samples.\ntorch.tensor([...]).to(device)converts the label list into a tensor and moves it to the computing device like CPU or GPU.\ntokenizer(test_texts, padding=True, truncation=True, max_length=128, return_tensors='pt')tokenizes the test texts.\nencoded_test['input_ids']extracts token IDs representing each word or subword.\nencoded_test['attention_mask']extracts attention masks indicating which tokens should be attended to (1) and which are padding (0)."
+  },
+  {
+    "input": "9. Making Predictions and Evaluating Performance",
+    "output": "We set the model to evaluation mode using model.eval() to disable training-specific layers like dropout. Accuracy is calculated by comparing predicted labels to true labels and computing the percentage correct. Each test text and its predicted label are printed in a loop for review.\ntorch.no_grad() disables gradient calculations for faster and more memory-efficient inference.\nThe model processes inputs with model(input_ids=..., attention_mask=...) to produce output logits.\ntorch.argmax(outputs.logits, dim=1) selects the class with the highest score as the prediction.\nOutput:\nHere we can see that our model is working fine."
   }
 ]
