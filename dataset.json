@@ -14342,5 +14342,69 @@
   {
     "input": "Test the data",
     "output": "After fine-tuning the model, test it on the test dataset. Print a classification report to get a better picture of the model's performance.\nAfter testing, we would get the results as follows:\nLink to the full code ishere."
+  },
+  {
+    "input": "What is word embedding?",
+    "output": "Word embedding is an unsupervised method required for various Natural Language Processing (NLP) tasks like text classification, sentiment analysis, etc. Generating word embeddings from Bidirectional Encoder Representations from Transformers (BERT) is an efficient technique. BERT can be commonly referred to as a pre-trained language model, which can also be used for NLP tasks by fine-tuning."
+  },
+  {
+    "input": "Some of the popular word-embedding techniques",
+    "output": "There are some well-known word-embedding techniques are discussed below:\nTerm Frequency-Inverse Document Frequency(TF-IDF)\nBag of Words(BoW)\nWord2Vec\nGlobal Vector for Word Representation(Glove)\nIn this article, we will generate word embeddings using the BERT model."
+  },
+  {
+    "input": "Architecture of BERT",
+    "output": "BERTis a commonly used state-of-the-art deep learning model for various NLP tasks. We will explore its architecture below:\nTransformer Architecture:Transformers are highly parallelizable and efficient for capturing long-range dependencies in text. BERT utilizes transformers architecture which enables self-attention mechanisms and feedforward neural networks.\nBidirectional Encoding:Old models used to read text in only one direction(mostly left to right). But BERT has a bidirectionality feature that enables to processing of the text from both directions i.e. left to right and right to left. For this feature, BERT can effectively analyze the context of each word by considering all the words in the sentence.\nPre-training and Fine-tuning:BERT is capable of learning rich and contextualized word representations as it is pre-trained on a massive corpus of text data. And we can perform fine-tuning on this pre-trained data as per our requirement which makes BERT highly adaptable and effective for various NLP tasks.\nMulti-Layer Stacking:BERT consists of stacked transformers i.e. it has multiple layers of transformers stacked on top of each other. This feature enables BERT to capture more complex contextual information.\nEmbedding Layers:BERT utilizes Word Piece tokenization where each word of the input sentence breaks down into sub-word tokens.\nMasked Language Modeling (MLM):BERT is also trained to predict masked words within a sentence. This forces the model to understand the context of words in relation to their surroundings."
+  },
+  {
+    "input": "Why do we need to use BERT",
+    "output": "There are several reasons which made BERT a common choice for NLP tasks. The reasons are discussed below:"
+  },
+  {
+    "input": "How BERT is better than Word2vec?",
+    "output": "BERT and Word2vec both are famous for generating word-embeddings for different NLP tasks. But somehow BERT outperforms over Word2vec. The reasons are discussed below:"
+  },
+  {
+    "input": "Installing transformers module",
+    "output": "There is a high probability that the most importanttransformersmodule will not be pre-installed in your Python environment. To install it write the following line of code only."
+  },
+  {
+    "input": "Importing required libraries",
+    "output": "Now, we will import all necessaryPythonlibraries likePyTorchetc."
+  },
+  {
+    "input": "Setting random seed",
+    "output": "We will setrandom seedfor PyTorch to get high reproducibility. It is good practice to use random seeding when we use any kind of model loading in our code. It also handles the randomness of GPU(if any)."
+  },
+  {
+    "input": "Loading BERT Pre-trained Model",
+    "output": "Now we will load our BERT model along with tokenizer. Here we have used 'bert-base-uncased' which is the most commonly used of several NLP tasks. This will convert all upper case character present in input text to lower case. For all general NLP tasks like text classification, Sentiment analysis and Named entity recognition, this variant is used. However for advanced usage you can use 'bert-base-cased' which will keep the case sensitivity of the characters."
+  },
+  {
+    "input": "Tokenize and Encode Text",
+    "output": "Now we will consider any input text and tokenize it using BERT tokenizer (batch_encode_plus). This is basically Word Piece tokenization which split each word of sentence into sub-word tokens. Then we will encode these tokens into IDs. We will also set the add_special_tokens parameter 'True' to add special token like SEP and CLS in tokenized text. SEP special token is used for separating different segments or sentences within a single input sequence. It is also should be inserted between two sentences or segments. And the CLS special token is the first token in every input sequence. It is used to represent the entire input sequence in a single vector and called as the \"CLS\" embedding. Adding special tokens is a good practice when working with word Embeddings.\nOutput:\nSo, for each token attention is 1 so,  overall attention score is 1 which denotes that out BERT model is considering the entire input sequence to generate the embeddings for each token. Getting attention score 1 is very good as it effectively capturing all context. However, if you use very long input sequence the attention score may drop. This score denotes that how much attention should be given to that token for generating word-embeddings. Here, all tokens are fully attended."
+  },
+  {
+    "input": "Generating Word Embeddings",
+    "output": "Now we will pass the tokens and encoded input through BERT model. The model will generate embeddings for each tokens.\nOutput:\nThe shape of Word embeddings is [1, 12, 768] where 768 is the dimensionality/hidden size of the word embeddings generated by our BERT model (bert-base-uncased variant mode). Each token is represented by a 768-dimensional vector and 12 is the number of tokens in our input text after tokenization. Here 1 is nothing but batch dimension i.e. the total number of sentences(input sequences) we have passed(here only one sentence)."
+  },
+  {
+    "input": "Decode and Encode the text",
+    "output": "Here we will decode the token IDs back to text using a function (tokenizer.decode) then tokenize it (tokenizer.tokenize) and finally encode it (tokenizer.encode).\nOutput:\nIf you look into the decoded text which is same with input text but only changed with all lower case as we used bert-base-uncased variant mode. And Encoded text and Input IDs are same as tokenizer.encode and tokenizer.batch_encode_plus both variables produces same sequence of token IDs for a particular input text. As discussed previously BERT can handleout-of-vocabulary(new word to its pre-trained corpus) words which is here 'GeeksforGeeks'. So, it is broken down into sub-word tokens."
+  },
+  {
+    "input": "Extract and print Word Embeddings",
+    "output": "Finally, we will extract the generated word embeddings and print them. Word embeddings are contextual and can capture the meaning of each word present in the sentence. We also print the shape of embedding. We will not print tokens here as it is not needed. If you wish you can also print them by uncommenting the token printing line present in for loop.\nOutput:\nIt will generate a very large output. A little portion of embedding is provided for understanding purpose. So, the output we have shown the some portions of embeddings of the fast and last token only."
+  },
+  {
+    "input": "Printing Sentence Embedding",
+    "output": "We will also generate sentence embedding by computing average of word embeddings using average pooling.\nOutput:\nIt will also generate a large output along with shape of sentence embedding which is [number of sentences, hidden size]."
+  },
+  {
+    "input": "Computing similarity metrics",
+    "output": "Now we will compute similarity metrics of a example sentence(GeeksforGeeks is a technology website) with our original sentence(GeeksforGeeks is a computer science portal) which is used till now. Checking similarity metrics or index is the most used task of word embeddings.\nOutput:\nSo, more than 95% similarity is encountered."
+  },
+  {
+    "input": "Conclusion",
+    "output": "So we can conclude that, generating Word embeddings is very much necessary for various NLP task. The size of output of the word embedding may be huge but they are can capture the meaning of each token present in the sentence which can play an essential role in sentiment analysis and text classification."
   }
 ]
