@@ -14182,5 +14182,49 @@
   {
     "input": "8. Prediction on Unseen Data",
     "output": "Output:\nHere we can see our model is working fine and can predict on unseen data accurately. Naive Bayes is a useful model for text classification tasks especially when the dataset is large and the features (words) are relatively independent."
+  },
+  {
+    "input": "Why is text classification important?",
+    "output": "Text classification datasets play a crucial role in advancing research and development in NLP and related fields. They enable researchers, data scientists, and practitioners to:"
+  },
+  {
+    "input": "1. IMDb Movie Reviews",
+    "output": "TheIMDb Movie Reviewsdataset contains movie reviews from the IMDb website labeled as positive or negative sentiment. It is commonly used for sentiment analysis and binary text classification tasks. The dataset provides a large collection of text samples with corresponding sentiment labels, making it suitable for training and evaluating sentiment analysis models."
+  },
+  {
+    "input": "2. AG News",
+    "output": "TheAG News datasetconsists of news articles categorized into four classes: World, Sports, Business, and Science/Technology. It is commonly used for topic classification and text categorization tasks. The dataset provides a diverse collection of news articles across different domains, allowing researchers to train models for topic classification and news categorization."
+  },
+  {
+    "input": "3. 20 Newsgroups",
+    "output": "The 20 Newsgroups dataset contains posts from 20 different newsgroups covering diverse topics such as politics, religion, sports, and technology. It is commonly used for topic categorization, text classification, and document clustering research. The dataset provides a benchmark for evaluating algorithms and techniques in text classification and topic modeling."
+  },
+  {
+    "input": "4. Reuters-21578",
+    "output": "The Reuters-21578 dataset consists of news articles from the Reuters news agency labeled with topics and categories. It is widely used for document categorization, text classification, and information retrieval tasks. The dataset covers a broad range of topics and provides a standard benchmark for evaluating text classification algorithms and techniques."
+  },
+  {
+    "input": "5. Spam Email Detection Datasets",
+    "output": "Spam email detection datasets contain email messages labeled as spam or non-spam (ham). These datasets are used for email filtering, spam detection, and text classification tasks. They typically include features extracted from email content and metadata, such as sender information, subject lines, and message body."
+  },
+  {
+    "input": "6. Twitter Sentiment Analysis Datasets",
+    "output": "Twitter sentiment analysis datasets consist of tweets labeled with sentiment labels such as positive, negative, or neutral. These datasets are used for sentiment analysis, opinion mining, and social media analytics tasks. They provide a snapshot of public opinion and sentiment expressed on Twitter."
+  },
+  {
+    "input": "7. Yelp Reviews",
+    "output": "TheYelp Reviews datasetcontains user reviews and ratings from the Yelp platform, covering various businesses and establishments. It is commonly used for sentiment analysis, opinion mining, and recommendation system research. The dataset includes text reviews along with corresponding ratings, making it suitable for text classification tasks."
+  },
+  {
+    "input": "8. Amazon Reviews",
+    "output": "TheAmazon Reviews datasetconsists of user reviews and ratings for products sold on the Amazon platform. It is used for sentiment analysis, product recommendation, and text classification tasks. The dataset provides a large collection of text reviews across different product categories, allowing researchers to train models for various text analysis tasks."
+  },
+  {
+    "input": "9. Stack Overflow Questions",
+    "output": "Stack Overflow Questions dataset contains questions posted on the Stack Overflow platform, a popular question-and-answer website for programming-related topics. It is used for text classification, topic modeling, and question categorization tasks. The dataset provides a diverse collection of questions across programming languages, frameworks, and technologies."
+  },
+  {
+    "input": "10. BBC News Classification Dataset",
+    "output": "The BBC News Classification Dataset consists of news articles from the BBC website labeled with categories such as business, entertainment, politics, sports, and tech. It is commonly used for text classification and news categorization tasks. The dataset provides a benchmark for evaluating text classification models in the news domain."
   }
 ]
