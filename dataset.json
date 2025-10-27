@@ -14914,5 +14914,57 @@
   {
     "input": "Conclusion",
     "output": "We can conclude that, relation extraction is an important task in NLP and can be done by using various models. Our approach gives a desired output by covering Open Information extraction and Binary extraction techniques. However, an un-usual output, 'GeeksforGeeks->GeeksforGeeks' is generated which shows that there is more requirement of fine-tuning. Here, we have used already available fine-tuned model, but we can also perform manual fine-tuning, or another available fine-tuned model can be used as per requirement."
+  },
+  {
+    "input": "Why Use RNNs for Text Classification?",
+    "output": "Recurrent Neural Networks (RNNs)are designed to capture the dependencies and context within sequential data which makes them ideal for language-related tasks. They can remember information from previous inputs which helps them understand the context of words. Text classification tasks like sentiment analysis, require us to understand the context of words in a sentence. RNNs are especially good for these tasks because they:\nCapture Context:They remember what happened before, helping us understand how the meaning of one word relates to the words around it.\nHandle Sequential Data:Since text is sequential, they are a natural fit for processing it.\nWork with Variable-Length Inputs:Text data comes in different lengths and they can process sequences of any size."
+  },
+  {
+    "input": "Implementing RNN for Text Classification",
+    "output": "Let's see the steps required to implement an RNN model for sentiment analysis using the IMDB movie review dataset."
+  },
+  {
+    "input": "1. Importing Required Libraries",
+    "output": "We need to import necessary libraries such asTensorFlowfor model building,NumPyfor handling numerical operations andMatplotlibfor visualizations."
+  },
+  {
+    "input": "2. Loading the IMDB Dataset",
+    "output": "The IMDB dataset contains movie reviews, labeled as positive or negative. We load the dataset and separate it into training and testing datasets. Batching the data into smaller chunks improves efficiency during training."
+  },
+  {
+    "input": "3. Printing Sample Review and Label",
+    "output": "We print a sample review and its corresponding label (0 for negative, 1 for positive) to understand the structure of the dataset.\nOutput:"
+  },
+  {
+    "input": "4. Text Vectorization",
+    "output": "To convert the text into a numerical form, we use TensorFlow'stext vectorization layerwhich tokenizes the text and converts each word into a sequence of integers. This prepares the text data for the neural network. We can also see in the example below how we can encode and decode the sample review into a vector of integers.\nOutput:"
+  },
+  {
+    "input": "5. Building the Model",
+    "output": "We define the architecture of the RNN. This consists of the following layers:\nOutput:"
+  },
+  {
+    "input": "6. Compiling the Model",
+    "output": "Now, we compile the model. Thebinary cross-entropy loss functionis used since this is a binary classification task (positive or negative sentiment). We also specify theAdam optimizerand track accuracy as the evaluation metric."
+  },
+  {
+    "input": "7. Training the Model",
+    "output": "Next, we train the model using the training dataset for 5 epochs and validate it on the test dataset to evaluate its performance on unseen data.\nOutput:"
+  },
+  {
+    "input": "8. Visualizing the Results",
+    "output": "To visualize the performance of the model, we plot the training and validation accuracy and loss across epochs.\nOutput:\nHere we visualized the training and validation accuracy as well as the training and validation loss over epochs. It extracts accuracy and loss values from the training history (history_dict). Here the left subplot displays accuracy trends and the right subplot shows loss trends over epochs."
+  },
+  {
+    "input": "9. Testing the Trained Model",
+    "output": "Finally, we test the trained model with a random movie review. The model predicts whether the review is positive or negative based on its learned patterns.\nOutput:\nHere for the sample text the review is Positive which is true so we can say that our model is working fine."
+  },
+  {
+    "input": "Advantages of RNNs for Text Classification",
+    "output": "Recurrent Neural Networks (RNNs) offer various advantages for text classification tasks in Natural Language Processing (NLP):"
+  },
+  {
+    "input": "Disadvantages of RNNs for Text Classification",
+    "output": "Despite being useful, RNNs have some limitations when used for text classification:\nBy mastering RNNs we can create models that efficiently process and classify complex text data so that we can understand patterns and structures of language."
   }
 ]
