@@ -14554,5 +14554,37 @@
   {
     "input": "Choosing the Right Algorithm",
     "output": "The key to effective summarization with Sumy lies in understanding our text characteristics and choosing the algorithm that best matches specific requirements. Experimenting with different approaches and sentence counts will help us find the optimal configuration for the use case."
+  },
+  {
+    "input": "1. Importing the required libraries",
+    "output": "We will import the following libraries :\npandas: For easy data loading and handling.\nnumpy: For numerical operations.\ntensorflow: To build and train the GRU model.\nrandom: For generating random starting points in text."
+  },
+  {
+    "input": "2. Loading the data into a string",
+    "output": "Here we are using a dataset of poems to train our GRU model. You can download dataset fromhere. We load the text lines into a pandas Data Frame, join all lines into one string and preview the first 500 characters.\nOutput:"
+  },
+  {
+    "input": "3.Creating Character Mappings",
+    "output": "We will extract unique characters in the text and create mappings from characters to indices and back.\nset(text):Converts the text into a set to find unique characters.\nvocabulary:A sorted list of all unique characters in the text.\nchar_to_indices: Maps each character to a unique index.\nindices_to_char: The reverse mapping, mapping each index back to its corresponding character."
+  },
+  {
+    "input": "4.Prepare Input and Output Sequences",
+    "output": "We will split the text into overlapping sequences of length 100. For each sequence, the next character is the label. Then we alsoOne-hot encodeinputs and outputs.\nmax_length: Defines the length of each input sequence (100 characters).\nsteps: Defines the step size by which the sliding window moves (5 characters).\nsentences:List of subsequences of length max_length.\nnext_chars:List of the character that follows each subsequence.\nXandy: Arrays to hold the one-hot encoded input and output data.\nX[i, t, char_to_indices[char]] = 1:One-hot encodes each character in the input sequence.\ny[i, char_to_indices[next_chars[i]]] = 1: One-hot encodes the next character for the output."
+  },
+  {
+    "input": "5. Building the GRU network",
+    "output": "We will create a single GRU layer with 128 units with the following:\nGRU(128): Adds a GRU layer with 128 units which will process the input sequences and retain memory of previous inputs.\nDense(len(vocabulary)):The output layer with a number of units equal to the size of the vocabulary where each unit corresponds to a unique character.\nActivation('softmax'): Thesoftmax activationfunction ensures the output is a probability distribution over all characters.\nRMSprop(learning_rate=0.01): SpecifiesRMSprop optimizerwith a learning rate of 0.01.\nmodel.summary():Displays a detailed summary of the model architecture including layer types, output shapes and number of parameters.\nmodel.compile():Compiles the model withcategorical cross-entropy loss(used for multi-class classification) and the RMSprop optimizer.\nOutput:"
+  },
+  {
+    "input": "6. Training the GRU model",
+    "output": "The model.fit() function trains the model on the input data (X) and target labels (y) for 30 epochs with a batch size of 128.\nOutput:"
+  },
+  {
+    "input": "7. DefiningText Generation Function",
+    "output": "We define sample and generation functions where :\nsample(preds, temperature):Adjusts model output probabilities with temperature to control randomness, then samples the next character index from the distribution.\ngenerate_text(length, temperature):Starts with a random seed sequence, repeatedly predicts the next character using the model and sample(), updates the input sequence and builds generated text of the specified length."
+  },
+  {
+    "input": "8. Generate Sample Text",
+    "output": "We can generate same text using our trained model now.\nHere we can see model is working fine and now can be used for generating text using GRU."
   }
 ]
