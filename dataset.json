@@ -15214,5 +15214,57 @@
   {
     "input": "Real-World Applications",
     "output": "Subword tokenization is essential in transformer models like GPT, BERT and T5.\nGPT-2 uses Byte-Pair Encoding (BPE) on bytes, allowing it to process any Unicode text.\nBERT uses WordPiece, which selects subword units based on how likely they are to appear.\nVocabulary size is compact (30k–50k tokens), making it efficient for memory and computation.\nIt replaces huge word lists (with millions of entries) while still handling a wide variety of words.\nSubword tokenization has become essential for multilingual models, where a single vocabulary must represent dozens of languages with different writing systems and morphological structures. By learning subword patterns across languages these models can achieve better cross-lingual transfer and handle code-switching scenarios."
+  },
+  {
+    "input": "Why use of CNN-based text classification?",
+    "output": "Automatic feature extraction from raw text\nAbility to capture local text patterns and n-gram features\nRobust performance across various text classification tasks\nLess preprocessing required compared to traditional methods"
+  },
+  {
+    "input": "CNN Architecture for Text Processing",
+    "output": "Convolutional Neural Networks adapt to text by treating documents as sequences of words rather than spatial images. This adaptation requires modifications to traditional CNN architectures while preserving the core convolution and pooling operations.\nEmbedding Layer: Converts words to dense vector representations\nConvolutional Layers: Apply filters to detect local text patterns\nPooling Layers: Reduce dimensionality while preserving important features\nFully Connected Layers: Combine features for final classification\nOutput Layer: Produces probability distributions over target classes\nThe embedding layer serves as the foundation, transforming discrete word tokens into continuous vector space where semantic relationships can be captured. These embeddings can be randomly initialized or pre-trained using methods likeWord2VecorGloVe.\nConvolutional layers then apply multiple filters of varying sizes (typically 3, 4 and 5 words) to capture different n-gram patterns. Each filter learns to detect specific linguistic patterns that are relevant for the classification task."
+  },
+  {
+    "input": "Filter size considerations:",
+    "output": "Size 3: Captures trigrams and short phrases\nSize 4: Detects longer phrase patterns\nSize 5: Identifies extended expressions and longer dependencies\nMultiple sizes: Provides comprehensive pattern coverage"
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "We will import the required libraries such as tensorflow, numpy required for building CNN model, creating layers, handling numerical operations and padding text sequences.\ntensorflow.keras:Used for importing layers likeEmbedding,Conv1DandSequentialfor model building.\nimdb: Loads the IMDB dataset.\npad_sequences: Pads text sequences to a fixed length."
+  },
+  {
+    "input": "2. Loading Data",
+    "output": "We will load and preprocess the IMDB dataset.\nimdb.load_data(num_words=10000): Loads the IMDB dataset, keeping only the 10,000 most frequent words.\npad_sequences(sequences, maxlen=500): Pads or cuts reviews so each is exactly 500 words long."
+  },
+  {
+    "input": "3. Building CNN model",
+    "output": "We build a CNN model that converts words into vectors, selects important features using pooling and combines them in fully connected layers. Dropout prevents overfitting and the final layer outputs a probability for classification.\nmodels.Sequential(): Creates a linear stack of layers where each layer passes output to the next.\nlayers.Embedding(input_dim=10000, output_dim=100, input_length=500): Converts word indices into 100‑dimensional vectors, helping the model learn word meanings. Handles a vocabulary of 10,000 words and sequences of 500 words.\nlayers.Conv1D(filters=128, kernel_size=5, activation='relu'): Applies 128 sliding filters that look at 5 words at a time to detect patterns.\nlayers.GlobalMaxPooling1D(): Reduces data by taking the maximum value from each filter’s output, keeping only the most important features.\nlayers.Dense(64, activation='relu'): A fully connected layer with 64 neurons that learns complex patterns.\nlayers.Dropout(0.5): Randomly disables 50% of neurons during training to prevent overfitting.\nlayers.Dense(1, activation='sigmoid'): Final output layer that predicts a probability (0–1) for binary classification."
+  },
+  {
+    "input": "4. Compiling and Training the Model",
+    "output": "We will compile the model and train it using the IMDB dataset. Here we will useAdamoptimizer withbinary cross-entropyas loss function.\nmodel.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']):Defines the optimizer (Adam), loss function (binary cross-entropy) and accuracy metric for evaluating performance.\nmodel.fit(x_train, y_train, epochs=5, batch_size=128, validation_split=0.2):Trains the model for 5 epochs using batches of 128 samples, with 20% of the training data reserved for validation."
+  },
+  {
+    "input": "5. Evaluating the Model",
+    "output": "We will evaluate the trained model on the test dataset.\nmodel.evaluate(x_test, y_test):Evaluates model performance by returning loss and accuracy.\nprint(f\"Test Accuracy: {test_accuracy:.4f}\"):Prints the accuracy percentage on the test data.\nOutput:"
+  },
+  {
+    "input": "Performance Analysis",
+    "output": "Understanding CNN performance requires monitoring key metrics:\nAccuracy: Overall correctness across all classes\nPrecision: Proportion of positive predictions that are actually positive\nRecall: Proportion of actual positive cases correctly identified\nF1-Score: Harmonic mean of precision and recall\nTypical CNN performance on text classification tasks achieves 85-95% accuracy on well-defined problems like sentiment analysis, depending on dataset quality and model architecture complexity."
+  },
+  {
+    "input": "Real-World Applications",
+    "output": "CNN-based text classification has found success across numerous industries:\nE-commerce: Product categorization, review sentiment analysis\nHealthcare: Medical document classification, symptom analysis\nFinance: Fraud detection, risk assessment, compliance monitoring\nMedia: Content moderation, news categorization\nCustomer Service: Ticket classification, automated routing"
+  },
+  {
+    "input": "Challenges and Best Practices",
+    "output": "There are many challenges associated with training a CNN model. Some of which are:"
+  },
+  {
+    "input": "Common Challenges",
+    "output": "Data quality issues: Mislabeled data or inconsistent category definitions can confuse the model during training and reduce overall accuracy.\nClass imbalance: When some categories dominate the dataset, models tend to favor those classes, this leads to poor recall and precision for less frequent categories.\nDomain adaptation: A model trained on one type of text or dataset (e.g., movie reviews) may fail to perform well on a different domain (e.g., medical or legal texts) without fine-tuning.\nOverfitting: Deep or complex models with too many parameters can memorize training data, causing poor generalization to new, unseen inputs."
+  },
+  {
+    "input": "Best Practices:",
+    "output": "Use dropout layers (0.2–0.5): Randomly dropping connections during training reduces overfitting and helps the network to learn more robust features.\nApply L2 regularization: Adds a penalty to the loss function for large weights in dense layers, promoting simpler models that generalize better.\nImplement early stopping: Stops training when validation loss stops improving, preventing unnecessary epochs and reducing overfitting risk.\nEmploy multiple filter sizes: Using different kernel sizes in convolutional layers captures patterns of varying lengths (e.g., bi-grams, tri-grams), improving feature extraction."
   }
 ]
