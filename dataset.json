@@ -14730,5 +14730,49 @@
   {
     "input": "Real-life applications",
     "output": "By exploring these NLP libraries, we can gain valuable insights from textual data and apply them to solve real-world problems across different fields"
+  },
+  {
+    "input": "ELMo",
+    "output": "ELMo (Embeddings from Language Models) generates word vectors by considering the entire sentence. Unlike traditional methods, ELMo derives word meanings from the internal states of a deepbi-directional LSTMnetwork trained as a language model. Its Key characteristics are:\nContext-aware: Word meaning changes with context.\nDeep Representations: Uses multiple layers from the language model.\nPre-trained + Task-specific: ELMo embeddings are integrated into downstream models and fine-tuned accordingly."
+  },
+  {
+    "input": "Working of ELMo",
+    "output": "A bidirectional language model (biLM) is trained on a large text corpus. The model uses two separate LSTMs:\nThe forward LSTM reads the sentence from left to right and predicts the next word.\nThe backward LSTM reads from right to left and predicts the previous word.\nFor each word, the model captures contextual information from both directions. The hidden states from the forward and backward LSTMs are summed up to form a contextualized embedding. These embeddings vary depending on the word’s role in the sentence. ELMo also combines outputs from multiple LSTM layers, capturing both syntactic and semantic patterns.\nOnce trained, the biLM is used to generate embeddings for specific NLP tasks.\nELMo embeddings are added to the input of a downstream model, such as a classifier.\nbiLM can be either frozen to preserve general knowledge or fine-tuned on the specific task to improve performance.\nThe downstream model learns to use these embeddings for improved predictions.\nThis phase allows ELMo to be applied to tasks like named entity recognition, sentiment analysis and text classification where understanding context is crucial."
+  },
+  {
+    "input": "Real-World Examples",
+    "output": "Consider the word \"bank\" in two different contexts:\n\"She deposited money in the bank.\"\\rightarrowfinancial institution\n\"He sat by the bank of the river.\"\\rightarrowriver edge\nStatic embeddings would assign the same vector to both, failing to capture the difference. ELMo generates context-dependent vectors which correctly differentiates between these meanings. It adapts based on sentence-level context, providing more accurate representations."
+  },
+  {
+    "input": "Implementation of ELMo Embeddings",
+    "output": "We can implement ELMo embeddings using TensorFlow and TensorFlow Hub. Here is a step-by-step guide with explanations at each stage."
+  },
+  {
+    "input": "Step 1: Install Required Libraries",
+    "output": "Tensorflowis used for building and running deep learning models andtensorflow_huballows us to load pretrained models such as ELMo. You can install it using:"
+  },
+  {
+    "input": "Step 2: Import Libraries and Load ELMo",
+    "output": "We import TensorFlow and TensorFlow Hub to access the model.\nWe then load the ELMo model from TensorFlow Hub using its URL.\nThe model outputs 1024-dimensional embeddings for each token."
+  },
+  {
+    "input": "Step 3: Define an Embedding Function",
+    "output": "We define a function that:\nTakes a list of input sentences.\nPasses them to the ELMo model.\nReturns a tensor of contextualized word embeddings."
+  },
+  {
+    "input": "Step 4: Generate Embeddings from Sample Sentences",
+    "output": "We create a list of sample sentences that include ambiguous words like \"bank\".\nWe call the get_elmo_embedding() function to generate the embeddings.\nThe result is a 3D tensor with shape (batch_size, max_seq_length, 1024).\nOutput:\nWe can see that our model is working fine."
+  },
+  {
+    "input": "Limitations",
+    "output": "Ambiguous Contexts: Some sentences may not provide enough information for accurate disambiguation. For example, \"The bank was full of fish.\" could still confuse the model.\nComputational Overhead: ELMo requires more memory and processing due to biLSTM layers, which can be a constraint in real-time applications.\nPretraining Dependency: Performance heavily depends on the quality and size of the pretraining corpus."
+  },
+  {
+    "input": "Applications of ELMo Embeddings",
+    "output": "ELMo significantly improves performance across a variety of NLP tasks:\nSentiment Analysis: Detects emotions in text with context-aware understanding.\nNamed Entity Recognition (NER): Identifies names of people, places and organizations more accurately.\nQuestion Answering: Helps locate contextually relevant answers in large documents.\nText Classification: Enhances accuracy in spam detection, topic classification and intent analysis.\nSemantic Similarity: Measures context-specific similarity between phrases or documents."
+  },
+  {
+    "input": "Comparison with Other Models",
+    "output": "ELMo introduced the idea of context in word meanings and still influences modern NLP although it has been surpassed by transformer-based models like BERT and RoBERTa in recent years."
   }
 ]
