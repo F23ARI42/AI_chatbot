@@ -15650,5 +15650,37 @@
   {
     "input": "Conclusion",
     "output": "The original Transformer model uses fixes length sequence segment and absolute positional encoding, assigning a fixed vector to each token based on its position in the sequence. However, this approach has limitations, such as restricting the model's effectiveness for longer sequences and overlooking relative distances between tokens.\nTo overcome these challenges, transformer XL introduced segment level recurrent mechanism and relative positional encoding is introduced. The segment level recurrent mechanism utilized information from hidden state of previous layer of previous segment. The relative encoding method employed unique vectors for each token pair, determined by their relative distance. These vectors are incorporated into the attention score, measuring how much each token attends to others.  This enhancement enables the model to capture the context of each token, irrespective of its absolute position, and handle longer sequences more effectively without information loss."
+  },
+  {
+    "input": "Importance of Vectors in NLP",
+    "output": "Semantic Understanding: Vectors capture the meaning of words and their relationships enabling tasks like semantic search by focusing on meaning rather than keywords.\nDimensionality Reduction: Vectors reduce the complexity of sparse text data, making it easier for models to process and analyze large datasets efficiently.\nEnhanced Performance: Proper vectorization improves the accuracy and speed of NLP tasks while contextual embeddings like BERT further enhance understanding of word usage.\nCompatibility: Vectors provide a universal format for various machine learning models, making it easier to integrate NLP solutions across different applications."
+  },
+  {
+    "input": "1. One-Hot Encoding",
+    "output": "One-Hot Encodingis a technique where each word is represented by a vector with a high bit corresponding to the word’s index in the vocabulary with all other bits set to zero.\nAdvantages of One-Hot Encoding:\nSimplicity: Easy to implement and understand.\nInterpretability: The vectors are easily interpretable and directly map to words.\nCompatibility: Works well with most machine learning algorithms.\nDisadvantages of One-Hot Encoding:\nHigh Dimensionality: Results in large, sparse vectors for large vocabularies.\nLoss of Semantic Information: Does not capture word relationships or meaning.\nSparsity: Creates sparse vectors with mostly zero values, leading to inefficiency.\nOutput:"
+  },
+  {
+    "input": "2. Bag of Words (BoW)",
+    "output": "Bag of Words (BoW)converts text into a vector representing the frequency of words, disregarding grammar and word order. It counts the occurrences of each word in a document and generates a vector based on these counts.\nAdvantages of Bag of Words (BoW)\nSimple and easy to implement.\nProvides a clear and interpretable representation of text.\nDisadvantages of Bag of Words (BoW)\nIgnores the order and context of words.\nResults in high-dimensional and sparse matrices.\nFails to capture semantic meaning and relationships between words.\nOutput:"
+  },
+  {
+    "input": "3. Term Frequency-Inverse Document Frequency (TF-IDF)",
+    "output": "TF-IDFis an extension of BoW that weighs the frequency of words by their importance across documents.\n1. Term Frequency (TF):Measures the frequency of a word in a document.\nTF(t,d) = \\frac{\\text{Number of times term } t \\text{ appears in document } d}{\\text{Total number of terms in document } d}\n2. Inverse Document Frequency (IDF):Measures the importance of a word across the entire corpus.\nIDF(t) = \\log \\left( \\frac{\\text{Total number of documents}}{\\text{Number of documents containing term } t} \\right)\nThe TF-IDF score is the product of TF and IDF.\nAdvantages of TF-IDF\nSimple and Efficient: Easy to compute with minimal computational resources.\nImportance Weighting: Highlights important words by reducing the influence of common words.\nEffective for Information Retrieval: Improves document relevance ranking in search engines.\nDisadvantages of TF-IDF\nSparsity: Produces high-dimensional sparse vectors, increasing memory and computational cost.\nNo Context Capture: Does not account for word context or meaning.\nSynonym Handling: Treats synonyms as separate which may reduce model accuracy.\nOutput:"
+  },
+  {
+    "input": "4. Count Vectorizer",
+    "output": "Count Vectorizeris similar to BoW but focuses on counting the occurrences of each word in the document. It converts a collection of text documents to a matrix of token counts where each element represents the count of a word in a specific document.\nAdvantages of Count Vectorizer\nSimplicity: Easy to implement and understand.\nInterpretability: Provides a straightforward representation of word frequencies in the document.\nNo Preprocessing Required: Requires minimal preprocessing making it quick to use.\nDisadvantages of Count Vectorizer\nHigh Dimensionality: Generates large, sparse matrices especially for large vocabularies.\nSparsity: Results in sparse vectors, which can be inefficient in terms of memory and computation.\nNo Semantic Information: Fails to capture the meaning or relationships between words.\nOutput:"
+  },
+  {
+    "input": "1. Word Embeddings",
+    "output": "Word embeddingsare dense vector representations of words in a continuous vector space where semantically similar words are located closer to each other. These embeddings capture the context of a word, its syntactic role and semantic relationships with other words leading to better performance in various NLP tasks.\nAdvantages:\nCaptures semantic meaning and relationships between words.\nDense representations are computationally efficient.\nHandles out-of-vocabulary words especially with FastText.\nDisadvantages:\nRequires large corpora for training high-quality embeddings.\nMay not capture complex linguistic nuances in all contexts."
+  },
+  {
+    "input": "2. Image Embeddings",
+    "output": "Image embeddings transforms images into numerical representations through which our model can perform image search, object recognition and image generation.\nAdvantages:\nSemantic Representation: Captures meaningful features in a compact form.\nDimensionality Reduction: Reduces image complexity while maintaining important features.\nImproved Performance: Enhances accuracy for downstream tasks.\nDisadvantages:\nDependency on Pre-trained Models: Embedding quality depends on the model used.\nComplexity: Requires additional computational resources for embedding generation."
+  },
+  {
+    "input": "Comparison of Vectorization Techniques",
+    "output": "Lets see a quick comparisonbetween different technique:\nChoosing the right vectorization technique depends on the specific NLP task, available computational resources and the importance of capturing semantic and contextual information. Traditional techniques like BoW and TF-IDF are simpler and faster but may fall short in capturing the nuanced meaning of text. Advanced techniques like word embeddings and document embeddings provide richer, context-aware representations at the cost of increased computational complexity and memory usage."
   }
 ]
