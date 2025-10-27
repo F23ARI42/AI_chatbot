@@ -15010,5 +15010,57 @@
   {
     "input": "Step 7: Prediction with user inputs",
     "output": "Output:\nYou can download the source code:Sentiment Classification Using BERT"
+  },
+  {
+    "input": "Seq2Seq with RNNs",
+    "output": "In the simplest Seq2Seq model RNNs are used in both the encoder and decoder to process sequential data. For a given input sequence(x_1,x_2, ..., x_T), a RNN generates a sequence of outputs(y_1, y_2, ..., y_T)through iterative computation based on the following equation:\nHere\nh_trepresents hidden state at time step t\nx_trepresents input at time step t\nW_{hx}andW_{yh}represents the weight matrices\nh_{t-1}represents hidden state from the previous time step (t-1)\n\\sigmarepresents the sigmoid activation function.\ny_trepresents output at time step t\nLimitations of Vanilla RNNs:\nVanilla RNNs struggle with long-term dependencies due to the vanishing gradient problem.\nTo overcome this, advanced RNN variants like LSTM (Long Short-Term Memory) or GRU (Gated Recurrent Unit) are used in Seq2Seq models. These architectures are better at capturing long-range dependencies."
+  },
+  {
+    "input": "How Does the Seq2Seq Model Work?",
+    "output": "A Sequence-to-Sequence (Seq2Seq) model consists of two primary phases: encoding the input sequence and decoding it into an output sequence."
+  },
+  {
+    "input": "1. Encoding the Input Sequence",
+    "output": "The encoder processes the input sequence token by token, updating its internal state at each step.\nAfter processing the entire sequence, the encoder produces a context vector i.e a fixed-length representation summarizing the important information from the input."
+  },
+  {
+    "input": "2. Decoding the Output Sequence",
+    "output": "The decoder takes the context vector and generates the output sequence one token at a time. For example, in machine translation:\nInput:  \"I am learning\"\nOutput: \"Je suis apprenant\"\nEach token is predicted based on the context vector and previously generated tokens."
+  },
+  {
+    "input": "3. Teacher Forcing",
+    "output": "During training, teacher forcing is commonly used. Instead of feeding the decoder’s own previous prediction as the next input, the actual target token from the training data is provided.\nBenefits:\nAccelerates training\nReduces error propagation"
+  },
+  {
+    "input": "Step 1: Import libraries",
+    "output": "We will importpytorch."
+  },
+  {
+    "input": "Step 2: Encoder",
+    "output": "We will define:\nEach input token is converted to a dense vector (embedding).\nThe GRU processes the sequence one token at a time, updating its hidden state.\nThe final hidden state is returned as the context vector, summarizing the input sequence."
+  },
+  {
+    "input": "Step 3: Decoder",
+    "output": "We will define the decoder:\nTakes the current input token and converts it to an embedding.\nGRU uses the previous hidden state (or context vector initially) to compute the new hidden state.\nThe output is passed through a linear layer to get predicted token probabilities."
+  },
+  {
+    "input": "Step 4: Seq2Seq Model with Teacher Forcing",
+    "output": "Batch size & vocab size: extracted from input and decoder.\nEncoding: input sequence → encoder → context vector (hidden).\nStart token: initialize decoder with token 0.\nLoop over max_len:\nDecoder predicts next token.\ntop1 → token with max probability.\nAppend top1 to outputs.\nTeacher forcing: sometimes feed true target token instead of prediction.\nReturn predictions: concatenated sequence of token IDs."
+  },
+  {
+    "input": "Step 5: Usage Example with Outputs",
+    "output": "Test with example,\nsrc:random input token IDs.\ntrg:random target token IDs (used for teacher forcing).\noutputs:predicted token IDs for each sequence.\n.T:transpose to show batch sequences as rows.\nOutput:"
+  },
+  {
+    "input": "Applications",
+    "output": "Machine Translation: Converts text between languages like English to French.\nText Summarization: Produces concise summaries of documents or news articles.\nSpeech Recognition: Transcribes spoken language into text.\nImage Captioning: Generates captions for images by combining visual features with sequence generation.\nTime-Series Prediction: Predicts future sequences based on past temporal data."
+  },
+  {
+    "input": "Advantages",
+    "output": "Flexibility: Can handle tasks like machine translation, text summarization and image captioning with variable-length sequences.\nHandling Sequential Data: Ideal for sequential data like natural language, speech and time series.\nContext Awareness: Encoder-decoder architecture captures the context of the input sequence to generate relevant outputs.\nAttention Mechanism: Focuses on key parts of the input sequence, improving performance, especially for long inputs."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Computationally Expensive: Requires significant resources to train and optimize.\nLimited Interpretability: Hard to understand the model's decision-making process.\nOverfitting: Prone to overfitting without proper regularization.\nRare Word Handling: Struggles with rare words not seen during training."
   }
 ]
