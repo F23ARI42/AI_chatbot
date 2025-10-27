@@ -14790,5 +14790,25 @@
   {
     "input": "Limitations of Porter Stemmer",
     "output": "It can produce stems that are not meaningful, such as turning \"iteration\" into \"iter.\"\nThe algorithm is primarily designed for English and may not work well with other languages.\nCompared to other stemmers , it may remove suffixes more aggressively, making words more similar to each other.\nDifferent words may be reduced to the same stem, resulting in a loss of meaning."
+  },
+  {
+    "input": "Use of  spaCy in NER",
+    "output": "spaCy is efficient in NLP tasks and is available in Python. It offers:\nOptimized performance:spaCy is built for high-speed text processing making it ideal for large-scale NLP tasks.\nPre-trained models:It includes various pre-trained NER models that recognize multiple entity types out of the box.\nEase of use:With a user-friendly API allowing developers to implement NER with minimal effort.\nDeep learning integration:The library works seamlessly with deep learning frameworks like TensorFlow and PyTorch.\nEfficient pipeline processing:It can efficiently handle text processing tasks, including tokenization, part-of-speech tagging, dependency parsing and named entity recognition.\nCustomizability:We can train custom models or manually defining new entities."
+  },
+  {
+    "input": "Implementation of NER using spaCy",
+    "output": "Here is the step by step procedure to do NER using spaCy:"
+  },
+  {
+    "input": "1. Install spaCy",
+    "output": "We will download spaCy. We will useen_core_web_smmodel which is used for english and is a lightweight model that includes pre-trained word vectors and an NER component. spaCy supports various entity types including:\nPERSON– Names of people\nORG– Organizations\nGPE– Countries, cities, states\nDATE– Dates and time expressions\nMONEY– Monetary values\nPRODUCT– Products and brand names\nEVENT– Events (e.g., \"Olympics\")\nLAW– Legal documents\nA full list of entity types can be found in the spaCy documentation.\nThe following code demonstrates how to perform NER using spaCy:\nspacy.load(\"en_core_web_sm\")loads the pre-trained English model.\nnlp(text)processes the input text and tokenizes it.\ndoc.entscontains all recognized named entities.\nOutput:\nHere Apple is classified as an Organization (ORG), U.K. as a Geopolitical Entity (GPE) and $1 billion as Money (MONEY)."
+  },
+  {
+    "input": "3. Effect of Case Sensitivity",
+    "output": "Here we examine how capitalization affects entity recognition. Lowercasing an entity name may prevent it from being recognized correctly.\nOutput:\nSince \"apple\" is in lowercase it is no longer recognised as an organization."
+  },
+  {
+    "input": "4. Customizing Named Entity Recognition",
+    "output": "Here we manually add a new named entity to spaCy's output. This technique is useful when you want to recognize specific terms that are not in the pre-trained model.\nWe useSpanto define the new entity.\nThe entity is added todoc.entsto update the output.\nOutput:\nHere \"Tesla\" wasmanually addedas an organization. In a full NER training setup you can retrain the model using annotated datasets.\nNamed Entity Recognition (NER) is an essential tool for extracting valuable insights from unstructured text for better automation and analysis across industries. spaCy’s flexible capabilities allow developers to quickly implement and customize entity recognition for specific applications. It also offers an efficient and scalable solution for handling named entity recognition in real-world text processing.\nYou can download source code fromhere."
   }
 ]
