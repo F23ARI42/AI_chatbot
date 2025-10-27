@@ -15182,5 +15182,37 @@
   {
     "input": "Conclusion",
     "output": "SMT continues to evolve, especially with advances in neural network models. Despite the challenges, its ability to efficiently process large-scale translations with reasonable accuracy makes it a critical tool in AI andNLP.By continuously improving data quality, adapting domain-specific knowledge, and addressing linguistic complexities, SMT holds significant potential to transform how we communicate across languages."
+  },
+  {
+    "input": "Understanding the Vocabulary Problem",
+    "output": "Traditional wordtokenizationcreates a unique token for every distinct word form. Words like \"run\", \"running\", \"ran\" and \"runner\" would each occupy separate vocabulary slots despite theirsemantic relationship. Multiplying this across thousands of word families, technical terms and misspellings and our vocabulary can explode to millions of unique tokens.\nThis vocabulary explosion creates several problems:\nMemory overhead: Each token requires embedding parameters making models computationally expensive\nOut-of-vocabulary (OOV) issues: Rare or unseen words become impossible to process\nPoor generalization: Related word forms are treated as completely independent entities\nSubword tokenization addresses these issues by breaking words into meaningful subunits. Frequent words remain intact, while rare words are broken down into more common subword pieces that the model has likely encountered before."
+  },
+  {
+    "input": "Implementing Subword Tokenization",
+    "output": "Here we will see various Subword Tokenization metods:"
+  },
+  {
+    "input": "1. Basic Tokenization",
+    "output": "Let's start with a practical implementation to understand the progression from word-level to subword tokenization.\nImportsregexandcollections.\nDefines preprocess_text() to lowercase and tokenize text, keeping words and punctuation.\nProcesses a sample paragraph using this function.\nPrints the list of tokens and the number of unique ones.\nOutput:\nThis preprocessing step creates clean tokens while preserving punctuation as separate elements. The output shows how a short paragraph generates large number of unique tokens, highlighting the vocabulary size challenge."
+  },
+  {
+    "input": "2. Character-Level Tokenization",
+    "output": "Before implementing sophisticated subword algorithms, we need to understand character-level representation. This method  involves creating a frequency dictionary where each word is represented as a sequence of characters separated by spaces.\nDefines a function create_char_vocabulary() that takes a list of word tokens.\nFor each word, it splits the word into characters and joins them with spaces.\nIt counts how many times each unique space-separated character sequence appears.\nThe vocabulary is stored as an OrderedDict, sorted by frequency.\nPrints the top 10 most frequent character sequences.\nOutput:\nThis character-level representation serves as the foundation forByte-Pair Encoding. Each word is now a sequence of individual characters and we can observe which character combinations appear most frequently across our corpus."
+  },
+  {
+    "input": "3. Byte-Pair Encoding Implementation",
+    "output": "Byte-Pair Encodingworks on iteratively merging the most frequent pair of symbols until reaching a desired vocabulary size. This creates a data-driven subword segmentation that balances between character granularity and word-level meaning.\nInitial Vocabulary:Words are split into characters with their frequencies (e.g., \"l o w e r\": 2).\nGet Symbol Pairs:get_pairs counts how often each adjacent character pair appears.\nMerge Step:merge_vocab replaces the most frequent pair with a combined token.\nBPE Loop:Repeats merging the most common pair for a set number of times (5 here), updating the vocabulary each time.\nFinal Output:Prints the updated vocabulary after all merges, showing how characters group into subword units.\nOutput:"
+  },
+  {
+    "input": "Advantages of BPE (Byte-Pair Encoding):",
+    "output": "Flexible vocabulary:It can learn useful subword patterns specific to a domain or dataset.\nHandles unknown words:New or rare words can be broken into smaller known parts like characters, so the model can still understand them.\nEfficient representation:It keeps the vocabulary size manageable while still capturing meaningful parts of words.\nLanguage-independent:Works well with different languages and writing systems."
+  },
+  {
+    "input": "Limitations of BPE:",
+    "output": "Dependent on training data: If the training text doesn’t represent real-world usage well, the subword splits may be poor.\nNot dynamic: Once trained, the BPE vocabulary doesn’t learn new patterns unless retrained.\nInconsistent splits: The same word might be split differently depending on context.\nNo understanding of grammar: BPE doesn’t know about grammar or word structure, it only uses frequency of character patterns."
+  },
+  {
+    "input": "Real-World Applications",
+    "output": "Subword tokenization is essential in transformer models like GPT, BERT and T5.\nGPT-2 uses Byte-Pair Encoding (BPE) on bytes, allowing it to process any Unicode text.\nBERT uses WordPiece, which selects subword units based on how likely they are to appear.\nVocabulary size is compact (30k–50k tokens), making it efficient for memory and computation.\nIt replaces huge word lists (with millions of entries) while still handling a wide variety of words.\nSubword tokenization has become essential for multilingual models, where a single vocabulary must represent dozens of languages with different writing systems and morphological structures. By learning subword patterns across languages these models can achieve better cross-lingual transfer and handle code-switching scenarios."
   }
 ]
