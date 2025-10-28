@@ -17422,5 +17422,17 @@
   {
     "input": "Step 4:  Plot the Frequency Spectrum",
     "output": "plt.figure(figsize=(10, 4)):Sets the size of the plot.\nplt.plot(xf, yf):Plots amplitude vs. frequency and shows which frequencies are present in the signal.\nLabels and title clarify the graph.\nplt.grid(True):Adds grid lines for easier reading.\nOutput:"
+  },
+  {
+    "input": "Prewitt Operator",
+    "output": "The Prewitt operator was developed by Judith M. S. Prewitt. Prewitt operator is used for edge detection in an image. Prewitt operator detects both types of edges, these are:\nHorizontal edges or along the x-axis,\nVertical Edges or along the y-axis.\nWherever there is a sudden change in pixel intensities, an edge is detected by the mask. Since the edge is defined as the change in pixel intensities, it can be calculated by using differentiation. Prewitt mask is a first-order derivative mask. In the graph representation of Prewitt-mask's result, the edge is represented by the local maxima or local minima.\nBoth the first and second derivative masks follow these three properties:\nMore weight means more edge detection.\nThe opposite sign should be present in the mask. (+ and -)\nThe Sum of the mask values must be equal to zero.\nPrewitt operator provides us two masks one for detecting edges in the horizontal direction and another for detecting edges in a vertical direction.\nSteps:\nRead the image.\nConvert into grayscale if it is colored.\nConvert into the double format.\nDefine the mask or filter.\nDetect the edges along X-axis.\nDetect the edges along Y-axis.\nCombine the edges detected along the X and Y axes.\nDisplay all the images.\nExample:\nOutput:"
+  },
+  {
+    "input": "Scharr Operator",
+    "output": "This is a filtering method used to identify and highlight gradient edges/features using the first derivative. Performance is quite similar to the Sobel filter.\nExample:\n\nOutput:"
+  },
+  {
+    "input": "Sobel Operator",
+    "output": "It is named after Irwin Sobel and Gary Feldman. Like the Prewitt operatorSobel operatoris also used to detect two kinds of edges in an image:\n\nVertical direction\nHorizontal direction\nThe difference between Sobel and Prewitt Operator is that in Sobel operator the coefficients of masks are adjustable according to our requirement provided they follow all properties of derivative masks.\n\nExample:\n\nOutput:"
   }
 ]
