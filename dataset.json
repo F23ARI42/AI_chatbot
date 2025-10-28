@@ -17214,5 +17214,69 @@
   {
     "input": "Conclusion:",
     "output": "In this article aboutcomputer vision tasks, we have discussed about different computer vision tasks in detail using images and videos by analysing and extracting meaningful information. We have also discussed about common applications in different fields and real-life scenarios in different fields and activities. Computer vision tasks are helping humans in numerous use cases and it grows by the day."
+  },
+  {
+    "input": "Mathematical Prerequisites for Computer Vision",
+    "output": "Before moving into Computer Vision, having a foundational understanding of certain mathematical concepts will help us which includes:"
+  },
+  {
+    "input": "1. Linear Algebra",
+    "output": "Linear Algebra\nVectors\nMatrices and Tensors\nEigenvalues and Eigenvectors\nSingular Value Decomposition"
+  },
+  {
+    "input": "2. Probability and Statistics",
+    "output": "Probability and Statistics\nProbability Distributions\nBayesian Inference and Bayes' Theorem\nMarkov Chains\nKalman Filters"
+  },
+  {
+    "input": "3. Signal Processing",
+    "output": "Signal Processing\nImage Filtering and Convolution\nDiscrete Fourier Transform (DFT)\nFast Fourier Transform (FFT)\nPrincipal Component Analysis (PCA)"
+  },
+  {
+    "input": "1. Image Processing",
+    "output": "It refers to techniques for manipulating and analyzing digital images. Common image processing tasks include:\n1. Image Transformation\nImage Transformation\nGeometric Transformations\nFourier Transform\nIntensity Transformation\n2. Image Enhancement\nImage Enhancement\nHistogram Equalization\nContrast Enhancement\nImage Sharpening\nColor Correction\n3. Noise Reduction Techniques\nNoise Reduction Techniques\nMedian Filtering\nBilateral Filtering\nWavelet Denoising\n4. Morphological Operations\nMorphological Operations\nErosion and Dilation\nOpening\nClosing\nMorphological Gradient"
+  },
+  {
+    "input": "2. Feature Extraction",
+    "output": "It involves identifying distinctive elements within an image for analysis and its techniques include:\n1. Edge Detection Techniques\nComputer Vision Algorithms\nEdge Detection Techniques\nCanny Edge Detector\nSobel Operator\nLaplacian of Gaussian (LoG)\n2. Corner and Interest Point Detection\nHarris Corner Detection\n3. Feature Descriptors\nFeature Descriptors\nSIFT (Scale-Invariant Feature Transform)\nSURF (Speeded-Up Robust Features)\nORB (Oriented FAST and Rotated BRIEF)\nHOG (Histogram of Oriented Gradients)"
+  },
+  {
+    "input": "Popular Libraries for Computer Vision",
+    "output": "To implement computer vision tasks effectively, various libraries are used:"
+  },
+  {
+    "input": "Deep Learning for Computer Vision",
+    "output": "Deep learning has greatly enhanced computer vision by allowing machines to understand and analyze visual data and its key deep learning models include:"
+  },
+  {
+    "input": "1. Convolutional Neural Networks (CNNs)",
+    "output": "Convolutional Neural Networks are designed for learning spatial hierarchies of features from images and its key components include:\nDeep Learning for Computer Vision\nDeep learning\nConvolutional Neural Networks\nConvolutional Layers\nPooling Layers\nFully Connected Layers"
+  },
+  {
+    "input": "2. Generative Adversarial Networks (GANs)",
+    "output": "It consists of two networks (generator and discriminator) that work against each other to create realistic images. There are various types of GANs each designed for specific tasks and improvements:\nGenerative Adversarial Networks (GANs)\nDeep Convolutional GAN (DCGAN)\nConditional GAN (cGAN)\nCycle-Consistent GAN (CycleGAN)\nSuper-Resolution GAN (SRGAN)\nStyleGAN"
+  },
+  {
+    "input": "3. Variational Autoencoders (VAEs)",
+    "output": "They are the probabilistic version of autoencoders which forces the model to learn a distribution over the latent space rather than a fixed point, some other autoencoders used in computer vision are:\nAutoencoders\nVariational Autoencoders (VAEs)\nDenoising Autoencoders (DAE)\nConvolutional Autoencoder (CAE)"
+  },
+  {
+    "input": "4. Vision Transformers (ViT)",
+    "output": "They are inspired by transformers models to treat images and sequence of patches and process them using self-attention mechanisms, some common vision transformers include:\nVision Transformers (ViT)\nSwin Transformer\nCvT (Convolutional Vision Transformer)"
+  },
+  {
+    "input": "5. Vision Language Models",
+    "output": "They integrate visual and textual information to perform image processing and natural language understanding.\nVision language models\nCLIP (Contrastive Language-Image Pre-training)\nALIGN (A Large-scale ImaGe and Noisy-text)\nBLIP (Bootstrapping Language-Image Pre-training)"
+  },
+  {
+    "input": "1.Image Classification",
+    "output": "It involves analyzing an image and assigning it a specific label or category based on its content such as identifying whether an image contains a cat, dog or car.\nIts techniques are as follows:\nComputer Vision Tasks\nImage Classification\nImage Classification using Support Vector Machine (SVM)\nImage Classification using RandomForest\nImage Classification using CNN\nImage Classification using TensorFlow\nImage Classification using PyTorch Lightning\nThere are various types for Image Classification which are as follows:\nDataset for Image Classification.\nMulticlass classification\nMultilabel classification\nZero-shot classification"
+  },
+  {
+    "input": "2.Object Detection",
+    "output": "It involves identifying and locating objects within an image by drawing bounding boxes around them.\nIt includes below following Techniques:\nTop Computer Vision Models\nObject Detection\nYOLO (You Only Look Once)\nSSD (Single Shot Multibox Detector)\nRegion-Based Convolutional Neural Networks (R-CNNs)\nFast R-CNN\nFaster R-CNN\nMask R-CNN\nObject Detection using TensorFlow\nObject Detection using PyTorch\nType of Object Detection Concepts are as follows:\nBounding Box Regression\nIntersection over Union (IoU)\nRegion Proposal Networks (RPN)\nNon-Maximum Suppression (NMS)"
+  },
+  {
+    "input": "3.Image Segmentation",
+    "output": "It involves partitioning an image into distinct regions or segments to identify objects or boundaries at a pixel level.\nTypes of image segmentation are:\nImage Segmentation\nSemantic Segmentation\nInstance Segmentation\nPanoptic Segmentation\nWe can perform image segmentation using the following methods:\nImage Segmentation using K Means Clustering\nImage Segmentation using UNet\nImage Segmentation using TensorFlow\nImage Segmentation with Mask R-CNN"
   }
 ]
