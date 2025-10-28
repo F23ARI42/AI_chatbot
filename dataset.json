@@ -16690,5 +16690,41 @@
   {
     "input": "Testing the model",
     "output": "After training the model, we will test it on a sample input image and see the results.\nOutput:"
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "Lets see the step-by-step implementation ofZero-shot learningfor Novel Class recognition using CLIP model,"
+  },
+  {
+    "input": "Step 1: Install and Import Libraries",
+    "output": "We will install and import all the required libraries,\ntransformers:Transformersgives access to the CLIP model and its processing tools.\ntorch:PyTorchis the deep learning framework behind the scenes.\npillow:Pillowis a library for loading and working with images in Python.\nCLIPProcessor:Handles formatting images and text for CLIP.\nCLIPModel:The actual CLIP neural network that does the recognition.\nImage from PIL:Loads image files into a format Python can use."
+  },
+  {
+    "input": "Step 2: Load the Pre-trained CLIP Model",
+    "output": "Load a pre-trained instance of the CLIP model from OpenAI's model hub. This model has been trained on a variety of images and their descriptions, making it capable of generalizing from text to unseen visual content.\nfrom_pretrained:Downloads a ready-made model and processor.\nThe model has learned to align images and texts in the same space, making zero-shot learning possible.\nOutput:"
+  },
+  {
+    "input": "Step 3: Load the Image",
+    "output": "Upload an image to be classified. We can use a direct file path if we are working locally or use a feature like Colab's upload feature if we are working in a notebook environment.\nImage.open:Reads our image file so we can process it programmatically."
+  },
+  {
+    "input": "Step 4: Define Class Labels and Preprocess Data for the Model",
+    "output": "Define a list of text descriptions that represent the classes we are going to classifying. These labels are used by the CLIP model to compare against the image. The preprocessing step tokenizes text, resizes/crops the image and bundles everything up as PyTorch tensors.\nreturn_tensors=\"pt\" tells it to use PyTorch’s format.\npadding=True ensures all text prompts are the same length in token format."
+  },
+  {
+    "input": "Step 5: Perform Zero-Shot Classification",
+    "output": "Pass the processed inputs to the CLIP model.\nThe model compares our image to each label and rates the similarity.\nsoftmaxmakes the scores readable as probabilities, so we can see which class is the most likely."
+  },
+  {
+    "input": "Step 6: Get the Predicted Class",
+    "output": "Determine the predicted class by finding the label with the highest probability. This step concludes the classification process, providing a zero-shot learning-based prediction.\nOutput:"
+  },
+  {
+    "input": "Application of CLIP in Novel Class Recognition",
+    "output": "Zero-shot learning using CLIP can be highly impactful in various industries. Some applications include:\nHealthcare:CLIP helps spot rare diseases by matching medical images with symptom descriptions, even when labeled data is scarce.\nE-commerce:Retailers can instantly categorize brand-new products using written details, automating inventory without needing new model training.\nAutonomous Vehicles:Cars can identify unfamiliar obstacles on the road described in text prompts, improving real-world safety.\nContent Moderation:Platforms can flag inappropriate or harmful images using up-to-date descriptions, even in the absence of labeled examples."
+  },
+  {
+    "input": "Limitations",
+    "output": "Susceptible to Bias:May reproduce biases found in large, web-crawled training data, which can affect fairness in real-world applications.\nContextual Limitations:Sometimes misinterprets nuanced, complex or ambiguous visual contexts, leading to incorrect matches with text prompts.\nDependence on Prompt Quality:Highly reliant on the accuracy and detail of text descriptions—vague or poorly constructed prompts can reduce performance.\nNot Robust to Adversarial Inputs:Can be tricked by carefully designed misleading images or prompts, exposing vulnerabilities in security-critical scenarios."
   }
 ]
