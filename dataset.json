@@ -16614,5 +16614,45 @@
   {
     "input": "Why is SURF considered faster than SIFT?",
     "output": "SURF is considered faster than SIFT because it uses an approximation of the Hessian matrix, called the Fast-Hessian Detector, for keypoint detection. This method leverages integral images to speed up the computation process significantly. Additionally, SURF uses 64-dimensional descriptors, which are simpler and less computationally intensive compared to SIFT’s 128-dimensional descriptors. These optimizations make SURF suitable for real-time applications where speed is critical."
+  },
+  {
+    "input": "1. Input Preprocessing:",
+    "output": "The model accepts an image as input. It resizes the input image to 448×448 pixels ensuring that the aspect ratio is preserved using padding. This ensures uniformity of input dimensions across the network which is essential for batch processing in deep learning."
+  },
+  {
+    "input": "2. Backbone Convolutional Neural Network (CNN):",
+    "output": "After preprocessing the image is passed through a deep CNN architecture designed for object detection:\nThe model consists of24 convolutional layersand4 max-pooling layers.\nThese layers help in extracting hierarchical spatial features from the image."
+  },
+  {
+    "input": "3. Use of 1×1 and 3×3 Convolutions:",
+    "output": "To reduce the number of parameters and compress channels, 1×1 convolutions are employed.\nThese are followed by 3×3 convolutions to capture spatial patterns in the feature maps.\nThis design pattern i.e 1×1 followed by 3×3 improves computational efficiency while maintaining expressive power."
+  },
+  {
+    "input": "4. Fully Connected Layers:",
+    "output": "Following the convolutional layers, the architecture has 2 fully connected layers. The final fully connected layer produces an output of shape (1, 1470)."
+  },
+  {
+    "input": "5. Cuboidal Prediction Output:",
+    "output": "The output vector of size 1470 is reshaped to (7, 7, 30). Here, 7×7 represents the grid cells, and 30 represents the prediction vector for each cell:"
+  },
+  {
+    "input": "6. Activation Functions:",
+    "output": "The architecture predominantly uses Leaky ReLU as its activation function. TheLeaky ReLUis defined as:\nThis activation allows a small gradient when the unit is not active, preventing dead neurons."
+  },
+  {
+    "input": "7. Output Layer Activation:",
+    "output": "The last layer uses a linear activation function, suitable for making raw predictions like bounding box coordinates and confidence scores."
+  },
+  {
+    "input": "Training Process",
+    "output": "This model is trained on the ImageNet-1000 dataset. The model is trained over a week and achieve top-5 accuracy of 88% on ImageNet 2012 validation which is comparable to GoogLeNet (2014 ILSVRC winner).\nFast YOLO uses fewer layers (9 instead of 24) and fewer filters. Except this, the fast YOLO have all parameters similar to YOLO.\nYOLO uses sum-squared error loss function which is easy to optimize. However, this function gives equal weight to the classification and localization task. The loss function defined in YOLO as follows:\nwhere,\nl_{i}^{obj}denotes if object is present in celli.\nl_{ij}^{obj}denotesj_{th}bounding box responsible for prediction of object in the celli.\n\\lambda_{coord}and\\lambda_{noobj}are regularization parameter required to balance the loss function.\nIn this model, we take\\lambda_{coord}=5and\\lambda_{noobj}=5.The first two parts of the above loss equation represent localization mean-squared error, but the other three parts represent classification error."
+  },
+  {
+    "input": "Classification Loss",
+    "output": "There are three terms in classification loss:\nThe first term calculates the sum-squared error between the predicted confidence score that whether the object present or not  and the ground truth for each bounding box in each cell.\nSimilarly, the second term calculates the mean-squared sum of cells that do not contain any bounding box and a regularization parameter is used to make this loss small.\nThe third term calculates the sum-squared error of the classes belongs to these grid cells."
+  },
+  {
+    "input": "Detection",
+    "output": "This architecture divides the image into a grid of S*S size.\nIf the centre of the bounding box of the object is in that grid, then this grid is responsible for detecting that object.\nEach grid predicts bounding boxes with their confidence score.\nEach confidence score shows how accurate it is that the bounding box predicted contains an object and how precise it predicts the bounding box coordinates with respect to ground truth prediction.\nAt test time we multiply the conditional class probabilities and the individual box confidence predictions. We define our confidence score as follows :\nNote: the confidence score should be 0 when there is no object exists in the grid. If there is an object present in the image the confidence score should be equal to IoU between ground truth and predicted boxes. Each bounding box consists of 5 predictions: (x, y, w, h) and confidence score. The (x, y) coordinates represent the centre of the box relative to the bounds of the grid cell. The h, w coordinates represents height, width of bounding box relative to (x, y). The confidence score represents the presence of an object in the bounding box.\nThis results in combination of bounding boxes from each grid like this.\nEach grid also predicts C conditional class probability, Pr(Classi| Object).\nThis probability were conditional based on the presence of an object in grid cell. Regardless the number of boxes each grid cell predicts only one set of class probabilities. These prediction are encoded in the 3D tensor of size S * S * (5*B +C).\nNow, we multiply the conditional class probabilities and the individual box confidence predictions,\n\nThis gives us class-specific confidence scores for each box. These scores encode both the probability of that class appearing in the box and how well the predicted box fits the object. Then after we apply non-maximal suppression for suppressing the non max outputs (when a number of boxes are predicted for the same object). At last , our  final predictions are generated.\nYOLO is very fast at the test time because it uses only a single CNN architecture to predict results and class is defined in such a way that it treats classification as a regression problem."
   }
 ]
