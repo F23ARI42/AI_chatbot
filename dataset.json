@@ -16774,5 +16774,21 @@
   {
     "input": "References:",
     "output": "MNIST dataset:mnist dataset is a dataset of handwritten images as shown below in the image.\n\nWe can get 99.06% accuracy by using CNN(Convolutional Neural Network) with a functional model. The reason for using a functional model is to maintain easiness while connecting the layers.\nTest data:Used for testing the model that how our model has been trained.Train data:Used to train our model.\nWhile proceeding further,img_rowsandimg_colsare used as the image dimensions. In mnist dataset, it is 28 and 28. We also need to check the data format i.e. 'channels_first' or 'channels_last'. In CNN, we can normalize data before hands such that large terms of the calculations can be reduced to smaller terms. Like, we can normalize the x_train and x_test data by dividing it by 255.Checking data-format:\nSince the output of the model can comprise any of the digits between 0 to 9. so, we need 10 classes in output. To make output for 10 classes, use keras.utils.to_categorical function, which will provide the 10 columns. Out of these 10 columns, only one value will be one and the rest 9 will be zero and this one value of the output will denote the class of the digit.\nNow, the dataset is ready so let's move towards the CNN model :\nExplanation of the working of each layer in theCNN model:layer1 is the Conv2d layer which convolves the image using 32 filters each of size (3*3).layer2 is again a Conv2D layer which is also used to convolve the image and is using 64 filters each of size (3*3).layer3 is the MaxPooling2D layer which picks the max value out of a matrix of size (3*3).layer4 is showing Dropout at a rate of 0.5.layer5 is flattening the output obtained from layer4 and this flattens output is passed to layer6.layer6 is a hidden layer of a neural network containing 250 neurons.layer7 is the output layer having 10 neurons for 10 classes of output that is using the softmax function.\nCalling compile and fit function:\nOutput:\nFirstly, we made an object of the model as shown in the above-given lines, where [inpx] is the input in the model and layer7 is the output of the model. We compiled the model using the required optimizer, loss function and printed the accuracy and at the last model.fit was called along with parameters like x_train(means image vectors), y_train(means the label), number of epochs, and the batch size. Using fit function x_train, y_train dataset is fed to model in particular batch size.\nEvaluate function:model.evaluate provides the score for the test data i.e. provided the test data to the model. Now, the model will predict the class of the data, and the predicted class will be matched with the y_test label to give us the accuracy.\nOutput:"
+  },
+  {
+    "input": "Bitwise AND operation on Image:",
+    "output": "Bit-wise conjunction of input array elements.\nOutput:"
+  },
+  {
+    "input": "Bitwise OR operation on Image:",
+    "output": "Bit-wise disjunction of input array elements.\nOutput:"
+  },
+  {
+    "input": "Bitwise XOR operation on Image:",
+    "output": "Bit-wise exclusive-OR operation on input array elements.\nOutput:"
+  },
+  {
+    "input": "Bitwise NOT operation on Image:",
+    "output": "Inversion of input array elements.\nOutput:Bitwise NOT on Image 1\nBitwise NOT on Image 2"
   }
 ]
