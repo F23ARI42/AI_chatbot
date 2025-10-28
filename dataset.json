@@ -17406,5 +17406,21 @@
   {
     "input": "Step-by-Step IDFT in MATLAB",
     "output": "The IDFT matrix is constructed similarly but usesexp (+1i*...)to inverse the frequency components.\nThe output is divided byN, as required by the mathematical formula.\nOutput is plotted usingstemfor a clear, discrete view."
+  },
+  {
+    "input": "Step 1: Importing necessary libraries",
+    "output": "numpyis used for numerical operations and creating the time domain signal.\nmatplotlib.pyplotis used for plotting the signal and its frequency spectrum.\nscipy.fftprovides:fft:Fast Fourier Transform(computes the DFT),ifft:Inverse FFT (reconstructs time domain signal),fft freq:Computes the frequency bins for plotting."
+  },
+  {
+    "input": "Step 2: Create the Time Domain Signal",
+    "output": "fs = 1000:The signal is sampled at 1000 Hz (1000 samples per second).\nT = 1.0:Total duration of the signal is 1 second.\nt:A time array of 1000 evenly spaced values between 0 and 1 second (not including 1)."
+  },
+  {
+    "input": "Step 3: Apply Discrete Fourier Transform (DFT)",
+    "output": "N = len(t):Number of samples (1000 in this case).\nfft(signal):Computes the Fast Fourier Transform of the signal converts it from time domain to frequency domain.\nfftfreq(N, 1/fs):Generates the corresponding frequency values for plotting.\nnp.abs(...):Computes magnitude (amplitude) of complex FFT results.\n2.0/N:Normalization factor to scale the amplitude correctly."
+  },
+  {
+    "input": "Step 4:  Plot the Frequency Spectrum",
+    "output": "plt.figure(figsize=(10, 4)):Sets the size of the plot.\nplt.plot(xf, yf):Plots amplitude vs. frequency and shows which frequencies are present in the signal.\nLabels and title clarify the graph.\nplt.grid(True):Adds grid lines for easier reading.\nOutput:"
   }
 ]
