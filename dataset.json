@@ -16090,5 +16090,45 @@
   {
     "input": "Challenges of Vision Language Models (VLMs)",
     "output": "Despite their various benefits, it has some challenges:\nData Bias:It can inherit biases from their training data, leading to unfair or skewed outputs.\nInterpretability:Understanding how VLMs arrive at their decisions is challenging. The lack of transparency can limit trust in their outputs and hinder adoption.\nScalability:As it grow in complexity, the computational resources needed for training and inference increase significantly, making them costly and less accessible.\nGeneralization:It may struggle to generalize well across diverse or unseen data. This limits their performance in real-world applications where input can vary.\nBy mastering the connection between images and text, Vision Language Models are opening up new possibilities for AI."
+  },
+  {
+    "input": "Vision Transformer (ViT) Architecture Overview",
+    "output": "The Vision Transformer builds upon the transformer architecture initially introduced by Vaswani et al. in 2017 for NLP tasks. Transformers are highly effective at processing sequential data, utilizing self-attention to model dependencies between different parts of the input. Vision Transformers apply this architecture to image data, treating the image as a sequence of patches instead of a grid of pixels.\nVision Transformer architecture comprises several key stages:\nLet's break down each of these components."
+  },
+  {
+    "input": "1. Image Patching and Embedding",
+    "output": "The first and most critical step in the ViT pipeline is to convert the image into a sequence of patches, similar to the tokens in an NLP model.\nPatch Splitting:The input image, usually of sizeH \\times W \\times C(height, width, and channels), is divided into fixed-size patches. For example, an image of size 224x224 can be split into non-overlapping 16x16 patches, resulting in\\frac{224}{16} \\times \\frac{224}{16} = 14 \\times 14 = 196patches.\nPatch Flattening:Each patch is then flattened into a 1D vector. A patch of sizeP \\times P \\times C(e.g., 16x16x3) is reshaped into a vector of sizeP^2 \\times C, creating 196 patch vectors for an image.\nPatch Embedding:Each flattened patch is projected into a higher-dimensional space (embedding dimensionD) through alearnable linear projection. This linear transformation enables the model to learn richer feature representations for each patch. The result is a sequence of patch embeddings, each representing a part of the image. The total number of patches in the sequence isN = \\frac{H}{P} \\times \\frac{W}{P}​, whereNis the number of patches. For instance, with a 224x224 image and 16x16 patches, we have 196 patches."
+  },
+  {
+    "input": "2.Positional Encoding",
+    "output": "Transformers do not inherently capture the spatial order of input sequences. Since the patches are processed as independent tokens, it's essential to introducepositional encodingsto retain the spatial structure of the original image.\nPositional Embedding:Positional encodings are added to each patch embedding to encode information about the location of patches within the image. These embeddings help the model understand the spatial relationships between patches, similar to how transformers in NLP encode the positions of words in a sentence.\nLearned vs. Fixed Positional Encoding:In ViTs, positional encodings can either be learned during training or predefined (fixed). Most implementations of Vision Transformers use learnable positional encodings."
+  },
+  {
+    "input": "3.Transformer Encoder Layers",
+    "output": "Once the patches are embedded and augmented with positional information, they are passed through a stack oftransformer encoder layers. These layers consist of two primary components:Multi-Head Self-Attention (MSA)and aFeed-Forward Neural Network (FFN).\nSelf-Attention: The self-attention mechanism allows each patch to attend to every other patch in the sequence. This means that the transformer can model long-range dependencies and relationships between different parts of the image. Each patch computes a weighted sum of the values of all other patches based on its similarity to them, known as the attention score.\n\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right) V\nWhereQ(query),K(key), andV(value) are learned linear projections of the input patch embeddings.\nThe dot product between queries and keys determines the attention score, and softmax normalizes it.\nThe weighted sum of values determines the output.\nMulti-Head Attention:The attention mechanism is computed in parallel across multiple attention heads, allowing the model to focus on different parts of the image simultaneously.\nAfter self-attention, the patches are passed through afeed-forward network (FFN). The FFN consists of two fully connected layers with a non-linear activation function (typically GELU) in between.\nEach transformer encoder layer includesresidual (skip) connectionsandlayer normalizationto stabilize training and improve convergence. These techniques ensure that the deeper layers do not lose important information from the earlier layers.\nMultiple transformer encoder layers (e.g., 12, 24 layers) are stacked on top of each other. Each layer refines the patch embeddings, allowing the model to build more complex and abstract representations of the image."
+  },
+  {
+    "input": "4.Classification Token (CLS Token)",
+    "output": "In Vision Transformers, a specialclassification token (CLS token)is introduced at the beginning of the input sequence. This token serves a critical role: it gathers information from all the patches throughout the transformer layers.\nThe CLS token learns to represent the entire image by attending to the different patches through the self-attention mechanism. At the output of the transformer layers, the CLS token is extracted and passed to a classifier for the final prediction."
+  },
+  {
+    "input": "5.MLP Head (Classification Head)",
+    "output": "After the transformer encoders process the sequence of patches and the CLS token, the output corresponding to the CLS token is used for classification.\nThe output of the CLS token is fed into an MLP, typically consisting of one or two fully connected layers. A softmax layer is applied at the end of the MLP for classification tasks, predicting the image’s label."
+  },
+  {
+    "input": "Vision Transformer Architecture Summary",
+    "output": "To summarize, the Vision Transformer architecture involves the following key steps:"
+  },
+  {
+    "input": "Vision Transformer (ViT) vs. Convolutional Neural Networks (CNNs)",
+    "output": "Local vs. Global Attention:CNNs capture local spatial features through convolutions, whereas ViTs capture global relationships using self-attention.\nInductive Biases:CNNs have built-in inductive biases, such as locality and translation invariance, which make them effective at image tasks with smaller datasets. Vision Transformers, on the other hand, rely on data to learn these patterns, making them more flexible but data-hungry.\nTraining Data Requirements:Vision Transformers typically require large amounts of training data to achieve their best performance, while CNNs can perform well even with smaller datasets."
+  },
+  {
+    "input": "Strengths of Vision Transformer Architecture",
+    "output": "Global Context:ViTs are excellent at capturing long-range dependencies between image patches, giving them a better understanding of the global context of images.\nScalability:ViTs scale well with larger datasets and deeper architectures, making them highly effective for large-scale vision tasks.\nFlexibility:Since ViTs don't rely on convolutions, they can be easily adapted to different tasks and domains beyond image classification, such as video analysis and object detection."
+  },
+  {
+    "input": "Challenges and Limitations",
+    "output": "Data Requirements:ViTs are data-hungry and typically require large-scale datasets for effective training. Fine-tuning ViTs pre-trained on large datasets (like ImageNet) is a common practice when data is limited.\nComputational Resources:Vision Transformers demand significant computational power, especially during training, due to the quadratic complexity of the self-attention mechanism.\nVision Transformer architecture marks a significant shift in how visual data is processed by leveraging the self-attention mechanism of transformers. It excels in capturing global relationships between image patches, providing a powerful alternative to traditional convolutional neural networks. While ViTs are highly flexible and scalable, they require large datasets and computational resources to realize their full potential. As research and development in this field continue, ViTs are expected to play an increasingly important role in the future of computer vision tasks."
   }
 ]
