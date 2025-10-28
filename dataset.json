@@ -17374,5 +17374,17 @@
   {
     "input": "Conclusion",
     "output": "Deep learning has transformed computer vision, enabling machines to understand and interpret visual data with high accuracy. While challenges like data requirements, computational resources, and model interpretability persist, emerging trends such as AutoML, XAI, and edge computing offer promising solutions for the future."
+  },
+  {
+    "input": "YOLO",
+    "output": "It works solely on appearance at the image once to sight multiple objects. Thus, it's referred to as YOLO, you merely Look Once. By simply gazing at the image once, the detection speed is in period (45 fps). Quick YOLOv1 achieves a hundred and fifty-five FPS. this is often another progressive deep learning object detection approach that has been printed in 2016 CVPR with quite 2000 citations. Yolo divides the image into a grid. For each grid, some values like class probabilities and the bounding box parameters are calculated.\nYOLO struggles to localize objects properly compared with quick R-CNN.YOLO has fewer background errors. quick R-CNN has thirteen.6% that the highest detections square measure false positive.\nAs YOLO and quick R-CNN have their execs and cons, they'll be combined to own higher accuracy. Artwork and natural pictures square measure terribly completely different on a per-level however they're similar in terms of the dimensions and form of objects, so YOLO will still predict smart bounding boxes and detections."
+  },
+  {
+    "input": "SSD",
+    "output": "By victimization SSD, we tend to solely have to be compelled to take one single shot to sight multiple objects inside the image, whereas regional proposal network (RPN) primarily based approaches like R-CNN series want 2 shots, one for generating region proposals, one for police work the article of every proposal. Thus, SSD is way quicker compared with two-shot RPN-based approaches. SSD not only uses one grid, but a combination of different sizes to better detect objects at any size.\nSSD, a single-shot detector for multiple classes that's quicker than the previous progressive for single-shot detectors (YOLO), and considerably a lot of correct, really as correct as slower techniques that perform express region proposals and pooling (including quicker R-CNN)."
+  },
+  {
+    "input": "What's Better?",
+    "output": "SSD, a single-shot detector for multiple classes that's quicker than the previous progressive for single-shot detectors (YOLO), and considerably a lot of correct, really as correct as slower techniques that perform express region proposals and pooling (including quicker R-CNN)"
   }
 ]
