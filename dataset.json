@@ -15970,5 +15970,29 @@
   {
     "input": "Conclusion",
     "output": "In summary, using OpenCV in Python to convert a 2D picture into a 3D space entails a number of steps, including the capture of stereo images, calibration, rectification, matching, disparity computation, depth estimate, and, in the end, 3D scene reconstruction. The extraction of spatial information from 2D pictures is made possible by this all-inclusive methodology, which makes depth sensing, augmented reality, and computer vision applications easier to use."
+  },
+  {
+    "input": "How U-Net Works",
+    "output": "After understanding the architecture, it’s important to see how U-Net actually processes data to perform segmentation:"
+  },
+  {
+    "input": "Implementation of U-Net",
+    "output": "Now we will implement the U-Net architecture using Python 3 and the TensorFlow library. The implementation consists of three main parts:"
+  },
+  {
+    "input": "1. Encoder",
+    "output": "The encoder is responsible for extracting features from the input image. It applies two convolutional layers followed by aReLU Activationto learn patterns and then uses max pooling to reduce the image size help the model focus on important features."
+  },
+  {
+    "input": "2. Decoder",
+    "output": "The decoder helps restore the original image size while combining the low-level and high-level features. It starts by upsampling the feature map, resizes the corresponding encoder output (skip connection), merges them and then applies two convolution layers with ReLU."
+  },
+  {
+    "input": "3. Defining the U-Net Model",
+    "output": "This function builds the complete U-Net architecture. It connects multiple encoder and decoder blocks and includes a bottleneck in the middle. The final output layer uses a sigmoid activation for segmentation.\nOutput:"
+  },
+  {
+    "input": "4. Applying the Model to an Image",
+    "output": "Below is an example to load an image, preprocess it, run it through the U-Net model and save the predicted segmentation mask. You can download the input image fromhere\nOutput:\nWe can see that our model is able to segement and create boundaries around the cat which means our model is working fine. U-Net is flexible and used in many areas like image cleaning, translation, enhancement, object detection and language tasks."
   }
 ]
