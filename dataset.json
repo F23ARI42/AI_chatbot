@@ -16818,5 +16818,9 @@
   {
     "input": "3. Bitwise Operations",
     "output": "3.1 Bitwise AND\ncv2.bitwise_and(): Only keeps pixels where both images have bits \"on\".\nOutput:\n3.2 Bitwise OR\ncv2.bitwise_or(): Keeps pixels if either image has a bit \"on\".\nOutput:\n3.3 Bitwise XOR\ncv2.bitwise_xor(): Keeps pixels if only one image (not both) has a bit \"on\".\nOutput:\n3.4 Bitwise NOT\ncv2.bitwise_xor(): Keeps pixels if only one image (not both) has a bit \"on\".\nOutput:"
+  },
+  {
+    "input": "Output:",
+    "output": "Example 3:\nImage Filtering\nSTEPS:\nImport the OpenCV library.\nLoad the input image using thecv2.imreadfunction.\nApply a bilateral filter to the image using thecv2.bilateralFilterfunction with the parameters 15, 75, and 75.\nDisplay the output image using thecv2.imshowfunction and wait for a key press using thecv2.waitKeyfunction.\nOutput:"
   }
 ]
