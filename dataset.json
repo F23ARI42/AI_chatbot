@@ -16418,5 +16418,37 @@
   {
     "input": "Conclusion",
     "output": "MobileNet V2 is a significant advancement in the field of mobile and embedded vision applications. Its innovative use of inverted residuals, linear bottlenecks, and depthwise separable convolutions make it an efficient and powerful architecture for a wide range of tasks. As mobile and embedded devices continue to evolve, MobileNet V2 will undoubtedly play a crucial role in enabling real-time, on-device AI applications."
+  },
+  {
+    "input": "Understanding Non-Maximum Suppression (NMS)",
+    "output": "Non-Maximum Suppression (NMS)is a method used inobject detectionto remove extra boxes that are detected around the same object. When an object is detected multiple times with different bounding boxes, NMS keeps the best one and removes the rest. This helps us to make sure each object is counted only once, improving the accuracy and clarity of the results. The role of NMS is to:\nReduce Redundancy:By removing overlapping boxes, NMS ensures that a single, high-confidence bounding box represents each object.\nImprove Precision:By retaining the bounding box with the highest confidence score, NMS enhances the accuracy of the detection results. It reduces number of false positives.\nComputational Efficiency:It improves the computational efficiency of the object detection process by reducing number of boxes to a manageable and relevant set.\nHere we will see the,step-by-step working of NMS:"
+  },
+  {
+    "input": "1. Bounding Box Generation",
+    "output": "The object detection model generates multiple bounding boxes for objects in an image each with a confidence score indicating the likelihood of the presence of an object."
+  },
+  {
+    "input": "2. Sorting by Confidence Score",
+    "output": "All the generated bounding boxes are sorted in descending order based on their confidence scores."
+  },
+  {
+    "input": "4. Output the Final Detections",
+    "output": "The remaining boxes after the suppression process are output as the final detection results each representing a unique object in the image with high confidence."
+  },
+  {
+    "input": "Example Workflow",
+    "output": "Let's consider an image where multiple bounding boxes are generated around a single object in this case a car:"
+  },
+  {
+    "input": "1. Greedy NMS",
+    "output": "Greedy Non-Maximum Suppressionis the most commonly used variant of NMS. It follows a straightforward approach to suppress redundant bounding boxes based on their confidence scores and their overlap with each other."
+  },
+  {
+    "input": "2. Soft NMS",
+    "output": "Soft Non-Maximum Suppression addresses some of the shortcomings of Greedy NMS by reducing the confidence scores of overlapping bounding boxes instead of completely suppressing them. This approach allows for a more better suppression mechanism.\nProcess:"
+  },
+  {
+    "input": "Differences between Soft NMS and Greedy NMS:",
+    "output": "Score Reduction vs Suppression:Soft NMS reduces the confidence scores of overlapping boxes instead of outright discarding them.\nSuppression:The suppression in Soft NMS is more gradual, allowing for a softer reduction in the number of detections.\nNMS is used in object detection to refine and improve quality of the final detected objects. It ensures that each object is represented by a single, precise bounding box, enhancing the accuracy and efficiency of the object detection system."
   }
 ]
