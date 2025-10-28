@@ -16822,5 +16822,37 @@
   {
     "input": "Output:",
     "output": "Example 3:\nImage Filtering\nSTEPS:\nImport the OpenCV library.\nLoad the input image using thecv2.imreadfunction.\nApply a bilateral filter to the image using thecv2.bilateralFilterfunction with the parameters 15, 75, and 75.\nDisplay the output image using thecv2.imshowfunction and wait for a key press using thecv2.waitKeyfunction.\nOutput:"
+  },
+  {
+    "input": "Key Components of GANs",
+    "output": "Generative Adversarial Networks (GANs) consist of two main components that work together in a competitive manner:"
+  },
+  {
+    "input": "Example",
+    "output": "The Generator generates some random images (eg. tables) and then the discriminator compares those images with some real world table images and sends the feedback to itself and Generator,  helping the Generator create better, more realistic images over time. Let's see GAN structure below."
+  },
+  {
+    "input": "Working of GAN",
+    "output": "Let’s see the process of generating images using GANs, using the example of creating images of dogs."
+  },
+  {
+    "input": "Step 1: Training the Discriminator",
+    "output": "1. Initial Generator Output:The Generator starts by creating random images, filled with noise. These images don’t resemble anything real yet.\n2. Discriminator Input:The Discriminator is shown two sets of images:\nGenerated images from the Generator.\nReal images from the dataset (in this case, actual dog images).\n3. Discriminator’s Evaluation:The Discriminator gives each image a probability, showing how likely it is that the image is real:\nFor example, it might give a generated image probabilities like 0.8, 0.3 and 0.5 means it’s not very confident that these are real images.\nFor real dog images, the Discriminator might classify them as 0.1, 0.9 and 0.2 showing confidence in labeling them as real.\n4. Loss Calculation:The Discriminator aims to label real images as “1” (real) and generated images as “0” (fake). The loss is calculated by comparing the predicted probabilities with the correct values. For example:\nIf the Discriminator gives a generated image a probability of 0.8, the loss is 0 - 0.8 = -0.8.\nFor a real image with a probability of 0.9, the loss is 1 - 0.9 = 0.1.\n5. Backpropagation:After calculating the loss, the Discriminator’s weights are adjusted to improve its ability to distinguish real from fake images."
+  },
+  {
+    "input": "Step 2: Training the Generator",
+    "output": "After the Discriminator is trained, we now focus on training the Generator:\nAfter a few iterations, we will see that the Generator starts generating images close to real-world images."
+  },
+  {
+    "input": "Applications of GANs",
+    "output": "GANs are used in many fields to create realistic content. Some of the main applications include:"
+  },
+  {
+    "input": "Advantages of GANs",
+    "output": "Generative Adversarial Networks (GANs) has several key benefits:"
+  },
+  {
+    "input": "Challenges in Training GANs",
+    "output": "While GANs are useful, training them comes with challenges:"
   }
 ]
