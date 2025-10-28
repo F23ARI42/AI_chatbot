@@ -16726,5 +16726,49 @@
   {
     "input": "Limitations",
     "output": "Susceptible to Bias:May reproduce biases found in large, web-crawled training data, which can affect fairness in real-world applications.\nContextual Limitations:Sometimes misinterprets nuanced, complex or ambiguous visual contexts, leading to incorrect matches with text prompts.\nDependence on Prompt Quality:Highly reliant on the accuracy and detail of text descriptions—vague or poorly constructed prompts can reduce performance.\nNot Robust to Adversarial Inputs:Can be tricked by carefully designed misleading images or prompts, exposing vulnerabilities in security-critical scenarios."
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "Let's see the step-by-step implementation of ALIGN,"
+  },
+  {
+    "input": "Step 1: Import Libraries",
+    "output": "Let's import all the required libraries,\nPIL.Image:For reading and converting images.\nAlignProcessor:Preprocesses (tokenizes, tensorizes) images and text.\nAlignModel:Pretrained model to embed images and texts together.\ntorch:For tensor computation.\ncosine_similarity (torch):Measures vector similarity.\nrequests:Downloads images from URLs.\nBytesIO:Handles in-memory image data for PIL."
+  },
+  {
+    "input": "Step 2: Model and Processor Initialization",
+    "output": "Let's initialize the model,\nAlignProcessor:Preps images/text for model.\nAlignModel:Loads pretrained weights/config for ALIGN."
+  },
+  {
+    "input": "Step 3: Text and Image Inputs",
+    "output": "Input the text and image URL's,\ntexts:List of captions.\nimage_urls:List of image links."
+  },
+  {
+    "input": "Step 4: Download and Prepare Images",
+    "output": "The model downloads the image from the URL for further processing by converting to RGB,"
+  },
+  {
+    "input": "Step 5: Preprocess Images and Texts along with Device Setup",
+    "output": "The images are converted to padded PyTorch tensors since the neural networks require uniform and correctly typed batch input. Use GPU if available otherwise CPU."
+  },
+  {
+    "input": "Step 6: Compute Model Outputs and Extract Embeddings",
+    "output": "Passes inputs through ALIGN, creates modality embeddings.\nimage_embeds:Vector per input image.\ntext_embeds:Vector per caption."
+  },
+  {
+    "input": "Step 7: Calculate Cosine Similarity and Display Result",
+    "output": "Compute the similarity for each image-text pair and display the results.\nOutput:"
+  },
+  {
+    "input": "Application of ALIGN",
+    "output": "Zero-shot Image Classification:Classifies images using only text descriptions of categories, with no retraining for new classes.\nImage-Text Retrieval:Finds relevant images for text queries (text-to-image search) or retrieves text based on an image (image-to-text search).\nMultimodal Search:Supports complex queries involving both images and texts together, such as searching for “red electric car” with an example photo and description.\nCross-modal Embedding:Enables downstream tasks that require both visual and linguistic understanding, such as visual question answering or captioning."
+  },
+  {
+    "input": "Advantages",
+    "output": "Massive Scale:Trained on over 1.8 billion image-text pairs, making it robust and generalizable to real-world data.\nMinimal Data Cleaning:Handles noisy, web-sourced data with little filtering, enabling adaptability to uncontrolled environments.\nDual-Encoder Efficiency:Architected for fast similarity computation, making large-scale retrieval tasks practical.\nStrong Zero-shot Capability:Performs well on unseen classes and tasks without the need for task-specific training."
+  },
+  {
+    "input": "Limitations",
+    "output": "Sensitive to Noisy Data:While robust, excessive noise or irrelevant text-image pairings can still degrade performance.\nLanguage and Domain Bias:May reflect biases present in large-scale, web-sourced data, impacting fairness and reliability.\nQuality vs. Quantity Trade-off:Minimal filtering allows more data, but risks including more irrelevant or low-quality pairs.\nLimited Fine-grained Localization:Focuses on global image-text correspondence; less effective at tasks needing detailed localization or fine object matching."
   }
 ]
