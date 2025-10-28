@@ -16790,5 +16790,33 @@
   {
     "input": "Bitwise NOT operation on Image:",
     "output": "Inversion of input array elements.\nOutput:Bitwise NOT on Image 1\nBitwise NOT on Image 2"
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "Let's see the step by step implementation of Arithmetic operations,"
+  },
+  {
+    "input": "Step 1:Install Required Libraries and Import necessary Packages",
+    "output": "opencv-python(cv2): Core library for image processing and computer vision.\nmatplotlib.pyplot: For displaying images inside the notebook .\nnumpy: Efficient array operations ."
+  },
+  {
+    "input": "Step 2:Upload the Input Images.",
+    "output": "files.upload() opens a dialog to pick files from  our device.\ncv2.imread() reads an image from disk and loads it as a NumPy array (in BGR color ordering by default)."
+  },
+  {
+    "input": "Step 3: Visualize Input Images.",
+    "output": "Output:"
+  },
+  {
+    "input": "1. Image Addition",
+    "output": "1.1  Simple Addition\ncv2.add(): Adds pixel values with saturation.\nOutput:\n1.2  Weighted Addition\ncv2.addWeighted(): Blends two images by specified weights and an optional scalar.\nParameters:\nimg1, img2:input images\n0.7, 0.3:weights (how much each image contributes)\n0:gamma (brightness adjustment)\nOutput:"
+  },
+  {
+    "input": "2. Image Subtraction",
+    "output": "cv2.subtract():Subtracts each pixel in img2 from img1 (clips negative values to 0).\nUsed for change detection, background subtraction, etc.\nOutput:"
+  },
+  {
+    "input": "3. Bitwise Operations",
+    "output": "3.1 Bitwise AND\ncv2.bitwise_and(): Only keeps pixels where both images have bits \"on\".\nOutput:\n3.2 Bitwise OR\ncv2.bitwise_or(): Keeps pixels if either image has a bit \"on\".\nOutput:\n3.3 Bitwise XOR\ncv2.bitwise_xor(): Keeps pixels if only one image (not both) has a bit \"on\".\nOutput:\n3.4 Bitwise NOT\ncv2.bitwise_xor(): Keeps pixels if only one image (not both) has a bit \"on\".\nOutput:"
   }
 ]
