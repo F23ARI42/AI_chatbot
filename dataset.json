@@ -18886,5 +18886,49 @@
   {
     "input": "Limitations of LoRA",
     "output": "While LoRA helps for efficient fine-tuning, there are a few limitations to keep in mind:"
+  },
+  {
+    "input": "How to Use n8n?",
+    "output": "To use n8n we have 2 options:"
+  },
+  {
+    "input": "Local Setup of n8n",
+    "output": "1. Download and install Node.js from the official website.\n2. Open a terminal and run the commandnpx n8n. After running the command it will show:\n3. To open the interface, either press \"o\" on the keyboard or open the localhost URL shown in the terminal i.e http://localhost:5678 (can be different for different users). If the installation is done correctly then the interface on the browser will look similar to the one presented below.\n4. The user can enter their credentials and then use the features of n8n on their local systems."
+  },
+  {
+    "input": "Self-Hosting n8n with Docker Desktop",
+    "output": "An alternative to the Node.js method, self-hosting n8n with Docker Desktop offers a user-friendly, no-code solution for running n8n locally. Docker, a platform that packages applications and their dependencies into containers, simplifies setup by eliminating manual configuration. This method is ideal for beginners or those avoiding terminal commands while still providing the privacy, control and scalability benefits of self-hosting highlighted in the Key Features section."
+  },
+  {
+    "input": "Why Use Docker for n8n?",
+    "output": "Simplicity: Docker bundles n8n’s dependencies (e.g., libraries, tools) into a single container, streamlining setup.\nPortability: Containers run consistently across local machines or cloud providers.\nIsolation: n8n operates independently, avoiding conflicts with other applications.\nScalability: Easily deploy multiple containers for complex workflows or increased workloads."
+  },
+  {
+    "input": "Prerequisites",
+    "output": "A computer with Windows, macOS or Linux.\nAn internet connection to download Docker Desktop and the n8n image.\nOptional: Existing n8n cloud workflows for migration."
+  },
+  {
+    "input": "Step-by-Step Guide:",
+    "output": "1. Install Docker Desktop:\nDownload Docker Desktop for your operating system.\nFor macOS users with M1/M2/M3 chips, select the Apple Silicon version.\nInstall and launch Docker Desktop.\n2. Create a Data Folder:\nCreate a folder named n8n-data in your home directory to store workflows, credentials and configurations for data persistence.\nMacOS/Linux: Use your file explorer or run mkdir ~/n8n-data in a terminal.\nWindows: Create the folder in C:\\Users\\YourUsername\\n8n-data via File Explorer.\n3. Pull the n8n Image:\nIn Docker Desktop, go to the Images tab and search for n8n.io/n8n.\nSelect the official image (100M+ downloads, high star rating) and click Pull.\n4. Run the n8n Container:\nIn the Images tab, locate n8n.io/n8n and click Run.\nConfigure the container:\nContainer Name: Set to n8n-container.\nHost Port: Enter 5678 to access n8n at http://localhost:5678.\nVolume: Select the n8n-data folder and set the container path to /home/node/.n8n for data syncing.\nClick Run to start the container.\n5. Access n8n:\nOpen a browser and go tohttp://localhost:5678.\nCreate an account with a username and password (independent of cloud accounts).\nComplete the onboarding prompts to customize your instance.\n6. Manage the Container:\nStop the container in Docker Desktop’s Containers tab by clicking Stop (the interface will be inaccessible).\nRestart by clicking Start and refresh http://localhost:5678 to resume."
+  },
+  {
+    "input": "Securing Your Instance",
+    "output": "To prevent unauthorized access:\n1. Add these environment variables in Docker Desktop’s container settings:\nN8N_BASIC_AUTH_ACTIVE=true\nN8N_BASIC_AUTH_USER=<your-username>\nN8N_BASIC_AUTH_PASSWORD=<your-password>\n2. For production, use a reverse proxy (e.g., Nginx) with HTTPS. See the n8n documentation on the official website for more details."
+  },
+  {
+    "input": "Migrating Cloud Workflows",
+    "output": "To import workflows from a cloud n8n account:\nExample Workflow:Google Sheets to Slack To apply n8n’s use cases (e.g., data synchronization):"
+  },
+  {
+    "input": "Troubleshooting",
+    "output": "Port Conflict: If http://localhost:5678 fails, change the host port (e.g., to 5679) in Docker Desktop.\nDocker Issues: Ensure Docker Desktop is running and you have sufficient disk space.\nData Loss: Verify the n8n-data folder is mapped to /home/node/.n8n.\nThis method empowers you to leverage n8n’s full potential locally, supporting AI automation, data syncing and more, as described in the use cases section."
+  },
+  {
+    "input": "Workflow",
+    "output": "n8n works by enabling users to create workflows that consist of a series of nodes. These nodes are connected in a sequence to define the flow of the automation. Lets understand the steps with examples:"
+  },
+  {
+    "input": "Technical Use Cases",
+    "output": "1. AI Workflow Automation: Integrates AI tools like OpenAI's GPT-4o or Whisper to:\nGenerate meeting summaries for Slack or Notion.\nAnalyze sales data for dashboard reports.\nBuild NLP pipelines for data-driven actions.\n2. Data Synchronization: Ensures real-time data syncing:\nSyncs customer records across PostgreSQL, Google Sheets and Airtable.\nAutomates backups and ETL pipelines for analytics dashboards like Looker.\n3. AI Agent Creation: Builds AI agents to:\nMonitor emails and take actions based on context.\nUse decision nodes for lead scoring, messaging or issue escalation.\nCreate autonomous workflows with APIs and logic.\n4. Sales and CRM Automation: Automates lead management:\nCaptures leads from forms.\nEnriches data with Clearbit or Apollo.\nAssigns leads and triggers emails or Slack alerts.\n5. Customer Support Automation: Streamlines support:\nDrafts ticket responses using GPT-4o.\nCategorizes tickets by tone/keywords.\nUpdates CRMs and escalates high-priority tickets."
   }
 ]
