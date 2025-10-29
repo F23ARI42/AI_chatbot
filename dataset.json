@@ -17750,5 +17750,65 @@
   {
     "input": "Theory",
     "output": "Neighborhood processing in spatial domain:Here, to modify one pixel, we consider values of the immediate neighboring pixels also. For this purpose, 3X3, 5X5, or 7X7 neighborhood mask can be considered. An example of a 3X3 mask is shown below.\nLow Pass filtering:It is also known as the smoothing filter. It removes the high-frequency content from the image. It is also used to blur an image. A low pass averaging filter mask is as shown.\nHigh Pass Filtering:It eliminates low-frequency regions while retaining or enhancing the high-frequency components. A high pass filtering mask is as shown.\nMedian Filtering:It is also known as nonlinear filtering. It is used to eliminate salt and pepper noise. Here the pixel value is replaced by the median value of the neighboring pixel.\nBelow is the implementation.\nInput Image:\nAveraging Filter:\nOutput:\nIn the above example, it is observed that the filtered image is slightly blurred. If we increase the size of the averaging mask, more blurring can be obtained.\nMedian Filtering:\nOutput:\nIn the above example, we can see that the median filtered image is considerably enhanced with hardly any salt and pepper noise in it."
+  },
+  {
+    "input": "How Does Supervised Fine-Tuning Work?",
+    "output": "The process of SFT typically follows these steps:"
+  },
+  {
+    "input": "1. Pre-training",
+    "output": "LLM is initially trained on a large corpus of unlabeled text using masked language modeling like predicting missing words in sentences. This helps the model develop a broad understanding of language syntax, semantics and context."
+  },
+  {
+    "input": "2. Task-Specific Dataset Preparation",
+    "output": "A smaller dataset relevant to the target task is created. This dataset consists input-output pairs where each input is associated with a label or response. For example, in question-answering tasks the input could be a question and the output would be the correct answer."
+  },
+  {
+    "input": "3. Fine-Tuning",
+    "output": "Pre-trained model is further trained on task-specific dataset using supervised learning. During this process model’s parameters are updated to minimize the difference between its predictions and true labels. Techniques like gradient descent are commonly used for optimization."
+  },
+  {
+    "input": "4. Evaluation",
+    "output": "After fine-tuning the model is evaluated on a validation set to assess its performance on target task. If required hyperparameters are tuned or additional training iterations are conducted."
+  },
+  {
+    "input": "5. Deployment",
+    "output": "Once the model achieves satisfactory results, it can be deployed for real-world use cases, such as customer support chatbots, content generation tools or medical diagnosis systems."
+  },
+  {
+    "input": "What Does \"Supervised\" Mean in SFT?",
+    "output": "The term\"supervised\"refers to the use oflabeled training datato guide the fine-tuning process. In SFT the model learns to map specific inputs to desired outputs by minimizing prediction errors on a labeled dataset. For example in a customer support system without SFT model can work like this:\nWe can useLabeled Datafor each training example like a text prompt and a corresponding label or target output such as a correct answer or classification.Model adjusts its parameters based on explicit feedback from the labeled data ensuring it aligns with task-specific objectives. After SFT our model work like this:\nWE can see that the model learns to respond more effectively to prompts or questions and now can be used for task specific work or domain in customer support system."
+  },
+  {
+    "input": "SFT vs. General Fine-Tuning",
+    "output": "While SFT is a type offine-tuningnot all fine-tuning is \"supervised.\" Here’s how SFT differs from broader fine-tuning approaches:"
+  },
+  {
+    "input": "Implementing SFT in Python",
+    "output": "Let’s break down the steps to fine-tune a pre-trained model for a sentiment analysis taskusing Python and Hugging Face’s Transformers library."
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "datasets: Provides easy access to a wide range of ready-to-use datasets from Hugging Face.\ntransformers: A library by Hugging Face for working with pre-trained NLP models."
+  },
+  {
+    "input": "2. Choose a Pre-trained Model",
+    "output": "Select a model suited to your task. For text classification we are using  a BERT model here.\nAutoTokenizer.from_pretrained:Loads the tokenizer associated with the BERT model.\nAutoModelForSequenceClassification.from_pretrained:Loads BERT with a classification head for binary output (num_labels=2).\nOutput:"
+  },
+  {
+    "input": "3. Prepare Your Dataset",
+    "output": "Use a labeled dataset here we will be using IMDb reviews for sentiment analysis.\nload_dataset(\"imdb\"):Loads the IMDb movie reviews dataset with labels (positive/negative).\npreprocess_function:Uses the tokenizer to convert raw text into token IDs with padding and truncation.\ndataset.map:Applies the preprocessing function to the full dataset in batches.\nOutput:"
+  },
+  {
+    "input": "4. Fine-Tuning the Model",
+    "output": "Train the model on your task-specific data. Use a learning rate scheduler and GPU acceleration for efficiency.\nTrainingArguments():Defines how the model will be trained including output location, evaluation strategy, learning rate, batch size and number of epochs.\nTrainer: A wrapper that handles the training and evaluation process.\ntrainer.train():Starts the fine-tuning process on the training dataset.\nOutput:"
+  },
+  {
+    "input": "5. Evaluating Model",
+    "output": "Checking performance of model on a validation set.\nOutput:"
+  },
+  {
+    "input": "Challenges of Supervised Fine-Tuning",
+    "output": "Supervised Fine-Tuning is widely used in modern AI development enabling rapid adaptation of pre-trained models to specialized tasks. By following best practices like using careful parameter, data preparation and iterative testing we can build a high-performing models even with limited resources."
   }
 ]
