@@ -17698,5 +17698,41 @@
   {
     "input": "Conclusion",
     "output": "Signal processing is a vital field that touches numerous aspects of modern technology, from communications and entertainment to healthcare and defense. With ongoing advancements, particularly in AI and machine learning, signal processing will continue to evolve, offering even more sophisticated solutions to complex problems across industries."
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "Let's implement the various types of simple thresholding techniques,"
+  },
+  {
+    "input": "Step 1: Import libraries and Image Preparation",
+    "output": "Let's import the required libraries and load our image on which we will perform the operations,\ncv2: Handles image reading, processing, and applies thresholding techniques.\nnumpy: Supports efficient array operations, enabling fast image data handling.\nmatplotlib.pyplot: Displays images and results in Colab notebooks."
+  },
+  {
+    "input": "Step 2: Helper Function",
+    "output": "Define the helper function which helps in displaying the images,"
+  },
+  {
+    "input": "Step 3: Display the Original Image",
+    "output": "Output:"
+  },
+  {
+    "input": "Step 4: Binary Threshold",
+    "output": "If a pixel’s intensity is above the threshold, it is assigned the maximum value (usually 255; white)—otherwise, it becomes 0 (black).\nUseful for separating bright objects from a dark background.\nOutput:"
+  },
+  {
+    "input": "Step 5: Binary Threshold Inverted",
+    "output": "This works opposite to the binary threshold. Pixels above the threshold become 0 (black), and those below become the maximum value (255; white).\nHighlights background over foreground.\nOutput:"
+  },
+  {
+    "input": "Step 6: Truncated Threshold",
+    "output": "Pixels above the threshold take the threshold value itself. Pixels below the threshold remain unchanged.\nLimits the maximum brightness, useful for flattening overexposed regions.\nOutput:"
+  },
+  {
+    "input": "Step 7: To Zero Threshold",
+    "output": "Pixels below the threshold are set to 0. Pixels above the threshold keep their original intensity.\nExtracts the brighter parts of the image while suppressing darker regions.\nOutput:"
+  },
+  {
+    "input": "Step 8: To Zero Inverted Threshold",
+    "output": "Pixels above the threshold are set to 0. Pixels below the threshold keep their original value.\nRetains darker details while masking the brighter ones.\nOutput:"
   }
 ]
