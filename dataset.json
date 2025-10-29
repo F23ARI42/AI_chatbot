@@ -20086,5 +20086,77 @@
   {
     "input": "Comparison of Embedding Providers in CrewAI",
     "output": "This table outlines the main embedding providers available in CrewAI, showing how they differ in models, strengths and use cases."
+  },
+  {
+    "input": "Workflow of CrewAI Flows",
+    "output": "Here’s how a typical Flow in CrewAI is structured"
+  },
+  {
+    "input": "Components of CrewAI Flows",
+    "output": "These are the core building blocks or features that make CrewAI Flows useful and flexible:"
+  },
+  {
+    "input": "1. Decorators",
+    "output": "CrewAI Flows uses Python decorators to define how and when each part of our workflow runs.\n@start():marks the entry method.\n@listen():listens to outputs or completion of other methods.\n@router():for conditional branching or routing based on state or outputs."
+  },
+  {
+    "input": "2. State",
+    "output": "Flows maintain a state object that carries information between steps and helps us track execution\nUnstructured state (dictionary-style) giving agility.\nStructured state (using Pydantic models) for type safety, schema validation, auto-completion.\nUnique identifiers (UUIDs) assigned automatically to track each flow execution."
+  },
+  {
+    "input": "3. Event-Driven Execution",
+    "output": "Methods can trigger other methods upon completion. Flows support logical composition like or_ / and_ to combine events."
+  },
+  {
+    "input": "4. Conditional Logic and Routing",
+    "output": "Based on output or state, flows can take different execution paths. Useful for branches, error handling, multiple possible workflows."
+  },
+  {
+    "input": "5. Integration with Crews",
+    "output": "Crews are groups of agents meant for collaborative tasks. Flows can orchestrate Crews, combining them with direct LLM calls and custom code."
+  },
+  {
+    "input": "6. Persistence and Resumption",
+    "output": "Flows allow saving state, so workflows can resume or be inspected later."
+  },
+  {
+    "input": "7. Visualization Tools",
+    "output": "Methods likeplot()help us see the flow structure visually."
+  },
+  {
+    "input": "Implementation of Example Flow with CrewAI",
+    "output": "We will be building a simple Flow using CrewAI to demonstrate how these components work in practice"
+  },
+  {
+    "input": "1. Setting Up the Environment",
+    "output": "Before working with Flows, we need to install CrewAI:\nWe also need to set any LLM API keys if external LLMs are used:"
+  },
+  {
+    "input": "2. Importing Required Libraries",
+    "output": "First, we import the necessary classes to define Flows and interact with LLMs.\nFlow:Base class for defining a Flow.\nstart:Decorator marking the entry point of a Flow.\nlisten:Decorator for methods that run after another method completes.\ncompletion:Helper function to call the LLM with model and messages."
+  },
+  {
+    "input": "3. Defining the Flow Class",
+    "output": "We define a Flow class that orchestrates the steps.\nmodel:Specifies the LLM model to use.\nself.state:Dictionary holding intermediate and final results."
+  },
+  {
+    "input": "4. Start Method – Suggest a Cuisine",
+    "output": "This is the entry point of the Flow, decorated with @start():\n@start():Marks this method as the Flow entry point.\ncompletion(model, messages):Sends a prompt to the LLM.\nself.state[\"cuisine\"]:Stores the chosen cuisine for later steps."
+  },
+  {
+    "input": "5. Listener Method – Suggest a Dish",
+    "output": "This method runs after suggest_cuisine and produces a dish:\n@listen(suggest_cuisine):Ensures this method runs after the start method.\ncuisine:Argument automatically passed from the previous step.\nself.state[\"dish\"]:Stores the suggested dish."
+  },
+  {
+    "input": "6. Listener Method – Provide a Cooking Tip",
+    "output": "This method runs after suggest_dish and produces a useful cooking tip:\n@listen(suggest_dish):Ensures this method runs after the dish is suggested.\ndish:Argument automatically passed from the previous step.\nself.state[\"tip\"]:Stores the tip for later inspection or output."
+  },
+  {
+    "input": "7. Running and Visualizing the Flow",
+    "output": "Finally, we instantiate the Flow, visualize it and execute it.\nflow.plot():Visualizes the Flow structure.\nflow.kickoff():Executes the Flow from start to finish.\nresult:Contains the final output from the last step.\nOutput:\nRunning this Flow produces:\ncuisine:The cuisine suggested by the model.\ndish:A dish from that cuisine.\ntip:A helpful cooking tip for that dish."
+  },
+  {
+    "input": "Applications of CrewAI Flows",
+    "output": "These are real-world use cases where CrewAI Flows shine:\nContent generation pipelines:combining outline creation, content writing, review, revision.\nAutomations with conditional branching:It can include reading email, deciding based on content whether to reply, archive or escalate.\nDocument or data processing:It works likeOCR → extraction → analysis → reporting.\nChatbots with memory and decision logic:Depending on user’s previous interactions, state, etc.\nIntegrations with external systems or APIs:Flows that trigger external services, wait for responses, branch accordingly."
   }
 ]
