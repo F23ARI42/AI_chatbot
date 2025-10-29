@@ -19034,5 +19034,89 @@
   {
     "input": "Challenges with PEFT",
     "output": "While Parameter-Efficient Fine-Tuning solves many problems of traditional fine-tuning, it also comes with its own set of challenges:"
+  },
+  {
+    "input": "Key Concepts of QLoRA",
+    "output": "QLoRA relies on two main concepts to make fine-tuning large language models more efficient:"
+  },
+  {
+    "input": "1.Quantization",
+    "output": "Model weights are normally stored in 16-bit or 32-bit floating-point precision which uses a lot of memory.\nQuantizationreduces this precision to lower-bit formats (e.g 8-bit or 4-bit), shrinking the model size and speeding up computation.\nAdvanced methods like Normal Float 4-bit (NF4) help maintain accuracy despite the lower precision."
+  },
+  {
+    "input": "2.Low-Rank Adaptation",
+    "output": "Fine-tuning all weights in a large model is expensive.LoRAadds small trainable adapter layers to selected parts of the model (attention layers) while keeping the main weights frozen.\nOnly these adapters are updated during fine-tuning, reducing the number of parameters to train.\nDespite their small size, adapters allow the model to learn task-specific adjustments efficiently."
+  },
+  {
+    "input": "Working of QLoRA",
+    "output": "QLoRA fine-tunes large language models efficiently by following a structured process. Each step focuses on reducing memory and computation while adapting the model to a specific task."
+  },
+  {
+    "input": "1. Quantize the Base Model",
+    "output": "Pretrained model is converted from full precision to 4-bit weights.\nThis reduces GPU memory usage allowing large models to run on smaller hardware.\nQuantization methods like NF4 help maintain accuracy during compression."
+  },
+  {
+    "input": "2. Add Low-Rank Adapters",
+    "output": "Small adapter layers are inserted into selected parts of the model, typically the attention layers.\nThese adapters remain in higher precision (e.g 16-bit) to ensure stable training.\nThe backbone model is kept frozen, so the original weights are not modified."
+  },
+  {
+    "input": "3. Fine-Tune Only the Adapters",
+    "output": "During training, only the adapter layers are updated.\nThis drastically reduces the number of trainable parameters and the required computation.\nFine-tuning becomes faster and feasible on a single GPU or low-resource device."
+  },
+  {
+    "input": "4. Merge or Keep Adapters Separate",
+    "output": "After training, adapters can be merged into the quantized model for deployment.\nAlternatively, it can be kept separate allowing reuse or swapping for different tasks without retraining the base model.\nThese steps ensures that we can adapt billion-parameter models efficiently, maintaining performance while using significantly fewer resources than traditional full fine-tuning."
+  },
+  {
+    "input": "Implementation of QLoRA with BERT on AG News Classification",
+    "output": "We will see a practical implementation of QLoRA on BERT-base for news topic classification. AG News has 4 classes: World, Sports, Business, Sci/Tech. QLoRA combines 4-bit quantization with LoRA adapters for memory-efficient fine-tuning."
+  },
+  {
+    "input": "1. Installing Required Libraries",
+    "output": "We will install the necessary libraries like transformers, datasets, peft, bitsandbytes and evaluate to handle models, datasets and fine-tuning with QLoRA."
+  },
+  {
+    "input": "2. Importing Dependencies",
+    "output": "We will be importing required modules such asAutoModelForSequenceClassificationfor model loading,BitsAndBytesConfigfor quantization andLoraConfigfor applying LoRA adapters to the model."
+  },
+  {
+    "input": "3. Loading and Splitting the Dataset",
+    "output": "We load the AG News dataset, shuffle it and split it into 80% training, 20% validation while keeping the original test set for evaluation. We will use the DatasetDict to store these splits.\nOutput:"
+  },
+  {
+    "input": "4. Preprocessing Data",
+    "output": "Before training, we tokenize the text so BERT can process it. Each input is padded or truncated to 128 tokens for uniformity. We also rename label to labels and format the dataset for PyTorch with input_ids, attention_mask for model consumption.\nOutput:"
+  },
+  {
+    "input": "5. Loading Quantized Base Model for QLoRA",
+    "output": "Here we will be loading a pre-trained BERT model and apply 4-bit quantization using BitsAndBytes to reduce memory usage while maintaining accuracy.\nOutput:"
+  },
+  {
+    "input": "6. Applying LoRA Adapters",
+    "output": "We apply LoRA adapters to the model's attention layers, reducing the number of trainable parameters and improving fine-tuning efficiency without sacrificing performance."
+  },
+  {
+    "input": "7. Training the Model",
+    "output": "We define the Trainer with custom settings such as learning rate, batch size and evaluation strategy. Also, set up accuracy as the evaluation metric.\nBatch size = 8\nLearning rate = 5e-5\nEpochs = 2 (kept short for quick results)\nOutput:"
+  },
+  {
+    "input": "8. Testing the Model",
+    "output": "Now let’s test our fine-tuned model to classify sample news articles into categories like Business, Sports and Sci/Tech, displaying the predicted labels for each text input.\nOutput:"
+  },
+  {
+    "input": "LoRA Vs QLoRA",
+    "output": "Lets see some basic differences between both to understand them better:"
+  },
+  {
+    "input": "Applications of QLoRA",
+    "output": "QLoRA is useful in situations where we want to adapt large language models efficiently without requiring massive hardware. Key applications include:"
+  },
+  {
+    "input": "Advantages of QLoRA",
+    "output": "QLoRA provides several practical benefits for fine-tuning and deploying large language models:"
+  },
+  {
+    "input": "Limitations of QLoRA",
+    "output": "While QLoRA improves efficiency and reduces resource requirements for fine-tuning large language models, it has some limitations:"
   }
 ]
