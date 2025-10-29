@@ -17582,5 +17582,41 @@
   {
     "input": "Why Use FFT in Image Processing?",
     "output": "FFT is faster than traditional Fourier Transform methods and preserves all original data. Commonly used for tasks like:\nNoise Removal: Low-frequency components represent smooth variations (main shapes), while high-frequency components capture fine details and noise. FFT allows us to isolate and remove unwanted noise.\nCompression: Helps compress images by focusing on significant frequency components.\nFeature Extraction: Useful for detecting patterns, edges and objects within images."
+  },
+  {
+    "input": "What is Image Segmentation?",
+    "output": "Image segmentationis acomputer visiontask that aims at identifying and delineating individual objects or regions of interest within an image, making it easier to recognize and detect objects. Image segmentation helps in understanding the image's content by differentiating between the foreground and background."
+  },
+  {
+    "input": "Types of Image Segmentation",
+    "output": "The high level categorization of image segmentation techniques are based on the nature of the segmentation. The main types of Image Segmentation are:"
+  },
+  {
+    "input": "What is Semantic Segmentation?",
+    "output": "Semantic segmentation is a foundational technique in computer vision that focuses on classifying each pixel in an image into specific categories or classes, such as objects, parts of objects, or background regions. Unlike instance segmentation, which differentiates between individual object instances, semantic segmentation provides a holistic understanding of the image by segmenting it into meaningful semantic regions based on the content and context of the scene."
+  },
+  {
+    "input": "Workflow of Semantic Segmentation",
+    "output": "Some of the Semantic Segmentation techniques areU-Net, FCN (Fully Convolutional Networks), DeepLab, PSPNet (Pyramid Scene Parsing Network) and SegNet."
+  },
+  {
+    "input": "Applications of Semantic Segmentation",
+    "output": "Scene Understanding: Semantic segmentation aids in understanding the content and context of complex scenes by identifying and categorizing various objects and regions within an image.\nAutonomous Driving: In autonomous vehicles, semantic segmentation enables scene perception by detecting and classifying objects like roads, pedestrians, vehicles, and obstacles to navigate safely.\nMedical Image Analysis: Semantic segmentation is crucial in medical imaging for identifying and segmenting anatomical structures or abnormalities, assisting in diagnosis and treatment planning.\nVideo Surveillance: In video analytics systems, semantic segmentation facilitates object detection and tracking by segmenting and analyzing the motion and behavior of objects over time.\nImage Editing and Augmentation: Semantic segmentation powers advanced image editing and augmentation techniques by enabling precise selection and manipulation of specific objects or regions in the image."
+  },
+  {
+    "input": "Instance Segmentation",
+    "output": "Instance segmentation is an advanced image analysis technique that combines elements of object detection and semantic segmentation to identify and delineate individual object instances within an image at a detailed pixel level. Unlike semantic segmentation, which classifies each pixel into broad categories without distinguishing between different instances of the same class, instance segmentation provides a more granular understanding by differentiating between individual objects and assigning a unique label to each object instance."
+  },
+  {
+    "input": "Workflow of Instance Segmentation",
+    "output": "Some of the instance based segmentation techniques are Mask R-CNN,Faster R-CNNwith Mask Branch, Cascade Mask R-CNN, SOLO (Segmenting Objects by Locations) and YOLACT (You Only Look At CoefficienTs)."
+  },
+  {
+    "input": "Applications of instance segmentation",
+    "output": "Object Detection and Recognition: Instance segmentation facilitates accurate object detection, recognition, and classification in complex scenes with multiple overlapping objects.\nScene Understanding: By providing detailed object-level segmentation, instance segmentation enhances scene understanding and context-aware image analysis.\nMedical Imaging: Instance segmentation aids in identifying and delineating specific anatomical structures or abnormalities in medical images for diagnosis and treatment planning.\nRobotics and Autonomous Systems: Instance segmentation is crucial for robotic vision systems and autonomous vehicles to perceive and interact with the surrounding environment effectively."
+  },
+  {
+    "input": "Semantic Segmentation vs Instance Segmentation",
+    "output": "In this section, we are going to cover the key differences between the segmentation techniques."
   }
 ]
