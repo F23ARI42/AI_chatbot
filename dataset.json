@@ -18954,5 +18954,85 @@
   {
     "input": "Conclusion",
     "output": "Narrow AI plays a critical role in modern technology, offering solutions for specific tasks across industries. While it is limited by its task-specific design, it has significantly improved efficiency, accuracy, and decision-making in various fields. As the development of General AI continues, Narrow AI will remain a foundational component of our digital ecosystem, driving innovations in sectors like healthcare, finance, and customer service."
+  },
+  {
+    "input": "Problem with Traditional Fine-Tuning",
+    "output": "Fine-Tuningtakes the pre-trained model and adapt the model for specific task. For example, BERT or GPT can be fine-tuned to perform sentiment analysis or text summarization. Traditionally, fine-tuning involves updating all the parameters (weights) of the model based on the new data. This works well but the problem is that modern Large Language Models (LLMs) are huge and have billions of parameters.\nImagine we have alarge language modelwith 100 billion parameters. If we fine-tune all those parameters for every new task, we'll need a lot of computing power and storage. To solve this problem, researchers developed Parameter-Efficient Fine-Tuning (PEFT). With PEFT, we can achieve similar performance by tweaking only a small fraction of the model making it faster, cheaper and easier to manage while still giving strong performance."
+  },
+  {
+    "input": "Working of Parameter-Efficient Fine-Tuning",
+    "output": "Let's see how it works step by step:\n1. Start with a Pre-trained Model:We begin with a large language model (LLM) such as GPT, BERT or T5 that is already trained on massive amounts of text. This model contains general knowledge about language.\n2. Freeze the Original Weights:Instead of updating all the billions of weights, we keep them fixed. This saves computing power and avoids the need to store multiple full versions of the model.\n3. Add Lightweight Components:Since the main model is frozen, we introduce tiny, task-specific modules or allow updates only to certain parameters. These are the only parts that will be trained. Some common techniques are:\nAdapters: Small layers added between existing layers to capture task-specific adjustments.\nLoRA (Low-Rank Adaptation):Adds compact matrices that approximate updates without touching the main weights.\nBitFit: Updates only bias terms in the model which are very few in number.\nPrompt / Prefix Tuning: Attaches short, learnable prompt vectors that guide the model’s behavior for each task.\n4. Train Only the New Parts:During fine-tuning, we update just the added or selected parameters and the frozen weights stays untouched.\n5. Deploy Efficiently:For each new task, we only need to save the small trained modules not the full model which means:\nOne big pre-trained model can serve many tasks.\nSwitching tasks is as simple as loading the right lightweight module."
+  },
+  {
+    "input": "PEFT Techniques for LLMs",
+    "output": "PEFT is not a single method but a family of techniques. The choice of method depends on the task, resources and flexibility needed. Let's see some popular techniques used with large language models:"
+  },
+  {
+    "input": "1.Adapter Modules",
+    "output": "Adapters Modulesare small, trainable modules inserted between the layers of a pre-trained model. During fine-tuning, only the adapter modules are updated while the original model weights remain fixed. Once fine-tuned, it can be easily added or removed allowing for modular customization of the model.\nIt allow for efficient multi-task learning where different adapters can be used for different tasks while sharing the same base model.\nFor example: The Hugging Face AdapterHub provides an extensive library of pre-trained adapters for various NLP tasks."
+  },
+  {
+    "input": "2.LoRA (Low-Rank Adaptation)",
+    "output": "LoRA (Low-Rank Adaptation)reduces the number of trainable parameters by decomposing weight updates into low-rank matrices. Instead of updating the entire weight matrix, it modifies only a small, low-rank component which approximates the changes needed for fine-tuning.\nIt achieves results close to full fine-tuning but with far fewer parameters.\nIt has been successfully applied to LLMs like GPT-3 and T5 making it a popular choice for parameter-efficient fine-tuning at scale."
+  },
+  {
+    "input": "3.DoRA (Weight-Decomposed Low-Rank Adaptation)",
+    "output": "DoRA builds upon the concept of LoRA but introduces a novel weight-decomposed approach to further enhance efficiency. In DoRA, the weight matrix is decomposed into two components i.e a low-rank update and a scaling factor.\nIt also maintains the low computational cost of LoRA while potentially improving performance.\nIt is useful in scenarios where fine-tuning must be both efficient and robust such as in cross-domain applications or when adapting models to new languages."
+  },
+  {
+    "input": "4.Prefix Tuning",
+    "output": "Prefix tuning works by adding a small set of learnable \"prefix\" tokens to the model’s input at every layer. These prefix tokens act as task-specific prompts that helps the model's behavior without changing its original parameters.\nIt allows the model to retain its general knowledge while adapting to specific tasks through the learned prefixes.\nIt is used for tasks like text generation where controlling the output style or content is important."
+  },
+  {
+    "input": "5.Prompt Tuning",
+    "output": "Prompt tuning involves adding a set of learnable soft prompts to the input sequence. However, instead of modifying internal model layers, it operates completely at the input level making it even simpler to implement.\nIt is lightweight and works well for tasks that require minimal changes to the model architecture.\nIt works well in few-shot learning where we only have a small amount of labeled data and for tasks where quick adaptation is needed."
+  },
+  {
+    "input": "6.BitFit (Bias-Term Fine-Tuning)",
+    "output": "BitFit focuses on fine-tuning only the bias terms of a neural network while keeping all other parameters frozen. Despite its simplicity, it has showed competitive results on various NLP benchmarks.\nIt requires minimal changes to the model and is efficient in terms of both computation and memory.\nIts effectiveness may vary depending on the complexity of the task and the architecture of the model."
+  },
+  {
+    "input": "7.(IA)³ (Infused Adapter by Inhibiting and Amplifying Inner Activations)",
+    "output": "(IA)³ takes a different approach compared to other PEFT methods. Instead of adding new modules or training extra parameters, it controls how the model’s internal activations behave during the forward pass.\nIt offers fine-grained control over how the model processes information making it suitable for tasks that require subtle adjustments to the model's behavior.\nIt has been shown to be effective in tasks such as text classification where slight modifications to the model's internal representations can lead to significant performance improvements."
+  },
+  {
+    "input": "Implementation of PEFT (LoRA) with BERT on IMDb Sentiment Analysis",
+    "output": "Here we will see a practical implementation of Parameter-Efficient Fine-Tuning (PEFT) usingLoRAon the IMDb movie reviews dataset. Instead of updating the entire BERT model, we will fine-tune only small LoRA modules, saving time and resources while still achieving strong performance."
+  },
+  {
+    "input": "1. Installing Required Libraries",
+    "output": "We will be usingTransformers,Datasets, Peft, Accelerate andScikit Learnlibraries for this implementation."
+  },
+  {
+    "input": "2. Loading Model & Dataset",
+    "output": "We use BERT-base-uncased as our pre-trained model which already has strong language understanding. The IMDb dataset contains 50k movie reviews labeled as positive or negative. This combination makes it a great benchmark to show PEFT for sentiment analysis."
+  },
+  {
+    "input": "3. Preprocessing Data",
+    "output": "Before training, we tokenize the reviews so that BERT can process them. Each review is truncated or padded to a maximum length of 128 tokens for consistency. Finally we rename label to labels and set the dataset format to PyTorch tensors."
+  },
+  {
+    "input": "4. Configuring LoRA",
+    "output": "Instead of updating all BERT weights, we configure LoRA (Low-Rank Adaptation) to inject small trainable matrices inside the attention layers (query, value). This reduces the number of trainable parameters while still adapting the model effectively. The dropout helps avoid overfitting during fine-tuning."
+  },
+  {
+    "input": "5. Training",
+    "output": "We define training arguments using Hugging Face’s Trainer.\nBatch size is set to 16 for both training and evaluation.\nLearning rate is slightly higher (2e-4) since we are only training small LoRA layers.\nFor demonstration, we train on a subset (2000 training + 1000 test samples) to reduce runtime.\nOutput:"
+  },
+  {
+    "input": "6. Making Predictions",
+    "output": "Once trained, we can test our model on new sentences. We load the fine-tuned LoRA adapter and run a few sample reviews through a sentiment pipeline. The output gives us the predicted label (POSITIVE or NEGATIVE) along with confidence scores between 0 and 1.\nOutput:\nThe results are decent but not highly accurate yet, mainly because we trained for only 2 epochs on a small subset of the IMDb dataset (2000 samples). With longer training, more data, hyperparameter tuning or larger LoRA ranks, the model’s performance would improve significantly."
+  },
+  {
+    "input": "Full Fine-Tuning vs PEFT",
+    "output": "When we compare full fine-tuning with parameter-efficient fine-tuning (PEFT), the differences become clear:"
+  },
+  {
+    "input": "Applications of PEFT",
+    "output": "Some key applications of PEFT include:"
+  },
+  {
+    "input": "Challenges with PEFT",
+    "output": "While Parameter-Efficient Fine-Tuning solves many problems of traditional fine-tuning, it also comes with its own set of challenges:"
   }
 ]
