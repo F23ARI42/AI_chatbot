@@ -19602,5 +19602,69 @@
   {
     "input": "Conclusion",
     "output": "The Black Box Problem represents a significant challenge in the field of AI, with implications for trust, accountability, and ethical considerations. As AI systems become more integral to various aspects of society, addressing this problem is crucial for ensuring that these systems are reliable, fair, and transparent. By advancing Explainable AI techniques, improving model design, and promoting transparency, we can work towards more interpretable and accountable AI systems. Continued research and dialogue will be key in overcoming the Black Box Problem and building AI systems that are both powerful and understandable."
+  },
+  {
+    "input": "Step 1: Install Libraries",
+    "output": "We will install the required libraries which will be needing,\nmcp[cli]:The official Model Context Protocol SDK and CLI tools from Anthropic.\nasyncio:Python’s library for asynchronous programming to handle multiple clients smoothly."
+  },
+  {
+    "input": "Step 2: Setting Up Project Directory Structure",
+    "output": "We will create our project folder, organize files in similar structure as this maintains hierarchy. The commands to create folders are:\nmkdir mcp-context-sharing:Creates a new project folder.\ncd mcp-context-sharing:Moves into the project folder.\nmkdir src:Creates a folder for source code inside the project.\nmkdir src/server:Creates a folder for server code inside the source folder.\nThis sets up a clean, organized folder structure for the project.\nWe will create our MCP server inside the main.py within the src/server folder."
+  },
+  {
+    "input": "Step 3: Create MCP Server",
+    "output": "Open the main.py file in any of the IDE or editor and edit that file.\nasyncio:Enables asynchronous programming, so the server can handle multiple requests concurrently without blocking.\nMCPServer:Imported from the MCP SDK; this class creates an MCP server instance.\nserver = MCPServer():Initializes the server that can expose \"tools\"—functions callable by clients following MCP.\ncontext_store = {}:A dictionary that stores contextual data organized by agent names. Each agent maps to a list of stored strings."
+  },
+  {
+    "input": "2. Define MCP Tools",
+    "output": "MCP tools are functions annotated with @server.tool(), making them remotely callable. These run asynchronously due to async def.\nTool 1: share_context\nPurpose: Allows agents to store new pieces of context (strings) under their unique name.\nIf the agent doesn't exist yet in context_store, create a new entry holding an empty list.\nAppend the given content to the agent’s list.\nReturns a confirmation message.\nTool 2: retrieve_context\nPurpose: Allows clients to search all stored contexts and retrieve entries that contain the specified query string.\nThe search is case-insensitive.\nIt collects all matching entries in the matching list along with the agent who stored them.\nIf no matches are found, returns a message indicating that.\nTool 3: list_all_context\nPurpose: Provides a full dump of the store, revealing all contexts saved under all agents.\nUseful for inspecting what has been stored so far without filtering."
+  },
+  {
+    "input": "2. Starting the MCP Server",
+    "output": "When the script runs, it:\nPrints a startup message.\nCalls server.serve() to start an asynchronous event loop.\nThe server listens constantly for incoming MCP client requests, enabling remote calls to the defined tools."
+  },
+  {
+    "input": "Step 4: Update the settings.json for MCP Inspector",
+    "output": "The settings.json was updated to configure VS Code’s MCP Inspector so it knows how to launch and communicate with the MCP server. Specifically, it tells the Inspector:\nTo run the MCP server using the command python with the argument pointing to the server script (src/server/main.py).\nTo use the STDIO transport method, meaning it will exchange messages with the server via standard input/output streams.\nWe are using VS Code for editing our project,\nPress Ctrl + Shift + P\nType Preferences: Open User Settings (JSON)\nPress enter and type:\nname: Identifies this server setup inside VS Code.\ncommand: The executable to run—in this case, Python.\narguments: The script file that starts the MCP server.\ntransport: The communication channel. Here, \"stdio\" means standard input/output streams are used for sending/receiving MCP messages between Inspector and server."
+  },
+  {
+    "input": "Step 5: Starting MCP Server",
+    "output": "After saving the server file, we will start the server,\nChanges directory to the project root.\nExecutes the MCP server script.\nThe server will start running and wait for clients (like MCP Inspector) to connect and invoke tools."
+  },
+  {
+    "input": "Step 6: Running MCP Server",
+    "output": "After the MCP Server starts, on a new we type commands to open the MCP Inspector GUI.\nThis command launches the MCP Inspector development GUI.\nThe GUI opens a web browser automatically at http://localhost:3000.\nThe GUI acts as a client that can interact with the running MCP server and call its tools.\nOutput:"
+  },
+  {
+    "input": "Step 7: MCP Inspector GUI",
+    "output": "After successfully running the commands, the GUI opens on localhost server automatically, if not then we can paste the following link to open the GUI:\nIn the GUI, we can see various tabs."
+  },
+  {
+    "input": "Step 8: Changes in Connection Tab",
+    "output": "In the Inspector we make certain changes:\nTransport Type:STDIO lets MCP Inspector talk to the server using standard input/output streams, a simple way for local processes to communicate without networking.\nCommand: python tells Inspector to run the Python interpreter.\nArguments: src/server/main.py specifies the MCP server script to run.\nClick Connect starts the server process and establishes communication between Inspector and server.\nAfter the successful connection, it can be confirmed by the Connected notification."
+  },
+  {
+    "input": "1. In the Top Menu, we can see various Tabs such as Resources, Prompts, Tools, Ping, etc.",
+    "output": "Resources: Manage reusable data files or assets used by tools and prompts.\nPrompts: Create and edit templates with variables to guide language model responses.\nTools: List and run callable MCP tools from the server with manual inputs.\nPing: Check if the MCP server is online and responsive.\nSampling: Adjust text generation settings like randomness and creativity.\nElicitation: Control the style and tone of generated language output.\nRoots: Set base knowledge or data for tools and agents to reference.\nAuth: Manage security by configuring authentication and access control for the server."
+  },
+  {
+    "input": "2. We Select the Tools Tab",
+    "output": "Click on the Tools tab in the top menu.\nThis displays options to interact with the tools our server exposes."
+  },
+  {
+    "input": "3. Click List Tools",
+    "output": "Shows all the MCP tools available from your server, like share_context, retrieve_context and list_all_context."
+  },
+  {
+    "input": "4. We select the retrieve_context",
+    "output": "Select retrieve_context to open an input form where you can type a query string.\nRunning this tool searches all stored contexts for matching entries containing that query.\nThe tool returns and displays all relevant stored contexts.\nWe can add various context here, different agents can store different data by just simply specifying the agent name along with the content and then press Run tool button to save the data."
+  },
+  {
+    "input": "5. We select the retrieve_context",
+    "output": "Select the retrieve_context tool from the Tools tab.\nAn input form appears where you can type a query string (a keyword or phrase to search for).\nWhen you run this tool, it searches through all stored context entries from all agents to find matches containing the query text (case-insensitive).\nThe tool then returns and displays all matching contexts along with the agent names that stored them.\nThis helps quickly find relevant information from the shared context store."
+  },
+  {
+    "input": "6. We can get all the stored context from all the agents by selecting the list_all_context",
+    "output": "Select the list_all_context tool from the Tools tab.\nRunning this tool immediately returns the complete context store without any filtering or searching.\nIt shows all contexts stored from all agents in one view.\nUseful for inspecting the full data set or auditing what has been saved so far.\nWe have build a simple and powerful MCP server in python which enables seamless context sharing among agents. Using the MCP protocol, we built tools to store data per agent and search it by query and tested everything with the MCP Inspector."
   }
 ]
