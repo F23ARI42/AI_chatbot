@@ -18566,5 +18566,53 @@
   {
     "input": "Challenges",
     "output": "Overfitting: Even though fine-tuning reduces the risk of overfitting compared to training from scratch it can still occur if the new dataset is too small or lacks diversity.\nComputational Constraints: Fine-tuning may still require considerable computational resources especially when working with large models like GPT or BERT.\nSelecting the Right Layers to Fine-Tune: Deciding which layers to freeze and which to train can be tricky. Some models may benefit from fine-tuning more layers while others might only require adjustments to the final layers."
+  },
+  {
+    "input": "1.Core Mechanism (Training & Inference)",
+    "output": "Generative AI is trained on large datasets like text, images, audio or video using deep learning networks. During training, the model learns parameters (millions or billions of them) that help them predict or generate content. Here models generate output based on learned patterns and prompts provided"
+  },
+  {
+    "input": "2.By Media Type",
+    "output": "Text:Uses large language models (LLMs) to predict the next token in a sequence, enabling coherent paragraph or essay generation.\nImages:Diffusion models like DALL·E or Stable Diffusion start with noise and iteratively denoise to create realistic visuals\nSpeech:Text-to-speech models synthesize human-like voice by modeling acoustic features based on prompt.\nVideo:Multimodal systems like Sora by OpenAI or Runway generate short, temporally coherent video clips from text or other prompts"
+  },
+  {
+    "input": "3.Agents in Generative AI",
+    "output": "Modern systems often usesagentswhich are autonomous components that interact with the environment, obtain information and execute chains of tasks. These agents uses LLMs to reason, plan and act enabling workflows like querying databases, performing retrieval or controlling external APIs."
+  },
+  {
+    "input": "4.Training and Fine-Tuning",
+    "output": "LLMs are trained on massive general corpora (e.g., web text) using self-supervised methods. These models become pre-trained models which can be further trained on domain-specific labeled data to adapt to specialized tasks or stylistic needs. This technique is calledfine tuningand it can be done using:\nLoRA\nQLoRA\nPeft\nReinforcement Learning from Human Feedback (RLHF)\nLLM Distilation"
+  },
+  {
+    "input": "5.Retrieval-Augmented Generation (RAG)",
+    "output": "Modern systems also uses RAG which enhances outputs by retrieving relevant documents at query time to ground the generation in accurate, up-to-date information, reducing hallucinations and improving factuality. The process typically involves:\nIndexingdocuments into embeddings stored in vector databases\nRetrievalof relevant passages\nAugmentationof the prompt with retrieved content\nGenerationof grounded, informed responses\nThis approach preserves the base model while enabling dynamic knowledge updates"
+  },
+  {
+    "input": "1. Transformers or Autoregressive Models",
+    "output": "Autoregressive Transformers Modelsgenerate sequences by predicting the next token based on all previous ones moving step by step through the text.\nThe architecture relies on thetransformer’s self attention mechanism to capture context from the entire input so far making it highly effective for natural language and code generation.\nPopular examples include GPT models which can produce coherent, context aware paragraphs, solve coding tasks or answer complex queries.\nThe autoregressive approach gives fine grained control over each output step but can be slower for long generations since tokens are generated one at a time."
+  },
+  {
+    "input": "2. Diffusion Models",
+    "output": "Diffusion modelsgenerate data such as images or audio by starting with pure random noise and gradually refining it into a coherent output through a series of denoising steps.\nEach step reverses a simulated diffusion process that added noise to real data during training.\nThis iterative approach can produce highly detailed and realistic results specially in image synthesis where models like Stable Diffusion and DALL·E 3 have set benchmarks.\nDiffusion models are also versatile they can be adapted for inpainting, style transfer and conditional generation from text prompts."
+  },
+  {
+    "input": "3. Variational Autoencoders (VAEs) and Generative Adversarial Networks (GANs)",
+    "output": "VAEsandGANswere among the first deep learning architectures for generative tasks.\nA VAE encodes data into a compressed latent space and then decodes it back with a probabilistic twist that encourages smooth, continuous representations. This makes them good for controllable generation and interpolation between styles.\nGANs in contrast use two networks against each other a generator that tries to produce realistic outputs and a discriminator that tries to detect fakes.\nThis adversarial setup leads to sharp, lifelike images though training can be unstable and prone to mode collapse."
+  },
+  {
+    "input": "4. Encoder Decoder Models",
+    "output": "Encoder decoderarchitectures consist of two stages: the encoder processes the input into a dense representation and the decoder generates the desired output from that representation.\nThey are widely used for sequence to sequence tasks like language translation, summarization and image captioning.\nThe encoder captures the full context of the input before the decoder starts producing tokens, allowing for strong performance on tasks that require global understanding rather than token by token prediction.\nModern encoder decoder models often use transformers for both stages as in T5, BART and many multimodal system."
+  },
+  {
+    "input": "Evaluation of Generative AI",
+    "output": "Evaluating generative AI involves multiple dimensions because outputs can vary in accuracy, style and usefulness depending on the task. Key aspects include:"
+  },
+  {
+    "input": "Relationship Between Humans and Generative AI",
+    "output": "The relationship between humans and generative AI is collaborative and evolving.\nGenerative AI serves as a powerful tool that enhances human creativity, productivity and decision making by assisting in tasks like writing, designing, coding and problem solving.\nRather than replacing humans it augments their abilities allowing people to work faster, explore new ideas and automate repetitive tasks.\nAt the same time this relationship raises important questions around ethics, authorship and dependency emphasizing the need for thoughtful use and responsible development of AI technologies.\nUltimately the synergy between human intuition and generative AI’s capabilities has the potential to transform how we create, communicate and innovate."
+  },
+  {
+    "input": "Applications of Generative AI",
+    "output": "Generative AI is applied in multiple domains like:\nText: Powers chatbots, virtual assistants, content creation, document summarization and even code generation tools like GitHub Copilot.\nImages: Used in digital art, product design, fashion, advertising and medical imaging to create visuals that are close to real-world examples.\nAudio & Speech: Enables natural-sounding voice assistants, multilingual dubbing, music composition, personalized voice cloning and accessibility tools.\nVideo: Supports animation, movie special effects, gaming, marketing videos and realistic training simulations.\nBusiness Use Cases: Enhances customer support with AI agents, boosts knowledge discovery using RAG systems, accelerates drug discovery, assists in financial forecasting and improves data-driven decision-making."
   }
 ]
