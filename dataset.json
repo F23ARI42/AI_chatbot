@@ -17746,5 +17746,9 @@
   {
     "input": "Sharpening Spatial Filter",
     "output": "It is also known as derivative filter. The purpose of the sharpening spatial filter is just the opposite of the smoothing spatial filter. Its main focus in on the removal of blurring and highlight the edges. It is based on the first and second order derivative.\nFirst Order Derivative:\nMust be zero in flat segments.\nMust be non zero at the onset of a grey level step.\nMust be non zero along ramps.\nFirst order derivative in 1-D is given by:\nSecond Order Derivative:\nMust be zero in flat areas.\nMust be non zero at the onset and end of a ramp.\nMust be zero along ramps.\nSecond order derivative in 1-D is given by:"
+  },
+  {
+    "input": "Theory",
+    "output": "Neighborhood processing in spatial domain:Here, to modify one pixel, we consider values of the immediate neighboring pixels also. For this purpose, 3X3, 5X5, or 7X7 neighborhood mask can be considered. An example of a 3X3 mask is shown below.\nLow Pass filtering:It is also known as the smoothing filter. It removes the high-frequency content from the image. It is also used to blur an image. A low pass averaging filter mask is as shown.\nHigh Pass Filtering:It eliminates low-frequency regions while retaining or enhancing the high-frequency components. A high pass filtering mask is as shown.\nMedian Filtering:It is also known as nonlinear filtering. It is used to eliminate salt and pepper noise. Here the pixel value is replaced by the median value of the neighboring pixel.\nBelow is the implementation.\nInput Image:\nAveraging Filter:\nOutput:\nIn the above example, it is observed that the filtered image is slightly blurred. If we increase the size of the averaging mask, more blurring can be obtained.\nMedian Filtering:\nOutput:\nIn the above example, we can see that the median filtered image is considerably enhanced with hardly any salt and pepper noise in it."
   }
 ]
