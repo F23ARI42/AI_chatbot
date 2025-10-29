@@ -19278,5 +19278,53 @@
   {
     "input": "Challenges in Agent2Agent",
     "output": "A2A systems face several challenges:\nCoordination and Conflict Resolution:Ensuring smooth collaboration and resolving goal conflicts is vital for system efficiency.\nScalability:More agents increase communication and coordination complexity, requiring advanced management techniques.\nPrivacy and Security:Preventing data leaks and resisting attacks demands strong security measures.\nCommunication Protocols:Different protocols or languages complicate interactions; standardization or adaptability is needed.\nDecentralized Control:Without central oversight, aligning agents toward shared goals is harder and can cause inefficiency, which requires careful management."
+  },
+  {
+    "input": "Types of Agentic Architectures",
+    "output": "There are several types of agentic architectures each with its own strengths and weaknesses, suitable for different tasks and environments. Some common types include:\n1. Single-agent architecture:A single AI system that functions independently, making decisions and taking actions without the involvement of other agents.\n2. Multi-agent architecture:This architecture involves multiple AI systems interacting with each other, collaborating and coordinating their actions to achieve common goals. Its sub types are:\nVertical architecture:This approach involves agentic AI systems organized in a hierarchical structure with higher-level agents overseeing and guiding the actions of lower-level agents.\nHorizontal architecture:This involves agentic AI systems operating on the same level without any hierarchical structure, communicating and coordinating their actions as needed.\nHybrid architecture:This involves a combination of different agentic architecture types and using the strengths of each to achieve optimal performance in complex environments."
+  },
+  {
+    "input": "Components ofSingleAgentic AI Architecture",
+    "output": "The architecture of an agentic AI system is composed of several key components that work together to ensure it operates independently and effectively. These components enable the system to make decisions, adapt to new information and learn from past experiences."
+  },
+  {
+    "input": "1. Perception",
+    "output": "The way by which the agent collects information from its surroundings and using inputs like images, sound, text or sensor data is perception. Systems use sensors, data streams and external databases to understand their environment and recognize changes or events that need a response.\nSensors:These may include cameras, microphones, motion detectors or specialized sensors designed to monitor specific aspects of the environment like temperature, location, etc.\nData Integration:The AI system integrates data from multiple sources allowing for a comprehensive understanding of the situation. This can involve data from IoT devices, external APIs and historical datasets."
+  },
+  {
+    "input": "2. Cognitive Layer",
+    "output": "After understanding its environment agent must analyze the data and decide the best action. This process involves assessing the current situation, considering potential outcomes and selecting the best action based on predefined goals or objectives.\nAgentic AI uses techniques such as:\nRule-Based Systems:Simple systems that follow predefined rules to make decisions.\nMachine Learning Models:More advanced systems that use statistical techniques to learn patterns from data and make predictions.\nReinforcement Learning: Agentic AI systems often use reinforcement learning where they learn through trial and error by receiving feedback i.e rewards or penalties based on their actions."
+  },
+  {
+    "input": "3. Action and Execution",
+    "output": "The action component executes the decisions made by the agent. Once the agent processes the data and chooses an action, it takes action in the environment. This could involve sending commands to physical systems like a robotic arm or self-driving car and then handling data or communicating it with other systems.\nRobotics:In physical environments it can control robotic systems to perform tasks such as assembly, navigation and interaction with humans.\nSoftware Automation:In virtual environments it can control software systems to automate processes such as decision-making in business operations, customer service chatbots or IT systems management."
+  },
+  {
+    "input": "4. Learning and Adaptation",
+    "output": "The systems need to adapt and get better over time by learning from past experiences. This enables them to handle new situations that may not have been specifically programmed. Learning mechanisms in agentic AI can be:\nSupervised Learning: Where the agent is trained on labeled data to make predictions or classifications.\nUnsupervised Learning: Where it identifies patterns in unlabeled data without predefined categories.\nReinforcement Learning: It learns through trial and error, improving its decision-making over time by receiving rewards or penalties based on its actions."
+  },
+  {
+    "input": "Principles of Agentic AI Architecture",
+    "output": "The principles behind the Agentic AI architecture are mentioned below:\nAutonomy: Agentic AI works independently within set limits and hence reducing the need for human involvement. It adapts to changing conditions while following ethical and safety guidelines.\nGoal-Directed Behavior:The system focuses on clear objectives, using them to guide its perception, reasoning and planning. Goals can be set by users or inferred from the context.\nAdaptability: Agentic systems improve over time by learning from feedback. Methods like online learning or meta-learning allow them to continuously evolve.\nModularity: A modular design allows components to be developed, tested and updated independently. This enhances scalability and facilitates integration with existing systems.\nTransparency: To build trust, agentic AI provides understandable outputs, explaining its reasoning and actions. This is critical for applications in critical domains like healthcare or finance."
+  },
+  {
+    "input": "Multi-Agent Architectures",
+    "output": "In multi-agent architectures,  multiple specialized agents work together, each handling its own domain such as performance analysis, injury prevention or market strategy.\nAgents divide a large problem into smaller tasks, collaborate to solve them and adapt their roles as tasks evolve for flexibility and fast response. Each agent may use unique methods, one might employ natural language processing (NLP), another computer vision, others use retrieval augmented generation (RAG) to pull external data.\nMulti agent architecture can be further divided into:"
+  },
+  {
+    "input": "1. Vertical AI Architecture",
+    "output": "In a vertical architecture, a leader agent oversees subtasks and decisions, with agents reporting back for centralized control. Hierarchical AI agents know their role and report to or oversee other agents accordingly.\nKey features:\nHierarchy: Roles are clearly defined.\nCentralized communication:Agents report to the leader.\nStrengths:\nTask efficiency: Ideal for sequential workflows.\nClear accountability:Leader aligns objective.\nWeaknesses:\nBottlenecks: Leader reliance can slow progress.\nSingle point of failure: Vulnerable to leader failure leading to whole system failure.\nUse cases:\nWorkflow automation:Multistep approvals.\nDocument generation: Sections overseen by a leader."
+  },
+  {
+    "input": "2. Horizontal AI Architecture",
+    "output": "Horizontal AI Architecture uses peer collaboration model in which agents work as equals in a decentralized system, collaborating freely to solve tasks.\nKey Features:\nDistributed collaboration:All agents share resources and ideas.\nDecentralized decisions:Group-driven decision-making for collaborative autonomy.\nStrengths:\nDynamic problem solving:Fosters innovation.\nParallel processing:Agents work on tasks simultaneously.\nWeaknesses:\nCoordination challenges: Mismanagement can cause inefficiencies.\nSlower decisions:Too much deliberation.\nBest use cases:\nBrainstorming: Generating diverse ideas.\nComplex problem solving:Tackling interdisciplinary challenges."
+  },
+  {
+    "input": "3. Hybrid AI Architecture",
+    "output": "Combines structured leadership with collaborative flexibility. Here leadership shifts based on task requirements.\nKey features:\nDynamic leadership: Leadership adapts to the phase of the task.\nCollaborative leadership: Leaders engage their peers openly.\nStrengths:\nVersatility: Combines strengths of both models.\nAdaptability: Handles tasks requiring both structure and creativity.\nWeaknesses:\nComplexity: Balancing leadership roles and collaboration requires robust mechanisms.\nResource management: More demanding.\nBest use cases:\nVersatile tasks:Strategic planning or team projects.\nDynamic processes:Balancing structured and creative demands."
+  },
+  {
+    "input": "Agentic Framework",
+    "output": "Agentic frameworks refer to design architectures or models that define how agents (whether artificial or natural) can perform tasks, make decisions and interact with their environment in an autonomous, intelligent manner. These frameworks provide the structure and guidelines for how agents operate, reason and adapt in various settings.\nReactive Architectures:It link immediate environmental input to direct responses. These agents operate on instinct, acting solely on current stimuli without using memory or planning. They are unable to learn from the past or anticipate future events.\nDeliberative Architectures:It enable agents to act by reasoning, strategizing and building internal representations of the world. Unlike reactive systems, these agents assess their surroundings, consider possible outcomes and make decisions after thoughtful analysis.\nCognitive Architectures:It simulate human-like intelligence. They combine perception, reasoning, learning and decision-making abilities, allowing agents to handle complex tasks by thinking and adapting much like people do."
   }
 ]
