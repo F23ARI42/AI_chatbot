@@ -19890,5 +19890,33 @@
   {
     "input": "Conclusion",
     "output": "By leveraging the strengths of each AI model, organizations can unlock new opportunities, optimize performance, and anticipate future trends, all while delivering unprecedented value to customers and stakeholders."
+  },
+  {
+    "input": "1. Define the Context or Background",
+    "output": "Clearly state the subject or scenario you want the AI to address.\nExample: “Provide a summary of all the historical events leading to French Revolution\""
+  },
+  {
+    "input": "2. Specify the Tone or Style",
+    "output": "Indicate how you want the response to sound like formal, conversational, simple. It makes the output more accurate according to our need.\nExample: “Present the information in a formal and academic tone”"
+  },
+  {
+    "input": "3. Include Specific Details or Constraints",
+    "output": "Add any particular focus areas, limitations or aspects you want to be emphasized.\nExample: “Focus on the economic factors and key figures involved”"
+  },
+  {
+    "input": "4. State the Objective or Purpose",
+    "output": "Make clear what you want to achieve with the response.\nExample: “The goal is to understand the causes of the French Revolution”"
+  },
+  {
+    "input": "Key Tips:",
+    "output": "Be specific and concise:Too much or too little context can confuse the AI.\nIterate as needed:Review the AI’s output and refine your prompt for even better results.\nUse real examples:When possible, include sample data or previous outputs for the AI to mimic or reference."
+  },
+  {
+    "input": "Detailed Example",
+    "output": "Prompt Construction:\nResult:The AI will generate a summary that is not only accurate but also engaging, highlights the main characters and covers the key plot points, all in a literary style because you provided all the necessary context.\nLets see some more examples:"
+  },
+  {
+    "input": "Importance of Contextual Prompting",
+    "output": "Improves Relevance:The AI tailors its output to your specific context, reducing irrelevant or generic answers.\nReduces Ambiguity:Clear context helps the AI avoid misunderstandings and focus on what matters to you.\nEnables Customization:You can adapt the AI’s style, depth and focus to suit different audiences or requirements."
   }
 ]
