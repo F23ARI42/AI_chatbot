@@ -719,3 +719,14 @@ https://www.geeksforgeeks.org/blogs/how-to-build-rag-pipelines-for-llm-projects/
 https://www.geeksforgeeks.org/nlp/what-is-information-retrieval/
 https://www.geeksforgeeks.org/dbms/issues-in-information-retrieval/
 https://www.geeksforgeeks.org/nlp/evaluation-metrics-for-retrieval-augmented-generation-rag-systems/
+https://www.geeksforgeeks.org/data-analysis/autoregressive-ar-model-for-time-series-forecasting/
+https://www.geeksforgeeks.org/artificial-intelligence/diffusion-models-in-machine-learning/
+https://www.geeksforgeeks.org/computer-vision/what-is-image-recognition/
+https://www.geeksforgeeks.org/machine-learning/python-haar-cascades-for-object-detection/
+https://www.geeksforgeeks.org/computer-vision/histogram-of-oriented-gradients/
+https://www.geeksforgeeks.org/computer-vision/describe-the-concept-of-scale-invariant-feature-transform-sift/
+https://www.geeksforgeeks.org/deep-learning/latent-space-in-deep-learning/
+https://www.geeksforgeeks.org/artificial-intelligence/what-are-diffusion-models/
+https://www.geeksforgeeks.org/artificial-intelligence/what-are-scaling-laws-in-ai/
+https://www.geeksforgeeks.org/blogs/AI-Biases/
+https://www.geeksforgeeks.org/artificial-intelligence/types-of-ai-based-on-functionalities/
