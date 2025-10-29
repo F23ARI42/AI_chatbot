@@ -18250,5 +18250,69 @@
   {
     "input": "General Game Playing AI",
     "output": "General game playing AI, such as AlphaGo and OpenAI'sData2 bots, show the AGI-like abilities of the systems in playing complex strategic games. These systems use the latest technology to study the game states, forecast the opponent's moves and devise the long-term strategies. Through mastering several games that have various rules and dynamics, they demonstrate the adaptability and general problem-solving ability similar to human intelligence."
+  },
+  {
+    "input": "Core Concepts of AI",
+    "output": "AI is based on core concepts and technologies that enable machines to learn, reason and make decisions on their own. Let's see some of the concepts:"
+  },
+  {
+    "input": "1. Machine Learning (ML)",
+    "output": "Machine Learningis a subset of artificial intelligence (AI) that focuses on building systems that can learn from and make decisions based on data. Instead of being explicitly programmed to perform a task, a machine learning model uses algorithms to identify patterns within data and improve its performance over time without human intervention."
+  },
+  {
+    "input": "2. Generative AI",
+    "output": "Generative AIis designed to create new content whether it's text, images, music or video. Unlike traditional AI which typically focuses on analyzing and classifying data, it goes a step further by using patterns it has learned from large datasets to generate new original outputs. It \"creates\" rather than just \"recognizes.\""
+  },
+  {
+    "input": "3.Natural Language Processing (NLP)",
+    "output": "Natural Language Processing (NLP)allows machines to understand and interact with human language in a way that feels natural. It enables speech recognition systems like Siri or Alexa to interpret what we say and respond accordingly. It combines linguistics and computer science to help computers process, understand and generate human language allowing for tasks like language translation, sentiment analysis and real-time conversation."
+  },
+  {
+    "input": "4. Expert Systems",
+    "output": "Expert Systemsare designed to simulate the decision-making ability of human experts. These systems use a set of predefined \"if-then\" rules and knowledge from specialists in specific fields to make informed decisions similar to how a medical professional would diagnose a disease. They are useful in areas where expert knowledge is important but not always easily accessible."
+  },
+  {
+    "input": "Working of Artificial Intelligence",
+    "output": "AI works by simulating intelligent behavior to perform tasks autonomously. The process involves several steps that help machines learn, make decisions and improve over time:"
+  },
+  {
+    "input": "Types of Artificial Intelligence",
+    "output": "AI can be classified into two main categories based on its capabilities and functionalities."
+  },
+  {
+    "input": "1. Based on Capabilities:",
+    "output": "Narrow AI(Weak AI): This type of AI is designed to perform a specific task or a narrow set of tasks such as voice assistants or recommendation systems. It is good in one area like recommending products or recognizing speech but lacks general intelligence.\nGeneral AI(Strong AI): It is a theoretical concept where AI can perform any intellectual task that a human can do. It shows human-like reasoning and understanding across multiple domains, making it capable of tackling a variety of tasks.\nSuperintelligent AI: It is a hypothetical form of AI that would surpass human intelligence in all areas. It would be capable of performing tasks more efficiently and effectively than humans."
+  },
+  {
+    "input": "2. Based on Functionalities:",
+    "output": "Reactive Machines: These AI systems only react to specific tasks without storing past experiences. They don’t learn from previous actions but respond in a set way. For example is a chess-playing AI that evaluates the board and makes a move based on the current position.\nLimited Memory: These AI systems can use past data to improve future decisions. Self-driving cars are a good example, as they use data from previous trips to navigate roads and avoid obstacles.\nTheory of Mind: The theory of mind is a theoretical type of AI that would be able to understand emotions, beliefs, intentions and other mental states. This would allow the AI to interact with humans in a more natural and empathetic manner.\nSelf-Aware AI: It is a hypothetical form of AI that possesses consciousness and self-awareness. It would have an understanding of its own existence and could make decisions based on that awareness."
+  },
+  {
+    "input": "AI Models",
+    "output": "AI modelsare programs that learn from data and make decisions or predictions based on what they've learned. These models help AI perform tasks by recognizing patterns in data similar to how humans learn from experience. Different models use various learning approaches depending on how they are trained. Let's see some of the common types of AI models:"
+  },
+  {
+    "input": "1. Supervised Learning Models",
+    "output": "InSupervised learning, AI is trained on labeled data with clear input-output pairs, helping the system to learn the relationship between them.\nThe model is adjusted during training to reduce the difference between its predictions and the correct outputs.\nIt’s used for tasks like image classification, spam filtering and medical diagnosis where labeled datasets are available."
+  },
+  {
+    "input": "2. Unsupervised Learning Models",
+    "output": "InUnsupervised Learningmodels, AI works with unlabeled data and identifies patterns, trends or groupings without direct guidance.\nIt is valuable when exploring hidden structures in complex datasets such as detecting fraud.\nThis method helps in tasks like customer segmentation, data clustering and anomaly detection."
+  },
+  {
+    "input": "3. Reinforcement Learning Models",
+    "output": "InReinforcement learning, AI learns by interacting with an environment and receiving feedback in the form of rewards or penalties.\nOver time, the model optimizes its decision-making process to maximize positive outcomes.\nIt is used in robotics, gaming (e.g AlphaGo) and autonomous systems where actions lead to varying consequences and the AI learns through experience."
+  },
+  {
+    "input": "Advantages of AI",
+    "output": "AI offers a range of benefits that improve productivity, decision-making and user experience across multiple sectors. Let's see some key advantages:"
+  },
+  {
+    "input": "Real-World Applications of AI",
+    "output": "Artificial Intelligence has many practical applications across various industries and domains including:"
+  },
+  {
+    "input": "Challenges of AI",
+    "output": "Despite of having various advantages, it have some challenges which need to be resolved:"
   }
 ]
