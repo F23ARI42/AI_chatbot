@@ -20158,5 +20158,53 @@
   {
     "input": "Applications of CrewAI Flows",
     "output": "These are real-world use cases where CrewAI Flows shine:\nContent generation pipelines:combining outline creation, content writing, review, revision.\nAutomations with conditional branching:It can include reading email, deciding based on content whether to reply, archive or escalate.\nDocument or data processing:It works likeOCR → extraction → analysis → reporting.\nChatbots with memory and decision logic:Depending on user’s previous interactions, state, etc.\nIntegrations with external systems or APIs:Flows that trigger external services, wait for responses, branch accordingly."
+  },
+  {
+    "input": "Exploring Available Knowledge Sources",
+    "output": "CrewAI supports multiple knowledge sources to supply agents with factual information from different formats. To explore all available sources and their documentation, thehelp()function can be used.\nOutput:"
+  },
+  {
+    "input": "Understanding Knowledge Sources",
+    "output": "CrewAI offers multiple knowledge sources to feed information to agents Each is suited for different types of data and use cases."
+  },
+  {
+    "input": "1. base_file_knowledge_source",
+    "output": "Base class for knowledge sources that read from files. It provides a foundation for other file-based sources.\nfile_path: Path to the file containing knowledge.\nchunk_size: Maximum size of text chunks for processing.\nsplit_method: Method to split content into chunks (e.g., sentence, paragraph)."
+  },
+  {
+    "input": "2. base_knowledge_source",
+    "output": "Generic base class for creating custom knowledge sources. Useful when building specialized sources.\nname:Name of the knowledge source.\nverbose: Enable debug output."
+  },
+  {
+    "input": "3. crew_docling_source",
+    "output": "Integrates knowledge from Crew’s internal Docling system. Ideal for agents that reuse Crew documentation.\ndoc_id: ID of the Docling document to load.\nverbose: Enable debug output."
+  },
+  {
+    "input": "4. csv_knowledge_source",
+    "output": "Loads knowledge from CSV files making it suitable for tabular data.\nfile_path: Path to the CSV file.\ndelimiter: Column separator (default is ,).\nencoding: File encoding.\nverbose: Enable debug output."
+  },
+  {
+    "input": "5. excel_knowledge_source",
+    "output": "Loads knowledge from Excel spreadsheets, supporting structured business or research data.\nfile_path: Path to the Excel file.\nsheet_name: Sheet to read.\nencoding: File encoding.\nverbose: Enable debug output."
+  },
+  {
+    "input": "6. json_knowledge_source",
+    "output": "Loads knowledge from JSON files, ideal for hierarchical or structured data.\nfile_path: Path to the JSON file.\nencoding: File encoding.\nverbose: Enable debug output."
+  },
+  {
+    "input": "7. pdf_knowledge_source",
+    "output": "Loads knowledge from PDF documents. Suitable for reports, manuals and research papers.\nfile_paths: List of PDF files.\nchunk_size: Maximum characters per chunk.\nchunk_overlap: Overlap between chunks to preserve context."
+  },
+  {
+    "input": "8. string_knowledge_source",
+    "output": "Loads knowledge from a string of text. Useful for small snippets or predefined facts.\ncontent: The text containing knowledge.\nverbose: Enable debug output."
+  },
+  {
+    "input": "9. text_file_knowledge_source",
+    "output": "Loads knowledge from plain text files. Ideal for notes, documentation or FAQs in text format.\nfile_path: Path to the text file.\nencoding: File encoding.\nverbose: Enable debug output.\nThese knowledge sources allow you to feed structured or unstructured information from multiple formats, making your agents capable of handling multiple domains effectively."
+  },
+  {
+    "input": "Creating an Agent with StringKnowledgeSource",
+    "output": "We will be implementing a CrewAI agent that can answer questions about a product using a string knowledge source.\nFirst we create aStringKnowledgeSourceto provide factual information about the XPS 13.\nThen we define an Agent with a specific role, goal and backstory, linking it to the knowledge source.\nThen we set up a Task that instructs the agent to answer product-related questions.\nThen we create a Crew to manage the agent and its tasks.\nThen we run the Crew with a sample question and print the agent’s response.\nOutput:"
   }
 ]
