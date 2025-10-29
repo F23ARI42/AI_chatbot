@@ -20206,5 +20206,33 @@
   {
     "input": "Creating an Agent with StringKnowledgeSource",
     "output": "We will be implementing a CrewAI agent that can answer questions about a product using a string knowledge source.\nFirst we create aStringKnowledgeSourceto provide factual information about the XPS 13.\nThen we define an Agent with a specific role, goal and backstory, linking it to the knowledge source.\nThen we set up a Task that instructs the agent to answer product-related questions.\nThen we create a Crew to manage the agent and its tasks.\nThen we run the Crew with a sample question and print the agent’s response.\nOutput:"
+  },
+  {
+    "input": "1. Understanding Reasoning",
+    "output": "Reasoning is applied at the agent level. It determines whether the agent should explain how it arrives at the answer.\nWhen reasoning is set toFalse, the agent produces only the final output.\nWhen reasoning is set toTrue, the agent outlines the thought process step by step.\nThis is useful when clarity and traceability of the solution are required."
+  },
+  {
+    "input": "2. Understanding Planning",
+    "output": "Planning is applied at the crew level. It determines whether the crew first builds a structured plan before executing the task.\nWhen planning is set toFalse, the agent attempts the task directly.\nWhen planning is set toTrue, the crew drafts an outline of how the work will be carried out before execution.\nThis helps when tasks are multi-day or multi-step such as designing agendas, roadmaps or workflows."
+  },
+  {
+    "input": "Why Use Planning and Reasoning Together?",
+    "output": "Reasoning and planning complement each other in different ways.\nReasoning makes the agent explain its thought process step by step, adding transparency and clarity.\nPlanning organizes the workflow before execution, ensuring that complex tasks are handled in a structured way.\nWhen used together they produce outputs that are both well-structured and clearly explained. For example, in the workshop task, planning creates a coherent agenda while reasoning explains why each session is placed. This combination is most useful for tasks that require both structure and justification such as project planning, research or curriculum design."
+  },
+  {
+    "input": "Implementation of CrewAI Agents with Planning and Reasoning",
+    "output": "We will be implementing a CrewAI agent to demonstrate how planning and reasoning influence the way tasks are executed and explained"
+  },
+  {
+    "input": "1. Without Reasoning and Planning",
+    "output": "We will implement a CrewAI agent with both reasoning and planning disabled.\nThe agent is defined with a role, goal and backstory butreasoning=False.\nThe task remains the same, asking for a 3-day AI workshop agenda.\nThe crew is created with the agent and task whileplanning=Falsemeans no structured planning is applied.\nOutput:"
+  },
+  {
+    "input": "2. With Reasoning and Planning",
+    "output": "We will implement a CrewAI agent with both reasoning and planning enabled.\nThe agent is defined with a role, goal and backstory along withreasoning=True.\nThe task specifies the description and expected output for a 3-day AI workshop agenda.\nThe crew is created with the agent and task whileplanning=Trueensures structured execution.\nOutput:"
+  },
+  {
+    "input": "Comparing Outputs",
+    "output": "When reasoning and planning are disabled:\nThe output is direct but unstructured.\nThe agent provides an agenda with sessions and timings, but there is little to no explanation of why those choices were made or how the schedule fits together.\nThis approach may work for simple tasks but lacks clarity for complex ones.\nWith reasoning and planning enabled:\nThe process changes noticeably.\nThe agent first outlines a plan, showing how it will approach the task.\nIt then provides reasoning to justify decisions such as the order of sessions, inclusion of prerequisites or balance of topics.\nFinally, it delivers a well-structured 3-day agenda that is both organized and supported by explanations. This makes the output easier to understand, validate and refine."
   }
 ]
