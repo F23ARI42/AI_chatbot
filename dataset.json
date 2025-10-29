@@ -18466,5 +18466,25 @@
   {
     "input": "Conclusion",
     "output": "Data leakage is a critical issue that can compromise the validity of machine learning models andpredictive analytics.By understanding its causes and implementing robust prevention strategies, data scientists and analysts can build more reliable and accurate models. Addressing data leakage requires diligence in data handling and a thorough approach to model development, but the effort pays off by ensuring that models perform well in real-world scenarios and maintain their credibility."
+  },
+  {
+    "input": "How to Spot a Deepfake?",
+    "output": "Since deepfake technology is becoming more realistic, it's important to know how to spot one. Let's see some tips to help us identify if an image or video is fake:"
+  },
+  {
+    "input": "Risks and Dangers of Deepfakes",
+    "output": "Even though deepfakes can be used for creative or harmless purposes, they also come with serious risks. Let's see some of the dangers:"
+  },
+  {
+    "input": "Protecting Ourselves from Deepfakes",
+    "output": "Given the risks deepfakes pose, we should take steps to protect ourselves like:"
+  },
+  {
+    "input": "Deepfake vs. Shallow Fake",
+    "output": "Deepfakes and shallow fakes both involve manipulating media but they differ significantly in terms of technology, realism and impact. Let's see some of their key differences:"
+  },
+  {
+    "input": "Acceptable Uses of Deepfakes",
+    "output": "Despite the risks, deepfakes can be used in positive ways across different fields:"
   }
 ]
