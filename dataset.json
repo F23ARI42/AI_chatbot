@@ -19366,5 +19366,25 @@
   {
     "input": "10. Careers in Agentic AI",
     "output": "Agentic AI is one of the fastest-growing fields in AI with immense career potential. This section introduces the most in-demand roles in the industry.\nAI Engineer\nMachine Learning Engineer\nData Scientist\nPrompt Engineer\nAgentic AI Engineer"
+  },
+  {
+    "input": "Traditional AI",
+    "output": "Traditional AIis designed for solving specific tasks rather than creating entirely new content. It uses pre-programmed rules, logic and algorithms to analyze data and provide predictions, classifications or recommendations. Traditional AI systems usually operate within clear boundaries and deliver consistent, repeatable results. It’s core capabilities center around:\nTask Automation:Performs repetitive actions like sorting data, filtering spam or managing schedules based on defined instructions.\nPattern Recognition:Analyzes large datasets to find trends, recognize images or detect anomalies in fraud detection or medical diagnosis.\nDecision Support:Assists professionals by offering insights, recommendations or helping with basic problem-solving in structured tasks.\nLimited Adaptability:While traditional AI can handle user feedback in some cases, major changes or new tasks often require developers to retrain or reprogram the system.\nExample:An email spam filter that automatically moves suspicious emails to the spam folder based on pre-defined rules and past patterns."
+  },
+  {
+    "input": "Agentic AI",
+    "output": "Agentic AIis designed to autonomously achieve defined goals, plan multi-step tasks and act with minimal human oversight. Building upon generative techniques, agentic systems use LLMs and cognitive modules in dynamic environments:\nAutonomy:Operates independently, setting plans and deciding when and how to execute actions.\nReasoning and decision-making:Evaluates situations, crafts solutions and adapts strategies based on changing data or feedback.\nInitiative:Takes action proactively (rather than waiting for user input), learns from outcomes and course-corrects in real time.\nInteraction:Interfaces with humans, systems and the environment, collaborating with other agents if needed.\nExample:A travel-planning AI that books your flights, reserves hotels, arranges transportation and adjusts the itinerary automatically if your flight is delayed."
+  },
+  {
+    "input": "Key Differences",
+    "output": "Let's see Agentic AI vs. Traditional AI,"
+  },
+  {
+    "input": "Traditional AI:",
+    "output": "Customer support:Chatbots answer basic questions using preset scripts.\nMedical diagnosis:Systems analyze test results and suggest possible outcomes based on programmed rules.\nFraud detection:Algorithms flag suspicious activity in banking by following pre-set patterns.\nRecommendation engines:E-commerce or streaming services suggest products and content by matching user data to rules.\nIn businesses traditional AI is best for focused for rules-based tasks like fraud detection, maintenance, sorting emails , etc and requires fewer resources."
+  },
+  {
+    "input": "Agentic AI:",
+    "output": "IT operations:Agentic AI monitors servers and networks, autonomously fixing issues or scaling resources when needed.\nCybersecurity:Detects and responds to threats in real time, adapting its strategies without manual intervention.\nFinance:Executes complex trades based on live market conditions, sets risk controls and adapts decisions as situations evolve.\nWorkflow automation:Manages end-to-end business processes, plans multi-step tasks and makes decisions proactively.\nAgentic AI suits businesses wanting proactive problem-solving and smart automation like personalizing customer service, planning healthcare treatments, etc. Companies that learn to use agentic AI alongside traditional AI will have a competitive advantage."
   }
 ]
