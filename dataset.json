@@ -17618,5 +17618,25 @@
   {
     "input": "Semantic Segmentation vs Instance Segmentation",
     "output": "In this section, we are going to cover the key differences between the segmentation techniques."
+  },
+  {
+    "input": "Phase I: Scale Space Peak Selection",
+    "output": "The concept of Scale Space deals with the application of a continuous range of Gaussian Filters to the target image such that the chosen Gaussian have differing values of the sigma parameter. The plot thus obtained is called theScale Space. Scale Space Peak Selection depends on theSpatial Coincidence Assumption. According to this, if an edge is detected at thesame location in multiple scales(indicated by zero crossings in the scale space)then we classify it as an actual edge.\nIn 2D images, we can detect the Interest Points using the local maxima/minima inScale Space of Laplacian of Gaussian.A potential SIFT interest point is determined for a given sigma value by picking the potential interest point and considering the pixels in the level above (with higher sigma), the same level, and the level below (with lower sigma than current sigma level). If the point is maxima/minima of all these 26 neighboring points, it is a potential SIFT interest point – and it acts as a starting point for interest point detection."
+  },
+  {
+    "input": "Phase II: Key Point Localization",
+    "output": "Key point localization involves the refinement of keypoints selected in the previous stage. Low contrast key-points, unstable key points, and keypoints lying on edges are eliminated. This is achieved by calculating theLaplacianof the keypoints found in the previous stage. The extrema values are computed as follows:\n\nIn the above expression, D represents the Difference of Gaussian. To remove the unstable key points, the value ofzis calculated and if the function value at z is below a threshold value then the point is excluded."
+  },
+  {
+    "input": "Phase III: Assigning Orientation to Keypoints",
+    "output": "To achieve detection which is invariant with respect to the rotation of the image, orientation needs to be calculated for the key-points. This is done by considering the neighborhood of the keypoint and calculating the magnitude and direction of gradients of the neighborhood. Based on the values obtained, a histogram is constructed with 36 bins to represent 360 degrees of orientation(10 degrees per bin). Thus, if the gradient direction of a certain point is, say, 67.8 degrees, a value, proportional to the gradient magnitude of this point, is added to the bin representing 60-70 degrees. Histogram peaks above 80% are converted into a new keypoint are used to decide the orientation of the original keypoint."
+  },
+  {
+    "input": "Phase IV: Key Point Descriptor",
+    "output": "Finally, for each keypoint, a descriptor is created using the keypoints neighborhood. These descriptors are used for matching keypoints across images. A 16x16 neighborhood of the keypoint is used for defining the descriptor of that key-point. This 16x16 neighborhood is divided into sub-block. Each such sub-block is a non-overlapping, contiguous, 4x4 neighborhood. Subsequently, for each sub-block, an 8 bin orientation is created similarly as discussed in Orientation Assignment. These 128 bin values (16 sub-blocks * 8 bins per block) are represented as a vector to generate the keypoint descriptor."
+  },
+  {
+    "input": "Example: SIFT detector in Python",
+    "output": "Running the following script in the same directory with a file named \"geeks.jpg\" generates the \"image-with-keypoints.jpg\" which contains the interest points, detected using the SIFT module in OpenCV, marked using circular overlays.\nBelow is the implementation:\nOutput:"
   }
 ]
