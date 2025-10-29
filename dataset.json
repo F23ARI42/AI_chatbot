@@ -17734,5 +17734,17 @@
   {
     "input": "Step 8: To Zero Inverted Threshold",
     "output": "Pixels above the threshold are set to 0. Pixels below the threshold keep their original value.\nRetains darker details while masking the brighter ones.\nOutput:"
+  },
+  {
+    "input": "Classification on the basis of Linearity",
+    "output": "There are two types:\n1.Linear Spatial Filter2.Non-linear Spatial Filter"
+  },
+  {
+    "input": "Smoothing Spatial Filter",
+    "output": "Smoothing filter is used for blurring and noise reduction in the image. Blurring is pre-processing steps for removal of small details and Noise Reduction is accomplished by blurring.\nTypes of Smoothing Spatial Filter\n1.Linear Filter (Mean Filter)2.Order Statistics (Non-linear) filter\nThese are explained as following below."
+  },
+  {
+    "input": "Sharpening Spatial Filter",
+    "output": "It is also known as derivative filter. The purpose of the sharpening spatial filter is just the opposite of the smoothing spatial filter. Its main focus in on the removal of blurring and highlight the edges. It is based on the first and second order derivative.\nFirst Order Derivative:\nMust be zero in flat segments.\nMust be non zero at the onset of a grey level step.\nMust be non zero along ramps.\nFirst order derivative in 1-D is given by:\nSecond Order Derivative:\nMust be zero in flat areas.\nMust be non zero at the onset and end of a ramp.\nMust be zero along ramps.\nSecond order derivative in 1-D is given by:"
   }
 ]
