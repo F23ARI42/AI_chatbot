@@ -17838,5 +17838,65 @@
   {
     "input": "Limitations",
     "output": "Resource-intensive:Exploring multiple branches increases computational cost, making it less efficient for simple tasks.\nComplexity management:Requires careful design to balance thorough exploration with practical resource constraints."
+  },
+  {
+    "input": "Working of MCP at Frontend (Agent Side)",
+    "output": "Let's see what the agent runtime (e.g., Claude Desktop, OpenAI Agent or a custom LangChain app) experiences."
+  },
+  {
+    "input": "1. Discovery Phase",
+    "output": "When an agent connects to an MCP server, it asks: “What tools/resources/prompts do you provide?”\nThe MCP server responds with a structured list (list_tools, list_resources, list_prompts).\nExample:it might say “I support memory put memory.search and a resource profile.json.”\nThis allows the agent to dynamically learn capabilities without hardcoding adapters."
+  },
+  {
+    "input": "2. Invocation phase",
+    "output": "Once the agent knows what exists, it can call a tool.\nExample:the model might decide “I need to look up user’s project memory” and issue a call_tool for memory.search.\nThe client runtime automatically handles the JSON-RPC call under the hood."
+  },
+  {
+    "input": "3. Context assembly",
+    "output": "The results of the tool call (facts, profile data, embeddings, etc.) are passed back to the agent.\nThe agent weaves these results into its working context (the prompt it builds for the model).\nThis way, an LLM prompt includes not just the user’s latest query but also retrieved memory, preferences, history or task state."
+  },
+  {
+    "input": "Working of MCP at Backend (Server Side)",
+    "output": "Let's see what happens behind the scenes inside the MCP server."
+  },
+  {
+    "input": "1. Server start / Registration",
+    "output": "The MCP server starts up and registers all available tools/resources.\nExample: it tells the client “I have memory.put, memory.search and resource:/memory/profile.json available.”\nThese are exposed as JSON schemas which making them self-describing and language-agnostic."
+  },
+  {
+    "input": "2. Request handling",
+    "output": "When the client calls a tool (memory.search), the server receives a JSON-RPC request.\nThe request payload includes parameters (e.g., { query: \"project 42\", limit: 5 }).\nThe server routes this to the right handler function (memory_search in Python or TS)."
+  },
+  {
+    "input": "3. Persistence layer / Backend logic",
+    "output": "a. The handler function connects to the underlying datastore.\nb. Depending on design this could be:\nA SQL/NoSQL database for structured facts.\nA vector index (FAISS, pgvector, Pinecone, ChromaDB) for semantic recall.\nA blob/file store for large documents or artifacts.\nExample: memory.search runs a SQL query or a vector similarity search."
+  },
+  {
+    "input": "4. Response back to client",
+    "output": "a. The server packages the results into structured JSON.\nExample:\nThis is returned to the agent, which injects it into the LLM prompt."
+  },
+  {
+    "input": "Maintaining User Context Across MCP Sessions",
+    "output": "One of the key challenges in AI agents is ensuring that context doesn’t disappear between sessions. For example, if a user tells an assistant their preferences today, they expect the assistant to remember them tomorrow without starting from scratch. MCP addresses this by exposing memory services as tools and resources.\nHere’s how context persistence works:"
+  },
+  {
+    "input": "1. Ephemeral (Turn-Level Context)",
+    "output": "Only lasts for the duration of a single request/response cycle.\nExample: The current question a user asks (“Summarize this email”).\nManaged by the agent runtime, not stored permanently."
+  },
+  {
+    "input": "2. Session or Task Context",
+    "output": "Maintains continuity across a multi-step workflow.\nExample: While generating a project report, the assistant remembers earlier steps like “data sources already processed” or “sections drafted.”\nMCP servers can store this state in temporary storage or pass it along between tool calls."
+  },
+  {
+    "input": "3. Long-Term Memory",
+    "output": "Durable, persisted across sessions.\nExample: A user’s profile (profile.json), past interactions or embeddings stored in a vector DB (ChromaDB, FAISS, Pinecone, etc.).\nExposed via tools like memory.put, memory.search or resources like /memory/profile.json."
+  },
+  {
+    "input": "4. Shared Memory Across Agents",
+    "output": "When multiple agents collaborate, MCP allows them to access shared memory resources.\nExample: A “team of agents” working on a project can all read/write to the same task state in the MCP server."
+  },
+  {
+    "input": "How It Works in Practice",
+    "output": "The agent runtime asks the MCP server what memory tools/resources exist (list_resources, list_tools).\nThe MCP server exposes memory endpoints with well-defined JSON schemas.\nThe agent can then call tools like memory.search to recall facts or memory.put to update the memory.\nThis means context isn’t lost when the model’s token window resets—the memory service provides durable recall.\nExample: A user tells their AI assistant: “My project name is Orion.”\nWithout MCP:This fact disappears once the conversation ends.\nWith MCP:The agent calls memory.put to store { project_name: \"Orion\" }.  Later, even in a new session, memory.search retrieves this fact, allowing the assistant to continue naturally."
   }
 ]
