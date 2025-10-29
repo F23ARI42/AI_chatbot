@@ -17966,5 +17966,113 @@
   {
     "input": "Conclusion",
     "output": "It is believed that deep fakes can cause a severe threat to society due to their ability to create fake content. Certain government bodies have made laws to address such issues. As we're moving ahead in technology, the technology is getting sharper and all we need is to make sure that we're not using it against ethics."
+  },
+  {
+    "input": "1. Vector",
+    "output": "Avectoris a list of numbers that describes a size (magnitude) and a direction. In machine learning, it usually means a set of numbers that shows features or characteristics of something.\nExample: In 2D, the vector points 3 steps along the x-axis and 4 steps along the y-axis. Its total length (magnitude) is 5."
+  },
+  {
+    "input": "2. Dense Vector",
+    "output": "A dense vector is a type of vector where most numbers are not zero. In machine learning, dense vectors are often used to describe things like words, images or data points because they capture a lot of details.\nExample: [2000, 3, 5, 9.8] could describe a house, showing size, number of bedrooms, bathrooms and age."
+  },
+  {
+    "input": "3. Vector space",
+    "output": "Avector spaceor linear space is a mathematical structure consisting of a set of vectors that can be added together and multiplied by scalars, satisfying certain properties. It satisfy the certain properties like Closure under addition and Scalar multiplication.\nExample: The set of all 3D vectors with real-number coordinates forms a vector space like the vectors [1, 0, 0], [0, 1, 0] and [0, 0, 1] constitute a basis for the 3D vector space."
+  },
+  {
+    "input": "4. Continuous Vector space",
+    "output": "A continuous vector space is a special kind of vector space where each value can be any real number (not just whole numbers). In embeddings, it means every object can be described with numbers that can smoothly change.\nExample: The color [0.9, 0.3, 0.1] in RGB shows a shade of red, where each number can be any value between 0 and 1."
+  },
+  {
+    "input": "How do Embeddings Work?",
+    "output": "Let's see how embeddings work:"
+  },
+  {
+    "input": "1. Define similarity signal:",
+    "output": "First, decide what we want the model to treat as “similar”.\nText:Words or sentences that appear in similar contexts.\nImages:Pictures of the same object or scene.\nGraphs:Nodes that are connected or related."
+  },
+  {
+    "input": "2. Choose dimensionality:",
+    "output": "Select how many numbers (dimensions) will describe each item, it could be 64, 384, 768 or more.\nMore dimensions:more detail but slower and uses more memory.\nFewer dimensions:faster but may lose detail."
+  },
+  {
+    "input": "3. Build the encoder",
+    "output": "This is the model that turns our data into a list of numbers (vector):\nText:Language models likeBERT.\nImages:Vision models likeCNNorViT.\nAudio:Models that process sound (e.g., turning it into spectrograms first).\nGraphs:Methods likeNode2Vecorgraph neural networks.\nTabular data:Models that compress features into embeddings."
+  },
+  {
+    "input": "4. Train with a metric-learning objective:",
+    "output": "Show the model examples of things that are “similar” and “different.”\nTeach it to place similar ones close together and different ones far apart.\nThis process is called metric learning."
+  },
+  {
+    "input": "5. Negative sampling and batching:",
+    "output": "Give the model tricky “hard negative” examples, things that seem alike but aren’t so it learns to tell them apart better."
+  },
+  {
+    "input": "6. Validate and Tune",
+    "output": "Test how well our embeddings work by checking:\nHow accurate search results are.\nHow well items group into the right categories.\nHow good automatic clustering is.\nIf the results aren’t good, adjust vector size, training method or data."
+  },
+  {
+    "input": "7. Index for Fast Retrieval",
+    "output": "Store our vectors in a special database like Qdrant orFAISSto quickly find the closest matches, even from millions of items."
+  },
+  {
+    "input": "8. Use the embeddings",
+    "output": "Once ready, embeddings can be used for:\nSemantic search:finding by meaning, not exact words.\nRAG (Retrieval-Augmented Generation):feeding relevant facts to an AI model.\nClassification:predicting the correct label or category.\nClustering:grouping similar items together.\nRecommendations:suggesting similar products, content or users.\nMonitoring:spotting unusual changes or patterns over time."
+  },
+  {
+    "input": "Importance of Embedding",
+    "output": "Embeddings are used across various domains and tasks for several reasons:\nSemantic Representation:Embeddings capture semantic relationships between entities in the data. For example, in word embeddings, words with similar meanings are mapped to nearby points in the vector space.\nDimensionality Reduction:Embeddings reduce the dimensionality of data while preserving important features and relationships.\nTransfer Learning:Embeddings learned from one task or domain can be transferred and fine-tuned for use in related tasks or domains.\nFeature Engineering:Embeddings automatically extract meaningful features from raw data, reducing the need for manual feature engineering.\nInterpretability:Embeddings provide interpretable representations of data. For example, in word embeddings, the direction and distance between word vectors can correspond to meaningful relationships such as gender, tense or sentiment."
+  },
+  {
+    "input": "Objects that can be Embedded",
+    "output": "From textual data to images and beyond, embeddings offer a versatile approach to encoding information into dense vector representations. Some of the major types of objects or values that can be embedded include:"
+  },
+  {
+    "input": "1. Words",
+    "output": "Word embeddingsare numeric vectors that represent words in a continuous space, where similar words are placed near each other. These vectors are learned from large text datasets and capture the meanings and relationships between words making it easier for computers to understand and process language in tasks like sentiment analysis and translation.\nSome of the Popular word embeddings include:\nWord2Vec\nGloVe (Global Vectors for Word Representation)\nFastText\nBERT (Bidirectional Encoder Representations from Transformers)\nGPT"
+  },
+  {
+    "input": "2. Complete Text Document",
+    "output": "Text embeddings or document embeddings represent entire sentences, paragraphs or documents as numeric vectors in a continuous space. Unlike word embeddings that focus on single words, text embeddings capture the meaning and context of longer text segments. This allows for easier comparison and analysis of complete pieces of text in NLP tasks like sentiment analysis, translation or document classification.\nSome of the Popular text embedding models include:\nDoc2Vec\nUniversal Sentence Encoder (USE)\nBERT\nELMO"
+  },
+  {
+    "input": "3. Audio Data",
+    "output": "Audio data includes individual sound samples, audio clips and entire audio recordings. By representing audio as dense vectors in a continuous vector space, embedding techniques effectively capture acoustic features and relationships. This enables a wide range of audio processing tasks such as speech recognition, speaker identification, emotion detection and music genre classification.\nSome of the popular Audio embedding techniques may includeWav2Vec"
+  },
+  {
+    "input": "4. Image Data",
+    "output": "Image embeddings are numerical representations of images in a continuous vector space, extracted by processing images throughconvolutional neural networks (CNNs). These embeddings encode the visual content, features and semantics of images, facilitating efficient understanding and processing of visual information by machines.\nSome of the popular CNNs based Image embedding techniques include:\nVGG\nResNet\nInception\nEfficientNet"
+  },
+  {
+    "input": "5. Graph Data",
+    "output": "Graph embeddings convert a graph’s nodes and edges into numeric vectors, capturing the graph’s structure and relationships. This representation makes complex graph data easier for machine learning models to use enabling tasks like node classification, link prediction and clustering.\nSome popular graph embedding techniques include:\nNode2Vec\nDeepWalk\nGraph Convolutional Networks"
+  },
+  {
+    "input": "6. Structured Data",
+    "output": "Structured data such as feature vectors and tables can be embedded to help machine learning models capture underlying patterns. Common techniques includeAutoencoders"
+  },
+  {
+    "input": "Visualization of Word Embeddings using t-SNE",
+    "output": "Visualizing word embeddings can provide insights into how words are positioned relative to each other in a high-dimensional space. In this code, we demonstrate how to visualize word embeddings usingt-SNE (t-distributed Stochastic Neighbor Embedding)a technique for dimensionality reduction after training a Word2Vec model on the 'text8' corpus."
+  },
+  {
+    "input": "Step 1: Import Libraries",
+    "output": "NumPy: Handles numerical data and array manipulation.\nMatplotlib: Creates plots and visualizations.\nscikit-learn: Reduces high-dimensional vectors to two dimensions for easy visualization.\nGensim: Downloads text datasets and trains word embedding models."
+  },
+  {
+    "input": "Step 2: Load Data and Train Word2Vec Model",
+    "output": "Loads a sample text dataset and uses it to train a Word2Vec model which creates word vectors."
+  },
+  {
+    "input": "Step 3: Select Words and Get Their Embeddings",
+    "output": "Chooses a list of sample words.\nExtracts their vector representations from the model as NumPy arrays."
+  },
+  {
+    "input": "Step 4: Reduce Dimensionality with t-SNE",
+    "output": "Uses t-SNE from scikit-learn to shrink high-dimensional word vectors into two dimensions for visualization."
+  },
+  {
+    "input": "Step 5: Plot Embedding",
+    "output": "Displays a scatter plot of the words in 2D space, labels each point with its word and displays the plot.\nOutput:\nHere we can see snake, cow, birds, etc are grouped together nearby showing similarity (all animals) whereas computer and machines are far away from animal cluster showing disimilarity."
   }
 ]
