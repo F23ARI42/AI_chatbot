@@ -19950,5 +19950,73 @@
   {
     "input": "Applications of Custom Tools in CrewAI",
     "output": "Creating custom tools allows agents to handle tasks that require specialized logic. Some examples are:\nEducation:Calculators, quiz generators or  summarizers.\nResearch:Data collection, analysis and calculations.\nContent Creation:Summaries, reports or  structured text outputs.\nBusiness: Finance calculations, market research or  workflow automation."
+  },
+  {
+    "input": "Installation",
+    "output": "To begin, we must installCrewAI. This ensures the CLI and all related libraries are available in our environment."
+  },
+  {
+    "input": "Basic Command Structure",
+    "output": "Every CrewAI CLI command has the following structure. Understanding this pattern helps in constructing commands accurately.\nCOMMAND: The action we want to perform (e.g., create, train)\nOPTIONS: Modifiers that customize the command behavior\nARGUMENTS: Additional inputs such as names or IDs"
+  },
+  {
+    "input": "CrewAI Basic Commands",
+    "output": "These commands focus on managing crews and flows locally."
+  },
+  {
+    "input": "1. Create",
+    "output": "We can create a new crew or flow.\nOptions:\nTYPE: \"crew\" or \"flow\"\nNAME: Name of the crew or flow\nExample:\nOutput:\nThis sets up the project structure and initial configuration files."
+  },
+  {
+    "input": "2. Version",
+    "output": "We can check the installed version of CrewAI.\n--tools (optional):Show installed CrewAI tools\nExample:\nOutput:"
+  },
+  {
+    "input": "3. Train",
+    "output": "Training a crew updates the internal state of AI agents for better task execution.\nOptions:\n-n, --n_iterations INTEGER:Number of training iterations (default: 5)\n-f, --filename TEXT:Custom training data file\nExample:\nOutput:"
+  },
+  {
+    "input": "4. Replay",
+    "output": "Replaying a crew allows us to run previous tasks again from a specific point.\n-t, --task_id TEXT:Task ID to start the replay from\nExample:\nOutput:"
+  },
+  {
+    "input": "5. Log Task Outputs",
+    "output": "Retrieve outputs from the latest crew.kickoff() execution:\nOutput:"
+  },
+  {
+    "input": "6. Reset Memories",
+    "output": "Reset different types of memory for a crew.\nOptions:\n-l, --long:Long-term memory\n-s, --short:Short-term memory\n-e, --entities: Entities memory\n-k, --kickoff-outputs:Latest task outputs\n-a, --all:Reset all memory\nExample:\nOutput:"
+  },
+  {
+    "input": "7. Test",
+    "output": "Testing allows us to check how a crew performs.\nOptions :\n-n, --n_iterations INTEGER:Number of test iterations (default: 3)\n-m, --model TEXT:LLM model to run tests (default: \"gpt-4o-mini\")\nExample:\nOutput:"
+  },
+  {
+    "input": "8. Run",
+    "output": "We can run a crew or flow:\nOutput:"
+  },
+  {
+    "input": "CrewAI Enterprise Commands",
+    "output": "Enterprise commands handle deployment, authentication and organization management. CrewAI Enterprise is a paid feature."
+  },
+  {
+    "input": "1. Login",
+    "output": "Authenticate using a device code flow:\nSteps:"
+  },
+  {
+    "input": "2. Deploy",
+    "output": "Deploy crews or flows to CrewAI Enterprise:\nMonitor Deployment:\ncrewai deploy status\ncrewai deploy logs\ncrewai deploy list\ncrewai deploy remove"
+  },
+  {
+    "input": "3. Organization Management",
+    "output": "Manage Enterprise organizations:\nCommands:\nlist — Show all organizations\ncurrent — Show active organization\nswitch <organization_id> — Switch organization"
+  },
+  {
+    "input": "4. API Keys",
+    "output": "When creating a crew, select an LLM provider and enter the API key. Providers include:\nOpenAI\nGroq\nAnthropic\nGoogle Gemini\nSambaNova\nOther LiteLLM-supported providers are available via \"other\"."
+  },
+  {
+    "input": "5. Configuration Management",
+    "output": "Manage CLI configuration:\nCommands:\nlist — Show all parameters\nset <key> <value> — Update a parameter\nreset — Restore defaults\nExample:"
   }
 ]
