@@ -19162,5 +19162,29 @@
   {
     "input": "Conclusion",
     "output": "In conclusion, it is important for businesses to implement the practice of Responsible AI into the AI systems they develop if they wish to effectively manage the ethical, social and legal implications of managing them. To gain the trust of the users, there AI systems must be transparent, accountable and beneficial to the society. It is up to the users to determine how much trust is ok to place in these systems once they have a proper understanding of what they are getting themselves into."
+  },
+  {
+    "input": "Components of RAG",
+    "output": "The main components of RAG are:"
+  },
+  {
+    "input": "Working of RAG",
+    "output": "The system first searches external sources for relevant information based on the user’s query instead of relying only on existing training data."
+  },
+  {
+    "input": "What Problems does RAG solve?",
+    "output": "Some the problems that RAG solves are:"
+  },
+  {
+    "input": "Challenges",
+    "output": "Despite its advantages, RAG faces several challenges:"
+  },
+  {
+    "input": "RAG Applications",
+    "output": "Here are some examples to illustrate the applications of RAG we discussed earlier:"
+  },
+  {
+    "input": "RAG Alternatives",
+    "output": "Different methods can be used to generate AI outputs and each serves a unique purpose. The choice depends on what you want to achieve with your model."
   }
 ]
