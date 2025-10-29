@@ -20018,5 +20018,45 @@
   {
     "input": "5. Configuration Management",
     "output": "Manage CLI configuration:\nCommands:\nlist — Show all parameters\nset <key> <value> — Update a parameter\nreset — Restore defaults\nExample:"
+  },
+  {
+    "input": "Installing CrewAI",
+    "output": "Before using CrewAI, install it in our environment. We will install CrewAI using pip:\nAfter installation, we can set up the API key and import the needed classes:\nThis gives us access to the Agent, Task, Crew and Process classes required to define and run multi-agent workflows."
+  },
+  {
+    "input": "1. Sequential Process",
+    "output": "In Sequential Process ensures tasks are completed in a strict order. Each task depends on the previous one (one action must finish before the next can begin). It makes sure that every task has the information it needs from the previous ones. While it may take more time because it is dependable but nothing is skipped or done out of order which is good.\nThis type of process works best in situations like cooking, research or reporting where each stage builds directly on the last. We will implement an example of a Chef and a Food Critic."
+  },
+  {
+    "input": "Step 1: Defining Agents",
+    "output": "We will define our two agents , the Chef and the Food Critic.\nAgent:Represents a role with a goal and backstory.\nVerbose:Enables detailed logs of the process."
+  },
+  {
+    "input": "Step 2: Defining Tasks",
+    "output": "We will now define the tasks for the chef and the food critic.\nTask:Defines what needs to be done and by whom.\nContext:Ensures that the critic waits for the chef’s task to finish."
+  },
+  {
+    "input": "Step 3: Defining Crew",
+    "output": "We will bring the agents and tasks together into a crew and set the process to sequential.\nCrew:Brings agents and tasks together.\nProcess.sequential:Runs tasks one after another.\nkickoff():Starts the crew, activating all agents and executing tasks according to the selected process.\nOutput:"
+  },
+  {
+    "input": "2. Hierarchical Process",
+    "output": "The Hierarchical Process introduces a manager agent who oversees the process, assigning tasks to the right agents. Instead of tasks being locked in a fixed sequence, the manager looks at the situation and assigns tasks to the right agents. This makes the workflow more flexible and allows the crew to adjust as needed. It works best in larger or more complex projects where many different roles are involved and coordination is important. We will implement an example of a Construction Crew:"
+  },
+  {
+    "input": "Step 1: Defining Agents",
+    "output": "We will define three specialized agents: Foundation Builder, Wall Builder and Roof Builder.\nAgent:Represents a role with a goal and backstory.\nVerbose:Enables detailed logs of the process."
+  },
+  {
+    "input": "Step 2: Defining Tasks",
+    "output": "We will now define the tasks for constructing the foundation, walls and roof.\nTask:Defines what needs to be done and by whom.\nContext:Ensures that the critic waits for the chef’s task to finish."
+  },
+  {
+    "input": "Step 3: Defining Crew with Manager",
+    "output": "We will now create the crew, set the process to hierarchical and assign a manager LLM.\nProcess.hierarchical:Allows a manager to delegate tasks dynamically.\nmanager_llm:Specifies the language model that acts as the manager.\nkickoff(): Starts the crew, activating all agents and executing tasks according to the selected process.\nOutput:"
+  },
+  {
+    "input": "Difference Between Sequential and Hierarchical Processess",
+    "output": "This table highlights the main differences between the two processes and when each is most suitable."
   }
 ]
