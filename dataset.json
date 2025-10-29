@@ -19190,5 +19190,45 @@
   {
     "input": "Universal Sentence Encoder",
     "output": "Universal Sentence Encoder encodes entire sentence or text into vectors of real numbers that can be used for clustering, sentence similarity, text classification, and other Natural language processing (NLP) tasks. The pre-trained model is trained on greater than word length text, sentences, phrases, paragraphs, etc using a deep averaging network (DAN) encoder.\nImplementation of sentence embeddings using Universal Sentence Encoder:\nRun these command before running the code in your terminal to install the necessary libraries.\nProgram:\nOutput:\nExplanation:\nThe above output represents input sentences into their corresponding vectors using the Universal Sentence encoder."
+  },
+  {
+    "input": "How Zero-Shot Prompting Works?",
+    "output": "Zero-shot promptingworks by allowing an AI model to perform tasks without the need for examples or additional training on task-specific data. The process leverages the model's pre-existing knowledge and training, enabling it to tackle a wide range of queries directly.\nHere’s a more detailed breakdown of how it works:\nUser Query: Process begins when the model receives a query or task from the user. For example, if the user asks, \"What is the capital of Japan?\", the model takes this question as its input. Importantly, no additional examples or context are provided to guide the model in solving the query.\nTask Understanding: Despite not receiving explicit examples, the AI model processes the query and infers the task from its extensive training data. Zero-shot prompting relies entirely on the model’s pre-trained knowledge to understand the task. Model has learned from a large corpus of diverse text data during training, enabling it to generalize to tasks it has never explicitly encountered.\nModel Processing: With its pre-trained knowledge, the model analyzes the query. It uses the context and patterns it has learned during its training to understand how to address the task at hand. The model does not need examples to learn the task because it already has the underlying concepts from the data it was trained on. For example, it understands that asking for the capital of a country requires it to recall geographical information.\nGenerated Output: Finally, the model generates a response based on its understanding of the task. For the question about Japan's capital, the model will output \"Tokyo,\" which it knows as a fact from its training. It retrieves the relevant information without needing additional context, relying entirely on its pre-existing knowledge to provide an accurate and relevant answer.\nIn this way, zero-shot prompting allows the AI model to tackle new tasks, answering questions or performing actions it has never been explicitly trained on, all by leveraging the knowledge embedded during its initial training. This approach highlights the model's ability to generalize and efficiently handle diverse queries across various domains."
+  },
+  {
+    "input": "Examples of Zero-Shot Prompting in Action",
+    "output": "Here are a few prompt examples to demonstrate how Zero-Shot Prompting works:"
+  },
+  {
+    "input": "Example 1: Text Generation",
+    "output": "Prompt: “Write a short story about a journey through space.”\nAI Output:The stars glittered like diamonds against the vast emptiness of space. As the spaceship zoomed past distant ..."
+  },
+  {
+    "input": "Example 2: Question Answering",
+    "output": "Prompt: “What is the tallest mountain in the world?”\nAI Output:Mount Everest"
+  },
+  {
+    "input": "Example 3: Classification Task",
+    "output": "Prompt: “Classify the following product as either a 'Laptop' or 'Smartphone': 'A portable device with a large screen and keyboard for computing tasks.'”\nAI Output:Laptop"
+  },
+  {
+    "input": "Zero-Shot vs Few-Shot Prompting",
+    "output": "Here’s a tabular comparison between Zero-Shot Prompting and Few-Shot Prompting to help you understand the key differences and when to use each approach in your AI tasks"
+  },
+  {
+    "input": "Advantages of Zero-Shot Prompting",
+    "output": "Zero-Shot Prompting offers several benefits:"
+  },
+  {
+    "input": "Challenges of Zero-Shot Prompting",
+    "output": "While Zero-Shot Prompting offers great potential, there are challenges that need attention:"
+  },
+  {
+    "input": "Best Practices for Zero-Shot Prompting",
+    "output": "To effectively use Zero-Shot Prompting, consider the following best practices:"
+  },
+  {
+    "input": "Real-World Examples of Zero-Shot Prompting",
+    "output": "Zero-Shot Prompting has a wide range of real-world applications. Some common examples include:\nZero-shot prompting opens up new possibilities for AI, allowing models to perform a wide range of tasks without needing task-specific examples, making it a powerful tool for efficient and adaptable AI solutions."
   }
 ]
