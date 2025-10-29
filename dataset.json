@@ -20234,5 +20234,41 @@
   {
     "input": "Comparing Outputs",
     "output": "When reasoning and planning are disabled:\nThe output is direct but unstructured.\nThe agent provides an agenda with sessions and timings, but there is little to no explanation of why those choices were made or how the schedule fits together.\nThis approach may work for simple tasks but lacks clarity for complex ones.\nWith reasoning and planning enabled:\nThe process changes noticeably.\nThe agent first outlines a plan, showing how it will approach the task.\nIt then provides reasoning to justify decisions such as the order of sessions, inclusion of prerequisites or balance of topics.\nFinally, it delivers a well-structured 3-day agenda that is both organized and supported by explanations. This makes the output easier to understand, validate and refine."
+  },
+  {
+    "input": "Installing CrewAI Tools",
+    "output": "To begin, we need to install the crewai_tools package by running the following command:"
+  },
+  {
+    "input": "Listing Available Tools",
+    "output": "We can list all the tools available in crewai_tools by running the following code:\nOutput:"
+  },
+  {
+    "input": "Tool Documentation and Usage",
+    "output": "Each tool in CrewAI has detailed documentation. To explore the usage of any specific tool, such as ScrapeWebsiteTool, we can use the help() function in Python to view the tool’s description and available parameters. Here's an example of how to use it:\nOutput:"
+  },
+  {
+    "input": "Some Popular Tools in CrewAI",
+    "output": "Below are some popular tools in CrewAI, commonly used for tasks like web scraping, file management, database interaction and more."
+  },
+  {
+    "input": "1. RAG Tool (Retrieval-Augmented Generation)",
+    "output": "TheRAGTool is designed to combine retrieval and generation models. It first retrieves relevant documents from external sources and then generates meaningful responses by combining the retrieved data with the agent's built-in knowledge. This is useful when we need the agent to provide responses based on both prior knowledge and new data retrieved dynamically.\nname:Defines the name of the tool.\ndescription:A description that provides context on how the tool functions.\nresult_as_answer: If True, the tool returns only the final generated answer, ignoring intermediary steps.\nsummarize:This flag helps the tool to summarize large chunks of text, making it more efficient for answering questions based on long documents.\nverbose:Logs detailed information for debugging and monitoring the tool's activity.\nOutput:"
+  },
+  {
+    "input": "2. ScrapeWebsiteTool",
+    "output": "The ScrapeWebsiteTool allows agents to extract and scrape content from websites. It works by scraping the raw HTML content of a page, extracting meaningful data from it.\nwebsite_url: The URL of the website you want to scrape.\nOutput:"
+  },
+  {
+    "input": "3. SerperDevTool",
+    "output": "The SerperDevTool helps agents retrieve relevant search results from the web. Unlike traditional scraping, it interacts directly with search engines (like Google) to pull search results in a structured format\nname:Name of the tool for identification.\ndescription:A short description about what the tool does.\nverbose:When True, provides detailed logs of the tool's execution.\nOutput:"
+  },
+  {
+    "input": "4. File Read Tool",
+    "output": "The File Read Tool allow agents to read files which is useful when dealing with persistent storage or managing local files. These tools help agents interact with file systems for data extraction and creation.\nfile_path:Path to the file to be read.\nOutput:"
+  },
+  {
+    "input": "5. DaLLE Tool",
+    "output": "The DaLLE Tool is used to generate images based on textual descriptions. It integrates withOpenAI’s DALL-Emodel, allowing the agent to create unique and high-quality images from user-provided prompts.\nimage_description:The textual description that tells the model what to generate.\nOutput:"
   }
 ]
