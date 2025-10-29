@@ -18098,5 +18098,57 @@
   {
     "input": "Limitations",
     "output": "Safety:Requires ongoing monitoring to prevent errors or unintended outcomes.\nAccountability:Raises ethical concerns and questions about responsibility for autonomous actions.\nComplexity:Can be difficult to interpret, explain or regulate.\nBias:May carry forward or amplify existing biases without careful supervision."
+  },
+  {
+    "input": "Architecture of Agentic RAG",
+    "output": "Agentic RAG architecture is designed to maximize adaptability and intelligence by leveraging autonomous agents and specialized tool integrations. At its core, the architecture organizes reasoning agents, each capable of decision-making, planning and retrieval, into a coordinated system.\nLet's see key components of Agentic RAG Architecture,"
+  },
+  {
+    "input": "1. Single-Agent RAG (Router)",
+    "output": "Single-Agent RAG uses a single intelligent agent that routes each user query to the most appropriate data source or tool. It excels in efficiently handling straightforward tasks without added complexity.\nActs as a central dispatcher for query routing.\nSuitable for simple, well-defined questions.\nChooses between fixed retrieval sources like search engines or databases."
+  },
+  {
+    "input": "2. Multi-Agent RAG",
+    "output": "Multi-agent RAG involves a master agent coordinating multiple specialized sub-agents, each interacting with specific data sources or tools. It enables parallel processing of complex queries by dividing them into sub-tasks.\nMaster agent supervises specialized sub-agents.\nHandles concurrent and parallel queries.\nAggregates results for comprehensive, multi-source answers."
+  },
+  {
+    "input": "3. Agentic Orchestration",
+    "output": "Agentic orchestration is the advanced coordination layer that lets agents dynamically plan, validate and iteratively refine workflows. It supports multi-modal data and adaptive strategy adjustment for richer, more accurate responses.\nEnables dynamic multi-step planning and feedback loops.\nSupports memory and intermediate result validation.\nHandles diverse data types like text, images and real-time inputs."
+  },
+  {
+    "input": "Working of Agentic RAG",
+    "output": "Here's a breakdown of how it functions:\nQuery Input: The user submits a query, initiating the process.\nQuery Refinement: An LLM agent reviews and rewrites the query for clarity, if needed, ensuring optimal data retrieval.\nInformation Sufficiency: The agent checks if further details are needed. If so, more information is gathered before proceeding.\nSource Selection: The agent determines the best source for the query—vector database, APIs/tools or internet based on context.\nData Retrieval: The chosen source is queried and relevant context is collected.\nContext Integration: Retrieved context is combined with the updated query to enrich understanding.\nResponse Generation: The LLM produces a response using the enhanced context and query.\nAnswer Validation: The agent verifies whether the response is relevant to the original question.\nFinal Output: If validated, the system delivers a precise, context-aware final response."
+  },
+  {
+    "input": "Types of Agents in Agentic RAG Based on Function",
+    "output": "Here are different types of Agentic RAG agents based on their functional roles:\nRouting Agent: Uses a large language model (LLM) to analyze queries and route them to the most suitable RAG pipeline. It performs basic agentic reasoning to select the right task pipeline such as document summarization or question answering.\nOne-Shot Query Planning Agent: Breaks down complex queries into independent subqueries that run in parallel across various RAG pipelines. The results from these subqueries are then combined into a comprehensive answer. For example, it handles multi-faceted questions about weather in different cities by dividing and processing each part simultaneously.\nTool Use Agent: Enhances standard RAG by integrating external tools like APIs or databases to fetch live or specialized data before generating responses. The agent decides when and how to use such tools, for example, retrieving real-time stock prices from a financial API.\nReAct Agent (Reason + Act):Combines reasoning with actions to tackle complex, multi-step queries iteratively. It decides which tools to use, gathers inputs and adjusts its approach based on ongoing results. For example, it might track an order by querying a database for status, then a shipping API and finally synthesizing the information.\nDynamic Planning and Execution Agent: Handles the most complex workflows by creating detailed step-by-step plans, often using computational graphs. It sequences tasks methodically, managing each step with specific tools or data sources."
+  },
+  {
+    "input": "Traditional RAG vs. Agentic RAG",
+    "output": "Let’s compare TraditionalRAGwith Agentic RAG to understand how Agentic RAG enhances the process."
+  },
+  {
+    "input": "Agent Frameworks for Agentic RAG",
+    "output": "Agent frameworks provide structured environments for building and deploying AI agents in Agentic RAG systems. Using these frameworks helps in the development and enhances system capabilities. Lets see Key Agent Frameworks:"
+  },
+  {
+    "input": "1. LangChain",
+    "output": "LangChainis designed to simplify the integration of AI agents into Agentic RAG systems which offers a  framework for building applications with language models. It provides a variety of tools that enable efficient management of prompts, chaining of language model calls and good interaction with various data sources and APIs.\nBy offering various components for agent development it enhances flexibility and scalability of Agentic RAG implementations helps in allowing developers to build dynamic and adaptive systems that can scale easily while managing complex tasks and workflows."
+  },
+  {
+    "input": "2. LlamaIndex",
+    "output": "LlamaIndexis formerly known as GPT Index which helps in the integration of large language models with external data sources which creates efficient interfaces for retrieval-augmented generation tasks. It supports construction of indices over data helps in enabling agents to perform efficient and context-aware information retrieval.\nBy optimizing the data retrieval process, it improves the responsiveness and accuracy of agents within Agentic RAG systems which ensures that the system can retrieve the most relevant data and generate more accurate responses for complex tasks."
+  },
+  {
+    "input": "3. LangGraph",
+    "output": "LangGraphis an orchestration framework designed for developing Agentic RAG systems helps in the creation of complex workflows that involve multiple agents. It provides tools for defining agent interactions helps in managing state and handling asynchronous operations which ensures good coordination between different agents.\nBy offering a clear and structured approach to workflow management, it simplifies development of advanced agent-based systems. Using the framework like LangGraph into Agentic RAG systems can increase their performance, adaptability and scalability which leads to the development of more intelligent, responsive and efficient AI solutions."
+  },
+  {
+    "input": "Advantages of Agentic RAG",
+    "output": "Autonomous Decision-Making: Intelligent agents process data and make decisions independently helps in improving efficiency and context awareness.\nScalability: Modular design allows multiple agents to handle tasks in parallel which helps in  efficiently managing large data volumes.\nContext-Aware Responses: Advanced retrieval and decision-making ensure responses are personalized and relevant.\nFlexibility and Adaptability: Agents adapt to changing environments helps in making Agentic RAG suitable for various applications like chatbots and recommendation systems."
+  },
+  {
+    "input": "Challenges of Agentic RAG",
+    "output": "Despite having many advantages, Agentic RAG systems also face some challenges:\nComplexity: Managing multiple agents, data sources and decision-making processes is complex.\nData Quality: Poor data quality can lead to inaccurate responses and reduced system effectiveness.\nHigh Latency: Handling multiple requests may cause delays due to the involvement of several agents.\nResource Intensive: Need for multiple agents and models makes the system computationally and resource-heavy."
   }
 ]
