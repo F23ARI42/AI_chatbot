@@ -17898,5 +17898,33 @@
   {
     "input": "How It Works in Practice",
     "output": "The agent runtime asks the MCP server what memory tools/resources exist (list_resources, list_tools).\nThe MCP server exposes memory endpoints with well-defined JSON schemas.\nThe agent can then call tools like memory.search to recall facts or memory.put to update the memory.\nThis means context isn’t lost when the model’s token window resets—the memory service provides durable recall.\nExample: A user tells their AI assistant: “My project name is Orion.”\nWithout MCP:This fact disappears once the conversation ends.\nWith MCP:The agent calls memory.put to store { project_name: \"Orion\" }.  Later, even in a new session, memory.search retrieves this fact, allowing the assistant to continue naturally."
+  },
+  {
+    "input": "Is Prompt Engineering Enough?",
+    "output": "Prompt engineering, carefully designing inputs to steer AI outputs, can influence AI behavior but isn’t a full solution. It’s like giving a driver verbal directions but no road signs. Guardrails outperform prompt engineering by:\nApplying consistent rules across all inputs, not just specific prompts.\nAddressing systemic issues, like model biases, that prompts can’t resolve.\nEnforcing ethical and safety standards universally.\nWhile prompt engineering is a useful tool, guardrails provide the robust, scalable control AI systems need."
+  },
+  {
+    "input": "How Do AI Guardrails Work?",
+    "output": "AI guardrails constantly monitors both the input and output of AI systems. They rely on predefined rules and algorithms such as finetuned models or pipelines to detect potentially problematic content or behavior. This real time monitoring allows for immediate intervention when necessary, ensuring that the AI system operates within acceptable boundaries.\nAI guardrails can be implemented through a combination of:\nRule-Based Filters:Simple checks that block or flag specific words, phrases or patterns.\nAlgorithmic Monitoring:Machine learning models that detect anomalies or risky behavior in real time.\nPolicy Integration:Embedding organizational or regulatory guidelines into the AI’s operational logic.\nHuman Oversight:Involving human reviewers for edge cases or high-risk scenarios."
+  },
+  {
+    "input": "Types of AI Guardrails",
+    "output": "Lets see various types of AI Guardrails:"
+  },
+  {
+    "input": "1. Banking Industry",
+    "output": "An American banking chatbot might be asked for investment advice. In this case:\nEthical and legal guardrailsensure the bot does not provide unauthorized financial advice.\nThe system complies with financial regulations like FINRA preventing regulatory breaches."
+  },
+  {
+    "input": "2. Manufacturing Sector",
+    "output": "A manufacturing company uses AI to generate marketing materials from enterprise data:\nBrand alignment guardrailsensure the AI-generated content matches the company’s tone and style.\nData compliance guardrailsprevent the inclusion of sensitive customer information in outputs."
+  },
+  {
+    "input": "Types of AI Risks Protected by Guardrails",
+    "output": "Guardrails address a spectrum of risks:\nBias and Discrimination: Prevent unfair outcomes, like rejecting loan applications based on gender or race.\nMisinformation: Stop AI from generating or spreading false information.\nSafety Hazards: Avoid dangerous recommendations, such as incorrect medical advice.\nPrivacy Violations: Protect user data from unauthorized access or leaks.\nEthical Missteps: Ensure AI doesn’t promote harmful ideologies or actions."
+  },
+  {
+    "input": "Why Do AI Guardrails Matter for Businesses?",
+    "output": "Implementing AI guardrails is crucial for several reasons:\nRisk Mitigation:Prevents AI from generating harmful, biased or non-compliant outputs.\nRegulatory Compliance:Ensures adherence to industry-specific regulations and reducing legal risks.\nData Protection:Safeguards sensitive and personal information from unauthorized exposure.\nBrand Protection:Maintains consistency with company values and public image.\nOperational Efficiency:Enables safe, reliable and scalable AI deployment leading to better business outcomes."
   }
 ]
