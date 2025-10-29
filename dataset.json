@@ -18614,5 +18614,85 @@
   {
     "input": "Applications of Generative AI",
     "output": "Generative AI is applied in multiple domains like:\nText: Powers chatbots, virtual assistants, content creation, document summarization and even code generation tools like GitHub Copilot.\nImages: Used in digital art, product design, fashion, advertising and medical imaging to create visuals that are close to real-world examples.\nAudio & Speech: Enables natural-sounding voice assistants, multilingual dubbing, music composition, personalized voice cloning and accessibility tools.\nVideo: Supports animation, movie special effects, gaming, marketing videos and realistic training simulations.\nBusiness Use Cases: Enhances customer support with AI agents, boosts knowledge discovery using RAG systems, accelerates drug discovery, assists in financial forecasting and improves data-driven decision-making."
+  },
+  {
+    "input": "Key Features",
+    "output": "Gemini AI is packed with useful tools for coding workflows:\nCode Generation: Generate Python scripts, JavaScript functions, Java programs and more. Just describe what you need and receive ready-to-run code.\nCode Explanation: Demystifies complex concepts such as recursion, async programming and algorithms making them easy to understand for beginners and experts alike.\nDebugging Support: Quickly identifies errors like missing semicolons, logic flaws or syntax issues and provides suggestions to fix them.\nMultimodal Input: Handles text and images to convert UI sketches into HTML/CSS or analyze screenshots for code improvements.\nReal-Time Insights: Stays updated with the latest libraries, frameworks and coding trends.\nContext-Aware Assistance: Tracks your project context for tailored suggestions without repeated explanations."
+  },
+  {
+    "input": "Performance and Accuracy",
+    "output": "Gemini AI is highly capable in coding and problem-solving:\n90% on HumanEval:Excellent in code generation and explanation.\n88% on MMLU:Handles advanced programming questions.\n92% on GSM8K:Solves coding-related math challenges effectively.\nIt rivals other top AI models like GPT-4o and Claude 3.5, delivering fast and accurate coding solutions."
+  },
+  {
+    "input": "Architecture",
+    "output": "Gemini AI is built on Google’s cutting-edge infrastructure:\nTransformer-Based Neural Network: Trained on billions of tokens from code repositories, documentation and web sources.\nMassive Context Window: 1-million-token window allows handling of large codebases seamlessly.\nReinforcement Learning: Continuously improves accuracy through feedback loops.\nHigh-Speed Processing: Powered by Google TPU clusters for lightning-fast responses."
+  },
+  {
+    "input": "Training Methodology",
+    "output": "Gemini AI’s capabilities are backed by a comprehensive training approach:\nHuman Feedback: Coders and engineers refined its conversational precision.\nSynthetic Data: Simulated scenarios prepared it for uncommon coding challenges.\nDiverse Sources: Trained on GitHub, Stack Overflow and tech blogs.\nBias Mitigation: Designed to provide fair and accurate coding suggestions."
+  },
+  {
+    "input": "How to use Gemini AI",
+    "output": "Gemini AI has a user-friendly interface and offers numerous functionalities that you need to know. Here's the beginner-friendly step-by-step guide on how to use Gemini AI:"
+  },
+  {
+    "input": "Step 1: Access Gemini AI",
+    "output": "Visit the official website to start using Gemini AI. Sign up with a Google account for free access (with some limits) or choose a paid plan for more features then, you'll be automatically redirected to the Gemini home page. first, a pop-up appears of \"Terms of Service\", click on \"I agree,\" and Continue. You've successfully Signed in to Gemini."
+  },
+  {
+    "input": "Step 2: Enter Your Query or Prompt in the Box",
+    "output": "Once you've signed in successfully, you'll see a Gemini home page with a list of questions and a message box at the bottom.\nIf you don't have an idea how to use Gemini AI and what to ask, then you can consider sample questions to start the conversation with Gemini. You will find some default sample questions just above the prompt box.\nAnd to ask your own question, go to the message box labeled as \"Enter a prompt here\" at the bottom.\nHere, you can \"Enter a prompt\" via typing or voice command and hit Enter.\nGemini will start analyzing your message and generate the most relevant response.\nFor different conversations, you can open a separate chat box by clicking on the top left-side \"New Chat.\""
+  },
+  {
+    "input": "Step 3: Write a prompt",
+    "output": "Describe your task clearly, e.g., “Sort an array in Python” or “Fix my HTML code” Specify the programming language and context for best results."
+  },
+  {
+    "input": "Step 4: Select a Model",
+    "output": "Choose between code generation, debugging or explanation modes. For complex tasks, use the explanation mode to get step-by-step guidance."
+  },
+  {
+    "input": "Step5: Review Output",
+    "output": "Gemini AI provides code or explanations. For example, ask for a webpage and it might return HTML/CSS with comments."
+  },
+  {
+    "input": "Step6: Refine and Test",
+    "output": "If the output needs tweaks, adjust your prompt (e.g., “Add error handling to this Python script”). Test the code in a safe environment."
+  },
+  {
+    "input": "Step 6: Apply or Share",
+    "output": "Copy the code into your project or share it via your preferred platform."
+  },
+  {
+    "input": "Use Cases",
+    "output": "Gemini AI is versatile for various coding scenarios. Here are examples with prompts and outputs:"
+  },
+  {
+    "input": "1. Debugging Code",
+    "output": "Prompt: “Find the error in this Python code: for i in range(5): print(i * )”\nOutput:"
+  },
+  {
+    "input": "2. Writing Functions",
+    "output": "Prompt: “Write a JavaScript function to validate an email”\nOutput:"
+  },
+  {
+    "input": "3. Learning Concepts",
+    "output": "Prompt: “Explain how JavaScript closures work”\nOutput:"
+  },
+  {
+    "input": "4. Building Apps",
+    "output": "Prompt: “Generate a simple login page using HTML and CSS”Output:\nOutput:\nThese examples show how Google Gemini AI can simplify coding tasks and learning."
+  },
+  {
+    "input": "Use Cases",
+    "output": "Code Generation: Write Python scripts, JavaScript functions or full application modules.\nDebugging and Error Fixing: Identify syntax errors, logic issues and optimize code.\nLearning and Education: Explain programming concepts, algorithms and complex logic for students.\nApp & Web Development: Generate HTML/CSS, UI components and backend code quickly.\nCreative Coding Projects: Analyze screenshots, convert sketches to UI code or assist in multimedia projects.\nResearch Assistance: Summarize documentation, extract relevant code examples or automate repetitive tasks."
+  },
+  {
+    "input": "Advantages",
+    "output": "Multimodal Capabilities: Handles text, code, images, audio and video for versatile assistance.\nAdvanced Reasoning: Provides accurate, context-aware solutions and step-by-step explanations.\nCoding Efficiency: Generates, debugs and explains code across multiple programming languages.\nReal-Time Knowledge: Accesses latest libraries, trends and best practices to keep outputs current.\nIntegration-Friendly: Works across Google platforms, cloud APIs and Google Assistant.\nContextual Awareness: Remembers project context to offer tailored suggestions."
+  },
+  {
+    "input": "Limitations",
+    "output": "Niche Language Support: May struggle with obscure programming languages or uncommon frameworks.\nComplex Systems: Extremely large or intricate systems may not be fully understood or handled correctly.\nMultimodal Maturity: Features for image/video analysis and UI-to-code conversion are still evolving.\nVague Prompts: Ambiguous instructions can result in suboptimal outputs.\nTesting Required: Outputs should always be reviewed and tested before deployment to avoid runtime issues."
   }
 ]
