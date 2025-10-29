@@ -18550,5 +18550,21 @@
   {
     "input": "Real-World Applications of DPR:",
     "output": "DPR is widely used in fields that demandfast and precise information retrieval:\nDense Passage Retrieval (DPR) has transformed how we retrieve information by leveraging deep learning for semantic search, surpassing traditional keyword-based methods. Despite challenges like computational costs and data requirements, DPR’s accuracy, scalability, and efficiency make it a leading choice for modern retrieval systems."
+  },
+  {
+    "input": "Working of Fine-Tuning",
+    "output": "Fine-tuning typically involves the following steps:"
+  },
+  {
+    "input": "Applications",
+    "output": "Domain Adaptation– adapting a general pretrained model (e.g., GPT, BERT) to a specific domain like medical, legal, or finance.\nTask Specialization– improving performance on a narrow task such as sentiment analysis, question answering, or named entity recognition.\nLanguage/Style Customization– fine-tuning to handle specific languages, dialects, or writing styles.\nPersonalization– customizing a model to reflect user preferences, vocabulary, or tone.\nData Efficiency– leveraging a small dataset to teach a large model new knowledge instead of training from scratch.\nEdge Deployment– compressing and fine-tuning smaller models for mobile/IoT use cases."
+  },
+  {
+    "input": "Advantages",
+    "output": "Fine-tuning is beneficial when:\nWe have a limited dataset: Fine-tuning a pre-trained model helps achieve high performance even with small amounts of data.\nWe need domain-specific expertise: Adapting a pre-trained model on specialized datasets (like legal or medical text) improves accuracy for specific fields.  For example a model trained on general images can be fine-tuned for medical image analysis hence improving accuracy by focusing on relevant features.\nWe want to save training time:Fine-tuning avoids training from scratch, making it a faster solution for time-sensitive projects.\nBetter Performance on Smaller Datasets: Training models on smaller datasets can often result in overfitting as the model has too few examples to learn from. Fine-tuning allows the model to generalize better by using the knowledge from the larger pre-trained dataset."
+  },
+  {
+    "input": "Challenges",
+    "output": "Overfitting: Even though fine-tuning reduces the risk of overfitting compared to training from scratch it can still occur if the new dataset is too small or lacks diversity.\nComputational Constraints: Fine-tuning may still require considerable computational resources especially when working with large models like GPT or BERT.\nSelecting the Right Layers to Fine-Tune: Deciding which layers to freeze and which to train can be tricky. Some models may benefit from fine-tuning more layers while others might only require adjustments to the final layers."
   }
 ]
