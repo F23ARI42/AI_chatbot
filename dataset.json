@@ -19666,5 +19666,45 @@
   {
     "input": "6. We can get all the stored context from all the agents by selecting the list_all_context",
     "output": "Select the list_all_context tool from the Tools tab.\nRunning this tool immediately returns the complete context store without any filtering or searching.\nIt shows all contexts stored from all agents in one view.\nUseful for inspecting the full data set or auditing what has been saved so far.\nWe have build a simple and powerful MCP server in python which enables seamless context sharing among agents. Using the MCP protocol, we built tools to store data per agent and search it by query and tested everything with the MCP Inspector."
+  },
+  {
+    "input": "Working of Agentic RAG System",
+    "output": "Let's see how our system will be working:\n1. User Query:Everything starts with a user question. The query flows into the central component i.e the Agent.\n2. The Agent:The Agent acts as the \"brain\" of the system. Its job is to analyze the query and decide which specialized tool should handle different parts of the request. Instead of a fixed path, the agent makes dynamic decisions based on what the query needs.\n3. Decision-Making and Tools:Depending on the query, the agent can choose between several tools:\nDocumentRetriever Tool:Finds and fetches relevant documents for context.\nCalculator Tool:Handles mathematical or computational questions.\nWikipedia Tool: Searches for factual knowledge directly from Wikipedia.\nThe agent can also call tools multiple timesor use a combination, depending on the task complexity.\n4. LlamaIndex Query Engine:Some tools like DocumentRetriever or Calculator Tool, feed their results into the LlamaIndex Query Engine (a specialized search and synthesis engine). LlamaIndex processes and combines information from those tools to create a detailed and accurate answer.\n5. Final Output:Once the agent is satisfied with the results, it sends the answer back to the user."
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "Let's build our Agentic RAG system which uses Llama-index:"
+  },
+  {
+    "input": "Step 1: Install Dependencies",
+    "output": "We will install the required packages and libraries for our system,\nllama-index:For document retrieval and embeddings.\nlangchain:For agent and tool management.\nlangchain_community:Required for ChatOpenAI in LangChain 0.3.x.\nopenai:For LLM API access.\nwikipedia:Optional tool for agent to search Wikipedia."
+  },
+  {
+    "input": "Step 2: Upload Documents and OpenAI API Key",
+    "output": "We will upload some documents and files which our model can use. Files we are using here can be dowloded fromhere.\nCreates a docs/ folder to store our knowledge documents.\nUsers can upload .txt files.\nExample content can include notes, articles or any text relevant to queries."
+  },
+  {
+    "input": "Step 3: Import Libraries",
+    "output": "We will import the required libraries for system,\nSimpleDirectoryReader:Load documents.\nGPTVectorStoreIndex:Create vector-based index for retrieval.\nLLMPredictor & ServiceContext:Wrap LLM for LlamaIndex.\nChatOpenAI:OpenAI GPT model for text generation.\nTool, initialize_agent, AgentType:Build agentic reasoning system.\nConversationBufferMemory:Maintain past conversation context for agent.\nwikipedia:Tool for retrieving general knowledge."
+  },
+  {
+    "input": "Step 4: Build the LlamaIndex Retrieval System",
+    "output": "We will build the LlamaIndex Retrieval System in which,\nSimpleDirectoryReader:Reads all uploaded documents.\nLLMPredictor:Wraps GPT-3.5-turbo to work with LlamaIndex.\nGPTVectorStoreIndex:Converts documents into embeddings stored in a vector store.\nquery_engine:Returns top 3 most relevant documents for any query."
+  },
+  {
+    "input": "Step 5: Define Tools for Agent",
+    "output": "We will define the tools that are available for the agent to use:\nDocumentRetriever:Uses LlamaIndex to fetch relevant docs.\nCalculator: Handles numeric queries.\nWikipedia:Fetches general knowledge not in uploaded docs.\nTools:Each tool is callable by the agent automatically."
+  },
+  {
+    "input": "Step 6: Initialize Agent with Memory",
+    "output": "We will initialize ConversationBufferMemory which is a short-term, in-session memory to the agent:\nConversationBufferMemory:Keeps track of past queries and responses.\nAgentType.ZERO_SHOT_REACT_DESCRIPTION:Agent decides which tool to call without pre-training.\nverbose=True:Shows reasoning steps in the output."
+  },
+  {
+    "input": "Step 7: Run the System",
+    "output": "We run our system in which:\nUsers can interact with the agent.\nAgent decides which tool to use, retrieves relevant info and generates answers.\nSupports document queries, math calculations and Wikipedia search.\nOutput:"
+  },
+  {
+    "input": "Advantages",
+    "output": "Let's see the advantages which our system holds:\nAutonomous Reasoning:Agent decides which tool to use for each query.\nAccurate Responses:LlamaIndex retrieves relevant documents before generating answers.\nMulti-Tool Support:Can handle document retrieval, calculations and Wikipedia queries.\nContext-Aware:Conversation memory allows follow-up questions.\nScalable & Modular:Tools and knowledge sources can be added or updated easily.\nUser-Friendly: Generates natural language answers interactively."
   }
 ]
