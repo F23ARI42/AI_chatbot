@@ -19186,5 +19186,9 @@
   {
     "input": "RAG Alternatives",
     "output": "Different methods can be used to generate AI outputs and each serves a unique purpose. The choice depends on what you want to achieve with your model."
+  },
+  {
+    "input": "Universal Sentence Encoder",
+    "output": "Universal Sentence Encoder encodes entire sentence or text into vectors of real numbers that can be used for clustering, sentence similarity, text classification, and other Natural language processing (NLP) tasks. The pre-trained model is trained on greater than word length text, sentences, phrases, paragraphs, etc using a deep averaging network (DAN) encoder.\nImplementation of sentence embeddings using Universal Sentence Encoder:\nRun these command before running the code in your terminal to install the necessary libraries.\nProgram:\nOutput:\nExplanation:\nThe above output represents input sentences into their corresponding vectors using the Universal Sentence encoder."
   }
 ]
