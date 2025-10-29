@@ -19386,5 +19386,93 @@
   {
     "input": "Agentic AI:",
     "output": "IT operations:Agentic AI monitors servers and networks, autonomously fixing issues or scaling resources when needed.\nCybersecurity:Detects and responds to threats in real time, adapting its strategies without manual intervention.\nFinance:Executes complex trades based on live market conditions, sets risk controls and adapts decisions as situations evolve.\nWorkflow automation:Manages end-to-end business processes, plans multi-step tasks and makes decisions proactively.\nAgentic AI suits businesses wanting proactive problem-solving and smart automation like personalizing customer service, planning healthcare treatments, etc. Companies that learn to use agentic AI alongside traditional AI will have a competitive advantage."
+  },
+  {
+    "input": "1. LangGraph",
+    "output": "LangGraphis designed for building and managing advanced autonomous agents capable of handling independent workflows. Its architecture is inspired bydirected acyclic graphs(DAGs) which helps in the execution of complex, branching processes such as starting a chatbot session, continuing the conversation and ending it upon achieving goals."
+  },
+  {
+    "input": "Features:",
+    "output": "Smaller Workflow Control:Allows developers to design agent flows at small steps, supporting multi-agent, hierarchical and sequential processes.\nStatefulness:Lets agents remember details from past steps so they can pick up where they left off which also makes it easier to trace and fix problems in their workflows.\nAdaptive Retrieval-Augmented Generation (RAG):It supports advanced knowledge-augmented reasoning, letting agents execute adaptive tasks with minimal human input.\nIntegration Ready:Easily connects with various LLMs, vector databases, monitoring, debugging and human-in-the-loop controls."
+  },
+  {
+    "input": "Code:",
+    "output": "Let see a code example to understand better, the working of code is explained below:\nInstalls Langgraph and Langchain packages\nDefines a function using Langchain's GPT-4o-mini LLM to get a motivational quote\nCreates a Langgraph StateGraph with a single node calling the function\nSets the node as both entry and finish point in the graph\nCompiles and invokes the graph, printing the motivational quote\nOutput:"
+  },
+  {
+    "input": "2. AutoGen",
+    "output": "AutoGen is a Microsoft-backed multi-agent framework designed for enabling rich, dynamic conversations and automation workflows among AI agents, humans and tools. It emphasizes flexibility, configurability and seamless integration with both large language models (LLMs) and external APIs."
+  },
+  {
+    "input": "Features:",
+    "output": "Customizable agents:Agents can be defined roles, personas and capabilities.\nDynamic multi-agent conversations:Agents interact autonomously or with human input for collaboration, debate and problem-solving.\nTool integration:Connect to APIs, development tools and LLMs for data fetching, code execution and third-party interactions.\nHuman oversight:Seamlessly blend automated and manual workflows for complex decisions.\nConversation history & state:Agents maintain context across interactions for continuity and relevance."
+  },
+  {
+    "input": "Code:",
+    "output": "Let's see a code example to understand it better,\nInstalls Autogen package from GitHub\nLoads OpenAI API key\nCreates an AssistantAgent configured with GPT-3.5-turbo model and OpenAI key\nCreates a UserProxyAgent with no human input\nInitiates a chat from user to assistant with a starting message and limits turns to 2\nOutput:"
+  },
+  {
+    "input": "3. CrewAI",
+    "output": "CrewAIis an open-source framework that lets developers create and manage teams of specialized AI agents. These agents collaborate, each handling a distinct role, to automate and streamline complex, multi-step workflows such as research, content creation and business processes"
+  },
+  {
+    "input": "Features:",
+    "output": "Specialized Roles:Agents are defined with roles, goals, backstories and tools enabling tailored decision-making.\nTask Kickoff and Coordination:Define a crew of agents, set tasks and let the crew autonomously commence and optimize processes.\nHuman-AI and Multi-Agent Collaboration:Ideal for projects where seamless cooperation between autonomous agents and/or humans is required (e.g., research, fraud detection, content creation)."
+  },
+  {
+    "input": "Code:",
+    "output": "Let's see a code example to understand better,\nImports Crew, Agent and Task classes and then checks for OpenAI API key\nDefines two agents: Python Assistant and Philosopher with roles and backstories\nDefines two tasks: Python assistant prints \"Hello, world!\"; Philosopher shares meaning of life as \"42\"\nCreates a Crew with the agents and tasks defined\nStarts execution of tasks in parallel and collects results\nOutput:"
+  },
+  {
+    "input": "4. Semantic Kernel",
+    "output": "Semantic Kernel is an open-source, lightweight Microsoft SDK that lets developers add advanced AI features such as natural language understanding and generation, to applications written in C#, Python or Java. It connects our existing code and business logic to the latest large language models and is built for enterprise-scale, responsible AI adoption."
+  },
+  {
+    "input": "Features:",
+    "output": "Agent Framework:Build autonomous or semi-autonomous agents that collaborate, process information and trigger actions using LLMs, APIs or human input.\nOrchestration Engine:Seamlessly sequence and coordinate tasks across AI, systems and human reviewers for end-to-end automation.\nContext and Memory:Maintain conversation history and app state across interactions, enabling personalized, multi-turn experiences.\nHuman-in-the-Loop:Insert human approval or refinement steps into automated workflows for oversight and exception handling."
+  },
+  {
+    "input": "Code:",
+    "output": "Let's see a code example to understand better,\nInstalls Semantic Kernel version 1.35.3\nLoads OpenAI API key from Colab secrets\nDefines a wrap_text function to word-wrap output at 70 characters\nAsynchronously creates a Kernel instance and OpenAIChatCompletion client with GPT-3.5-turbo model\nSets the Kernel’s private chat service to the client\nCalls chat_complete_async with a prompt to write a short poem about Semantic Kernel\nPrints the word-wrapped result\nOutput:"
+  },
+  {
+    "input": "5. LangChain",
+    "output": "LangChainis an open-source framework designed to streamline the development of applications powered by large language models (LLMs). It excels at chaining together modular components such as prompts, data loaders, memory and external tools enabling developers to build, customize and deploy context-aware AI workflows with ease."
+  },
+  {
+    "input": "Features:",
+    "output": "Tool Integration:Call external APIs, search engines and databases to augment LLM capabilities.\nHuman-in-the-Loop:Design workflows for human review, approval or intervention where needed.\nMulti-Agent & Agentic Workflows:Support for creating agents that communicate, reason and act either independently or together.\nIntegration with LLMs:Seamlessly connect to OpenAI, Anthropic, Hugging Face and other leading LLMs.\nMemory & Context:Maintain state and conversation history across interactions for personalized, multi-step experiences."
+  },
+  {
+    "input": "Code:",
+    "output": "Let's see a code example to understand better,\nLoads OpenAI API key from Colab secrets\nInstalls necessary Langchain packages\nDefines an LLM with GPT-4o-mini model at zero temperature\nCreates a prompt template asking for a fun fact about a topic\nChains prompt generation, LLM call and string output parsing\nInvokes chain with topic \"cats\" to generate a fact\nOutput:"
+  },
+  {
+    "input": "6. No-Code and Visual AI Agent Platforms",
+    "output": "For business users, domain experts or fast prototyping, visual and no-code AI agent builders provide drag-and-drop simplicity."
+  },
+  {
+    "input": "1. n8n: Visual Agent Development Platform",
+    "output": "Workflow Automation Plus AI:n8nEnables users to construct AI workflows integrating 400+ apps like Notion, Stripe, Google Sheets, etc with LLMs and toolchains all via a graphical interface.\nTrigger-Based Flows:Agents can be initiated by webhook, chat message or custom event and use built-in nodes for data handling, communication and logic.\nSales, Marketing, Support:Automate CRM updates, lead scoring, schedule communications or orchestrate sales pipelines without code."
+  },
+  {
+    "input": "2.  Langflow: Modular Drag-and-Drop Framework",
+    "output": "Multi-Agent and RAG Support:Designed for visually constructing complex agentic workflows including collaborative multi-agent scenarios andRetrieval-Augmented Generationtasks.\nLLM and Vector Store Agnostic:Choose any mainstream or open-source model orvector DBand extend features as needed.\nPrototyping and Collaboration:Rapidly test, iterate and deploy flows and share, embed or serve flows via APIs for enterprise integration."
+  },
+  {
+    "input": "1. Complexity of Tasks:",
+    "output": "For multi-step, stateful processes that require keeping track of context or conversation history, LangGraph and CrewAI are strong choices.\nIf our workflow is primarily LLM-powered and modular (e.g., question-answering, retrieval-augmented generation), LangChain is purpose-built for chaining prompts, tools and memory.\nAutoGen excels in dynamic multi-agent conversations where agents with different roles interact, debate or collaborate on complex problems."
+  },
+  {
+    "input": "2. Integration Needs:",
+    "output": "For no-code, visual workflow design and easy connectivity with business tools, Langflow and n8n stand out. These platforms let us quickly build and deploy integrations without writing code.\nIf we need deep code-level integration with existing systems and APIs, Semantic Kernel is designed for embedding AI logic directly into applications using C#, Python or Java."
+  },
+  {
+    "input": "3. Customizability and Scalability:",
+    "output": "Semantic Kernel, LangGraph and AutoGen are all built for enterprise-scale extensibility, offering modular plugins, agent frameworks and support for advanced orchestration.\nCrewAI is particularly suited for collaborative multi-agent teams in specialized roles, ideal for automating business processes that benefit from teamwork."
+  },
+  {
+    "input": "4. Privacy & Data Security:",
+    "output": "Semantic Kernel and LangGraph are particularly well-suited for organizations requiring strict compliance (e.g., GDPR, HIPAA) due to their modularity and enterprise-grade features.\nAutoGen and CrewAI workflows should be designed with secure communication channels between agents and clear data retention policies.\nLangflow and n8n offer convenience, but always confirm that third-party integrations meet our security standards before connecting sensitive systems."
   }
 ]
