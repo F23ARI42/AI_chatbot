@@ -18074,5 +18074,29 @@
   {
     "input": "Step 5: Plot Embedding",
     "output": "Displays a scatter plot of the words in 2D space, labels each point with its word and displays the plot.\nOutput:\nHere we can see snake, cow, birds, etc are grouped together nearby showing similarity (all animals) whereas computer and machines are far away from animal cluster showing disimilarity."
+  },
+  {
+    "input": "Key Characteristics of Agentic AI",
+    "output": "Autonomy and Goal-Oriented Behaviour:Agentic AI systems operate independently making decisions and taking actions without human oversight. They are programmed with specific objectives and work towards achieving these goals through their autonomous actions.\nAdaptive Learning and Complex Decision-Making:These AI systems are designed to learn from their experiences, adapting their behaviour over time to improve efficiency in reaching their goals. They are capable of navigating complex situations by considering multiple variables and potential outcomes.\nEnvironment Interaction and Perception:Agentic AI interacts with its environment, gathering data through sensors, cameras and other input devices. This real-time data collection enables the AI to perceive its surroundings and make informed decisions.\nInformation Processing:Using algorithms like neural networks and pattern recognition models, Agentic AI processes and analyzes collected data. It applies decision-making frameworks likerule-based systemsandmachine learning modelsto interpret data and guide its actions.\nAction Execution:Equipped with mechanisms such as robotic actuators or software commands, Agentic AI systems execute tasks autonomously based on the processed information and the goals they are programmed to achieve."
+  },
+  {
+    "input": "How Agentic AI Works?",
+    "output": "Agentic AI systems operate through various steps such as:\nPerception:Collects only the most relevant, up‑to‑date data from sensors, APIs, databases or users for its specific mission, unlike general agents that gather broad context. Relevant past experiences or facts are also recalled from memory to give context before processing new information.\nReasoning:Interprets inputs using domain‑specific methods and patterns stored in knowledge base or shared memory.\nGoal Setting:Defines clear, bounded objectives from user input or preset rules, creating a targeted plan tailored to its one key task. Past goals and outcomes stored in memory can be referenced to choose the most effective strategy.\nDecision‑Making:Selects actions based on speed, accuracy and safety, guided by past successful actions and best practices stored in memory, whereas general agents use broader strategies aimed at versatility.\nExecution:Carries out the chosen steps via tools like APIs or expert systems to deliver end‑to‑end results, logging details in memory for performance tracking and future learning.\nLearning and Adaptation:Improves over time by learning from feedback and saving those lessons in memory, focusing on its specialty rather than attempting to generalize to unrelated domains as general agents do.\nOrchestration:In multi‑agent setups, works as a focused “specialist” alongside other agents. using shared memory to coordinate efficiently, while general agents take on more varied but less expert roles."
+  },
+  {
+    "input": "Agentic AI vs. Traditional AI",
+    "output": "Let's see the key differences between traditional AI and Agentic AI,\nTraditional AI requires human input and predefined rules, whereas Agentic AI operates independently and makes its own decisions.\nTraditional AI handles specific, routine tasks while Agentic AI adapts and learns to manage complex, dynamic goals.\nDecision-making in traditional AI is limited and rule-based but Agentic AI considers multiple variables and improves its strategies over time.\nTraditional AI struggles with changing environments, whereas Agentic AI continuously adapts to new information and evolving situations."
+  },
+  {
+    "input": "Applications of Agentic AI",
+    "output": "The potential applications of Agentic AI are vast and varied. Here are some few examples:\nAutonomous Vehicles:Agentic AI can be used in self-driving cars, where the AI acts as the driver making real-time decisions based on traffic conditions, road signs and other environmental factors.\nHealthcare:In healthcare, it could assist in patient diagnosis and treatment planning by autonomously analyzing medical data and recommending personalized treatment options.\nFinance:It could be used in the financial sector for algorithmic trading, where the AI independently makes trading decisions based on market trends and data analysis.\nRobotics:In robotics, Agentic AI could power robots that perform complex tasks autonomously such as search and rescue missions in disaster-stricken areas.\nSmart Home Systems:It could enhance smart home systems by autonomously managing energy consumption, security and other home automation features."
+  },
+  {
+    "input": "Advantages",
+    "output": "Autonomous:Functions independently with minimal human oversight.\nAdaptable:Learns from experience and adjusts actions to changing environments.\nVersatile:Handles a wide range of complex and dynamic tasks.\nScalable:Effectively coordinates multiple agents and systems."
+  },
+  {
+    "input": "Limitations",
+    "output": "Safety:Requires ongoing monitoring to prevent errors or unintended outcomes.\nAccountability:Raises ethical concerns and questions about responsibility for autonomous actions.\nComplexity:Can be difficult to interpret, explain or regulate.\nBias:May carry forward or amplify existing biases without careful supervision."
   }
 ]
