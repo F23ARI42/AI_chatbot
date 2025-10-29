@@ -20058,5 +20058,33 @@
   {
     "input": "Difference Between Sequential and Hierarchical Processess",
     "output": "This table highlights the main differences between the two processes and when each is most suitable."
+  },
+  {
+    "input": "Understanding Embeddings in CrewAI",
+    "output": "Embeddings are essential in CrewAI for:\nContextual Memory:Agents can recall relevant past information by comparing embeddings.\nInformation Retrieval:Queries can be matched with related knowledge using similarity search.\nCross-Session Recall:Long-term memory is supported by storing embeddings in databases likeChromaDB.\nWithout embeddings, agents would treat each interaction in isolation and lose continuity."
+  },
+  {
+    "input": "Implementation of Different Embeddings in CrewAI",
+    "output": "We will implement different embedding providers in CrewAI and observe how they enable agents to store, retrieve and share contextual memory across tasks. In CrewAI, we can enable memory and configure the embedding provider. Whenmemory=Trueis set in a Crew object, embeddings allow tasks and agents to share context effectively.\nBut before that we will first define the agents and their tasks which will later share context through embeddings.\nAgent: Defines the role, goal and backstory of an AI agent.\nTask: Specifies what an agent should do (description), who does it (agent) and what to expect (expected_output).\ncontext: Links tasks together so outputs can flow from one to the next."
+  },
+  {
+    "input": "1. Using OpenAI Embeddings",
+    "output": "We will configure CrewAI to use OpenAI embeddings for memory. OpenAI embeddings are highly optimized for semantic similarity and widely supported across applications. They are a good default choice when you want reliable performance and easy integration. The text-embedding-3-small model is lightweight and cost-efficient, while larger variants (-large) provide more accuracy.\nmemory=True:Enables memory for the crew.\nembedder:Specifies the embedding provider and model.\nOutput:"
+  },
+  {
+    "input": "2. Using Google Embeddings",
+    "output": "We will switch to Google’s embedding model. Google’s embeddings (e.g., models/embedding-001) are trained on massive datasets and optimized for multilingual text. If our tasks involve global content (different languages, search, summarization), Google embeddings provide strong cross-lingual support.\nprovider=\"google\"tells CrewAI to use Google embeddings.\napi_keyis required to authenticate with Google’s API.\nOutput:"
+  },
+  {
+    "input": "3. Using Hugging Face Embeddings",
+    "output": "We will configure CrewAI to use Hugging Face embeddings. Hugging Face offers a wide range of open-source models that can be used for free or with hosted inference. Models like sentence-transformers/all-MiniLM-L6-v2 are lightweight and excellent for semantic search and retrieval. It is also a good option if we want custom or fine-tuned embeddings.\nOutput:"
+  },
+  {
+    "input": "4. Using Cohere Embeddings",
+    "output": "We will demonstrate how to use Cohere’s embeddings. Cohere’s embeddings (e.g., embed-english-v2.0) are specialized for English text and optimized for production search and retrieval tasks. They showcase high performance on semantic similarity benchmarks, especially when working with large-scale retrieval systems.\nOutput:"
+  },
+  {
+    "input": "Comparison of Embedding Providers in CrewAI",
+    "output": "This table outlines the main embedding providers available in CrewAI, showing how they differ in models, strengths and use cases."
   }
 ]
