@@ -18694,5 +18694,57 @@
   {
     "input": "Limitations",
     "output": "Niche Language Support: May struggle with obscure programming languages or uncommon frameworks.\nComplex Systems: Extremely large or intricate systems may not be fully understood or handled correctly.\nMultimodal Maturity: Features for image/video analysis and UI-to-code conversion are still evolving.\nVague Prompts: Ambiguous instructions can result in suboptimal outputs.\nTesting Required: Outputs should always be reviewed and tested before deployment to avoid runtime issues."
+  },
+  {
+    "input": "Workflow of LangGraph",
+    "output": "The diagram below shows how LangGraph structures its agent-based workflow using distinct tools and stages.\nHere's a step-by-step interpretation of the flow:"
+  },
+  {
+    "input": "Components of LangGraph",
+    "output": "These core components work together smoothly to help developers build, customize and manage complex AI-driven workflows.\nMonitoring mechanism:Human-in-the-loop (HITL) ensures humans remain part of the decision-making process. It improves machine learning accuracy by using critical data points instead of relying on random sampling.\nStateful graphs:Each node represents a step in computation and carries forward information from previous steps. This enables continuous, contextual processing of data throughout the workflow.\nCyclical graphs:Graphs that contain loops is used for workflows where certain steps may repeat. It becomes important for complex agent run-times.\nNodes:The individual components or agents within a workflow is called node. They act like “actors” performing tasks or calling tools (e.g., a ToolNode for tool integration).\nEdges:Edges determine which node should run next. They can follow fixed paths or branching conditions based on the system state.\nRAG (Retrieval-Augmented Generation):RAGenhances LLMs by adding relevant external documents as context, improving the accuracy and richness of outputs.\nWorkflows:Sequences of interactions between nodes. By designing workflows, users combine multiple nodes into powerful, dynamic AI processes.\nAPIs:A set of tools to programmatically add nodes, modify workflows or extract data. Offers developers flexibility and seamless integration with other systems.\nLangSmith:LangSmithis a dedicated API for managing large language models (LLMs). Provides functions for initializing LLMs, creating conditional logic and optimizing performance."
+  },
+  {
+    "input": "How LangGraph Scales",
+    "output": "Graph-based architecture:Ensures AI workflows grow without slowing down or losing efficiency.\nEnhanced decision-making:Models relationships between nodes, enabling AI agents to learn from past actions and feedback.\nIncreased flexibility:Open-source design lets developers add new components or adapt existing workflows with ease.\nMultiagent workflows:Supports networks of specialized LangChain agents. Tasks can be routed to the right agent, enabling parallel execution and efficient handling of complex, diverse workloads.\nDecentralized coordination:This multiagent setup creates a scalable system where automation doesn’t rely on a single agent but is distributed across a coordinated network."
+  },
+  {
+    "input": "Building a Simple Chatbot with LangGraph",
+    "output": "LangGraph makes it easy to build structured, stateful applications like chatbots. In this example we’ll learn how to create a basic chatbot that can classify user input as either a greet, search query and respond accordingly."
+  },
+  {
+    "input": "Step 1: Install the Dependencies",
+    "output": "Installs the required dependencies,\nlanggraph:Framework for building graph-based AI workflows.\nlangchain:Popular toolkit for LLM-powered AI applications.\ngoogle-generativeai:Google’s API for Generative AI (Gemini models)."
+  },
+  {
+    "input": "Step 2: Setup Gemini API",
+    "output": "We will :\nImports the Google Generative AI Python SDK.\nConfigures the API with our private key for authentication.\nInitializes the Gemini 1.5 Flash model for fast, multimodal LLM responses.\nDefines an ask_gemini function that takes a prompt (user question) and generates a response from Gemini and handles errors gracefully by returning an apologetic message if the API fails."
+  },
+  {
+    "input": "Step 3: Define Chatbot State",
+    "output": "We will import Optional and TypedDict for strict type checking and creates a GraphState type:\nHolds the current question, its classification (greeting/search) and the final response.\nEnsures clarity and structure in state handling during workflow execution."
+  },
+  {
+    "input": "Step 4: Classify Input",
+    "output": "We define classify, which takes the workflow state and analyzes the user's question.\nChecks if the question is a greeting. For example keywords like hi, hello, etc.\nTags the question as either \"greeting\" or \"search\" for branching logic later.\nReturns the updated state with the new classification."
+  },
+  {
+    "input": "Step 5: Respond Using Gemini (or Greeting)",
+    "output": "This define respond which generates appropriate output based on classification.\nFor greetings, returns a friendly welcome message.\nFor search questions, calls Gemini via ask_gemini and fetches an AI-generated answer.\nHandles unknown classifications with a safety fallback response.\nUpdates and returns the state with the generated reply."
+  },
+  {
+    "input": "Step 6: Build LangGraph Workflow",
+    "output": "Now we will:\nImport tools for network graph creation and visualization.\nBuild the workflow graph using LangGraph, adding nodes for classification and response, connecting them with edges and compiling the app.\nInclude a function to visually display the workflow using networkx and matplotlib, aiding understanding and troubleshooting.\nOutput:"
+  },
+  {
+    "input": "Step 7: Interactive Chat Interface",
+    "output": "Now we,\nCreate a command-line chatbot that processes user inputs until “exit” or “quit” is typed.\nSend each input through the workflow graph and returns the bot’s response, either a greeting or an AI-powered answer.\nOutput:\nWe can see that our chatbot is working fine giving accurate results."
+  },
+  {
+    "input": "Comparison between LangGraph and LangChain Agents",
+    "output": "Here a quick difference between LangGraph andLangChainAgents as they are quite similar and confusing:"
+  },
+  {
+    "input": "Applications",
+    "output": "Conversational AI Systems:For building chatbots that can remember user preferences and handle complex, multi-turn conversations.\nResearch and Analysis Agents:Agents that search, filter and summarize data from multiple sources, with the ability to revise their output based on feedback.\nCode Generation and Debugging:AI tools that can write code, test it, identify bugs and make improvements automatically.\nBusiness Process Automation:Automating workflows that involve multiple decision points, data sources and human approvals.\nCustomer Support:AI copilots that handle initial queries, collect information and pass full context to a human agent if needed.\nIterative Reasoning Tasks:Any task where the AI needs to attempt, reflect and retry such as writing, planning or problem-solving."
   }
 ]
