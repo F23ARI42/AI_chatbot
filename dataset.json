@@ -17810,5 +17810,33 @@
   {
     "input": "Challenges of Supervised Fine-Tuning",
     "output": "Supervised Fine-Tuning is widely used in modern AI development enabling rapid adaptation of pre-trained models to specialized tasks. By following best practices like using careful parameter, data preparation and iterative testing we can build a high-performing models even with limited resources."
+  },
+  {
+    "input": "1. Branching Reasoning Structure",
+    "output": "The model decomposes a complex problem into intermediate steps, called \"thoughts.\"\nEach thought is a node in the tree, representing a partial solution or an intermediate idea.\nFrom each node, the model generates multiple possible continuations (branches), exploring diverse lines of reasoning."
+  },
+  {
+    "input": "2. Exploration and Backtracking",
+    "output": "Unlike linear methods (e.g.,chain-of-thought), ToT allows the model to pursue several paths simultaneously.\nIf a path leads to a dead end or suboptimal result, the model can backtrack and explore alternative branches similar to how humans reconsider decisions when initial attempts fail."
+  },
+  {
+    "input": "3. Evaluation and Pruning",
+    "output": "At each stage, the model evaluates the generated thoughts using heuristics or value prompts.\nLess promising branches are pruned, focusing computational resources on the most viable paths.\nThis iterative process continues until an optimal or satisfactory solution is found."
+  },
+  {
+    "input": "Example: Solving a Puzzle",
+    "output": "Suppose anLLMis tasked with solving a multi-step math puzzle:\nStep 1:The model generates several possible first moves (e.g., different equations or approaches).\nStep 2:For each move, it generates several possible next steps, creating a branching tree of solutions.\nStep 3:At each node, the model evaluates progress toward the final answer, pruning dead ends.\nStep 4:The process continues, with the model backtracking and trying new branches as needed, until it finds the correct solution."
+  },
+  {
+    "input": "Applications",
+    "output": "Mathematical reasoning and puzzles:Enables systematic exploration of possible solutions, improving accuracy on complex problems.\nCreative writing and planning:Allows the model to brainstorm multiple plot lines or strategies, then refine the most promising ones.\nStrategic decision-making:Useful in scenarios where multiple options must be weighed and the best course of action selected."
+  },
+  {
+    "input": "Advantages",
+    "output": "Enhanced problem-solving:By exploring multiple paths, ToT increases the likelihood of finding optimal or creative solutions.\nHuman-like reasoning:Mimics the way humans brainstorm, weigh options and reconsider decisions.\nFlexibility:Can be tailored for open-ended tasks (creative writing) or structured tasks (math, logic puzzles)."
+  },
+  {
+    "input": "Limitations",
+    "output": "Resource-intensive:Exploring multiple branches increases computational cost, making it less efficient for simple tasks.\nComplexity management:Requires careful design to balance thorough exploration with practical resource constraints."
   }
 ]
