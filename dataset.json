@@ -19506,5 +19506,45 @@
   {
     "input": "Real-world applications of AI Memory",
     "output": "Customer Service Chatbots: Chatbots remember past interactions to offer faster, personalized support.For example: A bot recalls previous orders and suggests relevant products.\nVirtual Assistants:Assistants like Siri and Alexa remember schedules and preferences to provide tailored help. For example: An assistant recalls your daily routine and adjusts reminders.\nHealthcare AI:AI in healthcare tracks patient histories and suggests treatments based on past data. For example: A healthcare assistant reminds you about medications and appointments.\nE-commerce Platforms:Online stores remember browsing and purchase history to improve recommendations. For example:Amazon suggests products related to previous purchases."
+  },
+  {
+    "input": "API Authentication",
+    "output": "Firstly we need to get API Authentication for our Gmail API and Google Calendar API. Follow the steps to get them.\nStep 1:Go to the official website of google cloud console and login.\nStep 2:After successful login, create a New Project.\nStep 3:Find and enter the APIs & Services tab.\nStep 4:From the menu, selectEnabled APIs & Services.Search for Google Calendar API and Gmail API.\nStep 5:Enable the APIs."
+  },
+  {
+    "input": "Steps to extract Google Gemini API Key",
+    "output": "Step 1: Go to the official website of Google Gemini API.\nStep 2:Click on Create New API Key.\nStep 3:Select Your Project or Create a new project.\nStep 4:Copy the created API Key and save it for use."
+  },
+  {
+    "input": "Workflow Creation on n8n",
+    "output": "Follow the steps to build the email classifier agent."
+  },
+  {
+    "input": "Creating Gmail Trigger",
+    "output": "Step 1:Create a new workflow.\nStep 2:Click on add first step button.\nStep 3:Search for Gmail.\nStep 4:Select theOn message receivedtrigger.\nStep 5:The Gmail trigger will open.\nStep 6:SelectCreate new credentialunder theCredentials to connect with.\nStep 7:Enter the Client ID and Client Secret that was extracted from google cloud console.\nStep 8:If entered details are correct and the login was successful, a pop-up will notify that account connected and you can also verify by executing the Gmail trigger."
+  },
+  {
+    "input": "Creating Text Classifier Node",
+    "output": "Step 1:Add another node, on the right top corner of the canvas and search for text classifier.\nStep 2:Inside the text classifier node, select the expression option from the fixed and expression.\nStep 3:Select the snippet from the schema of previous node and add it to the Text to classify box.\nStep 4:Define the required categories such as Meeting Request and Leave Request.\nStep 5:Give the description of the categories.\nStep 6:Click on Add Option and selectSystem Prompt Templatefrom the drop box.\nStep 7:Execute step and check for any issue."
+  },
+  {
+    "input": "Creating Chat Model Node",
+    "output": "Step 1:From the top right corner of canvas, click on add node option and search for Chat model.\nStep 2:Choose the model that we want to use in our workflow, here we are going to useGoogle GeminiChat Model.\nStep 3: Click on the Create New Credential.\nStep 4:Enter the API Key extracted from the Google Gemini API key website.\nStep 5:Select the model which we want to use in the workflow. Here we are using google gemini 1.5 flash.\nStep 6:If the details are correct then it will run successfully."
+  },
+  {
+    "input": "Creating Meeting Request and Leave Request Nodes",
+    "output": "Step 1:From the add new node option, search for Gmail and click on it.\nStep 2:From the list of actions, select Add label to message.\nStep 3: Attach the same Gmail account that was used in the Gmail trigger Credentials.\nStep 4:Select Message in the Resource option. And select Add Label operation.\nStep 5:In the message ID Dialog box, paste ID from the Input schema.\nStep 6:Add the required label from the drop box.\nStep 7:Execute the step to check for any issues, if the workflow works fine the output will be shown."
+  },
+  {
+    "input": "Creating the Google Calendar Node",
+    "output": "Step 1:From the add new node option, search for Google Calendar.\nStep 2:Search for Create an event under the Event Actions.\nStep 3:Attach the same Gmail account that was used in the Gmail trigger Credentials.\nStep 4:Select the Create operation, select the Calendar and define the Start and End."
+  },
+  {
+    "input": "Workflow Execution",
+    "output": "We can also check our Gmail to see for changes.\nBefore execution.\nAfter execution."
+  },
+  {
+    "input": "Workflow Activation",
+    "output": "After the workflow is created, we can activate it and now it will automatically perform its task on a fixed interval of time."
   }
 ]
