@@ -18818,5 +18818,73 @@
   {
     "input": "Challenges",
     "output": "Despite its robust capabilities, LlamaIndex faces several challenges:\nLarge Data Volumes: Index creation and updates can be resource-intensive.\nLatency: Semantic search on vast vector stores may introduce delays.\nIntegration Complexity: May require technical expertise to handle diverse systems and data formats.\nScalability: Handling concurrent queries and massive datasets is non retrival."
+  },
+  {
+    "input": "Architecture of LoRA",
+    "output": "LoRA is used with transformer-based models which are common in NLP tasks. Let's see how it works:\nThis approach helps us adapt large models to new tasks without changing the entire structure making it more efficient."
+  },
+  {
+    "input": "Working of LoRA",
+    "output": "LoRA modifies the traditional fine-tuning process by introducing low-rank matrices into specific layers of a neural network allowing the model to adapt to new tasks without changing the entire model. Let's see how LoRA works:"
+  },
+  {
+    "input": "1. Decomposing the Weight Matrix",
+    "output": "Instead of updating the entire weight matrix during fine-tuning, it approximates it using two smaller low-rank matrices A and B. The adapted weight matrix (W') is calculated as:\nW' = W + A \\cdot B\nHere W is the original weight matrix and A and B are the low-rank matrices. This decomposition allows the model to make task-specific adjustments without the need to retrain the entire model, drastically reducing the computational load."
+  },
+  {
+    "input": "2. Training Only the LoRA Parameters",
+    "output": "During the fine-tuning process, only the low-rank matrices A and B are updated while the original model weights W remain frozen. This minimizes the number of parameters that need to be adjusted making fine-tuning faster and more memory-efficient compared to traditional methods where all model weights are updated."
+  },
+  {
+    "input": "3. Inference with Adapted Weights",
+    "output": "After fine-tuning, the adapted weight matrix W′ is used for inference. This helps the model to make predictions for specific tasks, fine-tuned with minimal computational resources. Since only the low-rank matrices are updated, it maintains efficiency even during inference.\nBy using LoRA, we can adapt large pre-trained models to new tasks quickly and efficiently without the computational burden of full model fine-tuning."
+  },
+  {
+    "input": "Implementation of LoRA with BERT on Emotion Detection",
+    "output": "Here we will see a practical implementation of LoRA on the Emotion Dataset. Instead of updating the entire BERT model, we fine-tune only small LoRA modules, saving time and resources while still achieving good performance in classifying emotions such as joy, sadness, anger, love, fear and surprise."
+  },
+  {
+    "input": "1. Installing Required Libraries",
+    "output": "We use Hugging Face’s transformers, datasets, peft, accelerate and evaluate libraries for model training, LoRA fine-tuning and evaluation."
+  },
+  {
+    "input": "2. Importing Dependencies",
+    "output": "We will be importing BERT, tokenizer, LoRA config, dataset loader, training utilities andPyTorchfor this implementation."
+  },
+  {
+    "input": "3. Loading the Dataset",
+    "output": "We load the Emotion dataset(dair-ai/emotion). For quick implementation, we use only 3,000 training samples and smaller validation/test subsets.\nOutput:"
+  },
+  {
+    "input": "4. Preprocessing Data",
+    "output": "Before training, we tokenize the text so BERT can process it. Each input is padded or truncated to 128 tokens for uniformity. We also rename label to labels and set the dataset format to PyTorch tensors. Then we load BERT-base-uncased for sequence classification with 6 output labels.\nOutput:"
+  },
+  {
+    "input": "5. Applying LoRA Configuration",
+    "output": "Instead of training all of BERT’s 110M+ parameters, LoRA injects small trainable matrices into the attention layers (query, value). This makes fine-tuning efficient without sacrificing much performance."
+  },
+  {
+    "input": "6. Training the Model",
+    "output": "We fine-tune only the LoRA layers using Hugging Face’s Trainer API.\nBatch size = 8\nLearning rate = 2e-4 (slightly higher since only LoRA layers are trained)\nEpochs = 2 (kept short for quick results)\nOutput:\nThe accuracy here is not very high (~54%) because we trained only for 2 epochs on a small subset of the dataset. This setup is mainly for demonstration and understanding. For better performance, we can train for more epochs and use the full dataset."
+  },
+  {
+    "input": "7. Testing the Model on Custom Sentences",
+    "output": "Now let’s test our fine-tuned model on some custom sentences. This helps us confirm that the LoRA adapter works as intended.\nOutput:"
+  },
+  {
+    "input": "LoRA vs Other Fine-Tuning Techniques",
+    "output": "Different fine-tuning techniques have their strengths and weaknesses. Let's see a comparison of LoRA with some of the common techniques used for fine-tuning large models:"
+  },
+  {
+    "input": "Applications of LoRA",
+    "output": "LoRA is utilized across multiple domains, particularly when fine-tuning large pre-trained models. Let's see some key applications:"
+  },
+  {
+    "input": "Advantages of LoRA",
+    "output": "LoRA has several key benefits for fine-tuning large models which includes:"
+  },
+  {
+    "input": "Limitations of LoRA",
+    "output": "While LoRA helps for efficient fine-tuning, there are a few limitations to keep in mind:"
   }
 ]
