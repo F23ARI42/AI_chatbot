@@ -19918,5 +19918,37 @@
   {
     "input": "Importance of Contextual Prompting",
     "output": "Improves Relevance:The AI tailors its output to your specific context, reducing irrelevant or generic answers.\nReduces Ambiguity:Clear context helps the AI avoid misunderstandings and focus on what matters to you.\nEnables Customization:You can adapt the AI’s style, depth and focus to suit different audiences or requirements."
+  },
+  {
+    "input": "1. Setting Up the Environment",
+    "output": "Before creating custom tools, we need to set up the environment."
+  },
+  {
+    "input": "Installing the CrewAI Package",
+    "output": "We will use pip to install theCrewAIpackage:"
+  },
+  {
+    "input": "Setting the API Key",
+    "output": "We need to set the API key since some tools require external services like OpenAI."
+  },
+  {
+    "input": "2. Creating a Custom Tool",
+    "output": "We will be making a custom tool in CrewAI using the @tool decorator. This decorator marks a function as a tool that can be used by agents. As an example, we will be making a calculator tool:\n@tool(\"calculator\"):Registers the function as a CrewAI tool named \"calculator\".\nquery: str:Input string that contains the math expression.\neval(query):Computes the mathematical result."
+  },
+  {
+    "input": "3. Defining Agents That Use Tools",
+    "output": "Agents are the entities that perform tasks. We can give them access to custom tools to expand their functionality.\nrole:Defines the agent’s function.\ngoal:Explains what the agent is trying to achieve.\nbackstory:Provides context or skills of the agent.\ntools:List of tools the agent can use.\nverbose:If True, the agent provides detailed reasoning during execution."
+  },
+  {
+    "input": "4. Assigning Tasks",
+    "output": "Tasks tell agents what to do. Each task is linked to an agent and specifies the expected output.\ndescription: Explains the task clearly.\nagent:Assigns which agent will perform the task.\nexpected_output:Specifies what the agent should return.\ncontext:Allows the agent to access previous task outputs."
+  },
+  {
+    "input": "5. Creating and Running a Crew",
+    "output": "A Crew groups agents and tasks so they can work together on a goal.\nagents:List of agents participating in the Crew.\ntasks:List of tasks assigned to the Crew.\nprocess:Determines execution order (sequential or parallel).\nkickoff(): Starts the Crew and executes the tasks.\nOutput:\nAs we can see, our agent used the calculator tool to solve the given expression and provided the result for the next agent to use."
+  },
+  {
+    "input": "Applications of Custom Tools in CrewAI",
+    "output": "Creating custom tools allows agents to handle tasks that require specialized logic. Some examples are:\nEducation:Calculators, quiz generators or  summarizers.\nResearch:Data collection, analysis and calculations.\nContent Creation:Summaries, reports or  structured text outputs.\nBusiness: Finance calculations, market research or  workflow automation."
   }
 ]
