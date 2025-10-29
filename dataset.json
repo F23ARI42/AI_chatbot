@@ -19326,5 +19326,45 @@
   {
     "input": "Agentic Framework",
     "output": "Agentic frameworks refer to design architectures or models that define how agents (whether artificial or natural) can perform tasks, make decisions and interact with their environment in an autonomous, intelligent manner. These frameworks provide the structure and guidelines for how agents operate, reason and adapt in various settings.\nReactive Architectures:It link immediate environmental input to direct responses. These agents operate on instinct, acting solely on current stimuli without using memory or planning. They are unable to learn from the past or anticipate future events.\nDeliberative Architectures:It enable agents to act by reasoning, strategizing and building internal representations of the world. Unlike reactive systems, these agents assess their surroundings, consider possible outcomes and make decisions after thoughtful analysis.\nCognitive Architectures:It simulate human-like intelligence. They combine perception, reasoning, learning and decision-making abilities, allowing agents to handle complex tasks by thinking and adapting much like people do."
+  },
+  {
+    "input": "1. Programming Foundations for Agentic AI",
+    "output": "Strong programming skills are important for developing autonomous agents. This section introduces key programming tools, libraries and frameworks required for developing agentic AI application.\nPython\nHugging Face Transformers\nLangChain\nLangGraph\nLangflow\nLlamaIndex\nIntegration of Langchain with Llama-Index"
+  },
+  {
+    "input": "2. Introduction to Generative AI",
+    "output": "Generative AI empowers agents to produce text, code and actions autonomously. Understanding LLMs is critical for applying GenAI inside agentic systems.\nLarge Language Model\nLlamaIndex\nPopular LLMs:GPT,Claude,LLaMA,Gemini\nLLM APIs:OpenAI,Hugging Face,Gemini\nHugging Face Models"
+  },
+  {
+    "input": "3. Prompt Engineering",
+    "output": "Prompt engineering is the practice of crafting inputs to get better outputs from LLMs.\nWhat is Prompt Engineering?\nZero-Shot,One-ShotandFew-Shot Prompting\nChain of Thought Prompting\nRole&Contextual Prompting\nReAct (Reasoning + Acting) Prompting\nRetrieval-Augmented Prompting\nSelf-Consistency Prompting\nTree of Thought (ToT) prompting\nGuardrails in AI"
+  },
+  {
+    "input": "4. Introduction to Agentic AI & Core Concepts",
+    "output": "Agentic AI enables machines to act autonomously, interact with their environment and collaborate with other agents. This section introduces the core concepts and applications of agentic systems.\nWhat is Agentic AI?\nAgent vs Traditional AI\nTypes of Agents\nBuilding AI Agents\nAI Agent Frameworks\nMulti-Agent Systems\nAgent-to-Agent Communication (A2A)"
+  },
+  {
+    "input": "5. Knowledge, Memory and Embeddings",
+    "output": "For agents to perform effectively, they must store, recall and process knowledge efficiently. This section explores embeddings, memory and retrieval techniques for context-aware systems.\nEmbeddings\nVector Databases:FAISS,ChromaDB,Qdrant,Pinecone\nAgent Architectures&Memory\nModel Context Protocol (MCP)\nContext-aware agent workflows\nContext Sharing System using MCP\nRAG in AI\nRAG Architecture\nMultimodal RAG"
+  },
+  {
+    "input": "6. CrewAI for Collaborative Agents",
+    "output": "CrewAI enables multiple agents to collaborate and work efficiently on shared tasks. This section explores CrewAI frameworks and flows.\nIntroduction to CrewAI\nCrewAI Tools\nCreating Custom Tools for CrewAI\nMemory in CrewAI\nCrewAI Embeddings\nCrewAI Collaboration\nCrewAI Knowledge\nCrewAI Planning and Reasoning\nCrewAI CLI\nCrewAI Flow\nFraud Detection Using CrewAI Project"
+  },
+  {
+    "input": "7. Automation and Workflow Integration",
+    "output": "Agentic AI can be combined with automation tools to execute complex workflows and business processes. This section covers how to deploy and automate agents in real-world pipelines.\nAgentic RAG\nAgentic RAG with LlamaIndex\nIntroduction to n8n\nAutomated Email Classifier with n8n\nAI Deployment with Gradio,Streamlit,FastAPI"
+  },
+  {
+    "input": "8. Responsible & Ethical Agentic AI",
+    "output": "Autonomous agents introduce unique ethical, legal and security concerns. This section highlights responsible practices for deploying safe and trustworthy agents.\nBias in AI Models\nDeepfakes\nPrompt Injection in LLM\nResponsible AI Practices"
+  },
+  {
+    "input": "9. Projects",
+    "output": "Practical, hands-on projects are essential for mastering agentic AI. This section provides real-world project ideas to build your portfolio.\nBuilding an AI application with LlamaIndex\nPDF Summarizer using RAG\nRAG(Retrieval-Augmented Generation) using LLama3\nSimple Retrieval Augmented Generation using Java\nBuilding AI Agents with Phidata\nMultimodal RAG using Python\nRAG System with Langchain and Langraph"
+  },
+  {
+    "input": "10. Careers in Agentic AI",
+    "output": "Agentic AI is one of the fastest-growing fields in AI with immense career potential. This section introduces the most in-demand roles in the industry.\nAI Engineer\nMachine Learning Engineer\nData Scientist\nPrompt Engineer\nAgentic AI Engineer"
   }
 ]
