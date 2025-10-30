@@ -20690,5 +20690,53 @@
   {
     "input": "Text Classification using SVM",
     "output": "Output:"
+  },
+  {
+    "input": "Text to Text Transfer Transformer",
+    "output": "Text-to-Text Transfer Transformer (T5)is a large transformer model trained on the Colossal Clean Crawled Corpus (C4). It was released as a pre-trained model capable of handling various NLP tasks such as translation, summarization, question answering and classification.\nT5 treats every NLP task as a text-to-text problem. This means both the input and output are plain text, regardless of the task. For example:\nT5 allows training on multiple tasks by using different prefixes in the input to indicate the task type. This approach enables a single model to handle diverse NLP tasks effectively. It has shown strong performance across many benchmarks and is widely used for generating synthetic data in data augmentation workflows."
+  },
+  {
+    "input": "How to use T5 for Data Augmentation",
+    "output": "There are multiple ways to use the T5 (Text-to-Text Transfer Transformer) model for data augmentation in NLP tasks."
+  },
+  {
+    "input": "1. Using T5 Directly",
+    "output": "Similar to back translation, T5 can be used without additional training by leveraging its pre-trained summarization capabilities. In this approach:\nThe input is given in the format: \"summarize: <input text>\"\nT5 generates an abstractive summary, often rephrasing or using new words.\nThis is useful for long-text NLP tasks like document classification or summarization.\nHowever, for short texts, the quality of augmented data may not be very effective."
+  },
+  {
+    "input": "2. Fine-Tuning T5 for Custom Data Augmentation",
+    "output": "T5 can also be fine-tuned on specific tasks to generate high-quality synthetic data. Two effective strategies are:\nT5 can be fine-tuned similarly to BERT for masked language modeling.\nInput format:\"predict mask: The [MASK] barked at the stranger.\"\nOutput: \"The dog barked at the stranger.\"\nYou can mask multiple words (spans) to generate more diverse sentence structures.\nThis helps produce augmented text with structural variations, mimicking BERT-style augmentation.\nT5 can be fine-tuned to create paraphrases that retain meaning but vary in structure and wording.\nThe PAWS dataset is commonly used for this task.\nTraining involves formatting input as:\"generate paraphrase: <sentence>\"and output as its paraphrase.\nThe model can generate multiple variations, helping expand and diversify NLP datasets."
+  },
+  {
+    "input": "Model Variants and Considerations",
+    "output": "T5 is available in multiple sizes:\nT5-Small(60M parameters)\nT5-Base(220M)\nT5-Large(770M)\nT5-3B(3 billion)\nT5-11B(11 billion)\nLarger models tend to produce better results but require more computational resources and training time. However, this is typically a one-time effort and the resulting model can be reused across various NLP tasks for effective data augmentation."
+  },
+  {
+    "input": "1. Installation and Imports",
+    "output": "Installs and imports essential libraries liketransformers,pytorchandpandas\nSets up the T5 model for usage"
+  },
+  {
+    "input": "2. Setting Device for Computation",
+    "output": "Automatically use GPU if available, otherwise fall back to CPU\nOutput:"
+  },
+  {
+    "input": "3. Loading T5 Paraphrasing Model",
+    "output": "Loads a pretrained T5 paraphrasing model and tokenizer.\nFormats input with\"paraphrase:\"prompt.\nEncodes input and generates multiple diverse outputs using sampling.\nDecodes and returns unique paraphrased sentences."
+  },
+  {
+    "input": "4. Initialising Model",
+    "output": "Instantiate the model class\nGenerate paraphrased variations of a few example sentences\nOutput:"
+  },
+  {
+    "input": "5. Augmented a Text Classification Dataset",
+    "output": "Created a mock dataset\nUsed paraphrasing to add more examples for each label, increasing dataset size and diversity\nOutput:"
+  },
+  {
+    "input": "6. Batch Processing for Large Datasets",
+    "output": "Efficiently paraphrase large numbers of inputs in small batches\nPrevent memory overload during generation\nOutput:"
+  },
+  {
+    "input": "7. Analysis of Augmented Data",
+    "output": "Show proportion of original vs. augmented data\nOutput:\nHere we can see that our model is working fine."
   }
 ]
