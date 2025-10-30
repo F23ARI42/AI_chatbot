@@ -22106,5 +22106,33 @@
   {
     "input": "Conclusion",
     "output": "We covered several steps in the whole article for creating a chatbot with ChatGPT API using Python which would definitely help you in successfully achieving the chatbot creation in Streamlit. There are countless uses of Chat GPT of which some we are aware and some we aren’t.\nTo learn more about Chat GPT, you can refer to:\nGenerate Images With OpenAI in PythonHow to Use ChatGPT API in Python?ChatGPT vs Google BARD – Top Differences That You Should Know"
+  },
+  {
+    "input": "How does Cross-Attention Work?",
+    "output": "Let's use a simple analogy to explain the process:\nIn the above image, the first red cross represents the dot product of queries and keys and the second red cross represents dot product of cross-attention and values."
+  },
+  {
+    "input": "Mathematical Expression of Cross-Attention Mechanism",
+    "output": "The formula forCross-attentionis very similar toself-attention, except the query (Q) comes from the decoder's output and the key (K), value (V) come from the encoder's output.\n\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right) V\nHere,d_kis the dimensionality of the keys."
+  },
+  {
+    "input": "Complexity of Cross-Attention",
+    "output": "Cross-attention can get pretty complex, and it mostly depends on how long the input is and how many attention heads the model has. The main things it does are calculating dot products and using the softmax function to figure out the attention weights. For cross-attention, the complexity usually looks like this:"
+  },
+  {
+    "input": "Time Complexity",
+    "output": "Cross-Attention takes aboutO(n^2 \\cdot d)time.\nnis how long the input sequence is (like the number of words in a sentence).\ndis how big the vectors are (like the size of each word's embedding).\nThen^2part comes from comparing each word with every other word, which makes a bign×nmatrix."
+  },
+  {
+    "input": "Space Complexity",
+    "output": "Cross-Attention needs aboutO(n^2)space. This is because it has to store the attention matrix, which isn×n.\nAs the sequence gets longer, the complexity grows fast, making the Transformer model use a lot of computing power. But, new ideas like sparse attention and efficient transformers are helping to make this less of a problem."
+  },
+  {
+    "input": "Why is Cross-Attention Important?",
+    "output": "Cross-attentionassists the decoder in focusing on the encoder's most important information. Whether you're translating a sentence, creating a novel or even describing an image, this makes the entire process more accurate and efficient.\nIn tasks like machine translation, cross-attention helps the system align words from the source language with the most relevant words in the target language. This alignment is crucial for creating accurate and natural translations."
+  },
+  {
+    "input": "Applications of Cross-Attention",
+    "output": "Cross-attention mechanism in transformers not only enhances current model capabilities but also opens avenues for future advancements in interpretability, adaptability and scalability, enabling richer interactions with external knowledge bases and other systems."
   }
 ]
