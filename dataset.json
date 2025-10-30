@@ -22330,5 +22330,53 @@
   {
     "input": "Step 10: Translate Function",
     "output": "It prepares input sentence. Starts decoding with <start> token and Iteratively predicts next word and feeds it back until <end> is predicted. and the test the model with example\nOutput:\nHere we can see our model is working fine."
+  },
+  {
+    "input": "Steps to Evaluate RAG System",
+    "output": "Evaluating a RAG system means checking how well it retrieves and generates accurate, relevant and grounded responses.\n1. Set Goals:Define what matters most—accuracy, relevance, fluency or groundedness.\n2. Pick Metrics:\nRetrieval level:Precision, Recall, F1, MRR, nDCG.\nGeneration level:BLEU, ROUGE, METEOR, BERTScore, Perplexity.\nEnd-to-end:Groundedness, Hallucination Rate, Factual Consistency, Answer Relevance.\n3. Automate:Use tools like NLTK, ROUGE-score, BERTScore or Textstat for quick evaluation.\n4. Add Human Review:Rate responses for clarity, accuracy and informativeness.\n5. Analyze Results:Visualize performance, compare models and find weak spots.\n6. Iterate:Refine retrieval and generation steps to improve factuality and coherence."
+  },
+  {
+    "input": "Types of Evaluation Metrics",
+    "output": "Some of the types of evaluation metrics are:"
+  },
+  {
+    "input": "1. Retrieval Level Metrics",
+    "output": "Some of the retrieval level metrices arePrecision, RecallandF1-Score.\n1. Precision: Portion of retrieved documents that are actually relevant.\n\\text{Precision} = \\frac{TP}{TP + FP}\n2. Recall: Portion of relevant documents that were successfully retrieved.\n\\text{Recall} = \\frac{TP}{TP + FN}\n3 F1-Score: Harmonic mean of precision and recall, balancing both.\n\\text{F1-Score} = 2 \\times \\frac{\\text{Precision} \\times \\text{Recall}}{\\text{Precision} + \\text{Recall}}\nOutput:\n4. Hit Rate:Shows how often retrieved answers exactly match the expected ones, higher is better.\n\\text{Hit Rate} = \\frac{\\text{Number of Queries with at least one relevant document retrieved}}{\\text{Total Number of Queries}}\nOutput:\n5. Mean Reciprocal Rank (MRR):Measures how quickly the correct answer appears in the ranked results, higher is better.\n\\text{MRR} = \\frac{1}{N} \\sum_{i=1}^{N} \\frac{1}{\\text{rank}_i}\nN:total number of queries\nrank: rank position of the first relevant document for the ithquery\nOutput:\n6. Mean Average Precision (MAP):Evaluates ranking quality across multiple queries.\n\\text{MAP} = \\frac{1}{N} \\sum_{i=1}^{N} \\text{AP}_i\n\\text{AP}_i = \\frac{1}{R_i} \\sum_{k=1}^{n} P_i(k) \\times \\text{rel}_i(k)\nN:total number of queries\nAPI:average precision for the ithquery\nRi:number of relevant documents for query i\nPi(k):precision at cutoff k\nreli(k):1 if the document at rank k is relevant, else 0\nOutput:\n7. Normalized Discounted Cumulative Gain (nDCG):Rewards highly relevant documents appearing earlier in results.\n\\text{nDCG}_p = \\frac{\\text{DCG}_p}{\\text{IDCG}_p}\n\\text{DCG}_p = \\sum_{i=1}^{p} \\frac{2^{\\text{rel}_i} - 1}{\\log_2(i + 1)}\n\\text{IDCG}_p = \\sum_{i=1}^{p} \\frac{2^{\\text{rel}_i^\\text{ideal}} - 1}{\\log_2(i + 1)}\np:rank position cutoff\nreli:relevance score of the document at rank i\nreliideal:relevance of document at rank i in ideal ordering\nOutput:\n8. Recall@k and Precision@k:Check relevance within the top k retrieved items.\n\\text{Recall@k} = \\frac{|\\{\\text{relevant documents in top } k\\}|}{|\\{\\text{total relevant documents}\\}|}\n\\text{Precision@k} = \\frac{|\\{\\text{relevant documents in top } k\\}|}{k}\nOutput:\n9. Similarity Measures (Cosine, BM25):Quantify how closely retrieved documents match the query.\n\\text{Cosine Similarity} = \\cos(\\theta) = \\frac{\\mathbf{A} \\cdot \\mathbf{B}}{\\|\\mathbf{A}\\| \\, \\|\\mathbf{B}\\|}\nHere we have illustratedcosine similarity.\nOutput:"
+  },
+  {
+    "input": "2. Generation Level Metrices",
+    "output": "Some of the generation level metrices are:\n1.BLEU, ROUGE,METEOR, BERTScore:Compare generated text with reference answers for similarity.\nHere we have illustrated BLEU.\n\\text{BLEU} = \\text{BP} \\cdot \\exp \\Bigg( \\sum_{n=1}^{N} w_n \\log p_n \\Bigg)\npn:modified n-gram precision\nwn:weight for n-gram\nBP:Brevity Penalty\nOutput:\n2.Perplexity:Measures how well the model predicts the next word, lower perplexity is better.\n\\text{Perplexity}(W) = P(w_1, w_2, \\dots, w_N)^{-\\frac{1}{N}} = \\exp\\Bigg(-\\frac{1}{N} \\sum_{i=1}^{N} \\log P(w_i \\mid w_1, \\dots, w_{i-1})\\Bigg)\nOutput:\n3. Factual Consistency:Checks if generated content aligns with retrieved information.\n\\text{Factual Consistency} = \\frac{|\\text{Words in Response} \\cap \\text{Words in Reference}|}{|\\text{Words in Response}|}\nOutput:\n4. Fluency and Readability:Assesses how natural and easy to understand the text is.\n\\text{Fluency Score} = \\frac{\\text{Total Words}}{\\text{Total Sentences}}\n\\text{Flesch Reading Ease} = 206.835 - 1.015 \\left(\\frac{\\text{Total Words}}{\\text{Total Sentences}}\\right) - 84.6 \\left(\\frac{\\text{Total Syllables}}{\\text{Total Words}}\\right)\nOutput:\n5. Diversity and Novelty:Evaluates variety and originality in generated responses.\n\\text{Distinct-n} = \\frac{|\\text{Unique n-grams in responses}|}{|\\text{Total n-grams in responses}|}\n\\text{Novelty} = \\frac{|\\text{Words in current response not seen in previous responses}|}{|\\text{Total words in current response}|}\nOutput:"
+  },
+  {
+    "input": "3. End to End RAG System Evaluation",
+    "output": "End to end evaluation looks at the overall performance of a RAG system considering both retrieval and generation together.\n1. Answer Relevance and Context Utilization:Checks if the system’s answers address the user’s query and effectively use the retrieved information.\n\\text{Answer Relevance} = \\frac{|\\text{Words in Response} \\cap \\text{Words in Reference}|}{|\\text{Words in Reference}|}\n\\text{Context Utilization} = \\frac{|\\text{Words in Response} \\cap \\text{Words in Retrieved Docs}|}{|\\text{Words in Response}|}\nOutput:\n2. Groundedness:Measures whether the generated text is supported by the retrieved sources reducing the risk of hallucinations.\n\\text{Groundedness} = \\frac{|\\text{Words in Response} \\cap \\text{Words in Retrieved Docs}|}{|\\text{Words in Response}|}\nOutput:\n3. Hallucination Rate:Tracks how often the system produces information that is incorrect or not backed by sources.\n\\text{Hallucination Rate} = \\frac{|\\text{Words in Response} - \\text{Words in Retrieved Docs}|}{|\\text{Words in Response}|}\nOutput:\n4. Response Coherence and Readability:Ensures the generated answers are clear, logically structured and easy to understand.\n\\text{Coherence} = \\frac{\\text{Total Words in Response}}{\\text{Number of Sentences in Response}}\nOutput:\n5. Relevancy Score:Measures how well the system’s output matches the user’s query intent.\n\\text{Relevancy Score} = \\frac{|\\text{Words in Response} \\cap \\text{Words in Query}|}{|\\text{Words in Query}|}\nOutput:"
+  },
+  {
+    "input": "Human Evaluation in RAG Systems",
+    "output": "Human evaluation assesses the quality and usefulness of a RAG system’s responses from a real user perspective."
+  },
+  {
+    "input": "Criteria for Human Evaluation",
+    "output": "Criteria for Human Evaluation in RAG Systems:"
+  },
+  {
+    "input": "Methods of Human Evaluation",
+    "output": "Methods of Human Evaluation in RAG Systems:"
+  },
+  {
+    "input": "Emerging and Hybrid Evaluation Approaches",
+    "output": "Advanced and combined evaluation methods to get a more accurate performance are:"
+  },
+  {
+    "input": "Comparative Analysis of Metrics",
+    "output": "Comparison table of different RAG evaluation metrics:"
+  },
+  {
+    "input": "Challenges in Evaluating RAG Systems",
+    "output": "Some of the challenges faced during evaluating RAG Systems are:"
+  },
+  {
+    "input": "Best Practices for RAG Evaluation",
+    "output": "We can follow these best practices to get reliable and meaningful results when evaluating RAG systems:"
   }
 ]
