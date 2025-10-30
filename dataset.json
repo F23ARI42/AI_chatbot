@@ -20582,5 +20582,37 @@
   {
     "input": "Disadvantages",
     "output": "Bias Amplification:RLHF can unintentionally reinforce human biases if the feedback provided by evaluators is subjective or biased.\nLimited Expertise:The quality of RLHF depends on expert feedback which may be scarce in specialized domains limiting the system’s effectiveness.\nComplex Implementation:Integrating human feedback into the training loop is technically complex and requires careful system design and coordination.\nSlow and Costly:It is resource intensive and time consuming due to repeated human evaluations and retraining making it less efficient for rapid adaptation."
+  },
+  {
+    "input": "What is Sliding Window Attention?",
+    "output": "Sliding Window Attentionis a dynamic process that facilitates the understanding of sequential or spatial data by selectively attending to local regions. \"Sliding Window\" encapsulates the idea of a movable attention window that traverses the input sequence. This approach is used innatural language processingandcomputer vision."
+  },
+  {
+    "input": "Sliding window attention classifier",
+    "output": "In this, a window of size m x n pixels is taken and is traversed through the input image in order to find the target object(s) in that image. The training of the classifier is done by introducing it to a set of positive (containing the target object) and negative (not containing the target object) examples."
+  },
+  {
+    "input": "Intuition",
+    "output": "The training is done in such a way that we can capture all the target object(s) present in the image. Fig 1 depicts a face detection model in work. As you can see, the image contains face of various sizes. Another possibility is that some people could be far off while some near, thus changing the size of their faces."
+  },
+  {
+    "input": "Sliding Window Attention (Intuition Continued)",
+    "output": "During Training\nThe classifier is trained on two sets of classes, one containing the object of interest and the other containing random objects. The samples belonging to our object of interest are referred to as positive examples and one with random objects is referred to as negative examples. This is done so that when new images come during the testing phase, the classifier is able to better detect if the object present in the window is the target object or some other random object with good accuracy.\nDuring Testing\nThe idea is to use the trained binary classifier, which determines if the presented object is “positive” or “negative. The trained classifier can then be used to determine a target image by sampling it, starting from the top-left corner. Also, we use multiple windows of various sizes just to make sure that all sizes of the target object present in the input image are detected.\nJust like face-detection, the sliding window model is also used to efficiently cover long texts of input data. (topic covered in depth below)\nMathematics\nIn this, we have a fixed window of size w. Each token attends to (1/2)w tokens on each side (as shown in Fig. 2). The time complexity of this pattern thus becomes O(n × w), where n is the input sequence length.\nThus, this attention pattern employs a fixed-size window attention surrounding each token. We use multiple stacked layers of such windowed attention so as to cover a large receptive field, where top layers have access to all input locations. This gives the model the ability to cover the entire input sequence fed to it. (very similar to CNNs)"
+  },
+  {
+    "input": "Role of Sliding window in LongFormer's Attention Mechanism",
+    "output": "LongFormer (Long document transformer)is an upgrade to the previous transformer models such as SpanBERT as it aims to overcome the issues of accepting long sequenced strings (more than 512 tokens) as input. It adapted aCNNlike architecture known as Sliding Window Attention to do so. See Fig 2 for better understanding.\nThe problem with CNN is that it assumes that one word w could be related to any of the other words w'. Hence, it takes into consideration all the possible combination of words that could be related. So, the time complexity of the computation increases drastically.\nAs discussed above, the LongFormer calculations are based on the assumption that the most important information related to a given word is present in its surrounding neighbors. So, the given word is allowed access to its left and right neighbors (w/2 on both sides).\nSee Fig 3 for a better understanding.\nUnlike CNN, where there is a full connection, the sliding window approach leads to lesser mappings as only the neighboring words are taken into consideration. Hence the time complexity for the computations is also improved."
+  },
+  {
+    "input": "Example",
+    "output": "Let us create an example using fig 2, and understand the working of this attention model. Consider the image given below.(Fig. 5)\nAssume that each block in the above adjacency matrix represent one word (token). Let rows represent each input word of a sentence and columns represent key words that require attention.(Here, the window size = 3)\nSo, as per the sliding window attention model, each input word attends to itself as well as its neighboring key tokens. In reality, each block represents 64 tokens in general. So, on a broader perspective, 64 tokens of input attend to only 192 relevant key tokens instead of considering all key tokens.(Shown in Fig 6)This makes the modelmuch more efficientthan the CNN full connection model."
+  },
+  {
+    "input": "Applications of Sliding Window Attention",
+    "output": "This sliding window attention approach has been widely used in a variety of research. A few of the research topics are mentioned below:\nAutomatic Left Ventricle Detection System:\nThe research is done on MR cardiac images with the objective of creating an artificial vision model that performs automated localization of theLeft Ventriclein the input images.\nLink:https://downloads.hindawi.com/journals/acisc/2017/3048181.pdf\nTime Series Data Prediction Using Sliding Window\nThe research is based on next day close prediction of time series data based on the concept of sliding window and WMA as data preprocessing, 10-fold cross validation was used to train RBFN model with preprocessed data for accurate prediction.\nLink:https://www.ripublication.com/ijcir17/ijcirv13n5_46.pdf"
+  },
+  {
+    "input": "Advantages of Sliding Window Attention",
+    "output": "Flexibility:The adaptability of the sliding window allows for flexibility in capturing context, especially in scenarios where the relevant information is distributed across different parts of the input sequence.\nHyperparameter Sensitivity:The effectiveness of sliding window attention may be influenced by the choice of window size and other hyperparameters. Careful tuning is essential to optimize performance.\nContextual Understanding:The mechanism enhances the model's contextual understanding by emphasizing specific regions, making it well-suited for tasks where local context is crucial."
   }
 ]
