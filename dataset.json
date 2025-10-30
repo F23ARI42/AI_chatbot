@@ -20762,5 +20762,49 @@
   {
     "input": "Trade-offs and Considerations",
     "output": "Understanding these concepts is key to optimizing LLM performance, whether you're training a new model or working with existing ones. As the field of natural language processing continues to evolve, future innovations may focus on improving how models handle tokens and context windows to create even more powerful and efficient LLMs."
+  },
+  {
+    "input": "1. Importing Required Libraries",
+    "output": "We will import the following libraries:\ntensorflow:is used to build and train machine learning models.\nNumpy:A library used for numerical calculations and here for positional encoding.\nDense, Input, Embedding, Dropout, LayerNormalization:These are layers fromKerasused to build the neural network."
+  },
+  {
+    "input": "2. Defining Positional Encoding",
+    "output": "Positional encodingis added to the input embeddings to provide information about the position of tokens in the sequence. UnlikeRNNsandLSTMs, Transformers do not inherently capture the sequential nature of data so positional encodings are essential for injecting this information.\nPositional Encoding:This function creates a unique encoding for each position in the sequence, which is added to the token embeddings.\nSine and Cosine:The positions are encoded using sine and cosine functions with different frequencies to distinguish the positions."
+  },
+  {
+    "input": "3. Defining Multi-Head Attention",
+    "output": "Themulti-head attentionmechanism allows the model to focus on different parts of the input sequence simultaneously. It uses multiple attention heads to compute different representations of the input.\nMulti-Head Attention:This class performs multi-head attention by splitting the input into multiple heads which allows the model to focus on different parts of the sequence simultaneously.\nd_model and num_heads:d_model is the size of the embedding and num_heads refers to the number of attention heads.\nDense layers:Linear transformations of the queries, keys and values are created through wq, wk and wv.\nsplit_heads:Splits the input tensor into multiple heads. The resulting tensor will have shape (batch_size, num_heads, seq_len, depth).\ncall:This method performs the actual attention operation. It first computes the queries, keys and values by applying the corresponding Dense layers, splits them into heads and then calculates the attention using the scaled_dot_product_attention function.\nscaled_dot_product_attention:Computes attention using the scaled dot-product formula."
+  },
+  {
+    "input": "4. Defining Scaled Dot-Product Attention",
+    "output": "Scaled Dot Product Attention is the coreattention mechanismused by the multi-head attention component to compute attention scores.\nScaled Dot-Product Attention:Computes the dot product between queries and keys, scales the result, applies a mask (if needed) and then calculates the weighted sum of values based on the attention weights."
+  },
+  {
+    "input": "5. Defining Feed Forward Network",
+    "output": "The position-wise feed-forward network is used to process each position independently:\nPositionwiseFeedforward:This class applies two dense layers to each position independently. The first layer transforms the input to a higher dimension and the second one reduces it back to the original d_model size.\ncall:Applies the feed-forward layers sequentially to the input."
+  },
+  {
+    "input": "6. Defining Transformer Block",
+    "output": "A transformer block combines multi-head attention and feed-forward networks with layer normalization and dropout.\nTransformerBlock:This block combines multi-head attention, feed-forward layers, dropout and layer normalization. The block is a core building unit of the Transformer model.\ncall:The input goes through multi-head attention followed by dropout and layer normalization. Then it passes through the feed-forward network with additional dropout and normalization."
+  },
+  {
+    "input": "7. Defining Encoder",
+    "output": "The encoder consists of a stack of encoder layers. It converts the input sequence into a set of embeddings enriched with positional information.\nEncoder:The encoder consists of an embedding layer, positional encoding, dropout and multiple transformer blocks. It processes the input sequence and generates a sequence representation.\ncall:The input sequence is passed through the embedding layer, positional encoding is added and then it goes through the transformer blocks sequentially."
+  },
+  {
+    "input": "8. Defining Decoder",
+    "output": "The decoder generates the output sequence from the encoded representation using mechanisms to attend to both the encoder output and previously generated tokens.\ncall:The input sequence is passed through embedding and positional encoding and then through the decoder transformer blocks."
+  },
+  {
+    "input": "9. Defining Transformer Model",
+    "output": "The final model combines the encoder and decoder and outputs the final predictions."
+  },
+  {
+    "input": "10. Training and Testing the Model",
+    "output": "Let's define the model parameters and perform a forward pass with example inputs:\nFor each of the 64 sentences in the batch the model generates 50 tokens.\nFor each token position in each sentence the model outputs a probability distribution over the 8000 possible target vocabulary tokens.\nTo obtain the final translated sequence we would typically take the token with the highest probability at each position resulting in a translated sentence."
+  },
+  {
+    "input": "Complete Code Block",
+    "output": "Output:\nThe output shape (64, 50, 8000) typically represents the output of a Transformer model in the context of sequence-to-sequence tasks such as machine translation."
   }
 ]
