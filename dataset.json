@@ -21654,5 +21654,53 @@
   {
     "input": "Future of LLM Distillation",
     "output": "As AI research progresses, LLM distillation will become even more crucial for real-world adoption. Some of them are:\nNeural Architecture Search (NAS): Using AI to automatically design optimal student models.\nMulti-Teacher Distillation: Combining knowledge from multiple large models for superior performance.\nAdaptive Distillation: Dynamically adjusting the complexity of the student model based on real-time computing resources."
+  },
+  {
+    "input": "What is Prompt Engineering?",
+    "output": "Prompt engineering is the process of creating effective prompts that enableAI modelsto generate responses based on given inputs. Prompt engineering essentially means writing prompts intelligently for text-based Artificial Intelligence tasks, more specifically,Natural Language Processing(NLP)tasks. In the case of such text-based tasks, these prompts help the user and the model generate a particular output as per the requirement. These requirements are efficiently added in the form of prompts and hence the name Prompt Engineering."
+  },
+  {
+    "input": "What are Prompts?",
+    "output": "Prompts are short pieces of text that are used to provide context and guidance tomachine learning models. When talking about the specific textAI tasks, also calledNLP tasks, these prompts are useful in generating relevant outputs which are as close to the expected output itself. Precisely, these prompts help in generating accurate responses by:\nAdding on some additional guidance for the model.\nNot generalizing a prompt too much.\nMake sure the information added is not too much as that can confuse the model.\nMaking the user intent and purpose clear for the model to generate content in the relevant context only."
+  },
+  {
+    "input": "Prompt Engineering: Why is it Important?",
+    "output": "More specific formats of input as prompts help in better interpretability of the requirements for a task.\nSpecific prompts with a detailed explanation of the requirements mean output matches more with the desired one.\nBetter results forNLP tasks, through prompts also mean a better-trained model for future tasks."
+  },
+  {
+    "input": "How Prompt Engineering Works?",
+    "output": "Imagine you're instructing a very talented but inexperienced assistant. You want them to complete a task effectively, so you need to provide clear instructions. Prompt engineering is similar - it's about crafting the right instructions, called prompts, to get the desired results from alarge language model(LLM).\nWorking of Prompt Engineering Involves:\nCrafting the Prompt:You design a prompt that specifies what you want theLLMto do. This can be a question, a statement, or even an example. The wording, phrasing, and context you include all play a role in guiding theLLM'sresponse.\nUnderstanding the LLM:Different prompts work better with differentLLMs. Some techniques involve giving theLLMminimal instructions (zero-shot prompting), while others provide more context or examples (few-shot prompting).\nRefining the Prompt:It's often a trial-and-error process. You might need to tweak the prompt based on theLLM'soutput to get the kind of response you're looking for."
+  },
+  {
+    "input": "Applications of Prompt Engineering",
+    "output": "Essentially, the critical area where prompt generation is used the most is text-based modeling:NLP. As already stated above there are multiple ways in which prompt engineering can add more context, meaning as well as relevance to the prompts and hence generating better outputs.Some of the critical applications ofPrompt Generationare in the following tasks:\nLanguage Translation:It is the process of translating a piece of text from one language to another using relevantlanguage models. Relevant prompts carefully engineering with information like the required script, dialect, and other features of source and target text can help in better response from the model.\nQuestion Answering Chatbots:AQ/A botis one of the most popularNLPcategories to work on these days. It is used by institutional websites, and shopping sites among many others. Prompts on which an AI chatbot Model is trained can largely affect the kind of response a bot generates. An example of what critical information one can add in a prompt can be adding theintentandcontextof the query so that the bot is not confused in generating relevant answers.\nText Generation: Such a task can have a multitude of applications and hence it again becomes critical to understand the exact dimension of the user’s query. The text is generated for what purpose can largely change the tone, vocabulary as well as formation of the text."
+  },
+  {
+    "input": "What are Prompt Engineering Techniques?",
+    "output": "The purpose of the prompt engineering is not limited to the drafting of prompts. It is a playground that has all the tools to adjust your way of working with thebig language models (LLMs)with specific purposes in mind."
+  },
+  {
+    "input": "Foundational Techniques",
+    "output": "Information Retrieval:This entails the creation ofpromptsso that theLLMcan get its knowledge base and give out what is relevant.\nContext Amplification:Give supplementary context to the prompt in order to direct the understanding and attention of theLLMto its output.\nSummarization:Induce theLLMto generalize or write summaries about complex themes.\nReframing:Rephrase your reminder to theLLMto consider a specific style or format for the output.\nIterative Prompting: Break down the complex tasks into smaller parts and then instruct theLLMsequentially in how to achieve the end result."
+  },
+  {
+    "input": "Advanced Techniques",
+    "output": "Least to Most Prompting:First, begin with prompts of general nature and then add facts to drive theLLMto make a highly specialized solution for intricate problems.\nChain-of-Thought (CoT) Prompting:Require the LLM to show the steps of its reasoning as well as the answer, leading to enlightenments for our understanding of its thinking.\nSelf-Ask Prompting:This thus entailschaining-of-thought (CoT) prompting, which involved theLLMbeing prompted to ask itself clarifying questions to get to a solution.\nMeta-Prompting:This experimental method investigates designing a single, commonpromptthat can be used for diverse tasks by way of additional instructions."
+  },
+  {
+    "input": "Prompt Engineering: Best Practices",
+    "output": "Prompt engineering is a crucial task with multiple aspects and features to be balanced with precision. The performance of a model can largely be tuned by using a correct prompt. The question arises how can we make sure that our prompt is right for the task at hand?Following are some key points one should remember while engineering a prompt for an AI model:\nBegin with Objectives and Goals:AI models often work based on manual input only. The raw input used to train a model or the running text or conversation one does with alanguage modelall affect how the model will reply to the next query. Hence, whenever interacting with a model, the goal of the conversation and the objectives to be achieved via it should be absolutely clear even before one begins.\nRelevant and Specific Data Identification and Usage: As clearly stated just like every prompt and its objective should be described clearly, similarly, only absolutely relevant data should be used to train a model. One should make sure there is no irrelevant or unnecessary data in the training.\nFocus on finding the Relevant Keywords: Relevant keywords, make a huge difference in the type of response generated. Akeywordused correctly in the right place can lead to a much different result altogether. For example, working on a mathematical problem, if someone asks a model: “What are planes?”, there can be a very high chance if the keyword “mathematics” is not mentioned, the AI will consider the word plane in the context of airplanes. Hence, keywords should be used wherever necessary!\nMake sure your prompts are simple and clear: When crafting prompts, it's important to keep them simple and clear by using plain language and avoiding overly complex sentence structures. This will make it easier for the model to generate accurate outputs and for users to understand the prompts.\nTest and Refine Your Prompts:The final step is to use a variety of test cases to evaluate the performance of the generated prompts and make adjustments as needed. Further refining the prompts based on the tests will improve the accuracy of the outputs generated by your model.\nBy following the above best practices, you can create prompts that are tailored to your specific objectives and generate accurate and useful outputs."
+  },
+  {
+    "input": "Advantages",
+    "output": "Improved accuracy:A relevant prompt, means better work by theAI modelwhich in turn only means a refined response simulated for the situation with precision. It can also be considered very useful especially talking about the niche domains like healthcare.\nEnhanced user experience:A better response only means a satisfied user who can easily get a response relevant to their problem without much of a hassle.\nCost-effective:The number of rounds needed to achieve a single accurate and satisfactory response reduces with one specific and neatly engineered prompt."
+  },
+  {
+    "input": "Disadvantages",
+    "output": "Difficulty in determining specificity:Determining the right balance between specificity and generality can be challenging, as a prompt that is too specific may limit the range of responses generated, while a prompt that is too general may produce irrelevant responses."
+  },
+  {
+    "input": "Future of Prompt Engineering",
+    "output": "Prompt engineering is a very recently developing and upcoming technology and hence it can actually serve to be a very crucial part of most of theAIandNLPtasks and other areas as well. Here are some of the key areas whereprompt engineeringcan actually help make great progress:"
   }
 ]
