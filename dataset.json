@@ -22718,5 +22718,37 @@
   {
     "input": "Brute Force Matcher",
     "output": "Brute Force Matcher is used for matching the features of the first image with another image.\nIt takes one descriptor of first image and matches to all the descriptors of the second image and then it goes to the second descriptor of first image and matches to all the descriptor of the second image and so on.\nExample 1: Reading/Importing the images from their path usingOpenCVlibrary.\nOutput:\n\nExample 2: Creating ORB detector for finding the features in the images.\nOutput:\n\nThe first output image shows the drawn key points of both of the images.\nKeyPointsare the point of interest, in simple words means that when the human will see the image at that time the features he notices in that image, in the similar way when the machine read the image it see some points of interest known as Key points.\nThe second output image shows the descriptors and the shape of the descriptors.\nTheseDescriptorsare basically array or bin of numbers. These are used to describe the features, using these descriptors we can match the two different images.\nIn the second output image, we can see first image descriptor shape and second image descriptor shape is (467, 32) and (500,32) respectively. So, Oriented Fast and Rotated Brief (ORB) detector try to find 500 features in the image by default, and for each descriptor, it will describe 32 values.\nSo, now how will we use these descriptors now? We can use aBrute Force Matcher(as discussed above in the article) to match these descriptors together and find how many similarities we are getting.\nExample 3: Feature Matching using Brute Force Matcher.\nOutput:\n\nWe are getting total of 178 feature matches. Total 178 matches are drawn, but they are sorted according to their humming distance in ascending order means that the distance of 178th feature is greater than the first feature, so first feature match is more accurate than the 178th feature match.\nIt looks messy because all the 178 feature matches are drawn, let's draw the top fifteen features (for the sake of visibility).\nExample 4: First/Top fifteen Feature Matching using Brute Force Matcher.\nOutput:\n\nThe output image shows the first/top fifteen best feature matching using Brute Force Matcher.\nFrom the above output, we can see that these matches are more accurate than all the remaining feature matches.\nLet's take another example for feature matching.\nExample 5: Feature matching using Brute Force.\nOutput:\n\nIn the above example we are getting total 147 best feature matches among them we are drawing only top 30 matches so that we can see the matches properly.\nExample 6:Feature Matching using Brute Force Matcher by taking rotated train image.\nOutput:\n\nIn this example when we have taken the rotated train image then we have found that there is little difference in the total number of best feature matches i.e, 148.\nIn the first output image, we have only drawn the top thirty best feature matches."
+  },
+  {
+    "input": "Key Features of ORB",
+    "output": "Let's see key features that make ORB a popular choice for feature detection and matching:"
+  },
+  {
+    "input": "How to Perform Feature Matching using ORB in Python?",
+    "output": "Now let's see various steps involved in implementing it in Python with OpenCV. Here we are using a random sample image which you can download it fromhere. You can also use any images of your choice."
+  },
+  {
+    "input": "Step 1: Installing required libraries",
+    "output": "Before we start, make sure we have OpenCV installed. If not, we can install OpenCV using below command:"
+  },
+  {
+    "input": "Step 2: Importing Libraries",
+    "output": "Here we will be usingOpenCV,NumpyandMatplotliblibraries for the implementations."
+  },
+  {
+    "input": "Step 3: Loading the Images",
+    "output": "We load the query and train images usingcv2.imread(). The images are then converted to grayscale as ORB works with single-channel (grayscale) images, simplifying the feature detection process."
+  },
+  {
+    "input": "Step 4: Detecting Keypoints and Finding Descriptors",
+    "output": "We use the ORB detector to identify keypoints (distinct features) in both images and find their corresponding descriptors. Keypoints represent unique image features while descriptors are numerical values that describe them for matching."
+  },
+  {
+    "input": "Step 5: Matching the Descriptors",
+    "output": "We use the Brute-Force Matcher to compare the descriptors between the query and train images, finding the best matches based on the similarity of the descriptors. This step matches the corresponding keypoints between both images."
+  },
+  {
+    "input": "Step 6: Visualizing the Matches",
+    "output": "Finally, we visualize the matches by drawing lines between the matched keypoints. The output image is resized for improved visibility and displayed using Matplotlib.\nOutput:"
   }
 ]
