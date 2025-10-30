@@ -21254,5 +21254,49 @@
   {
     "input": "For Example",
     "output": "This code loads the GPT-2 model and tokenizer from Hugging Face then generates three different text completions for a given prompt using sampling parameters like temperature, top_p and top_k to control creativity and diversity.\nmax_length (128):maximum number of tokens to generate in the output.\ntemperature (0.8): controls randomness as lower is more focused and higher is more random.\ntop_p (0.9): nucleus sampling as picks tokens from the smallest set whose total probability ≥ 0.9.\ntop_k (50): limits choices to the top 50 most likely tokens.\nrepetition_penalty (1.2):discourages repeating the same words or phrases by lowering their probability.\nnum_return_sequences (3):number of separate outputs the model should generate for the same prompt.\nOutput:"
+  },
+  {
+    "input": "1. Linear Scaling (\\alpha = 1)",
+    "output": "Linear scaling means the output increases in direct proportion to the input. If we double the input, the output also doubles. It shows a simple, balanced relationship between input and output.\nEfficiency stays the same as the system grows.\nRare in AI because models usually get harder to scale.\nExample:If a computer processes 100 images in 1 second, it will process 200 images in 2 seconds."
+  },
+  {
+    "input": "2. Sublinear scaling (\\alpha < 1)",
+    "output": "Sublinear scaling happens when the output still increases as the input grows, but at a slower rate. In this case, doubling the input does not double the output—the gains get smaller as we add more.\nVery common in AI and machine learning.\nKnown as the “law of diminishing returns.”\nExample:Doubling parameters still improves accuracy, but less than before because the model is already quite capable."
+  },
+  {
+    "input": "3. Superlinear scaling (\\alpha > 1)",
+    "output": "Superlinear scaling occurs when the output grows faster than the input. Here, even a small increase in input can create a much larger increase in output.\nRare, but powerful when it happens.\nOften seen as “emergent abilities” in very large AI models.\nExample:A huge jump in model size and data can suddenly give the model new skills that smaller models didn’t have."
+  },
+  {
+    "input": "Importance of Scaling in AI",
+    "output": "Let's see the importance of scaling laws in field of AI,\nPredict Performance:Scaling laws help estimate how much better an AI model will perform when using more data, larger models or extra compute.\nGuide Resource Allocation:They inform whether adding more data, parameters or compute is cost-effective and worthwhile.\nOptimize Model Design:Scaling laws show whether to focus efforts on increasing model size, gathering more data or improving training techniques.\nReduce Training Risks:By predicting outcomes from smaller-scale experiments, they lower the risks and costs associated with training very large models.\nEnable Breakthroughs:Scaling has driven major advancements and emergence of new AI capabilities by pushing the boundaries of model size and data use."
+  },
+  {
+    "input": "Implementation",
+    "output": "This code demonstrates how different scaling laws affect the relationship between an input variable X and an output variable Y, where Y changes according to a power-law function with different exponents (\\alpha)."
+  },
+  {
+    "input": "Step 1: Import Libraries",
+    "output": "We will import the required libraries,\nnumpy: A numerical computing library used here to create arrays of evenly spaced values.\nmatplotlib.pyplot: A plotting library used to create visual graphs."
+  },
+  {
+    "input": "Step 2: Create Input Data",
+    "output": "We creates an array X with 100 evenly spaced values ranging from 1 to 10.\nThese values represent the input size factor such as dataset size, number of parameters or computational resources."
+  },
+  {
+    "input": "Step 3: Define Scaling Exponents (\\alpha)",
+    "output": "We define:\nalpha_linear= 1: Represents linear scaling where output changes proportionally to input.\nalpha_sublinear= 0.7: Represents sublinear scaling where output grows but at a decreasing rate.\nalpha_superlinear= 1.3: Represents superlinear scaling where output grows faster than input."
+  },
+  {
+    "input": "Step 4: Calculate Output Values Using Power Law",
+    "output": "For each scaling type the output Y is calculated by raising each input value in X to the power of the corresponding exponent\\alpha.\nThis models the relationshipY \\propto x^\\alpha.\nFor example, with linear scaling,Y = X^1 = X, so the output is the same value as input.\nFor sublinear,Y = X ^ {0.7}, which grows slower than X.\nFor superlinear,Y = X ^ {1.3}, which grows faster than X."
+  },
+  {
+    "input": "Step 5: Plot the Results",
+    "output": "We plot three lines on the same graph, one for each scaling law:\nLinear scaling plot with\\alpha = 1.\nSublinear scaling plot with\\alpha = 0.7.\nSuperlinear scaling plot with\\alpha = 1.3.\nOutput:\nLinear scaling (α = 1):Output grows in direct proportion to input. Doubling input doubles output.\nSublinear scaling (α = 0.7):Output grows slower than input. Doubling input gives less than double output.\nSuperlinear scaling (α = 1.3):Output grows faster than input. Doubling input gives more than double output.\nThe higher the scaling exponent α, the steeper the curve and faster the growth."
+  },
+  {
+    "input": "Limitations",
+    "output": "Diminishing returns:At some point, adding more resources gives tiny improvements.\nBreakdown at extremes:Very small or very large models may not follow the same law.\nDifferent α values:The scaling exponent can change depending on model architecture, data quality and training method."
   }
 ]
