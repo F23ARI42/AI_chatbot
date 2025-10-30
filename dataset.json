@@ -21902,5 +21902,85 @@
   {
     "input": "Conclusions",
     "output": "This tutorial provides a comprehensive guide to leveraging Transformer-based models for audio processing, Recognition and understanding tasks. By following along, we'll learn about the contemporary methods for handling audio data and how to use cutting-edge methods to address practical issues with audio understanding and speech processing."
+  },
+  {
+    "input": "Mathematical Explanation",
+    "output": "Mathematically, autoregressive model of order p, denoted as AR(p) and can be expressed as:\nX_t = c + \\phi_1X_{t-1} + \\phi_2X_{t-2} + \\ldots + \\phi_pX_{t-p} + \\varepsilon_t\nWhere:\nX_tis the value at time t.\nc is a constant.\n\\phi_1, \\phi_2, \\ldots, \\phi_pare the model parameters.\nX_{t-1}, X_{t-2}, \\ldots, X_{t-p}are the lagged values.\n\\varepsilon_trepresents white noise or random error at timet."
+  },
+  {
+    "input": "Working of Autoregressive (AR) Model",
+    "output": "Autocorrelation Function (ACF)in Autoregressive Models is the one that measures the correlation between a time series and its past lagged values. Its working is as follows:"
+  },
+  {
+    "input": "1. Understanding Lag and Temporal Dependence",
+    "output": "Alagrepresents the number of time steps by which the series is shifted. For example:\nLag 1 compares each value with the one immediately preceding it.\nLag 2 compares values with those two time steps earlier, and so on.\nTheautocorrelation coefficientat a specific lag quantifies this relationship:\nAhigh autocorrelationindicates a strong connection between the present and the past value at that lag.\nAlow or near-zero autocorrelationsuggests weak or no temporal dependence."
+  },
+  {
+    "input": "2. Visualizing Autocorrelation using ACF Plot",
+    "output": "To analyze autocorrelation patterns, we use anACF plotwhich displays autocorrelation values across various lags:\nSuch patterns help reveal theunderlying temporal structureof the data and guide the selection of an appropriate lag order in AR models."
+  },
+  {
+    "input": "3. Role of ACF in AR Model Selection",
+    "output": "The ACF helps determine how many past time steps (lags) should be included in the model. Typically you will look at the ACF plot along with aPartial Autocorrelation Function (PACF)plot to choose a suitable lag order.\nIt also helps assess whether a time series isstationarywhich means its statistical properties like mean and variance stay consistent over time. In astationary seriesautocorrelations typicallydecrease graduallyas lag increases. If autocorrelationspersistor decay slowly it may indicatenon-stationaritysuggesting that the series needs transformation before modeling."
+  },
+  {
+    "input": "Types of Autoregressive Models",
+    "output": "Autoregressive models vary based on the number of past values (lags) they use. The two most common types are:\n1. AR(1) Model:This is a autoregressive model of order 1 which is the simplest form of an autoregressive model. In this model the current value of the time series depends only on its immediate past value along with a constant and some random noise. This model is particularly useful when the data shows strong autocorrelation at lag 1 i.e the current value depends only on the previous value. It is expressed as:\nX_t = c + \\phi_1X_{t-1} + \\varepsilon_t\n2. AR(p) Model:It is the generalized form of the autoregressive model where the current value depends on the pastpvalues. Choosing the correct orderpis a crucial step and typically involves analyzing theAutocorrelation Function (ACF)andPartial Autocorrelation Function (PACF)plots."
+  },
+  {
+    "input": "1. Importing Necessary Libraries",
+    "output": "We load all necessary libraries likenumpy,pandas,matplotlib,statsmodelsandscikit learn."
+  },
+  {
+    "input": "2. Loading and Preprocessing the data",
+    "output": "We read the CSV into a pandas DataFrame and convert \"Date\" column into \"datetime\" format. We wil interpolate any missing temperature values. You can download dataset fromhere."
+  },
+  {
+    "input": "3. PerformingStationarity Test",
+    "output": "We apply the Augmented Dickey–Fuller (ADF) test to check if the temperature series is stationary which is requirement for AR modeling. The ADF statistic and p‑value tell us whether to difference the series.\nOutput:"
+  },
+  {
+    "input": "4. Differencing the Temperature column",
+    "output": "Since the ADF p‑value is above 0.05 the series is non‑stationary. We take a first difference to remove trends and achieve stationarity."
+  },
+  {
+    "input": "5. Plotting the ACF and PACF Plots",
+    "output": "We plot the autocorrelation (ACF) and partial autocorrelation (PACF) of the differenced series to identify appropriate lag orderpfor the AR model.\nOutput:"
+  },
+  {
+    "input": "6. Splitting the dataset",
+    "output": "We split the differenced data into training as 80% and testing as 20% to evaluate performance of the model."
+  },
+  {
+    "input": "7. Model Fitting",
+    "output": "Using the lag orderpsuggested by the PACF plot (example:p=13), we fit an AutoRegressive (AR) model on the training data."
+  },
+  {
+    "input": "8. Making Predictions",
+    "output": "In this step we use the fitted AR model to produce both in‑sample “fitted” values on the training set and out‑of‑sample forecasts on the test set. We call thepredictmethod of theAutoRegResultsobject, specifying\nstart: the first timestamp at which to begin predicting.\nend: the last timestamp at which to predict.\ndynamic=False: means the model uses actual past values (not its own predictions) to make each forecast."
+  },
+  {
+    "input": "9. Evaluating the Model",
+    "output": "We computeroot‑mean‑square error (RMSE)andmean absolute error (MAE)on the differenced scale to quantify forecast accuracy.\nOutput:"
+  },
+  {
+    "input": "10. Invert Forecast to Original Scale",
+    "output": "To compare your AR model’s output with actual temperatures you must turn the predicted daily changes (\\Delta T) back into real temperature values (T). We do thisbecausethe model was trained on thedifferenceof the series (day‑to‑day changes) so its forecasts are in units of\\Delta Tbut we want forecasts in the original units (example:\\degree C) so we “undo” the differencing."
+  },
+  {
+    "input": "11. Potting the Results",
+    "output": "Finally, we plot the full observed temperature series alongside the AR model forecast, marking the train/test split point.\nOutput:"
+  },
+  {
+    "input": "Benefits",
+    "output": "Simple and Easy to Use: AR models are straightforward to understand and implement.\nInterpretable: The coefficients show how past values influence future predictions.\nGood for Stationary Data: AR works well when the data has stable patterns over time.\nFast and Efficient: They run quickly and are ideal for smaller datasets.\nShort-Term Pattern Detection: Effective at capturing recent trends and changes."
+  },
+  {
+    "input": "Drawbacks",
+    "output": "Requires Stationarity: Most real-world data needs preprocessing like differencing to meet this condition.\nLimited to Recent History: AR models can't capture long-term dependencies well.\nChoosing the Right Lag: Selecting too few or too many lag values can hurt performance.\nSensitive to Noise: Random fluctuations can lead to inaccurate forecasts.\nNot Ideal for Long-Term Forecasting: Performance drops over longer prediction horizons.\nData Quality Matters: Outliers or missing values can strongly affect accuracy.\nAutoregressive models are tools for forecasting time series that show consistent patterns. In this article we applied an AR model to temperature to make predictions."
+  },
+  {
+    "input": "You can also read related articles:",
+    "output": "Time series analysis and forecasting."
   }
 ]
