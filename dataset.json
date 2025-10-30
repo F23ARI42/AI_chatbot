@@ -22750,5 +22750,37 @@
   {
     "input": "Step 6: Visualizing the Matches",
     "output": "Finally, we visualize the matches by drawing lines between the matched keypoints. The output image is resized for improved visibility and displayed using Matplotlib.\nOutput:"
+  },
+  {
+    "input": "How Few Shot Prompting Works?",
+    "output": "Finally, model then provides the response. For example, it might output a classification such as “positive,” reflecting the sentiment of the given statement."
+  },
+  {
+    "input": "Examples of Few-Shot Prompting in Action",
+    "output": "Here are a few prompt examples to demonstrate how Few Shot Prompting works:"
+  },
+  {
+    "input": "Example 1:Text Generation",
+    "output": "Prompt:\"Here are some examples of poems about nature. Based on these, write a new poem about the beauty of a sunset.\"\nExample Poems:\nAI Output:"
+  },
+  {
+    "input": "Example 2: Classification Task",
+    "output": "Prompt:\"Here are a few examples of product categories and their descriptions. Based on these, categorize the following product description.\"\nExample Categories:\nProduct Description:\"This device is lightweight, portable and has a touch screen for easy navigation and app usage.\"\nAI Output:"
+  },
+  {
+    "input": "Advantages of Few Shot Prompting",
+    "output": "Few Shot Prompting offers several benefits:"
+  },
+  {
+    "input": "Challenges of Few Shot Prompting",
+    "output": "While Few Shot Prompting offers great potential, there are challenges that need attention:"
+  },
+  {
+    "input": "Best Practices for Few Shot Prompting",
+    "output": "To effectively use Few Shot Prompting, consider the following best practices:"
+  },
+  {
+    "input": "Real-World Examples of Few Shot Prompting",
+    "output": "Few Shot Prompting has a wide range of real-world applications. Some common examples include:\nBy enabling models to perform tasks with just a few examples,Few-Shot Promptingis reshaping the way we approach AI, making it more efficient, adaptable and capable of solving complex problems with minimal data."
   }
 ]
