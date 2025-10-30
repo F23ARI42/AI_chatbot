@@ -20442,5 +20442,49 @@
   {
     "input": "6.  Detecting Faces and Eyes",
     "output": "After running the code you will see three imagesFace Detection,Eyes DetectionandFace and Eyes Detection. These images will also be saved asface.jpg,eyes.jpgandface+eyes.jpgrespectively.\nFace Detection:\nOutput:\nEyes Detection:\nOutput:\nFace and Eyes Detection:\nOutput:\nIn this article, we explored Haar Cascades for object detection. By using pre-trained XML files we can detect different objects with minimal setup. Moreover the flexibility of Haar Cascades allows us to create custom XML files tailored to detect specific objects offering a wide range of computer vision applications."
+  },
+  {
+    "input": "Step-by-Step Guide to Build RAG using Llama3",
+    "output": "Follow these steps to set up and run RAG system usingLlama3to answer the queries via a Gradio interface. We will split the data into chunks and store it inChromaDB:"
+  },
+  {
+    "input": "Step 1: Setup and Access API Key of Tavily",
+    "output": "Tavily is a web search API used to fetch real-time information from the internet. In this project, it's used for web scraping to provide fresh and relevant content for the RAG system.\nGo to tavily and sign up.\nCopy the API key from dashboard.\nAdd the API Key to the model."
+  },
+  {
+    "input": "Step 2: Install the required tools and libraries",
+    "output": "langchainandlangchain-communityhelp connect Llama 3 to data.\nchromadbstores text as searchable embeddings.\ngradiocreates a web interface to ask questions.\nollamaruns Llama 3 locally.\nOutput:"
+  },
+  {
+    "input": "Step 3: Install Ollama",
+    "output": "Open a terminal and enter the command and press enter:\nThis downloads and installsOllama."
+  },
+  {
+    "input": "Step 4: Start Ollama and Download LLama3",
+    "output": "In the terminal enter the command:\nThis starts the Ollama server in the background.\nIn the terminal enter the command:\nThis downloads the Llama3 model.\nIn the terminal enter the command:\nThis downloads embedding model for text search."
+  },
+  {
+    "input": "Step 5: Import Libraries",
+    "output": "gradio: Used to create an interactive user interface for inputting questions and displaying answers.\nollama: Interface for interacting with the Llama 3 model for natural language tasks.\nlangchain.text_splitter: Alangchaintool for splitting large text into manageable chunks.\nlangchain_community.vectorstores: Used for creating and handling vector databases, allowing us to store and retrieve text embeddings.\nlangchain_community.embeddings: Provides the embeddings model (here using Ollama’s model) for converting text into vector representations.\nlangchain_community.tools.tavily_search: A tool to search for web content based on a query likely pulling results from the web.\ntime: Used for pausing the program execution like for retry logic."
+  },
+  {
+    "input": "Step 6: Check Ollama Server Availability",
+    "output": "check_ollama(): Checks whether Ollama's service is running by callingollama.list(). If it succeeds, it returnsTrue, otherwise, it catches the error and returnsFalse.\nTheforloop attempts to check the availability of Ollama up to 3 times with a 10-second wait (time.sleep(10)) between attempts.\nIf Ollama isn't responsive after 3 retries, it raises an exception and prompts the user to restart the runtime."
+  },
+  {
+    "input": "Step 7: Create a Vector Store",
+    "output": "create_vectorstore(query):This function accepts search query and do:\nUsesTavilySearchResultsto retrieve relevant web content (max 5 results).\nProcesses the search results, extracting the 'content' of each result.\nIf no content is found, it returns an error message.\nThe content is then split into chunks using RecursiveCharacterTextSplitter.\nOllamaEmbeddings is used to generate vector embeddings from the chunks.\nThe embeddings are stored in a Chroma vector store."
+  },
+  {
+    "input": "Step 8: Interacting with Llama 3 Model",
+    "output": "ollama_llm(question, context): This function sends a formatted prompt to the Llama 3 model including both the user’s question and the context (relevant content).\nThe response from Llama 3 is returned as the answer to the question. If there’s an error, it returns an error message."
+  },
+  {
+    "input": "Step 9: Retrieval-Augmented Generation (RAG) System",
+    "output": "rag_chain(question): This is the core function that implements the RAG system and it does:\nIt first creates a vector store based on the query usingcreate_vectorstore().\nIf no error occurs, it retrieves relevant documents from the vector store usingas_retriever().\nThe retrieved documents are then formatted into a context string, which is passed to ollama_llm() to generate an answer.\nIf there's an error in the vector store creation, it returns the error message."
+  },
+  {
+    "input": "Step 10: Gradio Interface Setup and Launching",
+    "output": "get_answer(question): This function is called by the Gradio interface when a user inputs a question.\nfn=get_answer:Specifies thatget_answer()is the function to call when a user submits a question.\ninputs: A textbox where the user can input their question.\noutputs: Text that will be displayed in response to the user’s question.\ntitleanddescriptionprovide a brief explanation of the app.\niface.launch(): Launches the Gradio interface and starts the app.\ndebug=True: Enables debugging mode for more detailed error messages during development.\nOutput:"
   }
 ]
