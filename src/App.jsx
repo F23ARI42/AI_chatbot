@@ -2555,6 +2555,7 @@ Would you prefer a comprehensive overview or focus on specific aspects?
                   backgroundColor: cardBg,
                   border: `2px solid ${borderColor}`,
                   borderRadius: '16px',
+                  boxSizing: 'border-box',
                   color: textColor,
                   fontSize: '1rem',
                   fontFamily: 'inherit',
