@@ -22254,5 +22254,81 @@
   {
     "input": "Conclusion",
     "output": "Diffusion models represent a significant advancement in generative modeling, offering a robust framework for creating high-quality data samples. Their ability to generate realistic data and their stability during training make them a valuable tool in machine learning. As research continues to advance, diffusion models are likely to become even more powerful and versatile, opening up new possibilities in various fields."
+  },
+  {
+    "input": "Encoder-Decoder Model Architecture",
+    "output": "In an encoder-decoder model both the encoder and decoder are separate networks each one has its own specific task. These networks can be different types such asRecurrent Neural Networks (RNNs),Long Short-Term Memory networks (LSTMs),Gated Recurrent Units (GRUs),Convolutional Neural Networks (CNNs)or even more advanced models likeTransformers."
+  },
+  {
+    "input": "Encoder",
+    "output": "The encoder's job is to process the input data and convert it into a form that the model can understand. It does this using two main steps:"
+  },
+  {
+    "input": "Decoder",
+    "output": "The decoder takes the processed information from the encoder and generates the output. It also has three main components:"
+  },
+  {
+    "input": "Working of Encoder Decoder Model",
+    "output": "The actual working of the encoder decoder model is shown in below diagram. Now we will understand it stepwise:"
+  },
+  {
+    "input": "Step 1: Tokenizing the Input Sentence",
+    "output": "The sentence \"I am learning AI\" is first broken into tokens: [\"I\", \"am\", \"learning\", \"AI\"].\nEach word (token) is converted into a vector that a machine can understand. This process is called embedding."
+  },
+  {
+    "input": "Step 2: Encoding the Input",
+    "output": "The Encoder processes these embeddings usingself-attention.\nSelf-attention helps the encoder to focus on important words. For example while encoding \"learning\", it understands its relation with \"I\" and \"AI.\"\nAfter processing the encoder generates a Context Vector which captures the meaning of the entire sentence. For example in the image The arrows show how each word relates to the others during encoding. The final output from the encoder is the context representation"
+  },
+  {
+    "input": "Step 3: Passing the Context to the Decoder",
+    "output": "The Context Vector is passed to the Decoder as shown in image.\nIt acts like a summary of the full input sentence."
+  },
+  {
+    "input": "Step 4: Decoder Generates Output Step-by-Step",
+    "output": "The Decoder uses the context and starts creating the output one word at a time.\nFirst it predicts the first word then uses that to predict the second word and so on"
+  },
+  {
+    "input": "Step 5: Decoder Attention",
+    "output": "While generating each word the decoder attends to different parts of the input sentence to make better predictions.\nFor example when translating \"learning,\" it might pay more attention to the word \"learning\" in the input."
+  },
+  {
+    "input": "Step 6: Producing the Final Output",
+    "output": "The decoder continues generating until the full translated sentence is produced.\nEach output token depends on the previous ones and the input context. You finally see the output tokens generated on the right side of the diagram completing the translation."
+  },
+  {
+    "input": "Step 1: Import Libraries and Load dataset",
+    "output": "In this step we import all the necessary libraries likenumpy ,pandas, string and Tokenizer, pad_sequencefor preprocessing the text into model-friendly format and load the dataset. You can download the dataset fromhere"
+  },
+  {
+    "input": "Step 2: Text Cleaning",
+    "output": "Here itremove punctuation and digits and converts text to lowercase and strips whitespace.\nIt applies Applies cleaning and adds special tokens to Hindi sentences to mark start and end (start_,  _end)."
+  },
+  {
+    "input": "Step 4: Tokenization",
+    "output": "Converts text to sequences of integers using word indices. Hindi tokenizer keeps_because of special tokens."
+  },
+  {
+    "input": "Step 5: Padding",
+    "output": "Pads sequences to uniform length\ndecoder_targetis shifted version ofdecoder_inputused for teacher forcing."
+  },
+  {
+    "input": "Step 6: Define Model Architecture",
+    "output": "Encoder:\nIt embeds English input and Passes through LSTM. Keeps hidden (state_h) and cell state (state_c) to pass to decoder.\nDecoder:\nIt embeds Hindi input. Uses initial states from encoder and Outputs probability distribution over Hindi vocabulary at each time step."
+  },
+  {
+    "input": "Step 7. Compile and Train",
+    "output": "Trains on source (encoder_input) and target (decoder_input) with shifted targets and uses RMSProp optimizer and cross-entropy loss."
+  },
+  {
+    "input": "Step 8: Inference Models",
+    "output": "To translate new sentences after training:\nEncoder Inference:Returns hidden/cell states given an English sentence.\nDecoder Inference:"
+  },
+  {
+    "input": "Step 9:  Reverse Lookup",
+    "output": "Used to convert indices back to words during decoding."
+  },
+  {
+    "input": "Step 10: Translate Function",
+    "output": "It prepares input sentence. Starts decoding with <start> token and Iteratively predicts next word and feeds it back until <end> is predicted. and the test the model with example\nOutput:\nHere we can see our model is working fine."
   }
 ]
