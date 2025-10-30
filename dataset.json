@@ -20414,5 +20414,33 @@
   {
     "input": "Future of Prompt Tuning",
     "output": "As language models continue to grow in size and complexity, techniques like prompt tuning are likely to play an increasingly important role in making these models more accessible and practical. Researchers are actively exploring ways to improve prompt tuning, such as:\nAutomated Prompt Design: Developing algorithms to automatically generate effective prompts, reducing the need for manual intervention.\nHybrid Approaches: Combining prompt tuning with other parameter-efficient fine-tuning methods, such as adapter modules or LoRA (Low-Rank Adaptation), to further enhance performance.\nCross-Task Generalization: Investigating how prompt tuning can be extended to handle multiple tasks simultaneously, enabling models to perform a wide range of functions without the need for separate fine-tuning.\nBy focusing on task-specific prompts rather than modifying the entire model, prompt tuning enables users to harness the power of large language models with minimal computational overhead."
+  },
+  {
+    "input": "Code Implementation",
+    "output": "We will go through thestep-by-step procedureto implement object detection using Haar Cascades."
+  },
+  {
+    "input": "1.Importing required Libraries",
+    "output": "Here, we will useNumpy,OpenCVandMatplotlib."
+  },
+  {
+    "input": "2. Loading Haar Cascade Classifiers",
+    "output": "Next we will load the pre-trained Haar Cascade classifiers for detecting faces and eyes. You can download these classifier from thislink."
+  },
+  {
+    "input": "3. Creating Function to Detect Faces",
+    "output": "Now we’ll create a functionadjusted_detect_face()to detect faces in an image. This function uses the face cascade classifier to identify face rectangles and draws rectangles around the detected faces."
+  },
+  {
+    "input": "4. Creating Function to Detect Eyes",
+    "output": "Similarly we create a functiondetect_eyes()to detect eyes using the eye cascade classifier."
+  },
+  {
+    "input": "5. Loading a Image",
+    "output": "Now let’s load an image and apply both face and eye detection on it. The image which we are using can be downloaded from thislink.\nOutput:"
+  },
+  {
+    "input": "6.  Detecting Faces and Eyes",
+    "output": "After running the code you will see three imagesFace Detection,Eyes DetectionandFace and Eyes Detection. These images will also be saved asface.jpg,eyes.jpgandface+eyes.jpgrespectively.\nFace Detection:\nOutput:\nEyes Detection:\nOutput:\nFace and Eyes Detection:\nOutput:\nIn this article, we explored Haar Cascades for object detection. By using pre-trained XML files we can detect different objects with minimal setup. Moreover the flexibility of Haar Cascades allows us to create custom XML files tailored to detect specific objects offering a wide range of computer vision applications."
   }
 ]
