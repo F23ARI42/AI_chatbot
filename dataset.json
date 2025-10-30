@@ -20322,5 +20322,81 @@
   {
     "input": "Conclusion",
     "output": "We can conclude that Audio data pre-processing is very important task which may involve numerous steps, but it is required to perform to prepare the dataset for real-time tasks."
+  },
+  {
+    "input": "Techniques in Prompt Tuning",
+    "output": "The various techniques of prompt tuning are:"
+  },
+  {
+    "input": "1. Zero-Shot Prompting",
+    "output": "Zero-shot promptingasks a language model to perform a task using only instructions, without providing any examples. The model relies entirely on its pre-trained knowledge and understanding of language to interpret and complete the task. This technique is powerful because it allows LLMs to generalize to new tasks without needing task-specific data or retraining.\nThe model, using its prior knowledge, responds:"
+  },
+  {
+    "input": "2. One-Shot Prompting",
+    "output": "One-shot promptingprovides the model with a single example of the task, in addition to the instruction. This helps the model understand the desired output format or logic especially for tasks where explicit structure or context is important."
+  },
+  {
+    "input": "3. Few-Shot Prompting",
+    "output": "Few-shot promptinggives the model several (typically 2–5) examples along with the instruction. This technique further clarifies the task, increases the model’s consistency and improves accuracy, especially for complex or nuanced problems.\nThe model, recognizing the pattern from multiple examples and responds:"
+  },
+  {
+    "input": "4. Chain-of-Thought Prompting(CoT)",
+    "output": "Chain-of-Thought (CoT)p rompting encourages the model to break down a problem into logical, sequential steps before arriving at a final answer. This technique is especially valuable for tasks that require multi-step reasoning such as mathematical calculations, logical puzzles or complex decision-making.\nWith a standard prompt, the model might simply output the final answer:16.\nWith Chain-of-Thought prompting, the model details its reasoning process step by step:\n“First, calculate 3 + 5 = 8.”\n“Next, multiply 8 by 2 to get 16.”"
+  },
+  {
+    "input": "5. Zero-Shot Chain-of-Thought Prompting",
+    "output": "Combineszero-shot with CoTby instructing the model to “think step by step” without providing examples."
+  },
+  {
+    "input": "6. Contextual Prompting",
+    "output": "Contextual Promptingincorporates relevant background information or context into the prompt to guide the model’s response."
+  },
+  {
+    "input": "7. Role-Based Prompting",
+    "output": "Role-Based Promptingassigns the model a specific role or persona to influence the style or depth of the response."
+  },
+  {
+    "input": "8.Tree-of-Thought Prompting",
+    "output": "Tree-of-Thought (ToT) Promptingbuilds on Chain-of-Thought by allowing the model to explore several reasoning paths in parallel. Instead of following a single line of logic, the model branches out to consider multiple possible solutions at each decision point.\nBy branching out, the model can present a variety of approaches such as using loose leaves or tea bags and can tailor its answer to user preferences like steeping time or tea type. This technique enables richer, more flexible responses by considering and comparing multiple possibilities before settling on the best answer."
+  },
+  {
+    "input": "9.ReAct (Reasoning + Acting) Pattern",
+    "output": "ReAct(Reason + Act) promptingenables a language model to alternate between reasoning and taking actions, creating a dynamic loop for solving complex tasks. The model first thinks through the problem, then takes an action based on its reasoning such as querying a tool or checking external information and uses the result to inform its next step. This cycle repeats until a final answer is reached.\nBy combining step-by-step reasoning with real-time actions, ReAct allows the model to make decisions based on up-to-date information and adjust its plan as needed. This approach is especially effective for tasks that require both thoughtful analysis and interaction with external tools or data sources."
+  },
+  {
+    "input": "10. Self-Consistency Prompting",
+    "output": "Self-Consistency Promptinggenerates multiple reasoning paths and selects the most consistent answer, improving reliability for ambiguous or complex tasks."
+  },
+  {
+    "input": "11. Retrieval-Augmented Prompting",
+    "output": "Retrieval-Augmented Promptingenhances the prompt with relevant information retrieved from external sources or databases, improving accuracy and grounding."
+  },
+  {
+    "input": "12.Prompt Chaining",
+    "output": "Prompt chainingis a technique in natural language processing where a complex task is broken down into a sequence of smaller, interconnected prompts. Each prompt’s output is used as the input for the next, guiding a large language model (LLM) through a structured, multi-step reasoning process.\nThis approach is especially effective for tasks that are too complex to handle in a single prompt as it allows the model to maintain context, refine answers and build on previous outputs.\nBy combining these prompts model can generate a detailed multi-step story with a clear information from one prompt to the next."
+  },
+  {
+    "input": "Other Prompt Tuning  Techniques",
+    "output": "We have so far discussed all major pronpt tuning techniques, now lets look at some other techniques also:"
+  },
+  {
+    "input": "1.Adaptive Prompt Tuning",
+    "output": "Adaptive Prompt Tuning adjusts prompts based on feedback or previous outputs, refining responses over time for improved adaptability."
+  },
+  {
+    "input": "2.Visual Prompt Tuning",
+    "output": "Visual Prompt Tuning incorporates visual inputs (images, videos) alongside text, enabling the model to handle multimodal tasks."
+  },
+  {
+    "input": "3.Instance-Dependent Prompt Generation",
+    "output": "Instance-Dependent Prompt Generation customizes prompts for each specific input, ensuring relevance and accuracy for varied tasks."
+  },
+  {
+    "input": "4.Residual Prompt Tuning",
+    "output": "Uses shallow neural networks with residual connections to refine soft prompt embeddings, improving stability and performance."
+  },
+  {
+    "input": "Benefits Of Prompt Tuning Techniques",
+    "output": "Various benefits of Prompt tuning techniques are as follows:"
   }
 ]
