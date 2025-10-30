@@ -21502,5 +21502,29 @@
   {
     "input": "Limitations of Image Recognition",
     "output": "Despite its benefits, image recognition faces some challenges:"
+  },
+  {
+    "input": "Components of Information Retrieval/ IR Model",
+    "output": "TheInformation Retrieval (IR) modelcan be broken down into key components that involve both the system and the user. Here’s how it works in a simple flow:"
+  },
+  {
+    "input": "1. User Side (Search Process)",
+    "output": "Problem Identification:A student wants to learn about machine learning and types a query into a search engine.\nRepresentation:The user converts their need into a search query using keywords or phrases like instead of asking\"How do machines learn?\"the student types \"machine learning basics\" into Google and the problem is converted into a query (keywords or phrases).\nQuery:The user submits the search query into IR system.\nFeedback:User can refine or modify the search based on the retrieved results."
+  },
+  {
+    "input": "2. System Side (Retrieval Process)",
+    "output": "Acquisition:The system collects and stores a large number of documents or data sources. It can includes web pages, books, research papers or any text-based information.\nRepresentation:Each document in the system is analyzed and represented in a structured way using keywords (terms). Example: If the document talks about \"machine learning\" it is tagged with relevant terms like \"AI, deep learning, algorithms, models\" to help retrieval.\nFile Organization:The documents areindexed and storedefficiently so the system can quickly find relevant ones. Like organizing a library so books can be found easily based on topics.\nMatching:The systemcompares the user's search query with stored documentsto find the best matches. It usesmatching functionsthat rank documents based onrelevance.\nRetrieved Object:The system returns the mostrelevant documentsto the user. These documents are ranked so the most useful ones appearat the top."
+  },
+  {
+    "input": "3. Interaction Between User & System",
+    "output": "The user reviews the retrieved results and may providefeedbackto refine the search. The system then processes the updated query and retrieves better results.\n\nAcquisition:In this step the selection of documents and other objects from various web resources that consist of text-based documents takes place. The required data is collected by web crawlers and stored in the database.\nRepresentation:It consists of indexing that contains free-text terms, controlled vocabulary, manual and automatic techniques as well. Example: Abstracting contains summarizing and Bibliographic description that contains author, title, sources, data and metadata.\nFile Organization:There are two types of file organization methods. i.e.Sequentialthat contains documents by document data andInverted: that contains list of records under each term.\nQuery:An IR process starts when a user enters a query into the system. Queries are formal statements of information needs. For example, search strings in web search engines. In IR a query does not uniquely identify a single object in the collection. Instead several objects may match the query, perhaps with different degrees of relevancy."
+  },
+  {
+    "input": "Advantages of Information Retrieval",
+    "output": "Efficient Access:Information retrieval techniques make it possible for users to easily locate and retrieve vast amounts of data or information.\nPersonalization of Results:User profiling and personalization techniques are used to tailor search results to individual preferences and behaviors.\nScalability:They are capable of handling increasing data volumes.\nPrecision:These systems can provide highly accurate and relevant search results and reducing the likelihood of irrelevant information appearing in search results."
+  },
+  {
+    "input": "Disadvantages of Information Retrieval",
+    "output": "Information Overload:When a lot of information is available users often face information overload making it difficult to find most useful and relevant material.\nLack of Context:They may fail to understand the context of a user's query leading to inaccurate results.\nPrivacy and Security Concerns:They often access sensitive user data that can raise privacy and security concerns.\nMaintenance Challenges:Keeping these systems up-to-date and effective requires a lot of efforts including regular updates, data cleaning and algorithm adjustments.\nBias and fairness:Ensure that systems do not exhibit biases and provide fair and unbiased results."
   }
 ]
