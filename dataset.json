@@ -22010,5 +22010,45 @@
   {
     "input": "Limitations of Autoregressive Models",
     "output": "Despite their success, autoregressive models have certain limitations:\nAs NLP continues to evolve, autoregressive models will remain at the forefront of research and applications, shaping the future of language understanding and generation."
+  },
+  {
+    "input": "Create An API for Gemini Pro",
+    "output": "Below are the steps to create an API for Gemini Pro:"
+  },
+  {
+    "input": "Get API Key",
+    "output": "Navigate toGoogle AI Studioand click onGet API key."
+  },
+  {
+    "input": "Create a API Key",
+    "output": "Create API Key in new project button, and copy the generated API key. Copy the API Key and use in generating the chatbot."
+  },
+  {
+    "input": "Creating a QnA Chatbot Using Flask",
+    "output": "Below are the step by step procedure to build a QnA Chatbot using Gemini Pro andFlaskinPython:"
+  },
+  {
+    "input": "Installation",
+    "output": "Before starting, we will have to install the following things to progress further:\nInstall Flask\nInstall Python"
+  },
+  {
+    "input": "File Structure",
+    "output": "Project Structure should be as follows:"
+  },
+  {
+    "input": "Create a Python File",
+    "output": "In this Python code, a Flask web application is initialized with an instance namedapp. A route decorator directs the root URL to render theindex.htmltemplate. When executed, the Flask application runs in debug mode, facilitating development with real-time error feedback.\napp.py"
+  },
+  {
+    "input": "Create a UI in HTML",
+    "output": "Inside thetemplates folder, create \"index.html\" file and start writing this code. In thisHTMLcode, a chatbot interface is structured with a title, message display area, and input field. External libraries,Tailwind CSSfor styling and Showdown for markdown conversion, are imported. Additionally, Google's Generative AI is integrated, and a JavaScript module (main.js) is included to manage chatbot interactions.\nindex.html\nOutput"
+  },
+  {
+    "input": "Write JavaScript File",
+    "output": "Inside thestatic folder, create a \"main.js\" file and start writing this code. In thisJavaScriptcode, theGoogleGenerativeAImodule is initialized with an API key to establish a chat instance with the \"gemini-pro\" model. ThechatGeminifunction manages user interactions, sending messages for processing and displaying the chatbot's responses. Utility functions render messages on the webpage, and event listeners capture user inputs for chat interactions.\nIn Depth Explaination\nTo start a chat session, we first need to import theGoogle GenerativeAI module\nThen, we need to create a model for chat sessions calledgemini-pro.\nAfter creating the model, we need to start a chat session using thestartChat()method and pass parameters accordingly.\nTo send a message and receive response, we use sendMessage and text methods.\nThe text returned is in markdown format and we will convert it into HTML for our purpose."
+  },
+  {
+    "input": "Run the Program",
+    "output": "To run this Flask application, just write the following command in your terminal:\nAccess the application in your web browser athttp://127.0.0.1:5000"
   }
 ]
