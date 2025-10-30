@@ -20806,5 +20806,57 @@
   {
     "input": "Complete Code Block",
     "output": "Output:\nThe output shape (64, 50, 8000) typically represents the output of a Transformer model in the context of sequence-to-sequence tasks such as machine translation."
+  },
+  {
+    "input": "Understanding Transformers in NLP",
+    "output": "Transformersare neural network architectures introduced in the paper\"Attention is All You Need\"(2017). Unlike traditional recurrent neural networks (RNNs), Transformers use the attention mechanism to process sequences in parallel, significantly improving efficiency and scalability. They are particularly effective in NLP tasks like text generation, language translation, and sentiment analysis."
+  },
+  {
+    "input": "Self-Head Attention in Transformer",
+    "output": "Attention mechanismallows models to weigh the importance of different words in a sequence. Inself-attention, each word in a sentence considers all other words computing a score to determine how much attention it should pay to each word. This enables the model to capture relationships between words effectively.\nToken Embedding:Convert text into tokens each mapped to a vector.\nSelf-Attention Score:The model calculates three vectors—Query (Q), Key (K), and Value (V) from the input using linear transformations.\nScaled Dot Product:Compute attention scores by taking the dot product of Q and K, scale the result and apply softmax to normalize.\n\\text{Scaled Attention Score} = \\frac{Q \\cdot K^T}{\\sqrt{d_k}}\n\\text{Softmax(Scaled Attention Score)}\nContextual Representation:The output is computed by multiplying the attention scores by the value vectors.\n\\text{Output} = \\text{Softmax}(\\text{Scaled Attention Score}) \\cdot V\nNow lets start building our transformer model."
+  },
+  {
+    "input": "Building Transformer Architecture using PyTorch",
+    "output": "To construct the Transformer model, we need to follow these key steps:"
+  },
+  {
+    "input": "1. Importing Libraries",
+    "output": "This block imports the necessary libraries and modules such asPyTorchfor neural network creation and other utilities likemathand copy for calculations."
+  },
+  {
+    "input": "2. Multi-Head Attention",
+    "output": "This block defines theMultiHeadAttentionclass. It splits the input into multiple attention heads, computes scaled dot-product attention, and then combines the outputs.\nnn.Linear(d_model, d_model): Initializes a linear transformation for the query, key and value vectors in multi-head attention.\ntorch.matmul(Q, K.transpose(-2, -1)):Calculates the dot product between the query and key vectors used for attention scoring.\ntorch.softmax(attn_scores, dim=-1): Applies the softmax function on attention scores to get the normalized attention probabilities.\ntorch.matmul(attn_probs, V): Uses the attention probabilities to weight the value vectors and compute the final output of the attention mechanism."
+  },
+  {
+    "input": "3. Position-Wise Feed Forward",
+    "output": "This block defines aposition-wise feed-forwardnetwork which consists of two linear layers and aReLU activationto process each position of the input sequence independently.\nself.fc1 = nn.Linear(d_model, d_ff):Initializes a linear transformation to map input embeddings to a higher-dimensional space (d_ff) used in the feed-forward network.\nself.relu = nn.ReLU():Defines the ReLU activation function to introduce non-linearity between the two fully connected layers.\nself.fc2 = nn.Linear(d_ff, d_model):Maps the output back to the model’s original dimension (d_model)."
+  },
+  {
+    "input": "4. Positional Encoding",
+    "output": "This block defines thePositional Encodingclass which adds positional information to the token embeddings allowing the model to retain information about word positions in the input sequence.\ntorch.sin(position * div_term):Applies the sine function to compute positional encoding values for even indices.\ntorch.cos(position * div_term):Applies the cosine function to compute positional encoding values for odd indices.\nself.register_buffer('pe', pe.unsqueeze(0)):Registers the positional encoding as a buffer so that it is part of the model but not considered a parameter during optimization."
+  },
+  {
+    "input": "5. Encoder Layer",
+    "output": "This block defines theEncoder Layerclass which contains the multi-head attention mechanism and the position-wise feed-forward network, with layer normalization and dropout applied.\nattn_output = self.self_attn(x, x, x, mask): Performs self-attention on the input, where the input sequence attends to itself.\nself.norm1(x + self.dropout(attn_output)):Adds the attention output to the input and applies layer normalization.\nself.feed_forward(x):Passes the result through a position-wise feed-forward network to refine the embeddings."
+  },
+  {
+    "input": "6. Decoder Layer",
+    "output": "This block defines theDecoder Layerclass, which is similar to the encoder layer but also includes a cross-attention mechanism to attend to the encoder’s output.\nattn_output = self.self_attn(x, x, x, tgt_mask):Performs self-attention on the target sequence attending to the target sequence itself.\nattn_output = self.cross_attn(x, enc_output, enc_output, src_mask):Performs cross-attention where the target sequence attends to the encoder's output sequence.\nself.norm2(x + self.dropout(attn_output)):Adds the attention output from the cross-attention mechanism to the input and applies layer normalization."
+  },
+  {
+    "input": "7. Transformer Model",
+    "output": "This block defines the mainTransformerclass which combines the encoder and decoder layers. It also includes the embedding layers and the final output layer.\nself.encoder_embedding = nn.Embedding(src_vocab_size, d_model):Initializes the embedding layer for the source sequence, mapping tokens to continuous vectors of sized_model.\nself.fc = nn.Linear(d_model, tgt_vocab_size):Maps the final output embeddings from the decoder to the target vocabulary size to predict the output tokens.\nself.generate_mask(src, tgt):Generates source and target masks to prevent attention to certain parts of the input, such as padding or future tokens in the target sequence."
+  },
+  {
+    "input": "8. Training the Model",
+    "output": "This block defines the training loop usingCross-Entropy lossand theAdam optimizerthen trains the model for 100 epochs.\noptimizer.zero_grad():Clears the gradients of all optimized tensors before the backward pass.\nloss.backward():Computes the gradients of the loss with respect to the model parameters.\noptimizer.step():Updates the model parameters based on the gradients computed during backpropagation.\nOutput:\nThis indicates that the model is learning effectively as the loss decreases with each epoch meaning the model is becoming better at making predictions. The gradual decline in loss suggests that the model is improving its accuracy and minimizing errors over time."
+  },
+  {
+    "input": "9. Evaluating the Model",
+    "output": "This block evaluates the trained model on validation data by calculating the validation loss.\ntorch.no_grad():Disables gradient calculation during the evaluation phase to save memory and computational resources.\nval_output = transformer(val_src_data, val_tgt_data[:, :-1]):Performs a forward pass on the validation data to obtain model predictions.\ncriterion(val_output.contiguous().view(-1, tgt_vocab_size), val_tgt_data[:, 1:].contiguous().view(-1)):Computes the loss between the model's predictions and the true target values for evaluation.\nOutput:"
+  },
+  {
+    "input": "Practical Applications of Transformers",
+    "output": "Transformers have proven highly effective in a variety of NLP tasks:\nText Generation:Models like GPT use Transformers to generate coherent text based on input prompts.\nMachine Translation:BERT and other Transformer-based models excel at translating text from one language to another.\nSentiment Analysis:Transformers can be fine-tuned to classify sentiment from text data.\nBuilding LLMs from scratch requires an understanding of the Transformer architecture and the self-attention mechanism. By following the steps outlined in this article you can implement your own Transformer model using PyTorch and can further fine tune it for specific tasks. Though transformers have their limitations and it’s important to consider their computational costs and data requirements in real-world applications."
   }
 ]
