@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { 
   Send, Bot, User, Download, Code, ArrowRight, Github, Linkedin, 
-  Menu, X, Mic, MicOff, ThumbsUp, ThumbsDown, Clock, Zap, 
-  Cpu, Database, Cloud, Shield, Trash2 
+  Menu, X, ThumbsUp, ThumbsDown, Clock, Zap, 
+  Cpu, Database, Cloud, Shield, Trash2, Copy, Check, Edit, FileText
 } from 'lucide-react';
 
 // Modern Black & White Beige Color Palette
@@ -623,7 +623,7 @@ const ThemeSwitch = ({ theme, onThemeChange }) => {
           transition: all 0.4s ease;
           transform-origin: center;
           box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-          z-index: 2;
+          zIndex: 2;
         }
 
         .clouds_stars.clouds {
@@ -648,7 +648,7 @@ const ThemeSwitch = ({ theme, onThemeChange }) => {
           width: 8px;
           height: 8px;
           background: #ffffff;
-          border-radius: 50%;
+          border-radius: '50%';
           top: -3px;
           left: -2px;
           box-shadow: 
@@ -821,6 +821,311 @@ const DeleteButton = ({ onClick, theme }) => {
   );
 };
 
+// Enhanced Copy Button Component
+const EnhancedCopyButton = ({ text, theme, size = 'medium' }) => {
+  const [copyStatus, setCopyStatus] = useState('idle'); // 'idle', 'copying', 'copied'
+  const isDark = theme === 'dark';
+
+  const handleCopy = async () => {
+    if (copyStatus === 'copying') return;
+    
+    setCopyStatus('copying');
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopyStatus('copied');
+      
+      setTimeout(() => {
+        setCopyStatus('idle');
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      
+      setCopyStatus('copied');
+      setTimeout(() => setCopyStatus('idle'), 2000);
+    }
+  };
+
+  const sizes = {
+    small: { padding: '4px 8px', fontSize: '0.7rem' },
+    medium: { padding: '6px 12px', fontSize: '0.8rem' },
+    large: { padding: '8px 16px', fontSize: '0.9rem' }
+  };
+
+  return (
+    <button
+      onClick={handleCopy}
+      disabled={copyStatus === 'copying'}
+      style={{
+        ...sizes[size],
+        backgroundColor: copyStatus === 'copied' ? modernColors.secondary : 'transparent',
+        border: `1px solid ${
+          copyStatus === 'copied' ? modernColors.secondary : 
+          (isDark ? modernColors.primary : modernColors.accent)
+        }`,
+        borderRadius: '8px',
+        color: copyStatus === 'copied' ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.primary),
+        cursor: copyStatus === 'copying' ? 'not-allowed' : 'pointer',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '4px',
+        transition: 'all 0.2s ease',
+        border: 'none',
+        minWidth: size === 'medium' ? '80px' : 'auto',
+        justifyContent: 'center',
+        opacity: copyStatus === 'copying' ? 0.7 : 1,
+        fontFamily: 'inherit'
+      }}
+      title={copyStatus === 'copied' ? 'Copied!' : 'Copy to clipboard'}
+    >
+      {copyStatus === 'copying' ? (
+        <>
+          <div style={{
+            width: '12px',
+            height: '12px',
+            border: `2px solid ${isDark ? modernColors.text : modernColors.primary}`,
+            borderTop: `2px solid transparent`,
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite'
+          }} />
+          {size !== 'small' && 'Copying...'}
+        </>
+      ) : copyStatus === 'copied' ? (
+        <>
+          <Check size={14} />
+          {size !== 'small' && 'Copied!'}
+        </>
+      ) : (
+        <>
+          <Copy size={14} />
+          {size !== 'small' && 'Copy'}
+        </>
+      )}
+    </button>
+  );
+};
+
+// Bulk Copy Feature for Entire Chat
+const BulkCopyButton = ({ messages, theme }) => {
+  const [copyStatus, setCopyStatus] = useState('idle');
+  const isDark = theme === 'dark';
+
+  const handleBulkCopy = async () => {
+    if (copyStatus === 'copying') return;
+    
+    setCopyStatus('copying');
+    try {
+      const chatText = messages
+        .map(msg => `${msg.type === 'user' ? 'You' : 'CS Assistant'}: ${msg.text}`)
+        .join('\n\n');
+      
+      await navigator.clipboard.writeText(chatText);
+      setCopyStatus('copied');
+      
+      setTimeout(() => {
+        setCopyStatus('idle');
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy chat: ', err);
+      setCopyStatus('idle');
+    }
+  };
+
+  return (
+    <button
+      onClick={handleBulkCopy}
+      disabled={copyStatus === 'copying' || messages.length <= 1}
+      style={{
+        padding: '8px 16px',
+        backgroundColor: copyStatus === 'copied' ? modernColors.secondary : 'transparent',
+        border: `1px solid ${
+          copyStatus === 'copied' ? modernColors.secondary : 
+          (isDark ? modernColors.primary : modernColors.accent)
+        }`,
+        borderRadius: '8px',
+        color: copyStatus === 'copied' ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.primary),
+        cursor: messages.length <= 1 ? 'not-allowed' : (copyStatus === 'copying' ? 'not-allowed' : 'pointer'),
+        fontSize: '0.8rem',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '6px',
+        transition: 'all 0.2s ease',
+        border: 'none',
+        opacity: messages.length <= 1 ? 0.5 : 1
+      }}
+      title={messages.length <= 1 ? 'No messages to copy' : 'Copy entire conversation'}
+    >
+      {copyStatus === 'copying' ? (
+        <>
+          <div style={{
+            width: '14px',
+            height: '14px',
+            border: `2px solid ${isDark ? modernColors.text : modernColors.primary}`,
+            borderTop: `2px solid transparent`,
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite'
+          }} />
+          Copying...
+        </>
+      ) : copyStatus === 'copied' ? (
+        <>
+          <Check size={16} />
+          Copied!
+        </>
+      ) : (
+        <>
+          <Copy size={16} />
+          Copy Chat
+        </>
+      )}
+    </button>
+  );
+};
+
+// Simple PDF Export using HTML to PDF conversion
+const PDFExportButton = ({ text, theme }) => {
+  const [exporting, setExporting] = useState(false);
+  const isDark = theme === 'dark';
+
+  const exportToPDF = async () => {
+    if (!text.trim()) return;
+    
+    setExporting(true);
+    try {
+      // Create a simple HTML document for PDF conversion
+      const htmlContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>CS Assistant - Selected Text</title>
+          <style>
+            body {
+              font-family: 'Arial', sans-serif;
+              margin: 40px;
+              line-height: 1.6;
+              color: #333;
+            }
+            .header {
+              text-align: center;
+              border-bottom: 2px solid #2A2A2A;
+              padding-bottom: 20px;
+              margin-bottom: 30px;
+            }
+            .title {
+              font-size: 24px;
+              font-weight: bold;
+              color: #2A2A2A;
+              margin-bottom: 10px;
+            }
+            .date {
+              font-size: 12px;
+              color: #666;
+            }
+            .content {
+              white-space: pre-wrap;
+              font-size: 14px;
+            }
+            .footer {
+              margin-top: 40px;
+              padding-top: 20px;
+              border-top: 1px solid #ccc;
+              font-size: 10px;
+              text-align: center;
+              color: #666;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <div class="title">CS Assistant - Selected Text</div>
+            <div class="date">Exported on: ${new Date().toLocaleString()}</div>
+          </div>
+          <div class="content">${text}</div>
+          <div class="footer">
+            Generated by CS Assistant - Developed by Zain Nadeem
+          </div>
+        </body>
+        </html>
+      `;
+
+      // Create a blob and download as HTML file (can be converted to PDF manually)
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `cs-assistant-export-${Date.now()}.html`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+    } catch (error) {
+      console.error('Error generating export:', error);
+      // Fallback to simple text download
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `cs-assistant-export-${Date.now()}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  return (
+    <button
+      onClick={exportToPDF}
+      disabled={!text.trim() || exporting}
+      title="Export selected text as formatted document"
+      style={{
+        padding: '6px 10px',
+        backgroundColor: exporting ? modernColors.secondary : 'transparent',
+        border: `1px solid ${isDark ? modernColors.primary : modernColors.accent}`,
+        borderRadius: '8px',
+        color: exporting ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.primary),
+        cursor: text.trim() ? 'pointer' : 'not-allowed',
+        fontSize: '0.8rem',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '4px',
+        transition: 'all 0.2s ease',
+        border: 'none',
+        fontFamily: 'inherit',
+        opacity: text.trim() ? 1 : 0.6
+      }}
+    >
+      {exporting ? (
+        <>
+          <div style={{
+            width: '12px',
+            height: '12px',
+            border: `2px solid ${isDark ? modernColors.text : modernColors.primary}`,
+            borderTop: `2px solid transparent`,
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite'
+          }} />
+          Exporting...
+        </>
+      ) : (
+        <>
+          <FileText size={14} />
+          Export
+        </>
+      )}
+    </button>
+  );
+};
+
 // Quick Actions Component
 const QuickActions = ({ onActionClick, theme }) => {
   const actions = [
@@ -829,7 +1134,7 @@ const QuickActions = ({ onActionClick, theme }) => {
     { icon: <Cloud size={18} />, label: 'Cloud Computing', prompt: 'What are the benefits of cloud computing for developers?' },
     { icon: <Shield size={18} />, label: 'Cybersecurity', prompt: 'Explain common web security vulnerabilities and prevention' },
     { icon: <Zap size={18} />, label: 'AI/ML', prompt: 'What is machine learning and how does it differ from traditional programming?' },
-    { icon: <Code size={18} />, label: 'Web Dev', prompt: 'Explain the difference between frontend and backend development' }
+    { icon: <Code size={18} />, label: 'Web Dev', prompt: 'Tell me about the frontend development of this application' }
   ];
 
   const isDark = theme === 'dark';
@@ -892,16 +1197,76 @@ const QuickActions = ({ onActionClick, theme }) => {
   );
 };
 
-// Message Component
-const Message = ({ message, onFeedback, theme }) => {
+// Enhanced Message Component with Copy functionality
+const Message = ({ message, onFeedback, theme, onEdit, isEditing, onSaveEdit, onCancelEdit, selectedText, onTextSelect }) => {
   const [feedback, setFeedback] = useState(null);
+  const [editText, setEditText] = useState(message.text);
+  const [copyStatus, setCopyStatus] = useState('idle');
   const isDark = theme === 'dark';
   const isUser = message.type === 'user';
+  const messageRef = useRef(null);
 
   const handleFeedback = (type) => {
     setFeedback(type);
     onFeedback?.(message.id, type);
   };
+
+  const handleSave = () => {
+    onSaveEdit(message.id, editText);
+  };
+
+  const handleCancel = () => {
+    setEditText(message.text);
+    onCancelEdit();
+  };
+
+  // Enhanced copy function with better feedback
+  const handleCopy = async () => {
+    if (copyStatus === 'copying') return;
+    
+    setCopyStatus('copying');
+    try {
+      await navigator.clipboard.writeText(message.text);
+      setCopyStatus('copied');
+      
+      // Reset status after 2 seconds
+      setTimeout(() => {
+        setCopyStatus('idle');
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = message.text;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      
+      setCopyStatus('copied');
+      setTimeout(() => setCopyStatus('idle'), 2000);
+    }
+  };
+
+  // Handle text selection
+  const handleTextSelection = useCallback(() => {
+    const selection = window.getSelection();
+    const selectedText = selection.toString().trim();
+    
+    if (selectedText && messageRef.current?.contains(selection.anchorNode)) {
+      onTextSelect?.(selectedText, message.id);
+    }
+  }, [onTextSelect, message.id]);
+
+  useEffect(() => {
+    const messageElement = messageRef.current;
+    if (messageElement) {
+      messageElement.addEventListener('mouseup', handleTextSelection);
+      return () => {
+        messageElement.removeEventListener('mouseup', handleTextSelection);
+      };
+    }
+  }, [handleTextSelection]);
 
   return (
     <div style={{
@@ -935,71 +1300,208 @@ const Message = ({ message, onFeedback, theme }) => {
           {isUser ? <User size={20} /> : <Bot size={20} />}
         </div>
         
-        <div style={{
-          backgroundColor: isUser ? modernColors.gradient : (isDark ? modernColors.surface : '#ffffff'),
-          padding: '16px 20px',
-          borderRadius: '18px',
-          border: `1px solid ${isUser ? 'transparent' : (isDark ? modernColors.primary : modernColors.accent)}`,
-          boxShadow: `0 2px 12px ${isDark ? 'rgba(42, 42, 42, 0.2)' : 'rgba(102, 102, 102, 0.2)'}`,
-          color: isUser ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.background),
-          lineHeight: '1.6',
-          whiteSpace: 'pre-wrap',
-          wordBreak: 'break-word',
-          position: 'relative',
-          background: isUser ? modernColors.gradient : (isDark ? modernColors.surface : '#ffffff')
-        }}>
-          {message.text}
-          
-          {!isUser && (
-            <div style={{
-              display: 'flex',
-              gap: '8px',
-              marginTop: '12px',
-              justifyContent: 'flex-end'
-            }}>
-              <button
-                onClick={() => handleFeedback('like')}
+        <div 
+          ref={messageRef}
+          style={{
+            backgroundColor: isUser ? modernColors.gradient : (isDark ? modernColors.surface : '#ffffff'),
+            padding: '16px 20px',
+            borderRadius: '18px',
+            border: `1px solid ${isUser ? 'transparent' : (isDark ? modernColors.primary : modernColors.accent)}`,
+            boxShadow: `0 2px 12px ${isDark ? 'rgba(42, 42, 42, 0.2)' : 'rgba(102, 102, 102, 0.2)'}`,
+            color: isUser ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.background),
+            lineHeight: '1.6',
+            whiteSpace: 'pre-wrap',
+            wordBreak: 'break-word',
+            position: 'relative',
+            background: isUser ? modernColors.gradient : (isDark ? modernColors.surface : '#ffffff'),
+            minWidth: isUser && isEditing ? '300px' : 'auto',
+            cursor: 'text',
+            userSelect: 'text'
+          }}
+        >
+          {isUser && isEditing ? (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <textarea
+                value={editText}
+                onChange={(e) => setEditText(e.target.value)}
                 style={{
-                  padding: '6px 12px',
-                  backgroundColor: feedback === 'like' ? modernColors.primary : 'transparent',
+                  width: '100%',
+                  minHeight: '80px',
+                  padding: '12px',
+                  backgroundColor: isDark ? modernColors.surface : '#ffffff',
                   border: `1px solid ${isDark ? modernColors.primary : modernColors.accent}`,
                   borderRadius: '8px',
-                  color: feedback === 'like' ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.primary),
-                  cursor: 'pointer',
-                  fontSize: '0.8rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  transition: 'all 0.2s ease',
-                  border: 'none'
+                  color: isDark ? modernColors.text : modernColors.background,
+                  fontSize: '1rem',
+                  fontFamily: 'inherit',
+                  resize: 'vertical',
+                  outline: 'none'
                 }}
-              >
-                <ThumbsUp size={14} />
-                Helpful
-              </button>
-              <button
-                onClick={() => handleFeedback('dislike')}
-                style={{
-                  padding: '6px 12px',
-                  backgroundColor: feedback === 'dislike' ? modernColors.secondary : 'transparent',
-                  border: `1px solid ${isDark ? modernColors.secondary : modernColors.secondary}`,
-                  borderRadius: '8px',
-                  color: feedback === 'dislike' ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.secondary),
-                  cursor: 'pointer',
-                  fontSize: '0.8rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  transition: 'all 0.2s ease',
-                  border: 'none'
-                }}
-              >
-                <ThumbsDown size={14} />
-                Not Helpful
-              </button>
+              />
+              <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
+                <button
+                  onClick={handleCancel}
+                  style={{
+                    padding: '6px 12px',
+                    backgroundColor: 'transparent',
+                    border: `1px solid ${isDark ? modernColors.primary : modernColors.accent}`,
+                    borderRadius: '6px',
+                    color: isDark ? modernColors.text : modernColors.background,
+                    cursor: 'pointer',
+                    fontSize: '0.8rem'
+                  }}
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleSave}
+                  style={{
+                    padding: '6px 12px',
+                    backgroundColor: modernColors.primary,
+                    border: 'none',
+                    borderRadius: '6px',
+                    color: '#FFFFFF',
+                    cursor: 'pointer',
+                    fontSize: '0.8rem'
+                  }}
+                >
+                  Save
+                </button>
+              </div>
             </div>
+          ) : (
+            <>
+              {message.text}
+              
+              {/* Action Buttons - Only for bot messages */}
+              {!isUser && (
+                <div style={{
+                  display: 'flex',
+                  gap: '8px',
+                  marginTop: '12px',
+                  justifyContent: 'flex-end',
+                  alignItems: 'center',
+                  flexWrap: 'wrap'
+                }}>
+                  {/* Enhanced Copy Button */}
+                  <button
+                    onClick={handleCopy}
+                    disabled={copyStatus === 'copying'}
+                    style={{
+                      padding: '6px 12px',
+                      backgroundColor: copyStatus === 'copied' ? modernColors.secondary : 'transparent',
+                      border: `1px solid ${
+                        copyStatus === 'copied' ? modernColors.secondary : 
+                        (isDark ? modernColors.primary : modernColors.accent)
+                      }`,
+                      borderRadius: '8px',
+                      color: copyStatus === 'copied' ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.primary),
+                      cursor: copyStatus === 'copying' ? 'not-allowed' : 'pointer',
+                      fontSize: '0.8rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                      transition: 'all 0.2s ease',
+                      border: 'none',
+                      minWidth: '80px',
+                      justifyContent: 'center',
+                      opacity: copyStatus === 'copying' ? 0.7 : 1
+                    }}
+                    title={copyStatus === 'copied' ? 'Copied!' : 'Copy to clipboard'}
+                  >
+                    {copyStatus === 'copying' ? (
+                      <>
+                        <div style={{
+                          width: '12px',
+                          height: '12px',
+                          border: `2px solid ${isDark ? modernColors.text : modernColors.primary}`,
+                          borderTop: `2px solid transparent`,
+                          borderRadius: '50%',
+                          animation: 'spin 1s linear infinite'
+                        }} />
+                        Copying...
+                      </>
+                    ) : copyStatus === 'copied' ? (
+                      <>
+                        <Check size={14} />
+                        Copied!
+                      </>
+                    ) : (
+                      <>
+                        <Copy size={14} />
+                        Copy
+                      </>
+                    )}
+                  </button>
+
+                  {/* Feedback Buttons */}
+                  <button
+                    onClick={() => handleFeedback('like')}
+                    style={{
+                      padding: '6px 12px',
+                      backgroundColor: feedback === 'like' ? modernColors.primary : 'transparent',
+                      border: `1px solid ${isDark ? modernColors.primary : modernColors.accent}`,
+                      borderRadius: '8px',
+                      color: feedback === 'like' ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.primary),
+                      cursor: 'pointer',
+                      fontSize: '0.8rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                      transition: 'all 0.2s ease',
+                      border: 'none'
+                    }}
+                  >
+                    <ThumbsUp size={14} />
+                    Helpful
+                  </button>
+                  <button
+                    onClick={() => handleFeedback('dislike')}
+                    style={{
+                      padding: '6px 12px',
+                      backgroundColor: feedback === 'dislike' ? modernColors.secondary : 'transparent',
+                      border: `1px solid ${isDark ? modernColors.secondary : modernColors.secondary}`,
+                      borderRadius: '8px',
+                      color: feedback === 'dislike' ? '#FFFFFF' : (isDark ? modernColors.text : modernColors.secondary),
+                      cursor: 'pointer',
+                      fontSize: '0.8rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                      transition: 'all 0.2s ease',
+                      border: 'none'
+                    }}
+                  >
+                    <ThumbsDown size={14} />
+                    Not Helpful
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
+
+        {/* Edit Button for User Messages */}
+        {isUser && !isEditing && (
+          <button
+            onClick={() => onEdit(message.id)}
+            style={{
+              padding: '6px',
+              backgroundColor: 'transparent',
+              border: `1px solid ${isDark ? modernColors.primary : modernColors.accent}`,
+              borderRadius: '6px',
+              color: isDark ? modernColors.text : modernColors.background,
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'all 0.2s ease'
+            }}
+            title="Edit message"
+          >
+            <Edit size={14} />
+          </button>
+        )}
       </div>
       
       <div style={{
@@ -1212,6 +1714,67 @@ const WelcomeScreen = ({ onStart, theme }) => {
   );
 };
 
+// Text Selection Toolbar Component
+const TextSelectionToolbar = ({ selectedText, onExportPDF, onClearSelection, theme, position }) => {
+  const isDark = theme === 'dark';
+  
+  if (!selectedText) return null;
+
+  return (
+    <div 
+      style={{
+        position: 'fixed',
+        left: position?.x || '50%',
+        top: position?.y ? position.y - 60 : 'auto',
+        transform: position?.x ? 'none' : 'translateX(-50%)',
+        backgroundColor: isDark ? modernColors.surface : '#ffffff',
+        border: `1px solid ${isDark ? modernColors.primary : modernColors.accent}`,
+        borderRadius: '12px',
+        padding: '12px',
+        boxShadow: '0 8px 25px rgba(42, 42, 42, 0.3)',
+        zIndex: 1000,
+        display: 'flex',
+        alignItems: 'center',
+        gap: '8px',
+        animation: 'fadeIn 0.2s ease-in-out',
+        maxWidth: '300px'
+      }}
+    >
+      <div style={{
+        fontSize: '0.8rem',
+        color: isDark ? modernColors.text : modernColors.background,
+        marginRight: '8px',
+        maxWidth: '150px',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap'
+      }}>
+        "{selectedText.length > 30 ? selectedText.substring(0, 30) + '...' : selectedText}"
+      </div>
+      
+      <PDFExportButton text={selectedText} theme={theme} />
+      
+      <button
+        onClick={onClearSelection}
+        style={{
+          padding: '6px',
+          backgroundColor: 'transparent',
+          border: `1px solid ${isDark ? modernColors.primary : modernColors.accent}`,
+          borderRadius: '6px',
+          color: isDark ? modernColors.text : modernColors.background,
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        title="Clear selection"
+      >
+        <X size={14} />
+      </button>
+    </div>
+  );
+};
+
 // Main Chatbot Component
 export default function CSChatbot() {
   const [showChat, setShowChat] = useState(false);
@@ -1227,8 +1790,10 @@ export default function CSChatbot() {
   const [isTyping, setIsTyping] = useState(false);
   const [theme, setTheme] = useState('dark');
   const [isChatSaved, setIsChatSaved] = useState(false);
-  const [isListening, setIsListening] = useState(false);
   const [error, setError] = useState(null);
+  const [editingMessageId, setEditingMessageId] = useState(null);
+  const [selectedText, setSelectedText] = useState('');
+  const [selectionPosition, setSelectionPosition] = useState({ x: 0, y: 0 });
   
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
@@ -1266,105 +1831,235 @@ export default function CSChatbot() {
     scrollToBottom();
   }, [messages]);
 
+  // Clear selection when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (selectedText && !event.target.closest('.message-content')) {
+        setSelectedText('');
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [selectedText]);
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // AI Knowledge Base
+  // Enhanced AI Knowledge Base with sleek responses
   const knowledgeBase = useMemo(() => ({
     algorithms: {
-      response: `**Algorithms** are step-by-step procedures for solving problems. Key concepts:
+      response: `**Algorithms** - Step-by-step procedures for problem-solving
 
-• **Time Complexity**: Measures how runtime grows with input size
+## Core Concepts:
+• **Time Complexity**: Runtime growth analysis
   - O(1): Constant time
-  - O(log n): Logarithmic time
-  - O(n): Linear time
-  - O(n²): Quadratic time
+  - O(log n): Logarithmic efficiency  
+  - O(n): Linear scaling
+  - O(n²): Quadratic growth
 
-• **Space Complexity**: Measures memory usage growth
+• **Space Complexity**: Memory usage patterns
 
-• **Common Algorithms**:
-  - Sorting: QuickSort, MergeSort, BubbleSort
-  - Searching: Binary Search, Linear Search
-  - Graph: Dijkstra, BFS, DFS
+## Key Algorithms:
+- **Sorting**: QuickSort, MergeSort, BubbleSort
+- **Searching**: Binary Search, Linear Search
+- **Graph Theory**: Dijkstra, BFS, DFS
 
-Would you like me to explain any specific algorithm in detail?`,
+*Need specific algorithm details? Just ask!*`,
       examples: ['binary search', 'quick sort', 'dynamic programming']
     },
     'data structures': {
-      response: `**Data Structures** organize and store data efficiently:
+      response: `**Data Structures** - Efficient data organization methods
 
-• **Arrays**: Contiguous memory, fast access, fixed size
-• **Linked Lists**: Dynamic size, sequential access
-• **Stacks**: LIFO (Last In First Out)
-• **Queues**: FIFO (First In First Out)
-• **Trees**: Hierarchical data (Binary Trees, BST, AVL)
-• **Graphs**: Nodes and edges relationships
-• **Hash Tables**: Key-value pairs with fast lookup
+## Structure Types:
+• **Arrays**: Contiguous memory, instant access
+• **Linked Lists**: Dynamic sizing, sequential access  
+• **Stacks**: LIFO principle
+• **Queues**: FIFO processing
+• **Trees**: Hierarchical organization
+• **Graphs**: Network relationships
+• **Hash Tables**: Key-value mapping
 
-**When to use which?**
-- Arrays: When size is known and random access needed
-- Linked Lists: When frequent insertions/deletions
-- Hash Tables: Fast lookups by key
-- Trees: Hierarchical or sorted data`,
+## Usage Guide:
+- **Arrays**: Fixed size, random access needed
+- **Linked Lists**: Frequent insertions/deletions
+- **Hash Tables**: Fast lookup requirements
+- **Trees**: Sorted or hierarchical data
+
+*Which structure interests you most?*`,
       examples: ['arrays vs linked lists', 'hash table implementation', 'tree traversal']
     },
     'machine learning': {
-      response: `**Machine Learning** enables computers to learn without explicit programming:
+      response: `**Machine Learning** - AI-driven pattern recognition
 
-• **Supervised Learning**: Labeled data (Classification, Regression)
-• **Unsupervised Learning**: Unlabeled data (Clustering, Dimensionality Reduction)
-• **Reinforcement Learning**: Learning through rewards/punishments
+## Learning Paradigms:
+• **Supervised**: Labeled data training
+• **Unsupervised**: Pattern discovery  
+• **Reinforcement**: Reward-based learning
 
-**Common Algorithms**:
-- Linear Regression
-- Decision Trees
-- Neural Networks
+## Core Algorithms:
+- Linear/Logistic Regression
+- Decision Trees & Random Forests
+- Neural Networks & Deep Learning
 - K-Means Clustering
 
-**Applications**: Image recognition, NLP, recommendation systems`,
+## Applications:
+- Computer Vision
+- Natural Language Processing  
+- Recommendation Engines
+- Predictive Analytics
+
+*Ready to dive deeper into ML concepts?*`,
       examples: ['neural networks', 'linear regression', 'clustering algorithms']
     },
     'cloud computing': {
-      response: `**Cloud Computing** delivers computing services over the internet:
+      response: `**Cloud Computing** - On-demand computing services
 
-• **Service Models**:
-  - IaaS (Infrastructure as a Service): Virtual machines, storage
-  - PaaS (Platform as a Service): Development platforms
-  - SaaS (Software as a Service): Ready-to-use applications
+## Service Models:
+• **IaaS**: Infrastructure (VMs, storage)
+• **PaaS**: Development platforms  
+• **SaaS**: Ready applications
 
-• **Deployment Models**:
-  - Public Cloud: AWS, Azure, Google Cloud
-  - Private Cloud: On-premises infrastructure
-  - Hybrid Cloud: Combination of both
+## Deployment Options:
+- **Public Cloud**: AWS, Azure, GCP
+- **Private Cloud**: On-premises solutions
+- **Hybrid Cloud**: Mixed environment
 
-• **Benefits**: Scalability, cost-efficiency, reliability`,
+## Key Benefits:
+- Scalability & Elasticity
+- Cost Optimization
+- Global Availability
+- Managed Services
+
+*Exploring cloud solutions for your projects?*`,
       examples: ['aws services', 'cloud deployment', 'serverless computing']
     },
     cybersecurity: {
-      response: `**Cybersecurity** protects systems and data from digital attacks:
+      response: `**Cybersecurity** - Digital protection systems
 
-• **Common Threats**:
-  - Malware: Viruses, ransomware, trojans
-  - Phishing: Social engineering attacks
-  - DDoS: Distributed Denial of Service
-  - SQL Injection: Database attacks
+## Common Threats:
+• **Malware**: Viruses, ransomware, trojans
+• **Phishing**: Social engineering attacks
+• **DDoS**: Service disruption
+• **SQL Injection**: Database exploitation
 
-• **Protection Measures**:
-  - Firewalls and antivirus software
-  - Encryption and secure protocols
-  - Regular updates and patches
-  - User education and awareness
+## Protection Layers:
+- Network Security & Firewalls
+- Encryption & Access Control
+- Regular Updates & Patches
+- Security Awareness Training
 
-• **Best Practices**: Least privilege, defense in depth, regular audits`,
+## Best Practices:
+- Principle of Least Privilege
+- Defense in Depth Strategy
+- Regular Security Audits
+- Incident Response Planning
+
+*Security concerns for your applications?*`,
       examples: ['encryption', 'network security', 'vulnerability assessment']
+    },
+    // Enhanced Frontend/Developer Responses
+    'frontend': {
+      response: `**Frontend Development** - Crafted by **Zain Nadeem** ✨
+
+## Developer Profile:
+**Zain Nadeem** - Full-Stack Developer
+- 🚀 Modern web technologies enthusiast  
+- 🎨 UI/UX design passion
+- 🔧 Tech stack: React, Node.js, Python
+
+## Connect:
+- **GitHub**: [github.com/the-lazyguy](https://github.com/the-lazyguy)
+- **LinkedIn**: [linkedin.com/in/zain-nadeem-917524177](https://www.linkedin.com/in/zain-nadeem-917524177/)
+
+## Technical Excellence:
+• React Hooks & Component Architecture
+• Responsive Design Systems
+• Dark/Light Theme Engine
+• Real-time Chat Interface
+• Local Storage Management
+• Animated UI Components
+
+*Built with precision and user experience focus*`,
+      examples: ['frontend', 'front end', 'ui/ux', 'gui', 'user interface', 'who made this', 'developer', 'who created this', 'who built this']
+    },
+    'front end': {
+      response: `**Frontend Architecture** - Designed by **Zain Nadeem**
+
+## Technical Implementation:
+• React Functional Components
+• Custom Pixel Animation System  
+• Theme Switching (Dark/Light)
+• Responsive Grid Layouts
+• Modern CSS-in-JS Styling
+
+## Developer Links:
+- **GitHub**: [github.com/the-lazyguy](https://github.com/the-lazyguy)
+- **LinkedIn**: [linkedin.com/in/zain-nadeem-917524177](https://www.linkedin.com/in/zain-nadeem-917524177/)
+
+*Clean code meets beautiful design*`,
+      examples: ['frontend', 'front end', 'ui/ux', 'gui']
+    },
+    'ui/ux': {
+      response: `**UI/UX Design** - Created by **Zain Nadeem**
+
+## Design Philosophy:
+• **Minimalist Aesthetic** - Black, white & beige palette
+• **Smooth Interactions** - CSS transitions & animations  
+• **Intuitive Navigation** - User-centered design
+• **Accessibility Focus** - Proper contrast & states
+• **Consistent Experience** - Unified design system
+
+## Portfolio:
+- **GitHub**: [github.com/the-lazyguy](https://github.com/the-lazyguy)
+- **LinkedIn**: [linkedin.com/in/zain-nadeem-917524177](https://www.linkedin.com/in/zain-nadeem-917524177/)
+
+*Where functionality meets elegance*`,
+      examples: ['ui/ux', 'user interface', 'user experience', 'design', 'gui']
+    },
+    'gui': {
+      response: `**Graphical Interface** - Developed by **Zain Nadeem**
+
+## Interface Features:
+• Modern React Component Architecture
+• Real-time Chat with Typing Indicators  
+• Dynamic Theme System
+• Animated Social Integration
+• Cross-device Responsiveness
+• Persistent Local Storage
+
+## Connect with Developer:
+- **GitHub**: [github.com/the-lazyguy](https://github.com/the-lazyguy)
+- **LinkedIn**: [linkedin.com/in/zain-nadeem-917524177](https://www.linkedin.com/in/zain-nadeem-917524177/)
+
+*Precision engineering for optimal user experience*`,
+      examples: ['gui', 'graphical interface', 'interface design', 'who built this']
     }
   }), []);
 
   const findBestResponse = useCallback((userInput) => {
     const input = userInput.toLowerCase();
     
-    // Check for specific topics
+    // Enhanced frontend/developer detection
+    const developerKeywords = [
+      'who made', 'who created', 'who built', 'who developed', 
+      'developer', 'author', 'creator', 'made this', 'created this',
+      'built this', 'developed this'
+    ];
+    
+    const frontendKeywords = [
+      'frontend', 'front end', 'ui/ux', 'gui', 'interface', 
+      'design', 'this app', 'this application', 'website', 'web app'
+    ];
+    
+    // Check for frontend/developer queries first
+    if (developerKeywords.some(keyword => input.includes(keyword)) || 
+        frontendKeywords.some(keyword => input.includes(keyword))) {
+      return knowledgeBase.frontend.response;
+    }
+
+    // Check for specific topics including new frontend topics
     for (const [topic, data] of Object.entries(knowledgeBase)) {
       if (input.includes(topic) || data.examples.some(example => input.includes(example))) {
         return data.response;
@@ -1373,36 +2068,51 @@ Would you like me to explain any specific algorithm in detail?`,
 
     // Default responses based on keywords
     if (input.includes('time complexity') || input.includes('big o')) {
-      return `**Time Complexity** analysis helps understand algorithm efficiency:
+      return `**Time Complexity Analysis**
 
-• **O(1)**: Constant time - operation takes same time regardless of input size
-• **O(n)**: Linear time - time grows proportionally with input size
-• **O(n²)**: Quadratic time - time grows with square of input size
-• **O(log n)**: Logarithmic time - time grows logarithmically
+## Efficiency Metrics:
+• **O(1)**: Constant time - fixed duration
+• **O(n)**: Linear time - proportional growth  
+• **O(n²)**: Quadratic time - squared growth
+• **O(log n)**: Logarithmic time - efficient scaling
 
-Example: Binary Search is O(log n) while Linear Search is O(n).`;
+## Practical Examples:
+- Binary Search: O(log n)
+- Linear Search: O(n)
+- Nested Loops: O(n²)
+
+*Understanding complexity helps optimize performance*`;
     }
 
     if (input.includes('python') || input.includes('javascript') || input.includes('java')) {
-      return `Great question about **programming languages**! Each has strengths:
+      return `**Programming Languages** - Tool comparison
 
-• **Python**: Easy syntax, great for data science and web development
-• **JavaScript**: Essential for web development, runs in browsers
-• **Java**: Platform-independent, strong typing, enterprise applications
+## Language Strengths:
+• **Python**: Readable syntax, data science focus
+• **JavaScript**: Web development, browser execution  
+• **Java**: Enterprise systems, strong typing
 
-Would you like to compare specific languages or learn about a particular concept?`;
+## Use Cases:
+- Python: ML, scripting, web backends
+- JavaScript: Frontend, full-stack development
+- Java: Large-scale systems, Android apps
+
+*Which language or concept interests you?*`;
     }
 
     // Generic intelligent response
-    return `I understand you're asking about "${userInput}". This is an important topic in computer science that bridges theoretical concepts with practical applications. 
+    return `I understand you're asking about "${userInput}". 
 
-Let me break this down:
-• **Core Concepts**: Fundamental principles involved
-• **Real-world Applications**: How this is used in industry
-• **Best Practices**: Recommended approaches and patterns
-• **Common Challenges**: What to watch out for
+## Topic Analysis:
+• **Core Concepts**: Foundational principles
+• **Practical Applications**: Real-world usage  
+• **Best Practices**: Industry standards
+• **Common Challenges**: Potential obstacles
 
-Would you like me to focus on any specific aspect, or shall I provide a comprehensive overview?`;
+## Let me help you explore:
+Would you prefer a comprehensive overview or focus on specific aspects?
+
+*Your curiosity drives our learning journey*`;
   }, [knowledgeBase]);
 
   const handleSend = useCallback(async (customInput = null) => {
@@ -1461,6 +2171,8 @@ Would you like me to focus on any specific aspect, or shall I provide a comprehe
     ]);
     setIsChatSaved(false);
     localStorage.removeItem('cs-chatbot-history');
+    setEditingMessageId(null);
+    setSelectedText('');
   }, []);
 
   const saveChat = useCallback(() => {
@@ -1493,36 +2205,68 @@ Would you like me to focus on any specific aspect, or shall I provide a comprehe
     setTheme(theme === 'dark' ? 'light' : 'dark');
   }, [theme]);
 
-  const toggleVoiceInput = useCallback(() => {
-    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-      setError('Speech recognition not supported in this browser. Try Chrome or Edge.');
-      return;
-    }
+  // Edit message functionality
+  const handleEditMessage = useCallback((messageId) => {
+    setEditingMessageId(messageId);
+  }, []);
 
-    if (!isListening) {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      const recognition = new SpeechRecognition();
-      
-      recognition.continuous = false;
-      recognition.interimResults = false;
-      
-      recognition.onstart = () => setIsListening(true);
-      recognition.onend = () => setIsListening(false);
-      recognition.onresult = (event) => {
-        const transcript = event.results[0][0].transcript;
-        setInput(transcript);
-        setIsListening(false);
-      };
-      recognition.onerror = () => {
-        setIsListening(false);
-        setError('Voice recognition failed. Please try again.');
-      };
-      
-      recognition.start();
-    } else {
-      setIsListening(false);
+  const handleSaveEdit = useCallback((messageId, newText) => {
+    setMessages(prev => prev.map(msg => 
+      msg.id === messageId ? { ...msg, text: newText } : msg
+    ));
+    setEditingMessageId(null);
+    
+    // If this was the last user message, regenerate the bot response
+    const messageIndex = messages.findIndex(msg => msg.id === messageId);
+    if (messageIndex === messages.length - 2) { // User message is second to last
+      const botMessageIndex = messageIndex + 1;
+      if (messages[botMessageIndex]?.type === 'bot') {
+        // Remove the old bot response and generate a new one
+        setMessages(prev => prev.slice(0, botMessageIndex));
+        setIsTyping(true);
+        
+        setTimeout(() => {
+          const aiResponse = findBestResponse(newText);
+          const botMessage = {
+            id: Date.now(),
+            type: 'bot',
+            text: aiResponse,
+            timestamp: new Date()
+          };
+          setMessages(prev => [...prev, botMessage]);
+          setIsTyping(false);
+        }, 1000 + Math.random() * 500);
+      }
     }
-  }, [isListening]);
+  }, [messages, findBestResponse]);
+
+  const handleCancelEdit = useCallback(() => {
+    setEditingMessageId(null);
+  }, []);
+
+  // Text selection functionality
+  const handleTextSelect = useCallback((text, messageId) => {
+    if (text && text.length > 5) { // Only show for selections longer than 5 characters
+      setSelectedText(text);
+      
+      // Get selection position
+      const selection = window.getSelection();
+      if (selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        setSelectionPosition({
+          x: rect.left + rect.width / 2,
+          y: rect.top
+        });
+      }
+    }
+  }, []);
+
+  const handleClearSelection = useCallback(() => {
+    setSelectedText('');
+    // Clear any text selection
+    window.getSelection().removeAllRanges();
+  }, []);
 
   // Theme-based colors
   const bgColor = theme === 'dark' ? modernColors.background : '#F8F8F8';
@@ -1563,6 +2307,15 @@ Would you like me to focus on any specific aspect, or shall I provide a comprehe
       }}>
         <PixelBackground theme={theme} />
       </div>
+
+      {/* Text Selection Toolbar */}
+      <TextSelectionToolbar
+        selectedText={selectedText}
+        onExportPDF={() => {}} // Handled by the PDFExportButton component
+        onClearSelection={handleClearSelection}
+        theme={theme}
+        position={selectionPosition}
+      />
 
       {/* Header */}
       <div style={{
@@ -1624,6 +2377,7 @@ Would you like me to focus on any specific aspect, or shall I provide a comprehe
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <BulkCopyButton messages={messages} theme={theme} />
           <ThemeSwitch theme={theme} onThemeChange={handleThemeChange} />
           <DownloadButton onClick={saveChat} isSaved={isChatSaved} theme={theme} />
           <DeleteButton onClick={clearChat} theme={theme} />
@@ -1687,6 +2441,12 @@ Would you like me to focus on any specific aspect, or shall I provide a comprehe
               message={message} 
               onFeedback={handleFeedback}
               theme={theme}
+              onEdit={handleEditMessage}
+              isEditing={editingMessageId === message.id}
+              onSaveEdit={handleSaveEdit}
+              onCancelEdit={handleCancelEdit}
+              selectedText={selectedText}
+              onTextSelect={handleTextSelect}
             />
           ))}
           
@@ -1791,7 +2551,7 @@ Would you like me to focus on any specific aspect, or shall I provide a comprehe
                   width: '100%',
                   minHeight: '60px',
                   maxHeight: '120px',
-                  padding: '16px 120px 16px 20px',
+                  padding: '16px 70px 16px 20px',
                   backgroundColor: cardBg,
                   border: `2px solid ${borderColor}`,
                   borderRadius: '16px',
@@ -1813,31 +2573,6 @@ Would you like me to focus on any specific aspect, or shall I provide a comprehe
                 }}
               />
               
-              {/* Voice Input Button */}
-              <button
-                onClick={toggleVoiceInput}
-                style={{
-                  position: 'absolute',
-                  right: '60px',
-                  bottom: '12px',
-                  width: '36px',
-                  height: '36px',
-                  backgroundColor: isListening ? modernColors.secondary : secondaryBg,
-                  border: 'none',
-                  borderRadius: '8px',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transition: 'all 0.2s ease',
-                  color: isListening ? '#FFFFFF' : textColor
-                }}
-                title="Voice Input"
-                aria-label={isListening ? "Stop voice input" : "Start voice input"}
-              >
-                {isListening ? <MicOff size={16} /> : <Mic size={16} />}
-              </button>
-
               {/* Modern Send Button */}
               <button
                 onClick={() => handleSend()}
@@ -1917,6 +2652,26 @@ Would you like me to focus on any specific aspect, or shall I provide a comprehe
           }
         }
 
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
         .send-button {
           background: ${modernColors.gradient};
           color: #FFFFFF;
@@ -1943,7 +2698,7 @@ Would you like me to focus on any specific aspect, or shall I provide a comprehe
 
         .send-button::before {
           content: "";
-          background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8cGF0aCBkPSJtNTczLjE4IDE5OC42MnYwbC0zOTYuMDkgNjMuNzE5Yy03Ljc1IDAuODU5MzgtOS40NzI3IDExLjE5NS0zLjQ0NTMgMTUuNWw5Ny4zMDEgNjguODgzLTE1LjUgMTEyLjhjLTAuODU5MzggNy43NSA3Ljc1IDEyLjkxNCAxMy43NzcgNy43NWw1NS4xMDktNDQuNzczIDI2LjY5MSAxMjQuODVjMS43MjI3IDcuNzUgMTEuMTk1IDkuNDcyNyAxNS41IDIuNTgybDIxNS4yNy0zMzguMzljMy40NDE0LTYuMDI3My0xLjcyNjYtMTMuNzc3LTguNjEzMy0xMi45MTR6bS0zNzIuODQgNzYuNjMzIDMxMy40Mi00OS45NDEtMjMzLjM0IDEwNy42M3ptNzQuMDUxIDE2NS4zMiAxMi45MTQtOTIuMTMzYzgwLjkzOC0zNy4wMjcgMTM5LjQ5LTY0LjU3OCAyMjkuMDQtMTA1LjkxLTEuNzE4OCAxLjcyMjctMC44NTkzNyAwLjg1OTM4LTI0MS45NSAxOTguMDR6bTg4LjY4OCA4Mi42Ni0yNC4xMDktMTEyLjggMTk5Ljc3LTE2Mi43NHoiIGZpbGw9IiNmZmYiLz4KPC9zdmc+Cg==");
+          background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTyiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8cGF0aCBkPSJtNTczLjE4IDE5OC42MnYwbC0zOTYuMDkgNjMuNzE5Yy03Ljc1IDAuODU5MzgtOS40NzI3IDExLjE5NS0zLjQ0NTMgMTUuNWw5Ny4zMDEgNjguODgzLTE1LjUgMTEyLjhjLTAuODU5MzggNy43NSA3Ljc1IDEyLjkxNCAxMy43NzcgNy43NWw1NS4xMDktNDQuNzczIDI2LjY5MSAxMjQuODVjMS43MjI3IDcuNzUgMTEuMTk1IDkuNDcyNyAxNS41IDIuNTgybDIxNS4yNy0zMzguMzljMy40NDE0LTYuMDI3My0xLjcyNjYtMTMuNzc3LTguNjEzMy0xMi45MTR6bS0zNzIuODQgNzYuNjMzIDMxMy40Mi00OS45NDEtMjMzLjM0IDEwNy42M3ptNzQuMDUxIDE2NS4zMiAxMi45MTQtOTIuMTMzYzgwLjkzOC0zNy4wMjcgMTM5LjQ5LTY0LjU3OCAyMjkuMDQtMTA1LjkxLTEuNzE4OCAxLjcyMjctMC44NTkzNyAwLjg1OTM4LTI0MS45NSAxOTguMDR6bTg4LjY4OCA4Mi42Ni0yNC4xMDktMTEyLjggMTk5Ljc3LTE2Mi43NHoiIGZpbGw9IiNmZmYiLz4KPC9zdmc+Cg==");
           height: 50px;
           background-repeat: no-repeat;
           position: absolute;
