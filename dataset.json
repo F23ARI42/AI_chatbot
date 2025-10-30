@@ -21030,5 +21030,57 @@
   {
     "input": "Conclusion",
     "output": "BLEU are ROUGE are two of the most widely used performance evaluation metrics for evaluating NLP based models, especially in tasks related to machine translation and text summarization. Both scores are effective and serve different purpose focusing on different tasks, like BLEU emphasizes the precision, like how much of the generated output appears in the reference, and ROUGE focuses on recall, like how much of the reference appears in the generated output.\nKey Takeaways:\nBLEU is very useful in evaluating translation models, where the precision is more important, and ofcourse it penalizes shorter candidate sentences.\nROUGE is most likely suitable for tasks related to text summarization, where the length of the generated output is usually shorter than the reference, and recall is a key factor here.\nWhile these both metrics BLEU and ROUGE are very useful, they should be done with human evaluation for some tasks that require more nuanced understanding, such as natural language generation.\nWith the full understanding of BLEU and ROUGE scores for NLP evaluation, you can completely assess your NLP models on your own using these performance evaluation metrics effectively."
+  },
+  {
+    "input": "Understanding Diffusion Models",
+    "output": "Diffusion models are generative models that learn to reverse a diffusion process to generate data. The diffusion process involves gradually adding noise to data until it becomes pure noise.\nThrough this process a simple distribution is transformed into a complex data distribution in a series of small incremental steps.\nEssentially these models operate as a reverse diffusion phenomenon where noise is introduced to the data in a forward manner and removed in a reverse manner to generate new data samples.\nBy learning to reverse this process diffusion models start from noise and gradually denoise it to produce data that closely resembles the training examples."
+  },
+  {
+    "input": "Architecture of Diffusion Models",
+    "output": "The architecture of diffusion models typically involves two main components:"
+  },
+  {
+    "input": "1. Forward Diffusion Process",
+    "output": "In this process noise is incrementally added to the data over a series of steps. This is akin to aMarkov chainwhere each step slightly degrades the data by addingGaussiannoise.\nMathematically, this can be represented as:\nwhere,\nx_tis the noisy data at step t\n\\alpha_tcontrols the amount of noise added."
+  },
+  {
+    "input": "2. Reverse Diffusion Process",
+    "output": "The reverse process aims to reconstruct the original data by denoising the noisy data in a series of steps reversing the forward diffusion.\nThis is typically modelled using aneural networkthat predicts the noise added at each step:\nwhere,\n\\mu_\\thetaand\\sigma_\\thetaare learned parameters."
+  },
+  {
+    "input": "Working Principle of Diffusion Models",
+    "output": "During training the model learns to predict the noise added at each step of the forward process. This is done by minimizing aloss functionthat measures the difference between the predicted and actual noise.\nThe forward process involves gradually corrupting the datax_0with Gaussian noise over a sequence of time steps\nLetx_trepresent the noisy data at time step t. The process is defined as:\nwhere\\beta_tis the noise schedule that controls the amount of noise added at each step and\\epsilonis is Gaussian noise.\nAs t increases,x_tbecomes more noisy until it approximates a Gaussian distribution."
+  },
+  {
+    "input": "Reverse Process (Denoising)",
+    "output": "The reverse process aims to reconstruct the original datax_0from the noisy datax_Tat the final time step T.\nThis process is modelled using a neural network to approximate the conditional probabilityp_\\theta(x_{t-1} | x_t).\nThe reverse process can be formulated as:\nwhere\\epsilon_\\thetais a neural network parameterized by\\thetathat predicts the noise."
+  },
+  {
+    "input": "Training Diffusion Models",
+    "output": "The training objective for diffusion models involves minimizing the difference between the true noise\\epsilonadded in the forward process and the noise predicted by the neural network\\epsilon_\\theta.\nThe score function which estimates the gradient of the data distribution concerning the noise plays an important role in guiding the reverse process.\nThe loss function is typically the mean squared error (MSE) between these two quantities:\nThis encourages the model to accurately predict the noise and, consequently, to denoise effectively during the reverse process."
+  },
+  {
+    "input": "Step 2: Beta Schedule and Noise Schedule",
+    "output": "Defines how much noise is added at each time step. It increases linearly over time starting with a small value and ending with a larger one."
+  },
+  {
+    "input": "Step 3: Forward Diffusion Process",
+    "output": "Gradually adds Gaussian noise to the original image across many steps. The image becomes more and more noisy with each step."
+  },
+  {
+    "input": "Step 4: Neural Network (U Net or simple CNN)",
+    "output": "A simple convolutional neural network that takes the noisy image and the time step and learns to predict the noise that was added."
+  },
+  {
+    "input": "Step 5: Training Loop",
+    "output": "The model is trained using many noisy images to minimize the difference between the actual and predicted noise (mean squared error)."
+  },
+  {
+    "input": "Step 6: Sampling (Reverse Process)",
+    "output": "Starts from pure noise and uses the model to remove noise step by step generating a clean image at the end."
+  },
+  {
+    "input": "Step 7: Running the Model",
+    "output": "It sets up the device initializes the model and optimizer, loads the data and starts training. After training it generates 16 sample images from noise and displays them in a 4×4 grid.\nOutput:"
   }
 ]
