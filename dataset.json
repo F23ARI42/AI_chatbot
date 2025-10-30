@@ -21326,5 +21326,25 @@
   {
     "input": "Applications",
     "output": "Image embeddings transforms images into numerical representations to perform image search, object recognition, and image generation.\nProduct embeddings gives personalized recommendations in the field of e-commerce by finding similar products based on user preferences and purchase history.\nAudio embeddings can be used to transform audio data into embeddings to revolutionize music discovery and speech recognition.\nTime series data can be converted into embeddings to uncover hidden patterns and make accurate predictions.\nGraph data like social networks can be represented as vectors to analyze complex relationships and extract valuable features.\nDocument embeddings can be used to transform documents into embeddings that can be used in power efficient search engines."
+  },
+  {
+    "input": "What are Embeddings?",
+    "output": "Embeddingsare dense numerical representations of data such as words, sentences, images or audio mapped into a continuous high dimensional space where similar items are positioned closer together.\nMachine learning models that capture semantic meaning, context and relationships within the data generates them.\nInstead of comparing raw text or media directly embeddings allow systems to measure similarity through mathematical distance metrics like cosine similarity or Euclidean distance for faster search and extraction.\nThis makes them important for tasks such as semantic search, recommendation systems, clustering, classification and cross lingual matching."
+  },
+  {
+    "input": "How do they Work?",
+    "output": "Embeddings work by converting raw data like text, images or audio into dense numerical vectors that preserve meaning and relationships.\nFirst the input is processed through a model such as a transformer for text or a CNN for images to extract key features.\nThese features are then encoded into fixed length vectors in a high dimensional space where similar items are positioned close together and dissimilar ones are farther apart.\nThis spatial arrangement allows similarity to be measured mathematically enabling applications like search, recommendations and classification to operate based on meaning rather than exact matches."
+  },
+  {
+    "input": "Popular Vector Databases",
+    "output": "Pinecone:Fully managed, cloud native vector database with high scalability and low latency search.\nWeaviate:Open source, supports hybrid (keyword + vector) search and offers built in machine learning modules.\nMilvus:Highly scalable, open source database optimized for large scale similarity search.\nQdrant:Open source, focuses on high recall, performance and ease of integration with AI applications.\nChromadb:Lightweight, developer friendly vector database often used in LLM powered applications."
+  },
+  {
+    "input": "Implementation",
+    "output": "This code uses FAISS to store 3 sample vectors and perform a similarity search using L2 distance. The query_vector is compared to all stored vectors and the indices and distances of the top 2 most similar vectors are returned.\nOutput:"
+  },
+  {
+    "input": "Applications",
+    "output": "Image and Video Search:Finds visually similar media from a database. Feature embeddings are extracted from media files and stored in the vector database. When a new image or frame is queried, the system quickly retrieves the most visually similar results.\nQuestion Answering Systems:Retrieves the most relevant information from large knowledge bases. The system embeds both queries and stored text then compares their vectors to find the closest match. This improves accuracy compared to simple keyword matching.\nCross Lingual Information Retrieval:Supports matching across multiple languages using multilingual embeddings. Text in different languages is converted into a shared embedding space. This allows searching in one language and retrieving relevant results in another.\nFraud and Anomaly Detection:Identifies unusual patterns by comparing embeddings with normal data. The database can store embeddings of typical behavior and detect deviations. This helps in early identification of fraudulent or suspicious activities."
   }
 ]
