@@ -20270,5 +20270,45 @@
   {
     "input": "5. DaLLE Tool",
     "output": "The DaLLE Tool is used to generate images based on textual descriptions. It integrates withOpenAI’s DALL-Emodel, allowing the agent to create unique and high-quality images from user-provided prompts.\nimage_description:The textual description that tells the model what to generate.\nOutput:"
+  },
+  {
+    "input": "Why is Perplexity Important for LLM Evaluation?",
+    "output": "Perplexity is an important metric because it helps us assess how well alarge language model  (LLM)is predicting the next token in a sequence. Here's why perplexity matters:"
+  },
+  {
+    "input": "How is Perplexity Calculated?",
+    "output": "First, we need to compute thelog probabilityof the model’s predictions for each word in the sequence. Here’s a simplified version of the process:\nPerplexity for a sequence of words can be computed as:\n\\text{Perplexity} = \\exp\\left( -\\frac{1}{N} \\sum_{i=1}^{N} \\log p(w_i | w_{i-1}, w_{i-2}, \\dots, w_1) \\right)\nwhere,\np(w_i \\mid w_{i-1}, \\dots, w_1)is the predicted probability of thei^{\\text{th}}word.\nNis the total number of words in the sequence.\nThis formula tells us how many words, on average, the model is choosing from when predicting the next word. A lower perplexity indicates fewer choices, meaning the model is more confident."
+  },
+  {
+    "input": "Step 1: Import Required Libraries",
+    "output": "The first step is to import the necessary libraries. We need the torch library for handling tensor computations."
+  },
+  {
+    "input": "Step 2: Load Pre-Trained GPT-2 Model and Tokenizer",
+    "output": "In this step, we load the pre-trained GPT-2 model and tokenizer.\nAutoTokenizer.from_pretrained(model_name):Loads the tokenizer for a pre-trained model.\nAutoModelForCausalLM.from_pretrained(model_name):Loads the language model for causal language modeling (GPT-2 in this case).\ntokenizer.pad_token = tokenizer.eos_token:Sets the end-of-sequence token (EOS) as the padding token, ensuring the model processes padding correctly."
+  },
+  {
+    "input": "Step 3: Define the Perplexity Calculation Function",
+    "output": "This function computes perplexity for a batch of input texts."
+  },
+  {
+    "input": "Step 4: Running the Example",
+    "output": "Finally, we run thecompute_perplexity_for_batch()function on a batch of input texts to compute and print the perplexity scores.\nOutput:"
+  },
+  {
+    "input": "Advantages of Perplexity",
+    "output": "Perplexity offers several advantages, making it a widely-used metric for evaluating language models. Let's explore its key benefits:"
+  },
+  {
+    "input": "Limitations of Perplexity",
+    "output": "Despite its advantages, perplexity has its limitations. While it’s an important metric, it doesn’t tell the full story. Let’s move into some of its challenges:"
+  },
+  {
+    "input": "Using Perplexity Alongside Other Metrics",
+    "output": "Perplexity is an essential evaluation metric for large language models (LLMs), but it is not enough to rely solely on perplexity when assessing a model’s performance. To get a more comprehensive view of how well a model is performing, it's crucial to useperplexityin combination with other metrics:\nBy combiningperplexitywith these additional metrics, we can better evaluate a model’spredictive accuracy,fluencyandreal-world usability. This combination allows us to detect models that not only predict correctly but also do so with confidence and coherence."
+  },
+  {
+    "input": "Real-World Applications of Perplexity",
+    "output": "Let’s look at some practical scenarios where perplexity is widely used in the evaluation of language models:\nBy incorporating perplexity into your evaluation pipeline, you can gain deeper insights into your model's predictive confidence, guiding further improvements and making your AI applications more reliable and efficient."
   }
 ]
