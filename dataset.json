@@ -20738,5 +20738,29 @@
   {
     "input": "7. Analysis of Augmented Data",
     "output": "Show proportion of original vs. augmented data\nOutput:\nHere we can see that our model is working fine."
+  },
+  {
+    "input": "What are Tokens?",
+    "output": "In the context ofLLMs, atokenis a basic unit of text that the model processes. A token can represent various components of language, including:\nWords: In many cases, a token corresponds to a single word (e.g., \"apple,\" \"run,\" \"quick\").\nSubwords: For languages with a rich morphology or for more efficient processing, words may be split into subword tokens. For example, \"unhappiness\" might be split into \"un,\" \"happi,\" and \"ness.\"\nPunctuation: Punctuation marks like periods, commas, and exclamation marks are also treated as individual tokens.\nSpecial Tokens: Special tokens are used for specific purposes, such as indicating the beginning or end of a sentence, padding tokens, or tokens for unknown words.\nLLMs have a maximum number of tokens they can process in a single request. This limit includes both the input (prompt) and the output (generated text).\nFor example:\nGPT-4 has a context window of 8,192 tokens, with some versions supporting up to 32,768 tokens.\nExceeding this limit requires truncating or splitting the text."
+  },
+  {
+    "input": "What is Context Window?",
+    "output": "Acontext windowrefers to the span of text (usually in terms of tokens) that a model can consider at one time when making predictions or generating text. In simpler terms, it is the \"lookback\" or the amount of previous information that the model uses to make sense of the current input.\nLLMs, such as GPT-based models, rely heavily on context windows to predict the next token in a sequence. The larger the context window, the more information the model can access to understand the meaning of the text. However, context windows are finite, meaning that models can only consider a certain number of tokens from the input sequence before the context is truncated."
+  },
+  {
+    "input": "Importance of Context Windows",
+    "output": "Understanding Relationships: The context window helps the model understand relationships between tokens and words. For example, the context window allows the model to capture sentence structure, grammar, and even long-range dependencies (like subject-verb agreement).\nText Generation: When generating text, the context window allows the model to predict the next word or token based on the input text. The model's ability to generate coherent and contextually relevant text relies on having enough context.\nThe size of the context window directly impacts the model’s performance. If the window is too small, the model may lose the ability to consider important context, which can affect accuracy and coherence. On the other hand, larger context windows require more computation and memory, which can increase processing time and cost."
+  },
+  {
+    "input": "Tokenization in LLMs",
+    "output": "Modern LLMs typically use a form ofsubword tokenization(e.g.,Byte Pair Encoding, WordPiece, or SentencePiece) to handle a diverse vocabulary. This method ensures that words or phrases are broken down into smaller, more manageable parts, allowing the model to handle a broader range of inputs without requiring an immense vocabulary.\nThis way, even words that the model has never seen before can be processed effectively."
+  },
+  {
+    "input": "Context Windows in Transformer Models",
+    "output": "Transformer-based models, such as GPT, BERT, and T5, leverage self-attention mechanisms that allow the model to focus on different parts of the input sequence. The context window in these models is defined by the maximum number of tokens that can be processed in parallel.\nAs the model moves through the text, the context window \"slides\" over the sequence, considering the most recent tokens within the window. This sliding window approach allows the model to maintain relevance to the most recent parts of the input while discarding older, less relevant tokens.\nThe following table outlines the tokenization technique and context window size of LLMs:"
+  },
+  {
+    "input": "Trade-offs and Considerations",
+    "output": "Understanding these concepts is key to optimizing LLM performance, whether you're training a new model or working with existing ones. As the field of natural language processing continues to evolve, future innovations may focus on improving how models handle tokens and context windows to create even more powerful and efficient LLMs."
   }
 ]
