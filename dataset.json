@@ -20538,5 +20538,25 @@
   {
     "input": "Conclusion",
     "output": "We can conclude that, RAG and Fine-tuning both are good strategies to enhance an NLP model, but everything depends on what type of tasks we are going to perform. Remember that both strategies start with pre-trained models and RAG does not has any overfitting problem but can generate biased output. In the other hand, fine-tuning does not generate biased data but if we start with wrong pre-trained model then Fine-tuning becomes useless. Ultimately, the choice between RAG and Fine-tuning depends on the specific tasks and requirements at hand."
+  },
+  {
+    "input": "1. Traditional QA Systems",
+    "output": "Traditional QA models generally fall into two main categories:\nExtractive QA:These models, like BERT, scan a given text corpus to find and return the most relevant passage as an answer.\nGenerative QA:Models like GPT generate responses based on their pre-trained knowledge, but they can sometimes produce misleading or incorrect answers if the information isn’t in their training data.\nHow They Work?\nProcessing the Question:Converts the user’s query into numerical representations (embeddings) to help the model understand its meaning.\nFinding Relevant Documents:Uses similarity scoring to match the query with stored knowledge (for extractive models).\nGenerating an Answer:Either extracts a relevant portion of text (extractive) or generates a response from learned patterns (generative).\nLimitations of Traditional QA Systems\nTheir knowledge isstatic—they can’t update themselves with new information.\nThey oftenstruggle with complex reasoningor multi-step questions.\nGenerative models mayhallucinate facts, meaning they sometimes make up information."
+  },
+  {
+    "input": "2. RAG-Based QA Systems",
+    "output": "Retrieval-Augmented Generation (RAG) improves traditional QA by integrating an external search mechanism, allowing the system to pull in fresh, relevant data before generating a response.\nHow RAG Works?\nRetriever:Fetches relevant documents from an external source such as Wikipedia or an internal database.\nGenerator:Uses an advanced language model (like GPT) to generate a response based on the retrieved information.\nFusion Mechanism:Combines retrieved knowledge with the model’s internal knowledge to produce an informed answer.\nWhy RAG is Different?\nItaccesses real-time information, keeping responses current.\nItreduces hallucination, since answers are grounded in actual retrieved documents.\nIt’smore scalable, allowing it to handle a broader range of questions across different domains."
+  },
+  {
+    "input": "Performance Comparison between QA system and RAG",
+    "output": "While RAG significantly improves accuracy and depth, it doesrequire more computational power and timethan traditional QA models."
+  },
+  {
+    "input": "Where Traditional QA Works Well?",
+    "output": "Chat-bots & Virtual Assistants(e.g., Siri, Google Assistant) – Responding to common user queries efficiently.\nSearch Engines– Extracting direct answers from indexed web content.\nCustomer Support Automation– Handling FAQs and standard inquiries quickly."
+  },
+  {
+    "input": "Where RAG Excels?",
+    "output": "Enterprise Knowledge Retrieval: Companies use RAG-powered AI to sift through internal documents and provide employees with precise information.\nOpen-Domain Question Answering: AI research assistants leverage RAG to pull from live sources for up-to-date responses.\nAI-Powered Tutoring Systems: Adaptive learning platforms can deliver explanations based on the latest educational content.\nHealthcare & Legal Advisory: Professionals rely on AI-driven tools to access accurate, updated medical and legal information.\nTherefore , traditional QA systems are great for providing structured answers based on their training data whereas, RAG bridges this gap by dynamically fetching knowledge from external sources, making its responses far more accurate and contextually relevant."
   }
 ]
