@@ -20998,5 +20998,37 @@
   {
     "input": "Conclusion",
     "output": "We can conclude that various types of visualization tasks help us to understand the behavior of audio signals very effectively. Also understanding audio signal is very essential task for audio classification, music genre classification and speed recognition."
+  },
+  {
+    "input": "Introduction to BLEU and ROUGE Scores",
+    "output": "Two of the most commonly used performance evaluation metrics used for NLP models are BELU (Bilingual Evaluation Understudy) and ROUGE (Recall-Oriented Understudy for Gisting Evaluation) Scores.\nBLEU Score:It is a measure of the precision of n-grams in the model output, against the reference text, that is human-generated. This is initially designed for machine translations tasks, but it's been adopted widely across several NLP tasks. BLEU stands for Bilingual Evaluation Understudy.\nROUGE Score:It is specifically more focused on recall. It compares overlapping units like n-grams, words sequences, and word-pairs, in both generated text and the reference text. ROUGE scores commonly used for specific NLP tasks like text summarization. ROUGE stands for Recall-Oriented Understudy for Gisting Evaluation."
+  },
+  {
+    "input": "1. BLEU Score",
+    "output": "The BLEU score is basically a measure of how many words in the machine-generated text appearing in the reference human-generated text. The basic idea is to evaluate precision by calculating the count of n-grams (combination of n words), in the generated text appearing in the reference. BELU primarily uses precision, but it also adds a brevity penalty term inorder to avoid the overly short outputs, that are favoring.\nKey Components of BLEU:\nN-gram Precision:BLEU evaluates precision for different n-gram sizes. The typical range of n-grams size is from 1-grams (single words) to 4-grams (phrases of four words).\nBrevity Penalty:Penalty is received for the shorter candidate sentences that match well with the reference. This is needed to avoid inflating the score artificially.\nWeighted Average:The precision scores for different n-gram sizes are combined into a single score by BLEU.\nFormula for BLEU Score:\nBLEU = BP \\cdot \\exp\\left( \\sum_{n=1}^{N} w_n \\log p_n \\right)\nWhere:\nBLEU is the Bilingual Evaluation Understudy Score,\nBP is the Brevity Penalty,\nw_nare the weights for the n-gram precisions (typically set to equal weights),\np_nis the precision for n-grams."
+  },
+  {
+    "input": "2. ROUGE Score",
+    "output": "As discussed, the ROUGE scores is primarily based on Recall, and it was actually designed keeping in the mind of text-summarization, where the model-generated text is usually shorter than the reference text. ROUGE basically compares  n-grams, word pairs, and word sequences between the reference and candidate summaries.\nKey ROUGE Metrics\nROUGE-N:It measures the n-gram overlap between the generated text and reference text.\nROUGE-L:It takes the longest common subsequences (LCS), that are useful for capturing structural similarity.\nROUGE-W:It weighs contiguous matches that are higher than other n-grams.\nROUGE-S:It measures skip-bigram overlap, where two words are considered, but they may not be adjacent.\nFormula for ROUGE-N:\nROUGE-N = \\frac{\\text{Number of matching n-grams}}{\\text{Total n-grams in the reference}}\nROUGE-L Formula (Longest Common Subsequence-based):\nROUGE - L = F_{\\beta} = \\frac{(1 + \\beta^2) \\cdot P \\cdot R}{\\beta^2 \\cdot P + R}\nWhere:\nP is precision\nR is recall\n\\betais typically set to 1."
+  },
+  {
+    "input": "1. Using \"evaluate\" library",
+    "output": "Ensure that the \"evaluate\" library is already installed in your operating system. Use pip if your operating system is Windows, and pip3 if your operating system is Mac/Linux.\nNow, let's dive into the code that calculates the BLEU and ROUGE scores using the python library \"evaluate\":\nOutput:\nThe BLEU score is calculated by using the tokenized version of the reference and candidate texts, and the score is scaled to be a percentage between 0 to 100 for better readability.\nThe evaluate library calculates various ROUGE scores like ROUGE-1, ROUGE-L, etc, and the F1 score is displayed for each."
+  },
+  {
+    "input": "2. Using \"NLTK\" library",
+    "output": "Ensure that the \"NLTK\" library is already installed in your operating system. Use pip if your operating system is Windows, and pip3 if your operating system is Mac/Linux.\nNow, let's dive into the code that calculates the BLEU and ROUGE scores using the python library \"NTLK\":\nOutput:\nThe BLEU score is calculated by using the \"sentence_bleu\" function from NLTK library, the reference and candidate sentences are tokenized using NLTK's \"word_tokenize\" function.\nThe ROUGE-1 and ROUGE-L scores are calculated using the rouge_scorer from the rouge-score library."
+  },
+  {
+    "input": "3. Using \"sacreBLEU\" library",
+    "output": "Ensure that the \"sacreBLEU\" library is already installed in your operating system. Use pip if your operating system is Windows, and pip3 if your operating system is Mac/Linux.\nNow, let's dive into the code that calculates the BLEU and ROUGE scores using the python library \"sacreBLEU\":\nOutput:\nThe BLEU score is calculated for the 4-grams, so by default it is BLEU-4.\nThe ROUGE-1 and ROUGE-L scores are calculated, which shows the degree of n-gram and longest common subsequence overlap."
+  },
+  {
+    "input": "BLEU vs. ROUGE: When to Use Which?",
+    "output": "Both BLEU and ROUGE scores serve different purposes. BLEU is more suited for tasks where precision is important, such as machine translation, where it is necessary to generate grammatically and contextually correct sentences. ROUGE, on the other hand, is recall-oriented, making it better for summarization tasks where it is more important to capture all key points rather than the exact phrasing.\nUse BLEUwhen evaluating machine translation tasks, where precision and fluency are critical.\nUse ROUGEfor summarization tasks where capturing key ideas and recall is more important than exact wording."
+  },
+  {
+    "input": "Conclusion",
+    "output": "BLEU are ROUGE are two of the most widely used performance evaluation metrics for evaluating NLP based models, especially in tasks related to machine translation and text summarization. Both scores are effective and serve different purpose focusing on different tasks, like BLEU emphasizes the precision, like how much of the generated output appears in the reference, and ROUGE focuses on recall, like how much of the reference appears in the generated output.\nKey Takeaways:\nBLEU is very useful in evaluating translation models, where the precision is more important, and ofcourse it penalizes shorter candidate sentences.\nROUGE is most likely suitable for tasks related to text summarization, where the length of the generated output is usually shorter than the reference, and recall is a key factor here.\nWhile these both metrics BLEU and ROUGE are very useful, they should be done with human evaluation for some tasks that require more nuanced understanding, such as natural language generation.\nWith the full understanding of BLEU and ROUGE scores for NLP evaluation, you can completely assess your NLP models on your own using these performance evaluation metrics effectively."
   }
 ]
