@@ -21346,5 +21346,41 @@
   {
     "input": "Applications",
     "output": "Image and Video Search:Finds visually similar media from a database. Feature embeddings are extracted from media files and stored in the vector database. When a new image or frame is queried, the system quickly retrieves the most visually similar results.\nQuestion Answering Systems:Retrieves the most relevant information from large knowledge bases. The system embeds both queries and stored text then compares their vectors to find the closest match. This improves accuracy compared to simple keyword matching.\nCross Lingual Information Retrieval:Supports matching across multiple languages using multilingual embeddings. Text in different languages is converted into a shared embedding space. This allows searching in one language and retrieving relevant results in another.\nFraud and Anomaly Detection:Identifies unusual patterns by comparing embeddings with normal data. The database can store embeddings of typical behavior and detect deviations. This helps in early identification of fraudulent or suspicious activities."
+  },
+  {
+    "input": "Importance of AI Prompt",
+    "output": "Directs Output:The prompt determines what the AI generates, how relevant it is and whether it meets your needs.\nImproves Accuracy:Clear, specific prompts reduce misunderstandings and produce more precise, useful responses.\nSaves Time:Well-crafted prompts minimize trial and error, speeding up workflows and improving productivity.\nEnables Complex Tasks:Good prompts allow you to use AI for sophisticated tasks like summarization, data extraction or creative writing.\nEnhances User Experience:Effective prompts make AI interactions smoother, more intuitive and more valuable."
+  },
+  {
+    "input": "Types of AI Prompts",
+    "output": "Other types include translation, dialogue, problem-solving, etc are specialized forms or combinations of these."
+  },
+  {
+    "input": "1. Define the Task :",
+    "output": "Clearly state what you want the AI to do."
+  },
+  {
+    "input": "2. Be Specific :",
+    "output": "Provide necessary details and context to guide the AI."
+  },
+  {
+    "input": "3. Use Clear Instructions",
+    "output": "Avoid ambiguity; state requirements directly."
+  },
+  {
+    "input": "4. Consider Audience",
+    "output": "Indicate the target reader or use case if relevant."
+  },
+  {
+    "input": "5. Prefer Open-Ended Questions",
+    "output": "Encourage richer, more informative responses.\nTip :Structure your prompt for clarity and refine as needed for better results."
+  },
+  {
+    "input": "Applications of AI Prompts",
+    "output": "AI prompts have a wide range of applications across various fields. Here are some key areas where AI prompts can be applied:"
+  },
+  {
+    "input": "Challenges and ethical concerns with AI Prompt",
+    "output": "Harmful or Biased Outputs:Poorly designed prompts can lead to offensive or skewed results.\nData Privacy:Prompts may contain sensitive or personal information.\nUnintended Outputs:Ambiguous prompts can cause irrelevant or misleading answers.\nAI Hallucinations:The model may generate plausible but incorrect information.\nModel Limitations:Different models may interpret the same prompt differently so always fact-check outputs."
   }
 ]
