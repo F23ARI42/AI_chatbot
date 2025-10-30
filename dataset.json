@@ -21762,5 +21762,25 @@
   {
     "input": "Conclusion",
     "output": "In conclusion, text analytics works by breaking down language into smaller parts, figuring out what each part means, and connecting the dots to get the big picture. This process is crucial for businesses, social media, and more. Imagine a company getting tons of customer reviews. It's impossible for humans to read them all, right? Text analytics steps in, quickly figuring out if people are happy or not by spotting words like love or disappointed. It's a language detective for computers! So, whether it's analyzing social media, improving products from customer feedback, or creating smart chatbots, text analytics is the secret sauce. It's like giving computers the power to understand us better in this world full of words."
+  },
+  {
+    "input": "Working of Zero-Shot Chain-of-Thought Prompting",
+    "output": "1. Task Understanding: When an AI model is given a prompt, it understands the task and breaks it down into logical steps, even if it has never seen a similar problem.For example, when asked to solve \"What is the sum of 273 and 842?\" AI understands the problem and moves through each step accordingly.\nResponse 1: \"273 + 842\"\nResponse 2: \"First, add 270 and 840, which gives 1110. Then add the remaining 5 to get the final answer.\"\nResponse 3: \"Sum of 273 and 842 is 273 plus 842.\"\n2. Step-by-Step Reasoning: It generates intermediate reasoning steps to understand and solve the problem. It uses the general knowledge of tasks like arithmetic to perform calculations or logical steps.\n3. Final Answer: The Final answer is calculated after following through each reasoning process. Also, when required, the model will combine the reasoning steps to ensure consistency and accuracy."
+  },
+  {
+    "input": "Example of Zero-Shot Chain-of-Thought in Action: Problem that Requires Reasoning:",
+    "output": "Without Zero-Shot CoT (Single Response):\nModel Answer: \"I have 8 oranges left.\"\nThis answer is based on a simple arithmetic answer. However, with zero-shot CoT, the reasoning process would break it down into more steps.\nWith Zero-Shot CoT (Multiple Reasoning Steps):\nResponse 1: \"I start with 15 oranges. If I give away 7, I subtract 7 from 15, leaving me with 8.\"\nResponse 2: \"15 minus 7 equals 8.\"\nResponse 3: \"Subtracting 7 from 15 gives me 8 oranges.\"\nFinal Answer: Since all responses agree the model selects 8 as the final answer."
+  },
+  {
+    "input": "Zero-shot CoT vs CoT Prompting",
+    "output": "Let's see a clear understanding of the differences between CoT and Zero-Shot CoT in the table below."
+  },
+  {
+    "input": "Challenges of Zero-Shot Chain-of-Thought Prompting",
+    "output": "Despite its many advantages, it also have several challenges that need to be solved for optimal performance:"
+  },
+  {
+    "input": "Applications of Zero-Shot Chain-of-Thought Prompting",
+    "output": "Zero-Shot CoT allows us to handle different tasks easily without needing any special training for each one. This flexibility makes AI more adaptable to new situations. As it improves Zero-shot CoT helps in solving a range of problems across various fields."
   }
 ]
