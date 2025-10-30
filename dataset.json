@@ -20966,5 +20966,37 @@
   {
     "input": "4. Self-Aware AI: Theoretical Consciousness",
     "output": "Self-Aware AI is the most advanced and hypothetical form of artificial intelligence. These systems have consciousness and the ability to reflect on their own mental states. They could make autonomous decisions based on internal motivations or beliefs and would be a fundamental leap in machine intelligence.\nKey Characteristics:\nConscious Awareness:Understands its own existence, internal state and possibly the emotional impact of its actions.\nIndependent Learning:Learns not just from data but also from self-reflection or goal setting.\nEthical and Existential Challenges:Raises questions about rights, autonomy and potential risks if systems exceed human control.\nExamples:\nScience Fiction AI:HAL 9000 (2001: A Space Odyssey), Ava (Ex Machina) depict machines that are fully self-aware, capable of making independent decisions based on their perceived identity and purpose.\nTheoretical AI Models:Currently explored only in philosophy and advanced ethics research, no existing AI systems possess genuine self-awareness or consciousness."
+  },
+  {
+    "input": "Audio data",
+    "output": "Audio is the representation of sound as a set of electrical impulses or digital data. It is the process of converting sound into an electrical signal that may be stored, transferred, or processed. The electrical signal is subsequently transformed back into sound, which a listener may hear.\nAudio is a way to communicate our lives, and it influences how we connect with one another and perceive the world around us.\nFor this implementation, we need an audio data file (.wav).  Let's understand audio data using 'Recording.wav', which can be directly downloaded fromhere. You can use any audio file (.wav) at your convenience."
+  },
+  {
+    "input": "Importing libraries",
+    "output": "At first, we will import all the requiredPythonlibraries, likeLibrosa,NumPy,MatplotlibandSciPy.\nLibrosais a Python package for analyzing music and audio. It offers the components required to build music information retrieval systems.\nScipyis a library used for scientific computation that offers helpful functions forsignal processing, statistics, and optimization.\nSoundfileis a library to read and write sound files."
+  },
+  {
+    "input": "Sampling and sampling rate",
+    "output": "To understand the audio data, first we need to understand the Sampling and sampling rate.\nSampling:We can understand audio signal very effectively by sampling in which continuous analog audio signals converted into discrete digital values. It measures the amplitude of the audio signal at regular intervals in time.\nSampling rate:This is the number of total samples taken per second during the analog-to-digital conversion process. The sampling rate is measured in hertz (Hz).\nSince human voice has audible frequencies below 8 kHz, sampling speech at 16 kHz is adequate. A faster sample rate just raises the computing cost of processing these files.\nIn the code, we will use Librosa module to sample audio file implicitly. It will first read the audio file and then convert it into a waveform (a sequence of amplitude values) that can be processed digitally.\nOutput:\nThe sampling rate for the audio used is 48000 Hz.\nOutput:\nListen the Audio files at Double Sampling Rate:\nOutput:\nOutput:\nwe will observe from the above audio that while changing the sampling rate audio are distorted."
+  },
+  {
+    "input": "Calculating Amplitude and Bit depth",
+    "output": "Amplitude and Bit depth are two important concepts to understand the intensity of Audio Signal.\nAmplitude:It is the intensity of an audio signal at a particular point of time which corresponds to the height of the waveform at that instant of time. The amplitude is measured in decibels (dB). Human perceive amplitude of the sound wave as loudness. A rock concert can be around 125 dB, which is louder than a regular speaking voice and outside the range of human hearing.\nBit depth:How precisely this amplitude value can be defined depends on the bit depth of the sample. The digital representation more closely resembles the actual continuous sound wave the higher the bit depth. Higher bit depth results better audio quality. For common audio files Bit depths can be 8 bits, 16 bits or 24 bits. We will print the amplitude range by subtracting maximum amplitude and minimum amplitude levels.\nIn the code snippet, calculates the amplitude range of the waveform. Thesoundlifelibrary to stores the audio file in variableaudio_data.\nThe code linebit_depth = audio_data.dtype.itemsizecalculates the bit depth of the audio data by examining the data type of theaudio_dataarray and finding its item size in bytes.\nOutput:\nSo, our audio file is in  8 bits category of bit depth.\nKnowing the amplitude range and bit depth helps us to gain useful insights into the characteristics of an audio file, which is important in audio processing and analysis tasks."
+  },
+  {
+    "input": "Waveform (Time Domain) Representation",
+    "output": "A waveform is the graphical representation of  of an audio signal in the time domain where each point on the waveform represents the amplitude of the audio signal at a specific point in time. It will help us to understand how the audio signal varies over time by its revealing features like sound duration, pauses and amplitude changes.\nIn the code snippet, we have plot waveform leveraginglibrosaandmatplotlib.\nOutput:"
+  },
+  {
+    "input": "Visualizing Frequency Spectrum",
+    "output": "Frequency Spectrum is a representation of how the energy in an audio signal is distributed across different frequencies which can be calculated by applying a mathematical transformation like the Fast Fourier Transform (FFT) to the audio signal. It is  very useful for identifying musical notes, detecting harmonics or filtering specific frequency components.\nThe code snippet computes Fast Fourier Transform and plots frequency spectrum of audio usingmatplotlib.\nOutput:\nThe plot displays the frequency of the audio signal, which allows us to observe the dominant frequencies and their amplitudes."
+  },
+  {
+    "input": "Spectrogram",
+    "output": "Spectrogram is a time-frequency representation of an audio signal which provides a 2D visualization of how the frequency content of the audio signal changes over time.\nIn spectrogram, the dark regions indicate less presence of a frequency and in the other hand bright regions indicate strong presence of a frequency at a certain time. This will help is various tasks like speech recognition, musical analysis and identifying sound patterns.\nThe code snippet computes and plots the audio waveform usingmatplotliblibrary andscipy.signal.spectrogramfunction. In the code, epsilon defines a small constant to avoid division by zero. Epsilon is added to the spectrogram values before taking logarithm to prevent issues with very small values.\nOutput:\nThe plot displays spectrogram, which represents how the frequencies in the audio signal change over time. The color intensity represents whether the frequency is high or low at each time point."
+  },
+  {
+    "input": "Conclusion",
+    "output": "We can conclude that various types of visualization tasks help us to understand the behavior of audio signals very effectively. Also understanding audio signal is very essential task for audio classification, music genre classification and speed recognition."
   }
 ]
