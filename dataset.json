@@ -20858,5 +20858,97 @@
   {
     "input": "Practical Applications of Transformers",
     "output": "Transformers have proven highly effective in a variety of NLP tasks:\nText Generation:Models like GPT use Transformers to generate coherent text based on input prompts.\nMachine Translation:BERT and other Transformer-based models excel at translating text from one language to another.\nSentiment Analysis:Transformers can be fine-tuned to classify sentiment from text data.\nBuilding LLMs from scratch requires an understanding of the Transformer architecture and the self-attention mechanism. By following the steps outlined in this article you can implement your own Transformer model using PyTorch and can further fine tune it for specific tasks. Though transformers have their limitations and it’s important to consider their computational costs and data requirements in real-world applications."
+  },
+  {
+    "input": "Types of Transformer",
+    "output": "Transformer types based on Voltage Level:\nThere are primarily two types of Transformer based on the operating voltage. The following are some of them:"
+  },
+  {
+    "input": "Step-down Transformer:",
+    "output": "The primary voltage is converted to a lower voltage across the secondary output using a step-down transformer.\nThe number of windings on the primary side of a step-down transformer is more than on the secondary side. As a result, the overall secondary-to-primary winding ratio will always be less than one.\nStep-down transformer are used in electrical systems that distribute electricity over long distances and operate at extremely high voltages to ensure minimum loss and economical solutions. Step-down transformer are used to change high-voltage into low-voltage supply lines."
+  },
+  {
+    "input": "Step-up Transformer:",
+    "output": "The secondary voltage of a step-up transformer is raised from the low primary voltage.\nBecause the primary winding has fewer turns than the secondary winding in this sort of transformer, the ratio of the primary to secondary winding will be greater than one.\nStep-up transformer are frequently used in electronics stabilizers, inverters, and other devices that convert low voltage to a significantly higher voltage. A step-up transformer is also used in the distribution of electrical power. For applications connected to power distribution, high voltage is necessary. In the grid, a step-up transformer is used to raise the voltage level prior to distribution."
+  },
+  {
+    "input": "Transformer Types based on Core Material:",
+    "output": "Different types of Transformer are used in the power and electronics industries, depending on the core materials, which are:\nIron Core Transformer:Multiple soft iron plates are used as the core of an iron core transformer. The iron's strong magnetic properties of the iron core transformer have extremely high flux linkage. As a result, the iron core transformer has high efficiency. The soft iron core plates come in a variety of sizes and shapes. A few typical shapes includeE, I, U,andL.\nFerrite Core Transformer:Due to its high magnetic permeability, a ferrite core transformer uses one. In the high-frequency application, this kind of transformer provides incredibly low losses. In high-frequency applications like switch mode power supplies (SMPS), RF-related applications, etc., ferrite core transformer are used as a result.\nToroidal Core Transformer:Iron core or ferrite core are two examples of toroid-shaped core materials used in transformer. For their excellent electrical performance, toroids, which have a ring- or donut-shaped core material, are frequently used. The ring form results in very low leakageinductanceand extremely high inductance and 'Q'factors.\nAir Core transformer:The core material of an air core transformer is not a real magnetic core. The air is used solely in the air-core transformer flux linkage. The primary coil of an air-core transformer generates analternating current, producing an electromagnetic field all around it."
+  },
+  {
+    "input": "Transformer Types based on Winding Arrangement:",
+    "output": "Auto Winding transformer:\nThe primary and secondary windings have always been fixed, but with an auto-winding transformer, they can be connected in series, and the center-tapped node can be moved.\nThe secondary voltage can be altered by changing the location of the central tap. The auto is used to alert the self or a single coil and is not the abbreviation for Automatic.\nThis coil creates a ratio using main and secondary components. The main and secondary ratio is determined by the location of the center tap node, which changes the output voltage. The VARIAC, a device that generates variable AC from a steady AC input, is used the most frequently."
+  },
+  {
+    "input": "Types of Transformer based on Usage:",
+    "output": "Transformer come in a wide range of variants, each of which operates in a distinct field. Thus, based on their proposed use, transformer can be categorized as follows:\nPower Transformer:The energy is transferred to the substation or the general electrical supply using a larger power transformer. Between the major distribution grid and the power generator, this transformer serves as a link. Power Transformer can be further divided into three groups based on their power rating and specification-\n1.Small power transformer\n2. Medium power transformer, and\n3.Large power transformer\nMeasurement Transformer:Instrument transformer is another name for measurement transformer. This is yet another measurement tool that is usually utilized in the power domain. To separate the primary power and convert the current and voltage in a smaller ratio to its secondary output, a measuring transformer is used.\nDistribution Transformer:The distribution transformer function as a step-down transformer, converting high grid voltage to the appropriate voltage for the end user, typically110Vor230V. Depending on the conversion capacity or ratings, the distribution transformer might be less in size or larger.\nPulse Transformer:One of the most popular PCB-mounted transformer that generates electrical pulses with a consistent amplitude are pulse transformer. It is utilized in a number of digital circuits where the demand for isolated pulse creation exists.\nAudio Output Transformer:Another frequent transformer in the electronics industry is the audio transformer. It is specifically usedin applications involving audio where impedance matching is necessary."
+  },
+  {
+    "input": "Working Principle of a Transformer",
+    "output": "The fundamental principle of how the transformer functions are mutual induction between the two coils orFaraday's Law of Electromagnetic Induction. Below is a description of how the transformer operates. The laminated silicon steel core of the transformer is covered by two distinct windings.\nAccording to the diagram below, the primary winding is the one to which the AC supply is connected, and the secondary winding is the one to which the load is connected. Only alternating current can be used because mutual induction between the two windings requires an alternating flux.\nThe transformer primary winding produces an alternating flux, known as the mutual flux, when an alternating voltage is applied, in accordance with the mutual inductance principle.\nFrom the expression above, it is clear that the size of EMFsE1and E2is dependent on the number of turns in the transformer primary and secondary windings, respectively. IfN2> N1,thenE2> E1, and the transformer will be a step-up transformer; ifN2< N1, then E2< E1, and the transformer will be a step-down transformer.\nIf a load is now connected across the secondary winding, the load currentI2will flow through the load as a result of the EMFE2.As a result, a transformer makes it possible to transfer electricity with a change in voltage level from one electric circuit to another."
+  },
+  {
+    "input": "Parts of a Transformer",
+    "output": "A transformer majorly consists of three parts:"
+  },
+  {
+    "input": "1. Core:",
+    "output": "The transformer core serves as a support for the winding. Additionally, it offers a magnetic flux flow channel with minimal resistance. As seen in the image, the winding is looped around the core. To cut down on losses in a transformer, it has a laminated soft iron core.\nCore composition is determined by variables including operational voltage, current, and power, among others. The core diameter is negatively correlated with iron losses and directly correlated with copper losses."
+  },
+  {
+    "input": "2. Windings:",
+    "output": "The copper wires that are wound over the transformer core are known as windings. Copper cables are used because Copper's high conductivity reduces transformer loss because resistance to current flow lowers as conductivity rises. And copper's high degree of ductility makes it possible to produce incredibly thin wires out of it.\nThe two basic types of windings are. windings for the primary and secondary coils. The primary winding is the group of winding turns that receive supply current. The number of winding turns from which output is derived is known as secondary winding. Insulation coating agents are used to insulate the primary and secondary windings from one another."
+  },
+  {
+    "input": "3. Insulation Agents:",
+    "output": "Transformer require insulation to keep the windings apart and prevent short circuits. This makes mutual induction easier. Transformer stability and durability are influenced by insulation agents.\nIn a transformer, the following are employed as insulating mediums: Insulating fluid, tape, Paper, and Lamination made of wood."
+  },
+  {
+    "input": "4. Tank:",
+    "output": "A transformer main tank serves two purposes:\nThe core and the windings are protected from the elements, such as rain and dust.\nIt functions as an oil container as well as a support for all other transformer attachments."
+  },
+  {
+    "input": "5. Transformer Oil:",
+    "output": "The majority of the huge transformer are submerged in oil.\nThe transformer oil adds insulation between the conductors, improves heat dissipation from the coils, and has fault-detecting capabilities. Transformer oil is typically made of hydrocarbon mineral oil."
+  },
+  {
+    "input": "6. Oil Conservators:",
+    "output": "The oil conservator is situated above the transformer tank and bushings. Some transformer oil conservators contain a rubber bladder. When a transformer is loaded, the ambient temperature rises, causing the amount of oil inside the transformer to increase.\nThe transformer conservator tank has enough room for the increased transformer oil. It also serves as a reservoir for oil that is used to insulate buildings."
+  },
+  {
+    "input": "7. Breather:",
+    "output": "All oil-immersed transformer with conservator tank includes it.\nIt aids in the protection of the oil against moisture."
+  },
+  {
+    "input": "8. Radiators and Fans:",
+    "output": "The majority of the power lost in the transformer is dissipated as heat.\nRadiators and fans aid in the dissipation of heat generated by the transformer and provide protection against failure. The majority of dry transformer are cooled by natural air."
+  },
+  {
+    "input": "Ideal Transformer",
+    "output": "The windings of the transformer are assumed to be entirely inductive, and the core of the transformer is assumed to be loss-free when creating the ideal transformer model.\nAdditionally, the transformer has no leakage reactance (reactance is the opposition to the flow of current from the circuit element due to its inductance and capacitance).\nThis indicates that the transformer primary and secondary windings are connected to the core of the transformer at 100% flux. However, every winding must have some inductive resistance that results in voltage drop andI2Rloss.\nIn a model of an ideal transformer, the windings are assumed to be perfect (totally inductive), which means that their resistance is zero."
+  },
+  {
+    "input": "EMF Equation of Ideal Transformer",
+    "output": "Let 'Np'is the main winding's number of turns, whereas'Ns'is the secondary winding's number of turns. When an AC voltage is given to the transformer main coil, the current generated creates an alternating magnetic flux that connects the secondary coil and generates an emf.\nThe number of turns in the secondary coil determines the value of this emf. Consider an ideal (lossless) transformer with zero primary coil resistance (no voltage drop across coil) and all flux in the core connecting both primary and secondary windings.\nWhen the voltage 'Vp'is delivered to the primary coil, let be the flux linkage in each turn in the core at time 't'owing to the current in the primary coil.\nThe following three assumptions are used to get the previous relationship:\nThe primary and secondary coils' electrical resistances are insignificant.\nThe flux connectivity to both the primary and secondary coils is the same, or very few fluxes escape from the core.\nThe secondary current is insignificant."
+  },
+  {
+    "input": "Turn Ratio",
+    "output": "The power input and output will be equal if the transformer is perfect or 100 percent efficient (no energy losses).\nThe turn ratio,K, is defined in the preceding equation. If the secondary coil has more turns than the primary coil, this is the case(Ns>Np), and the voltage is stepped up(Vs>Vp). A step-up transformer is a name for this sort of setup. A step-down transformer is one in which the secondary coil has fewer turns than the primary coil(Ns<Np)."
+  },
+  {
+    "input": "Efficiency of Transformer",
+    "output": "The efficiency of a transformer is also known ascommercial efficiency. It is represented by the letter‘η’.The efficiency of a Transformer is described as the ratio of output(in W or kW)to input(in W or kW).\nHence, the efficiency of transformer may be expressed as follows:\nThe above equation can be used for an ideal transformer in which there are no transformer losses and all input energy is transferred to the output. As a result, the following equation is mostly used if transformer wastes are taken into account and the efficiency of the transformer is evaluated across the practical states."
+  },
+  {
+    "input": "Energy Losses in a Transformer",
+    "output": "We used an ideal transformer in the previous equations (without any energy losses). However, some energy losses do occur in actual transformer for the following reasons:\nFlux Leakage:Because some flux leaks from the core, not all flux generated by the primary coil make it to the secondary coil. This occurs as a result of the core's inadequate design or the presence of air holes in the core. It is possible to lower it by wrapping the primary and secondary coils over each other. It can also be lowered if the core is well-designed.\nWindings Resistance:Because the wire used for the windings has some electrical resistance, energy is wasted as a result of the heat generated in the windings. These are mitigated in high current, low voltage windings by utilizing thick wire with a high conductive substance.\nEddy Currents:The alternating magnetic flux creates eddy currents in the iron core, resulting in energy losses through heating. By using a laminated core, the impact is decreased.\nHysteresis Loss:In each AC cycle, the alternating magnetic field reverses the magnetization of the core. The loss of energy in the core occurs as heat owing to hysteresis loss, which is minimized by employing a magnetic material with a low hysteresis loss."
+  },
+  {
+    "input": "Application of Transformer",
+    "output": "The following are some of the most common uses for transformer:"
+  },
+  {
+    "input": "Example 4: Determine the primary current drawn in the transformer when the efficiency of the transformer provided is 75% and works on 100 V, 5 kVA and secondary voltage is 200 V.",
+    "output": "Also Check:\nAC Generators\nElectromotive Force\nInduced Voltage"
   }
 ]
