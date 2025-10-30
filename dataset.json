@@ -22510,5 +22510,77 @@
   {
     "input": "Frequently Asked Questions",
     "output": "Q. 2 What are the use cases of XAI?\nQ. 3 What is the benefit of Explainable AI?\nQ. 4 What are the limitations of Explainable AI?"
+  },
+  {
+    "input": "What is Falcon LLM?",
+    "output": "Falcon is an open-source model released by the Technology Innovation Institute of UAE. The Falcon family comprises model of 4 size currently - 1.8B, 7B, 40B and 180B.  Unlike other popular LLMS the falcon family of models are freely available under open-source license for further development purpose. The dataset used for training, the design principles used while designing the model and the training process is documented in detail."
+  },
+  {
+    "input": "Design Philosophy of Falcon LLM",
+    "output": "The designers of Falcon models focused on scalability across below three axes which became their design philosophy.\nThe Falcon team utilized the EleutherAI Harnes - a framework designed for the evaluation ofNLPmodels across various tasks.  They chose to center their evaluations on measuring zero/few-shot generalization. Zero-shot and few-shot generalization refer to the ability of a model to perform well on tasks it hasn't been explicitly trained on, either without any examples (zero-shot) or with only a small number of examples (few-shot)\nThere are three constraints available when training a model - Compute budget, Model size, and Dataset size. During the initial wave of large language models, the philosophy was to increase the model size to increase the model performance. Then the chinchilla paper provided a general framework and showed that not only the model size but the training data size also mattered. It gave a ballpark relationship that the training size should be at least 20 times the model parameters to optimally train a model.\nThe Falcon team laid special emphasis on the quality of data. The traditional models are commonly trained on a mixture of filtered web data and curated “high-quality” corpora. However, the Falcon team argued that properly filtered and deduplicated web data if done properly alone can lead to powerful data. The team developed high-quality data from Common Crawl which consisted of 5 trillion tokens. The team has released 600 billion tokens from this dataset for open community research.\nThe team focused on designing the model in a way that not only improved task performance but also considered hardware scalability and throughput.  They utilized a 3D parallelism strategy and optimizer sharding to run the training on AWS infrastructure (4096 number of 40 Gb A100 for 180B parameter model)\n3D parallelism is a strategy that scales training across multiple dimensions:\nData parallelism: Replicates the model and training data across multiple devices, each responsible for updating parameters based on its local data shard.\nModel parallelism: Splits the model (layers, weights, activations) across multiple devices, with each device computing activations or gradients for its assigned parts.\nPipeline parallelism: Overlaps computation and communication by pipelining the training process into stages, such as data loading, forward pass, backward pass, and parameter update.\nIn large-scale deep learning, the optimizer state (e.g., gradients, momentum) can become memory bottlenecks. Optimizer sharding addresses this by:\nPartitioning optimizer state: Splits the optimizer state across multiple devices, reducing per-device memory requirements.\nSynchronizing gradients: Employs communication-efficient algorithms to aggregate gradients across devices without transferring the entire state."
+  },
+  {
+    "input": "Key Model components of Falcon LLM",
+    "output": "Let us understand key model design points that worked for the Falcon team. Note that the below architectural designs are not unique and were invented by the Falcon team. They were there in the public domain before. The Falcon team tried various combinations and found that the below worked best for them. The criteria for evaluation were the design philosophy that they need to not only improve model performance but also make sure that model design is scalable and cost /memory efficient."
+  },
+  {
+    "input": "1. Multigroup Scheme",
+    "output": "The vanilla transformer architecture that we have studied consisted of multi-head attention where we have query key ad values for each token, and this was repeated the amount of multi-head attention we had. Then it was found that one can share the same keys and value pair across all the attention heads instead of having a unique key and value matrix for each attention head. This related to the number of heads for the queries remains nq= nheadbut there is only one head for the keys and values, nkv= 1. This was known as the MlutliQuery scheme.\nHowever, keeping only one kv pair resulted in defaulting to parallelize as Either each GPU keeps a copy of the shared key/value, recomputing them individually and then sharing gradients to keep them in sync, or they are computed on a single GPU and then communicating as necessary. The Falcon team used the concept of MultiGroup instead of a multi-query scheme whereby they introduced separate key/value pairs for each tensor parallel rank, simplifying the required communications."
+  },
+  {
+    "input": "2. Rotary positional embeddings",
+    "output": "The traditional transformer model had positional embeddings. RoPE was an improvement over positional embedding that combed both absolute and relative positional encodings. Key advantage was\nRoPE doesn't require fixed positions and inherently captures relative distances between tokens. This makes it more flexible and generalizable to longer sequences.\nRoPE is computationally cheaper than relative positional encodings, as it doesn't involve explicit distance calculations.\nRoPE is memory efficient as it uses a fixed embedding size regardless of sequence length, making it suitable for large models and long sequences."
+  },
+  {
+    "input": "3. Use of GeLU instead of SwiGLU or GLU",
+    "output": "Recently Activation based on gate linera units like the GLU and u SwiGLU have received significant attention due to its performance gains, especially in transformers. Popular models such as PaLM and LLaMa have been used them. However, they increase the memory footprint and number of parameters.  The team saw no improvement from adopting SwiGLU for zero-shot performance. Hence that choose to use the GLU activation"
+  },
+  {
+    "input": "4. Parallel attention and MLP",
+    "output": "In the standard transformer architecture, each layer requires two all_reduce operations: one for the attention block and one for the MLP block. These operations send gradients across all devices, impacting communication costs significantly. They combined the attention and MLP blocks within each layer, running them in parallel on different devices.\nThis simple change reduces the number of all_reduce operations from two to one per layer. The communication cost is cut in half, leading to significant efficiency gains during training."
+  },
+  {
+    "input": "5. No biases in linear layers",
+    "output": "The Falcon team found that removing the biases in the linear layer does not result in worse performance: neither in terms of language modeling loss nor in terms of the final. Hence, they choose to do away with biases."
+  },
+  {
+    "input": "6. z-loss",
+    "output": "Instead of using the standard softmax loss the team used z_loss which is a modification of the softmax loss\nz_loss=10−4z_loss=10^{−4}log_2(Σ_ie^{z_i}\nHere ziis the output logits of the model It is believed to improve large-scale training stability , hence the team adopted the same."
+  },
+  {
+    "input": "7. Weight decay and LR search",
+    "output": "The team used a fixed weight decay of 0.1 with AdamW for all Falcon models. And from candidates LRs, the team picked the one with the lowest loss after warm-up."
+  },
+  {
+    "input": "Dataset used by Falcon AI team",
+    "output": "The Falcon team used the following sources of dataset to develop their pertaining dataset known as Falcon mixture.\nRefinedWeb-English -  sourced from CommonCrawl it formed 76% of the pertaining dataset\nRefinedWeb-Euro - sourced from CommonCrawl for Europe forced multilingual training it formed 8% of pretraining dataset\nBooks  - SOurced form project Gutenberg it formed 6 % of pretraining dataset\nConversations  - It was sourced from StackOverflow, HackerNews, etc, and formed 5% of pretraining dataset\nCode - It was sourced from GitHub and formed 3% of the pertaining dataset\nTechnical - It was sourced from arXiv, and Wikipedia ec and formed 2% of the pertaining dataset."
+  },
+  {
+    "input": "Limitation",
+    "output": "The key limitation of Falcon model is their limited language support as their proficiency is mainly in English, German, Spanish, and French. Support for other languages is less robust, limiting their global accessibility."
+  },
+  {
+    "input": "Text Generation using Falcon 7B",
+    "output": "Let us see how we can use Falcon 7B for text generation."
+  },
+  {
+    "input": "1. Install necessary libraries",
+    "output": "We are installing the accelerate package as it provides a collection of utilities and wrappers for accelerating Python applications, particularly those related to scientific computing, numerical simulations, and machine learning. The package leverages hardware acceleration features such as SIMD (Single Instruction, Multiple Data), multi-threading, and GPU acceleration to improve the performance of numerical computations."
+  },
+  {
+    "input": "2. Import the libraries",
+    "output": "For text generation, we will require pandas for data manipulation and analysis, pytorch  and transformers module for automatic model configuration, auto-loading of pre-trained models and tokenization."
+  },
+  {
+    "input": "3. Initiate the Model",
+    "output": "This code initializes a text generation pipeline using the \"tiiuae/falcon-7b-instruct\" model from the Hugging Face transformers library. It loads the tokenizer for the model and creates the pipeline with parameters such as using bfloat16 data type, trusting remote code, and automatically mapping computation to available devices. This pipeline is then ready for text generation tasks based on input prompts."
+  },
+  {
+    "input": "3. Use the model for text generation",
+    "output": "This code snippet generates text sequences using the previously initialized text generation pipeline (generator). It prompts the model with the input text \"What is the purpose of life\" and specifies parameters such as maximum sequence length (max_length), whether to sample from the model (do_sample=True), the number of top-k candidates to sample from (top_k=10), the number of sequences to generate (num_return_sequences=1), and the end-of-sequence token ID from the tokenizer. The generated text sequences are stored in the text_sequences variable, and then each generated sequence is printed using a loop, displaying the generated text with the label \"Result\". This allows for the quick generation and display of text based on the input prompt.\nOutput"
+  },
+  {
+    "input": "Conclusion",
+    "output": "In this blog we got an overview of Falcon model architecture, what are its key design principals, and how does it compare in terms of performance with the current state of the art models."
   }
 ]
