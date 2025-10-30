@@ -22678,5 +22678,33 @@
   {
     "input": "Limitations",
     "output": "Slower than single-stage detectors like YOLO or SSD for real-time applications.\nHigh computational cost for very large images.\nPerformance depends on the quality of anchors and backbone network."
+  },
+  {
+    "input": "Image processing",
+    "output": "Image processingis a computer vision technique that deals with the manipulation and analysis of digital images. It involves a wide range of techniques and algorithms to enhance, transform, and extract information from images. Image processing is used in various applications, including medical imaging, computer vision, remote sensing, and more.\nIt uses different types of algorithms and techniques to enhance, transform and extract useful features or information that facilitate decision-making and subsequently automate the task. It is a dominant and versatile field that includes manipulating and analyzing digital images using the Open-sourceComputer VisionLibrary (OpenCV). It has algorithms to perform basic operations like cropping, filtering, resizing, etc. to advanced techniques like object detection, recognition, etc."
+  },
+  {
+    "input": "Feature Descriptor in Image Processing",
+    "output": "Feature Descriptor is basically a way of representing a part of an image that has some distinctive or interesting characteristics. It is usually a set of numbers that describe the appearance, shape, or texture of the region around a key point, which is a point of interest in the image. Feature descriptors are useful for comparing and matching images, as they allow algorithms to find similar regions or objects in different images. Some applications for this would be in identifying and comparing image regions, which is crucial for tasks like image stitching, object tracking, and more."
+  },
+  {
+    "input": "Interest points",
+    "output": "An interest point can be defined as a location or a part of an image that possesses a distinct texture or exhibits unique characteristics such as the intersection of multiple edge segments or a rapid change in the direction of edges. These interest points are distinguished by their ability to maintain stability even when subjected to variations in scale, rotation, and lighting conditions. Mainly, it is of paramount importance to accurately compute these interest points with a high level of consistency, ensuring effective and reliable detection."
+  },
+  {
+    "input": "Feature Vector",
+    "output": "Feature Vector is defined as a mathematical representation of the feature descriptor in a vector format with one or more dimensions. It is basically a one-dimensional vector that encapsulates information from a feature descriptor to a multi-dimensional feature space. It can also take the form of a text or mathematical-logical descriptions of an interest point. It compiles diverse pieces of information related to an object. By combining these object feature vectors, we can construct a feature space. The level of detail required in the feature vector depends on the specific aspects of the object that we aim to learn or represent. This level of detail is determined by our objectives regarding the object.\nThere are many types of feature descriptor algorithms likeSIFT,SURF, HOG,LBPetc. Further in this article we are going to discuss about two algorithms and see how they are implemented."
+  },
+  {
+    "input": "SIFT",
+    "output": "SIFTstands forScale-invariant feature transform. It was developed by David Lowe in 1999 and has since become a cornerstone in various computer vision applications. It is a widely used feature descriptor that is invariant to scale, rotation, and transformations. It describes local image regions by their gradient magnitudes and orientations. It is known for its robustness to various transformations making it more effective for use.\nIt basically extracts the key points of the reference image and store it in a database. An object is recognized in a new image by individually comparing  each feature to the database created.\nOutput:"
+  },
+  {
+    "input": "HOG",
+    "output": "HOGstands forHistogram of oriented gradients. It was introduced by Navneet Dalal and Bill Triggs in 2005 and has been widely adopted in various applications, including pedestrian detection and character recognition. It is used in object detection. It captures the distribution of gradient orientations in an image region, making it useful for detecting objects with varying textures and shapes. It is valued for its ability to capture the shape and texture information of objects in a way that is robust to changes in illumination and viewpoint.\nHOG algorithm divides the image into small cells and then calculate the gradient orientation of each cell and then aggregates the function into plots.\nOutput:"
+  },
+  {
+    "input": "Conclusion",
+    "output": "In conclusion, image processing is an important computer vision technique that involves the manipulating and analyzing of digital images, finding applications in various fields like medical imaging, computer vision, and remote sensing. One key aspect of image processing is feature descriptors, which capture relevant information about image regions or key points, enabling tasks such as image matching, stitching, and object tracking. There are many feature descriptor algorithms like SIFT, SURF, HOG, etc. among them SIFT (Scale-Invariant Feature Transform) is a standout performer, known for its robustness to transformations. It plays a significant role in various computer vision applications due to its effectiveness in capturing and comparing image regions."
   }
 ]
