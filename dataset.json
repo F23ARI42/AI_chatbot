@@ -25370,5 +25370,33 @@
   {
     "input": "Implementation:",
     "output": "In this implementation, we will be performing edge and region-based segmentation. We will be using scikit image module for that and an image from its dataset provided.\nOutput:"
+  },
+  {
+    "input": "Table of Content",
+    "output": "What is Object Detection?\nRegion Proposal in R-CNN family\nWorking of Region Proposal Network (RPN)"
+  },
+  {
+    "input": "What is Object Detection?",
+    "output": "Object Detection is acomputer visiontechnique that is used for locating objects in a digital image or video, and identifying (or classifying) them. It can be done using single-stage approaches as well as two-stage. Each approach has its pros and cons. Typically, the two stages of object detection are:\nRegion Proposal Network (RPN) is used in the first step to generate proposals of regions of interest, where the model extracts potential candidates of objects in the image or video. It basically tells the network where to look. Traditionally, this was done using computer vision techniques like selective search, which were computationally expensive. RPN became extremely popular due to its power as well as faster computation. It helped in reducing the running time of detection networks like Fast RCNN and SPPnet. Let us understand how it works."
+  },
+  {
+    "input": "Region Proposal in R-CNN family",
+    "output": "R-CNN stands for Region-basedConvolutional Neural Network. It is a family ofmachine learningmodels used for computer vision tasks, specifically object detection. Traditionally, object detection was done by scanning every grid position of an image using different sizes of frames to identify the object's location and class. Applying CNN on every frame took a very long time. R-CNN reduced this problem. It uses Selective Search to select the candidate region and then applies CNN to each region proposal. However, it was still slow due to the repeated application of CNN on overlapping candidate regions.\nFast R-CNN extracts features by applying convolution layers on the entire image. It then selects CNN features on each region proposal obtained by Selective Search. Thus, Fast R-CNN was more than 200 times faster than R-CNN but the latency due to region proposal using selective search was still high.\nFaster R-CNN eliminated the bottleneck due to Selective Search by using a neural network for region proposal. RPN reduced the latency by 10 times and the model could run in real-time. It was proven to be more efficient because it used feature maps, whereas, selective search used raw image pixels. Moreover, it does not add much overhead because the feature maps are shared between RPN and the rest of the network. Refer to the figure below."
+  },
+  {
+    "input": "Working of Region Proposal Network (RPN)",
+    "output": "RPN is a fully convolutional network that predicts the object bounds by learning from feature maps extracted from a base network. It has a classifier that returns the probability of the region and a regressor that returns the coordinates of bounding boxes."
+  },
+  {
+    "input": "Anchor boxes",
+    "output": "A feature map is extracted from the convolutional neural network layers. Every point on this feature map is considered. Every point on the feature map is called an anchor.\nAnchor boxes are boxes generated at image dimension, based on the aspect ratios and scales of the images. Aspect ratio is the ratio of width to height of the image and scale is the size of the image.\nThe anchor boxes are positioned (in centers) on each anchor point of the convolutional feature map as shown in the image below. Eachanchor boxis slid across the entire feature map. You can imagine this like a sliding window. With each point as the center of the anchor box, it produces a prediction of whether the box has an object or not.\nTherefore, if we havekanchor boxes, then for every position on the feature map, we will havekpredictions. These predictions are essentially binary classifications of foreground and background."
+  },
+  {
+    "input": "Intersection-Over-Union (IoU)",
+    "output": "The foreground and background labels are assigned based on a metric calledIntersection over Union (IoU)that determines the amount of overlap of the anchor box with the object of interest. It is calculated as the ratio of the area of intersection between the anchor box and the box with an area of interest to the area of the union of the two boxes. IoU > 0.7 usually implies a foreground."
+  },
+  {
+    "input": "Regression",
+    "output": "Values which are the coordinates of the center, width, and height respectively of the bounding box. Since it is a learning model, it has a cost function that can be defined as the sum of classification loss and regression loss. It can be written as follows:\nL = L_{cls} + L_{reg}\nL (p_{i}, t_{i}) = \\frac {1}{N_{cls}} \\sum_{i} L_{cls} (p_{i}, p_{i}^*) + \\lambda \\frac {1}{N_{reg}} \\sum_{i} L_{reg} (p_{i}, p_{i}^*)\nwhere,\\; i = index \\; of \\; anchor , \\\\\np = probability\\; of\\; being\\; an\\; object\\; or\\; not,\\\\\nt = vector\\; of\\; parameterized\\; coordinates\\; of\\; predicted\\; box, \\\\\n* = the\\; target\\; box,\\\\\nNcls\\; and\\; Nreg = normalizations\nThe offsets thus obtained, are applied to get the RoIs, which are further processed in theobject detection. In a nutshell, the RPN proposes a bunch of boxes that are classified as background or foreground, and the foreground anchors boxes are further refined to obtain the regions of interest."
   }
 ]
