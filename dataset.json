@@ -25486,5 +25486,25 @@
   {
     "input": "Challenges and Limitations",
     "output": "Quality of Role Representation:Effectiveness depends on the model’s training data and its understanding of the role.\nStereotype Reinforcement:Risk of perpetuating stereotypes if roles are not carefully defined.\nOverfitting to Role:The AI may become too rigid or miss broader context if the role is overly constrained.\nComplexity in Multi-Role Scenarios:Managing multiple roles in a single interaction can be challenging."
+  },
+  {
+    "input": "Encoder Network",
+    "output": "The encoder network in SegNet is composed of 13 convolutional layers, mirroring the first 13 convolutional layers of theVGG16 network, which was originally designed for object classification.\nKey points of the Encoder Network:\nMax-pooling operationresults in a lossy representation of the image, especially in terms of boundary details, which are crucial for segmentation tasks.\nTo mitigate this loss, the locations of the maximum feature values in each pooling window (max-pooling indices) are stored. This information is later used in the decoder network for accurate upsampling."
+  },
+  {
+    "input": "Decoder Network",
+    "output": "The decoder network consists of 13 layers, each corresponding to an encoder layer. The decoding process is designed to upsample the feature maps back to the original image resolution.\nKey Features of the Decoder Network:"
+  },
+  {
+    "input": "Decoder Variants",
+    "output": "To evaluate the effectiveness of different decoding techniques, several variants of the SegNet and FCN architectures were tested. These variants include:"
+  },
+  {
+    "input": "Training Process of SegNet",
+    "output": "SegNet and its variants were trained and evaluated using the CamVid road scenes dataset, consisting of 367 training and 233 testing RGB images.\nKey aspects of the training process include:"
+  },
+  {
+    "input": "Performance Metrics",
+    "output": "The performance of the decoder variants is evaluated using several metrics:\nGlobal Accuracy (G): Overall pixel-wise accuracy.\nClass Average Accuracy (C): Average accuracy across all classes.\nMean Intersection over Union (mIoU): A measure of overlap between the predicted and ground truth segments.\nBoundary F1 Score (BF): Evaluates the accuracy of boundary delineation."
   }
 ]
