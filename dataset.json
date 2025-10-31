@@ -22966,5 +22966,37 @@
   {
     "input": "8. Morphological Image Processing",
     "output": "Morphological Image Processinginvolves techniques that process the structure or shape of objects in an image. It focuses on operations like dilation, erosion, opening and closing which modify the image's geometric features. These operations work by examining the image’s pixels in relation to their neighbors usually with a small mask or kernel.Here:\ncv2.dilate(): Expands object boundaries.\ncv2.erode(): Shrinks object boundaries.\ncv2.morphologyEx()withcv2.MORPH_OPEN: Removes small noise.\ncv2.morphologyEx()withcv2.MORPH_CLOSE: Fills small holes.\nOutput:\n\nIn this article we covered essential image processing techniques in OpenCV, such as normalization, edge detection, blurring and morphological operations. While OpenCV offers a solid foundation, combining it with deep learning methods likeconvolutional neural networks (CNNs)can improve accuracy and efficiency in image preprocessing."
+  },
+  {
+    "input": "Types of Image Pyramids",
+    "output": "There are two main ways to represent and process image pyramids and each serves a different purpose:"
+  },
+  {
+    "input": "1. Gaussian Pyramid",
+    "output": "A Gaussian Pyramid is created by repeatedly blurring an image and downsampling it. Each level in the pyramid is a smaller and smoother version of the one before. This is useful when we need to reduce the image size while preserving important features. In OpenCV, we can build a Gaussian Pyramid using thecv2.pyrDown()function."
+  },
+  {
+    "input": "2. Laplacian Pyramid",
+    "output": "A Laplacian Pyramid is built from a Gaussian Pyramid. It captures the details lost during downsampling. This is done by upsampling a level of the Gaussian pyramid usingcv2.pyrUp()and subtracting it from the previous level. The result highlights edges and fine textures. They are useful for image reconstruction and blending where preserving detail is important."
+  },
+  {
+    "input": "Pyramid Operations in OpenCV",
+    "output": "OpenCV provides two important functions to work with image pyramids:cv2.pyrDown()for downsampling andcv2.pyrUp()for upsampling. These functions allow us to reduce or increase the image resolution which is important for creating image pyramids."
+  },
+  {
+    "input": "1. Pyramid Down with cv2.pyrDown()",
+    "output": "This function is used to reduce the size of an image by applying a Gaussian blur and then downsampling. This operation reduces the image's resolution, making it smaller and less computationally expensive while retaining important details.\nOutput:\nThe downsampled_image will be half the size (in both width and height) of the original image. The image will be blurred slightly due to the Gaussian filter applied during downsampling."
+  },
+  {
+    "input": "2. Pyramid Up with cv2.pyrUp()",
+    "output": "This function performs the opposite operation of cv2.pyrDown(). It increases the image's size (both width and height) by a factor of 2. After upsampling, a Gaussian blur is applied to make the transition smoother and reduce artifacts.\nOutput:\nThe upsampled_image will be double the size of the downsampled_image. While the upsampled image may look blurred, it will be larger than the downsampled one."
+  },
+  {
+    "input": "Building a Gaussian Pyramid (Multiple Levels)",
+    "output": "In image processing, we need to handle images at multiple resolutions. One way to achieve this is by creating an image pyramid where each level of the pyramid represents a version of the image at a different scale.\nHere we will create an image pyramid by downsampling an image using the cv2.pyrDown() function. After generating the pyramid, we will display the levels of the pyramid, starting from the smallest version and moving down to the original image.\nOutput:"
+  },
+  {
+    "input": "Advantages of Image Pyramids",
+    "output": "Image pyramids has various benefits for image processing tasks:"
   }
 ]
