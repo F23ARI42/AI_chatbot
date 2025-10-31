@@ -22798,5 +22798,45 @@
   {
     "input": "Use Case: Real-Time Color-Based Object Tracking",
     "output": "This technique is widely used in:"
+  },
+  {
+    "input": "Key Components of CNNs",
+    "output": "A Convolutional Neural Network (CNN) is made up of several layers, each designed to perform a specific function in processing images:"
+  },
+  {
+    "input": "How CNNs Work for Image Classification?",
+    "output": "The process of image classification with a CNN involves several stages:"
+  },
+  {
+    "input": "Implementation of Image Classification using CNN",
+    "output": "Lets see the implementation of Image Classification step-by-step:"
+  },
+  {
+    "input": "Step 1: Importing Libraries",
+    "output": "We will be usingTensorflowandMatplotliblibraries for building, training and visualizing training and validation accuracy of the model."
+  },
+  {
+    "input": "Step 2: Downloading and Preparing the Dataset",
+    "output": "Next we load the CIFAR-10 dataset and preprocess it. It consists of 60,000 32x32 color images across 10 categories.\nScaling:We scale the image pixel values from [0, 255] to [0, 1] by dividing by 255.\nOne-hot encoding:Converts the labels (0-9) into a one-hot vector (e.g., for label 2: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]).\nOutput:"
+  },
+  {
+    "input": "Step 3: Building the CNN Model",
+    "output": "Now, we define the CNN architecture and start with convolutional layers followed by max-pooling layers, flatten the output and then feed it into fully connected layers.\nFlatten Layer:Converts the 2D matrix into a 1D vector for the dense layers.\nDense Layers:Fully connected layers used for decision making, with the final layer usingsoftmaxactivation to predict probabilities.\nOutput:"
+  },
+  {
+    "input": "Step 4: Compiling and Training the Model",
+    "output": "We then compile the model by defining the optimizer, loss function and evaluation metric, followed by training.Adam optimizeris used as it adjusts the learning rate during training.\nOutput:"
+  },
+  {
+    "input": "Step 5: Evaluating the Model",
+    "output": "After training, we evaluate the model on the test dataset to check how well it performs on unseen data."
+  },
+  {
+    "input": "Step 6: Plotting of Accuracy Curves",
+    "output": "Finally, we visualize the training and validation accuracy during training using matplotlib.\nOutput:"
+  },
+  {
+    "input": "Challenges in Image Classification",
+    "output": "While CNNs have several advantages, they also come with certain challenges that we need to be solve while implementing them."
   }
 ]
