@@ -24334,5 +24334,45 @@
   {
     "input": "Applications of Multimodal RAG",
     "output": "Healthcare: In medical diagnostics it can analyze both textual patient reports and medical images like X-rays, MRIs to provide more accurate diagnoses and treatment recommendations.\nE-Commerce: It improves product search by matching both textual descriptions and images. For example, customers can search for products using either text-based queries or visual inputs like uploading a product image.\nEducation: Supports interactive and immersive learning experiences by combining text, diagrams and videos to explain complex concepts in a engaging manner.\nLegal and Finance: Enhances decision-making by retrieving relevant legal case studies, financial reports and charts enabling professionals to make informed decisions based on both textual and visual data.\nMultimodal RAG combines retrieval and generation across text, images and more to produce context-aware and accurate responses and can be used across various industries."
+  },
+  {
+    "input": "Key Concepts in Object Detection",
+    "output": "Bounding Boxes:Object detectioninvolves drawing bounding boxes around detected objects. A bounding box is a rectangle that encloses an object and is defined by its coordinates typically, (x_min, y_min) for the top-left corner and (x_max, y_max) for the bottom-right corner.\nObject Localization:Localization is the process of determining the object's location within the image. It involves predicting the coordinates of the bounding box that encapsulates the object.\nClass Prediction:Object detection not only locates objects but also categorizes them into different classes (e.g., person, car, dog). Each object is assigned a class label, providing information about what the object is.\nModel Architectures:Numerous architectures are used for object detection, such asSSD (Single Shot Multibox Detector),Faster R-CNN(Region-based Convolutional Neural Network) andYOLO (us Only Look Once). These models differ in their approach to balancing speed and accuracy."
+  },
+  {
+    "input": "Step 1: Install and Import Libraries",
+    "output": "Let's import the necessary libraries,\ntensorflow as tf:Core library used for machine learning; handles loading and running pre-trained models.\nnumpy as np:Fundamental array-manipulation package; converts images to arrays and processes detection outputs.\ncv2:OpenCV, for image processing tasks like drawing rectangles and text on images.\nfrom PIL import Image:From Pillow; used for opening images and converting them to RGB.\nfrom matplotlib import pyplot as plt:For displaying the final images with bounding boxes in Colab notebooks.\nfrom random import randint:Generates random colors for bounding boxes so each detected object’s box is visually distinct."
+  },
+  {
+    "input": "Step 2: Download, Extract and Load the Pre-trained Model",
+    "output": "Now, load the pre-trained model using TensorFlow's SavedModel format.\n!wget :Downloads the pre-trained object detection model file (SSD MobileNet v2 variant) from TensorFlow’s servers.\n!tar -xzf :Extracts the downloaded .tar.gz archive so we can access the model files."
+  },
+  {
+    "input": "Step 3: Load and Preprocess Image",
+    "output": "Upload an image, convert it to a NumPy array and preprocess it for input to the model, as the model can't directly work on an image therefore we first converted it into a tensor.\nfrom google.colab import files:Imports Colab utility functions for uploading files interactively.\nfiles.upload():Lets us upload a local image directly into the Colab environment.\nImage.open(image_path):Opens the image using Pillow.\n.convert('RGB'):Ensures the image is in RGB color mode (3 channels), which is required by the detection model.\nnp.expand_dims(..., 0):Adds a new dimension to the array for “batch size” (shape becomes [1, height, width, 3]).\ntf.convert_to_tensor(..., dtype=tf.uint8):Converts the array to a TensorFlow tensor, using the 8-bit integer format expected by the model."
+  },
+  {
+    "input": "Step 4: Perform Object Detection",
+    "output": "Now we perform the object detection,\ndetection['detection_boxes']:Contains the bounding box coordinates (normalized between 0 and 1).\n.numpy():Converts the tensor to a NumPy array for ease of manipulation.\ndetection['detection_classes']:Gives the class indices for each detected object; .astype(int) ensures these can be used as indices in the label list.\ndetection['detection_scores']:Contains the confidence scores for each detection."
+  },
+  {
+    "input": "Step 5: Run Object Detection",
+    "output": "These are the labels for the COCO dataset, which contains class names corresponding to class IDs.\nDefines the list of all class names in the COCO dataset.\nAllows translating class indices from model output into human-readable names."
+  },
+  {
+    "input": "Step 6: Visualize the detected objects",
+    "output": "Output:"
+  },
+  {
+    "input": "Applications of object detection",
+    "output": "Object detection finds applications in diverse fields, including:\nAutonomous Vehicles:Identifying pedestrians, other vehicles and obstacles.\nSurveillance Systems:Monitoring and tracking objects in real-time.\nMedical Imaging:Detecting anomalies or specific structures in medical images.\nRetail Analytics:Tracking products and customer behavior in stores.\nAugmented Reality:Overlapping digital information on real-world objects."
+  },
+  {
+    "input": "Advantages",
+    "output": "Open Source & Community:Free, open-source with wide community support.\nScalability:Runs on various platforms including CPU, GPU, TPU and mobile.\nPre-trained Models:Provides many models for quick customization.\nTools & APIs:Simplifies building detection pipelines.\nReal-Time:Supports fast detection on embedded devices."
+  },
+  {
+    "input": "Limitations",
+    "output": "Resource Intensive:Training can require powerful hardware.\nComplexity:Pipeline setup can be difficult for beginners.\nAccuracy Trade-off:Lightweight models may reduce accuracy.\nDataset Limits:Pre-trained models may need custom data for best results."
   }
 ]
