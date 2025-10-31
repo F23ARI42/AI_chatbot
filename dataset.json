@@ -24038,5 +24038,29 @@
   {
     "input": "Conclusion",
     "output": "In conclusion, Mask R-CNN's ability to simultaneously detect and segment objects with high accuracy positions it as a powerful tool for various applications, from human pose estimation to autonomous vehicles."
+  },
+  {
+    "input": "Working of Memory in CrewAI",
+    "output": "When the memory parameter is set to True for an agent or a crew, it enables short-term, long-term and entity memory. Together, these components ensure that agents can retain context, recall past work and build structured knowledge.\nShort-Term Memory:Uses ChromaDB with retrieval-augmented generation (RAG) to provide the current session’s context.\nLong-Term Memory:Uses SQLite3 to store task results and knowledge across sessions.\nEntity Memory:Uses RAG to capture and recall details about entities such as people, places and concepts.\nStorage Location:Stored in a platform-specific directory determined by the app dirs package.\nCustom Storage Directory:Can be set by defining the CREWAI_STORAGE_DIR environment variable."
+  },
+  {
+    "input": "Implementation of memory in CrewAI",
+    "output": "We will be implementing memory in CrewAI by enabling it for agents and inspecting how it stores and retrieves information across tasks and sessions."
+  },
+  {
+    "input": "1. Defining Agents with Memory",
+    "output": "We define three agents: a Writer, an Editor and a Publisher. The Writer has memory enabled to recall ideas and context while producing the manuscript.\nrole:The agent’s function in the workflow.\ngoal:The objective the agent aims to achieve.\nbackstory: Background information influencing agent behavior.\nverbose:When set to True, provides detailed output during execution.\nmemory:Enables or disables memory for the agent."
+  },
+  {
+    "input": "2. Defining Tasks",
+    "output": "Each task specifies a description, an agent responsible for execution and expected output. Tasks can also depend on the results of previous tasks.\ndescription:Explains what the task should accomplish.\nagent:The agent responsible for completing the task.\nexpected_output:The expected result of the task.\ncontext:Specifies dependencies by passing outputs of earlier tasks."
+  },
+  {
+    "input": "3. Creating the Crew",
+    "output": "The agents and tasks are grouped into a Crew. We specify a sequential process, meaning each task runs in order.\nagents:List of agents participating in the crew.\ntasks:List of tasks executed by the crew.\nprocess:Defines the execution order (Process.sequential ensures tasks run in sequence).\nverbose:Enables detailed logging.\nkickoff(): starts the crew’s execution.\nOutput:\nifmemory=Truewas not enabled, the Editor would not automatically recall the Writer’s manuscript and would start editing without any context. With memory enabled, the Editor receives the Writer’s output as part of its context, leading to meaningful edits instead of disconnected results."
+  },
+  {
+    "input": "4. Checking Memory Storage",
+    "output": "CrewAI stores memory locally. The following code retrieves the storage path and lists stored files.\ndb_storage_path(): Returns the base directory where CrewAI stores memory.\nos.listdir(): Lists files and subdirectories.\nos.path.isdir():Identifies directories within the storage path.\nOutput:"
   }
 ]
