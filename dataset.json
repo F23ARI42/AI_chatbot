@@ -23690,5 +23690,61 @@
   {
     "input": "Current Development and Future Outlook",
     "output": "Meta has open-sourced their implementation of LCMs allowing researchers and developers worldwide to explore and build upon the technology. While LCMs hold great promise they are still in the early stages of development compared to more established architectures like Large Language Models.\nAs LCMs continue to evolve future work will likely focus on various applications like:\nScaling Model Size: Increasing the number of parameters to improve performance and capabilities, similar to how LLMs have benefited from scale.\nEnhancing Concept Representations: Refining the SONAR embedding space and developing more sophisticated concept representations to capture finer semantic details.\nExpanding Modality Support: Extending the model to handle additional modalities such as images, video and sensor data.\nImproving Efficiency: Optimizing the architecture for faster inference and reduced computational requirements.\nDomain-Specific Adaptation: Fine-tuning LCMs for specialized applications in healthcare, legal, scientific and other domains with unique linguistic requirements.\nLarge Concept Models represent the next frontier in artificial intelligence significant advancement in language modeling by shifting the from token-level processing to concept-level reasoning. This approach not only addresses several limitations of traditional LLMs but also opens new possibilities for more intuitive and versatile AI systems that can better understand and generate human-like communication across languages."
+  },
+  {
+    "input": "Transformers",
+    "output": "Transformersare the foundational architecture behind most modern large language models that rely on attention mechanisms to process the entire sequence of the data simultaneously.\nAttention Mechanism\nSelf-Attention Mechanism\nMulti-Head Attention Mechanism\nPositional Encoding\nFeed-Forward Neural Network\nLayer Normalization\nEncoder-Decoder Model\nMasked Attention\nCross-Attention Mechanism\nEmbedding Layers\nTransformers from Scratch using TensorFlow\nTransformers from Scratch using PyTorch"
+  },
+  {
+    "input": "Large Language Models Basics",
+    "output": "Large Language Models (LLMs)are advanced AI systems trained on massive datasets to understand and generate human-like text, powered by deep learning techniques.\nLanguage Models\nFoundation Models\nSeq2Seq Models\nHistory and Evolution of LLMs\nMultimodal LLMs\nLLM Parameters\nTokens and Context Windows\nChinchilla's Law\nPrompts\nPrompt Engineering\nLLM Hallucinations\nTransformers vs LLMs\nDifference between BERT and GPT\nLLM Model Evaluation\nWord Embedding\nTokenization\nByte Pair Encoding\nData sampling using Sliding Window Attention"
+  },
+  {
+    "input": "Training and Fine-Tuning LLMs",
+    "output": "It involves using vast amount of datasets so that LLMs learn language patterns, grammar, trends, etc and fine-tune pre-trained LLM for specific tasks or domain."
+  },
+  {
+    "input": "Language Modeling Techniques",
+    "output": "Autoregressive Models\nMasked Language Models\nCausal Language Models"
+  },
+  {
+    "input": "Fine-tuning Large Language Models",
+    "output": "Reinforcement Learning from Human Feedback (RLHF)\nFine-Tune an LLM from Hugging Face\nParameter-Efficient Fine-Tuning (PEFT)\nFine Tuning LLMs using PEFT\nLoRA (Low-Rank Adaptation)\nQLoRA (Quantized Low-Rank Adaptation)\nFine Tuning LLMs using QLoRA\nPrompt Tuning\nHow Prompt Tuning works?\nPrompt Tuning Techniques\nInstruction Tuning\nSupervised Fine-Tuning (SFT)\nLLM Distillation"
+  },
+  {
+    "input": "Retrieval-Augmented Generation (RAG)",
+    "output": "What is Retrieval-Augmented Generation (RAG)?\nRAG vs Traditional QA\nFine tuning vs RAG\nDense Passage Retrieval (DPR)\nVector Database\nChunking in RAG\nAgentic RAG\nMutlimodal RAG\nHow to build RAG Pipeline for LLMs?\nEvaluation Metric for RAG"
+  },
+  {
+    "input": "Prompting Techniques",
+    "output": "Zero-Shot Prompting\nFew-Shot Prompting\nChain-of-Thought (CoT) Prompting\nSelf-Consistency Prompting\nZero-Shot Chain-of-Thought Prompting\nReAct (Reasoning + Acting) Prompting\nRetrieval-Augmented Prompting"
+  },
+  {
+    "input": "Popular Large Language Models",
+    "output": "Popular LLMs such as GPT, BERT and T5 have revolutionized NLP tasks with their ability to generate, understand and manipulate text across various applications.\nGPT (Generative Pre-trained Transformer)\nBERT (Bidirectional Encoder Representations from Transformers)\nT5 (Text-to-Text Transfer Transformer)\nLLaMA\nClaude\nLCM (Large Concept Models)\nFalcon"
+  },
+  {
+    "input": "Evaluation of LLMs",
+    "output": "Perplexity\nBLEU and ROUGE\nBenchmarks"
+  },
+  {
+    "input": "Applications of LLMs",
+    "output": "LLMs are used in various real-world applications including:"
+  },
+  {
+    "input": "1. Chatbots/ Conversational AI",
+    "output": "Building Chatbot using Gemini\nBuilding Chatbot using OpenAI\nBuilding Chatbot using LLama3"
+  },
+  {
+    "input": "2.  Sentiment Analysis",
+    "output": "Sentiment analysis using BERT"
+  },
+  {
+    "input": "3. Text Generation",
+    "output": "Text generation using FNet\nText2text generation using Hugging Face Model"
+  },
+  {
+    "input": "4. Language Translation",
+    "output": "Machine Translation using Transformer"
   }
 ]
