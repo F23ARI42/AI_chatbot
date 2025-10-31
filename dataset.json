@@ -23306,5 +23306,29 @@
   {
     "input": "Image Shearing in Y-Axis",
     "output": "When shearing is done in the y-axis direction, the boundaries of the image that are parallel to the y-axis keep their location, and the edges parallel to the x-axis change their place depending on the shearing factor.\nOutput:"
+  },
+  {
+    "input": "Key Concepts in Image Translation",
+    "output": "Let's see key concepts in Image Translation which are as follows:"
+  },
+  {
+    "input": "1. Translation Matrix",
+    "output": "The translation matrix is used to define how much an image should be shifted. It is a 2x3 matrix that specifies the amount of horizontal and vertical shifts. The matrix looks like this:\nwhere:\nT_xis the horizontal shift (in pixels).\nT_yis the vertical shift (in pixels).\nThis matrix is used to move every pixel in the image by the specified amount without distorting its content."
+  },
+  {
+    "input": "2. OpenCV Function",
+    "output": "OpenCV provides the cv2.wrapAffine() function to apply affine transformations like translation. This function uses the translation matrix to shift the image by the specified values ofT_xandT_y.\nSyntax:\nParameters:\nimg: Image to be shifted.\nM: The translation matrix that defines how the image will be moved.\n(w, h): Width and height of the image after translation."
+  },
+  {
+    "input": "Example 1: Translating the Image Right and Down",
+    "output": "Here we will be usingOpenCVandNumpylibraries for this implementation. Also we used a random sample image you can download it fromhere.\nheight, width = image.shape[:2]: image.shape[:2]gives the height and width of the image. These values are stored in height and width variables.\nquarter_height, quarter_width = height / 4, width / 4:This calculates one-quarter of the image's height and width which will be used as the translation distance (in pixels).\nimg_translation = cv2.warpAffine(image, T, (width, height)):The image is shifted by the defined values using the matrix T. The resulting translated image is stored inimg_translation.\nOutput:"
+  },
+  {
+    "input": "Example 2: Performing Multiple Translations",
+    "output": "In this example, we perform four different translations on the same image: left, right, top and bottom.\nrows, cols, _ = img.shape:This extracts the number of rows (height) and columns (width) from the image's shape. The third value(_)represents the number of color channels.\nOutput:\nFirst image shows the translation to the left by 50px.\nSecond image shows the translation to the right by 50px.\nThird image shows the translation to the top by 50px.\nFourth image shows the translation to the bottom by 50px."
+  },
+  {
+    "input": "Advantages of Image Translation",
+    "output": "Let's see some common advantages of Image Translation:"
   }
 ]
