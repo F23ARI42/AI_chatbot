@@ -24994,5 +24994,21 @@
   {
     "input": "3. Bilateral Blur",
     "output": "The bilateral filter is a more advanced technique that smooths the image while preserving edges. It calculates a weighted average based on both the spatial distance and the pixel intensity. This means that it will blur areas with similar colors and preserve sharp edges, making it useful for noise reduction without sacrificing important details.\nOutput:"
+  },
+  {
+    "input": "Closing Operation",
+    "output": "Closing is a morphological operation that involves two steps:Dilation-> followed by ->Erosion."
+  },
+  {
+    "input": "Interpretation of the Equation",
+    "output": "A●B:Closing of imageAby structuring elementB\n⊕:Dilation operation\n⊖:Erosion operation\nClosing helps fill small black holes or gaps in white objects without altering their overall shape. It’s useful for closing small dark spots or breaks inside objects, preserving their outer structure."
+  },
+  {
+    "input": "Function to perform Closing Operation",
+    "output": "Syntax for closing:\nParameters:\nimage:Input binary or grayscale image\ncv2.MORPH_CLOSE:Specifies the morphological closing operation\nkernel:Structuring element (defines how dilation/erosion is applied)"
+  },
+  {
+    "input": "Code Example",
+    "output": "This code captures live video from webcam, detects blue regions in the frame and applies Closing operation to fill small black holes inside the detected areas. It displays both original mask and result after applying Closing.\nInput Frame:\nOriginal Blue Mask:\nAfter Closing (Holes Filled):\nExplanation:\ncv2.VideoCapture(0):Starts webcam stream.\nscreenRead.read():Reads a frame from webcam.\ncv2.cvtColor(image, cv2.COLOR_BGR2HSV):Converts BGR image to HSV color space.\nnp.array([110, 50, 50]) and np.array([130, 255, 255]):Define HSV range for detecting blue color.\ncv2.inRange(hsv, blue1, blue2):Creates a binary mask where blue areas are white (255), others are black (0).\nnp.ones((5, 5), np.uint8):Creates a 5×5 kernel (structuring element) of type `uint8`.\ncv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel):Performs Closing(Dilation followed by Erosion) to fill small black holes.\ncv2.waitKey(1) & 0xFF == ord('a'):Keeps looping until 'a' key is pressed.\ncv2.destroyAllWindows():Closes all OpenCV windows.\nscreenRead.release():Releases webcam resource."
   }
 ]
