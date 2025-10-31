@@ -25122,5 +25122,25 @@
   {
     "input": "Black Hat",
     "output": "The black-hat operation is used to do the opposite, enhancing dark objects of interest on a bright background. The output of this operation is the difference between the closing of the input image and the input image.\nOutput\nExplanation:\nBinarize withcv2.threshold(..., cv2.THRESH_BINARY + cv2.THRESH_OTSU)to extract objects.\nInvert image usingcv2.bitwise_not()to focus on dark features.\nDefine kernel withnp.ones((5, 5), np.uint8)for closing.\nApply Black Hat usingcv2.morphologyEx(..., cv2.MORPH_BLACKHAT, ...)to get dark outlines.\nDisplay usingplt.imshow(...), plt.axis('off')for clean view."
+  },
+  {
+    "input": "Step 1: Import libraries and Image Preparation",
+    "output": "Let's import the required libraries and load our image on which we will perform the operations,\ncv2: Handles image reading, processing and applies thresholding techniques.\nnumpy: Supports efficient array operations, enabling fast image data handling.\nmatplotlib.pyplot: Displays images and results in Colab notebooks."
+  },
+  {
+    "input": "Step 2: Helper Function",
+    "output": "Define the helper function which helps in displaying the images,"
+  },
+  {
+    "input": "Step 3: Display Original Image",
+    "output": "Output:"
+  },
+  {
+    "input": "Step 4: Adaptive Mean Thresholding",
+    "output": "The threshold for each pixel is computed as the mean value of the surrounding block (199×199 neighborhood, here), minus the constant (5).\nBest for images with fairly consistent noise or lighting within local regions.\nOutput:"
+  },
+  {
+    "input": "Step 5: Adaptive Gaussian Threosholding",
+    "output": "The threshold for each pixel comes from a weighted sum of surrounding pixels (Gaussian window), minus the constant (5).\nMore effective than mean in regions with gradual intensity variations.\nOutput:"
   }
 ]
