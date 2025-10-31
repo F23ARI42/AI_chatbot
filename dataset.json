@@ -25330,5 +25330,29 @@
   {
     "input": "Disadvantages of Using Random Forest",
     "output": "Resource Intensive:Large ensembles on big datasets can consume significant memory and computation time.\nInterpretability:While more transparent than neural networks, still less intuitive than single decision trees.\nImbalanced Classes:Model performance can degrade if one class significantly outweighs another without adjustments (such as class weighting or resampling).\nScaling to Very Large Image Sets:Not as scalable as modern deep learning architectures for millions of images or raw pixel data."
+  },
+  {
+    "input": "1. Combining Reasoning and Action",
+    "output": "In traditional AI models, reasoning and action are separate. ReAct helps incombining them so that AI thinks about a problem and takes action in real time. It can adjust its actions based on new information just like a human would while solving a problem.\nExample: If we are driving in a city we think about the best route (reasoning) and start driving (acting). If we see a road block we change our route (reasoning and acting together)."
+  },
+  {
+    "input": "2. Sequential Steps",
+    "output": "It breaks the problem into smaller steps. After reasoning through each step it takes an action based on what it has figured out so far. This keeps the process moving forward with each action building on the previous reasoning step.\nExample: A robot assigned to clean a room first thinks (reasons) that it needs to pick up items from the floor. After reasoning it acts by picking up the items. Once that’s done robot reasons again that the next step is to vacuum the floor and acts by turning on the vacuum. It continuously reasons and takes action step by step to complete the task."
+  },
+  {
+    "input": "3. Making Decisions",
+    "output": "It helps AI to make decisions at each step it doesn't wait until the end of the task to act but continuously adjusts its approach as it reasons and acts in real-time.\nExample: If robot assigned with the task of opening a door the AI reasons about each door’s features (locked or not) and then takes action based on best fit."
+  },
+  {
+    "input": "Example of ReAct Prompting in Action",
+    "output": "Let's take examples to understand this better:\nWithout ReAct (Single Reasoning):\nModel Answer: \"I have 7 apples left.\"\nThis is a correct answer but it doesn’t show any reasoning process or action taken to reach the answer.\nWith ReAct Prompting (Reasoning and Action Together):\nResponse 1: \"I start with 10 apples. My first action is to subtract 3 apples which gives me 7 apples.\"\nAction: Subtract 3 apples from 10 to get 7 apples.\nResponse 2: \"I have 10 apples. After giving away 3, I subtract 3 and I have 7 apples left.\"\nAction: Subtracting 3 apples results in 7 apples.\nFinal Answer: It shows both reasoning and action which helps in making problem-solving process more interactive and step-by-step.\nWithout ReAct (Single Reasoning):\nModel Answer: \"I have 17 oranges.\"\nWhile answer is correct model doesn't show the reasoning process or actions it took to arrive at the result.\nWith ReAct Prompting (Reasoning and Action Together):\nResponse 1: \"I start with 12 oranges. My action is to add 5 more oranges, so now I have 17 oranges.\"\nAction: Add 5 oranges to 12 to get 17 oranges.\nResponse 2: \"I have 12 oranges and when I buy 5 more, the action is adding them together, giving me 17 oranges.\"\nAction: Adding 5 oranges results in 17 oranges.\nFinal Answer: It shows both reasoning (12 + 5) and action (adding the oranges) which makes the solution more interactive and helps in explaining the steps clearly."
+  },
+  {
+    "input": "How ReAct Models Learn from Thought-Action Sequences?",
+    "output": "ReAct models learn through a method calledfew-shot promptingwhere they learn from a small set of examples and apply that knowledge to new tasks. Here's how it works:"
+  },
+  {
+    "input": "Challenges of ReAct Prompting",
+    "output": "Despite its many advantages,ReActprompting have few challenges that need to be solved for  better performance:\nWith ReAct Prompting, AI not only reasons through problems but also takes meaningful actions in real-time which helps in making it more capable of solving a wide range of challenges effectively."
   }
 ]
