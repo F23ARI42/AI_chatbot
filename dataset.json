@@ -22930,5 +22930,41 @@
   {
     "input": "7. Edge Detection (Sobel Operator)",
     "output": "Sobel filters detect dramatic intensity changes (edges) in horizontal and vertical directions. These kernels are building blocks for object boundary analysis.\nWhen to Use:\nObject detection and shape extraction in vision systems.\nAutomating boundary tracking for industrial inspection or robotics.\nOutput:\nImage filtering using convolution in OpenCV is a key technique for modifying and analyzing digital images. By applying various filters such as blurring, sharpening or edge detection, we can enhance important features, remove unwanted noise or reveal hidden structures in images."
+  },
+  {
+    "input": "Image Processing Using OpenCV",
+    "output": "OpenCV is an open-source computer vision and image processing library that supports multiple programming languages, including Python, C++, and Java. It offers a variety of tools for image manipulation, feature extraction and object detection. OpenCV is optimized for real-time applications and is widely used in industrial, research and academic projects. We will discuss different Operations in Image Processing using OpenCV and for this we will use thisInput Image :"
+  },
+  {
+    "input": "1. Image Resizing",
+    "output": "Image Resizingrefers to the process of changing the dimensions of an image. This can involve either enlarging or reducing the size of an image while preserving its content. Resizing is often used in image processing to make images fit specific dimensions for display on different devices or for further analysis. Thecv2.resize()function is used for this task. Here:\ncv2.resize(): Resizes the image to new dimensions.\ncv2.INTER_CUBIC: Provides high-quality enlargement.\ncv2.INTER_AREA: Works best for downscaling.\nOutput:"
+  },
+  {
+    "input": "2. Image Rotation",
+    "output": "Images can be rotated to any degree clockwise or anticlockwise usingimage rotation.We just need to define rotation matrix listing rotation point, degree of rotation and the scaling factor. Here:\ncv2.getRotationMatrix2D(): generates the transformation matrix.\ncv2.warpAffine() :applies the rotation.\nApositive angle rotates the image clockwise; anegative anglerotates it counterclockwise.\nThescale factoradjusts the image size.\nOutput:"
+  },
+  {
+    "input": "3. Image Translation",
+    "output": "Image Translationis the process of moving an image from one position to another within a specified frame of reference. This shift can occur along the x-axis (horizontal movement) and y-axis (vertical movement) without altering the content or orientation of the image. Here:\ncv2.warpAffine()shifts the image based on translation values.\ntx, tydefine the movement along the x and y axes.\nOutput:"
+  },
+  {
+    "input": "4. Image Shearing",
+    "output": "Image Shearingis a geometric transformation that distorts or skews an image along one or both axes. This operation slants the image creating a shear effect without changing its area or shape. Shearing can be applied to make the image appear as if it’s being stretched or compressed in a particular direction. Here:\nshear_x, shear_ycontrol the degree of skewing.\ncv2.warpAffine()applies the transformation.\nOutput:"
+  },
+  {
+    "input": "5. Image Normalization",
+    "output": "Image Normalizationscales pixel values to a specific range to enhance image processing tasks. Here:\ncv2.normalize(): Normalizes pixel values.\ncv2.NORM_MINMAX: Scales values between 0 and 1.\ncv2.merge(): Combines separately normalized RGB channels.\nOutput:\n\nA pixel value of0.0745098means the original pixel value was around19on the 0-255 scale (since 0.0745098 * 255 ≈ 19). It's a low intensity but not completely dark.\nA pixel value of0.00392157means the original pixel value was around1on the 0-255 scale (0.00392157 * 255 ≈ 1) which is very close to black or no color."
+  },
+  {
+    "input": "6. Edge detection of Image",
+    "output": "Edge detectionis used to find sharp edges withing image to find different objects and boundaries within a image.Canny Edge Detectionis a popular edge detection method. Here:\ncv2.GaussianBlur(): Removes noise through Gaussian smoothing.\ncv2.Sobel(): Computes the gradient of the image.\ncv2.Canny(): Applies non-maximum suppression and hysteresis thresholding to detect edges.\nOutput:"
+  },
+  {
+    "input": "7. Image Blurring",
+    "output": "Image Blurringreduces image detail by averaging pixel values. Here:\ncv2.GaussianBlur(): Smooths using a Gaussian kernel.\ncv2.medianBlur(): Replaces pixels with the median value in a neighborhood..\ncv2.bilateralFilter(): Preserves edges while blurring.\nOutput:"
+  },
+  {
+    "input": "8. Morphological Image Processing",
+    "output": "Morphological Image Processinginvolves techniques that process the structure or shape of objects in an image. It focuses on operations like dilation, erosion, opening and closing which modify the image's geometric features. These operations work by examining the image’s pixels in relation to their neighbors usually with a small mask or kernel.Here:\ncv2.dilate(): Expands object boundaries.\ncv2.erode(): Shrinks object boundaries.\ncv2.morphologyEx()withcv2.MORPH_OPEN: Removes small noise.\ncv2.morphologyEx()withcv2.MORPH_CLOSE: Fills small holes.\nOutput:\n\nIn this article we covered essential image processing techniques in OpenCV, such as normalization, edge detection, blurring and morphological operations. While OpenCV offers a solid foundation, combining it with deep learning methods likeconvolutional neural networks (CNNs)can improve accuracy and efficiency in image preprocessing."
   }
 ]
