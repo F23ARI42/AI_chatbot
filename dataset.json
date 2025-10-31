@@ -24946,5 +24946,17 @@
   {
     "input": "Gradio Tips for Building Better UIs",
     "output": "When building apps with Gradio, following best practices helps create faster, cleaner and more user-friendly interfaces. Here are 6 key tips:"
+  },
+  {
+    "input": "Function Used",
+    "output": "Before diving into code, let’s understand core function we’ll be using for noise removal.\nThis function removes noise from RGB images usingNon-Local Means algorithm. It averages similar patches to reduce grain while preserving edges and textures ideal for improving low-light or noisy photos."
+  },
+  {
+    "input": "Syntax",
+    "output": "Parameters:\nsrc:Input noisy colored image (as a NumPy array).\ndst:Output image (set None to return it directly).\nh:Filter strength for the luminance (brightness) component. Higher value means stronger smoothing.\nhColor:Same as h, but for color components. Not used for grayscale images.\ntemplateWindowSize:Size of the patch used for calculating weights.\nsearchWindowSize:Size of the window to search for similar patches."
+  },
+  {
+    "input": "Example: Denoising a Noisy Image",
+    "output": "This example shows how to denoise a color image using OpenCV’sfastNlMeansDenoisingColored()function. It removes noise while preserving details and displays original and denoised images side by side using Matplotlib.\nOutput\nExplanation: cv2.fastNlMeansDenoisingColored(img, None, 10, 10, 7, 15):Applies non-local means denoising to color imageimgand stores the result indst.\nimg:Input noisy color image.\nNone:Output image (created internally).\n10:Strength for luminance denoising.\n10:Strength for color denoising.\n7:Size of template patch.\n15:Size of search window."
   }
 ]
