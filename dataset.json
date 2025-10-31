@@ -25442,5 +25442,29 @@
   {
     "input": "Conclusion",
     "output": "ResNeXt represents a significant advance in neural network design, addressing the challenges of scalability and complexity in training deep models. By integrating concepts from its predecessors and introducing innovations like cardinality and grouped convolutions, ResNeXt sets a new standard for efficiency and performance in deep learning tasks. As AI continues to evolve, the principles embedded in ResNeXt are likely to influence future developments in the field."
+  },
+  {
+    "input": "Working of Retrieval-Augmented Prompting",
+    "output": "Let's see how it works:"
+  },
+  {
+    "input": "1. Querying External Information",
+    "output": "AI is prompted to retrieve information from external databases, websites or knowledge graphs. This allows model to collect relevant, up-to-date data.\nExample: If AI is asked \"What are the latest advancements in quantum computing?\"it can search for recent articles or research papers which ensures the response is up-to-date and informed by the latest findings."
+  },
+  {
+    "input": "2. Combining Retrieved Data with Internal Reasoning",
+    "output": "After retrieving the external information, AI combines it with its internal knowledge to make more accurate decisions. By merging with real-time data it ensures that its responses are contextually relevant and accurate which helps in improving decision-making and task execution.\nExample: If the question focuses on new medical treatment, AI can see latest research from clinical trials and combine it with its existing knowledge of medical practices to provide a accurate, up-to-date answer."
+  },
+  {
+    "input": "Example of Retrieval-Augmented Prompting in Action",
+    "output": "Without RAP (Internal Knowledge Only):\nModel Answer: \"AI is being used in healthcare for diagnosing diseases, personalized medicine and drug discovery.\"\nThis answer is based on general knowledge but lacks latest updates or specifics on recent developments.\nWith RAP (Retrieving External Information):\nResponse 1: \"According to the latest research, AI is now being used to detect early-stage cancers with higher accuracy through advanced imaging techniques.\"\nAction: Model retrieves up-to-date research papers or news articles on AI in healthcare.\nResponse 2: \"Recent AI applications in healthcare also include predicting patient deterioration in critical care units using real-time data analysis.\"\nAction: Model queries external sources to find the most recent advancements and add new information into its response.\nModel gives an answer that combines its internal knowledge with the latest research retrieved from external sources helps in providing accurate and up-to-date response."
+  },
+  {
+    "input": "Challenges of Retrieval-Augmented Prompting",
+    "output": "Following challenges shows that need for continued research and development in Retrieval-Augmented Prompting techniques is required to make it better:"
+  },
+  {
+    "input": "Applications of Retrieval-Augmented Prompting",
+    "output": "By integrating real-time external data with internal knowledgeRetrieval-Augmented Promptinghelps AI to give accurate, up-to-date and contextually relevant solutions which helps in making it important for dealing dynamic, complex tasks."
   }
 ]
