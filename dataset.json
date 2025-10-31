@@ -24786,5 +24786,13 @@
   {
     "input": "Visualizing predictions",
     "output": "As PSPNet is a segmentation model so there are no good metrics to evaluate it logically. But we can evaluation it's performance based on visualizing predicted masks with comparison to actual mask. We will randomly make comparison by taking one image from validation set and plot it for comparison. Note that we have trained our model with less data and less number of epochs. So, output may not be cleared but we can check if attention line (object wise color difference line) is visible or not.\nOutput:\nFrom the above output we can see that the predicted mask is not clear because model is trained on less data and less number of epochs. However, the attention lines are clearly placed by the model. So, we can continue will this model to perform model training epochs on large data."
+  },
+  {
+    "input": "Gaussian Blur",
+    "output": "Gaussian blurring can be formulated as follows:\nHere,GA[I]_pis the result at pixelp, and the RHS is essentially a sum over all pixelsqweighted by the Gaussian function.I_qis the intensity at pixelq."
+  },
+  {
+    "input": "Bilateral Filter: an Additional Edge Term",
+    "output": "The bilateral filter can be formulated as follows:\nHere, the normalization factor and the range weight are new terms added to the previous equation.\\sigma_sdenotes the spatial extent of the kernel, i.e. the size of the neighborhood, and\\sigma_rdenotes the minimum amplitude of an edge. It ensures that only those pixels with intensity values similar to that of the central pixel are considered for blurring, while sharp intensity changes are maintained. The smaller the value of\\sigma_r, the sharper the edge. As\\sigma_rtends to infinity, the equation tends to a Gaussian blur.OpenCV has a function calledbilateralFilter()with the following arguments:\nCode :Input :Noisy Image.\nCode : Implementing Bilateral Filtering\nOutput of Bilateral Filter\nComparison with Average and Median filtersBelow is the output of the average filter (cv2.blur(img, (5, 5))).\nBelow is the output of the median filter (cv2.medianBlur(img, 5)).\nBelow is the output of the Gaussian filter (cv2.GaussianBlur(img, (5, 5), 0)).\nIt is easy to note that all these denoising filters smudge the edges, while Bilateral Filtering retains them."
   }
 ]
