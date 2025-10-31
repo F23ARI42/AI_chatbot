@@ -23054,5 +23054,37 @@
   {
     "input": "Step 3: Apply K-Means Clustering and Segment the Image",
     "output": "Now let's apply theK-Means clusteringalgorithm to segment the image into distinct regions based on color.\nFirst set the criteria for when the algorithm should stop.\nWe’ll use a maximum of100 iterationsor anaccuracy thresholdof85%.\nWe will choosek = 3which means the algorithm will identify3 clustersin the image.\nK-Means will group pixels with similar colors into the specified number of clusters.\nFinally we reshape the segmented data to match the original dimensions of the image so it can be visualized properly.\nOutput:\n\nNow if we change the value ofk to 6we get the below image\n\nAs you can see with an increase in the value of k the image becomes clearer and distinct because K-means algorithm can classify more classes or cluster of colors. It can segment objects in images and give better results in smaller dataset. But when it is applied on large datasets it becomes time consuming."
+  },
+  {
+    "input": "Step 1: Import the required libraries",
+    "output": "ImportNumpy,OpenCVandMatplotlib."
+  },
+  {
+    "input": "Step 2: Upload and Decode the Image",
+    "output": "Upload an image file and convert the raw file data into an image array for processing."
+  },
+  {
+    "input": "Step 3: Convert to Greyscale and Blur",
+    "output": "Convert the image to grayscale for easier processing.\nUseGaussian blurto reduce noise and help with more accurate segmentation."
+  },
+  {
+    "input": "Step 4: Apply OTSU's Thresholding",
+    "output": "OTSU's thresholding is an automatic method that determines the optimal threshold value to separate the foreground and background in a grayscale image by maximizing the difference between the two classes.\nAutomatically binarize the image to separate foreground (objects) from background.\nDisplay the binary image using matplotlib.\nOutput:"
+  },
+  {
+    "input": "Step 5: Morphological Closing and Background Dilation",
+    "output": "Perform closing to fill small holes and unify nearby regions.\nDilate the closed image to further expand object areas and clarify boundaries."
+  },
+  {
+    "input": "Step 6: Contour Filtering and Object Mask Creation",
+    "output": "Find external contours (outlines of main objects).\nKeep only contours with area greater than 1,000 pixels, filtering out small noise.\nFill these contours into a new mask to isolate major object regions."
+  },
+  {
+    "input": "Step 7: Morphological Opening and Erosion",
+    "output": "Apply opening to remove small foreground artefacts.\nFinish by eroding to refine and clean up the boundaries of the segmented objects."
+  },
+  {
+    "input": "Step 8: Result",
+    "output": "Output:\nBy combining thresholding with targeted morphological operations, we can efficiently segment and extract meaningful objects from an image, removing noise and clarifying boundaries."
   }
 ]
