@@ -25042,5 +25042,21 @@
   {
     "input": "Code Example",
     "output": "This Python program captures live video from webcam,detects blue-colored regions using HSVcolor filtering and then cleans small white noise from the mask using Opening morphological operation. It displays both original noisy mask and cleaned version side by side in real time.\nInput Frame:\nOriginal Blue Mask:\nAfter Opening (Noise Removed):\nExplanation:\ncv2.VideoCapture(0):Starts webcam stream.\nscreenRead.read():Reads a frame from webcam.\ncv2.cvtColor(image, cv2.COLOR_BGR2HSV):Converts BGR image to HSV color space.\nnp.array([110, 50, 50]) and np.array([130, 255, 255]):Define HSV range for detecting blue color.\ncv2.inRange(hsv, blue1, blue2):Creates a binary mask where blue areas are white (255), others are black (0).\nnp.ones((5, 5), np.uint8):Creates a 5×5 kernel (structuring element) of type `uint8`.\ncv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel):Performs Opening (Erosion followed by Dilation) to remove small white noise.\ncv2.waitKey(1) & 0xFF == ord('a'):Keeps looping until 'a' key is pressed.\ncv2.destroyAllWindows():Closes all OpenCV windows.\nscreenRead.release():Releases webcam resource."
+  },
+  {
+    "input": "Different Border Types",
+    "output": "The borderType parameter controls the style of the border we add to the image. Let's see some common options:"
+  },
+  {
+    "input": "Example 1: Using Different Border Types",
+    "output": "Here we will see how different border types affect the image. Each border type has a unique way of extending the edges of the image, either by adding solid colors, reflecting the edges or replicating the outermost pixels. This customization can be useful for a variety of image processing tasks.\nOutput:"
+  },
+  {
+    "input": "Example 2: Customizing Border Color with fill_value",
+    "output": "When using a constant border, we can choose the color for the border by setting the value parameter. This flexibility is helpful when we need to apply a specific color such as for creating frames or preparing images for machine learning tasks.\nOutput:"
+  },
+  {
+    "input": "Use Cases for cv2.copyMakeBorder()",
+    "output": "Adding borders to images can be helpful in various scenarios:"
   }
 ]
