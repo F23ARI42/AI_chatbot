@@ -24426,5 +24426,93 @@
   {
     "input": "Conclusion",
     "output": "In this article we discussed about Whisper AI, and how it can be used transform audio data to textual data. This textual data can be used to gain insight and apply machine learning or deep learning algorithms. WhisperAI promises to open up new opportunities for voice technology as its capabilities develop, making voice-driven applications more effective, inclusive, and user-friendly. WhisperAI raises the bar for speech recognition and transcription by utilising AI, enabling people and organisations to interact more effectively in a quickly changing digital environment."
+  },
+  {
+    "input": "Introduction to OpenCV",
+    "output": "Before moving into OpenCV, make sure we have set it up correctly in our environment. Whether we're working on Windows, Linux, macOS or using Anaconda.\nIntroduction to OpenCV\nInstall OpenCV for Python on Windows\nInstall OpenCV for Python on Linux\nSet up Opencv with anaconda environment\nGetting started with OpenCV\nEssential OpenCV Functions"
+  },
+  {
+    "input": "Working with Images",
+    "output": "Here we see how to manipulate and process images with OpenCV in Python. This section will introduce basic image operations like loading, saving and displaying images followed by more advanced image processing tasks.\nColor Spaces\nArithmetic operations on Images\nBitwise Operations on Binary Images"
+  },
+  {
+    "input": "1. Image Processing and Enhancement",
+    "output": "This includes techniques that transform or enhance images for better visual quality and manipulation:\nBlurring an Image\nGrayscaling of Images\nScaling, Rotating, Shifting and Edge Detection\nIntensity Transformation Operations on Images\nImage Translation\nImage Pyramid\nHistograms Equalization\nConvert an image from one color space to another\nVisualizing image in different color spaces\nCreate Border around Images"
+  },
+  {
+    "input": "2. Image Segmentation and Thresholding",
+    "output": "Techniques that help in dividing an image into meaningful regions or objects:\nSimple Thresholding\nAdaptive Thresholding\nOtsu Thresholding\nImage segmentation using Morphological operations"
+  },
+  {
+    "input": "3. Morphological Operations & Filtering",
+    "output": "Operations focused on structuring objects and reducing noise or unwanted features:\nErosion and Dilation of images\nBilateral Filtering\nDenoising of colored images\nFilter Color with OpenCV\nPython OpenCV - Morphological Operations\nMorphological Operations in Image Processing (Opening)\nMorphological Operations in Image Processing (Closing)\nMorphological Operations in Image Processing (Gradient)"
+  },
+  {
+    "input": "4. Advanced Image Manipulation & Background Subtraction",
+    "output": "More advanced techniques for handling complex image manipulations and background removal:\nImage Inpainting using OpenCV\nImage Registration\nBackground subtraction\nBackground Subtraction in an Image using Concept of Running Average\nForeground Extraction in an Image using Grabcut Algorithm"
+  },
+  {
+    "input": "5. Feature Detection and Description",
+    "output": "Techniques to detect key features like lines, corners and shapes in an image:\nLine detection using Houghline method\nCircle Detection\nDetect corner of an image\nCorner Detection with Shi-Tomasi method\nCorner detection with Harris Corner Detection\nFind Circles and Ellipses in an Image\nDocument field detection\nSmile detection\nFeature extraction and image classification using OpenCV"
+  },
+  {
+    "input": "6. Feature Detection & Analysis",
+    "output": "Techniques to detect and analyze key features or patterns in an image:\nFind Co-ordinates of Contours\nAnalyze an image using Histogram"
+  },
+  {
+    "input": "Working with Videos",
+    "output": "This section focuses on how to handle videos using OpenCV. We’ll learn everything from loading videos to advanced processing and creating new videos."
+  },
+  {
+    "input": "1. Basic Video Operations",
+    "output": "These are foundational tasks for handling video input and output including loading and saving video files and capturing video from a webcam.\nOpenCV | Loading Video\nPlay a video using OpenCV\nClick response on video output using Events in OpenCV\nDisplay date and time in videos using OpenCV\nGet video duration using Python OpenCV"
+  },
+  {
+    "input": "2. Video Transformation and Effects",
+    "output": "These tasks involve modifying the video content such as adjusting speed, blending videos and converting between color spaces.\nCreating a Slow Motion Video Using OpenCV\nConverting Color video to grayscale using OpenCV in Python\nBlending of two videos using Python\nHow to change video resolution in OpenCV in Python\nFaster video file FPS with cv2.VideoCapture and OpenCV\nFaces Blur in Videos using OpenCV\nHow to draw Filled rectangle to every frame of video by using Python OpenCV?"
+  },
+  {
+    "input": "3. Video Processing and Advanced Tasks",
+    "output": "Advanced video processing techniques such as creating videos from images, extracting frames and saving key event clips using OpenCV.\nCreate video using multiple images\nExtract images from video\nSaving key event video clips with OpenCV"
+  },
+  {
+    "input": "Important functions in OpenCV",
+    "output": "Lets see some important functions in OpenCV that are important for performing various image and video operations such as handling images, applying transformations and detecting features."
+  },
+  {
+    "input": "1. Image Handling Functions:",
+    "output": "These functions allow us to load and display images which helps in basic image operations in OpenCV.\ncv2.imread() method\ncv2.imshow()\ncv2.imwrite()"
+  },
+  {
+    "input": "2. Image Transformations:",
+    "output": "These functions help in resizing, rotating and changing the color space of images which are important for image manipulation in OpenCV.\ncv2.resize()\ncv2.rotate()\ncv2.cvtColor()"
+  },
+  {
+    "input": "3. Drawing Functions:",
+    "output": "These functions allow us to draw various shapes and text on images which is useful for visualizing data, marking regions of interest and annotation.\ncv2.line()\ncv2.circle()\ncv2.rectangle()\nDraw a triangle with centroid\nFind and Draw Contours\ncv2.putText()\ncv2.ellipse()\ncv2.arrowedLine()\ndrawMatchesKnn()\ncv2.polylines()"
+  },
+  {
+    "input": "4. Image Processing:",
+    "output": "These functions are used to enhance images, detect edges and apply various transformations to refine visual data and extract meaningful features.\ncv2.GaussianBlur()\ncv2.Canny()\ncv2.threshold()\ncv2.erode()"
+  },
+  {
+    "input": "5. Object Detection:",
+    "output": "These functions are important for detecting objects and contours within images.\ncv2.CascadeClassifier()\ncv2.findContours()\ncv2.HoughCircles()\ncv2.ContourArea()\ncv2.approxPolyDP()"
+  },
+  {
+    "input": "6. Feature Detection:",
+    "output": "These functions are used to detect and match keypoints, descriptors and patterns in images for tasks like object recognition and tracking.\ncv2.SIFT()\ncv2.ORB()\ncv2.BFMatcher()"
+  },
+  {
+    "input": "7. Tracking and Motion:",
+    "output": "These functions helps in tracking of moving objects and background subtraction used in motion detection and real-time video analysis.\ncv2.calcOpticalFlowPyrLK()\ncv2.backgroundSubtractorMOG2()\ncv2.calcOpticalFlowFarneback()\ncv2.createBackgroundSubtractorMOG2()"
+  },
+  {
+    "input": "Applications of OpenCV",
+    "output": "OpenCV is used in various real-world applications like object detection, facial recognition and real-time video analysis.\nExtract frames using OpenCV\nDisplaying the coordinates of the points clicked on the image using Python-OpenCV\nWhite and black dot detection\nOpenCV BGR color palette with trackbars\nDraw rectangular shape and extract objects\nFace Detection using Python and OpenCV with webcam\nOpening multiple color windows\nPlay a video in reverse mode\nSaving Operated Video from a webcam"
+  },
+  {
+    "input": "Projects of OpenCV",
+    "output": "Invisible Cloak using OpenCV\nUnsupervised Face Clustering Pipeline\nVehicle detection in a Video frame using Python – OpenCV\nCount number of Faces using Python – OpenCV\nLive Webcam Drawing using OpenCV\nDetect and Recognize Car License Plate from a video in real time\nTemplate matching using OpenCV in Python\nCartooning an Image using OpenCV – Python\nWith these foundational OpenCV skills, we're ready to get more advanced projects and upgrade our image and video processing capabilities."
   }
 ]
