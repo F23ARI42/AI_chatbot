@@ -23086,5 +23086,49 @@
   {
     "input": "Step 8: Result",
     "output": "Output:\nBy combining thresholding with targeted morphological operations, we can efficiently segment and extract meaningful objects from an image, removing noise and clarifying boundaries."
+  },
+  {
+    "input": "Installation",
+    "output": "To install this module type the below command in the terminal."
+  },
+  {
+    "input": "RGB to Grayscale",
+    "output": "rgb2gray module of skimage package is used to convert a 3-channel RGB Image to one channel monochrome image. In order to apply filters and other processing techniques, the expected input is a two-dimensional vector i.e. a monochrome image.\nskimage.color.rgb2gray()function is used to convert an RGB image to Grayscale format\nCode:\nOutput:\nExplanation:By using rgb2gray() function, the 3-channel RGB image of shape (400, 600, 3) is converted to a single-channel monochromatic image of shape (400, 300). We will be using grayscale images for the proper implementation of thresholding functions. The average of the red, green, and blue pixel values for each pixel to get the grayscale value is a simple approach to convert a color picture 3D array to a grayscale 2D array. This creates an acceptable gray approximation by combining the lightness or brightness contributions of each color band."
+  },
+  {
+    "input": "RGB to HSV",
+    "output": "The HSV (Hue, Saturation, Value) color model remaps the RGB basic colors into dimensions that are simpler to comprehend for humans. The RGB color space describes the proportions of red, green, and blue in a colour. In the HSV color system, colors are defined in terms of Hue, Saturation, and Value.\nskimage.color.rgb2hsv()function is used to convert an RGB image to HSV format\nCode:\nOutput:"
+  },
+  {
+    "input": "Supervised Segmentation",
+    "output": "For this type of segmentation to proceed, it requires external input. This includes things like setting a threshold, converting formats, and correcting external biases."
+  },
+  {
+    "input": "Segmentation by Thresholding - Manual Input",
+    "output": "An external pixel value ranging from 0 to 255 is used to separate the picture from the background. This results in a modified picture that is larger or less than the specified threshold.\nOutput:\n\nExplanation:The first step in this thresholding is implemented by normalizing an image from 0 - 255 to 0 - 1. A threshold value is fixed and on the comparison, if evaluated to be true, then we store the result as 1, otherwise 0. This globally binarized image can be used to detect edges as well as analyze contrast and color difference."
+  },
+  {
+    "input": "Segmentation by Thresholding  Using skimage.filters module",
+    "output": "The Niblack and Sauvola thresholding technique is specifically developed to improve the quality of microscopic images. It's a local thresholding approach that changes the threshold depending on the local mean and standard deviation for each pixel in a sliding window. Otsu's thresholding technique works by iterating over all possible threshold values and computing a measure of dispersion for the sample points on either side of the threshold, i.e. either in foreground or background. The goal is to determine the smallest foreground and background spreads possible.\nskimage.filters.threshold_otsu()function is used to return threshold value based on Otsu’s method.\nskimage.filters.threshold_niblack()function is a local thresholding function that returns a threshold value for every pixel based on Niblack’s method.\nskimage.filters.threshold_sauvola()function is a local thresholding function that returns a threshold value for every pixel based on Sauvola's method.\nCode:\nOutput\n\nExplanation:These local thresholding techniques use mean and standard deviation as their primary computational parameters. Their final local pixel value is felicitated by other positive parameters too. This is done to ensure the separation between the object and the background.\nSauvola_{value} = \\bar x * (1 + k * (\\frac{\\sigma}{r-1}))\nNiblack_{value} = \\bar x + k * \\sigma - c\nwhere \\bar x and \\sigma represents mean and standard deviation of the pixel intensities respectively."
+  },
+  {
+    "input": "Active Contour Segmentation",
+    "output": "The concept of energy functional reduction underpins the active contour method. An active contour is a segmentation approach that uses energy forces and restrictions to separate the pixels of interest from the remainder of the picture for further processing and analysis. The term \"active contour\" refers to a model in the segmentation process.\n' skimage.segmentation.active_contour() 'function fits snakes to image features.\nCode:\nOutput:\n\nExplanation:The active contour model is a dynamic approach in image segmentation that uses the image's energy restrictions and pressures to separate regions of interest. It establishes different borders or curvatures for each section of the target object, minimizing the energy function resulting from external and internal forces."
+  },
+  {
+    "input": "Chan-Vese Segmentation",
+    "output": "The well-known Chan-Vese iterative segmentation method splits a picture into two groups with the lowest intra-class variance. This algorithm uses sets that are iteratively evolved to minimize energy, which is characterized by weights corresponding to the total of variations in intensity from the overall average outside the segmented region, the sum of differences from the overall average within the feature vector, and a term that is directly proportional to the length of the fragmented region's edge.\nskimage.segmentation.chan_vese()function is used to segment objects using the Chan-Vese Algorithm whose boundaries are not clearly defined.\nCode:\nOutput:\n\nExplanation:The Chan-Vese model for active contours is a strong and versatile approach for segmenting a wide range of pictures, including some that would be difficult to segment using \"traditional\" methods such as thresholding or gradient-based methods. This model is commonly used in medical imaging, particularly for brain, heart, and trachea segmentation. The model is based on an energy minimization issue that may be recast in a level set formulation to make the problem easier to solve."
+  },
+  {
+    "input": "Mark Boundaries",
+    "output": "This technique produces an image with highlighted borders between labeled areas, where the pictures were segmented using the SLIC method.\nskimage.segmentation.mark_boundaries()function is to return image with boundaries between labeled regions.\nCode:\nOutput:\n\nExplanation:We cluster the image into 100 segments with compactness = 1 and this segmented image will act as a labeled array for the mark_boundaries() function. Each segment of the clustered image is differentiated by an integer value and the result of mark_boundaries is the superimposed boundaries between the labels."
+  },
+  {
+    "input": "Simple Linear Iterative Clustering",
+    "output": "By combining pixels in the image plane based on their color similarity and proximity, this method generates superpixels. Simple Linear Iterative Clustering is the most up-to-date approach for segmenting superpixels, and it takes very little computing power. In a nutshell, the technique clusters pixels in a five-dimensional color and picture plane space to create small, nearly uniform superpixels.\nskimage.segmentation.slic()function is used to segment image using k-means clustering.\nCode:\nOutput:\n\nExplanation:This technique creates superpixels by grouping pixels in the picture plane based on their color similarity and closeness. This is done in 5-D space, where XY is the pixel location. Because the greatest possible distance between two colors in CIELAB space is restricted, but the spatial distance on the XY plane is dependent on the picture size, we must normalize the spatial distances in order to apply the Euclidean distance in this 5D space. As a result, a new distance measure that takes superpixel size into account was created to cluster pixels in this 5D space."
+  },
+  {
+    "input": "Felzenszwalb's Segmentation",
+    "output": "Felsenszwalb's efficient graph-based picture segmentation is computed. It produces an over-segmentation of an RGB picture on the image grid using a quick, minimal spanning tree-based clustering. This may be used to isolate features and identify edges. This algorithm uses the Euclidean distance between pixels. skimage.segmentation.felzenszwalb() function is used to compute Felsenszwalb’s efficient graph-based image segmentation.\nCode:\nOutput:\nExplanation:Using a rapid, minimal tree structure-based clustering on the picture grid, creates an over-segmentation of a multichannel image. The parameter scale determines the level of observation. Less and larger parts are associated with a greater scale. The diameter of a Gaussian kernel is sigma, which is used to smooth the picture before segmentation. Scale is the sole way to control the quantity of generated segments as well as their size. The size of individual segments within a picture might change dramatically depending on local contrast.\nThere are many other supervised and unsupervised image segmentation techniques. This can be useful in confining individual features, foreground isolation, noise reduction, and can be useful to analyze an image more intuitively. It is a good practice for images to be segmented before building a neural network model in order to yield effective results."
   }
 ]
