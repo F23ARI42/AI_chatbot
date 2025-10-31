@@ -24374,5 +24374,29 @@
   {
     "input": "Limitations",
     "output": "Resource Intensive:Training can require powerful hardware.\nComplexity:Pipeline setup can be difficult for beginners.\nAccuracy Trade-off:Lightweight models may reduce accuracy.\nDataset Limits:Pre-trained models may need custom data for best results."
+  },
+  {
+    "input": "Key Features of One-Shot Prompting",
+    "output": "Single Example Guidance:The model receives one input-output pair as a template, clarifying the expected format and output for the task.\nGeneralization Requirement:The model must generalize from this single example to handle new, similar inputs, relying heavily on its pre-existing knowledge and training.\nEfficiency:This method is valuable when data is limited or rapid adaptation to new tasks is needed, reducing the need for extensive labeled datasets."
+  },
+  {
+    "input": "How One-Shot Prompting Works",
+    "output": "A typical one-shot prompt includes:\nTask Instruction:A brief description of what the model should do.\nOne Example:A single demonstration of the desired input and output.\nNew Input:The actual data for which the model should generate a response.\nExample (Sentiment Analysis):\nThe model uses the single example to infer that it should classify sentiment and then applies this logic to the new input."
+  },
+  {
+    "input": "Applications and Use Cases",
+    "output": "Natural Language Processing (NLP):Sentiment analysis, text classification, question answering.\nBusiness Scenarios:Deploying AI in environments with limited data, rapid prototyping, or when quick adaptation is required.\nStructured Data Tasks:Improving understanding and processing of structured information with minimal examples."
+  },
+  {
+    "input": "Advantages",
+    "output": "Reduces Data Requirements:Useful when collecting large datasets is impractical.\nQuick Adaptation:Enables models to tackle new tasks with minimal setup time.\nClarifies Ambiguous Instructions:Providing one example helps the model understand the task even if the instructions are not fully explicit."
+  },
+  {
+    "input": "Limitations",
+    "output": "Performance Variability:The model’s effectiveness depends on the complexity of the task and the quality of the example provided.\nLimited Coverage:One example may not capture all task variations, leading to errors on edge cases or nuanced inputs.\nNot Ideal for Complex Tasks:For tasks requiring deep understanding or multiple formats, few-shot prompting (with more examples) often yields better results."
+  },
+  {
+    "input": "Best Practices",
+    "output": "Choose a Representative Example:The single example should clearly demonstrate the desired input-output relationship.\nPair with Clear Instructions:While the example helps, concise instructions further improve model performance.\nMonitor Model Output:Since one-shot prompting can be sensitive to example choice, review outputs to ensure quality, especially for nuanced tasks."
   }
 ]
