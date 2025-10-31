@@ -23042,5 +23042,17 @@
   {
     "input": "Deep Learning Based Segmentation Models",
     "output": "U-Net:Designed for medical image segmentation, it uses a U-shaped architecture that allows precise segmentation even with limited data. It efficiently captures context while retaining fine details through skip connections making it ideal for small, high-resolution images.\nFully Convolutional Network (FCN):It modify conventional CNNs by replacing fully connected layers with convolutional layers allowing the network to process images of any size. This design enables pixel-wise segmentation, outputting spatial maps of segmentation results.\nSegNet:With its encoder-decoder structure, it is highly effective for scene understanding and object recognition. The encoder captures contextual information from the image while the decoder uses this context to perform precise localization and segmentation.\nMask R-CNN:An extension ofFaster R-CNNfor object detection, it adds a branch to predict segmentation masks alongside bounding box coordinates. It is used for instance segmentation, identifying and delineating individual object instances in images.\nVision Transformer (ViT):ViT applies transformer architectures to image segmentation by dividing an image into patches and processing them sequentially. This allows the model to capture global context, enhancing segmentation accuracy for complex visual tasks.\nResNet (Residual Network):While ResNet itself is a classification model, its residual learning framework is widely used as a backbone in many segmentation models like DeepLab, Mask R-CNN. Residual blocks help in training very deep networks by solving the vanishing gradient problem, enabling better feature extraction and improved segmentation accuracy."
+  },
+  {
+    "input": "Step 1: Install Required Libraries",
+    "output": "In the first step we load required libraries likeNumpy,MatplotlibandOpenCV.We'll start by reading the image and displaying it. You can download the image fromhere.\nOutput:"
+  },
+  {
+    "input": "Step 2: Reshape the Image for K-Means Clustering",
+    "output": "K-Means works on 2D data but images are in 3D i.e height, width, color channels. So we need toreshapethe image into a 2D array."
+  },
+  {
+    "input": "Step 3: Apply K-Means Clustering and Segment the Image",
+    "output": "Now let's apply theK-Means clusteringalgorithm to segment the image into distinct regions based on color.\nFirst set the criteria for when the algorithm should stop.\nWe’ll use a maximum of100 iterationsor anaccuracy thresholdof85%.\nWe will choosek = 3which means the algorithm will identify3 clustersin the image.\nK-Means will group pixels with similar colors into the specified number of clusters.\nFinally we reshape the segmented data to match the original dimensions of the image so it can be visualized properly.\nOutput:\n\nNow if we change the value ofk to 6we get the below image\n\nAs you can see with an increase in the value of k the image becomes clearer and distinct because K-means algorithm can classify more classes or cluster of colors. It can segment objects in images and give better results in smaller dataset. But when it is applied on large datasets it becomes time consuming."
   }
 ]
