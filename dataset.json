@@ -24258,5 +24258,25 @@
   {
     "input": "Challenges of MAS",
     "output": "Coordination Complexity: Aligning actions of multiple agents is complex.\nCommunication Overhead: Inefficient communication may slow down the system.\nConflict Resolution: Agents with competing goals may reduce efficiency.\nScalability Issues:As the number of agents increases, managing them gets harder.\nSecurity and Trust:Systems must defend against malicious or unreliable agents."
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "Let's see the step-by-step implementation of Multiclass Classification along with various classifiers,"
+  },
+  {
+    "input": "Step 1: Import Libraries",
+    "output": "We will import the required libraries,\nsklearn.datasets: Provides standard datasets (like iris) useful for testing and practicing ML methods.\nsklearn.model_selection.train_test_split: This function splits arrays or matrices into random train and test subsets, enabling fair evaluation of models.\nsklearn.metrics.accuracy_score, confusion_matrix: Tools for evaluating the correctness of model predictions; accuracy measures percent correct, confusion matrix details classification mistakes.\nmatplotlib.pyplot: A plotting library for creating static, interactive and animated visualizations in Python.\nseaborn: A high-level data visualization library built on matplotlib; it helps produce visually appealing statistical graphics (like heatmaps)."
+  },
+  {
+    "input": "Step 2: Load and Explore the Dataset",
+    "output": "TheIris datasetis a famous collection of 150 flower samples, representing three Iris species, setosa, versicolor and virginica. Each sample has four numeric features: sepal length, sepal width, petal length and petal width.\niris.datais a 2D NumPy array of shape (150, 4), where each row represents a single flower’s measured features.\niris.targetis a 1D array of length 150, where each entry is an integer (0, 1 or 2) that denotes the species label for the corresponding row in iris.data."
+  },
+  {
+    "input": "Step 3: Split the Data",
+    "output": "We will split the data for training and testing,\ntrain_test_split separates the feature (X) and label (y) arrays into training and testing sets. Here, 70% of the data is used to train the models (X_train, y_train) and 30% is used to evaluate them (X_test, y_test).\nSetting random_state ensures we always get the same split, allowing reproducibility."
+  },
+  {
+    "input": "Step 4: Model Training and Visualization",
+    "output": "1. Decision Tree Classifier:Decision Tree Classifieris a model that predicts class labels by learning simple decision rules arranged in a tree structure, where each node makes a decision based on a feature until a class label is assigned at the leaf.\nInstantiates the classifier object, setting a limit of 2 for tree depth.\n.fit(X_train, y_train) trains the model using the training data.\n.predict(X_test) generates predicted labels for the test data.\naccuracy_score(y_test, dtree_preds) computes how many test samples were correctly classified.\nconfusion_matrix(y_test, dtree_preds) gives a table indicating, for each actual class, how many times the model predicted each possible class.\nThe seaborn heatmap visualizes which classes the model predicts well or struggles with.\nOutput:\n2. Support Vector Machine(SVM) Classifier:Support Vector Machine Classifieris a model that separates data into classes by finding the optimal hyperplane that maximizes the margin between different class groups in the feature space.\nCreates a linear SVC (Support Vector Classifier) object.\nFits the model with training data.\nPredicts test set labels.\nCalculates accuracy and confusion matrix.\nVisualizes the confusion matrix, showing per-class predictions.\nOutput:\n3. K-Nearest Neighbors(KNN) Classifiers:k-Nearest Neighbors Classifieris a model that classifies a data point by looking at the majority class among its k-nearest neighbors, based on distance in feature space.\nSets up a KNN classifier to consider 7 neighbors.\nModels the training data (essentially, stores it).\nPredicts the labels by 'voting' among the nearest neighbors.\nDerives accuracy and confusion statistics.\nPlots the confusion matrix to visualize strengths and errors in class assignment.\nOutput:\n4. Naive Bayes Classifier:Naive Bayes Classifieris a probabilistic model based on Bayes' theorem, which assumes that features are independent given the class and predicts the most probable class for new data.\nInstantiates aGaussian Naive Bayes classifier.\nFits the model to the training data, calculating class-conditional mean and variance for each feature.\nPredicts class labels for test samples based on probability.\nComputes overall accuracy and structured confusion data.\nPlots the confusion matrix, providing an at-a-glance assessment of classification quality for each true class.\nOutput:"
   }
 ]
