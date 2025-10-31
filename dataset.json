@@ -23434,5 +23434,53 @@
   {
     "input": "Applications of Instruction Tuning",
     "output": "Instruction tuning can be applied in various industries:\nInstruction tuning holds the promise of making AI more adaptive and capable, offering personalized and accurate responses across various industries. As the technology continues to improve, it will play a crucial role in shaping smarter, more efficient AI systems capable of handling increasingly complex and diverse tasks."
+  },
+  {
+    "input": "Langchain",
+    "output": "Langchainis an open-source framework that helps you build applications usinglarge language models(LLMs). It offers tools to manage prompts, connect different reasoning steps and create smart agents that can use various tools and data sources.\nKey Features:\nRun multi-step reasoning tasks.\nBuild agents that can use tools like web search or calculators.\nWorks with many LLM providers like Gemini, OpenAI and more."
+  },
+  {
+    "input": "Llama-Index",
+    "output": "Llama-Indexis a toolkit for building strong search systems on top of unstructured data like PDFs, websites or databases. It helps load, split, embed and search documents, perfect for tasks likeretrieval-augmented generation(RAG) or AI-powered data analysis.\nKey Features:\nConnects easily to data sources like PDFs, webpages and SQL databases.\nSupports embeddings and vector-based search.\nOffers control over how data is split and retrieved."
+  },
+  {
+    "input": "Advantages of Integration",
+    "output": "Smarter Information Retrieval:Llama-Index quickly finds the most relevant parts of data and Langchain helps the AI think through it in steps.\nTool Support:Langchain allows the AI to use multiple tools, like search engines or calculators, alongside document search for better answers.\nFlexible Workflows:Developers can build custom AI agents that combine document knowledge with decision-making logic.\nWorks with Any Provider:Compatible with many LLMs and embedding models (OpenAI, Gemini, HuggingFace etc.).\nBuilt for Scale:Handles large data and complex user questions, making it suitable for real-world apps."
+  },
+  {
+    "input": "Implementation",
+    "output": "Let's create an AI model that loads PDF files using Llama-index, which handles the processing and indexing of the documents. Langchain connects everything, combing document search with the reasoning power of an LLM to answer user questions. To make answers even better, DuckDuckGo is added as a web search tool for pulling in up-to-date information when needed.\nWhat it shows:\nHow to handle multiple PDFs at once.\nHow AI can understand and compare technical content.\nHow document knowledge + real-time web search can improve responses."
+  },
+  {
+    "input": "Step 1: Install Dependencies",
+    "output": "llama-index:Document indexing & retrieval\nllama-index-llms-gemini & embeddings-gemini:Gemini-based LLMs and embeddings\nllama-index-readers-pdf:For loading PDF documents\ngoogle-generativeai:Gemini API\nlangchain:Orchestrates AI pipelines\nlangchain-google-genai:Gemini integration for Langchain\nduckduckgo-search:Adds live web search\nlangchain-community:Extra Langchain tools like DuckDuckGo"
+  },
+  {
+    "input": "Step 2:Set Environment and Initialize LLM and Embeddings",
+    "output": "Sets up your Gemini API Key securely.\nllm:Gemini's large language model.\nembed_model:Gemini embedding model."
+  },
+  {
+    "input": "Step 3:Upload and Load PDF Documents",
+    "output": "Let's us upload PDFs.\nReads and loads them into memory.\nCreates a vector index for semantic search."
+  },
+  {
+    "input": "Step 4:Prepare the Query Tool",
+    "output": "Converts our vector index into a search tool.\nSets metadata for easier identification.\nMakes it Langchain-compatible so it can be used by agents."
+  },
+  {
+    "input": "Step 5:Add Web Search Tool",
+    "output": "Adds DuckDuckGoSearch as a secondary tool.\nAllows the agent to search the web for fresh information.\nCombines both PDF search and web search in a single list of tools."
+  },
+  {
+    "input": "Step 6:Build Langchain Agent",
+    "output": "Defines the agent's role and instructions.\nUses a Gemini LLM inside Langchain.\nConnects the agent with both tools: PDF search and web search.\nWraps everything in an agent executor that can run queries."
+  },
+  {
+    "input": "Step 7:Interactive Querying and Summarization",
+    "output": "Runs a direct query to the document engine.\nRetrieves a summary of document."
+  },
+  {
+    "input": "Real-World Application",
+    "output": "Research Assistants:AI that can read, summarize and compare reports, research papers or industry standards.\nFinancial & Legal Insights:Extract key facts from reports or legal documents and combine them with real-time web news.\nEnterprise Knowledge Search:Chat-based tools to explore internal documents, using smart agents and retrieval.\nHealthcare Q&A:Answer complex medical questions using both stored medical texts and up-to-date guidelines from the web.\nCustomer Support Automation:Build AI assistants that can pull answers from product manuals, FAQs, support tickets and even search the web, giving users accurate, context-aware responses instantly."
   }
 ]
