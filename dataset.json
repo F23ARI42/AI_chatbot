@@ -25010,5 +25010,21 @@
   {
     "input": "Code Example",
     "output": "This code captures live video from webcam, detects blue regions in the frame and applies Closing operation to fill small black holes inside the detected areas. It displays both original mask and result after applying Closing.\nInput Frame:\nOriginal Blue Mask:\nAfter Closing (Holes Filled):\nExplanation:\ncv2.VideoCapture(0):Starts webcam stream.\nscreenRead.read():Reads a frame from webcam.\ncv2.cvtColor(image, cv2.COLOR_BGR2HSV):Converts BGR image to HSV color space.\nnp.array([110, 50, 50]) and np.array([130, 255, 255]):Define HSV range for detecting blue color.\ncv2.inRange(hsv, blue1, blue2):Creates a binary mask where blue areas are white (255), others are black (0).\nnp.ones((5, 5), np.uint8):Creates a 5×5 kernel (structuring element) of type `uint8`.\ncv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel):Performs Closing(Dilation followed by Erosion) to fill small black holes.\ncv2.waitKey(1) & 0xFF == ord('a'):Keeps looping until 'a' key is pressed.\ncv2.destroyAllWindows():Closes all OpenCV windows.\nscreenRead.release():Releases webcam resource."
+  },
+  {
+    "input": "Gradient Operation",
+    "output": "Gradient is a morphological operation that involves two steps:Dilation−Erosion."
+  },
+  {
+    "input": "Interpretation of the Equation",
+    "output": "A:input image\nB:structuring element (kernel)\n⊕:Dilation\n⊖:Erosion\nGradient highlights the boundaries of objects by finding difference between their dilated and eroded versions. It’s useful for detecting edges and outlining shapes without affecting their internal regions."
+  },
+  {
+    "input": "Function to perform Gradient Operation",
+    "output": "Syntax for Gradient:\nParameters:\nimage:Input binary or grayscale image\ncv2.MORPH_GRADIENT:Specifies the gradient operation\nkernel:Structuring element defining dilation/erosion shape"
+  },
+  {
+    "input": "Code Example",
+    "output": "This code captures live video from webcam, detects blue areas in each frame and applies Gradient operation to highlight their edges. It displays both original mask and edge-highlighted result.\nOutput:\nExplanation:\ncv2.VideoCapture(0): Starts webcam stream.\nscreenRead.read():Reads a frame from webcam.\ncv2.cvtColor(image, cv2.COLOR_BGR2HSV):Converts BGR image to HSV color space.\nnp.array([110, 50, 50])andnp.array([130, 255, 255]):Define HSV range for detecting blue color.\ncv2.inRange(hsv, blue1, blue2):Creates a binary mask where blue areas are white (255), others are black (0).\nnp.ones((5, 5), np.uint8):Creates a 5×5 kernel (structuring element) of type uint8.\ncv2.morphologyEx(mask, cv2.MORPH_GRADIENT, kernel):Performs Gradient  to highlight edges of objects.\ncv2.waitKey(1) & 0xFF == ord('a'):Keeps looping until 'a' key is pressed.\ncv2.destroyAllWindows():Closes all OpenCV windows.\nscreenRead.release():Releases webcam resource."
   }
 ]
