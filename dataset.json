@@ -23250,5 +23250,25 @@
   {
     "input": "Conclusion",
     "output": "In conclusion, the watershed algorithm is a powerful image segmentation technique that uses topographic information to divide an image into multiple segments or regions. The watershed algorithm is more thoughtful than other segmentation methods, and it is more in line with the impression of the human eye on the image. It is widely used in medical imaging and computer vision applications and is a crucial step in many image processing pipelines. Despite its limitations, the watershed algorithm remains a popular choice for image segmentation tasks due to its ability to handle images with significant amounts of noise and irregular shapes."
+  },
+  {
+    "input": "Laplacian Filter",
+    "output": "The Laplacian filter is an edge-detection operator that highlights regions of rapid intensity change, which are typically found at edges within an image. It works by applying a special convolution mask that calculates the second derivative of pixel values in all directions. This method:\nDetects edges regardless of direction.\nProduces an \"edge map\" that can be added or subtracted from the original image to enhance sharpness.\nIs sensitive to noise, so minor details may appear more pronounced after processing."
+  },
+  {
+    "input": "High Boost Filtering",
+    "output": "High boost filtering is a technique that sharpens an image by boosting its edge information while still retaining the low-frequency (smooth) areas. This method goes beyond simple edge enhancement by allowing us to control the degree of sharpness through an amplification constant (often denoted as \"A\"). The essential steps are:\nCreate a mask that accentuates details and edges even further than a traditional Laplacian filter.\nCombine the original image with the enhanced edge information, with the degree of sharpening controlled by the parameter A.\nParticularly useful for images that need strong emphasis on details without losing the context of the entire image."
+  },
+  {
+    "input": "Implementation",
+    "output": "Step 1:Load a Test Image"
+  },
+  {
+    "input": "Laplacian Filter Sharpening",
+    "output": "The Laplacian filter is a simple edge detector, we can sharpen the images by either subtracting or adding the edge map, based on the filter used.\n1. Using a Basic Laplacian Filter\nThe filter highlights edges.\nWe subtract the filtered image from the original to highlight the edges.\n2. Using a Stronger Laplacian Filter\nThis mask intensifies the edge detection.\nWe add the filtered image to the original for sharpening."
+  },
+  {
+    "input": "High Boost Filtering",
+    "output": "High boost filtering combines the original image with an edge-enhanced version for more aggressive detail enhancement.\n1. Standard High Boost Filter:The filter enhances image details by combining edge emphasis and the original image.\n2. Stronger High Boost Filter:\nLarger central value increases sharpening intensity.\nUse this for images where we want very clear, crisp edges.\nImage sharpening enhances the clarity and distinction of edges in digital pictures. Using MATLAB, both Laplacian and high boost filtering offer straightforward, effective ways to make images look crisper and more detailed. By applying these filters,  we can quickly improve image quality for better analysis, presentation or interpretation."
   }
 ]
