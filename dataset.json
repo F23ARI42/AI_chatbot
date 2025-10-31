@@ -25466,5 +25466,25 @@
   {
     "input": "Applications of Retrieval-Augmented Prompting",
     "output": "By integrating real-time external data with internal knowledgeRetrieval-Augmented Promptinghelps AI to give accurate, up-to-date and contextually relevant solutions which helps in making it important for dealing dynamic, complex tasks."
+  },
+  {
+    "input": "Why Use Role-Based Prompting?",
+    "output": "Clarity & Focus :Responses are more precise and contextually relevant.\nSpecialization :AI can provide expert-level answers by simulating professional roles.\nEngagement :Increases user engagement and trust by matching tone and style to the scenario.\nCreativity :Enables creative writing, storytelling and simulations by adopting fictional or historical personas."
+  },
+  {
+    "input": "Example Prompts",
+    "output": "“You are a math tutor explaining algebra to a 10-year-old. Make it simple and engaging.”\n“Act as a customer service agent. Respond empathetically to a complaint about a delayed order.”\n“You are William Shakespeare. Write a sonnet about love and time.”\n“Imagine you are a financial advisor. Explain mutual funds to a beginner.”"
+  },
+  {
+    "input": "Best Practices",
+    "output": "Define the Role Clearly:Specify the role and intended behavior.\nProvide Context:Include background or objectives to guide the response.\nAdd Constraints:Limit the scope for precision (e.g., audience, tone, length).\nIterate and Refine:Test outputs and adjust prompts for better results.\nAvoid Stereotypes:Use neutral roles and avoid reinforcing biases."
+  },
+  {
+    "input": "Applications and Use Cases",
+    "output": "Education :AI acts as a tutor, explaining concepts at the right level for the learner.\nCustomer Service :Simulates empathetic support agents to handle queries and complaints.\nHealthcare and Finance :Provides specialized advice as a doctor, therapist or financial advisor.\nCreative Writing :AI adopts the persona of a famous author or poet to generate stylistic content.\nTechnical Support :Acts as a programmer or IT expert for troubleshooting and guidance."
+  },
+  {
+    "input": "Challenges and Limitations",
+    "output": "Quality of Role Representation:Effectiveness depends on the model’s training data and its understanding of the role.\nStereotype Reinforcement:Risk of perpetuating stereotypes if roles are not carefully defined.\nOverfitting to Role:The AI may become too rigid or miss broader context if the role is overly constrained.\nComplexity in Multi-Role Scenarios:Managing multiple roles in a single interaction can be challenging."
   }
 ]
