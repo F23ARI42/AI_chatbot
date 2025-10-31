@@ -25094,5 +25094,33 @@
   {
     "input": "Real-World Applications",
     "output": "Different color spaces are preferred for specific computer vision tasks because they highlight certain image features better. Let’s see some real-world applications of these conversions:\nGrayscale:Face detection, OCR (text recognition)\nHSV:Object tracking (e.g., detecting a colored ball)\nLAB:Color enhancement, skin tone detection\nYCrCb:Video compression, human skin detection"
+  },
+  {
+    "input": "Erosion",
+    "output": "Erosionis a morphological operation that shrinks the white foreground regions in a binary image (values 0 and 255). It removes noise and thins object boundaries. The extent of erosion depends on the size and shape of the kernel, typically defined usingnp.ones(), though custom kernels can also be used based on specific needs.\nOutput:\nThe output should be a thinner image than the original one.\nExplanation:\nBinarize withcv2.threshold(..., cv2.THRESH_BINARY + cv2.THRESH_OTSU)separates foreground and background.\nCreate kernel usingnp.ones((5, 5), np.uint8)defines the erosion structure.\nInvert image withcv2.bitwise_not()makes the foreground white for erosion to work correctly.\nApply erosion usingcv2.erode()shrinks white areas to clean noise or disconnect  objects.\nDisplay result withplt.imshow()andplt.axis('off')shows image without axes."
+  },
+  {
+    "input": "Dilation",
+    "output": "Dilationis a morphological operation that expands the white foreground regions in a binary image (values 0 and 255). It thickens object boundaries and fills small holes or gaps. Like erosion, the effect depends on the kernel’s size and shape, usually defined using np.ones(). Dilation is the opposite of erosion it grows white areas instead of shrinking them.\nOutput\nThe output should be a thicker image than the original one.\nExplanation:\nBinarize with cv2.threshold(..., cv2.THRESH_BINARY + cv2.THRESH_OTSU)separates foreground and background.\nCreate kernel usingnp.ones((3, 3), np.uint8)defines the dilation structure.\nInvert image withcv2.bitwise_not()makes the foreground white for dilation to work.\nApply dilation usingcv2.dilate()expands white areas, fills gaps or connects objects.\nDisplay result withplt.imshow()andplt.axis('off')shows the dilated image cleanly."
+  },
+  {
+    "input": "Opening",
+    "output": "Openinginvolves erosion followed by dilation in the outer surface (the foreground) of the image. All the above-said constraints for erosion and dilation applies here. It is a blend of the two prime methods. It is generally used to remove the noise in the image.\nOutput\nExplanation:\ncv2.imread()loads grayscale image.\ncv2.threshold()binarizes using Otsu’s method.\nnp.ones()creates kernel for morphological op.\ncv2.morphologyEx(..., MORPH_OPEN, ...)erodes, then dilates.\nplt.imshow()displays cleaned result (noise removed)."
+  },
+  {
+    "input": "Closing",
+    "output": "Closinginvolves dilation followed by erosion in the outer surface (the foreground) of the image. All the above-said constraints for erosion and dilation applies here. It is a blend of the two prime methods. It is generally used to remove the noise in the image.\nOutput\nExplanation:\ncv2.imread()loads grayscale image.\ncv2.threshold()binarizes using Otsu’s method.\nnp.ones()creates kernel for morphological op.\ncv2.morphologyEx(..., MORPH_OPEN, ...)erodes, then dilates.\nplt.imshow()displays cleaned result (noise removed)."
+  },
+  {
+    "input": "Morphological Gradient",
+    "output": "Morphological gradient is slightly different than the other operations, because, the morphological gradient first applies erosion and dilation individually on the image and then computes the difference between the eroded and dilated image. The output will be an outline of the given image.\nOutput\nExplanation:\nBinarize image using cv2.threshold with Otsu’s method.\nDefine 3×3 kernel usingnp.ones(...).\nInvert binary image to make foreground white.\nApply cv2.morphologyExwithcv2.MORPH_GRADIENTto extract edges.\nDisplay result usingplt.imshowand remove axes withplt.axis('off')."
+  },
+  {
+    "input": "Top Hat",
+    "output": "Top Hat is yet another morphological operation where Opening is performed on the binary image and the output of this operation is a difference between the input image and the opened image.\nOutput\nExplanation:\nBinarize withcv2.threshold(..., cv2.THRESH_BINARY + cv2.THRESH_OTSU)to segment image.\nDefine kernel withnp.ones((13, 13), np.uint8)for opening operation.\nApply Top Hat usingcv2.morphologyEx(..., cv2.MORPH_TOPHAT, ...)to subtract opened image.\nDisplay withplt.imshow(...), plt.axis('off')to show clean output."
+  },
+  {
+    "input": "Black Hat",
+    "output": "The black-hat operation is used to do the opposite, enhancing dark objects of interest on a bright background. The output of this operation is the difference between the closing of the input image and the input image.\nOutput\nExplanation:\nBinarize withcv2.threshold(..., cv2.THRESH_BINARY + cv2.THRESH_OTSU)to extract objects.\nInvert image usingcv2.bitwise_not()to focus on dark features.\nDefine kernel withnp.ones((5, 5), np.uint8)for closing.\nApply Black Hat usingcv2.morphologyEx(..., cv2.MORPH_BLACKHAT, ...)to get dark outlines.\nDisplay usingplt.imshow(...), plt.axis('off')for clean view."
   }
 ]
