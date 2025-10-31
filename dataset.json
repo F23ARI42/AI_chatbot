@@ -25506,5 +25506,25 @@
   {
     "input": "Performance Metrics",
     "output": "The performance of the decoder variants is evaluated using several metrics:\nGlobal Accuracy (G): Overall pixel-wise accuracy.\nClass Average Accuracy (C): Average accuracy across all classes.\nMean Intersection over Union (mIoU): A measure of overlap between the predicted and ground truth segments.\nBoundary F1 Score (BF): Evaluates the accuracy of boundary delineation."
+  },
+  {
+    "input": "1. Multiple Responses",
+    "output": "AI generates several answers to the same question based on different reasoning paths. Instead of relying on a single response, the model uses multiple approaches to tackle the problem, which allows it to explore different perspectives.\nFor example, if asked, \"What is 8 + 5?\", the model could reason in different ways: Each of these responses uses a slightly different way of thinking about the problem (direct calculation, step-by-step reasoning, or an alternate way of phrasing the solution).\nResponse 1: \"8 + 5 is 13.\"\nResponse 2: \"Start from 8, count five numbers forward (9, 10, 11, 12, 13), so 8 + 5 equals 13.\"\nResponse 3: \"The sum of 8 and 5 is 13.\""
+  },
+  {
+    "input": "2. Aggregation",
+    "output": "Once the multiple responses are generated, they are compared. Goal is to identify which response appears most consistently across all generated answers. This process could involve methods likemajority voting, where the answer that appears most often is selected as the correct one. In the example above, all three responses agree that the correct answer is 13. Since there is unanimous agreement, the final answer will be 13."
+  },
+  {
+    "input": "3. Final Answer",
+    "output": "Answer that appears most consistently is chosen as the final output. If responses are not unanimous, the one that appears the most will be selected. For example, if two responses say \"13\" and one says \"14\", the final answer would still be \"13\" because it appeared twice, which is more consistent. This final answer is considered the most reliable because it has been validated by multiple independent reasoning paths."
+  },
+  {
+    "input": "Example of Self-Consistency Prompting in Action",
+    "output": "Let's take a more complex example where reasoning is required:\nWithout Self-Consistency (Single Response):\nModel Answer: \"I have 2 apples left.\"\nWhile this might be correct, it’s based on a single reasoning path. If the model made a mistake or overlooked a detail, the answer would still be incorrect.\nWith Self-Consistency Prompting (Multiple Responses):\nResponse 1: \"I start with 3 apples. If I give 1 apple away, I subtract 1 from 3, leaving me with 2 apples.\"\nResponse 2: \"I have 3 apples. After giving 1 apple away, I have 3 - 1 = 2 apples left.\"\nResponse 3: \"If I take away 1 apple from my 3, that leaves me with 2 apples.\"\nAggregation: All three responses agree that the correct answer is 2 apples. Since the responses are consistent, the final answer is selected as 2 apples.\nHowever, if the responses had differed, for example:\nResponse 1: \"I have 3 apples. I give away 1, so I have 1 apple left.\"\nResponse 2: \"3 apples minus 1 apple is 2 apples.\"\nResponse 3: \"3 apples minus 1 is 2 apples.\"\nAggregation: Here, there is one response saying 1 apple and two responses saying 2 apples. Model would select 2 apples as the final answer since it is the more consistent answer.\nWithout Self-Consistency (Single Response):\nModel Answer: \"1426\"\nThis is a single response generated based on the model's reasoning. While the answer may be correct in this case, it could still be wrong if there’s an error in reasoning or an oversight, as there’s no cross-checking of multiple answers.\nWith Self-Consistency Prompting (Multiple Responses):\nResponse 1: \"587 + 839 = 1426\"\nResponse 2: \"Adding 587 to 839 gives 1426\"\nResponse 3: \"587 plus 839 equals 1426\"\nAggregation: Since, all three responses agree that the answer is 1426, the model selects 1426 as the final, most consistent answer.\nIf the responses had differed, for example:\nResponse 1: \"587 + 839 = 1426\"\nResponse 2: \"Adding 587 to 839 gives 1427\"\nResponse 3: \"587 plus 839 equals 1426\"\nAggregation: In this case, two responses say 1426 and one says 1427. Model would choose 1426 as the final answer since it is the more consistent answer across the majority of responses.\nThis process helps the AI model to get things right by looking at the same problem from different angles."
+  },
+  {
+    "input": "Challenges of Self-Consistency Prompting",
+    "output": "Despite its many advantages, Self-consistency prompting also presents several challenges that need to be addressed for optimal performance:\nBy considering multiple responses and selecting the most consistent one,Self-consistency promptingensures that AI systems can deliver more reliable and accurate results, even in the face of potential reasoning errors."
   }
 ]
