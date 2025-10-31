@@ -23330,5 +23330,49 @@
   {
     "input": "Advantages of Image Translation",
     "output": "Let's see some common advantages of Image Translation:"
+  },
+  {
+    "input": "1. Noise Reduction Using a Gaussian Filter",
+    "output": "To prevent false detection caused by image noise, the algorithm first applies a Gaussian blur. This smoothes out minor intensity variations making true edges more prominent.\nThe Gaussian kernel used is typically 5×55×5 with a standard deviation (\\sigma) of 1.4\nThe kernel must be normalized so its values sum to 1.\nThe equation for Gaussian filter kernel is:"
+  },
+  {
+    "input": "2. Gradient Calculation",
+    "output": "The algorithm computes the intensity gradient for each pixel, both horizontally and vertically, using Sobel operators:\nSobel-X:Detects vertical edges.\nSobel-Y:Detects horizontal edges."
+  },
+  {
+    "input": "3. Non-Maximum Suppression",
+    "output": "To refine the edge map and thin the edges to one-pixel width, non-maximum suppression identifies and keeps only those pixels at the local maxima (in the gradient direction), suppressing all others.\nEach pixel is compared along the gradient direction with its neighbours.\nIf a neighbouring pixel has a greater gradient magnitude, the current pixel is suppressed (set to zero)."
+  },
+  {
+    "input": "4. Double Thresholding",
+    "output": "This step distinguishes strong edges from weak ones based on two threshold values:\nPixels above the high threshold:Marked as strong edges.\nPixels below the low threshold:Suppressed (not considered edges).\nPixels between thresholds:Marked as weak i.e they may or may not be an edge."
+  },
+  {
+    "input": "5. Edge Tracking by Hysteresis",
+    "output": "Weak pixels remain part of the final edge only if they are connected to strong pixels i.e., part of a continuous edge. Hysteresis ensures that only genuine edges form the output."
+  },
+  {
+    "input": "Step-by-Step Implementation of the Canny Edge Detection",
+    "output": "Let's see the implementation of Canny Edge Detection usingOpenCVin Python,"
+  },
+  {
+    "input": "Step 1: Import libraries",
+    "output": "NumPy:For array operations.\nOpenCV:For image processing functions.\nMatplotlib:For displaying images."
+  },
+  {
+    "input": "Step 2: Define Canny_detector Function",
+    "output": "Color images are converted to grayscale, as edge detection operates on intensity changes.\nA Gaussian blur smooths the image to reduce the impact of noise which might otherwise produce false edges.\nComputes horizontal (x-direction) and vertical (y-direction) intensity gradients using Sobel operators.\nConverts these to magnitude and angle for each pixel.\nInitializes \"weak\" and \"strong\" edge thresholds as fractions of the maximum magnitude found.\nClassifies pixels as strong edges, weak edges or non-edges based on the calculated thresholds."
+  },
+  {
+    "input": "Step 3: Load and Check the Input Image",
+    "output": "Reads the target image file.\nChecks if the file loads successfully to prevent errors later."
+  },
+  {
+    "input": "Step 4: Apply Canny Edge Detection",
+    "output": "Calls theCanny_detectorfunction to process the image and obtain the edge map."
+  },
+  {
+    "input": "Step 5: Visualize Results",
+    "output": "Output:\nThe Canny edge detector is a useful and reliable method for edge detection in images. By implementing its steps from scratch, we gain a deeper understanding of the algorithm and its effectiveness. While OpenCV’s built-in function is efficient for practical use, building our own version offers valuable insights into computer vision fundamentals."
   }
 ]
