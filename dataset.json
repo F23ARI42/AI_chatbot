@@ -23178,5 +23178,57 @@
   {
     "input": "Step 11: Compute Segmentation Metrics",
     "output": "We compute the segmentation metrics which measures performance using overlap (IoU) and consolidation (Dice Score)metrics which are critical for segmentation success.\nOutput:\nWe used TensorFlow and the Oxford-IIIT Pet Dataset to build a deep learning image segmentation model that assigns class labels to every pixel, allowing us to accurately separate pet images into distinct regions. Through a step-by-step pipeline, covering data preparation, model design using a VGG16 encoder and FCN-style decoder, training and evaluation, we demonstrated how raw image data can be turned into detailed, pixel-level segmentations, providing both clear visual results and reliable quantitative metrics for assessing model performance."
+  },
+  {
+    "input": "What is R-CNN?",
+    "output": "R-CNNstands for Region-based Convolutional Neural Network. It is a ground-breaking object detection system that combines object localization and recognition into an end-to-end deep learning framework.\nRNN can be summarised in the following ways.\nRegion Proposal: Initially, a region proposal algorithm (such asselective search) generates a set of potential bounding box regions in an image that are likely to contain objects of interest. These regions serve as candidate object locations.\nFeature Extraction: Each region proposal is then individually cropped and resized to a fixed size and passed through a pre-trained CNN (such as AlexNet or VGGNet). The CNN extracts high-level features from the region, transforming it into a fixed-length feature vector.\nClassification and Localization: The feature vector obtained from the CNN is fed into separate fully connected layers. Theclassification layerpredicts the probability of different object classes present in the region, while theregression layerrefines the coordinates of the bounding box, improving localization accuracy.\nNon-Maximum Suppression (NMS): To eliminate redundant detections, non-maximum suppression is applied. It removes overlapping bounding boxes, keeping only the most confident detection for each object instance."
+  },
+  {
+    "input": "Mask R-CNN",
+    "output": "Mask R-CNN(Mask Region-based Convolutional Neural Network) is a Faster R-CNN object identification framework upgrade that adds the ability to do instance segmentation.  It was proposed by Kaiming He, Georgia Gkioxari, Piotr Dollár, and Ross Girshick in their work \"Mask R-CNN\" published in 2017.\nInstance segmentation is the task of not only detecting objects in an image but also segmenting each object instance at the pixel level, providing a binary mask for each detected object. Mask R-CNN develops on Faster R-CNN's two-stage architecture with a third branch for pixel-level segmentation masks.\nThe following are the essential features and components of Mask R-CNN:"
+  },
+  {
+    "input": "GrabCut",
+    "output": "GrabCutis a classical algorithm of foreground extraction with minimal user interaction. It takes an input image and a user-defined bounding box that encloses the foreground object as its input (here dog is the foreground object). It then generates a refined segmentation mask that separates the foreground object from the background.\nWith an initial estimate of foreground and background regions based on the provided bounding box aGaussian Mixture Model (GMM)is used to model the foreground and background by iteratively updating the pixel labels, improving the accuracy of the segmentation. The final output of the GrabCut algorithm is a mask image where the foreground and background regions are separated."
+  },
+  {
+    "input": "Why use GrabCut and Mask R-CNN together for Image Segmentation?",
+    "output": "Now a question arises,Why are we using GrabCut with Mask R-CNN, isn't Mask R-CNN sufficient for image segmentation?\nWhile Mask R-CNN is capable of producing reasonably accurate segmentation masks, there are instances where the results may contain noise or inaccuracies. This could be due to factors such as complex backgrounds, occlusions, or ambiguous object boundaries. By integrating GrabCut with Mask R-CNN, the segmentation masks can be further refined, resulting in more accurate and precise object boundaries.\nAlso, Combining Mask R-CNN and GrabCut can offer a more robust and accurate segmentation result. Mask R-CNN excels at automatically predicting bounding boxes and segmentation masks but may introduce subtle background artifacts. GrabCut, though requiring manual input, is effective in precise segmentation but may struggle with automation.\nBy using them together, you can leverage the automation of Mask R-CNN for initial segmentation and then refine it with GrabCut, benefiting from the strengths of both methods to achieve a cleaner and more accurate segmentation of foreground objects from the background. This hybrid approach balances automation and precision in image segmentation tasks."
+  },
+  {
+    "input": "Prerequisites",
+    "output": "Cloning Repository for Mask RCNN\nI am usingthis imagein the implementation (Image credits:Hu Chen)"
+  },
+  {
+    "input": "Loading Model Configuration",
+    "output": "We will use a pre-trained model, pre-trained on the MS-COCO dataset.\nAfter downloading the pre-trained model, we will useclass InferenceConfighaving parent class ascoco.CocoConfigto generate a configuration file for the model... with GPU_COUNT = 1 and IMAGES_PER_GPU = 1,  we will have a BATCH SIZE = GPU_COUNT * IMAGES_PER_GPU = 1 .i.e we will provide one image at a time to GPU for inference.\nOutput:"
+  },
+  {
+    "input": "Creating a model for inference",
+    "output": "model = modellib.MaskRCNN(mode=\"inference\", model_dir=MODEL_DIR, config=config)Themodethe parameter is set to\"inference\", indicating that the model will be used for inference (i.e., making predictions).Themodel_dirparameter specifies the directory where the model weights and logs will be saved.Theconfigparameteris an instance of a configuration class (config) that determines the model's architecture and behavior.\nThemodethe parameter is set to\"inference\", indicating that the model will be used for inference (i.e., making predictions).\nThemodel_dirparameter specifies the directory where the model weights and logs will be saved.\nTheconfigparameteris an instance of a configuration class (config) that determines the model's architecture and behavior.\ntf.keras.Model.load_weights(model.keras_model, COCO_MODEL_PATH, by_name=True)model.keras_modelaccesses the underlying Keras model instance within the Mask R-CNN model.by_name=Trueargument indicates that the weights should be loaded by matching layer names, allowing for partial weight loading and transfer learning.\nmodel.keras_modelaccesses the underlying Keras model instance within the Mask R-CNN model.\nby_name=Trueargument indicates that the weights should be loaded by matching layer names, allowing for partial weight loading and transfer learning."
+  },
+  {
+    "input": "Specifying class names",
+    "output": "These class names will be used while visualizing the segmented objects, it performs object classification and provides class IDs as integer values to identify each class. These IDs are nothing but indices of this list.For example: If the model detects and segments a car, then it will return7instead oftrain,we will use this list to determine the object class as train."
+  },
+  {
+    "input": "Inference using Mask R-CNN",
+    "output": "Usingskimage.io.imread()we will load the image.jpg\nmodel.detect([image], verbose = 1)will run inference on the image and will return a dictionary with the following keys\nrois : (ymin, xmin, ymax, xmax)coordinates of bounding box\nmasks :generated masks\nclass_ids :The resulting class ids\nscores :Probability of class being correct.\nvisualize.display_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])"
+  },
+  {
+    "input": "Segment Image",
+    "output": "We will use this function to visualize the results.\nOutput:\n\n\nOutput:\nOutput:\nThe masks generated using Mask-RCNN are not precise, there are visible background details, we will use GrabCut to remove the undesired background by refining the masks."
+  },
+  {
+    "input": "Applying GrabCut",
+    "output": "GrabCut is available in OpenCV ascv2.grabCut(img, mask, rect, bgdModel, fgdModel, iterCount, mode)\nLet's explore the arguments:\nOutput:"
+  },
+  {
+    "input": "Combining both masks",
+    "output": "Output:\nYou can run this implementation onGoogle Colab Notebook"
+  },
+  {
+    "input": "Conclusion",
+    "output": "In this article, we explored image segmentation using: Mask R-CNN, GrabCut, and OpenCV. Mask R-CNN utilizes deep learning to achieve pixel-level segmentation accuracy, while GrabCut offers an interactive and efficient approach. OpenCV provides a versatile library for implementing various segmentation algorithms. By understanding the strengths and limitations of each technique, developers can choose the most suitable method for their specific image segmentation needs."
   }
 ]
