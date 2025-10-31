@@ -24978,5 +24978,21 @@
   {
     "input": "Method 3.2: Using the pixel manipulation (Average method)",
     "output": "This method converts an image to grayscale by averaging the contributions of color channels (RGB). It’s a simple approach but not very accurate because it treats all colors equally, ignoring how the human eye perceives brightness.\nOutput\nExplanation:\nrows, cols = img.shape[:2]:extracts image height (rows) and width (cols) from the shape.\nNested loopsfor i in range(rows): for j in range(cols): iterate over every pixel row (y) then column (x).\nimg[i, j, 0], img[i, j, 1], img[i, j, 2]correspond to B, G, R respectively (OpenCV uses BGR order).\ngray = (B+G+R)/3computes the average intensity; assigning [gray, gray, gray] writes the value into all three channels (keeps a 3-channel image for display)."
+  },
+  {
+    "input": "Types of Blurring",
+    "output": "We can apply various blurring techniques based on the desired effect."
+  },
+  {
+    "input": "1. Gaussian Blurring",
+    "output": "Gaussian blur works by applying a Gaussian function to an image, resulting in a smooth blur. It’s useful for noise reduction and detail reduction in images. It is used as a preprocessing step for machine learning and deep learning models.\nThis kernel helps in averaging the nearby pixel values with closer pixels having a higher weight, creating a natural-looking blur.\nNow first see the original image and then one by one we will apply different blurring methods on that image. Here we will be usingMatplotlibandOpenCVfor the implementation.\nOutput:\nOutput:"
+  },
+  {
+    "input": "2. Median Blur",
+    "output": "Median blur is a non-linear filter which means it doesn't average the pixel values. Instead, it replaces each pixel with the median value of its neighboring pixels. This technique is useful for removing salt-and-pepper noise (random black and white pixels) while keeping the edges intact.\nOutput:"
+  },
+  {
+    "input": "3. Bilateral Blur",
+    "output": "The bilateral filter is a more advanced technique that smooths the image while preserving edges. It calculates a weighted average based on both the spatial distance and the pixel intensity. This means that it will blur areas with similar colors and preserve sharp edges, making it useful for noise reduction without sacrificing important details.\nOutput:"
   }
 ]
