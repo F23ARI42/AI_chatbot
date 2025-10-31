@@ -24146,5 +24146,73 @@
   {
     "input": "Disadvantages",
     "output": "Domain mismatch:The pre-trained model may not be well-suited to the second task if the two tasks are vastly different or the data distribution between the two tasks is very different.\nOverfitting: Transfer learning can lead to overfitting if the model is fine-tuned too much on the second task, as it may learn task-specific features that do not generalize well to new data.\nComplexity: The pre-trained model and the fine-tuning process can be computationally expensive and may require specialized hardware."
+  },
+  {
+    "input": "MCP Architecture",
+    "output": "MCP's architecture is designed to be both simple and flexible which helps in enabling good interaction between AI models and various data sources. It works by connecting three key components: MCP Servers, MCP Clients and MCP Hosts."
+  },
+  {
+    "input": "1. MCP Servers",
+    "output": "External service that executes actions or provides data based on client requests.\nTransforms structured user queries into server-side operations, enabling LLMs to access data and tools.\nMCP servers are commonly available as GitHub repositories (C#, Java, TypeScript, Python, etc.), often with tutorials to aid developers.\nServers can also connect to LLM inference platforms (e.g., IBM, OpenAI) through the MCP SDK, exposing them as standardized, reusable chat services.\nIntegration examples:Slack, GitHub, Git, Docker, web search engines.\nVersatility:MCP servers support both internal resources (databases, files) and external services (APIs, cloud tools).\nMCP servers expose data through:\nResources:Fetch information from internal or external databases (returns data only, no computation).\nTools:Connect with APIs or systems that can perform side effects such as calculations, queries or data actions.\nPrompts:Provide reusable workflows and structured templates that standardize LLM-to-server communication."
+  },
+  {
+    "input": "2. MCP Clients",
+    "output": "Acts as the communication bridge between the host and server.\nConverts user requests into structured MCP protocol messages that servers can process.\nA host can contain multiple clients, but each client has a dedicated 1:1 connection to one server.\nMCP clients also manage sessions, including handling interruptions, timeouts, reconnections and closures.\nClients parse responses, perform error handling and verify that outputs remain relevant to the given context.\nExamples: IBM® BeeAI, Microsoft Copilot Studio, Claude.ai, Windsurf Editor and Postman."
+  },
+  {
+    "input": "3. MCP Hosts",
+    "output": "The integration layer where the user interacts with the AI application.\nExamples include Claude Desktop, Cursor IDE and other AI-enabled interfaces.\nHosts contain the orchestration logic needed to connect multiple clients with multiple servers.\nThey handle coordination, manage workflows and ensure that requests flow correctly between clients and servers."
+  },
+  {
+    "input": "Use of MCP in Agent Workflow",
+    "output": "When building AI agents, there are usually three types of context they need to handle:\nEphemeral turn context:This is the current prompt and any notes retrieved during that interaction. It is temporary and discarded after the task is done.\nSession or task context:This is information that lasts throughout a multi-step process, like to-do lists or temporary files used during a job.\nLong-term memory:These are permanent facts and data related to a user or workspace that the agent can remember and use over time.\nMCP helps manage all these different types of context clearly and efficiently by:\nExposing memory through MCP tools or resources, such as search and update functions (memory.search, memory.upsert) or URLs like resource:/memory/<userId>.\nAllowing multiple agents or applications to connect to the same memory server, so they can share and reuse context easily.\nProviding centralized control through authentication, access permissions and auditing to keep shared context secure and well-managed."
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "As we saw earlier the uses of MCP in agent workflow, lets see a detailed working of to understand better. In the below give workflow we can see,\nUser sends input:The user submits a query or command to the system.\nClient forwards input:The client application passes this input to the server.\nServer requests agent response:The server calls MCP to process the request using MCP.bot.ask().\nMCP manages context:MCP plays a crucial role by adding the user input to its context memory. This step ensures that both the current prompt and relevant historical or session data are available for accurate processing.\nMCP requests AI response:MCP sends the contextualized prompt to the external AI service (OpenAI) for generating a response.\nAI response returned:OpenAI returns the generated answer to MCP.\nMCP updates context:MCP logs the AI’s response in its context memory so that ongoing or future interactions can benefit from this knowledge, supporting both session continuity and long-term memory.\nServer delivers response:The completed response is relayed back through the server and client to the user for display."
+  },
+  {
+    "input": "How MCP helped here:",
+    "output": "MCP ensures that all interactions both questions and answers are properly logged and contextualized, enabling agents to use short-term, session-based and long-term memory for improved accuracy and continuity.\nCentralized context handling by MCP allows for easier sharing and reuse of knowledge across multiple agents or applications and provides secure, auditable memory management throughout the process."
+  },
+  {
+    "input": "Step 1: Create Project Folder and Install Dependencies",
+    "output": "We will create a folder in which our project will work.\nAfter creation of folder, open any IDE, here we used VS Code.\nWe will install the dependencies for the project.\nfastapi:Web framework for creating the API server.\nuvicorn:ASGI server to run FastAPI.\nopenai:To interact with OpenAI’s API (GPT-4).\npython-dotenv:Load API keys from .env file.\nrequests:Send HTTP requests from client to server."
+  },
+  {
+    "input": "Step 2: Create .env File",
+    "output": "Inside the project directory, we create a .env file which will hold our OpenAI API key,\npython-dotenv:loads API key into Python without hardcoding keys."
+  },
+  {
+    "input": "Step 3: Create the QA Bot which uses MCP",
+    "output": "In this:\n1. __init__:\nInitializes the bot with the OpenAI model (gpt-4 by default).\nmax_history limits the number of past messages kept in memory.\nself.history is a Python list that stores conversation messages as dictionaries.\n2. add_to_context(role, content):\nAdds a message to self.history with a role (user or assistant).\nTrims the conversation to the last max_history messages to avoid sending too much data to OpenAI.\n3. ask(question):\nAdds the user’s question to context.\nSends the entire conversation history to OpenAI API.\nReceives the assistant’s response.\nAdds the assistant’s response back to context.\nReturns the answer as a string."
+  },
+  {
+    "input": "Step 4: Create the Server File",
+    "output": "We create the server file which has FastAPI backend. In this step we do:\n1. Load environment & API key\n.env file stores OPENAI_API_KEY.\nload_dotenv() loads it into Python.\nopenai.api_key sets it for OpenAI calls.\n2. Initialize bot: Here bot = QABotMCP() creates a bot instance with memory.\n3. Create conversation file: conversation.json ensures an empty file exists for storing conversation.\n4. save_context()\nWrites bot.history to JSON silently.\nKeeps a persistent record of conversation across requests.\n5. FastAPI app & endpoints\napp = FastAPI() initializes the server.\nclass Question(BaseModel) defines expected JSON schema ({\"question\": \"text\"}).\nGET /: test endpoint for server availability."
+  },
+  {
+    "input": "Step 5: We Create a Client Side File",
+    "output": "We create the client_interactive file which is the file to which the client or user interacts, in the code:\n1. URL of the server: http://127.0.0.1:8000/ask is the local API endpoint.\n2. Infinite loop for interaction:Continuously asks for user input untilexitis typed.\n3. Send POST request\nSends JSON payload {\"question\": \"<user input>\"} to server.\nServer responds with {\"answer\": \"...\"}.\n4. Print only latest answer\nKeeps terminal clean.\nFull conversation is saved in conversation.json silently by the server."
+  },
+  {
+    "input": "Step 6: Run the Server",
+    "output": "Open the terminal in the project folder and run:\nServer listens on all network interfaces.\nRoot endpoint available at http://127.0.0.1:8000/.\nOutput:"
+  },
+  {
+    "input": "Step 7: Run the Client",
+    "output": "Open a new Terminal in same Folder and run:\nOutput:"
+  },
+  {
+    "input": "Step 8: Inspect History",
+    "output": "We can get the full context from the conversation.json file that will be created by the bot.\nOutput:"
+  },
+  {
+    "input": "Real-World Applications",
+    "output": "MCP helps in enhancing AI systems across industries by simplifying data access and improving connectivity. Here’s how MCP is applied in various sectors:\nEnterprise System Integration:Connect AI models with platforms like Google Drive, Slack and GitHub to automate document retrieval, code review and workflow management.\nDeveloper Tools Enhancement:Automate tasks such as code fixes, documentation generation and pull request reviews by integrating AI with developer tools via MCP.\nCustomer Support Automation:Link AI models with CRM systems to provide personalized, real-time responses and reduce wait times in customer service.\nHealthcare Assistance:Enable AI to access electronic health records dynamically, assisting clinicians with diagnoses, treatment recommendations and risk detection.\nResearch and Knowledge Discovery:Aggregate and search data from multiple sources instantly to support AI-powered deep research applications."
+  },
+  {
+    "input": "Benefits",
+    "output": "Let's see the benefits of using MCP,\nUnified Standard for Connectivity:Removes the complexity of building separate custom connectors for each new data source by providing a consistent integration framework.\nSeamless Execution of Complex AI Tasks:Allows AI to smoothly interact with diverse APIs and external tools, expanding its functionality across various platforms and workflows.\nRobust Scalability and Flexibility:Facilitates effortless addition of new data sources and external services without extensive redevelopment, supporting evolving AI ecosystems.\nEnhanced Contextual Understanding and Precision:Provides AI with relevant, timely contextual information that improves the quality, relevance and reliability of generated outputs.\nMCP helps developers by enabling good connections between AI models and different data sources. By simplifying integrations it helps AI systems to become more intelligent, context-aware and scalable."
   }
 ]
