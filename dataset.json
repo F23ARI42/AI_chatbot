@@ -24302,5 +24302,37 @@
   {
     "input": "Limitations",
     "output": "Let's see the limitations faced by them,\nHigh Resource Needs:Running advanced MLLMs often requires significant computational power.\nIntegration Challenges:Seamless fusion of different data types remains technically difficult, sometimes affecting accuracy.\nDomain Gaps:For some specialized or highly detailed tasks, traditional single-modal models may still outperform MLLMs.\nEthical Risks:Privacy and consent issues can arise, especially with sensitive images or audio data."
+  },
+  {
+    "input": "Importance of Multimodal RAG",
+    "output": "Multimodal RAG is useful where the data is available from diverse data sources. This significantly improves model performance because:"
+  },
+  {
+    "input": "1. Install Required Libraries",
+    "output": "First we will install the necessary libraries like transformers, faiss-cpu, torch m sentence-transformers, PIL and OpenCv ."
+  },
+  {
+    "input": "2. Import Necessary Libraries",
+    "output": "We import the required libraries for working with images, text and embeddings."
+  },
+  {
+    "input": "3. Load Models for Image and Text Processing",
+    "output": "We’re using theBlipProcessorandBlipForConditionalGenerationto load a pretrained BLIP model that generates captions from images. Then we load aSentenceTransformer (all-MiniLM-L6-v2)to convert those captions or any text into embeddings for retrieval or similarity tasks."
+  },
+  {
+    "input": "4. Prepare the Multimodal Dataset",
+    "output": "Here we define a sample dataset with both textual descriptions and associated image files. Provide the image paths in thedataset_imageslist for the choosen images. These are then converted into embeddings."
+  },
+  {
+    "input": "5. Build FAISS Index for Efficient Retrieval",
+    "output": "To enable fast retrieval of both text and image embeddings we useFAISS (Facebook AI Similarity Search)which is a library optimized for efficient similarity search."
+  },
+  {
+    "input": "6. Perform a Query Search",
+    "output": "Finally we perform a search query based on a text input. This search will retrieve the most relevant Multimodal results (text and image).\nOutput:\nIndices [0, 1, 2] correspond to the most relevant results from Multimodal dataset based on the input query. Each index represents a combination of text and image data retrieved from the dataset."
+  },
+  {
+    "input": "Applications of Multimodal RAG",
+    "output": "Healthcare: In medical diagnostics it can analyze both textual patient reports and medical images like X-rays, MRIs to provide more accurate diagnoses and treatment recommendations.\nE-Commerce: It improves product search by matching both textual descriptions and images. For example, customers can search for products using either text-based queries or visual inputs like uploading a product image.\nEducation: Supports interactive and immersive learning experiences by combining text, diagrams and videos to explain complex concepts in a engaging manner.\nLegal and Finance: Enhances decision-making by retrieving relevant legal case studies, financial reports and charts enabling professionals to make informed decisions based on both textual and visual data.\nMultimodal RAG combines retrieval and generation across text, images and more to produce context-aware and accurate responses and can be used across various industries."
   }
 ]
