@@ -23746,5 +23746,29 @@
   {
     "input": "4. Language Translation",
     "output": "Machine Translation using Transformer"
+  },
+  {
+    "input": "Working of LLM",
+    "output": "LLMs are primarily based on theTransformerarchitecture which enables them to learn long-range dependencies and contextual meaning in text. At a high level, they work through:\nInput Embeddings: Converting text into numerical vectors.\nPositional Encoding: Adding sequence/order information.\nSelf-Attention: Understanding relationships between words in context.\nFeed-Forward Layers: Capturing complex patterns.\nDecoding:Generating responses step-by-step.\nMulti-Head Attention: Parallel reasoning over multiple relationships."
+  },
+  {
+    "input": "Architecture",
+    "output": "The architecture of LLMs consist of multiple stacked layers that process text in parallel. Core components include:\nEmbedding Layer: Converts tokens i.e words/subwords into dense vectors.\nAttention Mechanism: Learns context by focusing on relevant words.\nFeed-Forward Layers: Capture non-linear patterns and relationships.\nNormalization and Residual Connections: Improve training stability.\nOutput Layer: Generates predictions such as the next word or sentence."
+  },
+  {
+    "input": "Popular LLMs",
+    "output": "Some of the most widely used LLMs include:\nGPT-4 and GPT-4o (OpenAI): Advanced multimodal reasoning and dialogue capabilities.\nGemini 1.5 (Google DeepMind): Long-context reasoning, capable of handling 1M+ tokens.\nClaude 3 (Anthropic): Safety-focused, strong at reasoning and summarization.\nLLaMA 3 (Meta): Open-weight model, popular in research and startups.\nMistral 7B / Mixtral (Mistral AI): Efficient open-source alternatives for developers.\nBERT and RoBERTa (Google/Facebook): Strong embedding models for NLP tasks.\nmBERT and XLM-R: Early multilingual LLMs.\nBLOOM: Large open-source multilingual model, collaboratively developed."
+  },
+  {
+    "input": "Use Cases",
+    "output": "Code Generation: LLMs can generate accurate code based on user instructions for specific tasks.\nDebugging and Documentation: They assist in identifying code errors, suggesting fixes and even automating project documentation.\nQuestion Answering: Users can ask both casual and complex questions, receiving detailed, context-aware responses.\nLanguage Translation and Correction: LLMs can translate text between over 50 languages and correct grammatical errors.\nPrompt-Based Versatility: By crafting creative prompts, users can unlock endless possibilities, as LLMs excel in one-shot and zero-shot learning scenarios."
+  },
+  {
+    "input": "Advantages",
+    "output": "Large Language Models (LLMs) come with several advantages that contribute to their widespread adoption and success in various applications:\nZero-Shot and Few-Shot Learning: Can perform new tasks without explicit retraining.\nScalable Knowledge: Efficiently process and understand vast text corpora.\nFine-Tuning Flexibility: Adaptable to specific industries and datasets.\nAutomation of Language Tasks: Frees human effort from repetitive or time-consuming tasks.\nVersatility: Effective across multiple domains—healthcare, education, business and research."
+  },
+  {
+    "input": "Challenges",
+    "output": "High Costs: Training requires millions of dollars in compute resources.\nTime-Intensive: Training large models can take weeks or months.\nData Challenges: Limited availability of high-quality, legal and unbiased text data.\nEnvironmental Impact: High energy consumption leading to significant carbon footprint.\nEthical Concerns: Bias, misinformation risks and responsible deployment remains a major issue."
   }
 ]
