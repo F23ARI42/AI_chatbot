@@ -24530,5 +24530,61 @@
   {
     "input": "Step 4: Otsu’s Thresholding",
     "output": "The threshold value is not provided by us, instead, Otsu's method determines it automatically based on the image’s histogram. This makes separation of foreground and background particularly strong on bimodal images.\nOutput:"
+  },
+  {
+    "input": "These agents work by:",
+    "output": "Perceiving the environment:They collect data about their surroundings such as sensor inputs or observations.\nDefining the problem:They clearly understand the problem including the starting point, the available actions and the desired goal.\nExploring different possibilities:Theyconsider various ways to solve the problem and evaluate which approach is likely to succeed.\nEvaluating and deciding:Once they explore options, they assess the outcomes and pick the best course of action based on factors like time, resources and success likelihood.\nLearning and adapting:Many problem-solving agents can learn from past experiences, improving their decision-making abilities over time."
+  },
+  {
+    "input": "Types of Problems in AI",
+    "output": "AI systems can face different types of problems. These problems are categorized based on their impact on the system’s performance and how they can be handled:"
+  },
+  {
+    "input": "1.Ignorable Problems",
+    "output": "These are minor issues that have little or no effect on the AI system’s overall performance. They are often harmless and do not require immediate attention.\nExamples:\nSmall inaccuracies in predictions that don't affect the final result like a slight error in image classification.\nMinor issues in data preprocessing that don't change the outcome.\nHandling: Ignored as they don't interfere with the system's primary function."
+  },
+  {
+    "input": "2.Recoverable Problems",
+    "output": "Recoverable problems are those where the AI system encounters an issue but can be fixed with intervention either automatically or manually, such as error-handling functions.\nExamples:\nMissing data that can be filled in using statistical methods.\nSystem crashes that can be fixed by restoring from a backup.\nHandling: Requires action like automated error handling, retraining the model or system recovery through checkpoints."
+  },
+  {
+    "input": "3.Irrecoverable Problems",
+    "output": "These are severe issues that cause permanent damage or failure, making it impossible for the system to recover. They can lead to significant performance loss.\nExamples:\nCorrupted training data that causes bias and reduces the model's effectiveness.\nAdversarial attacks that make the model untrustworthy.\nOverfitting, where the model becomes too specialized and cannot adapt to new data.\nHandling: Requires a complete rebuild of the system including retraining the model or updating the data to eliminate underlying issues."
+  },
+  {
+    "input": "Steps in Problem Solving in AI",
+    "output": "AI problem solving follows a structured, logical process similar to human thinking, it's steps include:"
+  },
+  {
+    "input": "Key Components of Problem Formulation in AI",
+    "output": "Effective problem-solving in AI is dependent on several important components:"
+  },
+  {
+    "input": "Techniques for Problem Solving in AI",
+    "output": "Several techniques are available to solve different types of problems in AI. The choice of technique depends on the nature of the problem and the resources available."
+  },
+  {
+    "input": "1.Search Algorithms",
+    "output": "Search Algorithmsare important for exploring possible solutions. There are two main categories:\nUninformed Search: These algorithms such as breadth-first and depth-first search, don’t use additional knowledge about the problem and explore all possible paths.\nInformed Search: Algorithms like A* use heuristics or domain-specific knowledge to guide the search toward more promising paths making the search process more efficient."
+  },
+  {
+    "input": "2.Constraint Satisfaction Problems (CSP)",
+    "output": "InCSPsthe goal is to find solutions that satisfy a set of constraints. Techniques like backtracking, constraint propagation and local search are used to explore the solution space efficiently while ensuring that all constraints are met."
+  },
+  {
+    "input": "3.Optimization Techniques",
+    "output": "AI often addresses optimization problems where the goal is to find the best possible solution among many options. Techniques include:"
+  },
+  {
+    "input": "4.Machine Learning",
+    "output": "Machine learningallows AI systems to learn from data and improve over time. The three major learning types are:"
+  },
+  {
+    "input": "5.Natural Language Processing (NLP)",
+    "output": "Natural Language Processing (NLP)helps AI systems understand and generate human language. Techniques like tokenization, Part-of-speech (PoS) and named entity recognition are important for chatbots, language translation and text summarization."
+  },
+  {
+    "input": "Challenges in AI Problem Solving",
+    "output": "Despite its many advantages, it faces several challenges:\nAs AI continues to evolve, enhancing problem-solving capabilities will remain important for advancing technology and improving human experiences."
   }
 ]
