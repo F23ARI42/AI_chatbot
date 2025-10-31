@@ -23482,5 +23482,69 @@
   {
     "input": "Real-World Application",
     "output": "Research Assistants:AI that can read, summarize and compare reports, research papers or industry standards.\nFinancial & Legal Insights:Extract key facts from reports or legal documents and combine them with real-time web news.\nEnterprise Knowledge Search:Chat-based tools to explore internal documents, using smart agents and retrieval.\nHealthcare Q&A:Answer complex medical questions using both stored medical texts and up-to-date guidelines from the web.\nCustomer Support Automation:Build AI assistants that can pull answers from product manuals, FAQs, support tickets and even search the web, giving users accurate, context-aware responses instantly."
+  },
+  {
+    "input": "Key Components of LangChain",
+    "output": "Lets see various components of Langchain:\n1. Chains:Chains define sequences of actions, where each step can involve querying an LLM, manipulating data or interacting with external tools. There are two types:\nSimple Chains: A single LLM invocation.\nMulti-step Chains: Multiple LLMs or actions combined, where each step can take the output from the previous step.\n2. Prompt Management:LangChain facilitates managing and customizing prompts passed to the LLM. Developers can usePromptTemplatesto define how inputs and outputs are formatted before being passed to the model. It also simplifies tasks like handling dynamic variables and prompt engineering, making it easier to control the LLM's behavior.\n3. Agents:Agents are autonomous systems within LangChain that take actions based on input data. They can call external APIs or query databases dynamically, making decisions based on the situation. These agents leverage LLMs for decision-making, allowing them to respond intelligently to changing input.\n4. Vector Database:LangChain integrates with a vector database which is used to store and search high-dimensional vector representations of data. This is important for performing similarity searches, where the LLM converts a query into a vector and compares it against the vectors in the database to retrieve relevant information.\nVector database plays a key role in tasks like document retrieval, knowledge base integration or context-based search providing the model with dynamic, real-time data to enhance responses.\n5. Models:LangChain is model-agnostic meaning it can integrate with different LLMs such as OpenAI's GPT, Hugging Face models, DeepSeek R1 and more. This flexibility allows developers to choose the best model for their use case while benefiting from LangChain’s architecture.\n6. Memory Management:LangChain supports memory management allowing the LLM to \"remember\" context from previous interactions. This is especially useful for creating conversational agents that need context across multiple inputs. The memory allows the model to handle sequential conversations, keeping track of prior exchanges to ensure the system responds appropriately."
+  },
+  {
+    "input": "How LangChain Works?",
+    "output": "LangChain follows a structured pipeline that integrates user queries, data retrieval and response generation into seamless workflow."
+  },
+  {
+    "input": "1. User Query",
+    "output": "The process begins when a user submits a query or request."
+  },
+  {
+    "input": "2.Vector Representation and Similarity Search",
+    "output": "Once the query is received, LangChain converts it into avector representationusing embeddings. This vector captures the semantic meaning of the query.\nThe vector is then used to perform a similarity search in a vector database. The goal is to find the most relevant information or context stored in the database that matches the user's query."
+  },
+  {
+    "input": "3. Fetching Relevant Information",
+    "output": "Based on the similarity search, LangChain retrieves the most relevant data or context from the database. This step ensures that the language model has access to accurate and contextually appropriate information to generate a meaningful response."
+  },
+  {
+    "input": "4. Generating a Response",
+    "output": "The retrieved information is passed to the language model (e.g., OpenAI's GPT, Anthropic's Claude or others). The LLM processes the input and generates a response or takes an action based on the provided data.\nThe formatted response is returned to the user as the final output. The user receives a clear, accurate and contextually relevant answer to their query."
+  },
+  {
+    "input": "Step-by-Step Implementation",
+    "output": "Let's implement a model using LangChain and OpenAI API:"
+  },
+  {
+    "input": "Step 1: Install the dependencies",
+    "output": "We will install all the required dependencies for our model.\nlangchain:the core LangChain framework (chains, prompts, tools, memory, etc.).\nlangchain-openai:OpenAI model wrapper for LangChain (GPT-3.5, GPT-4, etc.).\npython-dotenv:to securely manage our API keys inside a .env file."
+  },
+  {
+    "input": "Step 2: Import Libraries",
+    "output": "We will import all the required libraries.\nos:interact with environment variables.\nload_dotenv:loads .env file values into our environment.\nOpenAI:lets us call OpenAI’s GPT models in LangChain.\nPromptTemplate:define structured prompts with placeholders.\nStrOutputParser:ensures model response is returned as clean string text."
+  },
+  {
+    "input": "Step 3: Load API Key",
+    "output": "We need to load the OpenAI API Key, but first we create a .env file to store our API key.\nNow we use the os.getenv() function to securely fetch the API key."
+  },
+  {
+    "input": "Step 4: Initialize the OpenAI LLM",
+    "output": "We initialize the LLM model:\ntemperature=0.7:controls creativity (0 = deterministic, 1 = very creative).\nopenai_api_key=api_key:authenticates with OpenAI."
+  },
+  {
+    "input": "Step 5: Run a Simple Prompt",
+    "output": "We will check by running a simple prompt.\n.invoke():sends prompt to LLM and returns text output.\nOutput:"
+  },
+  {
+    "input": "Step 6: Create a Prompt Template",
+    "output": "We create a dynamic prompt where {year} can be replaced with input values."
+  },
+  {
+    "input": "Step 7: Build a Chain with LCEL",
+    "output": "LCEL (LangChain Expression Language):It’s a new way to compose LLM workflows using a simple, chainable syntax with the | (pipe) operator.\n1. prompt_template\nFills placeholders (like {year}) with actual inputs.\nExample: \"Give me 3 career skills in 2025.\"\n2. llm\nSends the formatted prompt to the OpenAI model.\nExample input: \"Give me 3 career skills in 2025.\"\nExample output: \"1. Data Analytics\\n2. AI/ML\\n3. Cybersecurity\"\n3. StrOutputParser()\nCleans up and ensures the LLM’s response is returned as a string."
+  },
+  {
+    "input": "Step 8: Run the Chain",
+    "output": "We run the chain to fetch results.\n.invoke({\"year\": \"2025\"})replaces {year} with 2025 in the prompt.\nFinal formatted prompt:\"Give me 3 career skills that are in high demand in 2025.\"\nOutput:"
+  },
+  {
+    "input": "Applications of LangChain",
+    "output": "Let's see the applications of LangChain,\nChatbots and Virtual Assistants:They can be designed to remember past interactions, connect with external APIs and deliver more natural, context-aware conversations.\nDocument Question Answering:Users can query PDFs, research papers, contracts or enterprise documentation and get precise answers instead of manually searching.\nKnowledge Management Systems:They help organize and retrieve company knowledge by linking LLMs with structured and unstructured data, enabling intelligent search, summarization and recommendations.\nWorkflow Automation:Complex multi-step processes like customer support ticket resolution, report generation or CRM updates can be automated seamlessly.\nData Analysis and Business Intelligence (BI):Natural language queries can be translated into SQL, turning raw data into insights, charts or business reports with minimal effort.\nThe LangChain framework is a great interface to develop interesting AI-powered applications and from personal assistants to prompt management as well as automating tasks. So, keep learning and keep developing powerful applications."
   }
 ]
