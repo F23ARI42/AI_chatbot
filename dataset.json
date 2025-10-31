@@ -25234,5 +25234,57 @@
   {
     "input": "Challenges of R-CNN",
     "output": "R-CNN faces several challenges in its implementation:"
+  },
+  {
+    "input": "1. Retrieval Component",
+    "output": "The retrieval component identifies relevant data to assist in generating accurate responses.Dense Passage Retrieval(DPR) is a common model that is used to perform retrieval. Lets see how DPR works:\nQuery Encoding: When we submit a query such as a question or prompt, an encoder converts it into a dense vector. This vector represents the query's semantic meaning in a high-dimensional space.\nPassage Encoding: Each document in the knowledge base is also encoded into vectors. The system performs this encoding process offline and stores it to enable fast retrieval when the query is entered.\nRetrieval: Upon receiving the query the system compares the query vector with the vectors of all the documents in the knowledge base. It then retrieves the most relevant passages."
+  },
+  {
+    "input": "2. Generative Component",
+    "output": "When the retrieval model identifies the relevant match it is then passed to the generative component. The generative component is based onTransformerarchitecture like BART or GPT. The generated response will be a combination of the retrieved information along with a newly generated output from the model.\nThe generative component uses two main strategies i.e Fusion-in-decoder (FiD) and Fusion-in-Encoder (FiE). The final output is based on the user's input. In fusion management both FiD and FiE combine the retrieved information with the user's input to generate a response.\nFiD (Fusion-in-Decoder): The retrieval and generation processes are kept separate. The generative model only merges the retrieved information during the decoding phase. This allows the model to focus on the most relevant parts of each document when generating the final response, offering greater flexibility in the integration of retrieved data.\nFiE (Fusion-in-Encoder): FiE combines the query and the retrieved passages at the beginning of the process. Both are processed simultaneously by the encoder. While this method can be more efficient, it offers less flexibility in integrating the retrieved information compared to FiD.\nLets see the key difference between FiD and FiE:"
+  },
+  {
+    "input": "Workflow of a Retrieval-Augmented Generation (RAG) system",
+    "output": "The RAG architecture’s workflow can be broken down into the following steps:"
+  },
+  {
+    "input": "Implementing the working of RAG",
+    "output": "Let's see an example to see the working of RAG Architecture,"
+  },
+  {
+    "input": "Step 1: Install Dependencies",
+    "output": "We will install the required libraries and packages for our model,FAISSfor vector search andTransformersfor language models."
+  },
+  {
+    "input": "Step 2:  Initialize Vector Index and Add Contextual Embeddings",
+    "output": "We will initialize,\nfaiss.IndexFlatL2(768)creates a flat FAISS index for 768-dimensional vectors using L2 distance (Euclidean distance) as the similarity metric.\nnp.random.seed(42)ensures reproducibility by fixing the random seed.\nnp.random.random((100, 768))generates 100 random embeddings of size 768, simulating document embeddings.\nindex.add(context_data)adds the generated vectors into the FAISS index.\nindex.ntotalgives the total number of vectors currently stored in the index.\nOutput:"
+  },
+  {
+    "input": "Step 3: Define Semantic Search Function",
+    "output": "We will define,\nsemantic_search()is a helper function to perform vector similarity search.\nquery_embeddingis the embedding of the user’s query (shape: [1, 768]).\nindex.search(query_embedding, top_k)retrieves the top_k most similar vectors from the FAISS index.\nReturns indices:points to the most relevant documents for context."
+  },
+  {
+    "input": "Step 4: Example Query Embedding and Retrieval",
+    "output": "We simulate a query vector, perform semantic search and get indices.\nnp.random.random((1, 768))simulates a single query embedding.\nsemantic_search()retrieves the top matching documents.\nretrieved_indicescontains the list of document indices that best match the query.\nOutput:"
+  },
+  {
+    "input": "Step 5: Initialize Tokenizer and LLM Model",
+    "output": "We load,\nGPT2Tokenizer.from_pretrained('gpt2')loads the GPT-2 tokenizer, which converts text into tokens.\nGPT2LMHeadModel.from_pretrained('gpt2')loads the GPT-2 model for text generation.\ntorch.device('cuda' if torch.cuda.is_available() else 'cpu')checks if GPU is available; if not, defaults to CPU.\nmodel.to(device)moves the model to the chosen device for computation.\nOutput:"
+  },
+  {
+    "input": "Step 6: Create Prompt with Retrieval Context",
+    "output": "Combine question and retrieved context passages into a single prompt.\nchat_history:keeps track of conversation for continuity.\ncontext:text from retrieved documents.\nquestion:user input."
+  },
+  {
+    "input": "Step 7: Initialize Memory and Build Chat Function",
+    "output": "We will initialize memory to our system:\nmemory_key:identifies where conversation history is stored.\nreturn_messages=False:returns text as plain string instead of structured messages.\nMemoryenables the agent to remember previous questions/answers.\nRetrieve documents: semantic_search finds relevant context.\nLoad conversation: includes past Q&A from memory.\nFormat prompt: combines context, history and user query.\nGenerate response: GPT-2 predicts answer.\nPost-process: clean up newlines and spaces.\nUpdate memory: conversation history is saved for future queries."
+  },
+  {
+    "input": "Step 8: Generate Response",
+    "output": "We will see the functioning of system and the use of memory,\nOutput:"
+  },
+  {
+    "input": "Advantages of RAG Architecture",
+    "output": "Up-to-Date Responses: RAG enables LLMs to generate answers based on the most current external data rather than being limited to pre-trained knowledge that may be outdated.\nReduced Hallucinations: By grounding the LLM's response in reliable external knowledge RAG reduces the risk of hallucinations or generation of incorrect data, ensuring that model provides more factual accuracy.\nDomain-Specific Responses: RAG allows LLMs to provide answers that are more relevant to specific organizational needs or industries without retraining.\nEfficiency: RAG is cost-effective compared to traditional fine-tuning as it allows models to be updated with new data without needing retraining."
   }
 ]
