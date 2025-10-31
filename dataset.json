@@ -23954,5 +23954,29 @@
   {
     "input": "Conclusion",
     "output": "Meta AI, powered by theLlama 3 large language model (LLM), is a huge advancement in AI technology.Llama 3boasts superior capabilities inNatural Language Processing (NLP), leading to a moreintelligent and versatile Meta AI. Expectenhanced experiencesacross Meta's platforms, fromsmarter chatbotsandricher search functionalitiestocreative text formatslike poems or summaries. This is a big step towards a future where AI integrates into our daily lives, entrusting us to interact with technology and information in morereflexive and personalizedways."
+  },
+  {
+    "input": "Why Backpropagation Through Time?",
+    "output": "Backpropagation is the main method used to train neural networks. It helps the network learn by adjusting its weights based on how much the predictions differ from the actual values. In feedforward neural networks this process is simple because the data moves in one direction from input to output.\nHowever in RNNs and LSTMs the situation is a bit different as they process sequential data like sentences, time-series or speech meaning that each piece of data depends on previous pieces. This creates a temporal dependency between the steps. Because of this we can't just apply backpropagation normally. Instead we need to modify it so that it can account for time dimension, this is where Backpropagation Through Time (BPTT) comes in.\nIt works by unfolding the algorithm over time by treating each step as a layer in a deep network. It calculates the gradients at each step and sends them backward to update the model's weights. This helps the network learn how each step in the sequence depends on the others.\nLSTMs introduce structural differences that modify the gradient computations:\nLSTMs have gates (input, forget and output) that control gradient flow unlike simple RNNs.\nThe cell state (c_t) enables long-term memory retention and mitigates thevanishing gradient problem.\nUnlike RNNs gradients propagate through both hidden states (h_t) and cell states (c_t) leading to additional partial derivatives.\nLSTMs require different gradient computations due to element-wise multiplications and activation functions.\nUnderstanding these differences is important to know how LSTMs solve vanishing gradient issues while maintaining long-term dependencies."
+  },
+  {
+    "input": "Notations Used:",
+    "output": "x_tbe the input at timestept.\nh_{t-1}andh_tbe the hidden states at previous and current timestep.\nc_{t-1}andc_tbe the cell states at previous and current timestep.\n\\sigmarepresents the sigmoid activation function.\n\\tanhrepresents the hyperbolic tangent activation function.\n\\odotrepresents element-wise (Hadamard) multiplication.\nThe initial values ofc_0andh_0are usually set to zero."
+  },
+  {
+    "input": "1. Initialization of Weights",
+    "output": "Each LSTM cell has three gates: Input Gate, Forget Gate and Output Gate each with associated weights and biases.\nInput Gate:\nWeights:W_{xi}, W_{hi}, b_i\nCandidate Cell State Weights:W_{xg}, W_{hg}, b_g\nForget Gate:\nWeights:W_{xf}, W_{hf}, b_f\nOutput Gate:\nWeights:W_{xo}, W_{ho}, b_o"
+  },
+  {
+    "input": "2. Forward Pass Through LSTM Gates",
+    "output": "At each timesteptwe compute the gate activations as follows:\nForget Gate:f_t = \\sigma(W_{xf} x_t + W_{hf} h_{t-1} + b_f)\nInput Gate:i_t = σ(W_xi x_t + W_hi h_{t-1} + b_i)\nCandidate Cell State:g_t = \\tanh(W_{xg} x_t + W_{hg} h_{t-1} + b_g)\nCell State Update:c_t = f_t \\odot c_{t-1} + i_t \\odot g_t\nOutput Gate:o_t = \\sigma(W_{xo} x_t + W_{ho} h_{t-1} + b_o)\nHidden State Update:h_t = o_t \\odot \\tanh(c_t)"
+  },
+  {
+    "input": "3. Performing Backpropagation Through Time (BPTT) in LSTMs",
+    "output": "The goal is to compute gradients for all weights using thechain ruleconsidering LSTM-specific gates and memory cells.\n1. Gradient of Loss w.r.t Output Gate:\n2. Gradient of Loss w.r.t Cell State:\n3. Gradient of Loss w.r.t Input Gate and Candidate Cell State:\n4. Gradient of Loss w.r.t Forget Gate:\n5. Gradient of Loss w.r.t Previous Cell State:"
+  },
+  {
+    "input": "4. Computing Weight Gradients",
+    "output": "Using chain rule we compute gradients for weights associated with each gate.\nGradients for Output Gate Weights:\nSimilarly, gradients for other gates' weights and biases are calculated. Backpropagation Through Time for LSTMs involves:\nUnfolding the LSTM over all timesteps.\nCalculating gradients for each gate and cell state using chain rule.\nAccounting for both hidden state and cell state dependencies.\nPropagating gradients backward through time to update weights.\nThis process enables LSTMs to learn long-term dependencies in sequential data by efficiently updating weights while mitigating vanishing gradients."
   }
 ]
