@@ -23130,5 +23130,53 @@
   {
     "input": "Felzenszwalb's Segmentation",
     "output": "Felsenszwalb's efficient graph-based picture segmentation is computed. It produces an over-segmentation of an RGB picture on the image grid using a quick, minimal spanning tree-based clustering. This may be used to isolate features and identify edges. This algorithm uses the Euclidean distance between pixels. skimage.segmentation.felzenszwalb() function is used to compute Felsenszwalb’s efficient graph-based image segmentation.\nCode:\nOutput:\nExplanation:Using a rapid, minimal tree structure-based clustering on the picture grid, creates an over-segmentation of a multichannel image. The parameter scale determines the level of observation. Less and larger parts are associated with a greater scale. The diameter of a Gaussian kernel is sigma, which is used to smooth the picture before segmentation. Scale is the sole way to control the quantity of generated segments as well as their size. The size of individual segments within a picture might change dramatically depending on local contrast.\nThere are many other supervised and unsupervised image segmentation techniques. This can be useful in confining individual features, foreground isolation, noise reduction, and can be useful to analyze an image more intuitively. It is a good practice for images to be segmented before building a neural network model in order to yield effective results."
+  },
+  {
+    "input": "Step-by-Step Image Segmentation",
+    "output": "Let's see theimage segmentationusing TensorFlow,"
+  },
+  {
+    "input": "Step 1: Import Libraries",
+    "output": "We will import the required libraries,\nnumpy: For fast array calculations.\nmatplotlib.pyplot: To visualize images and masks.\ntensorflow: Main deep learning framework.\nkeras: Streamlines model building."
+  },
+  {
+    "input": "Step 2: Load the Dataset",
+    "output": "We load and split the Oxford-IIIT Pet data.\nOutput:"
+  },
+  {
+    "input": "Step 3: Set Constants",
+    "output": "We set the constants that will be used,\nBatch size and buffer control training efficiency and randomization.\nWidth/height standardize images for VGG16."
+  },
+  {
+    "input": "Step 4: Data Preprocessing and Augmentation",
+    "output": "We perform the data preprocessing,\nConverts image pixels to float and scales between 0–1.\nMasks start from zero for correct class indexing.\nResizes images and masks.\nRandom flip adds variety for robust training."
+  },
+  {
+    "input": "Step 5: Build Data Pipelines",
+    "output": "We prepare the data pipelines,\nmap: Applies preprocessing to each sample.\ncache, shuffle, batch, repeat, prefetch: Optimize data loading and training throughput."
+  },
+  {
+    "input": "Step 6: Visualize the Data",
+    "output": "We visualize the input, ground-truth mask and prediction side by side for easy comparison\nOutput:"
+  },
+  {
+    "input": "Step 7: Model Construction",
+    "output": "We build a model with VGG16+ FCN-like Decoder,\nUses pre-trainedVGG16for feature extraction.\nOnly extracts essential intermediate layers.\nFrozen weights ensure transfer learning stability.\nDecoder upsamples deep features, merges skip connections and produces pixel-wise class probabilities.\nOutput:"
+  },
+  {
+    "input": "Step 8: Build and Compile Segmentation Model",
+    "output": "We build the segmentation model which defines, connects and compiles the full pipeline into a trainable segmentation network."
+  },
+  {
+    "input": "Step 9: Train the Model",
+    "output": "We train the model for 15 epochs, reporting validation results at intervals.\nOutput:"
+  },
+  {
+    "input": "Step 10: Predict and visualize the Results",
+    "output": "Model makes the predictions and we visualize it,\nConverts model output to a simple mask for visualization.\nDisplays results for sample images to verify segmentation performance.\nOutput:"
+  },
+  {
+    "input": "Step 11: Compute Segmentation Metrics",
+    "output": "We compute the segmentation metrics which measures performance using overlap (IoU) and consolidation (Dice Score)metrics which are critical for segmentation success.\nOutput:\nWe used TensorFlow and the Oxford-IIIT Pet Dataset to build a deep learning image segmentation model that assigns class labels to every pixel, allowing us to accurately separate pet images into distinct regions. Through a step-by-step pipeline, covering data preparation, model design using a VGG16 encoder and FCN-style decoder, training and evaluation, we demonstrated how raw image data can be turned into detailed, pixel-level segmentations, providing both clear visual results and reliable quantitative metrics for assessing model performance."
   }
 ]
