@@ -23270,5 +23270,41 @@
   {
     "input": "High Boost Filtering",
     "output": "High boost filtering combines the original image with an edge-enhanced version for more aggressive detail enhancement.\n1. Standard High Boost Filter:The filter enhances image details by combining edge emphasis and the original image.\n2. Stronger High Boost Filter:\nLarger central value increases sharpening intensity.\nUse this for images where we want very clear, crisp edges.\nImage sharpening enhances the clarity and distinction of edges in digital pictures. Using MATLAB, both Laplacian and high boost filtering offer straightforward, effective ways to make images look crisper and more detailed. By applying these filters,  we can quickly improve image quality for better analysis, presentation or interpretation."
+  },
+  {
+    "input": "What is Image Transformation?",
+    "output": "Image Transformation involves the transformation of image data in order to retrieve information from the image or preprocess the image for further usage. In this tutorial we are going to implement the following image transformation:\nImage Translation\nReflection\nRotation\nScaling\nCropping\nShearing in x-axis\nShearing in y-axis"
+  },
+  {
+    "input": "What is OpenCV?",
+    "output": "OpenCV(Open Source Computer Vision Library) is an open-source computer vision and machine learning software library. OpenCV was built to provide a common infrastructure for computer vision applications and to accelerate the use of machine perception in commercial products.  By using it, one can process images and videos to identify objects, faces, or even the handwriting of a human. When it is integrated with various libraries, such asNumPy,Pythonis capable of processing theOpenCVarray structure for analysis."
+  },
+  {
+    "input": "Image Translation",
+    "output": "In computer vision or image processing,image translationis the rectilinear shift of an image from one location to another, so the shifting of an object is called translation. In other words,  translation is the shifting of an object's location.\nIn the above code, we have imported NumPy and OpenCV module then read the image by usingimread()function, and then translation takes place with thewarpAffine()method which is defined as follows:\nIn the first argument, we passed the image, in the second argument it takes a matrix as a parameter in the matrix we give x = 100, which means we are telling the function to shift the image 70 units on the right side and y= 50, which means we are telling the function to shift the image 50 units downwards.  In the third argument, where we mentioned the cols and rows, we told the function to do not to crop the image from both thexandysides.\nOutput:"
+  },
+  {
+    "input": "Image Reflection",
+    "output": "Image reflection is used to flip the image vertically or horizontally.For reflection along the x-axis, we set the value of Sy to -1, Sx to 1, and vice-versa for the y-axis reflection.\nTo flip the image horizontally:\nTo flip the image vertically:\nOutput:"
+  },
+  {
+    "input": "Image Rotation",
+    "output": "Image rotation is a common image processing routine with applications in matching, alignment, and other image-based algorithms, in image rotation the image is rotated by a definite angle. It is used extensively in data augmentation, especially when it comes to image classification.\nWe have used the get rotation matrix function to define the parameter required in the warpAffine function to tell the function to make a matrix that can give a required rotation angle( here it is 30 degrees) with shrinkage of the image by 40%.\nOutput:"
+  },
+  {
+    "input": "Image Scaling",
+    "output": "Image scaling is a process used to resize a digital image. We perform two things in the image scaling either we enlarge the image or we shrink the image, OpenCV has a built-in functioncv2.resize()for image scaling.\nShrinking an image:\nNote:Here 350 and 300 are the height and width of the shrunk image respectively\nEnlarging Image:\nOutput:"
+  },
+  {
+    "input": "Image Cropping",
+    "output": "Cropping is the removal of unwanted outer areas from an image.\nOpenCV loads the image as a NumPy array, we can crop the image simply by indexing the array, in our case, we choose to get 200 pixels from 100 to 300 on both axes.\nOutput:"
+  },
+  {
+    "input": "Image Shearing in X-Axis",
+    "output": "While the shearing image is on the x-axis, the boundaries of the image that are parallel to the x-axis keep their location, and the edges parallel to the y-axis change their place depending on the shearing factor.\nOutput:"
+  },
+  {
+    "input": "Image Shearing in Y-Axis",
+    "output": "When shearing is done in the y-axis direction, the boundaries of the image that are parallel to the y-axis keep their location, and the edges parallel to the x-axis change their place depending on the shearing factor.\nOutput:"
   }
 ]
