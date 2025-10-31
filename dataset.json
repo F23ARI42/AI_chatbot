@@ -23978,5 +23978,65 @@
   {
     "input": "4. Computing Weight Gradients",
     "output": "Using chain rule we compute gradients for weights associated with each gate.\nGradients for Output Gate Weights:\nSimilarly, gradients for other gates' weights and biases are calculated. Backpropagation Through Time for LSTMs involves:\nUnfolding the LSTM over all timesteps.\nCalculating gradients for each gate and cell state using chain rule.\nAccounting for both hidden state and cell state dependencies.\nPropagating gradients backward through time to update weights.\nThis process enables LSTMs to learn long-term dependencies in sequential data by efficiently updating weights while mitigating vanishing gradients."
+  },
+  {
+    "input": "What is R-CNN?",
+    "output": "R-CNN, which stands for Region-basedConvolutional Neural Network, is a type of deep learning model used for object detection in computer vision tasks. The term \"R-CNN\" actually refers to a family of models that share a common approach toobject detection. The key idea behind R-CNN is to divide the object detection task into two stages: region proposal and object classification."
+  },
+  {
+    "input": "How does R-CNN work?",
+    "output": "Later, Fast R-CNN was developed to enhance the speed and efficiency of the object detection process. The main issues with R-CNN are its slow training and inference times due to the need to independently process each region proposal using the CNN."
+  },
+  {
+    "input": "What is Fast R-CNN?",
+    "output": "Fast R-CNN is an improved version of R-CNN, which aim to improve the efficiency and speed of the original model with the following additional steps:\nThe integration of the region proposal step into the model, along with the use of RoI pooling, makes Fast R-CNN more computationally efficient compared to the original R-CNN. The single-stage training and inference process also contributes to faster training and better overall performance. However, despite its improvements, Fast R-CNN still has room for optimization in terms of speed.\nIt's worth noting that there have been subsequent developments in the R-CNN family, such as Mask R-CNN, which further improved speed and addressed additional tasks likeinstance segmentation."
+  },
+  {
+    "input": "Instance Segmentation",
+    "output": "This segmentation identifies each instance (occurrence of each object present in the image and colors them with different pixels). It basically works to classify each pixel location and generate the segmentation mask for each of the objects in the image. This approach gives more idea about the objects in the image because it preserves the safety of those objects while recognizing them."
+  },
+  {
+    "input": "What is Mask R-CNN?",
+    "output": "Mask R-CNN (Mask Region-based Convolutional Neural Network) is an extension of the Faster R-CNN architecture that adds a branch for predicting segmentation masks on top of the existing object detection capabilities. It was introduced to address the task of instance segmentation, where the goal is not only to detect objects in an image but also to precisely segment the pixels corresponding to each object instance."
+  },
+  {
+    "input": "Mask R-CNN Architecture",
+    "output": "Mask R-CNN was proposed by Kaiming He et al. in 2017. It is very similar to Faster R-CNN except there is another layer to predict segmented. The stage of region proposal generation is the same in both the architecture the second stage which works in parallel predicts the class generates a bounding box as well as outputs a binary mask for each RoI.\nIt comprises of -\nBackbone Network\nRegion Proposal Network\nMask Representation\nRoI Align"
+  },
+  {
+    "input": "Backbone Network",
+    "output": "The authors of Mask R-CNN experimented with two kinds of backbone networks. The first is standard ResNet architecture (ResNet-C4) and another is ResNet with a feature pyramid network. The standardResNet architecturewas similar to that of Faster R-CNN but the ResNet-FPN has proposed some modification. This consists of a multi-layer RoI generation. This multi-layer feature pyramid network generates RoI of different scale which improves the accuracy of previous ResNet architecture.\nAt every layer, the feature map size is reduced by half and the number of feature maps is doubled. We took output from four layers(layers - 1, 2, 3, and 4). To generate final feature maps, we use an approach called the top-bottom pathway. We start from the top feature map(w/32, h/32, 256)and work our way down to bigger ones, by upscale operations. Before sampling, we also apply the1*1convolution to bring down the number of channels to256. This is then added element-wise to the up-sampled output from the previous iteration. All the outputs are subjected to3 X 3convolution layers to create the final4 feature maps(P2, P3, P4, P5). The5thfeature map(P6)is generated from a max pooling operation fromP5."
+  },
+  {
+    "input": "Region Proposal Network",
+    "output": "All the convolution feature map that is generated by the previous layer is passed through a3*3convolution layer. The output of this is then passed into two parallel branches that determine the objectness score and regress the bounding box coordinates.\nHere, we only use only one anchor stride and3anchor ratios for a feature pyramid (because we already have feature maps of different sizes to check for objects of different sizes)."
+  },
+  {
+    "input": "Mask Representation",
+    "output": "A mask contains spatial information about the object. Thus, unlike the classification and bounding box regression layers, we could not collapse the output to a fully connected layer to improve since it requires pixel-to-pixel correspondence from the above layer. Mask R-CNN uses a fully connected network to predict the mask. This ConvNet takes an RoI as input and outputs them*mmask representation. We also upscale this mask for inference on the input image and reduce the channels to256using1*1convolution. In order to generate input for this fully connected network that predicts mask, we use RoIAlign. The purpose of RoIAlign is to use convert different-size feature maps generated by the region proposal network into a fixed-size feature map. Mask R-CNN paper suggested two variants of architecture. In one variant, the input of mask generationCNNis passed after RoIAlign is applied (ResNet C4), but in another variant, the input is passed just before the fully connected layer (FPN Network).\nThis mask generation branch is a full convolution network and it output aK * (m*m), whereKis the number of classes (one for each class) andm=14forResNet-C4 and 28 for ResNet_FPN."
+  },
+  {
+    "input": "RoI Align",
+    "output": "RoI align has the same motive as of RoI pool, to generate the fixed size regions of interest from region proposals. It works in the following steps:\nGiven the feature map of the previous Convolution layer of sizeh*w, divide this feature map intoM * Ngrids of equal size (we will NOT just take integer value).\nThe mask R-CNN inference speed is around2 fps, which is good considering the addition of a segmentation branch in the architecture."
+  },
+  {
+    "input": "How does Mask R-CNN work?",
+    "output": "As we have seen, Mask R-CNN builds upon the two-stage architecture of Faster R-CNN, incorporating an additional branch to predict segmentation masks for each detected object.\nThe key innovation in Mask R-CNN is the introduction of a third branch, the mask branch, which operates in parallel with the existing region proposal and classification branches. After the region proposals are generated by the region proposal network (RPN), the mask branch is responsible for predicting a binary mask for each proposed region, outlining the exact pixel-level boundaries of the object. This allows Mask R-CNN not only to identify and classify objects but also to provide a detailed segmentation mask for each instance.\nThe mask branch uses a pixel-to-pixel alignment mechanism, often implemented with spatially aligned RoI pooling, to ensure accurate correspondence between the proposed region and the generated mask. The final output is a set of bounding boxes, class labels, and pixel-level masks for each detected object in an image."
+  },
+  {
+    "input": "Advantages of Mask R-CNN",
+    "output": "Precise Instance Segmentation:Mask R-CNN excels at providing accurate pixel-level segmentation masks for each detected object.\nVersatility:It can handle multiple tasks in a single framework.\nRegion Proposal Network (RPN):By incorporating an RPN, Mask R-CNN efficiently generates region proposals, allowing it to focus on relevant regions and significantly reducing the computational load compared to exhaustive scanning approaches.\nFlexible Architecture\nState-of-the-Art Performance:Mask R-CNN consistently achieves state-of-the-art results in instance segmentation benchmarks."
+  },
+  {
+    "input": "Disadvantages of Mask R-CNN",
+    "output": "Computational Intensity:The mask prediction branch increases the computational load.\nResource Requirements:Mask R-CNN typically requires substantial computing resources like GPUs.\nData Annotation Challenges:Labor-intensive and challenging to create for certain domains.\nLimited Real-Time Applications:Despite its accuracy, Mask R-CNN might not be suitable for real-time applications with strict latency requirements."
+  },
+  {
+    "input": "Applications of Mask R-CNN",
+    "output": "Due to its additional capability to generate segmented masks, it is used in manycomputer visionapplications such as:\nHuman Pose Estimation\nSelf Driving Car\nDrone Image Mapping etc."
+  },
+  {
+    "input": "Conclusion",
+    "output": "In conclusion, Mask R-CNN's ability to simultaneously detect and segment objects with high accuracy positions it as a powerful tool for various applications, from human pose estimation to autonomous vehicles."
   }
 ]
