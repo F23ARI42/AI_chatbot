@@ -23898,5 +23898,61 @@
   {
     "input": "Step 7: Visualize the 2D UMAP projections",
     "output": "Output:"
+  },
+  {
+    "input": "What is Llama 3?",
+    "output": "Llama 3 isMeta's latestand most powerfullarge language model (LLM). Imagine a super AI trained on massive amounts of text.Llama 3excels at understanding language, makingMeta AI (their virtual assistant)in Facebook, Messenger, etc. much smarter! Expectfaster responses, better conversations, and even creative text featureslike summaries or different writing styles. This is a big leap inAIdevelopment!"
+  },
+  {
+    "input": "What is a Large Language Model (LLM)?",
+    "output": "Large language models (LLMs)are a type ofArtificial Intelligence (AI)system trained on massive amounts of text data. This allows them to analyze and understand language with proficiency.Natural Language Processing (NLP)is a key area where LLMs excel. They can perform tasks like:\nText generation:Creating human-quality text, translating languages, and writing different kinds of creative content.\nQuestion answering:Providing informative responses to user queries.\nSentiment analysis:Understanding the emotional tone of a piece of text."
+  },
+  {
+    "input": "Llama 3 Architecture",
+    "output": "Better Encoding:Llama 3 uses a powerful tokenizer with a vastvocabulary of 128,000 tokens, allowing for more efficient language processing.\nImproved Inference:The model leverages a technique called\"grouped query attention\" (GQA), which boosts efficiency during information retrieval.\nHuge Dataset:Meta trained Llama 3 on a staggering15 trillion tokens, 7 times larger than its predecessor (Llama 2). This data comes from publicly available sources.\nFocus on Multilinguality:Over5%of the training data is non-English, encompassing30+ languages. While performance might not be equal across all languages yet, this signifies a move towards multilingual capabilities.\nCustom Training Infrastructure:Training the largest Llama 3 models required a combination of three parallelization techniques andcustom-built 24,000 GPU clusters, highlighting the immense computational resources needed."
+  },
+  {
+    "input": "Llama 3 Release Date",
+    "output": "Meta introduced Llama 3, their new open-source large language model, on April 18, 20241. They have plans to release smaller versions of Llama 3 in May 2024 and the full open-source model is expected to be released in July 20242."
+  },
+  {
+    "input": "Benefits of Using Meta AI Apps with Llama 3",
+    "output": "The advantages of using Meta apps powered by Llama 3 extend beyond just improved communication:\nIncreased Productivity:Get tasks done faster and more efficiently with AI-powered assistance.\nEnhanced Creativity:Explore new ideas and approaches with the help of AI-generated content and suggestions.\nAccessibility Improvements:AI can personalize interfaces and content, making Meta apps more accessible to a wider audience."
+  },
+  {
+    "input": "Search Integration in the Apps",
+    "output": "Meta AIbrings a powerful search functionality directly into the apps you use every day -Facebook, Instagram, WhatsApp, and Messenger. Here's how it simplifies the experience:\nEasy Information Retrieval:Formulate your question or search query directly within the app using Meta AI.  Imagine researching a new restaurant on Facebook, and then seamlessly booking a reservation within the same platform.\nReal-Time Results:Meta AI leverages search engines like Google or Bing to deliver up-to-date results in real time. This means you get the latest information without ever leaving your social media feed or chat conversation.\nContextual Awareness:Meta AI considers the context of your current activity.  For example, planning a ski trip in a Messenger chat? Ask Meta AI to find flights and suggest less crowded dates - all within the chat window!\nCross-App Functionality:The search feature transcends individual apps.  Imagine researching a travel destination on Instagram, and then using the search function within Messenger to book a group trip with friends."
+  },
+  {
+    "input": "Llama 3 Meta AI",
+    "output": "Instant Insights:No need to leave Facebook! Use Meta AI directly within your feed to delve deeper into captivating posts.\nCuriosity Quencher:See a photo of the Northern Lights? Ask Meta AI the best time to see the Aurora Borealis, all within the post itself.\nContextual Knowledge:Meta AI leverages the context of your feed to provide relevant information. Explore a new recipe.  Ask for ingredient substitutions or pairing suggestions."
+  },
+  {
+    "input": "Meta AI Imagine Feature",
+    "output": "Meta AI introduces a new feature called Imagine. Here's what it offers:\nReal-Time Image Generation:Simply type a description and watch Meta AI craft an image in real-time. You can also describe your desired style and see options come to life.\nInteractive Refinement:Refine your concept as you go by adding details or changing keywords. This process ensures the final image aligns perfectly with your vision.\nBeyond Static Images:Breathe life into your creations with animations or explore different artistic styles. Want a children's book illustration of your concept? No problem!\nEffortless Sharing:Once completed, share it easily with friends and family on various platforms directly within the app."
+  },
+  {
+    "input": "Meta AI Integration on WhatsApp",
+    "output": "Meta AI integrates into WhatsApp, transforming group chats and one-on-one conversations:\nSmarter Group Interactions:Ask Meta AI questions directly within a group chat using the \"@\" symbol. Imagine settling restaurant debates or getting instant summaries of complex topics without leaving the chat.\nEnhanced Information Retrieval:Need quick information? Meta AI can search the web directly within WhatsApp, fetching relevant results and saving you time.\nLanguage Breakdown:Struggling with a message in another language? Meta AI offers real-time translation within the chat, fostering smoother communication across borders.\nPersonalized Fun:Use Meta AI to generate creative text formats like poems or limericks based on conversation topics, adding a unique twist to your chats."
+  },
+  {
+    "input": "Qualcomm Partnership with Meta Llama 3",
+    "output": "Powering Devices with AI:Meta and Qualcomm are partnering to optimize Llama 3 for smartphones,PCs, VR/AR headsets, and even vehicles.\nDirect on-Device Processing:This means Llama 3 will run directly on these devices, enabling:Faster Responses:Expect quicker processing and responses to your queries and requests.Enhanced Privacy:Data stays on your device, potentially increasing privacy compared to cloud-based processing.Improved Reliability:On-device processing offers a more reliable experience, even with limited internet connectivity.Personalized Interactions:The model can leverage on-device data for more tailored experiences.\nFaster Responses:Expect quicker processing and responses to your queries and requests.\nEnhanced Privacy:Data stays on your device, potentially increasing privacy compared to cloud-based processing.\nImproved Reliability:On-device processing offers a more reliable experience, even with limited internet connectivity.\nPersonalized Interactions:The model can leverage on-device data for more tailored experiences.\nDemocratizing AI:This collaboration aims to integrate Llama 3 with upcoming Snapdragon chipsets, making advanced AI functionalities accessible to a wider audience."
+  },
+  {
+    "input": "Benchmarking Llama 3",
+    "output": "Llama 3 boasts significant improvements compared to its predecessors. To showcase its capabilities, Meta conducted evaluations using various benchmarks. Here's a detailed breakdown of the results:"
+  },
+  {
+    "input": "Difference Between Llama and Other Large Language Models",
+    "output": "Here's a table comparing Llama 3 to other prominent Large Language Models (LLMs):\nNote:Information about GPT-4 and Claude 3 Sonnet is limited due to their non-public nature."
+  },
+  {
+    "input": "Llama 3 Availability",
+    "output": "Meta AI Expansion:Meta AI is extending its reach beyond the US, launching in over a dozen countries including:AustraliaCanadaGhanaJamaicaMalawiNew ZealandNigeriaPakistanSingaporeSouth AfricaUgandaZambiaZimbabwe\nAustralia\nCanada\nGhana\nJamaica\nMalawi\nNew Zealand\nNigeria\nPakistan\nSingapore\nSouth Africa\nUganda\nZambia\nZimbabwe\nMeta AI Imagine Feature:(Limited Access)Beta testing is underway in the US on:WhatsAppMeta AI web experience\nBeta testing is underway in the US on:WhatsAppMeta AI web experience\nWhatsApp\nMeta AI web experience\nMeta AI on Ray-Ban Meta Smart Glasses:(Limited Access & Location)Currently available in the US onlyPlanned expansion to Meta Quest headsets\nCurrently available in the US only\nPlanned expansion to Meta Quest headsets\nMeta AI (powered by Llama 3):Currently not available for direct public use\nCurrently not available for direct public use\nLlama 3 Model:Open-Source: Yes (This means the underlying code is accessible for researchers and developers)\nOpen-Source: Yes (This means the underlying code is accessible for researchers and developers)"
+  },
+  {
+    "input": "Conclusion",
+    "output": "Meta AI, powered by theLlama 3 large language model (LLM), is a huge advancement in AI technology.Llama 3boasts superior capabilities inNatural Language Processing (NLP), leading to a moreintelligent and versatile Meta AI. Expectenhanced experiencesacross Meta's platforms, fromsmarter chatbotsandricher search functionalitiestocreative text formatslike poems or summaries. This is a big step towards a future where AI integrates into our daily lives, entrusting us to interact with technology and information in morereflexive and personalizedways."
   }
 ]
