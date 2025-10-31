@@ -24802,5 +24802,149 @@
   {
     "input": "Implementing Harris Corner Detection",
     "output": "Let’s see how to implement Harris Corner Detection and highlight the corners detected in an image. Here we will be usingOpenCV,NumpyandMatplotliblibraries for the implementation.\ndest = cv2.cornerHarris(operatedImage, 17, 21, 0.01):Second argument (17) sets the neighborhood size for corner calculation, the third (21) defines the Sobel kernel size and the fourth (0.01) is the free parameter in the Harris formula.\ndest = cv2.dilate(dest, None):This enlarges the detected corners for better visibility usingcv2.dilate().\nimage[dest > 0.01 * dest.max()] = [0, 0, 255]:Corners with responses greater than 1% of the max are marked red on the original image.\nOutput:"
+  },
+  {
+    "input": "Installation",
+    "output": "Gradio can be installed in multiple ways depending on your setup. Here’s how to install it using different methods:"
+  },
+  {
+    "input": "Using pip",
+    "output": "1. Open your Command Prompt or PowerShell (Windows) and Terminal (macOS/Linux).\n2. Create Environment using below command:\n3. Activate virtual environment\n4. Run the following command to install Gradio:"
+  },
+  {
+    "input": "Using conda",
+    "output": "If you're using Anaconda, you can install Gradio from conda-forge channel.\n1. Open Anaconda Prompt (Windows) or terminal (macOS/Linux)\n2. Create environment\n3. Activate environment\n4. Run the command to install, then pressyto confirm:"
+  },
+  {
+    "input": "Verifying Gradio Installation",
+    "output": "After installing Gradio, you can check if it was installed correctly by running following code in python:\nIf Gradio is installed successfully, this will display the installed version number."
+  },
+  {
+    "input": "Core Concepts of Gradio",
+    "output": "To effectively use Gradio, it's helpful to understand a few foundational building blocks:"
+  },
+  {
+    "input": "1. Interface",
+    "output": "The Interface class connects your Python function with input and output components to build an interactive UI. Once set up, Gradio automatically generates a clean and responsive interface based on your specifications."
+  },
+  {
+    "input": "2. Components",
+    "output": "Gradio provides a wide range of built-in components (30+ and growing) that act as input and output elements. These include:\nTextboxfor typing text\nImagefor uploading or displaying pictures\nAudiofor recording or playing sound\nSlider,Dropdown,Checkboxetc\nEach component allows users to interact with your app in a structured and intuitive way."
+  },
+  {
+    "input": "3. Functions",
+    "output": "Functions are the core logic behind your Gradio app. They take input from the user, process it and return the result. This can be something simple like a greeting or as complex as a machine learning prediction.\nExample:"
+  },
+  {
+    "input": "4. Launch",
+    "output": "Once interface is defined, calling.launch()runs the app. By default, it opens a local web server. To make it available publicly (e.g., to share with teammates or clients), you can addshare=True, which creates a temporary public link via an SSH tunnel."
+  },
+  {
+    "input": "Example: Simple Gradio App",
+    "output": "Let’s see all the above concepts in action with a basic example. This app takes two numbers as input and returns their sum using a Gradio interface. Here:\ndef add_numbers(a, b):Defines a function that takes two numbers and returns their sum.\ngr.Interface():Gradio's main class for creating UIs.\nfn=add_numbers:Tells Gradio to use this function when user clicks \"Submit\".\ninputs=[\"number\", \"number\"]:Two number input fields appear in UI.\noutputs=\"number\":Result of function will be shown as a number.\ndemo.launch():Starts  interface in a browser or inline (in notebooks).\nOutput"
+  },
+  {
+    "input": "Components of Gradio",
+    "output": "When building apps with Gradio, we spend most of our time using components that define how users interact with our interface. Gradio components are building blocks of our interface. They’re divided into:\nInput Components:let users provide data (text, image, audio, etc.)\nOutput Components:display results returned by your Python function"
+  },
+  {
+    "input": "Input Components",
+    "output": "These allow users to send data to your Python function. Some commonly used input components include:\nTextbox:for entering text\nImage:for uploading images\nAudio:for uploading audio clips\nSlider:for selecting a number within a range\nDropdown:for selecting one option from a list"
+  },
+  {
+    "input": "Output Components",
+    "output": "Output components show the results after processing input. Common ones include:\nLabel:for displaying text or classifications\nImage:for showing generated or processed images\nAudio:for playing generated audio\nPlot:for displaying graphs or charts"
+  },
+  {
+    "input": "Example:",
+    "output": "In this example, we have build a simple app that collects user details like name, photo, age and favorite language and then displays a personalized message along with uploaded photo.\nsimple_appfunction takes 4 inputs from the user: name, photo, age and language\nIt returns 3 outputs: A greeting \"Hello name!\", uploaded photo and A message.\nfn=simple_app:tells Gradio which Python function to run when user provides input.\nOutput"
+  },
+  {
+    "input": "Advanced Interfaces with Gradio",
+    "output": "gr.Interface() is great for quick UIs, but for more control over layout, events and interactivity,gr.Blocksare more reliable. It is a flexible layout system in Gradio that allows developers to:\nArrange components in rows, columns or groups\nManually connect events using .click(), .change() and more\nBuild advanced interfaces like dashboards or multi-step workflows\nIt acts as a \"do-it-yourself\" mode, giving more control over UI structure and interactivity."
+  },
+  {
+    "input": "Example: Button Click with gr.Blocks",
+    "output": "In this example, a structured layout is created where the user enters their name and receives a greeting only upon clicking a button.\ngr.Blocks()wraps the entire interface.\nComponents are manually created:Textbox,Button,Textbox.\n.click()connects the button togreet()function.\nOutput"
+  },
+  {
+    "input": "When to Use gr.Blocks",
+    "output": "Adding buttons to trigger actions using .click()\nDesigning custom layouts (e.g., placing components side by side)\nBuilding applications with multiple input/output sections\nConnecting different buttons to different functions for more control"
+  },
+  {
+    "input": "Event Handling in Gradio",
+    "output": "In Gradio, event handling allows to control how and when certain actions are triggered like clicking a button, changing a slider or submitting a form. Instead of automatically running a function when input changes, you can tie your logic to specific events, giving you more control over the flow of your app."
+  },
+  {
+    "input": "Common Events",
+    "output": "Here are some common event types you can use:"
+  },
+  {
+    "input": "Examples of Event Usage",
+    "output": "In this example, event handling is demonstrated by updating the output automatically when the user changes the slider value.\ndef age_alert(age):Function that returns a message with the selected age.\nwith gr.Blocks() as demo:Starts a custom Gradio layout.\n.change():Triggers age_alert when slider is changed.\nOutput"
+  },
+  {
+    "input": "Connecting to External APIs",
+    "output": "When building AI apps with Gradio, you might want to get data from external sources like weather, news or chatbot APIs. This is done using external APIs. In simple terms,API(Application Programming Interface) is a set of rules that lets one software communicate with another to send or receive data or perform actions."
+  },
+  {
+    "input": "Why Use APIs in Gradio?",
+    "output": "To get live data like weather, currency rates, etc\nTo connect with other ML models like OpenAI, Hugging Face APIs, etc\nTo enrich the user experience with real-world data"
+  },
+  {
+    "input": "Example: Get Current Joke from Joke API",
+    "output": "This example shows how to connect to an external API in a Gradio app. When button is clicked, it fetches and displays a random joke from an online API.\nrequests.get():Sends a GET request to a public joke API.\nget_joke()extract and return the joke text if response is successful andelse handles errors by showing a fallback message.\nwith gr.Blocks() as demo:Creates a custom layout using gr.Blocks.\nbtn.click(fn=get_joke, inputs=None, outputs=output):On button click, runs get_joke() and shows result in output.\nOutput"
+  },
+  {
+    "input": "Creating Interfaces with Language Models Using Gradio",
+    "output": "Let’s now build user-friendly interfaces for two simple real-world tasks using LLMs. These examples show how you can connect your Python function powered by a large language model (LLM) to a web interface using Gradio."
+  },
+  {
+    "input": "Example 1: Text Summarizer App Using OpenAI GPT",
+    "output": "This example builds a simple Text Summarizer app using OpenAI’s GPT model. It takes a paragraph or article as input and returns a short, clear summary, making it useful for tasks like quick reading, note-taking or report preparation.\nStep 1: Define Summarizer Function\nsummarize_text(api_key, text):Function to summarize given text.\nopenai.api_key = api_key:Set API key for authentication.\nprompt:Create summarization request with the text.\nopenai.chat.completions.create():Send prompt to GPT-3.5 Turbo and get response.\nreturn response.choices[0].message.content.strip():Return clean summary.\nStep 2: Build the Interface\ngr.Interface():Creates a Gradio interface named iface.\nfn=summarize_text:Connects UI to the summarize_text() function this is what runs when user clicks the button.\nTwo input boxes:one for the hidden API key, and one multi-line box for the text to summarize.\nshow_copy_button=True:Adds a copy-to-clipboard button.\nOutput"
+  },
+  {
+    "input": "Example 2: Sentiment Analyzer UI",
+    "output": "This example demonstrates how to build a user interface for an LLM-based model using Gradio. It uses a Hugging Face sentiment analysis pipeline to analyze text input and display the sentiment with confidence score. Here:\npipeline(\"sentiment-analysis\", model=\"nlptown/bert-base-multilingual-uncased-sentiment\"):Loads a pre-trained sentiment analysis model from Hugging Face.\nanalyze_sentiment(text):Defines a function that takes user input text.\nsentiment_pipeline(text)[0]:Uses model to predict sentiment, takes first result from output list.\nresult['label']extracts sentiment label andresult['score']extracts model's confidence score for prediction.\nreturn f\"Sentiment: {label}\\nConfidence: {score:.2f}\":Returns sentiment and confidence in a formatted string.\nOutput"
+  },
+  {
+    "input": "Creating Interfaces For Classic ML Models",
+    "output": "Let’s now create a user interface for a classic regression problem predicting house prices based on basic features. This is a simple example to understand how ML + UI works together. We’ll use famous California Housing dataset available fromScikit-learn."
+  },
+  {
+    "input": "Step 1: Setup the Project",
+    "output": "Create a new folder (e.g., house_price_ui) and inside that, create a Python file called app.py. Make sure you install following dependencies (use virtual env if needed):"
+  },
+  {
+    "input": "Step 2: Train a Simple Model",
+    "output": "The code loads the California housing dataset\nSplits it into features (X) and target (y) and divides it into training and test sets.\nIt builds a pipeline withStandardScalerandrandom forest regressorthen trains the model using training data."
+  },
+  {
+    "input": "Step 3: Create Prediction Function",
+    "output": "This function:\nTakes user inputs for housing features.\nWraps them into a DataFrame.\nPredicts price using the model.\nReturns a formatted string with estimated price."
+  },
+  {
+    "input": "Step 4: Build the Gradio Interface",
+    "output": "It builds interface for predict_house_price function with eight sliders for housing features. The predicted price is shown as text output. The interface includes a title, description and is launched with a public shareable link.\nOutput:"
+  },
+  {
+    "input": "Step 1: Prepare Your Files",
+    "output": "You’ll need 3 files in your project folder:\n1. app.py\nSave your code in a file called app.py. This is the main app file. Hugging Face Spaces will run this file to launch your Gradio UI.\n2. requirements.txt\nThis file tells Hugging Face what Python libraries are needed to run your app. Create a requirements.txt file with this content:\nHugging Face installs these packages in the background. If you miss one, your app might crash!\n3. README.md (Optional)\nIt is a project description for Hugging Face viewers. Add a README.md with a short intro to your app. Example:"
+  },
+  {
+    "input": "Step 2: Create a Hugging Face Space",
+    "output": "Go to Hugging Face Space and click on “Create new Space”.\nFill the details:\nSpace name:e.g., california-house-predictor\nSpace SDK:Choose Gradio\nVisibility:Public or Private\nClick “Create Space”"
+  },
+  {
+    "input": "Step 3: Upload Your Files",
+    "output": "You’ll be taken to the Space repo view. Now:\nClick “Files”\nClick “Add file” --> Upload files\nUpload: app.py, requirements.txt and README.md (optional)"
+  },
+  {
+    "input": "Step 4: Wait for Build",
+    "output": "Once files are uploaded:\nHugging Face will automatically install dependencies from requirements.txt\nThen it will run app.py, which launches the Gradio interface\nAfter a few seconds to minutes, your app will be live in the browser!"
+  },
+  {
+    "input": "Gradio Tips for Building Better UIs",
+    "output": "When building apps with Gradio, following best practices helps create faster, cleaner and more user-friendly interfaces. Here are 6 key tips:"
   }
 ]
