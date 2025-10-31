@@ -22838,5 +22838,37 @@
   {
     "input": "Challenges in Image Classification",
     "output": "While CNNs have several advantages, they also come with certain challenges that we need to be solve while implementing them."
+  },
+  {
+    "input": "Types of Edge Detection Operators",
+    "output": "There are main types of edge detection methods:"
+  },
+  {
+    "input": "1. Gradient-Based Edge Detection Operators",
+    "output": "Gradient-based operators detect edges by measuring how quickly the pixel values or brightness changes in a image. These changes are calledgradients. If the change is large between two neighboring pixels that indicates an edge. They use first derivative to find edges."
+  },
+  {
+    "input": "2. Gaussian-Based Edge Detection Operators",
+    "output": "Gaussian-based operators combine blurring and edge detection. They reduce the effect of noise by smoothing the image first and then look for changes using the second derivative. These are more advanced and accurate than gradient-based operators."
+  },
+  {
+    "input": "3. Sobel Operator",
+    "output": "TheSobel Operatoris a method used to detect edges in an image by checking how pixel values (brightness) change in the horizontal and vertical directions. It uses two 3 x 3 kernels or masks which are convolved with the input image to calculate the vertical and horizontal derivative approximations respectively:\nM_x = \\begin{pmatrix} -1 & -2 & -1 \\\\ 0 & 0 & 0 \\\\ 1 & 2 & 1 \\end{pmatrix}, \\quad M_y = \\begin{pmatrix} -1 & 0 & 1 \\\\ -2 & 0 & 2 \\\\ -1 & 0 & 1 \\end{pmatrix}\nwhere:\nMx detect edges from left to right\nMy detect edges from top to bottom\nBy combining the results from both it finds the overall edge strength and direction."
+  },
+  {
+    "input": "4. Prewitt Operator",
+    "output": "It is very similar to the Sobel Operator but with slight difference is that it calculates the edge gradients. Like Sobel it detects edges in the horizontal and vertical directions using two 3×3 matrices but it uses auniform averaging techniquein its kernel making it less accurate than Sobel but faster and simpler to implement.\nM_x = \\begin{pmatrix} -1 & -1 & -1 \\\\ 0 & 0 & 0 \\\\ 1 & 1 & 1 \\end{pmatrix}, \\quad M_y = \\begin{pmatrix} -1 & 0 & 1 \\\\ -1 & 0 & 1 \\\\ -1 & 0 & 1 \\end{pmatrix}\nwhere:\nMx detect edges from left to right\nMy detect edges from top to bottom\nBy combining the results from both it finds the overall edge strength and direction."
+  },
+  {
+    "input": "5. Roberts Operator",
+    "output": "It is one of the simplest edge detection methods as it focuses on how pixel values change diagonally in an image. The operator uses a 2×2 kernel to calculate the gradient of intensity between diagonally adjacent pixels and make it suitable for detecting edges that appear along diagonal directions.\nM_x = \\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}, \\quadM_y = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}\nwhere:\nMx detects diagonal edges that run from top-left to bottom-right.\nMy detects diagonal edges that run from top-right to bottom-left.\nBy combining the results of both kernels the Roberts operator calculates the gradient magnitude to highlight edges."
+  },
+  {
+    "input": "6. Marr-Hildreth Operator or Laplacian of Gaussian (LoG)",
+    "output": "Marr-Hildreth Operatoris also calledLaplacian of Gaussian (LoG)and itis aGaussian-based edge detection method. It works by first smoothing the image using a Gaussian filter to remove noise and then applying the Laplacian operator to detect regions where the intensity changes sharply. The LoG operator first smooths the image using a Gaussian filter to reduce noise then applies the Laplacian to detect edges. It detects edges at zero-crossings where the result changes from positive to negative.\nLoG(x, y) = \\left( \\frac{x^2 + y^2 - 2\\sigma^2}{\\sigma^4} \\right) \\cdot e^{-\\frac{x^2 + y^2}{2\\sigma^2}}\nWhere:\n\\sigma= standard deviation of the Gaussian filter\nx,y= pixel coordinates\nUse LoG when your image is noisy and you need clean it."
+  },
+  {
+    "input": "7. Canny Edge Detector",
+    "output": "TheCanny operatoris one of the most advanced and widely used edge detection methods. It uses a multi-step process to detect sharp and clean edges while minimizing noise. Before detecting edges we remove noise using a Gaussian Blur and smoothens the image.\nG(x, y) = \\frac{1}{2\\pi\\sigma^2} \\cdot e^{-\\frac{x^2 + y^2}{2\\sigma^2}}\n1. Find Intensity Gradient: In this step  we find where the image changes the most this helps detect edges. We useSobel filtersto find gradients inxandydirections:\nG x​ =Sobel in x-direction,G y​ =Sobel in y-direction\n2. Non-Maximum Suppression: We thin the edges by keeping only the local maximum gradient in the direction of the edge. It removes pixels that are not part of a strong edge.\n3. Double Thresholding:Here we classify pixels into:\nStrong edges(above high threshold)\nWeak edges(between low and high threshold)\nNon-edges(below low threshold)\n4. Edge Tracking by Hysteresis: The final step connectsweak edgestostrong edgesif they are part of the same structure. Isolated weak edges are removed.\nIt’s good for applications needing precise and reliable edge detection like medical imaging, facial recognition or object tracking."
   }
 ]
