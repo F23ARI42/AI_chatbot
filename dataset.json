@@ -25026,5 +25026,21 @@
   {
     "input": "Code Example",
     "output": "This code captures live video from webcam, detects blue areas in each frame and applies Gradient operation to highlight their edges. It displays both original mask and edge-highlighted result.\nOutput:\nExplanation:\ncv2.VideoCapture(0): Starts webcam stream.\nscreenRead.read():Reads a frame from webcam.\ncv2.cvtColor(image, cv2.COLOR_BGR2HSV):Converts BGR image to HSV color space.\nnp.array([110, 50, 50])andnp.array([130, 255, 255]):Define HSV range for detecting blue color.\ncv2.inRange(hsv, blue1, blue2):Creates a binary mask where blue areas are white (255), others are black (0).\nnp.ones((5, 5), np.uint8):Creates a 5×5 kernel (structuring element) of type uint8.\ncv2.morphologyEx(mask, cv2.MORPH_GRADIENT, kernel):Performs Gradient  to highlight edges of objects.\ncv2.waitKey(1) & 0xFF == ord('a'):Keeps looping until 'a' key is pressed.\ncv2.destroyAllWindows():Closes all OpenCV windows.\nscreenRead.release():Releases webcam resource."
+  },
+  {
+    "input": "Opening Operation",
+    "output": "Opening is amorphological operationthat involves two steps:Erosion-> followed by ->Dilation"
+  },
+  {
+    "input": "Interpretation of the Equation",
+    "output": "A∘B:Opening of image A by structuring element B\n⊖:Erosion operation\n⊕:Dilation operation\nIt helps removes small white noise (tiny bright spots) from black backgrounds without affecting shape and size of larger white objects. Useful for cleaning internal noise like small specks or dots while preserving the main object’s structure."
+  },
+  {
+    "input": "Function to Perform Opening Operation",
+    "output": "Syntax for opening:\nParameters:\nimage:Input binary or grayscale image\ncv2.MORPH_OPEN:Specifies the morphological opening operation\nkernel:Structuring element (defines how erosion/dilation is applied)"
+  },
+  {
+    "input": "Code Example",
+    "output": "This Python program captures live video from webcam,detects blue-colored regions using HSVcolor filtering and then cleans small white noise from the mask using Opening morphological operation. It displays both original noisy mask and cleaned version side by side in real time.\nInput Frame:\nOriginal Blue Mask:\nAfter Opening (Noise Removed):\nExplanation:\ncv2.VideoCapture(0):Starts webcam stream.\nscreenRead.read():Reads a frame from webcam.\ncv2.cvtColor(image, cv2.COLOR_BGR2HSV):Converts BGR image to HSV color space.\nnp.array([110, 50, 50]) and np.array([130, 255, 255]):Define HSV range for detecting blue color.\ncv2.inRange(hsv, blue1, blue2):Creates a binary mask where blue areas are white (255), others are black (0).\nnp.ones((5, 5), np.uint8):Creates a 5×5 kernel (structuring element) of type `uint8`.\ncv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel):Performs Opening (Erosion followed by Dilation) to remove small white noise.\ncv2.waitKey(1) & 0xFF == ord('a'):Keeps looping until 'a' key is pressed.\ncv2.destroyAllWindows():Closes all OpenCV windows.\nscreenRead.release():Releases webcam resource."
   }
 ]
