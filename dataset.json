@@ -24958,5 +24958,25 @@
   {
     "input": "Example: Denoising a Noisy Image",
     "output": "This example shows how to denoise a color image using OpenCV’sfastNlMeansDenoisingColored()function. It removes noise while preserving details and displays original and denoised images side by side using Matplotlib.\nOutput\nExplanation: cv2.fastNlMeansDenoisingColored(img, None, 10, 10, 7, 15):Applies non-local means denoising to color imageimgand stores the result indst.\nimg:Input noisy color image.\nNone:Output image (created internally).\n10:Strength for luminance denoising.\n10:Strength for color denoising.\n7:Size of template patch.\n15:Size of search window."
+  },
+  {
+    "input": "Importance of grayscaling",
+    "output": "Fewer dimensions:RGB images have three channels, while grayscale images have only one.\nSimpler models:Less input data reduces complexity and speeds up training.\nAlgorithm-ready:Some methods, such as Canny edge detection, work only on grayscale images.\nLet's learn the different image processing methods to convert a colored image into a grayscale image."
+  },
+  {
+    "input": "Method 1: Using the cv2.cvtColor() function",
+    "output": "Input:\nOutput:\nExplanation:\ncv2.imread():Reads the image file (OpenCV loads color images as BGR by default).\ncv2.cvtColor():Converts color spaces; cv2.COLOR_BGR2GRAY produces a single-channel grayscale image.\ncv2.imshow():Opens a window to display the image."
+  },
+  {
+    "input": "Method 2: Using the cv2.imread() function with flag=zero",
+    "output": "In this method, we can directly load an image in grayscale mode by passing the flag 0 to cv2.imread(). This saves us from having to convert the image separately after loading.\nOutput\nExplanation:\ncv2.imread(path, 0):Reads the image directly in grayscale (single-channel).\ncv2.imshow():Displays the single-channel image.\ncv2.waitKey() / cv2.destroyAllWindows():Controls display lifetime."
+  },
+  {
+    "input": "Method 3.1 Weighted Method (Recommended)",
+    "output": "This method uses standard luminance weights (0.2989R + 0.5870G + 0.1140B) to account for human visual sensitivity—more to green, less to red, least to blue. It produces a more realistic and visually accurate grayscale image.\nOutput\nExplanation:\nrows, cols = img_weighted.shape[:2]:extracts image height (rows) and width (cols) from the shape.\nNestedfor loopsare used to iterate over every pixel in the image.\nWeighted formula: Gray = 0.2989*R + 0.5870*G + 0.1140*B (indices: R=[2], G=[1], B=[0] in OpenCV).\nAssigning[gray, gray, gray]preserves a 3-channel image for display.\nThis produces visually more accurate grayscale than simple averaging, but is still slower than OpenCV’s native conversions."
+  },
+  {
+    "input": "Method 3.2: Using the pixel manipulation (Average method)",
+    "output": "This method converts an image to grayscale by averaging the contributions of color channels (RGB). It’s a simple approach but not very accurate because it treats all colors equally, ignoring how the human eye perceives brightness.\nOutput\nExplanation:\nrows, cols = img.shape[:2]:extracts image height (rows) and width (cols) from the shape.\nNested loopsfor i in range(rows): for j in range(cols): iterate over every pixel row (y) then column (x).\nimg[i, j, 0], img[i, j, 1], img[i, j, 2]correspond to B, G, R respectively (OpenCV uses BGR order).\ngray = (B+G+R)/3computes the average intensity; assigning [gray, gray, gray] writes the value into all three channels (keeps a 3-channel image for display)."
   }
 ]
