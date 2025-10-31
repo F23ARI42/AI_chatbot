@@ -23018,5 +23018,29 @@
   {
     "input": "References:",
     "output": "NYU slides\nOpenCV K-means"
+  },
+  {
+    "input": "Types of Image Segmentation",
+    "output": "Image segmentation techniques can be broadly categorized into semantic segmentation, instance segmentation and panoptic segmentation. These methods aim to divide an image into meaningful regions, but differ in their approach to object identification and distinction."
+  },
+  {
+    "input": "1. Semantic Segmentation",
+    "output": "Semantic Segmentation involves assigning a class label to every pixel in an image based on shared characteristics such as colour, texture and shape.\nThis method treats all pixels belonging to the same class as identical, without distinguishing between individual objects.\nFor example in an image with multiple trees all pixels corresponding to any tree would be labelled as \"tree\" regardless of how many trees appear in the image."
+  },
+  {
+    "input": "2. Instance segmentation",
+    "output": "Instance segmentationextends semantic segmentation by not only labelling colour of each pixel but also distinguishing between individual objects of the same class.This approach identifies each object of the same class as a unique instance.\nFor example if there are multiple cats in an image it will differentiate each cat and treat them as separate entities despite them all being labelled as \"cats.\""
+  },
+  {
+    "input": "3. Panoptic Segmentation",
+    "output": "Panoptic segmentationcombines both semantic and instance segmentation techniques providing a complete image analysis.\nIt assigns a class label to every pixel and also detects individual objects. This combined approach helps us to understand both broad categories and detailed object boundaries simultaneously.\nFor example in a traffic scene it would label all pedestrians and cars (semantic segmentation) while also outlining the location of each individual person and car (instance segmentation)."
+  },
+  {
+    "input": "Common Techniques",
+    "output": "Let's see various techniques used in image segmentation:\nThresholding:Thresholding method involves selecting a threshold value and classifying image pixels between foreground and background based on intensity values.\nEdge Detection:It identify abrupt change in intensity or discontinuation in the image. It uses algorithms like Sobel, Canny or Laplacian edge detectors.\nRegion based segmentation:This method segments the image into smaller regions and iteratively merges them based on predefined attributes in color, intensity and texture to handle noise and irregularities in the image.\nClustering Algorithm:This method uses algorithms like K-means or Gaussian models to group object pixels in an image into clusters based on similar features like colour or texture.\nWatershed Segmentation:It treats the image like a topographical map where the watershed lines are identified based on pixel intensity and connectivity like water flowing down different valleys."
+  },
+  {
+    "input": "Deep Learning Based Segmentation Models",
+    "output": "U-Net:Designed for medical image segmentation, it uses a U-shaped architecture that allows precise segmentation even with limited data. It efficiently captures context while retaining fine details through skip connections making it ideal for small, high-resolution images.\nFully Convolutional Network (FCN):It modify conventional CNNs by replacing fully connected layers with convolutional layers allowing the network to process images of any size. This design enables pixel-wise segmentation, outputting spatial maps of segmentation results.\nSegNet:With its encoder-decoder structure, it is highly effective for scene understanding and object recognition. The encoder captures contextual information from the image while the decoder uses this context to perform precise localization and segmentation.\nMask R-CNN:An extension ofFaster R-CNNfor object detection, it adds a branch to predict segmentation masks alongside bounding box coordinates. It is used for instance segmentation, identifying and delineating individual object instances in images.\nVision Transformer (ViT):ViT applies transformer architectures to image segmentation by dividing an image into patches and processing them sequentially. This allows the model to capture global context, enhancing segmentation accuracy for complex visual tasks.\nResNet (Residual Network):While ResNet itself is a classification model, its residual learning framework is widely used as a backbone in many segmentation models like DeepLab, Mask R-CNN. Residual blocks help in training very deep networks by solving the vanishing gradient problem, enabling better feature extraction and improved segmentation accuracy."
   }
 ]
