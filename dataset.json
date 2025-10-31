@@ -23010,5 +23010,13 @@
   {
     "input": "Order-Statistic Filters:",
     "output": "Order-statistic filters are spatial filters whose response is based on ordering or ranking the values of pixels contained in the image region encompassed by the filter. In essence, the response of such filters is totally dependent on the statistics of the pixel intensities contained in the mask region.\nThe median filter replaces the value of the pixel with the median of the intensity levels in the mask region.\ng(x,y)=median_{(s,t)\\in S_{xy}}[f(x,y)]\nMedian filters provide excellent performance against noise, particularly for impulse noises, with considerably less blurring of images.\nMax and min filters, as the name suggests, replace the pixel values with the maximum and minimum pixel intensities contained in the mask region respectively.\ng(x,y)=max_{(s,t)\\in S_{xy}}[f(x,y)] g(x,y)=min_{(s,t)\\in S_{xy}}[f(x,y)]\nMax filter is used for finding the brightest points in the image. Also because pepper noise has very low-intensity values, it gets reduced by using the max filter. Similarly, the min filter is useful for finding the darkest points in the image and can work adequately to remove high-intensity salt noises.\nThe midpoint filter returns the midpoint between the maximum and minimum values in the region encompassed by the filter.\ng(x,y)=\\frac{1}{2}(min_{(s,t)\\in S_{xy}}[f(x,y)]+max_{(s,t)\\in S_{xy}}[f(x,y)])\nIt works best for randomly distributed noise like Gaussian or uniform noise.\nThe alpha-trimmed filter is another type of order-statistic filter. If we delete the d/2 lowest and d/2 highest intensity values of f(s,t) in the region Sxy, then let fr(s,t) denote the remaining pixels. Now if we take an average over these remaining pixel intensities, then it forms what is commonly called an alpha-trimmed mean filter.\ng(x,y)=\\frac{1}{mn-d}\\sum_{(s,t)\\in S_{xy}}^{}f_{r}(s,t)\nwhere d can range between 0 and mn-1. If d=0, the alpha-trimmed filter reduces to the plain arithmetic mean filter. It is particularly useful against combinations of salt-and-pepper noise and Gaussian noise."
+  },
+  {
+    "input": "Implementation",
+    "output": "In this implementation, we will be performing Image Segmentation using K-Means clustering. We will be using OpenCV k-Means API to perform this clustering."
+  },
+  {
+    "input": "References:",
+    "output": "NYU slides\nOpenCV K-means"
   }
 ]
