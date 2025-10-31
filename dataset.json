@@ -24514,5 +24514,21 @@
   {
     "input": "Projects of OpenCV",
     "output": "Invisible Cloak using OpenCV\nUnsupervised Face Clustering Pipeline\nVehicle detection in a Video frame using Python – OpenCV\nCount number of Faces using Python – OpenCV\nLive Webcam Drawing using OpenCV\nDetect and Recognize Car License Plate from a video in real time\nTemplate matching using OpenCV in Python\nCartooning an Image using OpenCV – Python\nWith these foundational OpenCV skills, we're ready to get more advanced projects and upgrade our image and video processing capabilities."
+  },
+  {
+    "input": "Step 1: Import libraries and Image Preparation",
+    "output": "Let's import the required libraries and load our image on which we will perform the operations,\ncv2: Handles image reading, processing and applies thresholding techniques.\nnumpy: Supports efficient array operations, enabling fast image data handling.\nmatplotlib.pyplot: Displays images and results in Colab notebooks."
+  },
+  {
+    "input": "Step 2: Helper Function",
+    "output": "Define the helper function which helps in displaying the images,"
+  },
+  {
+    "input": "Step 3: Display Original Image",
+    "output": "Output:"
+  },
+  {
+    "input": "Step 4: Otsu’s Thresholding",
+    "output": "The threshold value is not provided by us, instead, Otsu's method determines it automatically based on the image’s histogram. This makes separation of foreground and background particularly strong on bimodal images.\nOutput:"
   }
 ]
