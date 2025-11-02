@@ -1,6 +1,14 @@
 ## Dependencies
+If you're running via Node
 ```
 npm install
+```
+If you're running via Flask
+```
+npm install lucide-react
+```
+```
+pip install flask
 ```
 
 ## Run the application
@@ -8,6 +16,10 @@ Open your terminal and type
 
 ```
 npm run dev
+```
+or, if you're running via Flask
+```
+python app.py
 ```
 
 # To contribute this project
