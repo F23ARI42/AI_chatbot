@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Assistant</title>
+    <link rel="stylesheet" href="/static/script.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+</head>
+<body>
+    <div class="particles-bg" id="particles-bg"></div>
+
+    <div id="app">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="welcome-screen">
+            <div class="welcome-overlay"></div>
+            
+            <div class="welcome-content">
+                <div class="logo-container">
+                    <div class="logo">
+                        <i data-lucide="code" class="logo-icon"></i>
+                    </div>
+                </div>
+
+                <h1 class="welcome-title">
+                    <span id="typing-text">CS Assistant</span>
+                </h1>
+
+                <p class="welcome-description" id="welcome-description">
+                    Your intelligent Computer Science companion with a clean, minimalist design
+                </p>
+
+                <div class="social-container" id="social-container">
+                    <a href="https://github.com/the-lazyguy" target="_blank" rel="noopener noreferrer" class="modern-social-btn github">
+                        <div class="icon">
+                            <i data-lucide="github"></i>
+                        </div>
+                        <span>GitHub</span>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/zain-nadeem-917524177/" target="_blank" rel="noopener noreferrer" class="modern-social-btn linkedin">
+                        <div class="icon">
+                            <i data-lucide="linkedin"></i>
+                        </div>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+
+                <button id="start-button" class="cta-button">
+                    <div class="cta-glow"></div>
+                    <div class="cta-sparkle"></div>
+                    <div class="cta-sparkle"></div>
+                    <div class="cta-sparkle"></div>
+                    <div class="cta-button-inner">
+                        <div class="cta-text">
+                            <span>Begin Journey</span>
+                            <div class="cta-arrow">
+                                <svg width="20" height="14" viewBox="0 0 13 10" fill="none" stroke="currentColor">
+                                    <path d="M1,5 L11,5"></path>
+                                    <polyline points="8 1 12 5 8 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Interface -->
+        <div id="chat-interface" class="chat-interface hidden">
+            <div class="chat-header">
+                <div class="header-left">
+                    <div class="header-logo">
+                        <i data-lucide="code" class="header-icon"></i>
+                    </div>
+                    <div class="header-text">
+                        <h1>CS Assistant</h1>
+                        <div class="status">
+                            <div class="status-dot"></div>
+                            Online • Ready to explore
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button id="bulk-copy-btn" class="header-action-btn">
+                        <i data-lucide="copy"></i>
+                        <span>Copy Chat</span>
+                    </button>
+                    
+                    <div class="theme-switch-wrapper">
+                        <span class="theme-switch-label">Theme</span>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider">
+                                <div class="theme-icons">
+                                    <i data-lucide="sun" class="sun-icon"></i>
+                                    <i data-lucide="moon" class="moon-icon"></i>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <button id="download-btn" class="icon-btn download-btn" title="Download Chat">
+                        <i data-lucide="download"></i>
+                    </button>
+                    <button id="delete-btn" class="icon-btn delete-btn" title="Clear Chat">
+                        <i data-lucide="trash-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="main-content-wrapper">
+                <!-- Quick Actions Sidebar -->
+                <div class="quick-actions-sidebar" id="quick-actions-sidebar">
+                    <div class="quick-actions-title">Quick Topics</div>
+                    <div class="actions-list">
+                        <button class="action-card" data-prompt="Explain time complexity and space complexity with examples">
+                            <i data-lucide="cpu"></i>
+                            <span>Algorithms</span>
+                        </button>
+                        <button class="action-card" data-prompt="Compare arrays vs linked lists and their use cases">
+                            <i data-lucide="database"></i>
+                            <span>Data Structures</span>
+                        </button>
+                        <button class="action-card" data-prompt="What are the benefits of cloud computing for developers?">
+                            <i data-lucide="cloud"></i>
+                            <span>Cloud Computing</span>
+                        </button>
+                        <button class="action-card" data-prompt="Explain common web security vulnerabilities and prevention">
+                            <i data-lucide="shield"></i>
+                            <span>Cybersecurity</span>
+                        </button>
+                        <button class="action-card" data-prompt="What is machine learning and how does it differ from traditional programming?">
+                            <i data-lucide="zap"></i>
+                            <span>AI/ML</span>
+                        </button>
+                        <button class="action-card" data-prompt="Tell me about the frontend development of this application">
+                            <i data-lucide="code"></i>
+                            <span>Web Dev</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chat Area -->
+                <div class="chat-area">
+                    <div class="messages-container" id="messages-container">
+                        <div class="message bot-message">
+                            <div class="message-avatar">
+                                <i data-lucide="bot"></i>
+                            </div>
+                            <div class="message-content">
+                                Hello! I'm your CS Assistant. I can help you navigate through:<br><br>
+                                • Algorithms & Data Structures<br>
+                                • Programming Languages & Concepts<br>
+                                • System Design & Architecture<br>
+                                • Cloud Computing & DevOps<br>
+                                • AI/ML & Data Science<br>
+                                • Cybersecurity & Best Practices<br><br>
+                                What topic would you like to explore today?
+                                <div class="message-actions">
+                                    <button class="msg-action-btn">
+                                        <i data-lucide="copy"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                    <button class="msg-action-btn">
+                                        <i data-lucide="thumbs-up"></i>
+                                        <span>Helpful</span>
+                                    </button>
+                                    <button class="msg-action-btn">
+                                        <i data-lucide="thumbs-down"></i>
+                                        <span>Not Helpful</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="message-time">
+                                <i data-lucide="clock"></i>
+                                <span class="timestamp">''' + datetime.now().strftime("%H:%M") + '''</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="typing-indicator hidden" id="typing-indicator">
+                        <div class="message-avatar">
+                            <i data-lucide="bot"></i>
+                        </div>
+                        <div class="typing-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="input-area">
+                        <div class="input-container">
+                            <textarea 
+                                id="message-input" 
+                                placeholder="Ask me anything about Computer Science..."
+                                rows="1"
+                            ></textarea>
+                            <button id="send-button" class="send-button">
+                                <i data-lucide="send"></i>
+                            </button>
+                        </div>
+                        <div class="input-hints">
+                            <span>Press Enter to send</span>
+                            <span>•</span>
+                            <span>Shift+Enter for new line</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        let currentTheme = 'dark';
+        let chatHistory = [];
+
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const chatInterface = document.getElementById('chat-interface');
+        const startButton = document.getElementById('start-button');
+        const messageInput = document.getElementById('message-input');
+        const sendButton = document.getElementById('send-button');
+        const messagesContainer = document.getElementById('messages-container');
+        const typingIndicator = document.getElementById('typing-indicator');
+        const themeToggle = document.getElementById('theme-toggle');
+        const deleteButton = document.getElementById('delete-btn');
+        const bulkCopyButton = document.getElementById('bulk-copy-btn');
+        const downloadButton = document.getElementById('download-btn');
+        const actionCards = document.querySelectorAll('.action-card');
+        const particlesBg = document.getElementById('particles-bg');
+
+        function createParticles() {
+            // Clear existing particles
+            particlesBg.innerHTML = '';
+            
+            for (let i = 0; i < 25; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = Math.random() * 4 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.opacity = Math.random() * 0.4 + 0.1;
+                particlesBg.appendChild(particle);
+            }
+        }
+
+        function init() {
+            setupEventListeners();
+            initializeWelcomeScreen();
+            createParticles();
+            loadTheme();
+            loadChatHistory();
+        }
+
+        function setupEventListeners() {
+            startButton.addEventListener('click', startChat);
+            sendButton.addEventListener('click', sendMessage);
+            messageInput.addEventListener('keydown', handleInputKeydown);
+            themeToggle.addEventListener('change', toggleTheme);
+            deleteButton.addEventListener('click', clearChat);
+            bulkCopyButton.addEventListener('click', copyChatHistory);
+            downloadButton.addEventListener('click', downloadChat);
+            
+            actionCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const prompt = card.getAttribute('data-prompt');
+                    messageInput.value = prompt;
+                    sendMessage();
+                });
+            });
+
+            // Recreate particles on resize for better distribution
+            window.addEventListener('resize', createParticles);
+        }
+
+        function initializeWelcomeScreen() {
+            const typingText = document.getElementById('typing-text');
+            const welcomeDescription = document.getElementById('welcome-description');
+            const socialContainer = document.getElementById('social-container');
+
+            typeWriter(typingText, "CS Assistant", 0, () => {
+                setTimeout(() => {
+                    welcomeDescription.style.opacity = '1';
+                    setTimeout(() => {
+                        socialContainer.style.opacity = '1';
+                        setTimeout(() => {
+                            startButton.style.opacity = '1';
+                        }, 500);
+                    }, 500);
+                }, 500);
+            });
+        }
+
+        function typeWriter(element, text, index, callback) {
+            if (index < text.length) {
+                element.innerHTML = text.substring(0, index + 1) + '<span class="cursor">|</span>';
+                setTimeout(() => typeWriter(element, text, index + 1, callback), 100);
+            } else {
+                element.innerHTML = text;
+                if (callback) callback();
+            }
+        }
+
+        function startChat() {
+            welcomeScreen.style.opacity = '0';
+            setTimeout(() => {
+                welcomeScreen.classList.add('hidden');
+                chatInterface.classList.remove('hidden');
+                messageInput.focus();
+                
+                chatInterface.style.opacity = '0';
+                chatInterface.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    chatInterface.style.opacity = '1';
+                    chatInterface.style.transform = 'translateY(0)';
+                    chatInterface.style.transition = 'all 0.5s ease';
+                }, 100);
+            }, 500);
+        }
+
+        function handleInputKeydown(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+            
+            setTimeout(() => {
+                messageInput.style.height = 'auto';
+                messageInput.style.height = Math.min(messageInput.scrollHeight, 130) + 'px';
+            }, 0);
+        }
+
+        async function sendMessage() {
+            const message = messageInput.value.trim();
+            if (!message) return;
+
+            addMessage(message, 'user');
+            messageInput.value = '';
+            messageInput.style.height = 'auto';
+            
+            showTypingIndicator();
+            
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: message })
+                });
+                
+                const data = await response.json();
+                hideTypingIndicator();
+                addMessage(data.response, 'bot');
+                
+            } catch (error) {
+                hideTypingIndicator();
+                addMessage('Sorry, I encountered an error. Please try again.', 'bot');
+                console.error('Error:', error);
+            }
+        }
+
+        function addMessage(content, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            
+            const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">
+                    <i data-lucide="${sender === 'user' ? 'user' : 'bot'}"></i>
+                </div>
+                <div class="message-content">${formatMessage(content)}</div>
+                <div class="message-time">
+                    <i data-lucide="clock"></i>
+                    <span class="timestamp">${timestamp}</span>
+                </div>
+            `;
+            
+            messagesContainer.appendChild(messageDiv);
+            scrollToBottom();
+            
+            if (sender === 'bot') {
+                addMessageActions(messageDiv);
+            }
+            
+            chatHistory.push({ content, sender, timestamp: new Date().toISOString() });
+            saveChatHistory();
+            
+            lucide.createIcons();
+        }
+
+        function formatMessage(content) {
+            return content
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/- (.*?)(?=\\n|$)/g, '• $1<br>')
+                .replace(/\\n/g, '<br>');
+        }
+
+        function addMessageActions(messageDiv) {
+            const messageContent = messageDiv.querySelector('.message-content');
+            const actionsDiv = document.createElement('div');
+            actionsDiv.className = 'message-actions';
+            
+            actionsDiv.innerHTML = `
+                <button class="msg-action-btn copy-btn">
+                    <i data-lucide="copy"></i>
+                    <span>Copy</span>
+                </button>
+                <button class="msg-action-btn feedback-btn">
+                    <i data-lucide="thumbs-up"></i>
+                    <span>Helpful</span>
+                </button>
+                <button class="msg-action-btn feedback-btn">
+                    <i data-lucide="thumbs-down"></i>
+                    <span>Not Helpful</span>
+                </button>
+            `;
+            
+            messageContent.appendChild(actionsDiv);
+            
+            const copyBtn = actionsDiv.querySelector('.copy-btn');
+            const feedbackBtns = actionsDiv.querySelectorAll('.feedback-btn');
+            
+            copyBtn.addEventListener('click', () => {
+                const textToCopy = messageContent.textContent.replace(/CopyHelpfulNot Helpful/g, '').trim();
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    const icon = copyBtn.querySelector('i');
+                    const span = copyBtn.querySelector('span');
+                    icon.setAttribute('data-lucide', 'check');
+                    span.textContent = 'Copied!';
+                    lucide.createIcons();
+                    setTimeout(() => {
+                        icon.setAttribute('data-lucide', 'copy');
+                        span.textContent = 'Copy';
+                        lucide.createIcons();
+                    }, 2000);
+                });
+            });
+            
+            feedbackBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const wasHelpful = btn.querySelector('i').getAttribute('data-lucide') === 'thumbs-up';
+                    showFeedback(wasHelpful);
+                });
+            });
+
+            lucide.createIcons();
+        }
+
+        function showTypingIndicator() {
+            typingIndicator.classList.remove('hidden');
+            scrollToBottom();
+        }
+
+        function hideTypingIndicator() {
+            typingIndicator.classList.add('hidden');
+        }
+
+        function scrollToBottom() {
+            setTimeout(() => {
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 100);
+        }
+
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            setTheme(savedTheme);
+            themeToggle.checked = savedTheme === 'light';
+            
+            // Update icons based on theme
+            updateThemeIcons(savedTheme);
+        }
+
+        function toggleTheme() {
+            const newTheme = themeToggle.checked ? 'light' : 'dark';
+            setTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        }
+
+        function setTheme(theme) {
+            currentTheme = theme;
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+
+        function updateThemeIcons(theme) {
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            
+            if (theme === 'light') {
+                sunIcon.style.opacity = '1';
+                sunIcon.style.transform = 'translateY(-50%) scale(1.2)';
+                moonIcon.style.opacity = '0';
+                moonIcon.style.transform = 'translateY(-50%) scale(0.8)';
+            } else {
+                sunIcon.style.opacity = '0';
+                sunIcon.style.transform = 'translateY(-50%) scale(0.8)';
+                moonIcon.style.opacity = '1';
+                moonIcon.style.transform = 'translateY(-50%) scale(1.2)';
+            }
+        }
+
+        function loadChatHistory() {
+            const saved = localStorage.getItem('chatHistory');
+            if (saved) {
+                chatHistory = JSON.parse(saved);
+            }
+        }
+
+        function saveChatHistory() {
+            localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+        }
+
+        function clearChat() {
+            if (confirm('Are you sure you want to clear the chat history?')) {
+                messagesContainer.innerHTML = `
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i data-lucide="bot"></i>
+                        </div>
+                        <div class="message-content">
+                            Chat cleared! Ready to explore new CS topics.
+                            <div class="message-actions">
+                                <button class="msg-action-btn">
+                                    <i data-lucide="copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="message-time">
+                            <i data-lucide="clock"></i>
+                            <span class="timestamp">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                        </div>
+                    </div>
+                `;
+                
+                chatHistory = [];
+                saveChatHistory();
+                lucide.createIcons();
+            }
+        }
+
+        function copyChatHistory() {
+            const chatText = chatHistory.map(msg => 
+                `${msg.sender === 'user' ? 'You' : 'Assistant'}: ${msg.content}`
+            ).join('\\n\\n');
+            
+            navigator.clipboard.writeText(chatText).then(() => {
+                const icon = bulkCopyButton.querySelector('i');
+                const span = bulkCopyButton.querySelector('span');
+                const originalIcon = icon.getAttribute('data-lucide');
+                const originalText = span.textContent;
+                
+                icon.setAttribute('data-lucide', 'check');
+                span.textContent = 'Copied!';
+                lucide.createIcons();
+                
+                setTimeout(() => {
+                    icon.setAttribute('data-lucide', originalIcon);
+                    span.textContent = originalText;
+                    lucide.createIcons();
+                }, 2000);
+            });
+        }
+
+        function downloadChat() {
+            const chatText = chatHistory.map(msg => 
+                `${msg.sender === 'user' ? 'You' : 'Assistant'} (${msg.timestamp}): ${msg.content}`
+            ).join('\\n\\n');
+            
+            const blob = new Blob([chatText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `cs-assistant-chat-${new Date().toISOString().split('T')[0]}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function showFeedback(wasHelpful) {
+            const feedback = document.createElement('div');
+            feedback.textContent = wasHelpful ? 'Thanks for your feedback! 👍' : "Sorry to hear that. I'll try to improve! 👎";
+            feedback.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${wasHelpful ? '#4CAF50' : '#f44336'};
+                color: white;
+                padding: 16px 24px;
+                border-radius: 12px;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+                z-index: 1000;
+                animation: slideInRight 0.4s ease;
+                font-weight: 600;
+            `;
+            
+            document.body.appendChild(feedback);
+            
+            setTimeout(() => {
+                feedback.style.animation = 'slideOutRight 0.4s ease';
+                setTimeout(() => {
+                    document.body.removeChild(feedback);
+                }, 400);
+            }, 3000);
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
