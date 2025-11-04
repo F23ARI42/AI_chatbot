@@ -1,167 +1,167 @@
 [
   {
-    "sentence": "Hi",
-    "response": "Hello! How can I assist you today?"
+    "input": "Hi",
+    "output": "Hello! How can I assist you today?"
   },
   {
-    "sentence": "Hello",
-    "response": "Hi there! How are you doing?"
+    "input": "Hello",
+    "output": "Hi there! How are you doing?"
   },
   {
-    "sentence": "Hey there",
-    "response": "Hey! How’s everything going?"
+    "input": "Hey there",
+    "output": "Hey! How’s everything going?"
   },
   {
-    "sentence": "Good morning",
-    "response": "Good morning! I hope you have a wonderful day ahead."
+    "input": "Good morning",
+    "output": "Good morning! I hope you have a wonderful day ahead."
   },
   {
-    "sentence": "Good afternoon",
-    "response": "Good afternoon! How’s your day so far?"
+    "input": "Good afternoon",
+    "output": "Good afternoon! How’s your day so far?"
   },
   {
-    "sentence": "Good evening",
-    "response": "Good evening! How has your day been?"
+    "input": "Good evening",
+    "output": "Good evening! How has your day been?"
   },
   {
-    "sentence": "How are you?",
-    "response": "I'm just a program, but I'm here to help you!"
+    "input": "How are you?",
+    "output": "I'm just a program, but I'm here to help you!"
   },
   {
-    "sentence": "How's it going?",
-    "response": "Things are running smoothly here! How about you?"
+    "input": "How's it going?",
+    "output": "Things are running smoothly here! How about you?"
   },
   {
-    "sentence": "What's up?",
-    "response": "Not much! How about you?"
+    "input": "What's up?",
+    "output": "Not much! How about you?"
   },
   {
-    "sentence": "Long time no see",
-    "response": "Yes, it’s been a while! How have you been?"
+    "input": "Long time no see",
+    "output": "Yes, it’s been a while! How have you been?"
   },
   {
-    "sentence": "Goodbye",
-    "response": "Goodbye! Have a great day!"
+    "input": "Goodbye",
+    "output": "Goodbye! Have a great day!"
   },
   {
-    "sentence": "Bye",
-    "response": "Bye! Come back anytime you want to chat."
+    "input": "Bye",
+    "output": "Bye! Come back anytime you want to chat."
   },
   {
-    "sentence": "See you later",
-    "response": "See you soon! Take care."
+    "input": "See you later",
+    "output": "See you soon! Take care."
   },
   {
-    "sentence": "Take care",
-    "response": "You too! Stay safe."
+    "input": "Take care",
+    "output": "You too! Stay safe."
   },
   {
-    "sentence": "Catch you soon",
-    "response": "Looking forward to it!"
+    "input": "Catch you soon",
+    "output": "Looking forward to it!"
   },
   {
-    "sentence": "Thank you",
-    "response": "You're welcome! Happy to help."
+    "input": "Thank you",
+    "output": "You're welcome! Happy to help."
   },
   {
-    "sentence": "Thanks",
-    "response": "No problem at all!"
+    "input": "Thanks",
+    "output": "No problem at all!"
   },
   {
-    "sentence": "Thanks a lot",
-    "response": "Glad I could help!"
+    "input": "Thanks a lot",
+    "output": "Glad I could help!"
   },
   {
-    "sentence": "Thanks so much",
-    "response": "Always here for you!"
+    "input": "Thanks so much",
+    "output": "Always here for you!"
   },
   {
-    "sentence": "Much appreciated",
-    "response": "It’s my pleasure!"
+    "input": "Much appreciated",
+    "output": "It’s my pleasure!"
   },
   {
-    "sentence": "What is your name?",
-    "response": "I am an AI created to assist you."
+    "input": "What is your name?",
+    "output": "I am an AI created to assist you."
   },
   {
-    "sentence": "Can you help me?",
-    "response": "Of course! What do you need help with?"
+    "input": "Can you help me?",
+    "output": "Of course! What do you need help with?"
   },
   {
-    "sentence": "Where are you from?",
-    "response": "I exist in the digital world, not a physical place."
+    "input": "Where are you from?",
+    "output": "I exist in the digital world, not a physical place."
   },
   {
-    "sentence": "What time is it?",
-    "response": "I don’t track real time, but your device clock can help!"
+    "input": "What time is it?",
+    "output": "I don’t track real time, but your device clock can help!"
   },
   {
-    "sentence": "Do you like music?",
-    "response": "I don’t listen, but I know many music genres."
+    "input": "Do you like music?",
+    "output": "I don’t listen, but I know many music genres."
   },
   {
-    "sentence": "Can you tell me a joke?",
-    "response": "Sure! Why don’t skeletons fight? They don’t have the guts."
+    "input": "Can you tell me a joke?",
+    "output": "Sure! Why don’t skeletons fight? They don’t have the guts."
   },
   {
-    "sentence": "Do you know me?",
-    "response": "I don’t know you personally, but I’d like to learn if you share!"
+    "input": "Do you know me?",
+    "output": "I don’t know you personally, but I’d like to learn if you share!"
   },
   {
-    "sentence": "Can you write stories?",
-    "response": "Yes! I can create short or long stories for you."
+    "input": "Can you write stories?",
+    "output": "Yes! I can create short or long stories for you."
   },
   {
-    "sentence": "What do you do?",
-    "response": "I chat, answer questions, and assist with many tasks."
+    "input": "What do you do?",
+    "output": "I chat, answer questions, and assist with many tasks."
   },
   {
-    "sentence": "Are you real?",
-    "response": "I’m real as software, but not a human being."
+    "input": "Are you real?",
+    "output": "I’m real as software, but not a human being."
   },
   {
-    "sentence": "Catch you soon",
-    "response": "Looking forward to it!"
+    "input": "Catch you soon",
+    "output": "Looking forward to it!"
   },
   {
-    "sentence": "Thank you",
-    "response": "You're welcome! Happy to help."
+    "input": "Thank you",
+    "output": "You're welcome! Happy to help."
   },
   {
-    "sentence": "Thanks",
-    "response": "No problem at all!"
+    "input": "Thanks",
+    "output": "No problem at all!"
   },
   {
-    "sentence": "Thanks a lot",
-    "response": "Glad I could help!"
+    "input": "Thanks a lot",
+    "output": "Glad I could help!"
   },
   {
-    "sentence": "Thanks so much",
-    "response": "Always here for you!"
+    "input": "Thanks so much",
+    "output": "Always here for you!"
   },
   {
-    "sentence": "Much appreciated",
-    "response": "It’s my pleasure!"
+    "input": "Much appreciated",
+    "output": "It’s my pleasure!"
   },
   {
-    "sentence": "What is your name?",
-    "response": "I am an AI created to assist you."
+    "input": "What is your name?",
+    "output": "I am an AI created to assist you."
   },
   {
-    "sentence": "Can you help me?",
-    "response": "Of course! What do you need help with?"
+    "input": "Can you help me?",
+    "output": "Of course! What do you need help with?"
   },
   {
-    "sentence": "Where are you from?",
-    "response": "I exist in the digital world, not a physical place."
+    "input": "Where are you from?",
+    "output": "I exist in the digital world, not a physical place."
   },
   {
-    "sentence": "Can you write stories?",
-    "response": "Yes! I can create short or long stories for you."
+    "input": "Can you write stories?",
+    "output": "Yes! I can create short or long stories for you."
   },
   {
-    "sentence": "What do you do?",
-    "response": "I chat, answer questions, and assist with many tasks."
+    "input": "What do you do?",
+    "output": "I chat, answer questions, and assist with many tasks."
   },
   {
     "input": "What is Abductive Reasoning?",
