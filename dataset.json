@@ -25089,7 +25089,7 @@
   },
   {
     "input": "Common Conversion Codes",
-    "output": "Let’s see some of the most commonly used OpenCV color conversion codes: cv2.COLOR_BGR2GRAY\tBGR:Grayscale cv2.COLOR_BGR2RGB\tBGR:RGB cv2.COLOR_BGR2HSV\tBGR:HSV cv2.COLOR_BGR2LAB\tBGR:LAB color space cv2.COLOR_BGR2YCrCb\tBGR:YCrCb (used in compression & skin detection)"
+    "output": "Let’s see some of the most commonly used OpenCV color conversion codes: cv2.COLOR_BGR2GRAY BGR:Grayscale cv2.COLOR_BGR2RGB BGR:RGB cv2.COLOR_BGR2HSV BGR:HSV cv2.COLOR_BGR2LAB BGR:LAB color space cv2.COLOR_BGR2YCrCb BGR:YCrCb (used in compression & skin detection)"
   },
   {
     "input": "Real-World Applications",
