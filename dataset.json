@@ -681,7 +681,7 @@
   },
   {
     "input": "2. Loading the Dataset",
-    "output": "The dataset we're using is a time-series dataset containing daily temperature data i.e forecasting dataset. It spans 8,000 days starting from January 1, 2010. You can download dataset fromhere. pd.read_csv(): Reads a CSV file into a pandas DataFrame. Here, we are assuming that the dataset has aDatecolumn which is set as the index of the DataFrame. date_parser=True: Ensures that pandas parses the 'Date' column as datetime. "
+    "output": "The dataset we're using is a time-series dataset containing daily temperature data i.e forecasting dataset. It spans 8,000 days starting from January 1, 2010. You can download dataset fromhere. pd.read_csv(): Reads a CSV file into a pandas DataFrame. Here, we are assuming that the dataset has aDatecolumn which is set as the index of the DataFrame. date_parser=True: Ensures that pandas parses the 'Date' column as datetime."
   },
   {
     "input": "3. Preprocessing the Data",
@@ -729,7 +729,7 @@
   },
   {
     "input": "Implementation",
-    "output": "Let's see the implementation of Divisive Clustering, Starts with all data points as one big cluster. Finds the largest cluster and splits it into two using KMeans. Repeats splitting the largest cluster until reaching the desired number of clusters. Assigns cluster labels to each data point based on the splits. Returns history of clusters at each step and final labels. Visualizes data points colored by their final cluster. "
+    "output": "Let's see the implementation of Divisive Clustering, Starts with all data points as one big cluster. Finds the largest cluster and splits it into two using KMeans. Repeats splitting the largest cluster until reaching the desired number of clusters. Assigns cluster labels to each data point based on the splits. Returns history of clusters at each step and final labels. Visualizes data points colored by their final cluster."
   },
   {
     "input": "Computing Distance Matrix",
@@ -773,7 +773,7 @@
   },
   {
     "input": "Example: Applying CNN to an Image",
-    "output": "Let's consider an image and apply the convolution layer, activation layer, and pooling layer operation to extract the inside feature. Input image: import the necessary libraries set the parameter define the kernel Load the image and plot it. Reformat the image Apply convolution layer operation and plot the output image. Apply activation layer operation and plot the output image. Apply pooling layer operation and plot the output image. "
+    "output": "Let's consider an image and apply the convolution layer, activation layer, and pooling layer operation to extract the inside feature. Input image: import the necessary libraries set the parameter define the kernel Load the image and plot it. Reformat the image Apply convolution layer operation and plot the output image. Apply activation layer operation and plot the output image. Apply pooling layer operation and plot the output image."
   },
   {
     "input": "How Deep Learning Works?",
@@ -901,11 +901,11 @@
   },
   {
     "input": "6. Compiling and Training the Model",
-    "output": "We compile the model using thecategorical_crossentropyloss and train it for 100 epochs. "
+    "output": "We compile the model using thecategorical_crossentropyloss and train it for 100 epochs."
   },
   {
     "input": "7. Generating New Text Using the Trained Model",
-    "output": "After training we use a starting sequence to generate new text character by character. "
+    "output": "After training we use a starting sequence to generate new text character by character."
   },
   {
     "input": "Advantages of Recurrent Neural Networks",
@@ -941,11 +941,11 @@
   },
   {
     "input": "Step 3:Initializing Random Centroids",
-    "output": "We will randomly initialize the centroids for K-Means clustering np.random.seed(23): Ensures reproducibility by fixing the random seed. The for loop initializes k random centroids, with values between -2 and 2, for a 2D dataset. "
+    "output": "We will randomly initialize the centroids for K-Means clustering np.random.seed(23): Ensures reproducibility by fixing the random seed. The for loop initializes k random centroids, with values between -2 and 2, for a 2D dataset."
   },
   {
     "input": "Step 4:Plotting Random Initialized Center with Data Points",
-    "output": "We will now plot the data points and the initial centroids. plt.grid(): Plots a grid. plt.scatter(center[0], center[1], marker='*', c='red'): Plots the cluster center as a red star (* marker). "
+    "output": "We will now plot the data points and the initial centroids. plt.grid(): Plots a grid. plt.scatter(center[0], center[1], marker='*', c='red'): Plots the cluster center as a red star (* marker)."
   },
   {
     "input": "Step 5:Defining Euclidean Distance",
@@ -965,7 +965,7 @@
   },
   {
     "input": "Step 9: Plotting Data Points with Predicted Cluster Centers",
-    "output": "Finally, we plot the data points, colored by their predicted clusters, along with the updated centroids. center = clusters[i]['center']: Retrieves the center (centroid) of the current cluster. plt.scatter(center[0], center[1], marker='^', c='red'): Plots the cluster center as a red triangle (^ marker). "
+    "output": "Finally, we plot the data points, colored by their predicted clusters, along with the updated centroids. center = clusters[i]['center']: Retrieves the center (centroid) of the current cluster. plt.scatter(center[0], center[1], marker='^', c='red'): Plots the cluster center as a red triangle (^ marker)."
   },
   {
     "input": "Challenges with K-Means Clustering",
@@ -1125,7 +1125,7 @@
   },
   {
     "input": "Step 2 : Generate a dataset with two Gaussian components",
-    "output": "We generate two sets of data values from two different normal distributions: One centered around 2 (with more spread). Another around -1 (with less spread). These two sets are then combined to form a single dataset. We plot this dataset to visualize how the values are distributed. "
+    "output": "We generate two sets of data values from two different normal distributions: One centered around 2 (with more spread). Another around -1 (with less spread). These two sets are then combined to form a single dataset. We plot this dataset to visualize how the values are distributed."
   },
   {
     "input": "Step 3: Initialize parameters",
@@ -1133,7 +1133,7 @@
   },
   {
     "input": "Step 4: Perform EM algorithm",
-    "output": "We run a loop for 20 rounds called epochs. In each round: The E-step calculates the responsibilities (gamma values) by evaluating the Gaussian probability densities for each component and weighting them by the corresponding proportions. The M-step updates the parameters by computing the weighted mean and standard deviation for each component We also calculate the log-likelihood in each round to check if the model is getting better. This is a measure of how well the model explains the data. "
+    "output": "We run a loop for 20 rounds called epochs. In each round: The E-step calculates the responsibilities (gamma values) by evaluating the Gaussian probability densities for each component and weighting them by the corresponding proportions. The M-step updates the parameters by computing the weighted mean and standard deviation for each component We also calculate the log-likelihood in each round to check if the model is getting better. This is a measure of how well the model explains the data."
   },
   {
     "input": "Step 5: Visualize the Final Result",
@@ -1185,11 +1185,11 @@
   },
   {
     "input": "2.Loading and Normalizing Image Data",
-    "output": "Next we normalize the image data by dividing by255(since pixel values range from 0 to 255) which helps in faster convergence during training. "
+    "output": "Next we normalize the image data by dividing by255(since pixel values range from 0 to 255) which helps in faster convergence during training."
   },
   {
     "input": "3. Visualizing Data",
-    "output": "To understand the data better we plot the first 100 training samples each representing a digit. "
+    "output": "To understand the data better we plot the first 100 training samples each representing a digit."
   },
   {
     "input": "4. Building the Neural Network Model",
@@ -1201,7 +1201,7 @@
   },
   {
     "input": "6. Training the Model",
-    "output": "We train the model on the training data using 10 epochs and a batch size of 2000. We also use 20% of the training data for validation to monitor the model’s performance on unseen data during training. "
+    "output": "We train the model on the training data using 10 epochs and a batch size of 2000. We also use 20% of the training data for validation to monitor the model’s performance on unseen data during training."
   },
   {
     "input": "7. Evaluating the Model",
@@ -1349,7 +1349,7 @@
   },
   {
     "input": "Step 2: Creating Sample Dataset",
-    "output": "We make a small dataset with three features Height, Weight, Age and Gender. "
+    "output": "We make a small dataset with three features Height, Weight, Age and Gender."
   },
   {
     "input": "Step 3: Standardizing the Data",
@@ -1361,7 +1361,7 @@
   },
   {
     "input": "Step 5: Evaluating with Confusion Matrix",
-    "output": "Theconfusion matrixcompares actual vs predicted labels. This makes it easy to see where predictions were correct or wrong. "
+    "output": "Theconfusion matrixcompares actual vs predicted labels. This makes it easy to see where predictions were correct or wrong."
   },
   {
     "input": "Step 6: Visualizing PCA Result",
@@ -1609,11 +1609,11 @@
   },
   {
     "input": "3. Implicational Networks",
-    "output": "It focus on representing logical implications between concepts. They are used to infer new knowledge from existing relationships. For example, if  All Dogs are Mammals  and  Rex is a Dog  the network can infer  Rex is a Mammal. "
+    "output": "It focus on representing logical implications between concepts. They are used to infer new knowledge from existing relationships. For example, if  All Dogs are Mammals  and  Rex is a Dog  the network can infer  Rex is a Mammal."
   },
   {
     "input": "4. Executable Networks",
-    "output": "They are designed to represent procedural knowledge where the relationships include actions or sequences that an AI system can execute. For example, a recipe could include steps like  Add Water  followed by  Boil Water. "
+    "output": "They are designed to represent procedural knowledge where the relationships include actions or sequences that an AI system can execute. For example, a recipe could include steps like  Add Water  followed by  Boil Water."
   },
   {
     "input": "5. Learning Networks",
@@ -1621,7 +1621,7 @@
   },
   {
     "input": "6. Hybrid Networks",
-    "output": "They combine elements from two or more of the above types, allowing for more complex and versatile representations of knowledge. For example, representing both the general concept of  Dog  and specific example like  Rex. "
+    "output": "They combine elements from two or more of the above types, allowing for more complex and versatile representations of knowledge. For example, representing both the general concept of  Dog  and specific example like  Rex."
   },
   {
     "input": "Key Components of Semantic Networks",
@@ -1805,7 +1805,7 @@
   },
   {
     "input": "Implementing SVM Algorithm Using Scikit-Learn",
-    "output": "We will predict whether cancer is Benign or Malignant using historical data about patients diagnosed with cancer. This data includes independent attributes such as tumor size, texture, and others. To perform this classification, we will use an SVM (Support Vector Machine) classifier to differentiate between benign and malignant cases effectively. load_breast_cancer(): Loads the breast cancer dataset (features and target labels). SVC(kernel= linear , C=1): Creates a Support Vector Classifier with a linear kernel and regularization parameter C=1. svm.fit(X, y): Trains the SVM model on the feature matrix X and target labels y. DecisionBoundaryDisplay.from_estimator(): Visualizes the decision boundary of the trained model with a specified color map. plt.scatter(): Creates a scatter plot of the data points, colored by their labels. plt.show(): Displays the plot to the screen. "
+    "output": "We will predict whether cancer is Benign or Malignant using historical data about patients diagnosed with cancer. This data includes independent attributes such as tumor size, texture, and others. To perform this classification, we will use an SVM (Support Vector Machine) classifier to differentiate between benign and malignant cases effectively. load_breast_cancer(): Loads the breast cancer dataset (features and target labels). SVC(kernel= linear , C=1): Creates a Support Vector Classifier with a linear kernel and regularization parameter C=1. svm.fit(X, y): Trains the SVM model on the feature matrix X and target labels y. DecisionBoundaryDisplay.from_estimator(): Visualizes the decision boundary of the trained model with a specified color map. plt.scatter(): Creates a scatter plot of the data points, colored by their labels. plt.show(): Displays the plot to the screen."
   },
   {
     "input": "1. Simple Reflex Agents",
@@ -2017,7 +2017,7 @@
   },
   {
     "input": "Step 7: Plot Rewards per Training",
-    "output": "This plot shows how the agent's overall performance improves across training episodes. We can observe the total reward trend increasing as the agent learns over time. "
+    "output": "This plot shows how the agent's overall performance improves across training episodes. We can observe the total reward trend increasing as the agent learns over time."
   },
   {
     "input": "Types of Reinforcements",
@@ -2049,7 +2049,7 @@
   },
   {
     "input": "Implementationof Monte Carlo Simulation UsingPython",
-    "output": "Let's implement a Monte Carlo simulation to estimate the value of π. We'll use the classic method of simulating random points inside a unit square and checking how many fall inside a quarter circle. Here we will be usingNumpyandMatplotliblibraries for its implementation. Here we will do: Generate Random Points: First, we generate randomxandycoordinates within the unit square (from -1 to 1). Find Distance: For each point, we calculate its distance from the origin (0, 0) using the formula: text{distance} =  sqrt{x^2 + y^2} Count Points Inside Circle: Next, we count how many of these points fall inside the quarter circle (points that satisfy the conditionx^2 + y^2  leq 1) Estimate π: Finally, we estimate the value ofπusing the ratio of points inside the circle to the total number of points, scaled by 4 because we're simulating within a quarter circle of a unit square. "
+    "output": "Let's implement a Monte Carlo simulation to estimate the value of π. We'll use the classic method of simulating random points inside a unit square and checking how many fall inside a quarter circle. Here we will be usingNumpyandMatplotliblibraries for its implementation. Here we will do: Generate Random Points: First, we generate randomxandycoordinates within the unit square (from -1 to 1). Find Distance: For each point, we calculate its distance from the origin (0, 0) using the formula: text{distance} =  sqrt{x^2 + y^2} Count Points Inside Circle: Next, we count how many of these points fall inside the quarter circle (points that satisfy the conditionx^2 + y^2  leq 1) Estimate π: Finally, we estimate the value ofπusing the ratio of points inside the circle to the total number of points, scaled by 4 because we're simulating within a quarter circle of a unit square."
   },
   {
     "input": "Practical Example: Estimating the Value at Risk (VaR) in Finance",
@@ -2225,11 +2225,11 @@
   },
   {
     "input": "Step 6: Train Bagging Classifier and Evaluate Accuracy",
-    "output": "Create a base Decision Tree classifier. Train the BaggingClassifier with 10 estimators on training data. Predict on test data and compute accuracy. "
+    "output": "Create a base Decision Tree classifier. Train the BaggingClassifier with 10 estimators on training data. Predict on test data and compute accuracy."
   },
   {
     "input": "Step 7: Evaluate Each Classifier's Individual Performance",
-    "output": "For each trained classifier, predict on test data. Print individual accuracy scores to observe variability. "
+    "output": "For each trained classifier, predict on test data. Print individual accuracy scores to observe variability."
   },
   {
     "input": "Applications",
@@ -2273,7 +2273,7 @@
   },
   {
     "input": "Step 6: Making Predictions and Evaluating",
-    "output": "We use the trained Hard Voting classifier to predict the test set and calculate the accuracy. "
+    "output": "We use the trained Hard Voting classifier to predict the test set and calculate the accuracy."
   },
   {
     "input": "Step 7: Initialize and Train the Voting Classifier with Soft Voting",
@@ -2353,7 +2353,7 @@
   },
   {
     "input": "2. Import Dataset",
-    "output": "For this we'll use theIris Datasetwhich is available within scikit learn. This dataset contains information about three types of Iris flowers and their respective features (sepal length, sepal width, petal length and petal width). "
+    "output": "For this we'll use theIris Datasetwhich is available within scikit learn. This dataset contains information about three types of Iris flowers and their respective features (sepal length, sepal width, petal length and petal width)."
   },
   {
     "input": "3. Data Preparation",
@@ -2373,7 +2373,7 @@
   },
   {
     "input": "7. Evaluation of the Model",
-    "output": "We will evaluate the model using the accuracy score and confusion matrix. "
+    "output": "We will evaluate the model using the accuracy score and confusion matrix."
   },
   {
     "input": "8. Feature Importance",
@@ -2401,7 +2401,7 @@
   },
   {
     "input": "Step 2: Loading and Preparing the Data",
-    "output": "Here we will load the dataset and print it for our understanding. "
+    "output": "Here we will load the dataset and print it for our understanding."
   },
   {
     "input": "Step 3: Defining Feature and Target Variables",
@@ -2409,7 +2409,7 @@
   },
   {
     "input": "Step 4: Fitting the Linear Regression Model",
-    "output": "We will first fit a simple linear regression model to the data. "
+    "output": "We will first fit a simple linear regression model to the data."
   },
   {
     "input": "Step 5: Fitting the Polynomial Regression Model",
@@ -2445,19 +2445,19 @@
   },
   {
     "input": "1. Using NumPy Library",
-    "output": "NumPyprovides a simple way to create a correlation matrix. We can use thenp.corrcoef()function to find the correlation between two or more variables. Example: A daily sales and temperature record is kept by an ice cream store. To find the relationship between sales and temperature, we can utilize the NumPy library where x is sales in dollars and y is the daily temperature. "
+    "output": "NumPyprovides a simple way to create a correlation matrix. We can use thenp.corrcoef()function to find the correlation between two or more variables. Example: A daily sales and temperature record is kept by an ice cream store. To find the relationship between sales and temperature, we can utilize the NumPy library where x is sales in dollars and y is the daily temperature."
   },
   {
     "input": "2. Using Pandas library",
-    "output": "Pandasis used to create a correlation matrix using its built-incorr()method. It helps in analyzing and interpreting relationships between different variables in a dataset. Example: Let's create a simple DataFrame with three variables and calculate correlation matrix. "
+    "output": "Pandasis used to create a correlation matrix using its built-incorr()method. It helps in analyzing and interpreting relationships between different variables in a dataset. Example: Let's create a simple DataFrame with three variables and calculate correlation matrix."
   },
   {
     "input": "3. Using Matplotlib and Seaborn for Visualization",
-    "output": "In addition to creating a correlation matrix, it is useful to visualize it. Using libraries likeMatplotlibandSeaborn, we can generate heatmaps that provide a clear visual representation of how strongly variables are correlated. "
+    "output": "In addition to creating a correlation matrix, it is useful to visualize it. Using libraries likeMatplotlibandSeaborn, we can generate heatmaps that provide a clear visual representation of how strongly variables are correlated."
   },
   {
     "input": "Example with Real Dataset (Iris Dataset)",
-    "output": "In this example we will considerIrisdataset and find correlation between the features of the dataset. dataset = datasets.load_iris(): Loads the Iris dataset, which includes flower feature data and species labels. dataframe[ target ] = dataset.target: Adds a target column to the DataFrame containing the species labels. dataframe.corr(): Computes the correlation matrix for the numerical features in the DataFrame. plt.figure(figsize=(8,6)): Sets the figure size to 8 inches by 6 inches. sns.heatmap(matrix, annot=True, cmap= coolwarm , fmt= .2f , linewidths=0.5): Plots the correlation matrix as a heatmap, displaying values with two decimal places, using a color scale from blue (negative correlation) to red (positive correlation) and adds lines between cells for clarity. "
+    "output": "In this example we will considerIrisdataset and find correlation between the features of the dataset. dataset = datasets.load_iris(): Loads the Iris dataset, which includes flower feature data and species labels. dataframe[ target ] = dataset.target: Adds a target column to the DataFrame containing the species labels. dataframe.corr(): Computes the correlation matrix for the numerical features in the DataFrame. plt.figure(figsize=(8,6)): Sets the figure size to 8 inches by 6 inches. sns.heatmap(matrix, annot=True, cmap= coolwarm , fmt= .2f , linewidths=0.5): Plots the correlation matrix as a heatmap, displaying values with two decimal places, using a color scale from blue (negative correlation) to red (positive correlation) and adds lines between cells for clarity."
   },
   {
     "input": "Understanding Correlation Values",
@@ -2797,19 +2797,19 @@
   },
   {
     "input": "Step 2: Counting Word Frequencies",
-    "output": "In this step, we count the frequency of each word in the preprocessed text. We will store these counts in a pandas DataFrame to view them easily in a tabular format. We initialize a dictionary to hold our word counts. Then, wetokenizeeach sentence into words. For each word, we check if it exists in our dictionary. If it does, we increment its count. If it doesn’t, we add it to the dictionary with a count of 1. "
+    "output": "In this step, we count the frequency of each word in the preprocessed text. We will store these counts in a pandas DataFrame to view them easily in a tabular format. We initialize a dictionary to hold our word counts. Then, wetokenizeeach sentence into words. For each word, we check if it exists in our dictionary. If it does, we increment its count. If it doesn’t, we add it to the dictionary with a count of 1."
   },
   {
     "input": "Step 3: Selecting the Most Frequent Words",
-    "output": "Now that we have counted the word frequencies, we will select the top N most frequent words (e.g top 10) to be used in the BoW model. We can visualize these frequent words using a bar chart to understand the distribution of words in our dataset. "
+    "output": "Now that we have counted the word frequencies, we will select the top N most frequent words (e.g top 10) to be used in the BoW model. We can visualize these frequent words using a bar chart to understand the distribution of words in our dataset."
   },
   {
     "input": "Step 4: Building the Bag of Words (BoW) Model",
-    "output": "Now we will build the Bag of Words (BoW) model. This model is represented as a binary matrix where each row corresponds to a sentence and each column represents one of the top N frequent words. A 1 in the matrix shows that the word is present in the sentence and a 0 shows its absence. We will use a heatmap to visualize this binary matrix where green shows the presence of a word (1) and red shows its absence (0). "
+    "output": "Now we will build the Bag of Words (BoW) model. This model is represented as a binary matrix where each row corresponds to a sentence and each column represents one of the top N frequent words. A 1 in the matrix shows that the word is present in the sentence and a 0 shows its absence. We will use a heatmap to visualize this binary matrix where green shows the presence of a word (1) and red shows its absence (0)."
   },
   {
     "input": "Step 5: Visualizing Word Frequencies with a Word Cloud",
-    "output": "Finally, we can create aWord Cloudto visually represent the word frequencies. In a word cloud, the size of each word is proportional to its frequency which makes it easy to identify the most common words at a glance. "
+    "output": "Finally, we can create aWord Cloudto visually represent the word frequencies. In a word cloud, the size of each word is proportional to its frequency which makes it easy to identify the most common words at a glance."
   },
   {
     "input": "Advantages of the Bag of Words Model",
@@ -3017,23 +3017,23 @@
   },
   {
     "input": "Step 1: Import Libraries and Load Dataset",
-    "output": "We will import all the necessary libraries i.epandasandnumpy. "
+    "output": "We will import all the necessary libraries i.epandasandnumpy."
   },
   {
     "input": "Step 2: Check for Duplicate Rows",
-    "output": "df.duplicated(): Returns a boolean Series indicating duplicate rows. "
+    "output": "df.duplicated(): Returns a boolean Series indicating duplicate rows."
   },
   {
     "input": "Step 3: Identify Column Data Types",
-    "output": "List comprehension with .dtype attribute to separate categorical and numerical columns. object dtype: Generally used for text or categorical data. "
+    "output": "List comprehension with .dtype attribute to separate categorical and numerical columns. object dtype: Generally used for text or categorical data."
   },
   {
     "input": "Step 4: Count Unique Values in the Categorical Columns",
-    "output": "df[numeric_columns].nunique(): Returns count of unique values per column. "
+    "output": "df[numeric_columns].nunique(): Returns count of unique values per column."
   },
   {
     "input": "Step 5: Calculate Missing Values as Percentage",
-    "output": "df.isnull(): Detects missing values, returning boolean DataFrame. Sum missing across columns, normalize by total rows and multiply by 100. "
+    "output": "df.isnull(): Detects missing values, returning boolean DataFrame. Sum missing across columns, normalize by total rows and multiply by 100."
   },
   {
     "input": "Step 6: Drop Irrelevant or Data-Heavy Missing Columns",
@@ -3041,7 +3041,7 @@
   },
   {
     "input": "Step 7: Detect Outliers with Box Plot",
-    "output": "matplotlib.pyplot.boxplot(): Displays distribution of data, highlighting median, quartiles and outliers. plt.show(): Renders the plot. "
+    "output": "matplotlib.pyplot.boxplot(): Displays distribution of data, highlighting median, quartiles and outliers. plt.show(): Renders the plot."
   },
   {
     "input": "Step 8: Calculate Outlier Boundaries and Remove Them",
@@ -3049,11 +3049,11 @@
   },
   {
     "input": "Step 9: Impute Missing Data Again if Any",
-    "output": "fillna()applied again on filtered data to handle any remaining missing values. "
+    "output": "fillna()applied again on filtered data to handle any remaining missing values."
   },
   {
     "input": "Step 10: Recalculate Outlier Bounds and Remove Outliers from the Updated Data",
-    "output": "mean = df3['Age'].mean(): Calculates the average (mean) value of the Age column in the DataFrame df3. std = df3['Age'].std(): Computes the standard deviation (spread or variability) of the Age column in df3. lower_bound = mean - 2 * std: Defines the lower limit for acceptable Age values, set as two standard deviations below the mean. upper_bound = mean + 2 * std: Defines the upper limit for acceptable Age values, set as two standard deviations above the mean. df4 = df3[(df3['Age'] >= lower_bound) & (df3['Age'] <= upper_bound)]: Creates a new DataFrame df4 by selecting only rows where the Age value falls between the lower and upper bounds, effectively removing outlier ages outside this range. "
+    "output": "mean = df3['Age'].mean(): Calculates the average (mean) value of the Age column in the DataFrame df3. std = df3['Age'].std(): Computes the standard deviation (spread or variability) of the Age column in df3. lower_bound = mean - 2 * std: Defines the lower limit for acceptable Age values, set as two standard deviations below the mean. upper_bound = mean + 2 * std: Defines the upper limit for acceptable Age values, set as two standard deviations above the mean. df4 = df3[(df3['Age'] >= lower_bound) & (df3['Age'] <= upper_bound)]: Creates a new DataFrame df4 by selecting only rows where the Age value falls between the lower and upper bounds, effectively removing outlier ages outside this range."
   },
   {
     "input": "Step 11: Data validation and verification",
@@ -3081,15 +3081,15 @@
   },
   {
     "input": "Step 1: Import Libraries and Load Dataset",
-    "output": "We prepare the environment with libraries liikepandas,numpy,scikit learn,matplotlibandseabornfor data manipulation, numerical operations, visualization and scaling. Load the dataset for preprocessing. "
+    "output": "We prepare the environment with libraries liikepandas,numpy,scikit learn,matplotlibandseabornfor data manipulation, numerical operations, visualization and scaling. Load the dataset for preprocessing."
   },
   {
     "input": "Step 2: Inspect Data Structure and Check Missing Values",
-    "output": "We understand dataset size, data types and identify any incomplete (missing) data that needs handling. df.info(): Prints concise summary including count of non-null entries and data type of each column. df.isnull().sum(): Returns the number of missing values per column. "
+    "output": "We understand dataset size, data types and identify any incomplete (missing) data that needs handling. df.info(): Prints concise summary including count of non-null entries and data type of each column. df.isnull().sum(): Returns the number of missing values per column."
   },
   {
     "input": "Step 3: Statistical Summary and Visualizing Outliers",
-    "output": "Get numeric summaries like mean, median, min/max and detect unusual points (outliers). Outliers can skew models if not handled. df.describe(): Computes count, mean, std deviation, min/max and quartiles for numerical columns. Boxplots: Visualize spread and detect outliers using matplotlib’s boxplot(). "
+    "output": "Get numeric summaries like mean, median, min/max and detect unusual points (outliers). Outliers can skew models if not handled. df.describe(): Computes count, mean, std deviation, min/max and quartiles for numerical columns. Boxplots: Visualize spread and detect outliers using matplotlib’s boxplot()."
   },
   {
     "input": "Step 4: Remove Outliers Using the Interquartile Range (IQR) Method",
@@ -3097,11 +3097,11 @@
   },
   {
     "input": "Step 5: Correlation Analysis",
-    "output": "Understand relationships between features and the target variable (Outcome). Correlation helps gauge feature importance. df.corr(): Computes pairwise correlation coefficients between columns. Heatmap via seaborn visualizes correlation matrix clearly. Sorting correlations with corr['Outcome'].sort_values() highlights features most correlated with the target. "
+    "output": "Understand relationships between features and the target variable (Outcome). Correlation helps gauge feature importance. df.corr(): Computes pairwise correlation coefficients between columns. Heatmap via seaborn visualizes correlation matrix clearly. Sorting correlations with corr['Outcome'].sort_values() highlights features most correlated with the target."
   },
   {
     "input": "Step 6: Visualize Target Variable Distribution",
-    "output": "Check if target classes (Diabetes vs Not Diabetes) are balanced, affecting model training and evaluation. plt.pie(): Pie chart to display proportion of each class in the target variable 'Outcome'. "
+    "output": "Check if target classes (Diabetes vs Not Diabetes) are balanced, affecting model training and evaluation. plt.pie(): Pie chart to display proportion of each class in the target variable 'Outcome'."
   },
   {
     "input": "Step 7: Separate Features and Target Variable",
@@ -3109,7 +3109,7 @@
   },
   {
     "input": "Step 8: Feature Scaling: Normalization and Standardization",
-    "output": "Scale features to a common range or distribution, important for many ML algorithms sensitive to feature magnitudes. 1. Normalization (Min-Max Scaling): Rescales features between 0 and 1. Good for algorithms like k-NN and neural networks. Class: MinMaxScaler from sklearn. .fit_transform(): Learns min/max from data and applies scaling. Output: 2. Standardization: Transforms features to have mean = 0 and standard deviation = 1, useful for normally distributed features. Class: StandardScaler from sklearn. "
+    "output": "Scale features to a common range or distribution, important for many ML algorithms sensitive to feature magnitudes. 1. Normalization (Min-Max Scaling): Rescales features between 0 and 1. Good for algorithms like k-NN and neural networks. Class: MinMaxScaler from sklearn. .fit_transform(): Learns min/max from data and applies scaling. Output: 2. Standardization: Transforms features to have mean = 0 and standard deviation = 1, useful for normally distributed features. Class: StandardScaler from sklearn."
   },
   {
     "input": "Advantages",
@@ -3165,7 +3165,7 @@
   },
   {
     "input": "Step 6: Inspection and Resulted Dataset",
-    "output": "Always use the same encoder objects on train and test data to ensure consistency. For categorical variable exploration and encoding in a deployed or production ML pipeline, prefer maintaining category order explicitly for any ordinal features. "
+    "output": "Always use the same encoder objects on train and test data to ensure consistency. For categorical variable exploration and encoding in a deployed or production ML pipeline, prefer maintaining category order explicitly for any ordinal features."
   },
   {
     "input": "Difference between Each Encoding Technique",
@@ -3225,23 +3225,23 @@
   },
   {
     "input": "1. Absolute Maximum Scaling",
-    "output": "Absolute Maximum Scaling rescales each feature by dividing all values by the maximum absolute value of that feature. This ensures the feature values fall within the range of -1 to 1. While simple and useful in some contexts, it is highly sensitive tooutlierswhich can skew the max absolute value and negatively impact scaling quality. Scales values between -1 and 1. Sensitive to outliers, making it less suitable for noisy datasets. Code Example: We will first Load the Dataset Output: Performing Absolute Maximum Scaling Computes max absolute value per column with np.max(np.abs(df), axis=0). Divides each value by that max absolute to scale features between -1 and 1. Displays first few rows of scaled data with scaled_df.head(). "
+    "output": "Absolute Maximum Scaling rescales each feature by dividing all values by the maximum absolute value of that feature. This ensures the feature values fall within the range of -1 to 1. While simple and useful in some contexts, it is highly sensitive tooutlierswhich can skew the max absolute value and negatively impact scaling quality. Scales values between -1 and 1. Sensitive to outliers, making it less suitable for noisy datasets. Code Example: We will first Load the Dataset Output: Performing Absolute Maximum Scaling Computes max absolute value per column with np.max(np.abs(df), axis=0). Divides each value by that max absolute to scale features between -1 and 1. Displays first few rows of scaled data with scaled_df.head()."
   },
   {
     "input": "2. Min-Max Scaling",
-    "output": "Min-Max Scaling transforms features by subtracting the minimum value and dividing by the difference between the maximum and minimum values. This method maps feature values to a specified range, commonly 0 to 1, preserving the original distribution shape but is still affected by outliers due to reliance on extreme values. Scales features to range. Sensitive to outliers because min and max can be skewed. Code Example: Performing Min-Max Scaling Creates MinMaxScaler object to scale features to range. Fits scaler to data and transforms with scaler.fit_transform(df). Converts result to DataFrame maintaining column names. Shows first few scaled rows with scaled_df.head(). "
+    "output": "Min-Max Scaling transforms features by subtracting the minimum value and dividing by the difference between the maximum and minimum values. This method maps feature values to a specified range, commonly 0 to 1, preserving the original distribution shape but is still affected by outliers due to reliance on extreme values. Scales features to range. Sensitive to outliers because min and max can be skewed. Code Example: Performing Min-Max Scaling Creates MinMaxScaler object to scale features to range. Fits scaler to data and transforms with scaler.fit_transform(df). Converts result to DataFrame maintaining column names. Shows first few scaled rows with scaled_df.head()."
   },
   {
     "input": "3. Normalization (Vector Normalization)",
-    "output": "Normalization scales each data sample (row) such that its vector length (Euclidean norm) is 1. This focuses on the direction of data points rather than magnitude making it useful in algorithms where angle or cosine similarity is relevant, such as text classification or clustering. Where: {X_i}is each individual value. { | X  |}represents the Euclidean norm (or length) of the vectorX. Normalizes each sample to unit length. Useful for direction-based similarity metrics. Code Example: Performing Normalization Scales each row (sample) to have unit norm (length = 1) based on Euclidean distance. Focuses on direction rather than magnitude of data points. Useful for algorithms relying on similarity or angles (e.g., cosine similarity). scaled_df.head() shows normalized data where each row is scaled individually. "
+    "output": "Normalization scales each data sample (row) such that its vector length (Euclidean norm) is 1. This focuses on the direction of data points rather than magnitude making it useful in algorithms where angle or cosine similarity is relevant, such as text classification or clustering. Where: {X_i}is each individual value. { | X  |}represents the Euclidean norm (or length) of the vectorX. Normalizes each sample to unit length. Useful for direction-based similarity metrics. Code Example: Performing Normalization Scales each row (sample) to have unit norm (length = 1) based on Euclidean distance. Focuses on direction rather than magnitude of data points. Useful for algorithms relying on similarity or angles (e.g., cosine similarity). scaled_df.head() shows normalized data where each row is scaled individually."
   },
   {
     "input": "4. Standardization",
-    "output": "Standardization centers features by subtracting the mean and scales them by dividing by the standard deviation, transforming features to have zero mean and unit variance. This assumption of normal distribution often benefits models like linear regression, logistic regression and neural networks by improving convergence speed and stability. where mu= mean, sigma= standard deviation. Produces features with mean 0 and variance 1. Effective for data approximately normally distributed. Code Example: Performing Standardization Centers features by subtracting mean and scales to unit variance. Transforms data to have zero mean and standard deviation of 1. Assumes roughly normal distribution; improves many ML algorithms’ performance. scaled_df.head() shows standardized features. "
+    "output": "Standardization centers features by subtracting the mean and scales them by dividing by the standard deviation, transforming features to have zero mean and unit variance. This assumption of normal distribution often benefits models like linear regression, logistic regression and neural networks by improving convergence speed and stability. where mu= mean, sigma= standard deviation. Produces features with mean 0 and variance 1. Effective for data approximately normally distributed. Code Example: Performing Standardization Centers features by subtracting mean and scales to unit variance. Transforms data to have zero mean and standard deviation of 1. Assumes roughly normal distribution; improves many ML algorithms’ performance. scaled_df.head() shows standardized features."
   },
   {
     "input": "5. Robust Scaling",
-    "output": "Robust Scaling uses the median and interquartile range (IQR) instead of the mean and standard deviation making the transformation robust to outliers and skewed distributions. It is highly suitable when the dataset contains extreme values or noise. Reduces influence of outliers by centering on median Scales based on IQR, which captures middle 50% spread Code Example: Performing Robust Scaling Uses median and interquartile range (IQR) for scaling instead of mean/std. Robust to outliers and skewed data distributions. Centers data around median and scales based on spread of central 50% values. scaled_df.head() shows robustly scaled data minimizing outlier effects. "
+    "output": "Robust Scaling uses the median and interquartile range (IQR) instead of the mean and standard deviation making the transformation robust to outliers and skewed distributions. It is highly suitable when the dataset contains extreme values or noise. Reduces influence of outliers by centering on median Scales based on IQR, which captures middle 50% spread Code Example: Performing Robust Scaling Uses median and interquartile range (IQR) for scaling instead of mean/std. Robust to outliers and skewed data distributions. Centers data around median and scales based on spread of central 50% values. scaled_df.head() shows robustly scaled data minimizing outlier effects."
   },
   {
     "input": "Comparison of Various Feature Scaling Techniques",
@@ -3953,11 +3953,11 @@
   },
   {
     "input": "Step 4: Train the Model on Rotated Images",
-    "output": "Trains the model on the self-supervised rotation prediction task. Uses the generated rotation labels as targets. Validates on a similar rotated test set to monitor performance. "
+    "output": "Trains the model on the self-supervised rotation prediction task. Uses the generated rotation labels as targets. Validates on a similar rotated test set to monitor performance."
   },
   {
     "input": "Step 5: Visualized Rotation Predicted Results",
-    "output": "Uses the trained model to predict rotation angles on test images. Randomly selects 5 rotated images to display. Shows original image with true and predicted rotation angle to check model accuracy visually. "
+    "output": "Uses the trained model to predict rotation angles on test images. Randomly selects 5 rotated images to display. Shows original image with true and predicted rotation angle to check model accuracy visually."
   },
   {
     "input": "Step 6: Load Labeled MNIST Data for Fine-Tuning",
@@ -3965,11 +3965,11 @@
   },
   {
     "input": "Step 7: Modify and Fine-Tune Model on Labeled Digital Data",
-    "output": "Here, Freezes convolutional layers to keep learned features unchanged. Replaces output layer to predict 10 digit classes instead of rotations. Compiles and trains the model on labeled data to adapt it for digit recognition. "
+    "output": "Here, Freezes convolutional layers to keep learned features unchanged. Replaces output layer to predict 10 digit classes instead of rotations. Compiles and trains the model on labeled data to adapt it for digit recognition."
   },
   {
     "input": "Step 8: Visualize Fine-Tuned Predictions",
-    "output": "Model will, Predicts digit classes on labeled test images after fine-tuning. Randomly selects 5 test images to display. Shows images with ground truth and predicted digit labels for visual performance check. "
+    "output": "Model will, Predicts digit classes on labeled test images after fine-tuning. Randomly selects 5 test images to display. Shows images with ground truth and predicted digit labels for visual performance check."
   },
   {
     "input": "Applications of SSL",
@@ -4329,7 +4329,7 @@
   },
   {
     "input": "5. Making Predictions and Evaluating Accuracy",
-    "output": "The trained bagging model predicts labels for test data. The accuracy of the predictions is calculated by comparing the predicted labels (y_pred) to the actual labels (y_test). "
+    "output": "The trained bagging model predicts labels for test data. The accuracy of the predictions is calculated by comparing the predicted labels (y_pred) to the actual labels (y_test)."
   },
   {
     "input": "2. Boosting Algorithm",
@@ -4353,7 +4353,7 @@
   },
   {
     "input": "5. Making Predictions and Calculating Accuracy",
-    "output": "We are calculating the accuracy of the model by comparing the true labelsy_testwith the predicted labelsy_pred. The accuracy_score function returns the proportion of correctly predicted samples. Then, we print the accuracy value. "
+    "output": "We are calculating the accuracy of the model by comparing the true labelsy_testwith the predicted labelsy_pred. The accuracy_score function returns the proportion of correctly predicted samples. Then, we print the accuracy value."
   },
   {
     "input": "Benefits of Ensemble Learning in Machine Learning",
@@ -4385,19 +4385,19 @@
   },
   {
     "input": "Step 3: Prepare Data for Apriori Algorithm",
-    "output": "Apriorirequires thisone-hot encodedformat where columns = items and rows = transactions with True/False flags. "
+    "output": "Apriorirequires thisone-hot encodedformat where columns = items and rows = transactions with True/False flags."
   },
   {
     "input": "Step 4: Generate Frequent Itemsets",
-    "output": "We will, Finds itemsets appearing in ≥ 1% of all transactions. use_colnames=True to keep item names readable. "
+    "output": "We will, Finds itemsets appearing in ≥ 1% of all transactions. use_colnames=True to keep item names readable."
   },
   {
     "input": "Step 5: Generate Association Rules",
-    "output": "We will, Extract rules with confidence ≥ 30%. Rules DataFrame includes columns like antecedents, consequents, support, confidence and lift. Output: Step 6: Visualize Top Frequent Items We will, Visualizes the 10 most purchased items. Helps understand popular products in the dataset. Output: Step 7: Scatter Plot of Rules(Support vs Confidence) Here we will, Shows the relationship between support and confidence for rules. Color encodes the strength of rules via lift. "
+    "output": "We will, Extract rules with confidence ≥ 30%. Rules DataFrame includes columns like antecedents, consequents, support, confidence and lift. Output: Step 6: Visualize Top Frequent Items We will, Visualizes the 10 most purchased items. Helps understand popular products in the dataset. Output: Step 7: Scatter Plot of Rules(Support vs Confidence) Here we will, Shows the relationship between support and confidence for rules. Color encodes the strength of rules via lift."
   },
   {
     "input": "Step 8: Heatmap of Confidence for Selected Rules",
-    "output": "We will, Shows confidence values between top antecedent and consequent itemsets. A quick way to identify highly confident rules. "
+    "output": "We will, Shows confidence values between top antecedent and consequent itemsets. A quick way to identify highly confident rules."
   },
   {
     "input": "Use Cases",
@@ -4501,7 +4501,7 @@
   },
   {
     "input": "2. Data Analysis",
-    "output": "In this code we have performed a quick data analysis that includes reading the data, dropping unnecessary columns, printing shape of data, information about dataset etc. "
+    "output": "In this code we have performed a quick data analysis that includes reading the data, dropping unnecessary columns, printing shape of data, information about dataset etc."
   },
   {
     "input": "3. Count Vectorizer",
@@ -4637,11 +4637,11 @@
   },
   {
     "input": "4. Creating and Training the Model",
-    "output": "We will be creating a Gaussian Naive Bayes Classifier (gnb) and then training it on the training data using the fit method. "
+    "output": "We will be creating a Gaussian Naive Bayes Classifier (gnb) and then training it on the training data using the fit method."
   },
   {
     "input": "5. Plotting 1D Gaussian Distributions for All Features",
-    "output": "We visualize the Gaussian distributions for each feature in the Iris dataset across all classes. The distributions are modeled by the Gaussian Naive Bayes classifier where each class is represented by a normal (Gaussian) distribution with a mean and variance specific to each feature. Separate plots are created for each feature in the dataset showing how each class's feature values are distributed. "
+    "output": "We visualize the Gaussian distributions for each feature in the Iris dataset across all classes. The distributions are modeled by the Gaussian Naive Bayes classifier where each class is represented by a normal (Gaussian) distribution with a mean and variance specific to each feature. Separate plots are created for each feature in the dataset showing how each class's feature values are distributed."
   },
   {
     "input": "6. Making Predictions",
@@ -4701,7 +4701,7 @@
   },
   {
     "input": "7.Making Predictions and Evaluating Accuracy",
-    "output": "We are usingmodel.predict(X_test_vectors)to generate predictions from the trained model on test data. accuracy_score(y_test, y_pred)compares predicted labelsy_predwith true labelsy_testto calculate accuracy. "
+    "output": "We are usingmodel.predict(X_test_vectors)to generate predictions from the trained model on test data. accuracy_score(y_test, y_pred)compares predicted labelsy_predwith true labelsy_testto calculate accuracy."
   },
   {
     "input": "8.Predicting for a Custom Message",
@@ -4749,15 +4749,15 @@
   },
   {
     "input": "1. Hyperparameter Tuning using GridSearchCV",
-    "output": "First let's useGridSearchCVto obtain the best parameters for the model. It is a hyperparameter tuning method in Scikit-learn that exhaustively searches through all possible combinations of parameters provided in the param_grid. For that we will pass RandomForestClassifier() instance to the model and then fit the GridSearchCV using the training data to find the best parameters. param_grid: A dictionary containing hyperparameters and their possible values. GridSearchCV will try every combination of these values to find the best-performing set of hyperparameters. grid_search.fit(X_train, y_train): This trains the model on the training data (X_train, y_train) for every combination of hyperparameters defined in param_grid. grid_search.best_estimator_: After completing the grid search, this will print the RandomForest model that has the best combination of hyperparameters from the search. "
+    "output": "First let's useGridSearchCVto obtain the best parameters for the model. It is a hyperparameter tuning method in Scikit-learn that exhaustively searches through all possible combinations of parameters provided in the param_grid. For that we will pass RandomForestClassifier() instance to the model and then fit the GridSearchCV using the training data to find the best parameters. param_grid: A dictionary containing hyperparameters and their possible values. GridSearchCV will try every combination of these values to find the best-performing set of hyperparameters. grid_search.fit(X_train, y_train): This trains the model on the training data (X_train, y_train) for every combination of hyperparameters defined in param_grid. grid_search.best_estimator_: After completing the grid search, this will print the RandomForest model that has the best combination of hyperparameters from the search."
   },
   {
     "input": "Updating the Model",
-    "output": "Now we will update the parameters of the model by those which are obtained by using GridSearchCV. "
+    "output": "Now we will update the parameters of the model by those which are obtained by using GridSearchCV."
   },
   {
     "input": "2. Hyperparameter Tuning using RandomizedSearchCV",
-    "output": "RandomizedSearchCVperforms a random search over a specified parameter grid. It randomly selects combinations and evaluates the model often leading to faster results especially when there are many hyperparameters. Now let's use RandomizedSearchCV to obtain the best parameters for the model. For that we will pass RandomFoestClassifier() instance to the model and then fit the RandomizedSearchCV using the training data to find the best parameters. param_gridspecifies the hyperparameters that you want to tune similar to the grid in GridSearchCV. fit(X_train, y_train)trains the model using the training data. best_estimator_shows the model with the best combination of hyperparameters found by the search process. "
+    "output": "RandomizedSearchCVperforms a random search over a specified parameter grid. It randomly selects combinations and evaluates the model often leading to faster results especially when there are many hyperparameters. Now let's use RandomizedSearchCV to obtain the best parameters for the model. For that we will pass RandomFoestClassifier() instance to the model and then fit the RandomizedSearchCV using the training data to find the best parameters. param_gridspecifies the hyperparameters that you want to tune similar to the grid in GridSearchCV. fit(X_train, y_train)trains the model using the training data. best_estimator_shows the model with the best combination of hyperparameters found by the search process."
   },
   {
     "input": "Updating the model",
@@ -4789,15 +4789,15 @@
   },
   {
     "input": "5. Making predictions and Evaluating",
-    "output": "The code evaluates the trained Random Forest Regression model: oob_score_: Retrive out-of-bag (OOB) score which estimates the model's generalization performance. Makes predictions using the trained model and stores them in the 'predictions' array. Evaluates the model's performance using the Mean Squared Error (MSE) and R-squared (R2) metrics. "
+    "output": "The code evaluates the trained Random Forest Regression model: oob_score_: Retrive out-of-bag (OOB) score which estimates the model's generalization performance. Makes predictions using the trained model and stores them in the 'predictions' array. Evaluates the model's performance using the Mean Squared Error (MSE) and R-squared (R2) metrics."
   },
   {
     "input": "6. Visualizing",
-    "output": "Now let's visualize the results obtained by using the RandomForest Regression model on our salaries dataset. Creates a grid of prediction points covering the range of the feature values. Plots the real data points as blue scatter points. Plots the predicted values for the prediction grid as a green line. Adds labels and a title to the plot for better understanding. "
+    "output": "Now let's visualize the results obtained by using the RandomForest Regression model on our salaries dataset. Creates a grid of prediction points covering the range of the feature values. Plots the real data points as blue scatter points. Plots the predicted values for the prediction grid as a green line. Adds labels and a title to the plot for better understanding."
   },
   {
     "input": "7.Visualizing a Single Decision Tree from the Random Forest Model",
-    "output": "The code visualizes one of the decision trees from the trained Random Forest model. Plots the selected decision tree, displaying the decision-making process of a single tree within the ensemble. "
+    "output": "The code visualizes one of the decision trees from the trained Random Forest model. Plots the selected decision tree, displaying the decision-making process of a single tree within the ensemble."
   },
   {
     "input": "Applications of Random Forest Regression",
@@ -4865,7 +4865,7 @@
   },
   {
     "input": "Step 5: Training Loop",
-    "output": "The training loop runs for 1000 episodes with the agent interacting with the environment, calculating advantages and updating both the actor and critic. "
+    "output": "The training loop runs for 1000 episodes with the agent interacting with the environment, calculating advantages and updating both the actor and critic."
   },
   {
     "input": "Advantages",
@@ -5021,11 +5021,11 @@
   },
   {
     "input": "5: Training the Model",
-    "output": "Apply the fit method to match the classifier to the training set of data. "
+    "output": "Apply the fit method to match the classifier to the training set of data."
   },
   {
     "input": "6: Making Predictions",
-    "output": "Apply the predict method to the test data and use the trained model to create predictions. "
+    "output": "Apply the predict method to the test data and use the trained model to create predictions."
   },
   {
     "input": "7: Hyperparameter Tuning with Decision Tree Classifier using GridSearchCV",
@@ -5169,7 +5169,7 @@
   },
   {
     "input": "Step 1: Import Libraries and Load Dataset",
-    "output": "In this step we will import all the necessary libraries. This dataset contains customer information, including age, income and spending score. You can download the dataset fromhere. "
+    "output": "In this step we will import all the necessary libraries. This dataset contains customer information, including age, income and spending score. You can download the dataset fromhere."
   },
   {
     "input": "Step 2: Feature Selection",
@@ -5229,7 +5229,7 @@
   },
   {
     "input": "Step 5: Clustered Data Points For Different k Values",
-    "output": "We will plot images of data points clustered for different values of k. For this, we will apply the k-means algorithm on the dataset by iterating on a range of k values. "
+    "output": "We will plot images of data points clustered for different values of k. For this, we will apply the k-means algorithm on the dataset by iterating on a range of k values."
   },
   {
     "input": "How FP-Growth Works",
@@ -5305,7 +5305,7 @@
   },
   {
     "input": "Step 3: Running the Algorithm",
-    "output": "Now we call thevalue_iterationfunction with the defined parameters and display the results (optimal policy and value function). "
+    "output": "Now we call thevalue_iterationfunction with the defined parameters and display the results (optimal policy and value function)."
   },
   {
     "input": "Applications of Value Iteration",
@@ -5317,7 +5317,7 @@
   },
   {
     "input": "Step 2: Loading and Cleaning the data",
-    "output": "We will now read the .csv file and clean it. Remove theCUST_IDcolumn since it's just an ID and not useful Handle missing values using forward fill. "
+    "output": "We will now read the .csv file and clean it. Remove theCUST_IDcolumn since it's just an ID and not useful Handle missing values using forward fill."
   },
   {
     "input": "Step 3: Preprocessing the data",
@@ -5333,7 +5333,7 @@
   },
   {
     "input": "Step 6: Apply Agglomerative Clustering for Different Values of k",
-    "output": "Now let’s apply clustering for different values ofk(number of clusters). For each value ofkwe created a clustering model and plot the two PCA components colored by cluster. "
+    "output": "Now let’s apply clustering for different values ofk(number of clusters). For each value ofkwe created a clustering model and plot the two PCA components colored by cluster."
   },
   {
     "input": "Step 7: Evaluate models and Visualizing results",
@@ -5349,7 +5349,7 @@
   },
   {
     "input": "Step 3: Group Items by Transaction",
-    "output": "We group items purchased together by the same customer on the same day to form one transaction. "
+    "output": "We group items purchased together by the same customer on the same day to form one transaction."
   },
   {
     "input": "Step 4: Convert to One-Hot Format",
@@ -5357,7 +5357,7 @@
   },
   {
     "input": "Step 5: Run Apriori Algorithm",
-    "output": "Now we findfrequent itemsetscombinations of items that often occur together. Here min_support=0.01 means itemsets that appear inat least 1% of transactions. This gives uscommon combinationsof items. "
+    "output": "Now we findfrequent itemsetscombinations of items that often occur together. Here min_support=0.01 means itemsets that appear inat least 1% of transactions. This gives uscommon combinationsof items."
   },
   {
     "input": "Step 6: Generate Association Rules",
@@ -5565,7 +5565,7 @@
   },
   {
     "input": "Step 2: Generate Tidsets (Vertical representation)",
-    "output": "Purpose: create a mapping item -> set_of_tids (the vertical format ECLAT uses). Benefit: intersections of these tidsets are quick to compute and give support counts. "
+    "output": "Purpose: create a mapping item -> set_of_tids (the vertical format ECLAT uses). Benefit: intersections of these tidsets are quick to compute and give support counts."
   },
   {
     "input": "Step 3: Prepare a sorted list of items",
@@ -5577,7 +5577,7 @@
   },
   {
     "input": "Step 5: Run ECLAT and collect frequent itemsets",
-    "output": "Call the recursive function, then inspect the found frequent itemsets (with support counts). "
+    "output": "Call the recursive function, then inspect the found frequent itemsets (with support counts)."
   },
   {
     "input": "Applications",
@@ -5617,7 +5617,7 @@
   },
   {
     "input": "Step 5: Printing Cluster Centers and Membership Matrix",
-    "output": "Outputs coordinates of cluster centers and the membership values for the first 5 data points to provide insight into clustering results. "
+    "output": "Outputs coordinates of cluster centers and the membership values for the first 5 data points to provide insight into clustering results."
   },
   {
     "input": "Step 6: Visualizing Fuzzy Memberships and Hard Clusters",
@@ -5785,7 +5785,7 @@
   },
   {
     "input": "Implementing OPTICS in Python",
-    "output": "Below is the Python implementation usingscikit-learnto demonstrate OPTICS on a synthetic dataset of varying densities: OPTICS(min_samples=5, xi=0.05, min_cluster_size=0.05): Configures the OPTICS algorithm. labels=clustering.labels_: Retrieves cluster labels. plt.scatter(): Plots the clustering results. "
+    "output": "Below is the Python implementation usingscikit-learnto demonstrate OPTICS on a synthetic dataset of varying densities: OPTICS(min_samples=5, xi=0.05, min_cluster_size=0.05): Configures the OPTICS algorithm. labels=clustering.labels_: Retrieves cluster labels. plt.scatter(): Plots the clustering results."
   },
   {
     "input": "OPTICS vs. DBSCAN Algorithm",
@@ -5821,7 +5821,7 @@
   },
   {
     "input": "4. Distributed/Parallel Monte Carlo Integration",
-    "output": "To further speed up calculations, Monte Carlo integration adapts easily to parallel computing. Each batch of random samples can be processed independently. Makes full use of all CPU cores. Greatly reduces computation time for large N or repeated estimates. "
+    "output": "To further speed up calculations, Monte Carlo integration adapts easily to parallel computing. Each batch of random samples can be processed independently. Makes full use of all CPU cores. Greatly reduces computation time for large N or repeated estimates."
   },
   {
     "input": "5. Sample Example",
@@ -5853,7 +5853,7 @@
   },
   {
     "input": "Step 2: Creating a Sample Dataset",
-    "output": "Here we create a synthetic dataset using numpy library, where the feature valuesXare randomly sampled and sorted between 0 and 5 and the targetyis a noisy sine function ofX. The scatter plot visualizes the data points, showing how the target values vary with the feature. "
+    "output": "Here we create a synthetic dataset using numpy library, where the feature valuesXare randomly sampled and sorted between 0 and 5 and the targetyis a noisy sine function ofX. The scatter plot visualizes the data points, showing how the target values vary with the feature."
   },
   {
     "input": "Step 3: Splitting the Dataset",
@@ -5865,15 +5865,15 @@
   },
   {
     "input": "Step 5: Fiting Decision Tree Regressor Model",
-    "output": "We fit our model using the .fit() method on the X_train and y_train, so that the model can learn the relationships between different variables. "
+    "output": "We fit our model using the .fit() method on the X_train and y_train, so that the model can learn the relationships between different variables."
   },
   {
     "input": "Step 6: Predicting a New Value",
-    "output": "We will now predict a new value using our trained model using the predict() function. After that we also calculated themean squared error (MSE)to check how accurate is our predicted value from the actual value , telling how well the model fits to our training data. "
+    "output": "We will now predict a new value using our trained model using the predict() function. After that we also calculated themean squared error (MSE)to check how accurate is our predicted value from the actual value , telling how well the model fits to our training data."
   },
   {
     "input": "Step 7: Visualizing the result",
-    "output": "We will visualise the regression line our model has calculated to see how well the decision tree fits the data and captures the underlying pattern, especially showing how the predictions change smoothly or in steps depending on the tree's splits. "
+    "output": "We will visualise the regression line our model has calculated to see how well the decision tree fits the data and captures the underlying pattern, especially showing how the predictions change smoothly or in steps depending on the tree's splits."
   },
   {
     "input": "Step 8: Export and Show the Tree Structure below",
@@ -5917,7 +5917,7 @@
   },
   {
     "input": "Step 8:Testing the Trained Agent",
-    "output": "After training the agent, we evaluate its performance by letting it run in the environment without updating the policy. The agent chooses actions based on the highest probabilities (greedy behavior). "
+    "output": "After training the agent, we evaluate its performance by letting it run in the environment without updating the policy. The agent chooses actions based on the highest probabilities (greedy behavior)."
   },
   {
     "input": "Variants of REINFORCE Algorithm",
@@ -5989,7 +5989,7 @@
   },
   {
     "input": "Step 2: Loading and Printing the Dataset",
-    "output": "In this example we will use Breast Cancer dataset from Scikit-learn. This dataset contains data about cell features and their corresponding cancer diagnosis i.e malignant or benign. "
+    "output": "In this example we will use Breast Cancer dataset from Scikit-learn. This dataset contains data about cell features and their corresponding cancer diagnosis i.e malignant or benign."
   },
   {
     "input": "Step 3: Splitting the Data into Training and Testing Sets",
@@ -6001,11 +6001,11 @@
   },
   {
     "input": "Step 5: Hyperparameter Tuning with GridSearchCV",
-    "output": "Now let’s useGridSearchCVto find the best combination of C, gamma and kernel hyperparameters for the SVM model. But before that leys understand these parameters: C: Controls the trade-off between a wider margin (low C) and correctly classifying all points (high C). gamma: Determines how far the influence of each data point reaches with high gamma fitting tightly to the data. kernel: Defines the function used to transform data for separating classes. For example linear or rbf. "
+    "output": "Now let’s useGridSearchCVto find the best combination of C, gamma and kernel hyperparameters for the SVM model. But before that leys understand these parameters: C: Controls the trade-off between a wider margin (low C) and correctly classifying all points (high C). gamma: Determines how far the influence of each data point reaches with high gamma fitting tightly to the data. kernel: Defines the function used to transform data for separating classes. For example linear or rbf."
   },
   {
     "input": "Step 6: Get the Best Hyperparameters and Model",
-    "output": "After grid search finishes we can check best hyperparameters and the optimized model. "
+    "output": "After grid search finishes we can check best hyperparameters and the optimized model."
   },
   {
     "input": "Step 7: Evaluating the Optimized Model",
@@ -6037,11 +6037,11 @@
   },
   {
     "input": "5. Plotting Original Swiss Roll in 3D",
-    "output": "We then visualize the original dataset to understand its structure before reduction. ax = fig.add_subplot(131, projection='3d'): Adds the first subplot in a 1x3 grid layout and specifies it as a 3D plot. ax.scatter(X[: , 0], X[: , 1], X[: , 2], c=color, cmap=plt.cm.Spectral): Plots the 3D data points from the Swiss Roll dataset. Thec=colorargument applies a color mapping based on thecolorarray, whileplt.cm.Spectralprovides a distinct colormap. "
+    "output": "We then visualize the original dataset to understand its structure before reduction. ax = fig.add_subplot(131, projection='3d'): Adds the first subplot in a 1x3 grid layout and specifies it as a 3D plot. ax.scatter(X[: , 0], X[: , 1], X[: , 2], c=color, cmap=plt.cm.Spectral): Plots the 3D data points from the Swiss Roll dataset. Thec=colorargument applies a color mapping based on thecolorarray, whileplt.cm.Spectralprovides a distinct colormap."
   },
   {
     "input": "6. Plotting 2D Output from LLE",
-    "output": "Here, we visualize the 2D representation obtained from the LLE algorithm. Flattening: LLE unrolls the spiral while maintaining neighborhood relationships. Manifold learning: Shows effectiveness in capturing nonlinear structure. "
+    "output": "Here, we visualize the 2D representation obtained from the LLE algorithm. Flattening: LLE unrolls the spiral while maintaining neighborhood relationships. Manifold learning: Shows effectiveness in capturing nonlinear structure."
   },
   {
     "input": "7. Plotting 2D Output from PCA",
@@ -6409,19 +6409,19 @@
   },
   {
     "input": "Step 2: Reading Dataset",
-    "output": "Lets read the dataset using pandas. "
+    "output": "Lets read the dataset using pandas."
   },
   {
     "input": "Step 3: Analyzing the Data",
-    "output": "1. df.shape(): This function is used to understand the number of rows (observations) and columns (features) in the dataset. This gives an overview of the dataset's size and structure. Output: 2. df.info(): This function helps us to understand the dataset by showing the number of records in each column, type of data, whether any values are missing and how much memory the dataset uses. Output: 3. df.describe().T: This method gives a statistical summary of the DataFrame (Transpose) showing values like count, mean, standard deviation, minimum and quartiles for each numerical column. It helps in summarizing the central tendency and spread of the data. Output: 4.df.columns.tolist(): This converts the column names of the DataFrame into a Python list making it easy to access and manipulate the column names. "
+    "output": "1. df.shape(): This function is used to understand the number of rows (observations) and columns (features) in the dataset. This gives an overview of the dataset's size and structure. Output: 2. df.info(): This function helps us to understand the dataset by showing the number of records in each column, type of data, whether any values are missing and how much memory the dataset uses. Output: 3. df.describe().T: This method gives a statistical summary of the DataFrame (Transpose) showing values like count, mean, standard deviation, minimum and quartiles for each numerical column. It helps in summarizing the central tendency and spread of the data. Output: 4.df.columns.tolist(): This converts the column names of the DataFrame into a Python list making it easy to access and manipulate the column names."
   },
   {
     "input": "Step 4 : Checking Missing Values",
-    "output": "df.isnull().sum(): This checks for missing values in each column and returns the total number of null values per column helping us to identify any gaps in our data. "
+    "output": "df.isnull().sum(): This checks for missing values in each column and returns the total number of null values per column helping us to identify any gaps in our data."
   },
   {
     "input": "Step 5 : Checking for the duplicate values",
-    "output": "df.nunique(): This function tells us how many unique values exist in each column which provides insight into the variety of data in each feature. "
+    "output": "df.nunique(): This function tells us how many unique values exist in each column which provides insight into the variety of data in each feature."
   },
   {
     "input": "Step 6: Univariate Analysis",
@@ -6525,11 +6525,11 @@
   },
   {
     "input": "Creating a Sample Dataframe",
-    "output": "Here we will be usingPandasandNumpylibraries. "
+    "output": "Here we will be usingPandasandNumpylibraries."
   },
   {
     "input": "1. Removing Rows with Missing Values",
-    "output": "Removing rows with missing values is a simple and straightforward method to handle missing data, used when we want to keep our analysis clean and minimize complexity. Advantages: Simple and efficient: It’s easy to implement and quickly removes data points with missing values. Cleans data: It removes potentially problematic data points, ensuring that only complete rows remain in the dataset. Disadvantages: Reduces sample size: When rows are removed, the overall dataset shrinks which can affect the power and accuracy of our analysis. Potential bias: If missing data is not random (e.g if certain groups are more likely to have missing values) removing rows could introduce bias. In this example, we are removing rows with missing values from the original DataFrame (df) using thedropna()method and then displaying the cleaned DataFrame (df_cleaned). "
+    "output": "Removing rows with missing values is a simple and straightforward method to handle missing data, used when we want to keep our analysis clean and minimize complexity. Advantages: Simple and efficient: It’s easy to implement and quickly removes data points with missing values. Cleans data: It removes potentially problematic data points, ensuring that only complete rows remain in the dataset. Disadvantages: Reduces sample size: When rows are removed, the overall dataset shrinks which can affect the power and accuracy of our analysis. Potential bias: If missing data is not random (e.g if certain groups are more likely to have missing values) removing rows could introduce bias. In this example, we are removing rows with missing values from the original DataFrame (df) using thedropna()method and then displaying the cleaned DataFrame (df_cleaned)."
   },
   {
     "input": "2. Imputation Methods",
@@ -6597,7 +6597,7 @@
   },
   {
     "input": "Step 3:Initialize and Train the Model",
-    "output": "Random Forest Classifieris initialized, an ensemble-based model that constructs multiple decision trees during training. It is known for its robustness in classification tasks and ability to handle non-linearity effectively. "
+    "output": "Random Forest Classifieris initialized, an ensemble-based model that constructs multiple decision trees during training. It is known for its robustness in classification tasks and ability to handle non-linearity effectively."
   },
   {
     "input": "Step 4: Perform Self-Training Iterations",
@@ -6661,23 +6661,23 @@
   },
   {
     "input": "Step 2: Loading the Dataset",
-    "output": "Here we will load the dataset and use theparse_datesparameter to convert theDatecolumn to the DatetimeIndex format. "
+    "output": "Here we will load the dataset and use theparse_datesparameter to convert theDatecolumn to the DatetimeIndex format."
   },
   {
     "input": "Step 3: Cleaning of Data",
-    "output": "We will drop columns from the dataset that are not important for our visualization. "
+    "output": "We will drop columns from the dataset that are not important for our visualization."
   },
   {
     "input": "Step 4: Plotting High Stock Prices",
-    "output": "Since thevolumecolumn is of continuous data type we will useline graphto visualize it. sns.lineplot(data=df, x=df.index, y='High', label='High Price', color='blue'): Plots High prices over time using the datetime index on x-axis. "
+    "output": "Since thevolumecolumn is of continuous data type we will useline graphto visualize it. sns.lineplot(data=df, x=df.index, y='High', label='High Price', color='blue'): Plots High prices over time using the datetime index on x-axis."
   },
   {
     "input": "Step 5: Resampling Data",
-    "output": "To better understand the trend of the data we will use theresampling methodwhich provide a clearer view of trends and patterns when we are dealing with daily data. df_resampled = df.resample('M').mean(numeric_only=True): Resamples data to monthly frequency and calculates the mean of all numeric columns for each month. "
+    "output": "To better understand the trend of the data we will use theresampling methodwhich provide a clearer view of trends and patterns when we are dealing with daily data. df_resampled = df.resample('M').mean(numeric_only=True): Resamples data to monthly frequency and calculates the mean of all numeric columns for each month."
   },
   {
     "input": "Step 6: Detecting Seasonality with Autocorrelation",
-    "output": "We will detect Seasonality using the autocorrelation function (ACF) plot. Peaks at regular intervals in the ACF plot suggest the presence of seasonality. "
+    "output": "We will detect Seasonality using the autocorrelation function (ACF) plot. Peaks at regular intervals in the ACF plot suggest the presence of seasonality."
   },
   {
     "input": "Step 7: Testing Stationarity with ADF test",
@@ -6685,7 +6685,7 @@
   },
   {
     "input": "Step 8: Differencing to Achieve Stationarity",
-    "output": "Differencing involves subtracting the previous observation from the current observation to remove trends or seasonality. "
+    "output": "Differencing involves subtracting the previous observation from the current observation to remove trends or seasonality."
   },
   {
     "input": "Step 9: Smoothing Data with Moving Average",
@@ -6821,11 +6821,11 @@
   },
   {
     "input": "Univariate Analysis",
-    "output": "Univariate Analysis is a type of data visualization where we visualize only a single variable at a time. Univariate Analysis helps us to analyze the distribution of the variable present in the data so that we can perform further analysis. You can find the link to the datasethere. "
+    "output": "Univariate Analysis is a type of data visualization where we visualize only a single variable at a time. Univariate Analysis helps us to analyze the distribution of the variable present in the data so that we can perform further analysis. You can find the link to the datasethere."
   },
   {
     "input": "Histogram",
-    "output": "Here we’ll be performing univariate analysis on Numerical variables using thehistogramfunction. "
+    "output": "Here we’ll be performing univariate analysis on Numerical variables using thehistogramfunction."
   },
   {
     "input": "Bar Chart",
@@ -6833,7 +6833,7 @@
   },
   {
     "input": "Pie Chart",
-    "output": "Apiecharthelps us to visualize the percentage of the data belonging to each category. "
+    "output": "Apiecharthelps us to visualize the percentage of the data belonging to each category."
   },
   {
     "input": "Bivariate analysis",
@@ -6861,7 +6861,7 @@
   },
   {
     "input": "HeatMap",
-    "output": "Here we are using a heat map to check the correlation between all the columns in the dataset. It is a data visualisation technique that shows the magnitude of the phenomenon as colour in two dimensions. The values of correlation can vary from -1 to 1 where -1 means strong negative and +1 means strong positive correlation. "
+    "output": "Here we are using a heat map to check the correlation between all the columns in the dataset. It is a data visualisation technique that shows the magnitude of the phenomenon as colour in two dimensions. The values of correlation can vary from -1 to 1 where -1 means strong negative and +1 means strong positive correlation."
   },
   {
     "input": "What is K-Means Clustering?",
@@ -7345,7 +7345,7 @@
   },
   {
     "input": "1.Generating and Visualizing the 2D Data",
-    "output": "We will import libraries likepandas,matplotlib,seabornandscikit learn. The make_moons() function generates a 2D dataset that forms two interleaving half circles. This kind of data is non-linearly separable and perfect for showing how k-NN handles such cases. "
+    "output": "We will import libraries likepandas,matplotlib,seabornandscikit learn. The make_moons() function generates a 2D dataset that forms two interleaving half circles. This kind of data is non-linearly separable and perfect for showing how k-NN handles such cases."
   },
   {
     "input": "2.Train-Test Split and Normalization",
@@ -7353,11 +7353,11 @@
   },
   {
     "input": "3.Fit the k-NN Model and Evaluate",
-    "output": "This creates a k-Nearest Neighbors (k-NN) classifier with k = 5 meaning it considers the 5 nearest neighbors for making predictions. fit(X_train, y_train)trains the model on the training data. predict(X_test)generates predictions for the test data. accuracy_score()compares the predicted labels (y_pred) with the true labels (y_test) and calculates the accuracy i.e the proportion of correct predictions. "
+    "output": "This creates a k-Nearest Neighbors (k-NN) classifier with k = 5 meaning it considers the 5 nearest neighbors for making predictions. fit(X_train, y_train)trains the model on the training data. predict(X_test)generates predictions for the test data. accuracy_score()compares the predicted labels (y_pred) with the true labels (y_test) and calculates the accuracy i.e the proportion of correct predictions."
   },
   {
     "input": "4.Cross-Validation to Choose Best k",
-    "output": "Choosing the optimal k-value is critical before building the model for balancing the model's performance. Asmaller kvalue makes the model sensitive to noise, leading to overfitting (complex models). Alarger kvalue results in smoother boundaries, reducing model complexity but possibly underfitting. This code performs model selection for the k value in the k-NN algorithm using 5-foldcross-validation: It tests values of k from 1 to 20. For each k, a new k-NN model is trained and validated usingcross_val_scorewhich automatically splits the dataset into 5 folds, trains on 4 and evaluates on 1, cycling through all folds. The mean accuracy of each fold is stored incv_scores. A line plot shows how accuracy varies with k helping visualize the optimal choice. The best_k is the value of k that gives the highest mean cross-validated accuracy. "
+    "output": "Choosing the optimal k-value is critical before building the model for balancing the model's performance. Asmaller kvalue makes the model sensitive to noise, leading to overfitting (complex models). Alarger kvalue results in smoother boundaries, reducing model complexity but possibly underfitting. This code performs model selection for the k value in the k-NN algorithm using 5-foldcross-validation: It tests values of k from 1 to 20. For each k, a new k-NN model is trained and validated usingcross_val_scorewhich automatically splits the dataset into 5 folds, trains on 4 and evaluates on 1, cycling through all folds. The mean accuracy of each fold is stored incv_scores. A line plot shows how accuracy varies with k helping visualize the optimal choice. The best_k is the value of k that gives the highest mean cross-validated accuracy."
   },
   {
     "input": "5.Training with Best k",
@@ -7365,7 +7365,7 @@
   },
   {
     "input": "6. Evaluate Using More Metrics",
-    "output": "Calculate the confusion matrix comparing true labels (y_test) with predictions (y_pred). UseConfusionMatrixDisplayto visualize the confusion matrix with labeled classes Print a classification report that includes: Precision: How many predicted positives are actually positive. Recall: How many actual positives were correctly predicted. F1-score: Harmonic mean of precision and recall. Support: Number of true instances per class. "
+    "output": "Calculate the confusion matrix comparing true labels (y_test) with predictions (y_pred). UseConfusionMatrixDisplayto visualize the confusion matrix with labeled classes Print a classification report that includes: Precision: How many predicted positives are actually positive. Recall: How many actual positives were correctly predicted. F1-score: Harmonic mean of precision and recall. Support: Number of true instances per class."
   },
   {
     "input": "7.Visualize Decision Boundary with Best k",
@@ -7373,15 +7373,15 @@
   },
   {
     "input": "Importing Libraries and Dataset",
-    "output": "Pythonlibraries make it very easy for us to handle the data and perform typical and complex tasks with a single line of code. Pandas– This library helps to load the data frame in a 2D array format and has multiple functions to perform analysis tasks in one go. Numpy– Numpy arrays are very fast and can perform large computations in a very short time. Matplotlib/Seaborn– This library is used to draw visualizations. Sklearn – This module contains multiple libraries having pre-implemented functions to perform tasks from data preprocessing to model development and evaluation. Now let's load the dataset using the pandas dataframe. You can download the dataset fromherewhich has been used for illustration purpose in this article. "
+    "output": "Pythonlibraries make it very easy for us to handle the data and perform typical and complex tasks with a single line of code. Pandas– This library helps to load the data frame in a 2D array format and has multiple functions to perform analysis tasks in one go. Numpy– Numpy arrays are very fast and can perform large computations in a very short time. Matplotlib/Seaborn– This library is used to draw visualizations. Sklearn – This module contains multiple libraries having pre-implemented functions to perform tasks from data preprocessing to model development and evaluation. Now let's load the dataset using the pandas dataframe. You can download the dataset fromherewhich has been used for illustration purpose in this article."
   },
   {
     "input": "Standardize the Variables",
-    "output": "Because the KNN classifier predicts the class of a given test observation by identifying the observations that are nearest to it, the scale of the variables matters. Any variables that are on a large scale will have a much larger effect on the distance between the observations, and hence on the KNN classifier than variables that are on a small scale. "
+    "output": "Because the KNN classifier predicts the class of a given test observation by identifying the observations that are nearest to it, the scale of the variables matters. Any variables that are on a large scale will have a much larger effect on the distance between the observations, and hence on the KNN classifier than variables that are on a small scale."
   },
   {
     "input": "Model Development and Evaluation",
-    "output": "Now by using the sklearn library implementation of the KNN algorithm we will train a model on that. Also after the training purpose, we will evaluate our model by using theconfusion matrixandclassification report. "
+    "output": "Now by using the sklearn library implementation of the KNN algorithm we will train a model on that. Also after the training purpose, we will evaluate our model by using theconfusion matrixandclassification report."
   },
   {
     "input": "Elbow Method",
@@ -7473,7 +7473,7 @@
   },
   {
     "input": "Implementation of Polynomial Regression using Python",
-    "output": "Implementing the Polynomial regression using Python: Here we will import all the necessary libraries for data analysis and machine learning tasks and then loads the 'Position_Salaries.csv' dataset using Pandas. It then prepares the data for modeling by handling missing values and encoding categorical data. Finally, it splits the data into training and testing sets and standardizes the numerical features using StandardScaler. Output: The code creates a linear regression model and fits it to the provided data, establishing a linear relationship between the independent and dependent variables. The code performs quadratic and cubic regression by generating polynomial features from the original data and fitting linear regression models to these features. This enables modeling nonlinear relationships between the independent and dependent variables. The code creates a scatter plot of the data point, It effectively visualizes the linear relationship between position level and salary. Output:  The code creates a scatter plot of the data points, overlays the predicted quadratic and cubic regression lines. It effectively visualizes the nonlinear relationship between position level and salary and compares the fits of quadratic and cubic regression models. Output:  The code effectively visualizes the relationship between position level and salary using cubic regression and generates a continuous prediction line for a broader range of position levels. "
+    "output": "Implementing the Polynomial regression using Python: Here we will import all the necessary libraries for data analysis and machine learning tasks and then loads the 'Position_Salaries.csv' dataset using Pandas. It then prepares the data for modeling by handling missing values and encoding categorical data. Finally, it splits the data into training and testing sets and standardizes the numerical features using StandardScaler. Output: The code creates a linear regression model and fits it to the provided data, establishing a linear relationship between the independent and dependent variables. The code performs quadratic and cubic regression by generating polynomial features from the original data and fitting linear regression models to these features. This enables modeling nonlinear relationships between the independent and dependent variables. The code creates a scatter plot of the data point, It effectively visualizes the linear relationship between position level and salary. Output:  The code creates a scatter plot of the data points, overlays the predicted quadratic and cubic regression lines. It effectively visualizes the nonlinear relationship between position level and salary and compares the fits of quadratic and cubic regression models. Output:  The code effectively visualizes the relationship between position level and salary using cubic regression and generates a continuous prediction line for a broader range of position levels."
   },
   {
     "input": "References",
@@ -7489,7 +7489,7 @@
   },
   {
     "input": "Implementation",
-    "output": "We will start by importing the necessary libraries. We will useNumpyalong with Tensorflow for computations andMatplotlibfor plotting. In order to make the random numbers predictable, we will define fixed seeds for both Numpy and Tensorflow. Now, let us generate some random data for training the Linear Regression Model. Let us visualize the training data. Output: Now we will start creating our model by defining theplaceholdersX and Y, so that we can feed our training examples X and Y into theoptimizerduring the training process. Now we will declare two trainable TensorflowVariablesfor the Weights and Bias and initializing them randomly using np.random.randn(). Now we will define the hyperparameters of the model, the Learning Rate and the number of Epochs. Now, we will be building the Hypothesis, the Cost Function, and the Optimizer. We won't be implementing the Gradient Descent Optimizer manually since it is built inside Tensorflow. After that, we will be initializing the Variables. Now we will begin the training process inside a Tensorflow Session. Output: Now let us look at the result. Output: Note that in this case both the Weight and bias are scalars. This is because, we have considered only one dependent variable in our training data. If we have m dependent variables in our training dataset, the Weight will be an m-dimensional vector while bias will be a scalar. Finally, we will plot our result. "
+    "output": "We will start by importing the necessary libraries. We will useNumpyalong with Tensorflow for computations andMatplotlibfor plotting. In order to make the random numbers predictable, we will define fixed seeds for both Numpy and Tensorflow. Now, let us generate some random data for training the Linear Regression Model. Let us visualize the training data. Output: Now we will start creating our model by defining theplaceholdersX and Y, so that we can feed our training examples X and Y into theoptimizerduring the training process. Now we will declare two trainable TensorflowVariablesfor the Weights and Bias and initializing them randomly using np.random.randn(). Now we will define the hyperparameters of the model, the Learning Rate and the number of Epochs. Now, we will be building the Hypothesis, the Cost Function, and the Optimizer. We won't be implementing the Gradient Descent Optimizer manually since it is built inside Tensorflow. After that, we will be initializing the Variables. Now we will begin the training process inside a Tensorflow Session. Output: Now let us look at the result. Output: Note that in this case both the Weight and bias are scalars. This is because, we have considered only one dependent variable in our training data. If we have m dependent variables in our training dataset, the Weight will be an m-dimensional vector while bias will be a scalar. Finally, we will plot our result."
   },
   {
     "input": "1. Healthcare and Medical Diagnosis",
@@ -7873,11 +7873,11 @@
   },
   {
     "input": "10. Splitting Data into Training and Testing Sets",
-    "output": "The code splits the data into training and testing sets using a specified ratio. It then trains the model by calculating the mean and standard deviation for each attribute in each class. "
+    "output": "The code splits the data into training and testing sets using a specified ratio. It then trains the model by calculating the mean and standard deviation for each attribute in each class."
   },
   {
     "input": "11. Training and Testing the Model",
-    "output": "Calculate mean and standard deviation for each attribute within each class for the training set. Finally, it tests the model on the test set and calculates the accuracy. "
+    "output": "Calculate mean and standard deviation for each attribute within each class for the training set. Finally, it tests the model on the test set and calculates the accuracy."
   },
   {
     "input": "12. Evaluating Model",
@@ -7885,7 +7885,7 @@
   },
   {
     "input": "1. Confusion Matrix",
-    "output": "The confusion matrix summarizes prediction results by showing true positives, false positives, true negatives and false negatives. It helps visualize how well the classifier distinguishes between different classes. "
+    "output": "The confusion matrix summarizes prediction results by showing true positives, false positives, true negatives and false negatives. It helps visualize how well the classifier distinguishes between different classes."
   },
   {
     "input": "2. Precision, Recall and F1 score",
@@ -7905,7 +7905,7 @@
   },
   {
     "input": "Generate test datasets for Classification:",
-    "output": "Example 1: The 2d binary classification data generated by make_circles() have a spherical decision boundary. Output: Example 2: Two interlocking half circles represent the 2d binary classification data produced by the make_moons() function. "
+    "output": "Example 1: The 2d binary classification data generated by make_circles() have a spherical decision boundary. Output: Example 2: Two interlocking half circles represent the 2d binary classification data produced by the make_moons() function."
   },
   {
     "input": "Multi-Class Classification",
@@ -7977,15 +7977,15 @@
   },
   {
     "input": "Fitting an SVR Model on the Sine Curve data using Linear Kernel",
-    "output": "First, we will try to achieve some baseline results using the linear kernel on a non-linear dataset and we will try to observe up to what extent it can be fitted by the model. "
+    "output": "First, we will try to achieve some baseline results using the linear kernel on a non-linear dataset and we will try to observe up to what extent it can be fitted by the model."
   },
   {
     "input": "Fitting an SVR Model on the Sine Curve data using Polynomial Kernel",
-    "output": "Now we will fit a Support vector Regression model using a polynomial kernel. This will be hopefully a little better than the SVR model with a linear kernel. "
+    "output": "Now we will fit a Support vector Regression model using a polynomial kernel. This will be hopefully a little better than the SVR model with a linear kernel."
   },
   {
     "input": "Fitting an SVR Model on the Sine Curve data using RBF Kernel",
-    "output": "Now we will fit a Support vector Regression model using an RBF(Radial Basis Function) kernel. This will help us to achieve probably the best results as the RBF kernel is one of the best kernels which helps us to introduce non-linearity in our model. "
+    "output": "Now we will fit a Support vector Regression model using an RBF(Radial Basis Function) kernel. This will help us to achieve probably the best results as the RBF kernel is one of the best kernels which helps us to introduce non-linearity in our model."
   },
   {
     "input": "The Role of Tech Giants",
@@ -8113,11 +8113,11 @@
   },
   {
     "input": "Regression AnalysisMultiple Linear Regression",
-    "output": "Multiple linear regressionanalysis gives the relationship between the two or more independent varibales and a dependent variable. Multiple linear regression can be represented as the hyperplane in multidimensional space . It is also a linear type regression analysis . It is almost similar to the linear regression but the major difference is the number of independent variables are different . Multi linear regression analysis is used in the fields of real estate , finance , business , public healthcare etc. The mathematical equation for the multiple linear regression is shown below. Let us now look into an example to fit a multi linear regression curve. In the below example we just look at the example for the multilinear curve for the equation with two independent  variables x1 and x2 (y = b + a0*x1 + a1*x2) In order to fit the multileinear regression curve we need the normal equations to calculate the coefficients and intercept values. From the above table n=5 , ∑ x1 = 15 ,  ∑ x2 = 30 ,  ∑ y = 35 ,  ∑ x1^2 =  55 , ∑ x2^2 = 220  ,  ∑ x1*x2 = 90 ,  ∑ x1*y = 123 ,  ∑ x2 *y =  214 Then the normal equations become: 35 = 5b + 15a0 + 30a1 123 = 15b + 55a0 + 90a1 214 = 30b + 90a0 + 220a1 By solving the above three normal equations we get the values of a0 , a1 and b . a0 = 1.8 , a1 = 0.1 , b = 1.666 The multilinear regression analysis curve can be fit as y = 1.666 + 1.8*x1 + 0.1 * x2 . Let us now discuss the implementation of the multilinear regression in R . "
+    "output": "Multiple linear regressionanalysis gives the relationship between the two or more independent varibales and a dependent variable. Multiple linear regression can be represented as the hyperplane in multidimensional space . It is also a linear type regression analysis . It is almost similar to the linear regression but the major difference is the number of independent variables are different . Multi linear regression analysis is used in the fields of real estate , finance , business , public healthcare etc. The mathematical equation for the multiple linear regression is shown below. Let us now look into an example to fit a multi linear regression curve. In the below example we just look at the example for the multilinear curve for the equation with two independent  variables x1 and x2 (y = b + a0*x1 + a1*x2) In order to fit the multileinear regression curve we need the normal equations to calculate the coefficients and intercept values. From the above table n=5 , ∑ x1 = 15 ,  ∑ x2 = 30 ,  ∑ y = 35 ,  ∑ x1^2 =  55 , ∑ x2^2 = 220  ,  ∑ x1*x2 = 90 ,  ∑ x1*y = 123 ,  ∑ x2 *y =  214 Then the normal equations become: 35 = 5b + 15a0 + 30a1 123 = 15b + 55a0 + 90a1 214 = 30b + 90a0 + 220a1 By solving the above three normal equations we get the values of a0 , a1 and b . a0 = 1.8 , a1 = 0.1 , b = 1.666 The multilinear regression analysis curve can be fit as y = 1.666 + 1.8*x1 + 0.1 * x2 . Let us now discuss the implementation of the multilinear regression in R ."
   },
   {
     "input": "Polynomial Regression",
-    "output": "Polynomial regressionanalysis is a non linear regression analysis . Polynomial regression analysis helps for the flexible curve fitting of the data , involves the fitting of  polynomial equation of the data.Polynomial regression analysis is the extension of the simple linear regression analysis by adding the extra independent variables obtained by raising the power . The mathematical expression for the polynomail regression analysis is shown below. Let us now look at an example to fit a polynomial regression curve for the provided information. Let us now fit a second degree polynomial curve for the above provided information. Inorder to fit the curve for the polynomial regression we need the normal equations for the second degree polynomial. We know the second degree polynomial can be represented as y=a0+a1x+a2x^2 . In order to fit the regression for the above second degree equation we need to calculate the coeffiecient values a0,a1,a2 by using the normal equations. Normal equations for the second degree polynomail is. Let us now calculate the values of a0,a1 and a2. From the above table n=5  , ∑ x = 80 ,  ∑ y = 100 ,  ∑ x^2 = 1398 ,  ∑ x^3 = 26270 ,  ∑ x^4 = 521202 , ∑ xy = 1684 ,  ∑ x^2y = 30648 Then the normal equations becomes : 100 = 5*a0 + 80*a1 + 1398*a2 1684 = 80*a0 + 1398*a1 + 26270*a2 30648 = 1398*a0 + 26270*a1 + 521202*a2 By solving the above three equations we get a0 = -8.728 , a1 = 3.017 , a2 = -0.69 The polynomial regression curve is y = -8.728 + 3.017x -0.69x^2 . Now let us see the implementation of the polynomail regression in R . "
+    "output": "Polynomial regressionanalysis is a non linear regression analysis . Polynomial regression analysis helps for the flexible curve fitting of the data , involves the fitting of  polynomial equation of the data.Polynomial regression analysis is the extension of the simple linear regression analysis by adding the extra independent variables obtained by raising the power . The mathematical expression for the polynomail regression analysis is shown below. Let us now look at an example to fit a polynomial regression curve for the provided information. Let us now fit a second degree polynomial curve for the above provided information. Inorder to fit the curve for the polynomial regression we need the normal equations for the second degree polynomial. We know the second degree polynomial can be represented as y=a0+a1x+a2x^2 . In order to fit the regression for the above second degree equation we need to calculate the coeffiecient values a0,a1,a2 by using the normal equations. Normal equations for the second degree polynomail is. Let us now calculate the values of a0,a1 and a2. From the above table n=5  , ∑ x = 80 ,  ∑ y = 100 ,  ∑ x^2 = 1398 ,  ∑ x^3 = 26270 ,  ∑ x^4 = 521202 , ∑ xy = 1684 ,  ∑ x^2y = 30648 Then the normal equations becomes : 100 = 5*a0 + 80*a1 + 1398*a2 1684 = 80*a0 + 1398*a1 + 26270*a2 30648 = 1398*a0 + 26270*a1 + 521202*a2 By solving the above three equations we get a0 = -8.728 , a1 = 3.017 , a2 = -0.69 The polynomial regression curve is y = -8.728 + 3.017x -0.69x^2 . Now let us see the implementation of the polynomail regression in R ."
   },
   {
     "input": "Exponential Regression",
@@ -8125,7 +8125,7 @@
   },
   {
     "input": "Logistic Regression",
-    "output": "Logistic regression analysiscan be used for classification and regression .We can solve the logistic regression eqaution by using the linear regression representation. The mathematical equation of the logistic regression can be denoted in two ways as shown below. "
+    "output": "Logistic regression analysiscan be used for classification and regression .We can solve the logistic regression eqaution by using the linear regression representation. The mathematical equation of the logistic regression can be denoted in two ways as shown below."
   },
   {
     "input": "Applications of regression analysis",
@@ -8221,7 +8221,7 @@
   },
   {
     "input": "Step 4: Track Rewards",
-    "output": "Create PPO trainer: ppo = MiniPPO() initializes the model, tokenizer and optimizer. Training loop: Running train_step 50 times to generate text and update the model. Print progress: Every 10 steps, showing the generated text and its reward to see learning over time. "
+    "output": "Create PPO trainer: ppo = MiniPPO() initializes the model, tokenizer and optimizer. Training loop: Running train_step 50 times to generate text and update the model. Print progress: Every 10 steps, showing the generated text and its reward to see learning over time."
   },
   {
     "input": "Comparison with Other Policy Gradient Methods",
@@ -8333,7 +8333,7 @@
   },
   {
     "input": "Step 2: Load the MNIST dataset",
-    "output": "We will be loading the MNIST dataset which is inbuilt dataset and normalize pixel values to [0,1] also reshape the data to fit the model. "
+    "output": "We will be loading the MNIST dataset which is inbuilt dataset and normalize pixel values to [0,1] also reshape the data to fit the model."
   },
   {
     "input": "Step 3: Define a basic Autoencoder",
@@ -8341,7 +8341,7 @@
   },
   {
     "input": "Step 4: Compiling and Fitting Autoencoder",
-    "output": "Here we compile the model usingAdam optimizerandMean Squared Errorloss also we train for 10 epochs with batch size 256. latent_dimensions = 64: Sets the size of the compressed latent space to 64. "
+    "output": "Here we compile the model usingAdam optimizerandMean Squared Errorloss also we train for 10 epochs with batch size 256. latent_dimensions = 64: Sets the size of the compressed latent space to 64."
   },
   {
     "input": "Step 5: Visualize original and reconstructed data",
@@ -8401,7 +8401,7 @@
   },
   {
     "input": "2. Loading and Preparing the IMDB Dataset",
-    "output": "We will load IMDB dataset from tensorflow which contains 25,000 labeled movie reviews for training and testing. Shuffling ensures that the model does not learn patterns based on the order of reviews. Printing a sample review and its label from the training set. "
+    "output": "We will load IMDB dataset from tensorflow which contains 25,000 labeled movie reviews for training and testing. Shuffling ensures that the model does not learn patterns based on the order of reviews. Printing a sample review and its label from the training set."
   },
   {
     "input": "3. Performing Text Vectorization",
@@ -8409,7 +8409,7 @@
   },
   {
     "input": "4. Defining Model Architecture (BiLSTM Layers)",
-    "output": "We define the model for sentiment analysis. The first layer, Text Vectorization, converts input text into token indices. These tokens go through an embedding layer that maps words into trainable 32-dimensional vectors. During training, these vectors adjust so that words with similar meanings have similar representations. The Bidirectional LSTM layers process these sequences from both directions to capture context: The first Bidirectional LSTM has 32 units and outputs sequences. A dropout layer with rate 0.4 helps prevent overfitting. The second Bidirectional LSTM has 16 units and refines the learned features. Another dropout layer with rate 0.4 follows. The Dense layers then perform classification: A dense layer with 16 neurons andReLU activationlearns patterns from LSTM output. The final dense layer with a single neuron outputs the sentiment prediction. "
+    "output": "We define the model for sentiment analysis. The first layer, Text Vectorization, converts input text into token indices. These tokens go through an embedding layer that maps words into trainable 32-dimensional vectors. During training, these vectors adjust so that words with similar meanings have similar representations. The Bidirectional LSTM layers process these sequences from both directions to capture context: The first Bidirectional LSTM has 32 units and outputs sequences. A dropout layer with rate 0.4 helps prevent overfitting. The second Bidirectional LSTM has 16 units and refines the learned features. Another dropout layer with rate 0.4 follows. The Dense layers then perform classification: A dense layer with 16 neurons andReLU activationlearns patterns from LSTM output. The final dense layer with a single neuron outputs the sentiment prediction."
   },
   {
     "input": "5. Training the Model",
@@ -8441,7 +8441,7 @@
   },
   {
     "input": "3. Training the Model",
-    "output": "As we have compiled our model successfully and the data pipeline is also ready so, we can move forward toward the process of training our BRNN. batch_size=32defines how many samples are processed together in one iteration. epochs=5sets the number of times the model will train on the entire dataset. model.fit()trains the model on the training data and evaluates it using the provided validation data. "
+    "output": "As we have compiled our model successfully and the data pipeline is also ready so, we can move forward toward the process of training our BRNN. batch_size=32defines how many samples are processed together in one iteration. epochs=5sets the number of times the model will train on the entire dataset. model.fit()trains the model on the training data and evaluates it using the provided validation data."
   },
   {
     "input": "4. Evaluating the Model",
@@ -8449,7 +8449,7 @@
   },
   {
     "input": "5. Predict on Test Data",
-    "output": "We will use the model to predict on the test data and compare the predictions with the true labels. model.predict(X_test)generates predictions for the test data. y_pred = (y_pred > 0.5)converts the predicted probabilities into binary values (0 or 1) based on a threshold of 0.5. classification_report(y_test, y_pred, target_names=['Negative', 'Positive'])generates and prints a classification report including precision, recall, f1-score and support for the negative and positive classes. "
+    "output": "We will use the model to predict on the test data and compare the predictions with the true labels. model.predict(X_test)generates predictions for the test data. y_pred = (y_pred > 0.5)converts the predicted probabilities into binary values (0 or 1) based on a threshold of 0.5. classification_report(y_test, y_pred, target_names=['Negative', 'Positive'])generates and prints a classification report including precision, recall, f1-score and support for the negative and positive classes."
   },
   {
     "input": "Advantages of BRNNs",
@@ -8553,11 +8553,11 @@
   },
   {
     "input": "Step 4: Forward Pass: Compute Output",
-    "output": "The forward pass computes network output for given input by passing data through layers and activations. "
+    "output": "The forward pass computes network output for given input by passing data through layers and activations."
   },
   {
     "input": "Step 5: Compute Loss and Apply Chain Rule.",
-    "output": "Modern frameworks useautogradfor derivatives. Let's useMSE lossfor simplicity. "
+    "output": "Modern frameworks useautogradfor derivatives. Let's useMSE lossfor simplicity."
   },
   {
     "input": "Step 6: Access Computed Gradients (Backpropagation)",
@@ -9449,7 +9449,7 @@
   },
   {
     "input": "Step 8: Training the Model",
-    "output": "Train the CNN through all epochs. Set model to training mode. For each batch, move data to device, compute predictions and loss, backpropagate and update parameters. Accumulate and record mean loss per epoch. "
+    "output": "Train the CNN through all epochs. Set model to training mode. For each batch, move data to device, compute predictions and loss, backpropagate and update parameters. Accumulate and record mean loss per epoch."
   },
   {
     "input": "Step 9: Plotting Training Loss",
@@ -12105,7 +12105,7 @@
   },
   {
     "input": "Example of POS Tagging",
-    "output": "Consider the sentence:  The quick brown fox jumps over the lazy dog.  After performing POS Tagging, we get: Each word is assigned a tag based on its role in the sentence. For example,  quick  and  brown  are adjectives that describe the noun  fox. "
+    "output": "Consider the sentence:  The quick brown fox jumps over the lazy dog.  After performing POS Tagging, we get: Each word is assigned a tag based on its role in the sentence. For example,  quick  and  brown  are adjectives that describe the noun  fox."
   },
   {
     "input": "Working of POS Tagging",
@@ -12941,7 +12941,7 @@
   },
   {
     "input": "6.Dependency Parsing",
-    "output": "Dependency parsing identifies relationships between words, creating a syntactic tree. This helps understand the grammatical structure of a sentence and the roles of each word. Noun phrases group related words to represent a specific concept. In the sentence The second-largest town in the Belize District, we can extract the noun phrase second-largest town. "
+    "output": "Dependency parsing identifies relationships between words, creating a syntactic tree. This helps understand the grammatical structure of a sentence and the roles of each word. Noun phrases group related words to represent a specific concept. In the sentence The second-largest town in the Belize District, we can extract the noun phrase second-largest town."
   },
   {
     "input": "7. Named Entity Recognition (NER)",
@@ -14953,7 +14953,7 @@
   },
   {
     "input": "Limitations of Rule-Based Stemming",
-    "output": "It may miss some relevant word variations. Maintaining extensive rules can be challenging. It can incorrectly stem different words or fail to reduce similar ones properly. It is primarily designed for English, with less effectiveness in other languages. The algorithm can produce stems that are not meaningful, such as turning  university  into  univers. "
+    "output": "It may miss some relevant word variations. Maintaining extensive rules can be challenging. It can incorrectly stem different words or fail to reduce similar ones properly. It is primarily designed for English, with less effectiveness in other languages. The algorithm can produce stems that are not meaningful, such as turning  university  into  univers."
   },
   {
     "input": "Bidirectional Representation for Transformers (BERT)",
@@ -18201,7 +18201,7 @@
   },
   {
     "input": "2. Generative AI",
-    "output": "Generative AIis designed to create new content whether it's text, images, music or video. Unlike traditional AI which typically focuses on analyzing and classifying data, it goes a step further by using patterns it has learned from large datasets to generate new original outputs. It  creates  rather than just  recognizes. "
+    "output": "Generative AIis designed to create new content whether it's text, images, music or video. Unlike traditional AI which typically focuses on analyzing and classifying data, it goes a step further by using patterns it has learned from large datasets to generate new original outputs. It  creates  rather than just  recognizes."
   },
   {
     "input": "3.Natural Language Processing (NLP)",
@@ -18577,7 +18577,7 @@
   },
   {
     "input": "Step 2: Enter Your Query or Prompt in the Box",
-    "output": "Once you've signed in successfully, you'll see a Gemini home page with a list of questions and a message box at the bottom. If you don't have an idea how to use Gemini AI and what to ask, then you can consider sample questions to start the conversation with Gemini. You will find some default sample questions just above the prompt box. And to ask your own question, go to the message box labeled as  Enter a prompt here  at the bottom. Here, you can  Enter a prompt  via typing or voice command and hit Enter. Gemini will start analyzing your message and generate the most relevant response. For different conversations, you can open a separate chat box by clicking on the top left-side  New Chat. "
+    "output": "Once you've signed in successfully, you'll see a Gemini home page with a list of questions and a message box at the bottom. If you don't have an idea how to use Gemini AI and what to ask, then you can consider sample questions to start the conversation with Gemini. You will find some default sample questions just above the prompt box. And to ask your own question, go to the message box labeled as  Enter a prompt here  at the bottom. Here, you can  Enter a prompt  via typing or voice command and hit Enter. Gemini will start analyzing your message and generate the most relevant response. For different conversations, you can open a separate chat box by clicking on the top left-side  New Chat."
   },
   {
     "input": "Step 3: Write a prompt",
@@ -22309,7 +22309,7 @@
   },
   {
     "input": "2.Inference Engine: The Brain Behind the Decisions",
-    "output": "Theinference engineis the brain of the expert system. It processes the information stored in the knowledge base to draw conclusions or make recommendations.The inference engine uses reasoning strategies (like forward chaining or backward chaining) to analyze data and apply rules. Forward Chaining: Starts with available data and works toward a conclusion. For example, If the temperature is high and the patient has a cough, diagnose a respiratory infection.  Backward Chaining: Starts with a goal and works backward to find supporting evidence. For example, If the goal is to diagnose diabetes, check for symptoms like frequent urination and high blood sugar. "
+    "output": "Theinference engineis the brain of the expert system. It processes the information stored in the knowledge base to draw conclusions or make recommendations.The inference engine uses reasoning strategies (like forward chaining or backward chaining) to analyze data and apply rules. Forward Chaining: Starts with available data and works toward a conclusion. For example, If the temperature is high and the patient has a cough, diagnose a respiratory infection.  Backward Chaining: Starts with a goal and works backward to find supporting evidence. For example, If the goal is to diagnose diabetes, check for symptoms like frequent urination and high blood sugar."
   },
   {
     "input": "3.User Interface: Bridging the Gap Between System and User",
@@ -22317,7 +22317,7 @@
   },
   {
     "input": "4.Explanation Module: Building Trust Through Transparency",
-    "output": "Theexplanation moduleis a critical feature that explains how the system arrived at a particular conclusion. It’s like a teachershowing their work when solving a math problem.This module provides users with a clear, step-by-step explanation of the system’s reasoning. This transparency is especially important in fields like healthcare and finance, where decisions can have significant consequences. Example: A medical expert system might explain, I diagnosed pneumonia because the patient has a fever, cough, and abnormal chest X-ray. "
+    "output": "Theexplanation moduleis a critical feature that explains how the system arrived at a particular conclusion. It’s like a teachershowing their work when solving a math problem.This module provides users with a clear, step-by-step explanation of the system’s reasoning. This transparency is especially important in fields like healthcare and finance, where decisions can have significant consequences. Example: A medical expert system might explain, I diagnosed pneumonia because the patient has a fever, cough, and abnormal chest X-ray."
   },
   {
     "input": "5.Knowledge Acquisition Module: Keeping the System Up-to-Date",
@@ -22945,7 +22945,7 @@
   },
   {
     "input": "2. Instance segmentation",
-    "output": "Instance segmentationextends semantic segmentation by not only labelling colour of each pixel but also distinguishing between individual objects of the same class.This approach identifies each object of the same class as a unique instance. For example if there are multiple cats in an image it will differentiate each cat and treat them as separate entities despite them all being labelled as  cats. "
+    "output": "Instance segmentationextends semantic segmentation by not only labelling colour of each pixel but also distinguishing between individual objects of the same class.This approach identifies each object of the same class as a unique instance. For example if there are multiple cats in an image it will differentiate each cat and treat them as separate entities despite them all being labelled as  cats."
   },
   {
     "input": "3. Panoptic Segmentation",
@@ -23077,7 +23077,7 @@
   },
   {
     "input": "Step 7: Model Construction",
-    "output": "We build a model with VGG16+ FCN-like Decoder, Uses pre-trainedVGG16for feature extraction. Only extracts essential intermediate layers. Frozen weights ensure transfer learning stability. Decoder upsamples deep features, merges skip connections and produces pixel-wise class probabilities. "
+    "output": "We build a model with VGG16+ FCN-like Decoder, Uses pre-trainedVGG16for feature extraction. Only extracts essential intermediate layers. Frozen weights ensure transfer learning stability. Decoder upsamples deep features, merges skip connections and produces pixel-wise class probabilities."
   },
   {
     "input": "Step 8: Build and Compile Segmentation Model",
@@ -23309,7 +23309,7 @@
   },
   {
     "input": "Step 1: Data Collection",
-    "output": "A dataset of instruction-output pairs is curated. These pairs should cover a broad spectrum of tasks, including both simple and complex instructions. Examples include: Instruction: Translate the following sentence into French.  Output: La phrase traduite en français. "
+    "output": "A dataset of instruction-output pairs is curated. These pairs should cover a broad spectrum of tasks, including both simple and complex instructions. Examples include: Instruction: Translate the following sentence into French.  Output: La phrase traduite en français."
   },
   {
     "input": "Step 2: Model Fine-Tuning",
@@ -24485,23 +24485,23 @@
   },
   {
     "input": "1.Be Clear and Specific",
-    "output": "Action: Clearly define our request with precision. Benefit: Reduces ambiguity, ensuring the AI generates focused, accurate responses. Example: List three key benefits of renewable energy for businesses. "
+    "output": "Action: Clearly define our request with precision. Benefit: Reduces ambiguity, ensuring the AI generates focused, accurate responses. Example: List three key benefits of renewable energy for businesses."
   },
   {
     "input": "2.Specify Response Format",
-    "output": "Action: Indicate the desired structure for the answer like list, bullet points, essay, etc. Benefit: Ensures the AI delivers the response in the preferred format, improving clarity and usability. Example: Summarize the latest trends in AI technology in 100 words, using bullet points. "
+    "output": "Action: Indicate the desired structure for the answer like list, bullet points, essay, etc. Benefit: Ensures the AI delivers the response in the preferred format, improving clarity and usability. Example: Summarize the latest trends in AI technology in 100 words, using bullet points."
   },
   {
     "input": "3.Provide Context",
-    "output": "Action: Include relevant background or situational context to guide the AI’s response. Benefit: The AI prepares its answer based on the provided context, resulting in a more accurate and relevant response. Example: As a financial analyst, explain the investment options for beginners with examples. "
+    "output": "Action: Include relevant background or situational context to guide the AI’s response. Benefit: The AI prepares its answer based on the provided context, resulting in a more accurate and relevant response. Example: As a financial analyst, explain the investment options for beginners with examples."
   },
   {
     "input": "4.Structure Step-by-Step Instructions",
-    "output": "Action: Break down complex tasks into clear, sequential steps. Benefit: Helps the AI produce logical organized instructions that are easy to follow. Example: Explain how to boil pasta, step by step, including cooking time. "
+    "output": "Action: Break down complex tasks into clear, sequential steps. Benefit: Helps the AI produce logical organized instructions that are easy to follow. Example: Explain how to boil pasta, step by step, including cooking time."
   },
   {
     "input": "5.Set Output Constraints",
-    "output": "Action: Define word limits, tone or complexity for the response. Benefit: Ensures the response aligns with your needs, whether for brevity, style or depth. Example: Explain AI in 150 words in a friendly tone for beginners. "
+    "output": "Action: Define word limits, tone or complexity for the response. Benefit: Ensures the response aligns with your needs, whether for brevity, style or depth. Example: Explain AI in 150 words in a friendly tone for beginners."
   },
   {
     "input": "6.Experiment and Iterate",
@@ -24509,11 +24509,11 @@
   },
   {
     "input": "7.Use Clear Action Verbs",
-    "output": "Action: Start prompts with specific action verbs such as  describe ,  analyze  or  compare . Benefit: Action verbs help guide the AI’s approach to provide the desired depth or type of response. Example: Describe the process of photosynthesis in plants. "
+    "output": "Action: Start prompts with specific action verbs such as  describe ,  analyze  or  compare . Benefit: Action verbs help guide the AI’s approach to provide the desired depth or type of response. Example: Describe the process of photosynthesis in plants."
   },
   {
     "input": "8.Ask for Multiple Perspectives or Solutions",
-    "output": "Action: Request answers from different viewpoints or propose multiple solutions. Benefit: Encourages a more comprehensive and diverse response. Example: Provide solutions for improving urban transportation from the perspectives of an environmentalist, a city planner and a commuter. "
+    "output": "Action: Request answers from different viewpoints or propose multiple solutions. Benefit: Encourages a more comprehensive and diverse response. Example: Provide solutions for improving urban transportation from the perspectives of an environmentalist, a city planner and a commuter."
   },
   {
     "input": "9.Refine With Clarifying Questions",
@@ -24529,15 +24529,15 @@
   },
   {
     "input": "12.Request for Examples or Case Studies",
-    "output": "Action: Ask for real-world examples or case studies to illustrate the concept or solution. Benefit: Examples make abstract ideas more tangible and relatable. Example: Explain the benefits of automation in healthcare and provide a real-world case study of its implementation. "
+    "output": "Action: Ask for real-world examples or case studies to illustrate the concept or solution. Benefit: Examples make abstract ideas more tangible and relatable. Example: Explain the benefits of automation in healthcare and provide a real-world case study of its implementation."
   },
   {
     "input": "13.Be Transparent About Your Expectations",
-    "output": "Action: Clearly state what you expect in terms of detail, length and tone. Benefit: Transparency ensures the AI delivers a response that matches your needs, reducing the need for further clarifications. Example: Provide a detailed 500-word analysis of climate change’s economic impact, with academic references. "
+    "output": "Action: Clearly state what you expect in terms of detail, length and tone. Benefit: Transparency ensures the AI delivers a response that matches your needs, reducing the need for further clarifications. Example: Provide a detailed 500-word analysis of climate change’s economic impact, with academic references."
   },
   {
     "input": "14.Use Time Frames or Historical Context",
-    "output": "Action: Provide a time frame or historical context for the topic being discussed. Benefit: Helps the AI focus on a specific period, producing a more relevant and historically accurate answer. Example: Explain the economic impact of World War II in the 1940s. "
+    "output": "Action: Provide a time frame or historical context for the topic being discussed. Benefit: Helps the AI focus on a specific period, producing a more relevant and historically accurate answer. Example: Explain the economic impact of World War II in the 1940s."
   },
   {
     "input": "15.Maintain a Balance Between Open-Ended and Closed-Ended Questions",
@@ -24545,7 +24545,7 @@
   },
   {
     "input": "16.Clarify the Target Audience",
-    "output": "Action: Specify who the response is intended for like a child, an expert, general public, etc. Benefit: Helps the AI adjust its language, tone and complexity to suit the audience’s needs. Example: Explain blockchain to a 16-year-old high school student. "
+    "output": "Action: Specify who the response is intended for like a child, an expert, general public, etc. Benefit: Helps the AI adjust its language, tone and complexity to suit the audience’s needs. Example: Explain blockchain to a 16-year-old high school student."
   },
   {
     "input": "17.Use Creative or Scenario-Based Prompts for Idea Generation",
@@ -24553,15 +24553,15 @@
   },
   {
     "input": "18.Incorporate Metrics and Data for Analytical Tasks",
-    "output": "Action: Include specific data points or metrics to help guide the AI's analysis. Benefit: Data-driven prompts lead to more precise, fact-based responses. Example: Analyze the potential effects of a 15% increase in sales tax on the economy using GDP growth, unemployment rate and inflation data. "
+    "output": "Action: Include specific data points or metrics to help guide the AI's analysis. Benefit: Data-driven prompts lead to more precise, fact-based responses. Example: Analyze the potential effects of a 15% increase in sales tax on the economy using GDP growth, unemployment rate and inflation data."
   },
   {
     "input": "19.Utilize Tone and Voice for Personalization",
-    "output": "Action: Specify the tone and style you want the AI to use in its response like formal, informal, humorous). Benefit: Tailoring the tone ensures that the response matches your communication style or audience’s preferences. Example: Write a friendly and encouraging message for a student preparing for exams. "
+    "output": "Action: Specify the tone and style you want the AI to use in its response like formal, informal, humorous). Benefit: Tailoring the tone ensures that the response matches your communication style or audience’s preferences. Example: Write a friendly and encouraging message for a student preparing for exams."
   },
   {
     "input": "20.Request Sources or Citations",
-    "output": "Action: Ask the AI to include sources or citations when discussing factual content. Benefit: Requesting sources enhances the credibility of the response and allows for verification. Example: Explain the effects of deforestation on biodiversity, citing at least two scientific studies. "
+    "output": "Action: Ask the AI to include sources or citations when discussing factual content. Benefit: Requesting sources enhances the credibility of the response and allows for verification. Example: Explain the effects of deforestation on biodiversity, citing at least two scientific studies."
   },
   {
     "input": "Avoiding Bias and Ambiguity",
@@ -24885,11 +24885,11 @@
   },
   {
     "input": "2. Median Blur",
-    "output": "Median blur is a non-linear filter which means it doesn't average the pixel values. Instead, it replaces each pixel with the median value of its neighboring pixels. This technique is useful for removing salt-and-pepper noise (random black and white pixels) while keeping the edges intact. "
+    "output": "Median blur is a non-linear filter which means it doesn't average the pixel values. Instead, it replaces each pixel with the median value of its neighboring pixels. This technique is useful for removing salt-and-pepper noise (random black and white pixels) while keeping the edges intact."
   },
   {
     "input": "3. Bilateral Blur",
-    "output": "The bilateral filter is a more advanced technique that smooths the image while preserving edges. It calculates a weighted average based on both the spatial distance and the pixel intensity. This means that it will blur areas with similar colors and preserve sharp edges, making it useful for noise reduction without sacrificing important details. "
+    "output": "The bilateral filter is a more advanced technique that smooths the image while preserving edges. It calculates a weighted average based on both the spatial distance and the pixel intensity. This means that it will blur areas with similar colors and preserve sharp edges, making it useful for noise reduction without sacrificing important details."
   },
   {
     "input": "Closing Operation",
@@ -25401,7 +25401,7 @@
   },
   {
     "input": "1. Multiple Responses",
-    "output": "AI generates several answers to the same question based on different reasoning paths. Instead of relying on a single response, the model uses multiple approaches to tackle the problem, which allows it to explore different perspectives. For example, if asked,  What is 8 + 5? , the model could reason in different ways: Each of these responses uses a slightly different way of thinking about the problem (direct calculation, step-by-step reasoning, or an alternate way of phrasing the solution). Response 1:  8 + 5 is 13.  Response 2:  Start from 8, count five numbers forward (9, 10, 11, 12, 13), so 8 + 5 equals 13.  Response 3:  The sum of 8 and 5 is 13. "
+    "output": "AI generates several answers to the same question based on different reasoning paths. Instead of relying on a single response, the model uses multiple approaches to tackle the problem, which allows it to explore different perspectives. For example, if asked,  What is 8 + 5? , the model could reason in different ways: Each of these responses uses a slightly different way of thinking about the problem (direct calculation, step-by-step reasoning, or an alternate way of phrasing the solution). Response 1:  8 + 5 is 13.  Response 2:  Start from 8, count five numbers forward (9, 10, 11, 12, 13), so 8 + 5 equals 13.  Response 3:  The sum of 8 and 5 is 13."
   },
   {
     "input": "2. Aggregation",
@@ -25417,6 +25417,6 @@
   },
   {
     "input": "Challenges of Self-Consistency Prompting",
-    "output": "Despite its many advantages, Self-consistency prompting also presents several challenges that need to be addressed for optimal performance: By considering multiple responses and selecting the most consistent one,Self-consistency promptingensures that AI systems can deliver more reliable and accurate results, even in the face of potential reasoning errors."
+    "output": "Despite its many advantages, Self-consistency prompting also presents several challenges that need to be addressed for optimal performance: By considering multiple responses and selecting the most consistent one,Self-consistency prompting ensures that AI systems can deliver more reliable and accurate results, even in the face of potential reasoning errors."
   }
 ]
