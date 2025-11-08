@@ -264,76 +264,76 @@
     "output": "Problem-solving is a fundamental aspect of AI which involves the design and application of algorithms to solve complex problems systematically."
   },
   {
-    "input": "1. Search Algorithms in AI",
-    "output": "Search algorithms navigate through problem spaces to find solutions. Search algorithms Breadth-First Search (BFS) Depth-First Search (DFS) Uniform Cost Search (UCS) Bidirectional search Greedy Best-First Search A Search* Algorithm"
+    "input": "Search Algorithms in AI",
+    "output": "Search algorithms navigate through problem spaces to find solutions. Search algorithms Breadth-First Search or BFS Depth-First Search or DFS Uniform Cost Search or UCS Bidirectional search Greedy Best-First Search A Star Search Algorithm"
   },
   {
-    "input": "2. Local Search Algorithms",
+    "input": "Local Search Algorithms",
     "output": "Local search algorithms operates on a single current state (or a small set of states) and attempt to improve it incrementally by exploring neighboring states. Local search algorithms Hill-Climbing Search Algorithm Local Beam Search"
   },
   {
-    "input": "3. Adversarial Search in AI",
-    "output": "Adversarial search deal with competitive environments where multiple agents (often two) are in direct competition with one another such as in games like chess, tic-tac-toe or Go. Adversarial search Minimax Algorithm Alpha-Beta Pruning"
+    "input": "Adversarial Search in AI",
+    "output": "Adversarial search deal with competitive environments where multiple agents often two are in direct competition with one another such as in games like chess, tic tac toe or Go. Adversarial search Minimax Algorithm Alpha Beta Pruning"
   },
   {
-    "input": "4. Constraint Satisfaction Problems",
-    "output": "Constraint Satisfaction Problem (CSP) is a problem-solving framework that involves variables each with a domain of possible values and constraints limiting the combinations of variable values. Constraint Satisfaction Problem (CSP) Constraint Propagation in CSP’s Backtracking Search for CSP’s"
+    "input": "Constraint Satisfaction Problems",
+    "output": "Constraint Satisfaction Problem or CSP is a problem solving framework that involves variables each with a domain of possible values and constraints limiting the combinations of variable values. Constraint Satisfaction Problem or CSP Constraint Propagation in CSP’s Backtracking Search for CSP’s"
   },
   {
     "input": "Knowledge, Reasoning and Planning in AI",
-    "output": "Knowledge representation in Artificial Intelligence (AI) refers to the way information, knowledge and data are structured, stored and used by AI systems to reason, learn and make decisions. Common techniques for knowledge representation include: Knowledge representation in Artificial Intelligence (AI) Semantic Networks Frames Ontologies Logical Representation"
+    "output": "Knowledge representation in Artificial Intelligence or AI refers to the way information, knowledge and data are structured, stored and used by AI systems to reason, learn and make decisions. Common techniques for knowledge representation include: Knowledge representation in Artificial Intelligence Semantic Networks Frames Ontologies Logical Representation"
   },
   {
     "input": "First Order Logic in Artificial Intelligence",
-    "output": "First Order Logic (FOL) is use to represent knowledge and reason about the world. It allows for the expression of more complex statements involving objects, their properties and the relationships between them. First Order Logic (FOL) Knowledge Representation in First Order Logic Syntax and Semantics of First Order Logic Inference Rules in First Order Logic"
+    "output": "First Order Logic or FOL is use to represent knowledge and reason about the world. It allows for the expression of more complex statements involving objects, their properties and the relationships between them. First Order Logic Knowledge Representation in First Order Logic Syntax and Semantics of First Order Logic Inference Rules in First Order Logic"
   },
   {
     "input": "Reasoning in Artificial Intelligence",
-    "output": "Reasoning in Artificial Intelligence (AI) is the process by which AI systems draw conclusions, make decisions or infer new knowledge from existing information. Types of reasoning used in AI are: Reasoning in Artificial Intelligence (AI) Types of Reasoning in AI Deductive Reasoning Inductive Reasoning Abductive Reasoning Fuzzy Reasoning"
+    "output": "Reasoning in Artificial Intelligence is the process by which AI systems draw conclusions, make decisions or infer new knowledge from existing information. Types of reasoning used in AI are: Reasoning in Artificial Intelligence, Types of Reasoning in AI Deductive Reasoning are Inductive Reasoning Abductive and Reasoning Fuzzy Reasoning"
   },
   {
     "input": "Planning in AI",
-    "output": "Planning in AI generates a sequence of actions that an intelligent agent needs to execute to achieve specific goals or objectives. Some of the planning techniques in artificial intelligence includes: Planning in AI Forward State Space Search Markov Decision Processes (MDPs) Hierarchical State Space Search (HSSS)"
+    "output": "Planning in AI generates a sequence of actions that an intelligent agent needs to execute to achieve specific goals or objectives. Some of the planning techniques in artificial intelligence includes: Planning in AI Forward State Space Search Markov Decision Processes or MDPs Hierarchical State Space Search or HSSS"
   },
   {
     "input": "Uncertain Knowledge and Reasoning",
-    "output": "Uncertain Knowledge and Reasoning in AI refers to the methods and techniques used to handle situations where information is incomplete, ambiguous or uncertain. For managing uncertainty in AI following methods are used: Uncertain Knowledge and Reasoning in AI Dempster-Shafer Theory Probabilistic Reasoning Fuzzy Logic Neural Networks with dropout"
+    "output": "Uncertain Knowledge and Reasoning in AI refers to the methods and techniques used to handle situations where information is incomplete, ambiguous or uncertain. For managing uncertainty in AI following methods are used: Uncertain Knowledge and Reasoning in AI Dempster Shafer Theory Probabilistic Reasoning Fuzzy Logic Neural Networks with dropout"
   },
   {
-    "input": "Types of Learningin AI",
-    "output": "Learning in Artificial Intelligence (AI) refers to the process by which a system improves its performance on a task over time through experience, data or interaction with the environment."
+    "input": "Types of Learning in AI",
+    "output": "Learning in Artificial Intelligence refers to the process by which a system improves its performance on a task over time through experience, data or interaction with the environment."
   },
   {
-    "input": "1. Supervised Learning",
-    "output": "In Supervised Learning model are trained on labeled dataset to learn the mapping from inputs to outputs. Various algorithms are: Supervised Learning Linear Regression Logistic Regression Decision Trees Support Vector Machines (SVM) k-Nearest Neighbors Naïve Bayes Random Forests"
+    "input": "Supervised Learning",
+    "output": "In Supervised Learning model are trained on labeled dataset to learn the mapping from inputs to outputs. Various algorithms are: Supervised Learning Linear Regression Logistic Regression Decision Trees Support Vector Machines or SVM K Nearest Neighbors Naive Bayes Random Forests"
   },
   {
-    "input": "2. Semi-supervised learning",
-    "output": "In Semi-supervised learning the model uses both labeled and unlabeled data to improve learning accuracy. Semi-supervised learning"
+    "input": "Semi-supervised learning",
+    "output": "In Semi supervised learning the model uses both labeled and unlabeled data to improve learning accuracy."
   },
   {
-    "input": "3. Unsupervised Learning",
-    "output": "InUnsupervised Learning the model is trained on unlabeled dataset to discover patterns or structures. Unsupervised Learning K-Means Clustering Principal Component Analysis (PCA) Hierarchical Clustering DBSCAN (Density-Based Spatial Clustering of Applications with Noise)"
+    "input": "Unsupervised Learning",
+    "output": "In Unsupervised Learning the model is trained on unlabeled dataset to discover patterns or structures. Unsupervised Learning K Means Clustering Principal Component Analysis or PCA Hierarchical Clustering DBSCAN or Density Based Spatial Clustering of Applications with Noise"
   },
   {
-    "input": "4. Reinforcement Learning",
-    "output": "In Reinforcement Learning the agent learns through interactions with an environment using feedbacks. Reinforcement Learning Q-Learning Deep Q-Networks (DQN) Markov decision processes (MDPs) Bellman equation"
+    "input": "Reinforcement Learning",
+    "output": "In Reinforcement Learning the agent learns through interactions with an environment using feedbacks. Reinforcement Learning Q-Learning Deep Q-Networks or DQN Markov decision processes or MDPs Bellman equation"
   },
   {
-    "input": "5. Deep Learning",
-    "output": "Deep Learning focuses on using neural networks with many layers to model and understand complex patterns and representations in large datasets. Deep Learning Neurons Single Layer Perceptron Multi-Layer Perceptron Artificial Neural Networks (ANNs) Feedforward Neural Networks (FNN) Convolutional Neural Networks (CNN) Recurrent Neural Networks (RNNs) Long Short-Term Memory (LSTM) networks Gated Recurrent Units Networks (GRU)"
+    "input": "Deep Learning",
+    "output": "Deep Learning focuses on using neural networks with many layers to model and understand complex patterns and representations in large datasets. Deep Learning Neurons Single Layer Perceptron Multi Layer Perceptron Artificial Neural Networks or ANNs Feedforward Neural Networks (FNN) Convolutional Neural Networks or CNN Recurrent Neural Networks or RNNs Long Short-Term Memory or LSTM networks Gated Recurrent Units Networks or GRU"
   },
   {
     "input": "Probabilistic models",
-    "output": "Probabilistic models in AI deals with uncertainty making predictions and modeling complex systems where uncertainty and variability play an important role. These models help in reasoning, decision-making and learning from data. Probabilistic models Naive Bayes Classifier Monte Carlo Methods Expectation-Maximization (EM) Algorithm"
+    "output": "Probabilistic models in AI deals with uncertainty making predictions and modeling complex systems where uncertainty and variability play an important role. These models help in reasoning, decision-making and learning from data. Probabilistic models Naive Bayes Classifier Monte Carlo Methods Expectation-Maximization or EM Algorithm"
   },
   {
     "input": "Communication, Perceiving and Acting in AI and Robotics",
-    "output": "Communication in AI and robotics helps in the interaction between machines and their environments which uses natural language processing. Perceiving helps machines using sensors and cameras to interpret their surroundings accurately. Acting in robotics includes making informed decisions and performing tasks based on processed data. 1.Natural Language Processing (NLP) Speech Recognition Natural Language Generation Chatbots Machine Translation 2.Computer Vision Image Recognition Facial Recognition Optical Character Recognition 3.Robotics"
+    "output": "Communication in AI and robotics helps in the interaction between machines and their environments which uses natural language processing. Perceiving helps machines using sensors and cameras to interpret their surroundings accurately. Acting in robotics includes making informed decisions and performing tasks based on processed data. 1. Natural Language Processing: Speech Recognition Natural Language Generation Chatbots Machine Translation 2. Computer Vision Image Recognition Facial Recognition Optical Character Recognition 3. Robotics"
   },
   {
     "input": "Generative AI",
-    "output": "Generative AI focuses on creating new data examples that resemble real data, effectively learning the distribution of data to generate similar but distinct outputs. Large Language Models GPT (Generative Pre-trained Transformer) BERT (Bidirectional Encoder Representations from Transformers) T5 (Text-to-Text Transfer Transformer) Conditional GAN (cGAN) CycleGAN Style GANs We've covered the AI tutuorial which is important for developing intelligent systems and helps in making the perfect balance of simplicity and capability."
+    "output": "Generative AI focuses on creating new data examples that resemble real data, effectively learning the distribution of data to generate similar but distinct outputs. Large Language Models GPT or Generative Pre-trained Transformer  BERT or Bidirectional Encoder Representations from Transformers T5 or Text-to-Text Transfer Transformer Conditional GAN cGAN or CycleGAN Style GANs We've covered the AI tutuorial which is important for developing intelligent systems and helps in making the perfect balance of simplicity and capability."
   },
   {
     "input": "Key Components of an ANN",
