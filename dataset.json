@@ -189,7 +189,7 @@
   },
   {
     "input": "Limitations of Abductive Reasoning in AI",
-    "output": "Although promising, there are several obstacles to overcome when integrating abductive reasoning into AI systems: Complexity of Human Logic:It is challenging for AI to imitate human thinking since it frequently depends on contextual and complex knowledge. Data and Bias:The training data utilized in AI-driven abduction is crucial. Inaccurate or unjust conclusions might result from biased or inadequate data sets. Computational Costs:It can be costly and time-consuming to generate and assess several hypotheses to determine which one best explains a phenomenon."
+    "output": "Although promising, there are several obstacles to overcome when integrating abductive reasoning into AI systems: Complexity of Human Logic: It is challenging for AI to imitate human thinking since it frequently depends on contextual and complex knowledge. Data and Bias:The training data utilized in AI-driven abduction is crucial. Inaccurate or unjust conclusions might result from biased or inadequate data sets. Computational Costs:It can be costly and time-consuming to generate and assess several hypotheses to determine which one best explains a phenomenon."
   },
   {
     "input": "Conclusion on Abductive Reasoning in AI",
@@ -201,7 +201,7 @@
   },
   {
     "input": "How do AI Agents Work?",
-    "output": "1. Persona:Each agent is given a clearly defined role, personality and communication style along with specific instructions and descriptions of the tools it can use. A well‑crafted persona ensures the agent behaves consistently and appropriately for its role, while also evolving as it gains experience and engages with users or other systems. 2. Memory:Agents typically have multiple types of memory: Short‑term memory for the current interaction Long‑term memory for storing historical data and conversations Episodic memory for recalling specific past events Consensus memory for sharing knowledge among multiple agents Memory enables an agent to keep context, learn from experience and adapt its behaviour over time. 3. Tools:These are functions or external resources the agent can use to access information, process data, control devices or connect with other systems. Tools may involve physical interfaces, graphical UIs or programmatic APIs. Agents also learn how and when to use these tools effectively, based on their capabilities and context. 4. Model:Agents use large language model (LLM) which serves as the agent’s “brain”. The LLM interprets instructions, reasons about solutions, generates language and orchestrates other components including memory retrieval and tools to use to carry out tasks."
+    "output": "1. Persona: Each agent is given a clearly defined role, personality and communication style along with specific instructions and descriptions of the tools it can use. A well‑crafted persona ensures the agent behaves consistently and appropriately for its role, while also evolving as it gains experience and engages with users or other systems. 2. Memory:Agents typically have multiple types of memory: Short‑term memory for the current interaction Long‑term memory for storing historical data and conversations Episodic memory for recalling specific past events Consensus memory for sharing knowledge among multiple agents Memory enables an agent to keep context, learn from experience and adapt its behaviour over time. 3. Tools:These are functions or external resources the agent can use to access information, process data, control devices or connect with other systems. Tools may involve physical interfaces, graphical UIs or programmatic APIs. Agents also learn how and when to use these tools effectively, based on their capabilities and context. 4. Model:Agents use large language model (LLM) which serves as the agent’s “brain”. The LLM interprets instructions, reasons about solutions, generates language and orchestrates other components including memory retrieval and tools to use to carry out tasks."
   },
   {
     "input": "Architecture of AI Agents",
@@ -1173,7 +1173,7 @@
   },
   {
     "input": "4. Optimization",
-    "output": "MLPs rely on optimization algorithms to iteratively refine the weights and biases during training. Popular optimization methods include: Stochastic Gradient Descent (SGD): Updates the weights based on a single sample or a small batch of data:w = w -  eta  cdot  frac{ partial L}{ partial w} Adam Optimizer: An extension of SGD that incorporates momentum and adaptive learning rates for more efficient training:m_t =  beta_1 m_{t-1} + (1 -  beta_1)  cdot g_tv_t =  beta_2 v_{t-1} + (1 -  beta_2)  cdot g_t^2 m_t =  beta_1 m_{t-1} + (1 -  beta_1)  cdot g_t v_t =  beta_2 v_{t-1} + (1 -  beta_2)  cdot g_t^2 Hereg_t​ represents the gradient at timetand beta_1,  beta_2are decay rates. Now that we are done with the theory part of multi-layer perception, let's go ahead and implement code in python using the TensorFlow library."
+    "output": "MLPs rely on optimization algorithms to iteratively refine the weights and biases during training. Popular optimization methods include: Stochastic Gradient Descent (SGD): Updates the weights based on a single sample or a small batch of data: w = w -  eta  cdot  frac{ partial L}{ partial w} Adam Optimizer: An extension of SGD that incorporates momentum and adaptive learning rates for more efficient training:m_t =  beta_1 m_{t-1} + (1 -  beta_1)  cdot g_tv_t =  beta_2 v_{t-1} + (1 -  beta_2)  cdot g_t^2 m_t =  beta_1 m_{t-1} + (1 -  beta_1)  cdot g_t v_t =  beta_2 v_{t-1} + (1 -  beta_2)  cdot g_t^2 Hereg_t​ represents the gradient at timetand beta_1,  beta_2are decay rates. Now that we are done with the theory part of multi-layer perception, let's go ahead and implement code in python using the TensorFlow library."
   },
   {
     "input": "Implementing Multi Layer Perceptron",
@@ -1229,7 +1229,7 @@
   },
   {
     "input": "Assumption of Naive Bayes",
-    "output": "The fundamental Naive Bayes assumption is that each feature makes an: Feature independence:This means that when we are trying to classify something, we assume that each feature (or piece of information) in the data does not affect any other feature. Continuous features are normally distributed:If a feature is continuous, then it is assumed to be normally distributed within each class. Discrete features have multinomial distributions:If a feature is discrete, then it is assumed to have a multinomial distribution within each class. Features are equally important:All features are assumed to contribute equally to the prediction of the class label. No missing data:The data should not contain any missing values."
+    "output": "The fundamental Naive Bayes assumption is that each feature makes an: Feature independence:This means that when we are trying to classify something, we assume that each feature (or piece of information) in the data does not affect any other feature. Continuous features are normally distributed:If a feature is continuous, then it is assumed to be normally distributed within each class. Discrete features have multinomial distributions:If a feature is discrete, then it is assumed to have a multinomial distribution within each class. Features are equally important:All features are assumed to contribute equally to the prediction of the class label. No missing data: The data should not contain any missing values."
   },
   {
     "input": "Introduction to Bayes' Theorem",
@@ -1533,7 +1533,7 @@
   },
   {
     "input": "Key Features of Random Forest",
-    "output": "Handles Missing Data:It can work even if some data is missing so you don’t always need to fill in the gaps yourself. Shows Feature Importance:It tells you which features (columns) are most useful for making predictions which helps you understand your data better. Works Well with Big and Complex Data:It can handle large datasets with many features without slowing down or losing accuracy. Used for Different Tasks:You can use it for bothclassificationlike predicting types or labels andregressionlike predicting numbers or amounts."
+    "output": "Handles Missing Data: It can work even if some data is missing so you don’t always need to fill in the gaps yourself. Shows Feature Importance:It tells you which features (columns) are most useful for making predictions which helps you understand your data better. Works Well with Big and Complex Data: It can handle large datasets with many features without slowing down or losing accuracy. Used for Different Tasks:You can use it for bothclassificationlike predicting types or labels andregressionlike predicting numbers or amounts."
   },
   {
     "input": "Assumptions of Random Forest",
@@ -1713,7 +1713,7 @@
   },
   {
     "input": "Types of Supervised Learning in Machine Learning",
-    "output": "Now, Supervised learning can be applied to two main types of problems: Classification:Where the output is a categorical variable (e.g., spam vs. non-spam emails, yes vs. no). Regression:Where the output is a continuous variable (e.g., predicting house prices, stock prices). While training the model, data is usually split in the ratio of 80:20 i.e. 80% as training data and the rest as testing data. In training data, we feed input as well as output for 80% of data. The model learns from training data only. We use different supervised learning algorithms (which we will discuss in detail in the next section) to build our model. Let's first understand the classification and regression data through the table below: Both the above figures have labelled data set as follows: Figure A: It is a dataset of a shopping store that is useful in predicting whether a customer will purchase a particular product under consideration or not based on his/her gender, age and salary. Input: Gender, Age, Salary Output: Purchased i.e. 0 or 1; 1 means yes the customer will purchase and 0 means that the customer won't purchase it. Figure B:It is a Meteorological dataset that serves the purpose of predicting wind speed based on different parameters. Input: Dew Point, Temperature, Pressure, Relative Humidity, Wind Direction Output: Wind Speed"
+    "output": "Now, Supervised learning can be applied to two main types of problems: Classification:Where the output is a categorical variable (e.g., spam vs. non-spam emails, yes vs. no). Regression:Where the output is a continuous variable (e.g., predicting house prices, stock prices). While training the model, data is usually split in the ratio of 80:20 i.e. 80% as training data and the rest as testing data. In training data, we feed input as well as output for 80% of data. The model learns from training data only. We use different supervised learning algorithms (which we will discuss in detail in the next section) to build our model. Let's first understand the classification and regression data through the table below: Both the above figures have labelled data set as follows: Figure A: It is a dataset of a shopping store that is useful in predicting whether a customer will purchase a particular product under consideration or not based on his/her gender, age and salary. Input: Gender, Age, Salary Output: Purchased i.e. 0 or 1; 1 means yes the customer will purchase and 0 means that the customer won't purchase it. Figure B: It is a Meteorological dataset that serves the purpose of predicting wind speed based on different parameters. Input: Dew Point, Temperature, Pressure, Relative Humidity, Wind Direction Output: Wind Speed"
   },
   {
     "input": "Working of Supervised Machine Learning",
@@ -1973,7 +1973,7 @@
   },
   {
     "input": "Advantages",
-    "output": "No need for labeled data:Works with raw, unlabeled data hence saving time and effort on data annotation. Discovers hidden patterns: Finds natural groupings and structures that might be missed by humans. Handles complex and large datasets: Effective for high-dimensional or vast amounts of data. Useful for anomaly detection: Can identify outliers and unusual data points without prior examples."
+    "output": "No need for labeled data: Works with raw, unlabeled data hence saving time and effort on data annotation. Discovers hidden patterns: Finds natural groupings and structures that might be missed by humans. Handles complex and large datasets: Effective for high-dimensional or vast amounts of data. Useful for anomaly detection: Can identify outliers and unusual data points without prior examples."
   },
   {
     "input": "Challenges",
@@ -2005,7 +2005,7 @@
   },
   {
     "input": "Step 4: Train the Agent with Q-Learning Algorithm",
-    "output": "We will train the agent: Runs multiple episodes for the agent to learn. During each episode, the agent selects actions and updates itsQ-Tableusing the Q-learning formula:Q(s,a) = Q(s,a) +  alpha  bigl[r +  gamma  max_{a'} Q(s',a') - Q(s,a) bigr] total_rewardstracks cumulative rewards per episode. epsilondecays gradually to reduce randomness over time."
+    "output": "We will train the agent: Runs multiple episodes for the agent to learn. During each episode, the agent selects actions and updates itsQ-Tableusing the Q-learning formula: Q(s,a) = Q(s,a) +  alpha  bigl[r +  gamma  max_{a'} Q(s',a') - Q(s,a) bigr] total_rewardstracks cumulative rewards per episode. epsilondecays gradually to reduce randomness over time."
   },
   {
     "input": "Step 5: Extract the Optimal Path after Training",
@@ -2381,7 +2381,7 @@
   },
   {
     "input": "Need for Polynomial Regression",
-    "output": "Non-linear Relationships:Polynomial regression is used when the relationship between the independent variable (input) and dependent variable (output) is non-linear. Unlike linear regression which fits a straight line, it fits a polynomial equation to capture the curve in the data. Better Fit for Curved Data:When a researcher hypothesizes a curvilinear relationship, polynomial terms are added to the model. A linear model often results in residuals with noticeable patterns which shows a poor fit. It can capture these non-linear patterns effectively. Flexibility and Complexity:It does not assume all independent variables are independent. By introducing higher-degree terms, it allows for more flexibility and can model more complex, curvilinear relationships between variables."
+    "output": "Non-linear Relationships:Polynomial regression is used when the relationship between the independent variable (input) and dependent variable (output) is non-linear. Unlike linear regression which fits a straight line, it fits a polynomial equation to capture the curve in the data. Better Fit for Curved Data: When a researcher hypothesizes a curvilinear relationship, polynomial terms are added to the model. A linear model often results in residuals with noticeable patterns which shows a poor fit. It can capture these non-linear patterns effectively. Flexibility and Complexity:It does not assume all independent variables are independent. By introducing higher-degree terms, it allows for more flexibility and can model more complex, curvilinear relationships between variables."
   },
   {
     "input": "How does a Polynomial Regression work?",
@@ -2688,7 +2688,7 @@
     "output": "Key feature of Lasso is its ability to make coefficients of less important features to zero. This removes irrelevant features from the model helps in making it useful for high-dimensional data with many predictors relative to the number of observations."
   },
   {
-    "input": "4. Selecting the optimal lambda:",
+    "input": "Selecting the optimal lambda",
     "output": "Selecting correctlambdavalue is important. Cross-validation techniques are used to find the optimal value helps in balancing model complexity and predictive performance. Primary objective of Lasso regression is to minimizeresidual sum of squares (RSS)along with a penalty term multiplied by the sum of the absolute values of the coefficients. In the plot, the equation for the Lasso Regression of cost function combines the residual sum of squares (RSS) and an L1 penalty on the coefficientsβ_j. RSS measures:Squared difference between expected and actual values is measured. L1 penalty:Penalizes absolute values of the coefficients making some of them to zero and simplifying the model. Strength of L1 penalty is controlled by thelambdaparameter. y-axis:Represents value of the cost function which Lasso Regression tries to minimize. x-axis:Represents value of the lambda (λ) parameter which controls the strength of the L1 penalty in the cost function. Green to orange curve:This curve shows how the cost function (on the y-axis) changes aslambda(on the x-axis) increases. Aslambdagrows the curve shifts from green to orange. This indicates that the cost function value increases as the L1 penalty becomes stronger helps in pushing more coefficients toward zero."
   },
   {
@@ -3009,7 +3009,7 @@
   },
   {
     "input": "How to Perform Data Cleaning",
-    "output": "The process begins by identifying issues like missing values, duplicates and outliers. Performing data cleaning involves a systematic process to identify and remove errors in a dataset. The following steps are essential to perform data cleaning: Remove Unwanted Observations:Eliminate duplicates, irrelevant entries or redundant data that add noise. Fix Structural Errors:Standardize data formats and variable types for consistency. Manage Outliers:Detect and handle extreme values that can skew results, either by removal or transformation. Handle Missing Data:Address gaps using imputation, deletion or advanced techniques to maintain accuracy and integrity."
+    "output": "The process begins by identifying issues like missing values, duplicates and outliers. Performing data cleaning involves a systematic process to identify and remove errors in a dataset. The following steps are essential to perform data cleaning: Remove Unwanted Observations:Eliminate duplicates, irrelevant entries or redundant data that add noise. Fix Structural Errors:Standardize data formats and variable types for consistency. Manage Outliers:Detect and handle extreme values that can skew results, either by removal or transformation. Handle Missing Data: Address gaps using imputation, deletion or advanced techniques to maintain accuracy and integrity."
   },
   {
     "input": "Implementation for Data Cleaning",
@@ -3069,11 +3069,11 @@
   },
   {
     "input": "Advantages",
-    "output": "Improved model performance:Removal of errors, inconsistencies and irrelevant data helps the model to better learn from the data. Increased accuracy:Helps ensure that the data is accurate, consistent and free of errors. Better representation of the data:Data cleaning allows the data to be transformed into a format that better represents the underlying relationships and patterns in the data. Improved data quality:Improve the quality of the data, making it more reliable and accurate. Improved data security:Helps to identify and remove sensitive or confidential information that could compromise data security."
+    "output": "Improved model performance:Removal of errors, inconsistencies and irrelevant data helps the model to better learn from the data. Increased accuracy:Helps ensure that the data is accurate, consistent and free of errors. Better representation of the data: Data cleaning allows the data to be transformed into a format that better represents the underlying relationships and patterns in the data. Improved data quality:Improve the quality of the data, making it more reliable and accurate. Improved data security:Helps to identify and remove sensitive or confidential information that could compromise data security."
   },
   {
     "input": "Disadvantages",
-    "output": "Time-consuming:It is very time consuming task specially for large and complex datasets. Error-prone:It can result in loss of important information. Cost and resource-intensive:It is resource-intensive process that requires significant time, effort and expertise. It can also require the use of specialized software tools. Overfitting:Data cleaning can contribute to overfitting by removing too much data."
+    "output": "Time-consuming:It is very time consuming task specially for large and complex datasets. Error-prone:It can result in loss of important information. Cost and resource-intensive:It is resource-intensive process that requires significant time, effort and expertise. It can also require the use of specialized software tools. Overfitting: Data cleaning can contribute to overfitting by removing too much data."
   },
   {
     "input": "Steps-by-Step implementation",
@@ -3385,7 +3385,7 @@
   },
   {
     "input": "2. Defining Lasso Regression Class",
-    "output": "In this dataset Lasso Regression performs bothfeature selectionandregularization. This means that Lasso will encourage sparsity by shrinking less important feature coefficients towards zero and effectively  pruning  irrelevant features. In the case of this dataset where the only feature is  years of experience  Lasso ensures that this feature is the most significant predictor of salary while any unnecessary noise is eliminated. __init__:The constructor method initializes the Lasso Regression model with specifiedlearning_rate,iterationsandl1_penalty. fit: The method used to train the model. It initializes the weights (W) and bias (b) and stores the dataset (X,Y). X.shape:Returns the dimensions of the feature matrix wheremis the number of training examples andnis the number of features. update_weights: This method calculates the gradients of the weights and updates them using the learning rate and L1 penalty term (l1_penalty). It uses the prediction (Y_pred) to calculate the gradient for each feature. dW[j]:The gradient of the weight for each featurejadjusted for the L1 regularization term. db: Calculates the gradient of the bias term. self.Wandself.b:Update weights and bias using the learning rate. This iterative process shrinks weights toward zero encouraging sparsity due to the L1 regularization. predict: A method that calculates the predicted output (Y_pred) for the input featuresXby applying the learned weights and bias."
+    "output": "In this dataset Lasso Regression performs bothfeature selectionandregularization. This means that Lasso will encourage sparsity by shrinking less important feature coefficients towards zero and effectively  pruning  irrelevant features. In the case of this dataset where the only feature is  years of experience  Lasso ensures that this feature is the most significant predictor of salary while any unnecessary noise is eliminated. __init__:The constructor method initializes the Lasso Regression model with specifiedlearning_rate,iterationsandl1_penalty. fit: The method used to train the model. It initializes the weights (W) and bias (b) and stores the dataset (X,Y). X.shape:Returns the dimensions of the feature matrix wheremis the number of training examples andnis the number of features. update_weights: This method calculates the gradients of the weights and updates them using the learning rate and L1 penalty term (l1_penalty). It uses the prediction (Y_pred) to calculate the gradient for each feature. dW[j]:The gradient of the weight for each featurejadjusted for the L1 regularization term. db: Calculates the gradient of the bias term. self.Wandself.b: Update weights and bias using the learning rate. This iterative process shrinks weights toward zero encouraging sparsity due to the L1 regularization. predict: A method that calculates the predicted output (Y_pred) for the input featuresXby applying the learned weights and bias."
   },
   {
     "input": "3. Training the model",
@@ -3605,7 +3605,7 @@
   },
   {
     "input": "How Does Gradient Descent Work in Linear Regression?",
-    "output": "Lets see various steps involved in the working of Gradient Descent in Linear Regression: 1. Initializing Parameters: Start with random initial values for the slope (m) and intercept (b). 2. Calculate the Cost Function: Measure the error using theMean Squared Error (MSE): 3. Compute the Gradient: Calculate how much the cost function changes with respect tomandb. For slopem: For interceptb: 4. Update Parameters: Changemandbto reduce the error: For slopem: For interceptb: Here alphais the learning rate that controls the size of each update. 5. Repeat: Keep repeating steps 2–4 until the error stops decreasing significantly."
+    "output": "Lets see various steps involved in the working of Gradient Descent in Linear Regression: 1. Initializing Parameters: Start with random initial values for the slope (m) and intercept (b). 2. Calculate the Cost Function: Measure the error using theMean Squared Error (MSE): 3. Compute the Gradient: Calculate how much the cost function changes with respect tomandb. For slope m: For intercept b: 4. Update Parameters: Changemandbto reduce the error: For slopem: For intercept b: Here alphais the learning rate that controls the size of each update. 5. Repeat: Keep repeating steps 2–4 until the error stops decreasing significantly."
   },
   {
     "input": "Implementation of Gradient Descent in Linear Regression",
@@ -3797,7 +3797,7 @@
   },
   {
     "input": "Understanding Label Encoding",
-    "output": "Categorical data is broadly divided into two types: Nominal Data:Categories without inherent order (e.g., colors: red, blue, green). Ordinal Data:Categories with a natural order (e.g., satisfaction levels: low, medium, high). Label encoding works best for ordinal data, where the assigned numbers reflect the order. However, applying it to nominal data can unwantedly suggest an order (e.g., Red = 0, Blue = 1, Green = 2), which may mislead algorithms likelinear regression. Thus, the choice of encoding must align with the data type and the algorithm used."
+    "output": "Categorical data is broadly divided into two types: Nominal Data: Categories without inherent order (e.g., colors: red, blue, green). Ordinal Data: Categories with a natural order (e.g., satisfaction levels: low, medium, high). Label encoding works best for ordinal data, where the assigned numbers reflect the order. However, applying it to nominal data can unwantedly suggest an order (e.g., Red = 0, Blue = 1, Green = 2), which may mislead algorithms likelinear regression. Thus, the choice of encoding must align with the data type and the algorithm used."
   },
   {
     "input": "When to Use Label Encoding",
@@ -3825,7 +3825,7 @@
   },
   {
     "input": "Limitations",
-    "output": "Nominal data misinterpretation:Encoded integers can imply false order; one-hot encoding is safer for nominal features. Missing values:These must be handled prior to encoding. Unseen categories in test data:Encoders will fail if new categories appear; handle this with a default value or ensure training includes all possible categories. High cardinality:Features with many unique categories may still require additional feature engineering."
+    "output": "Nominal data misinterpretation:Encoded integers can imply false order; one-hot encoding is safer for nominal features. Missing values:These must be handled prior to encoding. Unseen categories in test data: Encoders will fail if new categories appear; handle this with a default value or ensure training includes all possible categories. High cardinality:Features with many unique categories may still require additional feature engineering."
   },
   {
     "input": "Best Practices",
@@ -3909,7 +3909,7 @@
   },
   {
     "input": "When to Use ReLU?",
-    "output": "Handling Sparse Data:ReLU helps with sparse data by zeroing out negative values, promoting sparsity and reducing overfitting. Faster Convergence:ReLU accelerates training by preventing saturation for positive inputs, enhancing gradient flow in deep networks. But, in cases where your model suffers from the dying ReLU problem or unstable gradients, trying alternative functions like Leaky ReLU, PReLU, or ELU could yield better results."
+    "output": "Handling Sparse Data: ReLU helps with sparse data by zeroing out negative values, promoting sparsity and reducing overfitting. Faster Convergence:ReLU accelerates training by preventing saturation for positive inputs, enhancing gradient flow in deep networks. But, in cases where your model suffers from the dying ReLU problem or unstable gradients, trying alternative functions like Leaky ReLU, PReLU, or ELU could yield better results."
   },
   {
     "input": "ReLU Activation in PyTorch",
@@ -3989,7 +3989,7 @@
   },
   {
     "input": "What is Sparse Categorical Crossentropy?",
-    "output": "Sparse Categorical Crossentropyis functionally similar to Categorical Crossentropy but is designed for cases where the target labels are not one-hot encoded. Instead, the labels are represented as integers corresponding to the class indices. The true labels are integers where each integer represents the class index. Example:If the correct label is  Cat , it would be represented as the integer1(since  Cat  is the second class, starting from0). Suppose the model predicts probabilities like[0.2, 0.7, 0.1]. The loss is calculated for the correct class (Cat) using the formula:- log(0.7) This again results in a loss of approximately 0.3567. Sparse Categorical Crossentropy internally converts these integer labels into one-hot encoded format before calculating the loss. This approach can save memory and computational resources, especially when dealing with datasets containing a large number of classes."
+    "output": "Sparse Categorical Crossentropyis functionally similar to Categorical Crossentropy but is designed for cases where the target labels are not one-hot encoded. Instead, the labels are represented as integers corresponding to the class indices. The true labels are integers where each integer represents the class index. Example:If the correct label is  Cat , it would be represented as the integer1(since  Cat  is the second class, starting from0). Suppose the model predicts probabilities like[0.2, 0.7, 0.1]. The loss is calculated for the correct class (Cat) using the formula: -log(0.7) This again results in a loss of approximately 0.3567. Sparse Categorical Crossentropy internally converts these integer labels into one-hot encoded format before calculating the loss. This approach can save memory and computational resources, especially when dealing with datasets containing a large number of classes."
   },
   {
     "input": "When to Use",
@@ -4033,7 +4033,7 @@
   },
   {
     "input": "Standard Deviation by Actual Mean Method",
-    "output": "Standard Deviation by theactual mean methoduses the basic mean formula to calculate the mean of the given data,and using this mean value, we find the standard deviation of the given data values. We calculate the mean in this method with the formula: Standard deviation formula for the Actual mean method Example:Find the Standard Deviation of the data set, X = {2, 3, 4, 5, 6}"
+    "output": "Standard Deviation by theactual mean methoduses the basic mean formula to calculate the mean of the given data,and using this mean value, we find the standard deviation of the given data values. We calculate the mean in this method with the formula: Standard deviation formula for the Actual mean method Example: Find the Standard Deviation of the data set, X = {2, 3, 4, 5, 6}"
   },
   {
     "input": "Standard Deviation by Assumed Mean Method",
@@ -4061,10 +4061,10 @@
   },
   {
     "input": "Standard Deviation of Continuous Grouped Data",
-    "output": "For the continuous grouped data, we can easily calculate the standard deviation using the Discrete data formulas by replacing each class with its midpoint (as xi) and then normally calculating the formulas. The calculation of each class is calculated using the formula:"
+    "output": "For the continuous grouped data, we can easily calculate the standard deviation using the Discrete data formulas by replacing each class with its midpoint (as xi) and then normally calculating the formulas. The calculation of each class is calculated using the formula"
   },
   {
-    "input": "Standard Deviation Formula for Grouped Data:",
+    "input": "Standard Deviation Formula for Grouped Data",
     "output": "Where: x_i​ = midpoint of each class interval f_i​ = frequency of each class interval  bar{x}= mean of the grouped data s = standard deviation For example:Calculate the standard deviation of continuous grouped data as given in the table. Solution:"
   },
   {
@@ -4209,11 +4209,11 @@
   },
   {
     "input": "Advantages",
-    "output": "Feature extraction has various advantages which are as follows: Simplifies Data:Reduces complex data into a manageable form for easier analysis and visualization. Boosts Model Performance:Removes irrelevant data, making algorithms faster and more accurate. Highlights Key Patterns:Filters out noise to focus on important features for quicker insights. Improves Generalization:Helps models perform better on new, unseen data by emphasizing informative features. Speeds Up Training and Prediction:Fewer features mean faster model training and real-time predictions."
+    "output": "Feature extraction has various advantages which are as follows: Simplifies Data: Reduces complex data into a manageable form for easier analysis and visualization. Boosts Model Performance:Removes irrelevant data, making algorithms faster and more accurate. Highlights Key Patterns:Filters out noise to focus on important features for quicker insights. Improves Generalization:Helps models perform better on new, unseen data by emphasizing informative features. Speeds Up Training and Prediction:Fewer features mean faster model training and real-time predictions."
   },
   {
     "input": "Challenges",
-    "output": "Managing High-Dimensional Data:Extracting relevant features from large, complex datasets can be difficult. Risk of Overfitting or Underfitting:Too many or too few features can hurt model accuracy and generalization. Computational Costs:Complex methods may require heavy resources, limiting use with big or real-time data. Redundant or Irrelevant Features:Overlapping or noisy features can confuse models and reduce efficiency."
+    "output": "Managing High-Dimensional Data: Extracting relevant features from large, complex datasets can be difficult. Risk of Overfitting or Underfitting:Too many or too few features can hurt model accuracy and generalization. Computational Costs:Complex methods may require heavy resources, limiting use with big or real-time data. Redundant or Irrelevant Features:Overlapping or noisy features can confuse models and reduce efficiency."
   },
   {
     "input": "Mean",
@@ -4317,7 +4317,7 @@
   },
   {
     "input": "2. Loading and Splitting the Iris Dataset",
-    "output": "data = load_iris():loads the Iris dataset, which includes features and target labels. X = data.data:extracts the feature matrix (input variables). y = data.target:extracts the target vector (class labels). train_test_split(...):splits the data into training (80%) and testing (20%) sets, with random_state=42 to ensure reproducibility."
+    "output": "data = load_iris():loads the Iris dataset, which includes features and target labels. X = data.data: extracts the feature matrix (input variables). y = data.target:extracts the target vector (class labels). train_test_split(...):splits the data into training (80%) and testing (20%) sets, with random_state=42 to ensure reproducibility."
   },
   {
     "input": "3. Creating a Base Classifier",
@@ -4557,7 +4557,7 @@
   },
   {
     "input": "Example",
-    "output": "Suppose classifying sentences as Apples or Bananas using word frequencies, To classify a new sentence (Round=1, Red=1, Soft=1): MNB would estimate probabilities for Apples using only Apples data CNB estimates probabilities for Apples using Bananas' data (complement) and vice versa Solving by CNB:We classify a new sentence with features {Round =1, Red =1, Soft =1} and vocabulary {Round, Red, Soft}. Step 1:Complement counts For Apples, use Bananas’ counts -> {Round:5, Red:1, Soft:3} For Bananas, use Apples’ counts -> {Round:3, Red:4, Soft:1} Step 2:Probabilities (using Laplace smoothing, α =1) For Apples: Round = (5+1)/(5+1+3+3) = 6/12 = 0.5 Red   = (1+1)/12 = 0.167 Soft  = (3+1)/12 = 0.333 For Bananas: Round = (3+1)/(3+1+4+1) = 4/11 ≈ 0.364 Red   = (4+1)/11 = 0.455 Soft  = (1+1)/11 = 0.182 Step 3:Scores, Multiply feature probabilities: Apples = 0.5 × 0.167 × 0.333 ≈ 0.0278 Bananas = 0.364 × 0.455 × 0.182 ≈ 0.0301 Final Result -> Bananas"
+    "output": "Suppose classifying sentences as Apples or Bananas using word frequencies, To classify a new sentence (Round=1, Red=1, Soft=1): MNB would estimate probabilities for Apples using only Apples data CNB estimates probabilities for Apples using Bananas' data (complement) and vice versa Solving by CNB: We classify a new sentence with features {Round =1, Red =1, Soft =1} and vocabulary {Round, Red, Soft}. Step 1:Complement counts For Apples, use Bananas’ counts -> {Round:5, Red:1, Soft:3} For Bananas, use Apples’ counts -> {Round:3, Red:4, Soft:1} Step 2:Probabilities (using Laplace smoothing, α =1) For Apples: Round = (5+1)/(5+1+3+3) = 6/12 = 0.5 Red   = (1+1)/12 = 0.167 Soft  = (3+1)/12 = 0.333 For Bananas: Round = (3+1)/(3+1+4+1) = 4/11 ≈ 0.364 Red   = (4+1)/11 = 0.455 Soft  = (1+1)/11 = 0.182 Step 3:Scores, Multiply feature probabilities: Apples = 0.5 × 0.167 × 0.333 ≈ 0.0278 Bananas = 0.364 × 0.455 × 0.182 ≈ 0.0301 Final Result -> Bananas"
   },
   {
     "input": "Implementing CNB",
@@ -4625,7 +4625,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "First we will be importing the required libraries: pandas:for data manipulation load_iris:to load dataset train_test_split:to split the data into training and testing sets GaussianNB:for the Gaussian Naive Bayes classifier accuracy_score:to evaluate the model LabelEncoder:to encode the categorical target variable."
+    "output": "First we will be importing the required libraries: pandas:for data manipulation load_iris:to load dataset train_test_split:to split the data into training and testing sets GaussianNB: for the Gaussian Naive Bayes classifier accuracy_score:to evaluate the model LabelEncoder:to encode the categorical target variable."
   },
   {
     "input": "2. Loading the Dataset and Preparing Features and Target Variable",
@@ -4677,7 +4677,7 @@
   },
   {
     "input": "1.Importing Libraries:",
-    "output": "We will importpandasandscikit learnwhere: pandas: Used for handling data in DataFrame format. CountVectorizer: Converts a collection of text documents into a matrix of token counts. train_test_split: Splits the data into training and test sets for model evaluation. MultinomialNB: A Naive Bayes classifier suited for classification tasks with discrete features (such as word counts). accuracy_score: Computes the accuracy of the model's predictions."
+    "output": "We will importpandasandscikit learnwhere: pandas: Used for handling data in DataFrame format. CountVectorizer: Converts a collection of text documents into a matrix of token counts. train_test_split: Splits the data into training and test sets for model evaluation. Multinomial NB: A Naive Bayes classifier suited for classification tasks with discrete features (such as word counts). accuracy_score: Computes the accuracy of the model's predictions."
   },
   {
     "input": "2.Creating the Dataset",
@@ -4801,7 +4801,7 @@
   },
   {
     "input": "Applications of Random Forest Regression",
-    "output": "The Random forest regression has a wide range of real-world problems including: Predicting continuous numerical values:Predicting house prices, stock prices or customer lifetime value. Identifying risk factors:Detecting risk factors for diseases, financial crises or other negative events. Handling high-dimensional data:Analyzing datasets with a large number of input features. Capturing complex relationships:Modeling complex relationships between input features and the target variable."
+    "output": "The Random forest regression has a wide range of real-world problems including: Predicting continuous numerical values:Predicting house prices, stock prices or customer lifetime value. Identifying risk factors:Detecting risk factors for diseases, financial crises or other negative events. Handling high-dimensional data: Analyzing datasets with a large number of input features. Capturing complex relationships: Modeling complex relationships between input features and the target variable."
   },
   {
     "input": "Advantages of Random Forest Regression",
@@ -5613,7 +5613,7 @@
   },
   {
     "input": "Step 4: Performing Fuzzy C-Means Clustering and Assign Each Point to a Hard Cluster",
-    "output": "Converts fuzzy memberships to hard cluster assignments by taking the cluster with highest membership for each point. cntr:Final cluster centers u: Membership matrix indicating degree of belonging for each point to each cluster fpc:Fuzzy partition coefficient (quality metric) This runs the clustering algorithm on the data."
+    "output": "Converts fuzzy memberships to hard cluster assignments by taking the cluster with highest membership for each point. cntr:Final cluster centers u: Membership matrix indicating degree of belonging for each point to each cluster fpc: Fuzzy partition coefficient (quality metric) This runs the clustering algorithm on the data."
   },
   {
     "input": "Step 5: Printing Cluster Centers and Membership Matrix",
@@ -6001,7 +6001,7 @@
   },
   {
     "input": "Step 5: Hyperparameter Tuning with GridSearchCV",
-    "output": "Now let’s useGridSearchCVto find the best combination of C, gamma and kernel hyperparameters for the SVM model. But before that leys understand these parameters: C:Controls the trade-off between a wider margin (low C) and correctly classifying all points (high C). gamma:Determines how far the influence of each data point reaches with high gamma fitting tightly to the data. kernel:Defines the function used to transform data for separating classes. For example linear or rbf. "
+    "output": "Now let’s useGridSearchCVto find the best combination of C, gamma and kernel hyperparameters for the SVM model. But before that leys understand these parameters: C: Controls the trade-off between a wider margin (low C) and correctly classifying all points (high C). gamma: Determines how far the influence of each data point reaches with high gamma fitting tightly to the data. kernel:Defines the function used to transform data for separating classes. For example linear or rbf. "
   },
   {
     "input": "Step 6: Get the Best Hyperparameters and Model",
@@ -6021,7 +6021,7 @@
   },
   {
     "input": "1. Importing Required Libraries",
-    "output": "We begin by importing the Python libraries required for generating data, performing dimensionality reduction and visualization. numpy:For numerical operations and handling arrays. matplotlib:For plotting 2D graphs and visualizing data. mplot3d:Enables 3D plotting for visualizing 3D datasets. Sklearn:used to create synthetic 3D data with make_swiss_roll, apply nonlinear dimensionality reduction with LocallyLinearEmbedding, and perform linear dimensionality reduction with PCA."
+    "output": "We begin by importing the Python libraries required for generating data, performing dimensionality reduction and visualization. numpy:For numerical operations and handling arrays. matplotlib: For plotting 2D graphs and visualizing data. mplot3d:Enables 3D plotting for visualizing 3D datasets. Sklearn:used to create synthetic 3D data with make_swiss_roll, apply nonlinear dimensionality reduction with LocallyLinearEmbedding, and perform linear dimensionality reduction with PCA."
   },
   {
     "input": "2. Generating Swiss Roll Dataset",
@@ -6529,15 +6529,15 @@
   },
   {
     "input": "1. Removing Rows with Missing Values",
-    "output": "Removing rows with missing values is a simple and straightforward method to handle missing data, used when we want to keep our analysis clean and minimize complexity. Advantages: Simple and efficient:It’s easy to implement and quickly removes data points with missing values. Cleans data:It removes potentially problematic data points, ensuring that only complete rows remain in the dataset. Disadvantages: Reduces sample size:When rows are removed, the overall dataset shrinks which can affect the power and accuracy of our analysis. Potential bias:If missing data is not random (e.g if certain groups are more likely to have missing values) removing rows could introduce bias. In this example, we are removing rows with missing values from the original DataFrame (df) using thedropna()method and then displaying the cleaned DataFrame (df_cleaned). "
+    "output": "Removing rows with missing values is a simple and straightforward method to handle missing data, used when we want to keep our analysis clean and minimize complexity. Advantages: Simple and efficient:It’s easy to implement and quickly removes data points with missing values. Cleans data: It removes potentially problematic data points, ensuring that only complete rows remain in the dataset. Disadvantages: Reduces sample size:When rows are removed, the overall dataset shrinks which can affect the power and accuracy of our analysis. Potential bias:If missing data is not random (e.g if certain groups are more likely to have missing values) removing rows could introduce bias. In this example, we are removing rows with missing values from the original DataFrame (df) using thedropna()method and then displaying the cleaned DataFrame (df_cleaned). "
   },
   {
     "input": "2. Imputation Methods",
-    "output": "Imputation involves replacing missing values with estimated values. This approach is beneficial when we want to preserve the dataset’s sample size and avoid losing data points. However, it's important to note that the accuracy of the imputed values may not always be reliable. Let's see some common imputation methods: 2.1 Mean, Median and Mode Imputation: This method involves replacing missing values with the mean, median or mode of the relevant variable. It's a simple approach but it doesn't account for the relationships between variables. In this example, we are explaining the imputation techniques for handling missing values in the 'Marks' column of the DataFrame (df). It calculates and fills missing values with the mean, median and mode of the existing values in that column and then prints the results for observation. df['Marks'].fillna(df['Marks'].mean()): Fills missing values in the 'Marks' column with themeanvalue. df['Marks'].fillna(df['Marks'].median()): Fills missing values in the 'Marks' column with the median value. df['Marks'].fillna(df['Marks'].mode():Fills missing values in the 'Marks' column with themodevalue. .iloc[0]:Accesses the first element of the Series which represents the mode. Output: Advantages: Simple and efficient:Easy to implement and quick. Works well with numerical data:It is useful for numerical variables with a normal distribution. Disadvantages: Inaccuracy:It assumes the missing value is similar to the central tendency (mean/median/mode) which may not always be the case. 2.2 Forward and Backward Fill Forward and backward fill techniques are used to replace missing values by filling them with the nearest non-missing values from the same column. This is useful when there’s an inherent order or sequence in the data. The method parameter infillna()allows to specify the filling strategy. df['Marks'].fillna(method='ffill'):This method fills missing values in the 'Marks' column of the DataFrame (df) using a forward fill strategy. It replaces missing values with the last observed non-missing value in the column. df['Marks'].fillna(method='bfill'):This method fills missing values in the 'Marks' column using a backward fill strategy. It replaces missing values with the next observed non-missing value in the column. Output: Advantages: Simple and Intuitive:Preserves the temporal or sequential order in data. Preserves Patterns:Fills missing values logically, especially in time-series or ordered data. Disadvantages: Assumption of Closeness:Assumes that the missing values are similar to the observed values nearby which may not always be true. Potential Inaccuracy:May not work well if there are large gaps between non-missing values."
+    "output": "Imputation involves replacing missing values with estimated values. This approach is beneficial when we want to preserve the dataset’s sample size and avoid losing data points. However, it's important to note that the accuracy of the imputed values may not always be reliable. Let's see some common imputation methods: 2.1 Mean, Median and Mode Imputation: This method involves replacing missing values with the mean, median or mode of the relevant variable. It's a simple approach but it doesn't account for the relationships between variables. In this example, we are explaining the imputation techniques for handling missing values in the 'Marks' column of the DataFrame (df). It calculates and fills missing values with the mean, median and mode of the existing values in that column and then prints the results for observation. df['Marks'].fillna(df['Marks'].mean()): Fills missing values in the 'Marks' column with themeanvalue. df['Marks'].fillna(df['Marks'].median()): Fills missing values in the 'Marks' column with the median value. df['Marks'].fillna(df['Marks'].mode():Fills missing values in the 'Marks' column with themodevalue. .iloc[0]:Accesses the first element of the Series which represents the mode. Output: Advantages: Simple and efficient:Easy to implement and quick. Works well with numerical data: It is useful for numerical variables with a normal distribution. Disadvantages: Inaccuracy:It assumes the missing value is similar to the central tendency (mean/median/mode) which may not always be the case. 2.2 Forward and Backward Fill Forward and backward fill techniques are used to replace missing values by filling them with the nearest non-missing values from the same column. This is useful when there’s an inherent order or sequence in the data. The method parameter infillna()allows to specify the filling strategy. df['Marks'].fillna(method='ffill'):This method fills missing values in the 'Marks' column of the DataFrame (df) using a forward fill strategy. It replaces missing values with the last observed non-missing value in the column. df['Marks'].fillna(method='bfill'):This method fills missing values in the 'Marks' column using a backward fill strategy. It replaces missing values with the next observed non-missing value in the column. Output: Advantages: Simple and Intuitive:Preserves the temporal or sequential order in data. Preserves Patterns:Fills missing values logically, especially in time-series or ordered data. Disadvantages: Assumption of Closeness:Assumes that the missing values are similar to the observed values nearby which may not always be true. Potential Inaccuracy:May not work well if there are large gaps between non-missing values."
   },
   {
     "input": "3. Interpolation Techniques",
-    "output": "Interpolation is a technique used to estimate missing values based on the values of surrounding data points. Unlike simpler imputation methods (e.g mean, median, mode), interpolation uses the relationship between neighboring values to make more informed estimations. Theinterpolate()method in pandas are divided into Linear and Quadratic. df['Marks'].interpolate(method='linear'):This method performs linear interpolation on the 'Marks' column of the DataFrame (df). df['Marks'].interpolate(method='quadratic'):This method performsquadratic interpolationon the 'Marks' column. Output: Advantages: Sophisticated Approach:Interpolation is more accurate than simple imputation methods like mean or median, as it considers the underlying data structure. Preserves Data Relationships:Captures patterns or trends that exist between data points, which helps maintain the integrity of the dataset. Disadvantages: Complexity:Requires more computational resources and additional libraries. Assumptions on Data:Assumes that data points follow a specific pattern (e.g., linear or quadratic), which may not always be true."
+    "output": "Interpolation is a technique used to estimate missing values based on the values of surrounding data points. Unlike simpler imputation methods (e.g mean, median, mode), interpolation uses the relationship between neighboring values to make more informed estimations. Theinterpolate()method in pandas are divided into Linear and Quadratic. df['Marks'].interpolate(method='linear'):This method performs linear interpolation on the 'Marks' column of the DataFrame (df). df['Marks'].interpolate(method='quadratic'):This method performsquadratic interpolationon the 'Marks' column. Output: Advantages: Sophisticated Approach:Interpolation is more accurate than simple imputation methods like mean or median, as it considers the underlying data structure. Preserves Data Relationships:Captures patterns or trends that exist between data points, which helps maintain the integrity of the dataset. Disadvantages: Complexity:Requires more computational resources and additional libraries. Assumptions on Data: Assumes that data points follow a specific pattern (e.g., linear or quadratic), which may not always be true."
   },
   {
     "input": "Impact of Handling Missing Values",
@@ -6577,7 +6577,7 @@
   },
   {
     "input": "Importance of Self-Training",
-    "output": "Self-Training is popular because of its simplicity and effectiveness. It requires no modifications to existing machine learning algorithms and can be implemented with minimal effort. Key benefits include: Utilization of Unlabeled Data:Leverages large volumes of unlabeled data to improve model generalization. Domain Independence:Works across various domains and tasks. Efficiency:Can reduce the need for extensive manual labeling."
+    "output": "Self-Training is popular because of its simplicity and effectiveness. It requires no modifications to existing machine learning algorithms and can be implemented with minimal effort. Key benefits include: Utilization of Unlabeled Data: Leverages large volumes of unlabeled data to improve model generalization. Domain Independence:Works across various domains and tasks. Efficiency:Can reduce the need for extensive manual labeling."
   },
   {
     "input": "Self - Training Works in Practice",
@@ -6961,7 +6961,7 @@
   },
   {
     "input": "5.  Train the SVM Classifier",
-    "output": "We will train the Support Vector Classifier: SVC:creates an SVM classifier with a specified kernel kernel='linear':uses a linear kernel for classification C=1.0:regularization parameter to control margin vs misclassification fit():trains the classifier on scaled training data"
+    "output": "We will train the Support Vector Classifier: SVC: creates an SVM classifier with a specified kernel kernel='linear':uses a linear kernel for classification C=1.0:regularization parameter to control margin vs misclassification fit():trains the classifier on scaled training data"
   },
   {
     "input": "6. Evaluate the Model",
@@ -7817,7 +7817,7 @@
   },
   {
     "input": "Steps performed for spectral Clustering",
-    "output": "Building the Similarity Graph Of The Data:This step builds the Similarity Graph in the form of an adjacency matrix which is represented by A. The adjacency matrix can be built in the following manners: Epsilon-neighbourhood Graph:A parameter epsilon is fixed beforehand. Then, each point is connected to all the points which lie in its epsilon-radius. If all the distances between any two points are similar in scale then typically the weights of the edges ie the distance between the two points are not stored since they do not provide any additional information. Thus, in this case, the graph built is an undirected and unweighted graph. K-Nearest NeighboursA parameter k is fixed beforehand. Then, for two vertices u and v, an edge is directed from u to v only if v is among the k-nearest neighbours of u. Note that this leads to the formation of a weighted and directed graph because it is not always the case that for each u having v as one of the k-nearest neighbours, it will be the same case for v having u among its k-nearest neighbours. To make this graph undirected, one of the following approaches is followed:-Direct an edge from u to v and from v to u if either v is among the k-nearest neighbours of uORu is among the k-nearest neighbours of v.Direct an edge from u to v and from v to u if v is among the k-nearest neighbours of uANDu is among the k-nearest neighbours of v.Fully-Connected Graph:To build this graph, each point is connected with an undirected edge-weighted by the distance between the two points to every other point. Since this approach is used to model the local neighbourhood relationships thus typically the Gaussian similarity metric is used to calculate the distance. Direct an edge from u to v and from v to u if either v is among the k-nearest neighbours of uORu is among the k-nearest neighbours of v. Direct an edge from u to v and from v to u if v is among the k-nearest neighbours of uANDu is among the k-nearest neighbours of v. Fully-Connected Graph:To build this graph, each point is connected with an undirected edge-weighted by the distance between the two points to every other point. Since this approach is used to model the local neighbourhood relationships thus typically the Gaussian similarity metric is used to calculate the distance. Projecting the data onto a lower Dimensional Space:This step is done to account for the possibility that members of the same cluster may be far away in the given dimensional space. Thus the dimensional space is reduced so that those points are closer in the reduced dimensional space and thus can be clustered together by a traditional clustering algorithm. It is done by computing theGraph Laplacian Matrix. To compute it though first, the degree of a node needs to be defined. The degree of the ith node is given byd_{i} =  sum _{j=1|(i, j) epsilon E}^{n} w_{ij}Note thatw_{ij}is the edge between the nodes i and j as defined in the adjacency matrix above. The degree matrix is defined as follows:-D_{ij} =  left { begin{matrix} d_{i}, i=j &  0, i  eq j &  end{matrix} right. Thus the Graph Laplacian Matrix is defined as:-L = D-A This Matrix is then normalized for mathematical efficiency. To reduce the dimensions, first, the eigenvalues and the respective eigenvectors are calculated. If the number of clusters is k then the first eigenvalues and their eigenvectors are taken and stacked into a matrix such that the eigenvectors are the columns. Code For Calculating eigenvalues and eigenvector of the matrix in Python  Clustering the Data:This process mainly involves clustering the reduced data by using any traditional clustering technique - typically K-Means Clustering. First, each node is assigned a row of the normalized of the Graph Laplacian Matrix. Then this data is clustered using any traditional technique. To transform the clustering result, the node identifier is retained. Properties:"
+    "output": "Building the Similarity Graph Of The Data: This step builds the Similarity Graph in the form of an adjacency matrix which is represented by A. The adjacency matrix can be built in the following manners: Epsilon-neighbourhood Graph:A parameter epsilon is fixed beforehand. Then, each point is connected to all the points which lie in its epsilon-radius. If all the distances between any two points are similar in scale then typically the weights of the edges ie the distance between the two points are not stored since they do not provide any additional information. Thus, in this case, the graph built is an undirected and unweighted graph. K-Nearest NeighboursA parameter k is fixed beforehand. Then, for two vertices u and v, an edge is directed from u to v only if v is among the k-nearest neighbours of u. Note that this leads to the formation of a weighted and directed graph because it is not always the case that for each u having v as one of the k-nearest neighbours, it will be the same case for v having u among its k-nearest neighbours. To make this graph undirected, one of the following approaches is followed:-Direct an edge from u to v and from v to u if either v is among the k-nearest neighbours of uORu is among the k-nearest neighbours of v.Direct an edge from u to v and from v to u if v is among the k-nearest neighbours of uANDu is among the k-nearest neighbours of v.Fully-Connected Graph:To build this graph, each point is connected with an undirected edge-weighted by the distance between the two points to every other point. Since this approach is used to model the local neighbourhood relationships thus typically the Gaussian similarity metric is used to calculate the distance. Direct an edge from u to v and from v to u if either v is among the k-nearest neighbours of uORu is among the k-nearest neighbours of v. Direct an edge from u to v and from v to u if v is among the k-nearest neighbours of uANDu is among the k-nearest neighbours of v. Fully-Connected Graph:To build this graph, each point is connected with an undirected edge-weighted by the distance between the two points to every other point. Since this approach is used to model the local neighbourhood relationships thus typically the Gaussian similarity metric is used to calculate the distance. Projecting the data onto a lower Dimensional Space:This step is done to account for the possibility that members of the same cluster may be far away in the given dimensional space. Thus the dimensional space is reduced so that those points are closer in the reduced dimensional space and thus can be clustered together by a traditional clustering algorithm. It is done by computing theGraph Laplacian Matrix. To compute it though first, the degree of a node needs to be defined. The degree of the ith node is given byd_{i} =  sum _{j=1|(i, j) epsilon E}^{n} w_{ij}Note thatw_{ij}is the edge between the nodes i and j as defined in the adjacency matrix above. The degree matrix is defined as follows:-D_{ij} =  left { begin{matrix} d_{i}, i=j &  0, i  eq j &  end{matrix} right. Thus the Graph Laplacian Matrix is defined as:-L = D-A This Matrix is then normalized for mathematical efficiency. To reduce the dimensions, first, the eigenvalues and the respective eigenvectors are calculated. If the number of clusters is k then the first eigenvalues and their eigenvectors are taken and stacked into a matrix such that the eigenvectors are the columns. Code For Calculating eigenvalues and eigenvector of the matrix in Python  Clustering the Data: This process mainly involves clustering the reduced data by using any traditional clustering technique - typically K-Means Clustering. First, each node is assigned a row of the normalized of the Graph Laplacian Matrix. Then this data is clustered using any traditional technique. To transform the clustering result, the node identifier is retained. Properties:"
   },
   {
     "input": "Credit Card Data Clustering Using Spectral Clustering",
@@ -10157,7 +10157,7 @@
   },
   {
     "input": "Importance of Neural Networks",
-    "output": "Identify Complex Patterns:Recognize intricate structures and relationships in data; adapt to dynamic and changing environments. Learn from Data:Handle vast datasets efficiently; improve performance with experience and retraining. Drive Key Technologies:Power natural language processing (NLP); enable self-driving vehicles; support automated decision-making systems. Boost Efficiency:Streamline workflows and processes; enhance productivity across industries. Backbone of AI:Serve as the core driver of artificial intelligence progress; continue shaping the future of technology and innovation."
+    "output": "Identify Complex Patterns:Recognize intricate structures and relationships in data; adapt to dynamic and changing environments. Learn from Data: Handle vast datasets efficiently; improve performance with experience and retraining. Drive Key Technologies:Power natural language processing (NLP); enable self-driving vehicles; support automated decision-making systems. Boost Efficiency:Streamline workflows and processes; enhance productivity across industries. Backbone of AI:Serve as the core driver of artificial intelligence progress; continue shaping the future of technology and innovation."
   },
   {
     "input": "1. Forward Propagation",
@@ -10429,7 +10429,7 @@
   },
   {
     "input": "Disadvantages",
-    "output": "Sensitivity to Hyperparameters:Performance is sensitive to settings like decay rate and epsilon meaning it requires careful tuning. Poor Performance with Sparse Data:May struggle with sparse data, leading to slower or inconsistent convergence."
+    "output": "Sensitivity to Hyperparameters:Performance is sensitive to settings like decay rate and epsilon meaning it requires careful tuning. Poor Performance with Sparse Data: May struggle with sparse data, leading to slower or inconsistent convergence."
   },
   {
     "input": "Attention in NLP",
@@ -10489,7 +10489,7 @@
   },
   {
     "input": "3. Weight Update",
-    "output": "The winning neuron’s weights are updated to move closer to the input vector. The weights of neighboring neurons are also adjusted but with smaller changes. Formula:w_{ij}^{(new)} = w_{ij}^{(old)} +  alpha  cdot (x_i - w_{ij}^{(old)}) where  alphais the learning rate x_i​ is the input feature."
+    "output": "The winning neuron’s weights are updated to move closer to the input vector. The weights of neighboring neurons are also adjusted but with smaller changes. Formula: w_{ij}^{(new)} = w_{ij}^{(old)} +  alpha  cdot (x_i - w_{ij}^{(old)}) where  alphais the learning rate x_i​ is the input feature."
   },
   {
     "input": "4. Learning Rate Decay",
@@ -10573,7 +10573,7 @@
   },
   {
     "input": "Objective Function of a Sparse Autoencoder",
-    "output": "X: Input data.  hat{X}: Reconstructed output.  lambda:Regularizationparameter. Penalty(s): A function that penalizes deviations from sparsity, often implemented using KL-divergence."
+    "output": "X: Input data.  hat{X}: Reconstructed output.  lambda: Regularization parameter. Penalty(s): A function that penalizes deviations from sparsity, often implemented using KL-divergence."
   },
   {
     "input": "Techniques for Enforcing Sparsity",
@@ -11425,7 +11425,7 @@
   },
   {
     "input": "3. Forward Pass",
-    "output": "Prediction step and input flow: self.conv1 -> bn1 -> ReLU:Applies the first convolution and activates. self.conv2 -> bn2 -> ReLU:Applies the second convolution and activates. view(-1, 32 * 28):Flattens the 3D tensor into 2D for the dense layer. self.fc:Final layer that outputs a vector of size 10 (class scores)."
+    "output": "Prediction step and input flow: self.conv1 -> bn1 -> ReLU:Applies the first convolution and activates. self.conv2 -> bn2 -> ReLU:Applies the second convolution and activates. view(-1, 32 * 28):Flattens the 3D tensor into 2D for the dense layer. self.fc: Final layer that outputs a vector of size 10 (class scores)."
   },
   {
     "input": "4. Initialize Model",
@@ -12421,7 +12421,7 @@
   },
   {
     "input": "3. Single Sentence Classification Task :",
-    "output": "SST-2:The Stanford Sentiment Treebank is a binary sentence classification task consisting of sentences extracted from movie reviews with annotations of their sentiment representing in the sentence. BERT generated state-of-the-art results on SST-2. CoLA:The Corpus of Linguistic Acceptability is the binary classification task. The goal of this task to predict whether an English sentence that is provided is linguistically acceptable or not."
+    "output": "SST-2:The Stanford Sentiment Treebank is a binary sentence classification task consisting of sentences extracted from movie reviews with annotations of their sentiment representing in the sentence. BERT generated state-of-the-art results on SST-2. CoLA: The Corpus of Linguistic Acceptability is the binary classification task. The goal of this task to predict whether an English sentence that is provided is linguistically acceptable or not."
   },
   {
     "input": "4. Question Answer Task",
@@ -13077,7 +13077,7 @@
   },
   {
     "input": "Key concepts related to NER",
-    "output": "Before we get into the technicalities, it's important to understand some of the basic concepts related to NER. Here are some key terms that you should be familiar with: Named Entity:Any word or group of words that refer to a specific person, place, organization, or other object or concept. Corpus: A collection of texts used for language analysis and training of NER models. POS Tagging:A process that involves labeling words in a text with their corresponding parts of speech, such as nouns, verbs, adjectives, etc. Chunking:A process that involves grouping words together into meaningful phrases based on their part of speech and syntactic structure. Training and Testing Data:The process of training a model with a set of labeled data (called the training data) and evaluating its performance on another set of labeled data (called the testing data). Now, let's take a look at the various steps involved in the NER process: Tokenization: The first step in NER involves breaking down the input text into individual words or tokens. POS Tagging:Next, we need to label each word in the text with its corresponding part of speech. Chunking:After POS tagging, we can group the words together into meaningful phrases using a process called chunking. Named Entity Recognition:Once we have identified the chunks, we can apply NER techniques to identify and classify the named entities in the text. Evaluation:Finally, we can evaluate the performance of our NER model on a set of testing data to determine its accuracy and effectiveness. The NER process involves various mathematical concepts, including probability theory, machine learning, and deep learning. Here's a brief overview of some of the mathematical techniques used in NER:"
+    "output": "Before we get into the technicalities, it's important to understand some of the basic concepts related to NER. Here are some key terms that you should be familiar with: Named Entity:Any word or group of words that refer to a specific person, place, organization, or other object or concept. Corpus: A collection of texts used for language analysis and training of NER models. POS Tagging:A process that involves labeling words in a text with their corresponding parts of speech, such as nouns, verbs, adjectives, etc. Chunking:A process that involves grouping words together into meaningful phrases based on their part of speech and syntactic structure. Training and Testing Data: The process of training a model with a set of labeled data (called the training data) and evaluating its performance on another set of labeled data (called the testing data). Now, let's take a look at the various steps involved in the NER process: Tokenization: The first step in NER involves breaking down the input text into individual words or tokens. POS Tagging:Next, we need to label each word in the text with its corresponding part of speech. Chunking:After POS tagging, we can group the words together into meaningful phrases using a process called chunking. Named Entity Recognition:Once we have identified the chunks, we can apply NER techniques to identify and classify the named entities in the text. Evaluation:Finally, we can evaluate the performance of our NER model on a set of testing data to determine its accuracy and effectiveness. The NER process involves various mathematical concepts, including probability theory, machine learning, and deep learning. Here's a brief overview of some of the mathematical techniques used in NER:"
   },
   {
     "input": "Use of NER in NLP",
@@ -13097,7 +13097,7 @@
   },
   {
     "input": "1. Common Terminologies",
-    "output": "Let us understand what some of the below mentioned terms mean before moving forward. Corpus:It is a large and structured set of text documents, used for training or analyzing language models. It can range from a collection of articles, tweets, emails, or any other form of textual data. Vector:It is the numerical representation of text data that enables machines to process and understand language. Model:It is a machine learning or statistical algorithm that learns from data to make predictions or extract patterns. Topic Modelling:It is an unsupervised learning technique used to discover abstract topics within a collection of documents. It assumes that each document is a mixture of various topics, and each topic is a mixture of words. Topic:It is a collection of words that frequently appear together and represent a coherent idea or subject. For instance, words like  doctor,   hospital,  and  medicine  might form a health-related topic. Now that we have the basic idea of the terminologies let's start with the use of Gensim package."
+    "output": "Let us understand what some of the below mentioned terms mean before moving forward. Corpus:It is a large and structured set of text documents, used for training or analyzing language models. It can range from a collection of articles, tweets, emails, or any other form of textual data. Vector:It is the numerical representation of text data that enables machines to process and understand language. Model:It is a machine learning or statistical algorithm that learns from data to make predictions or extract patterns. Topic Modelling:It is an unsupervised learning technique used to discover abstract topics within a collection of documents. It assumes that each document is a mixture of various topics, and each topic is a mixture of words. Topic: It is a collection of words that frequently appear together and represent a coherent idea or subject. For instance, words like  doctor,   hospital,  and  medicine  might form a health-related topic. Now that we have the basic idea of the terminologies let's start with the use of Gensim package."
   },
   {
     "input": "2. Installation of NLP Gensim Library",
@@ -13153,7 +13153,7 @@
   },
   {
     "input": "6. Create Word2Vec model using Gensim",
-    "output": "The ML/DL algorithms cannot access text directly which is why we need some numerical representation so that these algorithms can process the data. In simple Machine Learning applications CountVectorizer and TFIDF are used which do not preserve the relationship between the words.Word2Vec:Method to represent text to generateWord Embeddingswhich map all the words present in a language into a vector space of a given dimension. We can perform mathematical operations on these vectors which help preserve the relationship between the words. Example: queen - women + man = king Pre-built word embedding models like word2vec, GloVe, fasttext etc. can be downloaded using the Gensim downloader API. Sometimes you may not find word embeddings for certain words in your document. So you can train your model."
+    "output": "The ML/DL algorithms cannot access text directly which is why we need some numerical representation so that these algorithms can process the data. In simple Machine Learning applications CountVectorizer and TFIDF are used which do not preserve the relationship between the words.Word2Vec: Method to represent text to generateWord Embeddingswhich map all the words present in a language into a vector space of a given dimension. We can perform mathematical operations on these vectors which help preserve the relationship between the words. Example: queen - women + man = king Pre-built word embedding models like word2vec, GloVe, fasttext etc. can be downloaded using the Gensim downloader API. Sometimes you may not find word embeddings for certain words in your document. So you can train your model."
   },
   {
     "input": "6.1 Train the model",
@@ -13749,7 +13749,7 @@
   },
   {
     "input": "Applications of Singular Value Decomposition (SVD)",
-    "output": "1.Calculation of Pseudo-Inverse (Moore-Penrose Inverse) The pseudo-inverse is a generalization of the matrix inverse, applicable to non-invertible matrices like low-rank matrices. For an invertible matrix, it equals the inverse. Denoted as M^+ , it is calculated using the SVDM = U Sigma V^T, whereUandVare orthogonal matrices of left and right singular vectors, and Sigmais a diagonal matrix of singular values. Pseudo-inverse formula:M^+ = V Sigma^{-1}U^T, where Sigma^{-1}inverts non-zero singular values. 2.Solving a Set of Homogeneous Linear Equations ForM x = b, ifb = 0, use SVD to choose a column ofVassociated with a zero singular value. Ifb   eq 0, solve by multiplying both sides byM^+:x = M^+ b. 3.Rank, Range, and Null Space The rank, range, and null space of a matrixMcan be derived from its SVD. Rank: The rank of matrixMis the number of non-zero singular values in Sigma. Range: The range of matrixMis the span of the left singular vectors in matrix U corresponding to the non-zero singular values. Null Space: The null space of matrixMis the span of the right singular vectors in matrixVcorresponding to the zero singular values. 4.Curve Fitting Problem Singular Value Decomposition can be used to minimize theleast square errorin the curve fitting problem. By approximating the solution using the pseudo-inverse, we can find the best-fit curve to a given set of data points. 5.Applications in Digital Signal Processing (DSP) and Image Processing Digital Signal Processing: SVD can be used to analyze signals and filter noise. Image Processing: SVD is used for image compression and denoising. It helps in reducing the dimensionality of image data by preserving the most significant singular values and discarding the rest."
+    "output": "1.Calculation of Pseudo-Inverse (Moore-Penrose Inverse) The pseudo-inverse is a generalization of the matrix inverse, applicable to non-invertible matrices like low-rank matrices. For an invertible matrix, it equals the inverse. Denoted as M^+ , it is calculated using the SVDM = U Sigma V^T, whereUandVare orthogonal matrices of left and right singular vectors, and Sigmais a diagonal matrix of singular values. Pseudo-inverse formula: M^+ = V Sigma^{-1}U^T, where Sigma^{-1}inverts non-zero singular values. 2.Solving a Set of Homogeneous Linear Equations ForM x = b, ifb = 0, use SVD to choose a column ofVassociated with a zero singular value. Ifb   eq 0, solve by multiplying both sides byM^+:x = M^+ b. 3.Rank, Range, and Null Space The rank, range, and null space of a matrixMcan be derived from its SVD. Rank: The rank of matrixMis the number of non-zero singular values in Sigma. Range: The range of matrixMis the span of the left singular vectors in matrix U corresponding to the non-zero singular values. Null Space: The null space of matrixMis the span of the right singular vectors in matrixVcorresponding to the zero singular values. 4.Curve Fitting Problem Singular Value Decomposition can be used to minimize theleast square errorin the curve fitting problem. By approximating the solution using the pseudo-inverse, we can find the best-fit curve to a given set of data points. 5.Applications in Digital Signal Processing (DSP) and Image Processing Digital Signal Processing: SVD can be used to analyze signals and filter noise. Image Processing: SVD is used for image compression and denoising. It helps in reducing the dimensionality of image data by preserving the most significant singular values and discarding the rest."
   },
   {
     "input": "Implementation of Singular Value Decomposition (SVD)",
@@ -14125,7 +14125,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "We will need to import the necessary libraries likescikit-learn,PandasandNumpy. CountVectorizerto convert text data into numerical features using word counts. MultinomialNB: The Naive Bayes classifier for multinomial data and is ideal for text classification."
+    "output": "We will need to import the necessary libraries likescikit-learn,PandasandNumpy. CountVectorizerto convert text data into numerical features using word counts. Multinomial NB: The Naive Bayes classifier for multinomial data and is ideal for text classification."
   },
   {
     "input": "2. Loading the Dataset",
@@ -14889,7 +14889,7 @@
   },
   {
     "input": "Why Use RNNs for Text Classification?",
-    "output": "Recurrent Neural Networks (RNNs)are designed to capture the dependencies and context within sequential data which makes them ideal for language-related tasks. They can remember information from previous inputs which helps them understand the context of words. Text classification tasks like sentiment analysis, require us to understand the context of words in a sentence. RNNs are especially good for these tasks because they: Capture Context:They remember what happened before, helping us understand how the meaning of one word relates to the words around it. Handle Sequential Data:Since text is sequential, they are a natural fit for processing it. Work with Variable-Length Inputs:Text data comes in different lengths and they can process sequences of any size."
+    "output": "Recurrent Neural Networks (RNNs)are designed to capture the dependencies and context within sequential data which makes them ideal for language-related tasks. They can remember information from previous inputs which helps them understand the context of words. Text classification tasks like sentiment analysis, require us to understand the context of words in a sentence. RNNs are especially good for these tasks because they: Capture Context:They remember what happened before, helping us understand how the meaning of one word relates to the words around it. Handle Sequential Data: Since text is sequential, they are a natural fit for processing it. Work with Variable-Length Inputs:Text data comes in different lengths and they can process sequences of any size."
   },
   {
     "input": "Implementing RNN for Text Classification",
@@ -15013,7 +15013,7 @@
   },
   {
     "input": "Step 5: Usage Example with Outputs",
-    "output": "Test with example, src:random input token IDs. trg:random target token IDs (used for teacher forcing). outputs:predicted token IDs for each sequence. .T:transpose to show batch sequences as rows."
+    "output": "Test with example, src: random input token IDs. trg:random target token IDs (used for teacher forcing). outputs:predicted token IDs for each sequence. .T:transpose to show batch sequences as rows."
   },
   {
     "input": "Applications",
@@ -16721,11 +16721,11 @@
   },
   {
     "input": "Limitations",
-    "output": "Sensitive to Noisy Data:While robust, excessive noise or irrelevant text-image pairings can still degrade performance. Language and Domain Bias:May reflect biases present in large-scale, web-sourced data, impacting fairness and reliability. Quality vs. Quantity Trade-off:Minimal filtering allows more data, but risks including more irrelevant or low-quality pairs. Limited Fine-grained Localization:Focuses on global image-text correspondence; less effective at tasks needing detailed localization or fine object matching."
+    "output": "Sensitive to Noisy Data: While robust, excessive noise or irrelevant text-image pairings can still degrade performance. Language and Domain Bias:May reflect biases present in large-scale, web-sourced data, impacting fairness and reliability. Quality vs. Quantity Trade-off:Minimal filtering allows more data, but risks including more irrelevant or low-quality pairs. Limited Fine-grained Localization:Focuses on global image-text correspondence; less effective at tasks needing detailed localization or fine object matching."
   },
   {
     "input": "References:",
-    "output": "MNIST dataset:mnist dataset is a dataset of handwritten images as shown below in the image.  We can get 99.06% accuracy by using CNN(Convolutional Neural Network) with a functional model. The reason for using a functional model is to maintain easiness while connecting the layers. Test data:Used for testing the model that how our model has been trained.Train data:Used to train our model. While proceeding further,img_rowsandimg_colsare used as the image dimensions. In mnist dataset, it is 28 and 28. We also need to check the data format i.e. 'channels_first' or 'channels_last'. In CNN, we can normalize data before hands such that large terms of the calculations can be reduced to smaller terms. Like, we can normalize the x_train and x_test data by dividing it by 255.Checking data-format: Since the output of the model can comprise any of the digits between 0 to 9. so, we need 10 classes in output. To make output for 10 classes, use keras.utils.to_categorical function, which will provide the 10 columns. Out of these 10 columns, only one value will be one and the rest 9 will be zero and this one value of the output will denote the class of the digit. Now, the dataset is ready so let's move towards the CNN model : Explanation of the working of each layer in theCNN model:layer1 is the Conv2d layer which convolves the image using 32 filters each of size (3*3).layer2 is again a Conv2D layer which is also used to convolve the image and is using 64 filters each of size (3*3).layer3 is the MaxPooling2D layer which picks the max value out of a matrix of size (3*3).layer4 is showing Dropout at a rate of 0.5.layer5 is flattening the output obtained from layer4 and this flattens output is passed to layer6.layer6 is a hidden layer of a neural network containing 250 neurons.layer7 is the output layer having 10 neurons for 10 classes of output that is using the softmax function. Calling compile and fit function: Output: Firstly, we made an object of the model as shown in the above-given lines, where [inpx] is the input in the model and layer7 is the output of the model. We compiled the model using the required optimizer, loss function and printed the accuracy and at the last model.fit was called along with parameters like x_train(means image vectors), y_train(means the label), number of epochs, and the batch size. Using fit function x_train, y_train dataset is fed to model in particular batch size. Evaluate function:model.evaluate provides the score for the test data i.e. provided the test data to the model. Now, the model will predict the class of the data, and the predicted class will be matched with the y_test label to give us the accuracy."
+    "output": "MNIST dataset:mnist dataset is a dataset of handwritten images as shown below in the image.  We can get 99.06% accuracy by using CNN(Convolutional Neural Network) with a functional model. The reason for using a functional model is to maintain easiness while connecting the layers. Test data: Used for testing the model that how our model has been trained.Train data: Used to train our model. While proceeding further,img_rowsandimg_colsare used as the image dimensions. In mnist dataset, it is 28 and 28. We also need to check the data format i.e. 'channels_first' or 'channels_last'. In CNN, we can normalize data before hands such that large terms of the calculations can be reduced to smaller terms. Like, we can normalize the x_train and x_test data by dividing it by 255.Checking data-format: Since the output of the model can comprise any of the digits between 0 to 9. so, we need 10 classes in output. To make output for 10 classes, use keras.utils.to_categorical function, which will provide the 10 columns. Out of these 10 columns, only one value will be one and the rest 9 will be zero and this one value of the output will denote the class of the digit. Now, the dataset is ready so let's move towards the CNN model : Explanation of the working of each layer in theCNN model:layer1 is the Conv2d layer which convolves the image using 32 filters each of size (3*3).layer2 is again a Conv2D layer which is also used to convolve the image and is using 64 filters each of size (3*3).layer3 is the MaxPooling2D layer which picks the max value out of a matrix of size (3*3).layer4 is showing Dropout at a rate of 0.5.layer5 is flattening the output obtained from layer4 and this flattens output is passed to layer6.layer6 is a hidden layer of a neural network containing 250 neurons.layer7 is the output layer having 10 neurons for 10 classes of output that is using the softmax function. Calling compile and fit function: Output: Firstly, we made an object of the model as shown in the above-given lines, where [inpx] is the input in the model and layer7 is the output of the model. We compiled the model using the required optimizer, loss function and printed the accuracy and at the last model.fit was called along with parameters like x_train(means image vectors), y_train(means the label), number of epochs, and the batch size. Using fit function x_train, y_train dataset is fed to model in particular batch size. Evaluate function:model.evaluate provides the score for the test data i.e. provided the test data to the model. Now, the model will predict the class of the data, and the predicted class will be matched with the y_test label to give us the accuracy."
   },
   {
     "input": "Bitwise AND operation on Image:",
@@ -17937,7 +17937,7 @@
   },
   {
     "input": "3. Build the encoder",
-    "output": "This is the model that turns our data into a list of numbers (vector): Text:Language models likeBERT. Images:Vision models likeCNNorViT. Audio:Models that process sound (e.g., turning it into spectrograms first). Graphs:Methods likeNode2Vecorgraph neural networks. Tabular data:Models that compress features into embeddings."
+    "output": "This is the model that turns our data into a list of numbers (vector): Text:Language models likeBERT. Images:Vision models likeCNNorViT. Audio:Models that process sound (e.g., turning it into spectrograms first). Graphs:Methods likeNode2Vecorgraph neural networks. Tabular data: Models that compress features into embeddings."
   },
   {
     "input": "4. Train with a metric-learning objective:",
@@ -19393,7 +19393,7 @@
   },
   {
     "input": "2.  Langflow: Modular Drag-and-Drop Framework",
-    "output": "Multi-Agent and RAG Support:Designed for visually constructing complex agentic workflows including collaborative multi-agent scenarios andRetrieval-Augmented Generationtasks. LLM and Vector Store Agnostic:Choose any mainstream or open-source model orvector DBand extend features as needed. Prototyping and Collaboration:Rapidly test, iterate and deploy flows and share, embed or serve flows via APIs for enterprise integration."
+    "output": "Multi-Agent and RAG Support:Designed for visually constructing complex agentic workflows including collaborative multi-agent scenarios andRetrieval-Augmented Generationtasks. LLM and Vector Store Agnostic: Choose any mainstream or open-source model orvector DBand extend features as needed. Prototyping and Collaboration:Rapidly test, iterate and deploy flows and share, embed or serve flows via APIs for enterprise integration."
   },
   {
     "input": "1. Complexity of Tasks:",
@@ -19545,7 +19545,7 @@
   },
   {
     "input": "Step 2: Setting Up Project Directory Structure",
-    "output": "We will create our project folder, organize files in similar structure as this maintains hierarchy. The commands to create folders are: mkdir mcp-context-sharing:Creates a new project folder. cd mcp-context-sharing:Moves into the project folder. mkdir src:Creates a folder for source code inside the project. mkdir src/server:Creates a folder for server code inside the source folder. This sets up a clean, organized folder structure for the project. We will create our MCP server inside the main.py within the src/server folder."
+    "output": "We will create our project folder, organize files in similar structure as this maintains hierarchy. The commands to create folders are: mkdir mcp-context-sharing:Creates a new project folder. cd mcp-context-sharing:Moves into the project folder. mkdir src: Creates a folder for source code inside the project. mkdir src/server:Creates a folder for server code inside the source folder. This sets up a clean, organized folder structure for the project. We will create our MCP server inside the main.py within the src/server folder."
   },
   {
     "input": "Step 3: Create MCP Server",
@@ -19613,7 +19613,7 @@
   },
   {
     "input": "Step 1: Install Dependencies",
-    "output": "We will install the required packages and libraries for our system, llama-index:For document retrieval and embeddings. langchain:For agent and tool management. langchain_community:Required for ChatOpenAI in LangChain 0.3.x. openai:For LLM API access. wikipedia:Optional tool for agent to search Wikipedia."
+    "output": "We will install the required packages and libraries for our system, llama-index:For document retrieval and embeddings. langchain:For agent and tool management. langchain_community:Required for ChatOpenAI in LangChain 0.3.x. openai:For LLM API access. wikipedia: Optional tool for agent to search Wikipedia."
   },
   {
     "input": "Step 2: Upload Documents and OpenAI API Key",
@@ -19621,7 +19621,7 @@
   },
   {
     "input": "Step 3: Import Libraries",
-    "output": "We will import the required libraries for system, SimpleDirectoryReader:Load documents. GPTVectorStoreIndex:Create vector-based index for retrieval. LLMPredictor & ServiceContext:Wrap LLM for LlamaIndex. ChatOpenAI:OpenAI GPT model for text generation. Tool, initialize_agent, AgentType:Build agentic reasoning system. ConversationBufferMemory:Maintain past conversation context for agent. wikipedia:Tool for retrieving general knowledge."
+    "output": "We will import the required libraries for system, SimpleDirectoryReader:Load documents. GPTVectorStoreIndex:Create vector-based index for retrieval. LLMPredictor & ServiceContext:Wrap LLM for LlamaIndex. ChatOpenAI:OpenAI GPT model for text generation. Tool, initialize_agent, AgentType:Build agentic reasoning system. ConversationBufferMemory:Maintain past conversation context for agent. wikipedia: Tool for retrieving general knowledge."
   },
   {
     "input": "Step 4: Build the LlamaIndex Retrieval System",
@@ -19629,7 +19629,7 @@
   },
   {
     "input": "Step 5: Define Tools for Agent",
-    "output": "We will define the tools that are available for the agent to use: DocumentRetriever:Uses LlamaIndex to fetch relevant docs. Calculator: Handles numeric queries. Wikipedia:Fetches general knowledge not in uploaded docs. Tools:Each tool is callable by the agent automatically."
+    "output": "We will define the tools that are available for the agent to use: DocumentRetriever:Uses LlamaIndex to fetch relevant docs. Calculator: Handles numeric queries. Wikipedia: Fetches general knowledge not in uploaded docs. Tools:Each tool is callable by the agent automatically."
   },
   {
     "input": "Step 6: Initialize Agent with Memory",
@@ -19845,7 +19845,7 @@
   },
   {
     "input": "Key Tips:",
-    "output": "Be specific and concise:Too much or too little context can confuse the AI. Iterate as needed:Review the AI’s output and refine your prompt for even better results. Use real examples:When possible, include sample data or previous outputs for the AI to mimic or reference."
+    "output": "Be specific and concise:Too much or too little context can confuse the AI. Iterate as needed: Review the AI’s output and refine your prompt for even better results. Use real examples:When possible, include sample data or previous outputs for the AI to mimic or reference."
   },
   {
     "input": "Detailed Example",
@@ -20085,7 +20085,7 @@
   },
   {
     "input": "Applications of CrewAI Flows",
-    "output": "These are real-world use cases where CrewAI Flows shine: Content generation pipelines:combining outline creation, content writing, review, revision. Automations with conditional branching:It can include reading email, deciding based on content whether to reply, archive or escalate. Document or data processing:It works likeOCR → extraction → analysis → reporting. Chatbots with memory and decision logic:Depending on user’s previous interactions, state, etc. Integrations with external systems or APIs:Flows that trigger external services, wait for responses, branch accordingly."
+    "output": "These are real-world use cases where CrewAI Flows shine: Content generation pipelines:combining outline creation, content writing, review, revision. Automations with conditional branching:It can include reading email, deciding based on content whether to reply, archive or escalate. Document or data processing:It works likeOCR → extraction → analysis → reporting. Chatbots with memory and decision logic: Depending on user’s previous interactions, state, etc. Integrations with external systems or APIs:Flows that trigger external services, wait for responses, branch accordingly."
   },
   {
     "input": "Exploring Available Knowledge Sources",
@@ -20389,7 +20389,7 @@
   },
   {
     "input": "Step 5: Import Libraries",
-    "output": "gradio: Used to create an interactive user interface for inputting questions and displaying answers. ollama: Interface for interacting with the Llama 3 model for natural language tasks. langchain.text_splitter: Alangchaintool for splitting large text into manageable chunks. langchain_community.vectorstores: Used for creating and handling vector databases, allowing us to store and retrieve text embeddings. langchain_community.embeddings: Provides the embeddings model (here using Ollama’s model) for converting text into vector representations. langchain_community.tools.tavily_search: A tool to search for web content based on a query likely pulling results from the web. time: Used for pausing the program execution like for retry logic."
+    "output": "gradio: Used to create an interactive user interface for inputting questions and displaying answers. ollama: Interface for interacting with the Llama 3 model for natural language tasks. langchain.text_splitter: A langchaintool for splitting large text into manageable chunks. langchain_community.vectorstores: Used for creating and handling vector databases, allowing us to store and retrieve text embeddings. langchain_community.embeddings: Provides the embeddings model (here using Ollama’s model) for converting text into vector representations. langchain_community.tools.tavily_search: A tool to search for web content based on a query likely pulling results from the web. time: Used for pausing the program execution like for retry logic."
   },
   {
     "input": "Step 6: Check Ollama Server Availability",
@@ -20449,7 +20449,7 @@
   },
   {
     "input": "Advantages",
-    "output": "Fine-tuning a model has some of the useful advantages which are discussed below: Task-specific Adaptation:Fine-tuningallows models to adapt to specific tasks, likemusic genre classification, audio classification etc. which make them more effective in domain-specific applications. Efficient Use of Limited Data:In scenarios with limited task-specific data, fine-tuning leverages pre-existing knowledge, preventing overfitting. Improved Generalization:Fine-tuned models often exhibit improved generalization to the target task, particularly when the pre-trained model is robust."
+    "output": "Fine-tuning a model has some of the useful advantages which are discussed below: Task-specific Adaptation:Fine-tuningallows models to adapt to specific tasks, likemusic genre classification, audio classification etc. which make them more effective in domain-specific applications. Efficient Use of Limited Data: In scenarios with limited task-specific data, fine-tuning leverages pre-existing knowledge, preventing overfitting. Improved Generalization:Fine-tuned models often exhibit improved generalization to the target task, particularly when the pre-trained model is robust."
   },
   {
     "input": "Limitations",
@@ -20465,7 +20465,7 @@
   },
   {
     "input": "1. Traditional QA Systems",
-    "output": "Traditional QA models generally fall into two main categories: Extractive QA:These models, like BERT, scan a given text corpus to find and return the most relevant passage as an answer. Generative QA:Models like GPT generate responses based on their pre-trained knowledge, but they can sometimes produce misleading or incorrect answers if the information isn’t in their training data. How They Work? Processing the Question:Converts the user’s query into numerical representations (embeddings) to help the model understand its meaning. Finding Relevant Documents:Uses similarity scoring to match the query with stored knowledge (for extractive models). Generating an Answer:Either extracts a relevant portion of text (extractive) or generates a response from learned patterns (generative). Limitations of Traditional QA Systems Their knowledge isstatic—they can’t update themselves with new information. They oftenstruggle with complex reasoningor multi-step questions. Generative models mayhallucinate facts, meaning they sometimes make up information."
+    "output": "Traditional QA models generally fall into two main categories: Extractive QA: These models, like BERT, scan a given text corpus to find and return the most relevant passage as an answer. Generative QA: Models like GPT generate responses based on their pre-trained knowledge, but they can sometimes produce misleading or incorrect answers if the information isn’t in their training data. How They Work? Processing the Question:Converts the user’s query into numerical representations (embeddings) to help the model understand its meaning. Finding Relevant Documents:Uses similarity scoring to match the query with stored knowledge (for extractive models). Generating an Answer:Either extracts a relevant portion of text (extractive) or generates a response from learned patterns (generative). Limitations of Traditional QA Systems Their knowledge isstatic—they can’t update themselves with new information. They oftenstruggle with complex reasoningor multi-step questions. Generative models mayhallucinate facts, meaning they sometimes make up information."
   },
   {
     "input": "2. RAG-Based QA Systems",
@@ -20697,7 +20697,7 @@
   },
   {
     "input": "5. Defining Feed Forward Network",
-    "output": "The position-wise feed-forward network is used to process each position independently: PositionwiseFeedforward:This class applies two dense layers to each position independently. The first layer transforms the input to a higher dimension and the second one reduces it back to the original d_model size. call:Applies the feed-forward layers sequentially to the input."
+    "output": "The position-wise feed-forward network is used to process each position independently: PositionwiseFeedforward: This class applies two dense layers to each position independently. The first layer transforms the input to a higher dimension and the second one reduces it back to the original d_model size. call:Applies the feed-forward layers sequentially to the input."
   },
   {
     "input": "6. Defining Transformer Block",
@@ -20705,7 +20705,7 @@
   },
   {
     "input": "7. Defining Encoder",
-    "output": "The encoder consists of a stack of encoder layers. It converts the input sequence into a set of embeddings enriched with positional information. Encoder:The encoder consists of an embedding layer, positional encoding, dropout and multiple transformer blocks. It processes the input sequence and generates a sequence representation. call:The input sequence is passed through the embedding layer, positional encoding is added and then it goes through the transformer blocks sequentially."
+    "output": "The encoder consists of a stack of encoder layers. It converts the input sequence into a set of embeddings enriched with positional information. Encoder: The encoder consists of an embedding layer, positional encoding, dropout and multiple transformer blocks. It processes the input sequence and generates a sequence representation. call:The input sequence is passed through the embedding layer, positional encoding is added and then it goes through the transformer blocks sequentially."
   },
   {
     "input": "8. Defining Decoder",
@@ -21253,7 +21253,7 @@
   },
   {
     "input": "Popular Vector Databases",
-    "output": "Pinecone:Fully managed, cloud native vector database with high scalability and low latency search. Weaviate:Open source, supports hybrid (keyword + vector) search and offers built in machine learning modules. Milvus:Highly scalable, open source database optimized for large scale similarity search. Qdrant:Open source, focuses on high recall, performance and ease of integration with AI applications. Chromadb:Lightweight, developer friendly vector database often used in LLM powered applications."
+    "output": "Pinecone:Fully managed, cloud native vector database with high scalability and low latency search. Weaviate:Open source, supports hybrid (keyword + vector) search and offers built in machine learning modules. Milvus:Highly scalable, open source database optimized for large scale similarity search. Qdrant:Open source, focuses on high recall, performance and ease of integration with AI applications. Chromadb: Lightweight, developer friendly vector database often used in LLM powered applications."
   },
   {
     "input": "Implementation",
@@ -21321,7 +21321,7 @@
   },
   {
     "input": "Fields where DALL-E is used",
-    "output": "There are several users increasing day-by-day of DALL -E as it helps individuals and organizations in the following terms. Content Creation:DALL-E creates images as per the need of the users. Artists and Sketchers can create images based on a description they provided. Custom Artwork:It produces unique or trailed output based on the content present in the previous datasets. Education: The use of DALL-E is important in the education field as it helps faculties and professors to explain the concepts of tough topics through images easily. Entertainment:DALL -E can be used to develop the games that help to create game assets, characters, landscapes, and visual base images. Animators can use Dall -e to produce art for certain visualization and to produce perfect images for some time. Prototyping: Rapid Visualization: Innovators can use DALL-E to quickly visualize new concepts or ideas. Web and Graphic Design:Stock Images: Generate specific images that may not be easily available in conventional stock photo libraries. Research:Icons and Graphics: Designers can generate custom icons, logos, or graphics based on descriptive prompts. Visualization of data:Scientists and researchers can employ DALL-E to visualize complex data or scenarios. Hypothesis Visualization:Researchers can produce visuals to represent their hypotheses or theoretical scenarios. Customer Services:One can generate personalized artwork or designs for printing on merchandise like t-shirts, mugs, posters, etc. Memes and Social Media Content:DALL·E can be used to generate fun, quirky, or specific visual content for social media posts or memes."
+    "output": "There are several users increasing day-by-day of DALL -E as it helps individuals and organizations in the following terms. Content Creation:DALL-E creates images as per the need of the users. Artists and Sketchers can create images based on a description they provided. Custom Artwork:It produces unique or trailed output based on the content present in the previous datasets. Education: The use of DALL-E is important in the education field as it helps faculties and professors to explain the concepts of tough topics through images easily. Entertainment:DALL -E can be used to develop the games that help to create game assets, characters, landscapes, and visual base images. Animators can use Dall -e to produce art for certain visualization and to produce perfect images for some time. Prototyping: Rapid Visualization: Innovators can use DALL-E to quickly visualize new concepts or ideas. Web and Graphic Design:Stock Images: Generate specific images that may not be easily available in conventional stock photo libraries. Research:Icons and Graphics: Designers can generate custom icons, logos, or graphics based on descriptive prompts. Visualization of data: Scientists and researchers can employ DALL-E to visualize complex data or scenarios. Hypothesis Visualization:Researchers can produce visuals to represent their hypotheses or theoretical scenarios. Customer Services:One can generate personalized artwork or designs for printing on merchandise like t-shirts, mugs, posters, etc. Memes and Social Media Content:DALL·E can be used to generate fun, quirky, or specific visual content for social media posts or memes."
   },
   {
     "input": "Benefits Using of DALL-E for Image Creation",
@@ -21377,7 +21377,7 @@
   },
   {
     "input": "Pre-trained Embeddings Models: Word2Vec, GloVe, FastText",
-    "output": "Creating embeddings from scratch requires huge amount of datasets and computational power. Pre-trained embeddings makes this process easy: Word2Vec:It is one of the earliest models to create word embeddings. It learns how different words are related to each other just by looking at different words that surround them in a sentence. GloVe (Global Vectors for Word Representation):This model mainly focuses on capturing the overall statistics of word occurrences in a large dataset. FastText:It was developed by Facebook. FastText is more advanced as it also captures the meanings of word parts like prefixes and suffixes. This is helpful for dealing with languages where word forms change such as adding -ing  or  -ed to verbs."
+    "output": "Creating embeddings from scratch requires huge amount of datasets and computational power. Pre-trained embeddings makes this process easy: Word2Vec: It is one of the earliest models to create word embeddings. It learns how different words are related to each other just by looking at different words that surround them in a sentence. GloVe (Global Vectors for Word Representation):This model mainly focuses on capturing the overall statistics of word occurrences in a large dataset. FastText:It was developed by Facebook. FastText is more advanced as it also captures the meanings of word parts like prefixes and suffixes. This is helpful for dealing with languages where word forms change such as adding -ing  or  -ed to verbs."
   },
   {
     "input": "Visualizing Embedding Space",
@@ -21393,7 +21393,7 @@
   },
   {
     "input": "Role of AI in Image Recognition",
-    "output": "Training Machines with Data:AI teaches machines to analyze and understand visual data by training them on large datasets of labeled images. Learning Patterns:Machine learning help AI systems to recognize patterns in images and make predictions on new data. Computer Vision:A key technique in image recognition, it uses AI and machine learning algorithms to interpret and process visual data, mimicking human vision. It help machines to  see  and understand images. Real-World Applications:AI and computer vision work together to perform tasks like object detection, face recognition and scene interpretation. These technologies are important in areas such as security (e.g surveillance), healthcare (e.g medical imaging), automotive (e.g self-driving cars) and retail (e.g visual search). Automatic Recognition:It allows for automatic recognition and classification of images in real-time, reducing the need for human intervention while improving accuracy and speed."
+    "output": "Training Machines with Data: AI teaches machines to analyze and understand visual data by training them on large datasets of labeled images. Learning Patterns:Machine learning help AI systems to recognize patterns in images and make predictions on new data. Computer Vision:A key technique in image recognition, it uses AI and machine learning algorithms to interpret and process visual data, mimicking human vision. It help machines to  see  and understand images. Real-World Applications:AI and computer vision work together to perform tasks like object detection, face recognition and scene interpretation. These technologies are important in areas such as security (e.g surveillance), healthcare (e.g medical imaging), automotive (e.g self-driving cars) and retail (e.g visual search). Automatic Recognition:It allows for automatic recognition and classification of images in real-time, reducing the need for human intervention while improving accuracy and speed."
   },
   {
     "input": "Key Techniques in Image Recognition",
@@ -21461,7 +21461,7 @@
   },
   {
     "input": "Using Hugging Face and Google Colab",
-    "output": "Find the model:Head over to Hugging Face's model hub. Search for  Llama 2  (or any other model you're interested in). Choose the model version:Different versions (sizes) of the model might be available. Select the one that best suits your needs, considering factors like task complexity and available computational resources. Open Google Colab:Launch a new Colab notebook. This provides a free cloud environment with pre-installed libraries like TensorFlow and PyTorch. Install libraries (if needed):While Colab comes with many libraries pre-loaded, you might need to install additional ones specific to the model. Refer to the model's documentation on Hugging Face for any specific requirements. You can install libraries within Colab using the Below command in a code cell Load the model:Use thetransformers.AutoModelFor...function(the specific class depends on the model type) along with the model identifier from Hugging Face to load the pre-trained model. Prepare your data:Pre-process your data into the format the model expects (e.g., tokenization for text models). Use the model:Once the model is loaded and your data is prepared, you can use the model for your specific task. Refer to the model's documentation for examples and usage patterns."
+    "output": "Find the model:Head over to Hugging Face's model hub. Search for  Llama 2  (or any other model you're interested in). Choose the model version:Different versions (sizes) of the model might be available. Select the one that best suits your needs, considering factors like task complexity and available computational resources. Open Google Colab: Launch a new Colab notebook. This provides a free cloud environment with pre-installed libraries like TensorFlow and PyTorch. Install libraries (if needed):While Colab comes with many libraries pre-loaded, you might need to install additional ones specific to the model. Refer to the model's documentation on Hugging Face for any specific requirements. You can install libraries within Colab using the Below command in a code cell Load the model:Use thetransformers.AutoModelFor...function(the specific class depends on the model type) along with the model identifier from Hugging Face to load the pre-trained model. Prepare your data: Pre-process your data into the format the model expects (e.g., tokenization for text models). Use the model:Once the model is loaded and your data is prepared, you can use the model for your specific task. Refer to the model's documentation for examples and usage patterns."
   },
   {
     "input": "Benefits of using Colab",
@@ -22013,7 +22013,7 @@
   },
   {
     "input": "Case Study: Chinchilla vs. Gopher",
-    "output": "To illustrate the practical impact of Chinchilla Scaling Laws, consider the comparison between Chinchilla and Gopher: Gopher:A 280-billion-parameter model trained on approximately 300 billion tokens. Chinchilla:A 70-billion-parameter model trained on 1.4 trillion tokens. Despite being four times smaller than Gopher, Chinchilla achieves superior performance across various benchmarks, including reasoning tasks, factual recall, and code generation. This demonstrates that strategic scaling—rather than brute force—can yield transformative results. Chinchilla Scaling Laws represent a paradigm shift in how we think about scaling AI models. By emphasizing the importance of balanced resource allocation and data efficiency, they provide a blueprint for developing powerful yet sustainable AI systems. As the AI community embraces these principles, we can expect to see a new wave of innovations that prioritize performance, accessibility, and responsibility."
+    "output": "To illustrate the practical impact of Chinchilla Scaling Laws, consider the comparison between Chinchilla and Gopher: Gopher:A 280-billion-parameter model trained on approximately 300 billion tokens. Chinchilla: A 70-billion-parameter model trained on 1.4 trillion tokens. Despite being four times smaller than Gopher, Chinchilla achieves superior performance across various benchmarks, including reasoning tasks, factual recall, and code generation. This demonstrates that strategic scaling—rather than brute force—can yield transformative results. Chinchilla Scaling Laws represent a paradigm shift in how we think about scaling AI models. By emphasizing the importance of balanced resource allocation and data efficiency, they provide a blueprint for developing powerful yet sustainable AI systems. As the AI community embraces these principles, we can expect to see a new wave of innovations that prioritize performance, accessibility, and responsibility."
   },
   {
     "input": "Steps to create a ChatBot with OpenAI and Streamlit in Python",
@@ -23273,7 +23273,7 @@
   },
   {
     "input": "Step 1: Import libraries",
-    "output": "NumPy:For array operations. OpenCV:For image processing functions. Matplotlib:For displaying images."
+    "output": "NumPy: For array operations. OpenCV: For image processing functions. Matplotlib: For displaying images."
   },
   {
     "input": "Step 2: Define Canny_detector Function",
@@ -23397,7 +23397,7 @@
   },
   {
     "input": "Real-World Application",
-    "output": "Research Assistants:AI that can read, summarize and compare reports, research papers or industry standards. Financial & Legal Insights:Extract key facts from reports or legal documents and combine them with real-time web news. Enterprise Knowledge Search:Chat-based tools to explore internal documents, using smart agents and retrieval. Healthcare Q&A:Answer complex medical questions using both stored medical texts and up-to-date guidelines from the web. Customer Support Automation:Build AI assistants that can pull answers from product manuals, FAQs, support tickets and even search the web, giving users accurate, context-aware responses instantly."
+    "output": "Research Assistants:AI that can read, summarize and compare reports, research papers or industry standards. Financial & Legal Insights:Extract key facts from reports or legal documents and combine them with real-time web news. Enterprise Knowledge Search:Chat-based tools to explore internal documents, using smart agents and retrieval. Healthcare Q&A: Answer complex medical questions using both stored medical texts and up-to-date guidelines from the web. Customer Support Automation:Build AI assistants that can pull answers from product manuals, FAQs, support tickets and even search the web, giving users accurate, context-aware responses instantly."
   },
   {
     "input": "Key Components of LangChain",
@@ -24569,7 +24569,7 @@
   },
   {
     "input": "Tools & Resources for Prompt Optimization",
-    "output": "OpenAI Playground:Test and refine prompts in real-time to fine-tune AI responses based on immediate feedback. PromptBase:Explore and use optimized, pre-designed prompts to save time and effort while ensuring quality output. PromptChainer:Chain multiple prompts together to build workflows for more structured and detailed responses. Helicone:Track and analyze the performance of your prompts to optimize them based on data-driven insights. Agenta:Collaborate with a team to test, iterate and improve prompts, enhancing quality through collective input."
+    "output": "OpenAI Playground:Test and refine prompts in real-time to fine-tune AI responses based on immediate feedback. PromptBase:Explore and use optimized, pre-designed prompts to save time and effort while ensuring quality output. PromptChainer:Chain multiple prompts together to build workflows for more structured and detailed responses. Helicone:Track and analyze the performance of your prompts to optimize them based on data-driven insights. Agenta: Collaborate with a team to test, iterate and improve prompts, enhancing quality through collective input."
   },
   {
     "input": "1. Direct Prompt Injection",
@@ -24849,7 +24849,7 @@
   },
   {
     "input": "Syntax",
-    "output": "Parameters: src:Input noisy colored image (as a NumPy array). dst:Output image (set None to return it directly). h:Filter strength for the luminance (brightness) component. Higher value means stronger smoothing. hColor:Same as h, but for color components. Not used for grayscale images. templateWindowSize:Size of the patch used for calculating weights. searchWindowSize:Size of the window to search for similar patches."
+    "output": "Parameters: src: Input noisy colored image (as a NumPy array). dst:Output image (set None to return it directly). h:Filter strength for the luminance (brightness) component. Higher value means stronger smoothing. hColor:Same as h, but for color components. Not used for grayscale images. templateWindowSize:Size of the patch used for calculating weights. searchWindowSize:Size of the window to search for similar patches."
   },
   {
     "input": "Example: Denoising a Noisy Image",
@@ -24897,7 +24897,7 @@
   },
   {
     "input": "Interpretation of the Equation",
-    "output": "A●B:Closing of imageAby structuring elementB ⊕:Dilation operation ⊖:Erosion operation Closing helps fill small black holes or gaps in white objects without altering their overall shape. It’s useful for closing small dark spots or breaks inside objects, preserving their outer structure."
+    "output": "A●B: Closing of imageAby structuring elementB ⊕:Dilation operation ⊖:Erosion operation Closing helps fill small black holes or gaps in white objects without altering their overall shape. It’s useful for closing small dark spots or breaks inside objects, preserving their outer structure."
   },
   {
     "input": "Function to perform Closing Operation",
@@ -24913,7 +24913,7 @@
   },
   {
     "input": "Interpretation of the Equation",
-    "output": "A:input image B:structuring element (kernel) ⊕:Dilation ⊖:Erosion Gradient highlights the boundaries of objects by finding difference between their dilated and eroded versions. It’s useful for detecting edges and outlining shapes without affecting their internal regions."
+    "output": "A: input image B: structuring element (kernel) ⊕:Dilation ⊖:Erosion Gradient highlights the boundaries of objects by finding difference between their dilated and eroded versions. It’s useful for detecting edges and outlining shapes without affecting their internal regions."
   },
   {
     "input": "Function to perform Gradient Operation",
@@ -24929,7 +24929,7 @@
   },
   {
     "input": "Interpretation of the Equation",
-    "output": "A∘B:Opening of image A by structuring element B ⊖:Erosion operation ⊕:Dilation operation It helps removes small white noise (tiny bright spots) from black backgrounds without affecting shape and size of larger white objects. Useful for cleaning internal noise like small specks or dots while preserving the main object’s structure."
+    "output": "A∘B: Opening of image A by structuring element B ⊖:Erosion operation ⊕:Dilation operation It helps removes small white noise (tiny bright spots) from black backgrounds without affecting shape and size of larger white objects. Useful for cleaning internal noise like small specks or dots while preserving the main object’s structure."
   },
   {
     "input": "Function to Perform Opening Operation",
@@ -24961,7 +24961,7 @@
   },
   {
     "input": "Syntax",
-    "output": "Parameters: src:input image whose color space is to be changed. code:color space conversion code (e.g., cv2.COLOR_BGR2GRAY). dst(Optional):Output image of the same size and depth as src. dstCn(Optional):Number of channels in destination image. If0, it’s derived automatically."
+    "output": "Parameters: src: input image whose color space is to be changed. code:color space conversion code (e.g., cv2.COLOR_BGR2GRAY). dst(Optional):Output image of the same size and depth as src. dstCn(Optional):Number of channels in destination image. If0, it’s derived automatically."
   },
   {
     "input": "Key Points to Remember",
@@ -24989,7 +24989,7 @@
   },
   {
     "input": "Real-World Applications",
-    "output": "Different color spaces are preferred for specific computer vision tasks because they highlight certain image features better. Let’s see some real-world applications of these conversions: Grayscale:Face detection, OCR (text recognition) HSV:Object tracking (e.g., detecting a colored ball) LAB:Color enhancement, skin tone detection YCrCb:Video compression, human skin detection"
+    "output": "Different color spaces are preferred for specific computer vision tasks because they highlight certain image features better. Let’s see some real-world applications of these conversions: Grayscale:Face detection, OCR (text recognition) HSV:Object tracking (e.g., detecting a colored ball) LAB: Color enhancement, skin tone detection YCrCb: Video compression, human skin detection"
   },
   {
     "input": "Erosion",
