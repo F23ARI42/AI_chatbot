@@ -413,7 +413,7 @@
   },
   {
     "input": "Step 1: Importing Libraries",
-    "output": "We import all the necessary library likenumpy, matplotlibandscikit-learn."
+    "output": "We import all the necessary library like numpy, matplotlib and scikit-learn."
   },
   {
     "input": "Step 2: Preparing Dataset",
@@ -1345,7 +1345,7 @@
   },
   {
     "input": "Step 1: Importing Required Libraries",
-    "output": "We import the necessary library likepandas, numpy, scikit learn, seabornandmatplotlibto visualize results."
+    "output": "We import the necessary library like pandas, numpy, scikit learn, seaborn and matplotlib to visualize results."
   },
   {
     "input": "Step 2: Creating Sample Dataset",
@@ -1993,7 +1993,7 @@
   },
   {
     "input": "Step 1: Import libraries and Define Maze, Start and Goal",
-    "output": "We will import the required libraries such asnumpyandmatplotlib. The maze is represented as a 2D NumPy array. Zero values are safe paths; ones are obstacles the agent must avoid. Start and goal define the positions where the agent begins and where it aims to reach."
+    "output": "We will import the required libraries such as numpy and matplotlib. The maze is represented as a 2D NumPy array. Zero values are safe paths; ones are obstacles the agent must avoid. Start and goal define the positions where the agent begins and where it aims to reach."
   },
   {
     "input": "Step 2: Define RL Parameters and Initialize Q-Table",
@@ -2205,7 +2205,7 @@
   },
   {
     "input": "Step 1: Import Libraries",
-    "output": "We will import the necessary libraries such asnumpyand sklearn for our model,"
+    "output": "We will import the necessary libraries such as numpy and sklearn for our model,"
   },
   {
     "input": "Step 2: Define BaggingClassifier Class and Initialize",
@@ -2509,7 +2509,7 @@
   },
   {
     "input": "Step1: Importing Libraries",
-    "output": "We will be usingnumpy, pandas, matplotlibandscikit learnfor this."
+    "output": "We will be using numpy, pandas, matplotlibandscikit learnfor this."
   },
   {
     "input": "Step2: Loading Dataset",
@@ -2597,7 +2597,7 @@
   },
   {
     "input": "1. Import Libraries",
-    "output": "Let's begin with importing important libraries likenumpyandscikit learnwhich will be required to do classification task."
+    "output": "Let's begin with importing important libraries like numpy and scikit learn which will be required to do classification task."
   },
   {
     "input": "2. Defining the AdaBoost Class",
@@ -3017,7 +3017,7 @@
   },
   {
     "input": "Step 1: Import Libraries and Load Dataset",
-    "output": "We will import all the necessary libraries i.epandasandnumpy."
+    "output": "We will import all the necessary libraries i.e pandas and numpy."
   },
   {
     "input": "Step 2: Check for Duplicate Rows",
@@ -3381,7 +3381,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "We will be usingnumpy, pandas, scikit learnandmatplotlib."
+    "output": "We will be using numpy, pandas, scikit learnandmatplotlib."
   },
   {
     "input": "2. Defining Lasso Regression Class",
@@ -3449,7 +3449,7 @@
   },
   {
     "input": "Step 1:Import Required Libraries",
-    "output": "We neednumpyfor matrix operations and numerical computations, as it handles operations on arrays."
+    "output": "We need numpy for matrix operations and numerical computations, as it handles operations on arrays."
   },
   {
     "input": "Step 2:Define Activation Functions",
@@ -3937,7 +3937,7 @@
   },
   {
     "input": "Step 1: Import Libraries and Load Dataset",
-    "output": "We will import the required libraries such asTensorFlow, Keras, numpy, matplotlib.pyplot. Also we will load the MNIST dataset for our model. Loads raw MNIST digit images without labels for the SSL pre-training task. Normalizes pixel values to be between 0 and 1. Adds a channel dimension to images to fit CNN input shape."
+    "output": "We will import the required libraries such as TensorFlow, Keras, numpy, matplotlib.pyplot. Also we will load the MNIST dataset for our model. Loads raw MNIST digit images without labels for the SSL pre-training task. Normalizes pixel values to be between 0 and 1. Adds a channel dimension to images to fit CNN input shape."
   },
   {
     "input": "Step 2: Prepare Rotation Task Dataset",
@@ -4409,7 +4409,7 @@
   },
   {
     "input": "1. Installing Libraries",
-    "output": "We will be importingnumpy, pandas, matplotlibandscikit learn."
+    "output": "We will be importing numpy, pandas, matplotlib and scikit learn."
   },
   {
     "input": "2. Generating data and splitting data",
@@ -4769,7 +4769,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "Here we are importingnumpy, pandas, matplotlib, seabornandscikit learn. RandomForestRegressor: This is the regression model that is based upon the Random Forest model. LabelEncoder: This class is used to encode categorical data into numerical values. KNNImputer: This class is used to impute missing values in a dataset using ak-nearest neighborsapproach. train_test_split: This function is used to split a dataset into training and testing sets. StandardScaler: This class is used to standardize features by removing the mean and scaling to unit variance. f1_score: This function is used to evaluate the performance of a classification model using the F1 score. RandomForestRegressor: This class is used to train a random forest regression model. cross_val_score: This function is used to perform k-fold cross-validation to evaluate the performance of a model"
+    "output": "Here we are importing numpy, pandas, matplotlib, seaborn and scikit learn. RandomForestRegressor: This is the regression model that is based upon the Random Forest model. LabelEncoder: This class is used to encode categorical data into numerical values. KNNImputer: This class is used to impute missing values in a dataset using ak-nearest neighborsapproach. train_test_split: This function is used to split a dataset into training and testing sets. StandardScaler: This class is used to standardize features by removing the mean and scaling to unit variance. f1_score: This function is used to evaluate the performance of a classification model using the F1 score. RandomForestRegressor: This class is used to train a random forest regression model. cross_val_score: This function is used to perform k-fold cross-validation to evaluate the performance of a model"
   },
   {
     "input": "2. Importing Dataset",
@@ -5209,7 +5209,7 @@
   },
   {
     "input": "Step 1: Importing the required libraries",
-    "output": "We will importnumpy, matplotlib, scikit learnandscipyfor this."
+    "output": "We will import numpy, matplotlib, scikit learnandscipyfor this."
   },
   {
     "input": "Step 2: Creating and Visualizing the data",
@@ -5309,7 +5309,7 @@
   },
   {
     "input": "Step 1: Importing the required libraries",
-    "output": "First we will import all the necessary libraries likenumpy , pandas, matplotlibandscikit learn."
+    "output": "First we will import all the necessary libraries like numpy , pandas, matplotlib and scikit learn."
   },
   {
     "input": "Step 2: Loading and Cleaning the data",
@@ -5597,7 +5597,7 @@
   },
   {
     "input": "Step 1: Importing Libraries",
-    "output": "We will usenumpyfor numerical operations, skfuzzy for the Fuzzy C-Means clustering algorithm andmatplotlibfor plotting the results."
+    "output": "We will use numpy for numerical operations, skfuzzy for the Fuzzy C-Means clustering algorithm andmatplotlibfor plotting the results."
   },
   {
     "input": "Step 2: Generating Sample Data",
@@ -5653,7 +5653,7 @@
   },
   {
     "input": "Step 1: Import necessary libraries",
-    "output": "First we will importnumpy, sklearn, FastICAandmatplotlib."
+    "output": "First we will import numpy, sklearn, FastICAandmatplotlib."
   },
   {
     "input": "Step 2: Generate Random Data and Mix the Signals",
@@ -6869,7 +6869,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "We will be usingnumpy, pandasandOpenCVfor this."
+    "output": "We will be using numpy, pandasandOpenCVfor this."
   },
   {
     "input": "2. Generating and Visualizing Test Data with Multiple Features",
@@ -8369,7 +8369,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "We will be using python libraries likenumpy, pandas, matplotlibandtensorflowlibraries for building our model."
+    "output": "We will be using python libraries like numpy, pandas, matplotlibandtensorflowlibraries for building our model."
   },
   {
     "input": "2. Loading and Preparing the IMDB Dataset",
@@ -24957,7 +24957,7 @@
   },
   {
     "input": "Common Conversion Codes",
-    "output": "Let’s see some of the most commonly used OpenCV color conversion codes: cv2.COLOR_BGR2GRAY\tBGR: Grayscale cv2.COLOR_BGR2RGB\tBGR: RGB cv2.COLOR_BGR2HSV\tBGR: HSV cv2.COLOR_BGR2LAB\tBGR: LAB color space cv2.COLOR_BGR2YCrCb\tBGR: YCrCb (used in compression & skin detection)"
+    "output": "Let’s see some of the most commonly used OpenCV color conversion codes: cv2.COLOR_BGR2GRAY BGR: Grayscale cv2.COLOR_BGR2RGB BGR: RGB cv2.COLOR_BGR2HSV BGR: HSV cv2.COLOR_BGR2LAB BGR: LAB color space cv2.COLOR_BGR2YCrCb BGR: YCrCb (used in compression & skin detection)"
   },
   {
     "input": "Real-World Applications",
