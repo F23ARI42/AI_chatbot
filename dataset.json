@@ -1541,7 +1541,7 @@
   },
   {
     "input": "Implementing Random Forest for Classification Tasks",
-    "output": "Here we will predict survival rate of a person in titanic. Import libraries likepandasandscikit learn. Load the Titanic dataset. Remove rows with missing target values ('Survived'). Select features like class, sex, age, etc and convert 'Sex' to numbers. Fill missing age values with the median. Split the data into training and testing sets, then train a Random Forest model. Predict on test data, check accuracy and print a sample prediction result. Output: We evaluated model's performance using a classification report to see how well it predicts the outcomes and used a random sample to check model prediction."
+    "output": "Here we will predict survival rate of a person in titanic. Import libraries like pandas and scikit learn. Load the Titanic dataset. Remove rows with missing target values ('Survived'). Select features like class, sex, age, etc and convert 'Sex' to numbers. Fill missing age values with the median. Split the data into training and testing sets, then train a Random Forest model. Predict on test data, check accuracy and print a sample prediction result. Output: We evaluated model's performance using a classification report to see how well it predicts the outcomes and used a random sample to check model prediction."
   },
   {
     "input": "Implementing Random Forest for Regression Tasks",
@@ -2349,11 +2349,11 @@
   },
   {
     "input": "1. Import Required Libraries",
-    "output": "We will be importingPandas, matplotlib, seabornandsklearnto build the model."
+    "output": "We will be importing Pandas, matplotlib, seaborn and scikit-learn to build the model."
   },
   {
     "input": "2. Import Dataset",
-    "output": "For this we'll use theIris Datasetwhich is available within scikit learn. This dataset contains information about three types of Iris flowers and their respective features (sepal length, sepal width, petal length and petal width)."
+    "output": "For this we'll use the Iris Dataset which is available within scikit learn. This dataset contains information about three types of Iris flowers and their respective features (sepal length, sepal width, petal length and petal width)."
   },
   {
     "input": "3. Data Preparation",
@@ -2509,7 +2509,7 @@
   },
   {
     "input": "Step1: Importing Libraries",
-    "output": "We will be using numpy, pandas, matplotlibandscikit learnfor this."
+    "output": "We will be using numpy, pandas, matplotlib and scikit-learn for this."
   },
   {
     "input": "Step2: Loading Dataset",
@@ -3081,7 +3081,7 @@
   },
   {
     "input": "Step 1: Import Libraries and Load Dataset",
-    "output": "We prepare the environment with libraries liikepandas, numpy, scikit learn, matplotlibandseabornfor data manipulation, numerical operations, visualization and scaling. Load the dataset for preprocessing."
+    "output": "We prepare the environment with libraries like pandas, numpy, scikit-learn, matplotlib and seaborn for data manipulation, numerical operations, visualization and scaling. Load the dataset for preprocessing."
   },
   {
     "input": "Step 2: Inspect Data Structure and Check Missing Values",
@@ -3145,7 +3145,7 @@
   },
   {
     "input": "Step 1: Loading the Dataset",
-    "output": "Here we will loadpandasandscikit learnlibrary. After that we can load our dataset."
+    "output": "Here we will load pandas and scikit-learn library. After that we can load our dataset."
   },
   {
     "input": "Step 2: Label Encoding",
@@ -3381,7 +3381,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "We will be using numpy, pandas, scikit learnandmatplotlib."
+    "output": "We will be using numpy, pandas, scikit-learn and matplotlib."
   },
   {
     "input": "2. Defining Lasso Regression Class",
@@ -3797,14 +3797,14 @@
   },
   {
     "input": "Implementing Label Encoding in Python",
-    "output": "Python provides two primary ways to perform label encoding: scikit-learn's LabelEncoder and pandas’ Categorical type."
+    "output": "Python provides two primary ways to perform label encoding: scikit-learn's Label Encoder and pandas’ Categorical type."
   },
   {
     "input": "1. Using scikit-learn’sLabelEncoder",
     "output": "Output: The fit_transform method both learns the unique categories and applies the encoding, while the classes_ attribute stores the mapping for future reference."
   },
   {
-    "input": "2. Using pandas’CategoricalType",
+    "input": "2. Using pandas’Categorical Type",
     "output": "Output: This approach is simpler for pandas-based workflows and does not require an external library."
   },
   {
@@ -3837,7 +3837,7 @@
   },
   {
     "input": "1. Using Pandas",
-    "output": "Pandas offers theget_dummiesfunctionwhich is a simple and effective way to perform one-hot encoding. This methodconverts categorical variables into multiple binary columns. For example theGendercolumn with values'M'and'F'becomes two binary columns: Gender_FandGender_M. drop_first=True in pandasdrops one redundant column e.g., keeps onlyGender_Fto avoid multicollinearity. Output: We can observe that we have3 Remarksand2 Gendercolumns in the data.However you can just usen-1columns to define parameters if it hasnunique labels.For example if we only keep theGender_Femalecolumn and drop theGender_Malecolumn then also we can convey the entire information as when the label is 1 it means female and when the label is 0 it means male. This way we can encode the categorical data and reduce the number of parameters as well."
+    "output": "Pandas offers theget_dummiesfunctionwhich is a simple and effective way to perform one-hot encoding. This methodconverts categorical variables into multiple binary columns. For example theGendercolumn with values'M'and'F'becomes two binary columns: Gender_FandGender_M. drop_first=True in pandas drops one redundant column e.g., keeps only Gender_Fto avoid multicollinearity. Output: We can observe that we have3 Remarksand2 Gendercolumns in the data.However you can just usen-1columns to define parameters if it hasnunique labels.For example if we only keep theGender_Femalecolumn and drop theGender_Malecolumn then also we can convey the entire information as when the label is 1 it means female and when the label is 0 it means male. This way we can encode the categorical data and reduce the number of parameters as well."
   },
   {
     "input": "2. One Hot Encoding using Scikit Learn Library",
@@ -4365,7 +4365,7 @@
   },
   {
     "input": "Step 1: Install and Import Libraries",
-    "output": "We will install and import all the required libraries such aspandas, mixtend, matplotlib, networkx."
+    "output": "We will install and import all the required libraries such as pandas, mixtend, matplotlib, networkx."
   },
   {
     "input": "Step 2: Load and Preview Dataset",
@@ -4485,7 +4485,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "In the code we have imported necessary libraries likepandas, numpyandsklearn. Bernoulli Naive Bayes is a part of sklearn package."
+    "output": "In the code we have imported necessary libraries like pandas, numpy and scikit-learn. Bernoulli Naive Bayes is a part of scikit-learn package."
   },
   {
     "input": "2. Data Analysis",
@@ -4665,7 +4665,7 @@
   },
   {
     "input": "1.Importing Libraries:",
-    "output": "We will importpandasandscikit learnwhere: pandas: Used for handling data in DataFrame format. CountVectorizer: Converts a collection of text documents into a matrix of token counts. train_test_split: Splits the data into training and test sets for model evaluation. Multinomial NB: A Naive Bayes classifier suited for classification tasks with discrete features (such as word counts). accuracy_score: Computes the accuracy of the model's predictions."
+    "output": "We will import pandas and scikit-learn where: pandas: Used for handling data in DataFrame format. CountVectorizer: Converts a collection of text documents into a matrix of token counts. train_test_split: Splits the data into training and test sets for model evaluation. Multinomial NB: A Naive Bayes classifier suited for classification tasks with discrete features (such as word counts). accuracy_score: Computes the accuracy of the model's predictions."
   },
   {
     "input": "2.Creating the Dataset",
@@ -5201,7 +5201,7 @@
   },
   {
     "input": "Step 1: Importing the required libraries",
-    "output": "We will import numpy, matplotlib, scikit learnandscipyfor this."
+    "output": "We will import numpy, matplotlib, scikit-learn and scipy for this."
   },
   {
     "input": "Step 2: Creating and Visualizing the data",
@@ -5589,7 +5589,7 @@
   },
   {
     "input": "Step 1: Importing Libraries",
-    "output": "We will use numpy for numerical operations, skfuzzy for the Fuzzy C-Means clustering algorithm andmatplotlibfor plotting the results."
+    "output": "We will use numpy for numerical operations, skfuzzy for the Fuzzy C-Means clustering algorithm and matplotlib for plotting the results."
   },
   {
     "input": "Step 2: Generating Sample Data",
@@ -5645,7 +5645,7 @@
   },
   {
     "input": "Step 1: Import necessary libraries",
-    "output": "First we will import numpy, sklearn, FastICAandmatplotlib."
+    "output": "First we will import numpy, sklearn, FastICA and matplotlib."
   },
   {
     "input": "Step 2: Generate Random Data and Mix the Signals",
@@ -6217,7 +6217,7 @@
   },
   {
     "input": "1. Importing Libraries and Dataset",
-    "output": "We'll importpandasandscikit learnlibrary and then import Iris dataset which contains data on three species of Iris flowers. Each entry includes measurements of the flowers' sepal length, sepal width, petal length and petal width. You can download the dataset from here.Iris Dataset"
+    "output": "We'll import pandas and scikit-learn library and then import Iris dataset which contains data on three species of Iris flowers. Each entry includes measurements of the flowers' sepal length, sepal width, petal length and petal width. You can download the dataset from here.Iris Dataset"
   },
   {
     "input": "2. Training the Model",
@@ -6756,23 +6756,23 @@
     "output": "Spatial analysis is the process of using analytical tools to analyze and represent data, relationships, and patterns among various geospatial data. This task of analyzing and recognizing patterns is discussed as follows."
   },
   {
-    "input": "1. Data Collection",
+    "input": "Data Collection for Spatial Analysis",
     "output": "Data collection is the corner stone for spatial analysis. It originates from gathering information from wide-ranging sources-the list including remote sensing devices likeLiDAR (Light Detection and Ranging) and airborne-based systems. In general, these data sets paint maps reflecting the geographic distribution of entities; for instance, these data are used for mapping regional temperature variation."
   },
   {
-    "input": "2. Data Analysis",
+    "input": "Data Analysis for Spatital Analysis",
     "output": "Once collected, the data undergoes spatial analysis usingartificial intelligence(AI) andmachine learning(ML) solutions to extract meaningful insights. ML models can be trained to detect and identify objects or structures within vast datasets, such as millions of images. These objects can includeschools, playgrounds, traffic zones, and residential areas. In spatial analysis there are visualization tools further enhance this process by highlighting different objects withdistinct colors, shapes, or annotations, making it easier to identifyand analyze these objects within largedatasets."
   },
   {
-    "input": "3. Data Presentation",
+    "input": "Data Presentation in Spatial Anlysis",
     "output": "In spatial analysis presenting analyzed data is crucial and can be time-consuming, as it involves emphasizing key findings. Data visualization tools, includingtables, charts, and graphs, simplify this task by effectively projecting relevant data and facilitating communication with stakeholders. Additionally,3D visualization tools enhance 2D databy adding depth and perspective, optimizing planning and implementation strategies for better problem-solving outcomes."
   },
   {
-    "input": "1. Geographic Search",
+    "input": "Geographic Search in Spatial Analysis",
     "output": "Spatial analysis enables visualization of specific data on maps through user-friendly interfaces. Users can search for geographic data using elements such as city names, country names, zip codes, etc. This search functionality helps identify points of interest, such as schools in a specific area."
   },
   {
-    "input": "2. Clustering of Datasets",
+    "input": "Clustering of Datasets for Spatial Analysis",
     "output": "Spatial analysis allows for the clustering of data points to understand demographic patterns. Authorities can analyze the density of data points to determine the proximity of amenities like schools. This helps identify areas with easy or limited access to facilities."
   },
   {
@@ -6809,7 +6809,7 @@
   },
   {
     "input": "Histogram",
-    "output": "Here we’ll be performing univariate analysis on Numerical variables using thehistogramfunction."
+    "output": "Here we’ll be performing univariate analysis on Numerical variables using the histogram function."
   },
   {
     "input": "Bar Chart",
@@ -6820,7 +6820,7 @@
     "output": "Apiecharthelps us to visualize the percentage of the data belonging to each category."
   },
   {
-    "input": "Bivariate analysis",
+    "input": "What is Bivariate analysis",
     "output": "Bivariate analysis is the simultaneous analysis of two variables. It explores the concept of the relationship between two variable whether there exists an association and the strength of this association or whether there are differences between two variables and the significance of these differences. The main three types we will see here are: "
   },
   {
@@ -6850,11 +6850,11 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "We will be using numpy, pandasandOpenCVfor this."
+    "output": "We will be using numpy, pandas and OpenCV for this."
   },
   {
     "input": "2. Generating and Visualizing Test Data with Multiple Features",
-    "output": "Let’s start by generating and visualizing random test data using matplotlib. In this case we create two sets of data pointsXandYand visualize them as a histogram. np.random.randint: Generates random integers in the specified range. In this case, it creates two arrays of random integers between 10 and 35 forXand 55 and 70 forY, both with dimensions (25, 2). np.vstack: Stacks arrays vertically (row-wise). It combines theXandYarrays into a single arrayZ. Z.reshape: Changes the shape of the array. It reshapes theZarray into a 50x2 array adjusting the dimensions accordingly. np.float32: Converts the arrayZto 32-bit floating-point type for better compatibility with some functions especially in libraries like OpenCV. Output: It shows two distinct clusters of data, with peaks indicating higher frequencies of test data points in specific ranges. The color-coded bars represent different data sets or clusters, and this distribution helps identify patterns in the data, which K-Means clustering can further analyze by grouping similar data points together."
+    "output": "Let’s start by generating and visualizing random test data using matplotlib. In this case we create two sets of data points X and Y and visualize them as a histogram. np.random.randint: Generates random integers in the specified range. In this case, it creates two arrays of random integers between 10 and 35 forXand 55 and 70 forY, both with dimensions (25, 2). np.vstack: Stacks arrays vertically (row-wise). It combines theXandYarrays into a single arrayZ. Z.reshape: Changes the shape of the array. It reshapes theZarray into a 50x2 array adjusting the dimensions accordingly. np.float32: Converts the arrayZto 32-bit floating-point type for better compatibility with some functions especially in libraries like OpenCV. Output: It shows two distinct clusters of data, with peaks indicating higher frequencies of test data points in specific ranges. The color-coded bars represent different data sets or clusters, and this distribution helps identify patterns in the data, which K-Means clustering can further analyze by grouping similar data points together."
   },
   {
     "input": "3. Applying K-Means Clustering on Test Data",
@@ -6986,7 +6986,7 @@
   },
   {
     "input": "Python Decision Tree Implementation",
-    "output": "Dataset Description: You can find more details of the dataset. In Python, sklearn is the package which contains all the required packages to implement Machine learning algorithm. You can install the sklearn package by following the commands given below. Before using the above command make sure you havescipyandnumpypackages installed.  If you don't have pip. You can install it using While implementing the decision tree in Python we will go through the following two phases: To import and manipulate the data we are using thepandaspackage provided in python. Here, we are using a URL which is directly fetching the dataset from the UCI site no need to download the dataset. When you try to run this code on your system make sure the system should have an active Internet connection. As the dataset is separated by  ,  so we have to pass the sep parameter's value as  , . Another thing is notice is that the dataset doesn't contain the header so we will pass the Header parameter's value as none. If we will not pass the header parameter then it will consider the first line of the dataset as the header. Before training the model we have to split the dataset into the training and testing dataset. To split the dataset for training and testing we are using the sklearn moduletrain_test_split First of all we have to separate the target variable from the attributes in the dataset. Above are the lines from the code which separate the dataset. The variable X contains the attributes while the variable Y contains the target variable of the dataset. Next step is to split the dataset for training and testing purpose. Above line split the dataset for training and testing. As we are splitting the dataset in a ratio of 70: 30 between training and testing so we are passtest_sizeparameter's value as 0.3. random_statevariable is a pseudo-random number generator state used for random sampling."
+    "output": "Dataset Description: You can find more details of the dataset. In Python, sklearn is the package which contains all the required packages to implement Machine learning algorithm. You can install the sklearn package by following the commands given below. Before using the above command make sure you have scipy and numpy packages installed.  If you don't have pip. You can install it using While implementing the decision tree in Python we will go through the following two phases: To import and manipulate the data we are using the pandas package provided in python. Here, we are using a URL which is directly fetching the dataset from the UCI site no need to download the dataset. When you try to run this code on your system make sure the system should have an active Internet connection. As the dataset is separated by  ,  so we have to pass the sep parameter's value as  , . Another thing is notice is that the dataset doesn't contain the header so we will pass the Header parameter's value as none. If we will not pass the header parameter then it will consider the first line of the dataset as the header. Before training the model we have to split the dataset into the training and testing dataset. To split the dataset for training and testing we are using the sklearn moduletrain_test_split First of all we have to separate the target variable from the attributes in the dataset. Above are the lines from the code which separate the dataset. The variable X contains the attributes while the variable Y contains the target variable of the dataset. Next step is to split the dataset for training and testing purpose. Above line split the dataset for training and testing. As we are splitting the dataset in a ratio of 70: 30 between training and testing so we are passtest_sizeparameter's value as 0.3. random_statevariable is a pseudo-random number generator state used for random sampling."
   },
   {
     "input": "Building a Decision Tree in Python",
@@ -7210,7 +7210,7 @@
   },
   {
     "input": "Step 1: Import Required Libraries",
-    "output": "First, we import the necessary Python libraries for performing Bayesian regression usingtorch, pyro, SVI, Trace_ELBO, predictive, Adam, andmatplotlib and seaborn."
+    "output": "First, we import the necessary Python libraries for performing Bayesian regression usingtorch, pyro, SVI, Trace_ELBO, predictive, Adam, and matplotlib and seaborn."
   },
   {
     "input": "Step 2: Generate Sample Data",
@@ -7322,7 +7322,7 @@
   },
   {
     "input": "1.Generating and Visualizing the 2D Data",
-    "output": "We will import libraries likepandas, matplotlib, seabornandscikit learn. The make_moons() function generates a 2D dataset that forms two interleaving half circles. This kind of data is non-linearly separable and perfect for showing how k-NN handles such cases."
+    "output": "We will import libraries like pandas, matplotlib, seaborn and scikit-learn. The make_moons() function generates a 2D dataset that forms two interleaving half circles. This kind of data is non-linearly separable and perfect for showing how k-NN handles such cases."
   },
   {
     "input": "2.Train-Test Split and Normalization",
@@ -8334,7 +8334,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "We will be using python libraries like numpy, pandas, matplotlibandtensorflowlibraries for building our model."
+    "output": "We will be using python libraries like numpy, pandas, matplotlib and tensorflow libraries for building our model."
   },
   {
     "input": "2. Loading and Preparing the IMDB Dataset",
@@ -9330,7 +9330,7 @@
   },
   {
     "input": "Step 1: Import Required Libraries",
-    "output": "Importpytorchandmatplotlib."
+    "output": "Import pytorch and matplotlib."
   },
   {
     "input": "Step 2: Define the Convolutional Autoencoder Architecture",
@@ -9890,11 +9890,11 @@
   },
   {
     "input": "1. Import Libraries",
-    "output": "We importtensorflowandmatplotlibfor it."
+    "output": "We import tensorflow and matplotlib for it."
   },
   {
     "input": "2. Load and Preprocess CIFAR-10 Dataset",
-    "output": "CIFAR-10contains 60,000 32×32 RGB images across 10 classes. Pixel values are scaled to [0, 1]. Labels areone-hot encodedfor softmax classification."
+    "output": "CIFAR-10 contains 60,000 32×32 RGB images across 10 classes. Pixel values are scaled to [0, 1]. Labels are one-hot encoded for softmax classification."
   },
   {
     "input": "3. Define the AlexNet Model (Adjusted for CIFAR-10)",
@@ -11278,7 +11278,7 @@
   },
   {
     "input": "Step 2: Import Libraries",
-    "output": "Here, essential libraries are imported, including: PyTorchandtorch.nnfor defining neural networks and optimizing them. torch_geometricfor graph neural network operations. matplotlibandnetworkxfor visualizing graphs."
+    "output": "Here, essential libraries are imported, including: PyTorchandtorch.nnfor defining neural networks and optimizing them. torch_geometricfor graph neural network operations. matplotlib and networkx for visualizing graphs."
   },
   {
     "input": "Step 3: Define the GCN Model",
@@ -11454,7 +11454,7 @@
   },
   {
     "input": "1. Import Required Libraries",
-    "output": "Here we will importNumpyandpandaslibrary."
+    "output": "Here we will import Numpy and pandas library."
   },
   {
     "input": "2. Create Sample Dataset",
@@ -14934,7 +14934,7 @@
   },
   {
     "input": "Step 1: Import libraries",
-    "output": "We will importpytorch."
+    "output": "We will import pytorch."
   },
   {
     "input": "Step 2: Encoder",
@@ -16742,7 +16742,7 @@
   },
   {
     "input": "1. Importing Libraries",
-    "output": "We importpytorchfor deep learning, torchvisionfor vision datasets and models, transformsfor image preprocessing andcv2(OpenCV) for general computer vision tasks."
+    "output": "We import pytorch for deep learning, torchvisionfor vision datasets and models, transformsfor image preprocessing andcv2(OpenCV) for general computer vision tasks."
   },
   {
     "input": "2. Loading the pretrained model",
@@ -17290,7 +17290,7 @@
   },
   {
     "input": "Step 1: Importing necessary libraries",
-    "output": "numpyis used for numerical operations and creating the time domain signal. matplotlib.pyplotis used for plotting the signal and its frequency spectrum. scipy.fftprovides: fft: Fast Fourier Transform(computes the DFT), ifft: Inverse FFT (reconstructs time domain signal), fft freq: Computes the frequency bins for plotting."
+    "output": "numpyis used for numerical operations and creating the time domain signal. matplotlib.pyplot is used for plotting the signal and its frequency spectrum. scipy.fftprovides: fft: Fast Fourier Transform(computes the DFT), ifft: Inverse FFT (reconstructs time domain signal), fft freq: Computes the frequency bins for plotting."
   },
   {
     "input": "Step 2: Create the Time Domain Signal",
@@ -20566,7 +20566,7 @@
   },
   {
     "input": "1. Installation and Imports",
-    "output": "Installs and imports essential libraries liketransformers, pytorchandpandas Sets up the T5 model for usage"
+    "output": "Installs and imports essential libraries liketransformers, pytorch and pandas Sets up the T5 model for usage"
   },
   {
     "input": "2. Setting Device for Computation",
@@ -20842,11 +20842,11 @@
   },
   {
     "input": "Visualizing Frequency Spectrum",
-    "output": "Frequency Spectrum is a representation of how the energy in an audio signal is distributed across different frequencies which can be calculated by applying a mathematical transformation like the Fast Fourier Transform (FFT) to the audio signal. It is  very useful for identifying musical notes, detecting harmonics or filtering specific frequency components. The code snippet computes Fast Fourier Transform and plots frequency spectrum of audio usingmatplotlib. Output: The plot displays the frequency of the audio signal, which allows us to observe the dominant frequencies and their amplitudes."
+    "output": "Frequency Spectrum is a representation of how the energy in an audio signal is distributed across different frequencies which can be calculated by applying a mathematical transformation like the Fast Fourier Transform (FFT) to the audio signal. It is  very useful for identifying musical notes, detecting harmonics or filtering specific frequency components. The code snippet computes Fast Fourier Transform and plots frequency spectrum of audio using matplotlib. Output: The plot displays the frequency of the audio signal, which allows us to observe the dominant frequencies and their amplitudes."
   },
   {
     "input": "Spectrogram",
-    "output": "Spectrogram is a time-frequency representation of an audio signal which provides a 2D visualization of how the frequency content of the audio signal changes over time. In spectrogram, the dark regions indicate less presence of a frequency and in the other hand bright regions indicate strong presence of a frequency at a certain time. This will help is various tasks like speech recognition, musical analysis and identifying sound patterns. The code snippet computes and plots the audio waveform usingmatplotliblibrary andscipy.signal.spectrogramfunction. In the code, epsilon defines a small constant to avoid division by zero. Epsilon is added to the spectrogram values before taking logarithm to prevent issues with very small values. Output: The plot displays spectrogram, which represents how the frequencies in the audio signal change over time. The color intensity represents whether the frequency is high or low at each time point."
+    "output": "Spectrogram is a time-frequency representation of an audio signal which provides a 2D visualization of how the frequency content of the audio signal changes over time. In spectrogram, the dark regions indicate less presence of a frequency and in the other hand bright regions indicate strong presence of a frequency at a certain time. This will help is various tasks like speech recognition, musical analysis and identifying sound patterns. The code snippet computes and plots the audio waveform using matplotlib library ands cipy.signal.spectrogram function. In the code, epsilon defines a small constant to avoid division by zero. Epsilon is added to the spectrogram values before taking logarithm to prevent issues with very small values. Output: The plot displays spectrogram, which represents how the frequencies in the audio signal change over time. The color intensity represents whether the frequency is high or low at each time point."
   },
   {
     "input": "Conclusion of visualization",
@@ -21782,7 +21782,7 @@
   },
   {
     "input": "1. Importing Necessary Libraries",
-    "output": "We load all necessary libraries likenumpy, pandas, matplotlib, statsmodelsandscikit learn."
+    "output": "We load all necessary libraries likenumpy, pandas, matplotlib, stats models and scikit-learn."
   },
   {
     "input": "2. Loading and Preprocessing the data",
@@ -22018,7 +22018,7 @@
   },
   {
     "input": "Step 2: Import Libraries",
-    "output": "We will import the libraries that will be required such ascv2andmatplotlib."
+    "output": "We will import the libraries that will be required such ascv2 and matplotlib."
   },
   {
     "input": "Step 3: Load image and Convert to Greyscale",
@@ -23470,7 +23470,7 @@
   },
   {
     "input": "Step 1: Import Libraries",
-    "output": "This step involves importing necessary libraries for data manipulation, model training, and visualization. Libraries like PyTorch andscikit-learnare used for creating datasets, defining models, and optimizing parameters, whilematplotlibis used for plotting."
+    "output": "This step involves importing necessary libraries for data manipulation, model training, and visualization. Libraries like PyTorch andscikit-learnare used for creating datasets, defining models, and optimizing parameters, while matplotlib is used for plotting."
   },
   {
     "input": "Step 2: Set Seeds for Reproducibility",
