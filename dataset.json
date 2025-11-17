@@ -3784,10 +3784,6 @@
     "output": "MSE works well for regression, but in Logistic Regression it creates anon-convex curve(multiple local minima). Log loss ensures aconvex cost function, making optimization with Gradient Descent easier and guaranteeing a global minimum."
   },
   {
-    "input": "Example in Python",
-    "output": ""
-  },
-  {
     "input": "Related Articles",
     "output": "Logistic Regression Mean Squared Error (MSE)"
   },
@@ -4130,10 +4126,6 @@
   {
     "input": "Step 3: Get TF-IDF values",
     "output": "Here we are using TfidfVectorizer() from scikit learn to perform tf-idf and apply on our courpus using fit_transform."
-  },
-  {
-    "input": "Step 4: Display IDF values",
-    "output": ""
   },
   {
     "input": "Step 5: Display TF-IDF values along with indexing",
@@ -5744,10 +5736,6 @@
     "output": "We define the play_game() function, where: Player 1 (MCTS) chooses the best move using MCTS. Player 2 plays randomly for demonstration purposes."
   },
   {
-    "input": "6. Run the game",
-    "output": ""
-  },
-  {
     "input": "Expected Performance",
     "output": "When running the above implementation, MCTS demonstrates strong performance even against optimal play in Tic-Tac-Toe. With 1000 iterations per move, the algorithm can identify winning opportunities and avoid losing positions effectively. The quality of play improves significantly as the number of iterations increases. AlphaGo, which uses MCTS combined with neural networks, achieved superhuman performance in Go by performing millions of simulations per move. Monte Carlo's strength lies in its ability to focus computational resources on the most promising areas of the search space."
   },
@@ -5920,19 +5908,19 @@
     "output": "Several modifications to the original REINFORCE algorithm have been proposed to address its high variance: Baseline: By subtracting a baseline value (typically the value functionV(s)) from the returnG_t​, the variance of the gradient estimate can be reduced without affecting the expected gradient. This results in a variant known as REINFORCE with a baseline. The update rule becomes: Whereb_t​ is the baseline such as the expected reward from states_t​. Actor-Critic: It is a method that use two parts to learn better: the actor and the critic. Theactorchooses what action to take while thecriticchecks how good that action was and give feedback. This helps to make learning more stable and faster by reducing random mistakes."
   },
   {
-    "input": "Advantages",
-    "output": "Easy to Understand: REINFORCE is simple and easy to use and a good way to start learning about how to improve decision in reinforcement learning. Directly Improves Decisions: It works by directly improving the way actions are chosen which is helpful when there are many possible actions or choices. Good for Tasks with Clear Endings: It works well when tasks have a clear finish and the agent gets a total reward at the end."
+    "input": "Advantages of REINFORCE",
+    "output": "REINFORCE is simple and easy to use and a good way to start learning about how to improve decision in reinforcement learning. Directly Improves Decisions: It works by directly improving the way actions are chosen which is helpful when there are many possible actions or choices. Good for Tasks with Clear Endings: It works well when tasks have a clear finish and the agent gets a total reward at the end."
   },
   {
-    "input": "Challenges",
-    "output": "High Variance: One of the major issues with REINFORCE is its high variance. The gradient estimate is based on a single trajectory and the returnG_t​ can fluctuate significantly, making the learning process noisy and slow. Sample Inefficiency: Since REINFORCE requires complete episodes to update the policy, it tends to be sample-inefficient. The agent may have to spend a lot of time trying things out before it gets helpful feedback to learn from. Convergence Issues: Because the results can be very random and learning is slow REINFORCE needs a lot of practice before it learns a good way to act."
+    "input": "Challenges of REINFORCE",
+    "output": "One of the major issues with REINFORCE is its high variance. The gradient estimate is based on a single trajectory and the returnG_t​ can fluctuate significantly, making the learning process noisy and slow. Sample Inefficiency: Since REINFORCE requires complete episodes to update the policy, it tends to be sample-inefficient. The agent may have to spend a lot of time trying things out before it gets helpful feedback to learn from. Convergence Issues: Because the results can be very random and learning is slow REINFORCE needs a lot of practice before it learns a good way to act."
   },
   {
-    "input": "Applications",
+    "input": "Applications of REINFORCE",
     "output": "REINFORCE  has been applied in several domains: Robotics: REINFORCE helps robots to learn how to do things like picking up objects or moving around. The robot try different actions and learn from what works well or not. Game AI: It is used to teach game players like in video games or board games like chess. The player learns by playing the game many times and figure out what moves led to win. Self-driving cars: REINFORCE can help improve how self-driving cars decide to drive safely and efficiently by rewarding good driving decisions."
   },
   {
-    "input": "Key Components",
+    "input": "Key Components of SARSA Algorithm",
     "output": "Key components of the SARSA Algorithm are as follows: SARSA focuses on updating the agent's Q-values (a measure of the quality of a given state-action pair) based on both the immediate reward and the expected future rewards."
   },
   {
@@ -5948,7 +5936,7 @@
     "output": "Lets see how the SARSA algorithm works step-by-step: 1. Initialize Q-values: Begin by setting arbitrary values for the Q-table (for each state-action pair). 2. Choose Initial State: Start the agent in an initial states_0. 3. Episode Loop: For each episode (a complete run through the environment) we set the initial states_t​ and choose an actiona_t​ based on a policy like varepsilon. 4. Step Loop: For each step in the episode: Take actiona_t​ observe rewardR_{t+1}​ and transition to the next states_{t+1}​. Choose the next actiona_{t+1}​ based on the policy for states_{t+1}. Update the Q-value for the state-action pair(s_t, a_t) using the SARSA update rule. Sets_t = s_{t+1}​ anda_t = a_{t+1}​. 5. End Condition: Repeat until the episode ends either because the agent reaches a terminal state or after a fixed number of steps."
   },
   {
-    "input": "Implementation",
+    "input": "Implementation of SARSA Algorithm",
     "output": "Let’s consider a practical example of implementing SARSA in a Grid World environment where the agent can move up, down, left or right to reach a goal."
   },
   {
@@ -5972,11 +5960,11 @@
     "output": "SARSA uses an exploration-exploitation strategy to choose actions. A common strategy isε-greedy: Exploration: With probabilityε, the agent chooses a random action (exploring new possibilities). Exploitation: With probability1−ε, the agent chooses the action with the highest Q-value for the current state (exploiting its current knowledge). Over time,εis often decayed to shift from exploration to exploitation as the agent gains more experience in the environment."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of SARSA Algorithm",
     "output": "On-Policy Learning: It updates Q-values based on the agent’s actual actions which makes it realistic for environments where exploration and behavior directly influence learning. Real-World Behavior: The agent learns from real experiences, leading to grounded decision-making that reflects its actual behavior in uncertain situations. Gradual Improvement: It is more stable than off-policy methods like Q-learning when exploration is needed to discover optimal actions."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of SARSA Algorithm",
     "output": "Slower Convergence: It tends to converge more slowly than off-policy methods like Q-learning in environments that require heavy exploration. Sensitive to Exploration Strategy: Its performance is highly dependent on the exploration strategy used and improper management can delay or hinder learning. By mastering SARSA, we can build more adaptive agents capable of making grounded decisions in uncertain environments."
   },
   {
@@ -6048,67 +6036,67 @@
     "output": "Descriptive statistics give us a clear picture of the distribution, spread and central tendency of the data. These measures allow us to summarize the data in ways that make it easier to analyze and interpret. Below are some essential descriptive statistics used in EDA: "
   },
   {
-    "input": "1.1. Mean",
+    "input": "What is Mean",
     "output": "The mean is the average of the data points, calculated by summing all values and dividing by the total number of observations. Best used: The mean is particularly useful when comparing different sets of data that are similar in distribution and don’t have extreme values. For instance, comparing the average income levels across different regions or departments in a company. Not suitable: The mean can be heavily influenced by outliers or skewed data. If the dataset contains unusually high values (like a few people earning extremely high incomes) it may distort the results. The mean would no longer represent the  typical  value in this case. Example: If we want to understand the average monthly sales of a store over the course of a year, we would calculate the mean sales to see the typical revenue generated each month."
   },
   {
-    "input": "1.2. Median",
+    "input": "What is Median",
     "output": "The median is the middle value of the dataset when arranged in ascending order. It is robust to outliers, meaning that extreme values do not significantly affect the median. Best used: The median is ideal for datasets that are skewed or have outliers. It gives a better sense of the  typical  value in cases where the mean may be misleading. For example, when calculating household income in a region where a few individuals earn significantly more than the rest. Not suitable: If we're interested in understanding the exact average value, especially when the data distribution is relatively symmetrical, the median may not be ideal. It won’t account for the size of the values, just the middle value. Example: In a dataset of household incomes, where a few individuals have very high incomes, the median provides a better representation of the typical household income than the mean would."
   },
   {
-    "input": "1.3. Mode",
+    "input": "What is Mode",
     "output": "The mode is the most frequent value or category in the dataset. Best used: The mode is useful for categorical or discrete data where we want to identify the most common value. For instance, if we want to know the most popular product sold in a store, the mode will give us the product that sold the most units. Not suitable: When the data is continuous or doesn’t have a clear frequency, the mode may not provide meaningful insights. For example, continuous data like height or weight typically won’t have a mode. Example: A company might want to know which product was sold the most during a promotional campaign. By calculating the mode, they can easily identify the most frequent product sold."
   },
   {
-    "input": "1.4. Standard Deviation",
+    "input": "What is Standard Deviation",
     "output": "Standard deviation measures the amount of variation or dispersion from the mean. A low standard deviation means the data points are close to the mean, while a high standard deviation indicates a greater spread of data points. Best used: Standard deviation is useful when we want to understand how spread out the data is. For example, if we're analyzing the daily website traffic for an e-commerce site, a high standard deviation would indicate that traffic varies significantly day-to-day. Not suitable: Standard deviation can be misleading if the data is heavily skewed or has outliers. In these cases, the standard deviation might not accurately reflect the true spread of the majority of the data. Example: If an e-commerce website experiences major traffic spikes on certain days, the standard deviation will indicate how much the daily traffic varies from the average, helping to identify whether the site’s traffic is consistent or highly variable."
   },
   {
-    "input": "1.5. Interquartile Range (IQR)",
+    "input": "What is Interquartile Range (IQR)",
     "output": "The IQR is the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of the data. It represents the spread of the middle 50% of the data and is helpful for identifying outliers. Best used: IQR is particularly effective for detecting outliers and understanding the spread of the middle 50% of the data. For instance, when analyzing exam scores in a class, the IQR can help identify students who performed significantly better or worse than most of the class. Not suitable: The IQR may not be helpful when the data is already normally distributed, or when there are no outliers in the dataset. In such cases, simpler measures like the mean or standard deviation might be more appropriate. Example: In a class of students, if we want to focus on the range of scores that represent the middle 50% of students and exclude extreme values (such as a few students who scored abnormally high or low), we would use the IQR."
   },
   {
-    "input": "1.6. Skewness",
+    "input": "What is Skewness",
     "output": "Skewness measures the asymmetry of the data distribution. It indicates whether the data leans toward the right (positive skew) or left (negative skew). In simple terms, it tells us whether the data is more on one side than the other. Best used: When determining if the data needs transformation (such as using a log transform to normalize skewed data). If the data has a significant skew (positive or negative), we might need to apply a transformation to make it more suitable for machine learning algorithms that assume normality (e.g., linear regression). Not suitable: For symmetric data. If the data is already normally distributed, calculating skewness isn't necessary, as it will be close to zero, offering little additional information. Example scenario: A retail analyst might use skewness to analyze monthly sales data for a product. If the data is skewed (e.g., higher sales during holiday periods), the analyst may decide to use a log transformation to stabilize variance before applying machine learning models."
   },
   {
-    "input": "1.7. Kurtosis",
+    "input": "What is Kurtosis",
     "output": "Kurtosis measures the “tailedness” of the distribution or how extreme outliers are. It tells us whether the data has heavy tails (high kurtosis) or light tails (low kurtosis) compared to a normal distribution. High kurtosis indicates that the data has more extreme outliers than a normal distribution, while low kurtosis suggests fewer extreme values. Best used: For identifying datasets with more outliers than expected. High kurtosis might signal that we need to pay attention to outliers, or that the data might be prone to extreme values that could affect the performance of certain models. Not suitable: For normal data, where the tails are not of particular interest. If a dataset is already fairly well-behaved with a near-normal distribution, kurtosis might not provide additional value. Example scenario: A risk manager analyzing daily stock returns might calculate kurtosis to identify potential for extreme loss days. If the kurtosis is high, the manager might use techniques to account for those outliers, such as robust statistics or adjusting risk models to reflect the volatility."
   },
   {
-    "input": "2. Visualizing Distributions",
+    "input": "What is Visualizing Distributions",
     "output": "Visualization is a critical step in EDA, as it helps to identify patterns, trends and anomalies in the data. Selecting the right type of visualization is crucial to gaining meaningful insights."
   },
   {
-    "input": "2.1. Bar Plot",
+    "input": "What is Bar Plot",
     "output": "A bar plot displays the frequency or proportion of categories in categorical data, helping to compare the size of different categories. Best used: When comparing the frequency of different categories, such as the number of products sold across various categories (e.g., electronics, clothing, or furniture). Not suitable: For continuous data or when the categories have too many distinct values, which can clutter the plot and reduce clarity. Example scenario: A marketing department might use a bar plot to compare the number of purchases across different product types over a month, helping identify which product lines are most successful."
   },
   {
-    "input": "2.2. Stacked Bar Graph",
+    "input": "What is Stacked Bar Graph",
     "output": "A stacked bar chart shows the composition of categories, broken down into sub-categories. It helps to understand the proportion of each sub-category within a main category. Best used: To analyze the proportion of sub-categories across different main categories such as the breakdown of sales per product category across different countries or regions. Not suitable: For datasets with too many categories or subcategories as the chart may become too complex to interpret clearly. Example scenario: A regional sales manager might use a stacked bar graph to break down product sales by region, enabling better strategic decision-making based on the regional performance of each product line."
   },
   {
-    "input": "2.3. Histogram",
+    "input": "What is Histogram",
     "output": "Histograms show the distribution of continuous data by grouping the data into bins. The height of each bar represents the number of data points in each bin. Best used: To understand the frequency distribution of numerical data, such as the distribution of salaries, exam scores, or customer ages. Not suitable: When the data has outliers or is heavily skewed, as it may distort the view. For example, a dataset of income levels might have a few extremely high incomes that overshadow the distribution of the rest of the data. Example scenario: A website could use a histogram to analyze the distribution of time spent on the site by visitors, helping identify trends such as how long users typically stay before leaving."
   },
   {
-    "input": "2.4. Box Plot",
+    "input": "What is Box Plot",
     "output": "Box plots provide a graphical summary of the minimum, first quartile (25th percentile), median (50th percentile), third quartile (75th percentile) and maximum values of a dataset. They also help identify potential outliers. Best used: To compare distributions across multiple groups and to identify outliers in the dataset. It’s particularly useful when comparing the prices of different products or services in various markets. Not suitable: For small datasets where the distribution may not be clear or when the data lacks variation. Example scenario: A real estate analyst might use a box plot to show the variation in home prices by region, helping identify markets that may be more volatile or have high-value properties."
   },
   {
-    "input": "2.5. Violin Plot",
+    "input": "What is Violin Plot",
     "output": "Violin plots combine aspects of both box plots and density plots. They display the distribution of data and its probability density, allowing us to compare distributions and the spread of data more thoroughly. Best used: For comparing distributions and densities across multiple groups or categories. It’s particularly useful when we want to understand the spread and the concentration of values across different groups. Not suitable: When comparing only two groups, as it might be unnecessarily complex compared to simpler plots like box plots. Example scenario: A healthcare analyst might use a violin plot to compare the distribution of blood pressure readings in different age groups, revealing both the spread and density of the data."
   },
   {
-    "input": "2.6. Pie Chart",
+    "input": "What is Pie Chart",
     "output": "Pie charts show the proportion of a whole, where each segment represents a category's share of the total. They are best used when we want to show simple proportions. Best used: To show simple proportions in small datasets like the market share of different products or the distribution of sales in a company. Not suitable: For datasets with too many categories as the pie chart becomes cluttered and harder to read. It’s also less effective when precise comparisons are needed. Example scenario: A marketing team might use a pie chart to represent the share of each product category in the total sales helping stakeholders quickly understand the breakdown."
   },
   {
-    "input": "2.7. Correlation Heatmap",
+    "input": "What is Correlation Heatmap",
     "output": "A heatmap is used to display the correlation between numerical features in a dataset. Each cell represents the correlation coefficient between two variables, with color intensity showing the strength of the correlation. Best used: To check for multicollinearity in regression models and to identify which variables are highly correlated with the target variable. Not suitable: When there are too many variables, as the heatmap can become cluttered and harder to interpret. In such cases, it may be better to select a subset of variables. Example scenario: A data analyst working on a customer satisfaction survey might use a correlation heatmap to see how different satisfaction metrics (such as product quality, customer service and delivery time) correlate with overall satisfaction."
   },
   {
-    "input": "2.8. Scatter Plot",
+    "input": "What is Scatter Plot",
     "output": "A scatter plot visualizes the relationship between two continuous variables by plotting each data point as a dot on a two-dimensional plane. It’s especially useful for identifying trends or correlations. Best used: To explore linear relationships between two continuous variables and detect trends or patterns in the data. Not suitable: For categorical variables or non-linear relationships without applying transformations (e.g., using polynomial terms). Example scenario: A real estate agent could use a scatter plot to compare square footage with price, helping visualize how larger homes tend to be priced higher."
   },
   {
@@ -6116,19 +6104,19 @@
     "output": "When dealing with multiple features, it’s important to understand how different variables interact with one another. Exploring these interactions can uncover relationships that aren’t obvious when looking at individual variables."
   },
   {
-    "input": "3.1. Facet Grids",
+    "input": "What is Facet Grids",
     "output": "Facet grids split the data into multiple subplots based on a particular feature, allowing us to compare different subsets of the data. Best used: Facet grids are particularly useful for comparing the relationships between variables across different categories. For example, to see how sales vary across different regions or time periods, we could use facet grids to display separate plots for each region or time period. Not suitable: Facet grids can become cumbersome when dealing with a large number of categories, as the grid might become too cluttered and difficult to interpret. Example: A facet grid might be used to analyze how product sales differ across different seasons. Each facet could show a separate plot for each season, allowing us to see seasonal trends."
   },
   {
-    "input": "3.2. Pair Plots",
+    "input": "What is Pair Plots",
     "output": "A pair plot creates a grid of scatterplots for every pair of variables in a dataset, which allows us to visualize potential relationships between them. Best used: Pair plots are great for examining relationships between several continuous variables. They help in identifying correlations, trends, or patterns that might exist between different features. For example, a pair plot could help us understand the relationship between customer age, income and spending. Not suitable: Pair plots can become overwhelming when working with large datasets containing many variables, as the number of pairwise relationships increases exponentially. Example: A pair plot could be used to explore how different variables, like price, customer age and frequency of purchase, relate to each other in an e-commerce dataset."
   },
   {
-    "input": "4. Identifying Outliers and Anomalies",
+    "input": "What does mean by Identifying Outliers and Anomalies",
     "output": "Outliers are data points that differ significantly from the rest of the data and can distort statistical analyses. Identifying these anomalies is a key part of EDA."
   },
   {
-    "input": "4.1. Z-Scores",
+    "input": "What is Z-Scores",
     "output": "A Z-score measures how many standard deviations a data point is away from the mean, helping us identify outliers in normally distributed data. Best used: Z-scores are most useful when dealing with normally distributed data, as they help quantify how far each point is from the mean. A Z-score above 3 or below -3 typically indicates an outlier. Not suitable: Z-scores are less useful when the data is not normally distributed, as they rely on the assumption that data follows a bell-shaped curve. Example: A company might use Z-scores to identify unusual sales days that deviate significantly from the average, such as a spike in sales caused by a special promotion."
   },
   {
@@ -6140,31 +6128,31 @@
     "output": "Feature engineering is the process of transforming or combining raw data into meaningful features that improve the performance of machine learning models. The goal is to enhance the model’s ability to understand patterns and make more accurate predictions."
   },
   {
-    "input": "5.1. Log Transformation",
+    "input": "What is Log Transformation",
     "output": "Log transformation helps to normalize data that is skewed, especially when the distribution has a large positive skew. It reduces the influence of extreme outliers by compressing large values. Best used: The log transformation is particularly useful for data that exhibits large positive skew or exponential growth, such as income or population data. For example, applying a log transformation to income data can make the distribution more symmetric and reduce the effect of extreme income values. Not suitable: It’s not effective for data that already follows a normal distribution or doesn’t exhibit strong skewness. For such data, applying a log transformation could unnecessarily distort the data. Example: If we have a dataset of household incomes, we might apply a log transformation to make the distribution more symmetric, as incomes are often highly skewed with a few extremely high-income outliers."
   },
   {
-    "input": "5.2. Polynomial Features",
+    "input": "What are Polynomial Features",
     "output": "Polynomial features create new features by combining existing ones through polynomial terms, such as squares or cubes. This allows linear models to capture non-linear relationships. Best used: Polynomial features are useful when there’s a non-linear relationship between the features and the target variable. For instance, if we're modeling house prices, adding polynomial features like square or cubic terms of the square footage can help capture non-linear relationships. Not suitable: When the relationship between the features and the target is inherently linear. Polynomial features can lead to overfitting in such cases, especially if the degree of the polynomial is too high. Example: If we're predicting house prices and there’s a non-linear relationship between the square footage of a house and its price, adding polynomial features (e.g., square footage squared) can help capture that complexity."
   },
   {
-    "input": "5.3. Interaction Features",
+    "input": "What are Interaction Features",
     "output": "Interaction features are created by combining two or more features to capture the combined effect that they might have on the target variable. These features are valuable when we believe that the impact of one feature depends on the value of another feature. Best used: Interaction features are particularly useful when we suspect that two features together have a joint effect on the target variable. For example, combining age and income might reveal an interaction effect on the likelihood of purchasing luxury items. Not suitable: Overuse of interaction features can lead to overfitting, especially if we add too many combinations without proper justification. It's important to add only those interactions that have meaningful, interpretable impacts. Example: A retailer could create an interaction feature between age and income to model the likelihood of purchasing high-end electronics. Younger consumers with high incomes might behave differently from older consumers with similar incomes and the interaction term would capture this nuanced relationship."
   },
   {
-    "input": "6. Dimensionality Reduction",
+    "input": "What is Dimensionality Reduction",
     "output": "Dimensionality reduction techniques are essential when working with high-dimensional data, as they help simplify the data while preserving the most important patterns and structure. Reducing the number of features makes it easier to visualize data, remove noise and improve the efficiency of machine learning algorithms."
   },
   {
-    "input": "6.1. Principal Component Analysis (PCA)",
+    "input": "What is Principal Component Analysis (PCA)",
     "output": "PCA is a linear technique that reduces the dimensionality of data by transforming the original features into a smaller set of uncorrelated features called principal components. These components capture the maximum variance in the data. Best used: PCA is useful when we want to reduce the number of features in a dataset while retaining most of the variability in the data. For example, PCA can be applied to financial data to reduce multiple correlated variables (such as stock returns) into fewer principal components that capture the majority of the variance. Not suitable: PCA is not effective for datasets where the features are non-linearly related, as it only captures linear relationships. Additionally, it’s not ideal if the data contains categorical variables that can’t be easily represented in a continuous space. Example: In a dataset with a large number of features representing customer behavior in an e-commerce platform, PCA can help reduce the dimensions and create new features (principal components) that capture the main patterns in customer behavior."
   },
   {
-    "input": "6.2. t-SNE (t-Distributed Stochastic Neighbor Embedding)",
+    "input": "What is t-SNE (t-Distributed Stochastic Neighbor Embedding)",
     "output": "t-SNE is a non-linear dimensionality reduction technique that’s particularly effective for visualizing high-dimensional data in two or three dimensions. It works by modeling pairwise similarities between points in high-dimensional space and attempting to preserve these similarities in lower-dimensional space. Best used: t-SNE is most useful for visualizing high-dimensional data, such as clustering results or complex datasets. It can help uncover patterns or clusters that are not easily visible in higher dimensions. For example, we might use t-SNE to visualize the clusters of customers based on their purchasing behavior. Not suitable: t-SNE is computationally expensive and can struggle with very large datasets. It also doesn’t preserve global relationships, so it might distort distances between data points, making it unsuitable for tasks requiring precise relationships. Example: In a dataset containing features like customer age, income and purchase history, t-SNE could be used to visualize how customers cluster based on purchasing behavior in a two-dimensional plot, helping us identify customer segments."
   },
   {
-    "input": "6.3. UMAP (Uniform Manifold Approximation and Projection)",
+    "input": "What is UMAP (Uniform Manifold Approximation and Projection)",
     "output": "UMAP is another non-linear dimensionality reduction technique that’s similar to t-SNE, but it’s faster and can preserve both local and global structures. UMAP works by constructing a graph of the data and then embedding it in a lower-dimensional space while maintaining as much of the original data’s structure as possible. Best used: UMAP is ideal for visualizing high-dimensional data and is especially useful for large datasets. It can preserve both the local and global structure of the data, making it suitable for tasks like clustering, classification, or anomaly detection. For example, UMAP is often used in genomics or image analysis to reduce the dimensionality of gene expression data or image feature vectors. Not suitable: Like t-SNE, UMAP can distort data points’ exact distances, so it’s not suitable for tasks requiring precise distance metrics. It also requires careful tuning of hyperparameters to get optimal results. Example: A data scientist might use UMAP to visualize the features of customer interactions with an online store, reducing high-dimensional data into two or three dimensions to uncover trends or clusters that might indicate potential marketing strategies."
   },
   {
@@ -6176,23 +6164,23 @@
     "output": "The various types of methods used in bivariate analysis are: "
   },
   {
-    "input": "Scatter Plots",
-    "output": "Scatter Plotsvisually display the relationship between two variables. Each dot on the plot represents a single observation, (xi, yi). The pattern formed by the dots can reveal the nature of the relationship between the variables—whether it's positive, negative, or no correlation. Positive Trend: Points slope upward (e.g., height vs. weight). Negative Trend: Points slope downward (e.g., TV time vs. grades). No Pattern: Random cloud (e.g., shoe size vs. IQ)."
+    "input": "What is Scatter Plots",
+    "output": "Scatter Plots visually display the relationship between two variables. Each dot on the plot represents a single observation, (xi, yi). The pattern formed by the dots can reveal the nature of the relationship between the variables—whether it's positive, negative, or no correlation. Positive Trend: Points slope upward (e.g., height vs. weight). Negative Trend: Points slope downward (e.g., TV time vs. grades). No Pattern: Random cloud (e.g., shoe size vs. IQ)."
   },
   {
-    "input": "Correlation Analysis",
-    "output": "Correlation Analysisquantifies the strength and direction of the relationship between two continuous variables. The correlation coefficient, typically denoted by  r,  ranges from -1 to 1. A positive value indicates a positive correlation (as one variable increases, the other tends to increase), while a negative value suggests a negative correlation (as one variable increases, the other tends to decrease). A value close to zero indicates little to no correlation."
+    "input": "What is Correlation Analysis",
+    "output": "Correlation Analysis quantifies the strength and direction of the relationship between two continuous variables. The correlation coefficient, typically denoted by  r,  ranges from -1 to 1. A positive value indicates a positive correlation (as one variable increases, the other tends to increase), while a negative value suggests a negative correlation (as one variable increases, the other tends to decrease). A value close to zero indicates little to no correlation."
   },
   {
-    "input": "Regression Analysis",
+    "input": "What is Regression Analysis",
     "output": "Regression analysisexplores the relationship between two or more variables by predicting one variable (the dependent variable) based on the values of one or more other variables (the independent variables). Simple linear regression involves predicting a dependent variable from a single independent variable, while multiple linear regression involves predicting the dependent variable from multiple independent variables."
   },
   {
-    "input": "Chi-Square Test",
-    "output": "Thechi-square testexamines the association between two categorical variables by comparing the observed frequencies in a contingency table to the frequencies that would be expected if the variables were independent. It determines whether the observed association between the variables is statistically significant or due to random chance."
+    "input": "What is Chi-Square Test",
+    "output": "The chi-square test examines the association between two categorical variables by comparing the observed frequencies in a contingency table to the frequencies that would be expected if the variables were independent. It determines whether the observed association between the variables is statistically significant or due to random chance."
   },
   {
-    "input": "T-tests and ANOVA",
+    "input": "What is T-tests and ANOVA",
     "output": "T-testsand analysis of variance (ANOVA) are used to compare means between groups for one or more independent variables. In bivariate analysis, they can be applied to examine whether there are significant differences in the mean values of a continuous variable across different categories of another variable. T-tests are suitable for comparing means between two groups, while ANOVA is used for comparing means among three or more groups."
   },
   {
@@ -6216,11 +6204,11 @@
     "output": "1. Source Control Management: Use version control systems like Git to manage code, model configurations, and data pipelines. This ensures that all changes are tracked and can be rolled back if necessary. 2. Automated Testing: Unit Tests: Validate individual components of the ML pipeline, such as data processing functions and model training scripts. Integration Tests: Ensure that different parts of the ML pipeline work together as expected. Performance Tests: Evaluate the performance of ML models against benchmark datasets to ensure they meet predefined metrics. Data Validation: Check for data quality issues, such as missing values or inconsistencies, that could impact model performance. 3. Continuous Integration Pipelines: Build: Compile and package code, and createDockercontainers or virtual environments for consistent execution. Test: Run automated tests to validate code changes and model performance. Artifact Management: Store and manage artifacts such as model binaries and training datasets, ensuring versioning and traceability. 4. Continuous Deployment Pipelines: Staging Environment: Deploy models to a staging environment that mirrors production for final validation. Production Deployment: Automate the deployment of models to production environments, including updating endpoints and rolling out changes incrementally. Rollback Mechanism: Implement strategies for rolling back deployments if issues are detected, minimizing downtime and impact on users. 5. Monitoring and Feedback: Model Performance Monitoring: Continuously monitor model performance metrics in production to detect issues like data drift or performance degradation. Logging and Alerts: Capture logs and set up alerts for anomalies or failures in the deployment process or model performance. Feedback Loop: Integrate user feedback and performance data into the CI/CD pipeline to drive iterative improvements."
   },
   {
-    "input": "Challenges and Considerations",
+    "input": "Challenges and Considerations in CI/CD",
     "output": "While CI/CD brings numerous benefits, several challenges must be addressed: "
   },
   {
-    "input": "Conclusion of continous integrattion and continous deployment (CI/CD)",
+    "input": "Conclusion of continous integration and continous deployment (CI/CD)",
     "output": "Continuous Integration and Continuous Deployment (CI/CD) are fundamental to modern MLOps practices, enabling organizations to manage the ML lifecycle with greater efficiency, reliability, and scalability. By adopting CI/CD principles, teams can accelerate the development and deployment of ML models, ensure consistent quality, and foster collaboration across different functions. As ML technologies and practices continue to evolve, integrating CI/CD into MLOps workflows will remain crucial for maintaining a competitive edge and delivering high-quality, impactful machine learning solutions"
   },
   {
@@ -6624,15 +6612,15 @@
     "output": "Error Amplification: Incorrect pseudo-labels may degrade performance over iterations. Confidence Thresholding: Selecting a proper confidence threshold is non-trivial. Imbalanced Datasets: Models may propagate bias in imbalanced datasets."
   },
   {
-    "input": "Working:",
+    "input": "Working of Semi-supervised learning",
     "output": "Semi-supervised learning trains the model using pseudo-labeled training data as opposed to supervised learning. During training, many other models like neural network models and training methods are introduced to increase accuracy. Step 1: First, it uses a very small portion of labeled training data to train the model using supervised learning algorithms. Up until the model produces accurate results, training is continued. Step 2: Now algorithm will use a portion of unlabeled training data with pseudo labels. In this step, the output can have less accuracy.Step 3: In this step labeled training data and pseudo-labeled training data are linked. Step 4: Unlabeled training data and labeled training data share the same input data. Step 5: As we did in the previous phase, train the model once more using the new combined input. It will decrease the number of errors and increase the model's accuracy."
   },
   {
-    "input": "Advantages:",
+    "input": "Advantages Semi-supervised learning",
     "output": "It is simple to comprehend. It minimizes the utilization of annotated data. This algorithm is reliable."
   },
   {
-    "input": "Disadvantages:",
+    "input": "Disadvantages Semi-supervised learning",
     "output": "The outcomes of iterations are unstable. Data at the network level is not covered by it. It is not very accurate."
   },
   {
@@ -6843,17 +6831,10 @@
     "input": "Numerical v/s Numerical",
     "output": "Output: It displays the age and length of service of employees in the organization as we can see that younger employees have less experience in terms of their length of service."
   },
-  {
-    "input": "Categorical v/s Categorical",
-    "output": ""
-  },
+  
   {
     "input": "Multivariate Analysis",
     "output": "It is an extension of bivariate analysis which means it involves multiple variables at the same time to find correlation between them. Multivariate Analysis is a set of statistical model that examine patterns in multidimensional data by considering at once, several data variable."
-  },
-  {
-    "input": "PCA",
-    "output": ""
   },
   {
     "input": "HeatMap",
@@ -7716,10 +7697,6 @@
     "output": "The dataset consists of transactions made by credit cards. This dataset has 492 fraud transactions out of 284, 807 transactions . That makes it highly unbalanced, the positive class (frauds) account for 0.172% of all transactions. Output: "
   },
   {
-    "input": "Split the data into test and train sets",
-    "output": ""
-  },
-  {
     "input": "Now train the model without handling the imbalanced class distribution",
     "output": "Output: The accuracy comes out to be 100% but did you notice something strange ? The recall of the minority class in very less. It proves that the model is more biased towards majority class. So, it proves that this is not the best model.  Now, we will apply different imbalanced data handling techniques and see their accuracy and recall results."
   },
@@ -7862,14 +7839,6 @@
   {
     "input": "2. Precision, Recall and F1 score",
     "output": "The F1 score is the harmonic mean of precision and recall, balancing both metrics into a single value. It’s useful when the class distribution is imbalanced or when false positives and false negatives are costly. Output: Naive Bayes proves to be an efficient and simple algorithm that works well for classification tasks. It is easy to understand since it is based on Bayes' theorem and is simple to use and analyze."
-  },
-  {
-    "input": "sklearn.datasets.make_blobs",
-    "output": ""
-  },
-  {
-    "input": "sklearn.datasets.make_moon",
-    "output": ""
   },
   {
     "input": "sklearn.datasets.make_circle",
@@ -8066,10 +8035,6 @@
   {
     "input": "Stop Iterations",
     "output": "This is the function that is used to specify when the iterations should stop. As per the user, the algorithm stop_iteration generally returns true in the following conditions: Having all the utility functions defined let's see the pseudo-code followed by its implementation: Pseudocode for linear regression: "
-  },
-  {
-    "input": "Initializing the Model object",
-    "output": ""
   },
   {
     "input": "What is regression?",
