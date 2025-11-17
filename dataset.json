@@ -1600,63 +1600,63 @@
     "output": "We can categorize semantic networks into various types based on the nature and purpose of the relationships they represent: "
   },
   {
-    "input": "1. Definitional Networks",
+    "input": "Definitional Networks in Semantic Networks",
     "output": "Definitional networks are used to represent hierarchical relationships, used in taxonomies or ontologies. They define concepts by their relationships to more general or more specific concepts. For example,  Dog  might be linked to  Mammal  which is linked to  Animal  showing a classification system."
   },
   {
-    "input": "2. Assertional Networks",
+    "input": "Assertional Networks in Semantic Networks",
     "output": "It represent specific facts or attributes about concepts. They describe properties of specific entities. For example,  Rex is a Dog  and  Rex has Brown Fur  are assertions about a particular dog."
   },
   {
-    "input": "3. Implicational Networks",
+    "input": "Implicational Networks in Semantic Networks",
     "output": "It focus on representing logical implications between concepts. They are used to infer new knowledge from existing relationships. For example, if  All Dogs are Mammals  and  Rex is a Dog  the network can infer  Rex is a Mammal."
   },
   {
-    "input": "4. Executable Networks",
+    "input": "Executable Networks in Semantic Networks",
     "output": "They are designed to represent procedural knowledge where the relationships include actions or sequences that an AI system can execute. For example, a recipe could include steps like  Add Water  followed by  Boil Water."
   },
   {
-    "input": "5. Learning Networks",
+    "input": "Learning Networks in Semantic Networks",
     "output": "They evolve as the AI system learns new information. They update relationships and nodes based on new data or experiences. For example, an AI might update its understanding of  Dog  as it encounters new breeds or characteristics."
   },
   {
-    "input": "6. Hybrid Networks",
+    "input": "Hybrid Networks in Semantic Networks",
     "output": "They combine elements from two or more of the above types, allowing for more complex and versatile representations of knowledge. For example, representing both the general concept of  Dog  and specific example like  Rex."
   },
   {
     "input": "Key Components of Semantic Networks",
-    "output": "Semantic networks consist of various key components that helps AI systems to represent and reason about knowledge effectively. These components are important for organizing complex relationships between concepts. They can be grouped into four main categories: "
+    "output": "Semantic networks consist of various key components that helps AI systems to represent and reason about knowledge effectively. These components are important for organizing complex relationships between concepts. They can be grouped into four main categories: 1: Lexical Components 2: Structural Component 3: Semantic Component 4: Procedural Part"
   },
   {
-    "input": "1. Lexical Components",
+    "input": "Lexical Components in Semantic Networks",
     "output": "Nodes: These are the core elements of a semantic network, representing concepts, entities or objects such as  Dog,   Animal  or  Tree.  Labels: Descriptive identifiers attached to nodes, clarifying what each node represents."
   },
   {
-    "input": "2. Structural Components",
+    "input": "Structural Components in Semantic Networks",
     "output": "Edges or Links: These are connections between nodes, defining relationships like  is a ,  has a  or  causes.  For example,  Dog is a Mammal  represents a hierarchical relationship. Types of Relationships: These can include hierarchical relationships (e.g  is a ), associative relationships (e.g  related to ) and functional relationships (e.g  causes  or  results in )."
   },
   {
-    "input": "3. Semantic Components",
+    "input": "Semantic Components in Semantic Networks",
     "output": "Meanings of Nodes: Each node carries a specific meaning within the context of the network, ensuring proper interpretation of concepts. Interpretation of Relationships: The edges define real-world relationships ensuring they reflect accurate connections between concepts."
   },
   {
-    "input": "4. Procedural Part",
+    "input": "Procedural Part in Semantic Networks",
     "output": "Inference Rules: These logical rules allow the network to derive new knowledge. Query Mechanisms: These helps users or systems to retrieve information based on specific criteria or conditions. Update Mechanisms: Semantic networks can be updated to incorporate new knowledge, modifying or adding nodes and edges as needed."
   },
   {
     "input": "Working of Semantic Networks",
-    "output": "In AI systems, semantic networks are used for knowledge representation, reasoning and decision-making Let's see how they work: "
+    "output": "In AI systems, semantic networks are used for knowledge representation, reasoning and decision-making Let's see how they work: Knowledge Representation: AI systems define concepts (nodes) and their relationships (edges) to represent domain knowledge. This structure links concepts to reflect real-world information. Inference and Reasoning: By traversing the network, AI systems can make inferences. For example, if \"Dog is a Mammal\" and \"Mammal is an Animal\" the system infers that \"Dog is an Animal.\" Querying the Network: AI can query the network to extract specific information or relationships, helping to identify categories or retrieve data points. Updating the Network: As new information becomes available, the network can be updated by adding, modifying or deleting nodes and edges. This keeps the network accurate and reflective of the most current knowledge. Reasoning Mechanisms: Semantic networks often use reasoning mechanisms such as forward chaining (starting from known facts and applying inference rules to derive new facts) and backward chaining (starting with a goal and working backward to see if known facts can support it)."
   },
   {
     "input": "Examples of Semantic Networks in AI",
     "output": "Semantic networks are used in AI to represent and organize complex relationships across different domains. Let's see few examples showing how semantic networks can be applied to various fields: "
   },
   {
-    "input": "1.Technology Stack Classification",
+    "input": "Technology Stack Classification in Semantic Networks",
     "output": "Nodes: Frontend, Backend, HTML, CSS, JavaScript, Python, Django, API Relationships:  HTML,   CSS  and  JavaScript  are types of Frontend  Python  and  Django  are types of Backend  API  is used by both Frontend and Backend Labels: Web Development, Framework, Language In this semantic network, we map out the components of a technology stack. The relationship between  HTML,   CSS  and  JavaScript  is defined as  is a  (i.e they are types of Frontend) while  Python  and  Django  are classified under Backend. The  API  node connects both Frontend and Backend showing its role in connecting these two aspects of web development."
   },
   {
-    "input": "2.Food Hierarchy",
+    "input": "Food Hierarchy in Semantic Networks",
     "output": "Nodes: Fruit, Apple, Banana, Animal, Lion Relationships:  Apple  and  Banana  are types of Fruit  Lion  is a type of Animal  Fruit  is eaten by Herbivore  Animal  is eaten by Carnivore Labels: Herbivore, Carnivore, Predator This semantic network shows a basic food chain.  Apple  and  Banana  are categorized under  Fruit  while  Lion  is an  Animal.  The relationships highlight how  Fruit  is typically consumed by  Herbivores  and  Animals  are consumed by  Carnivores  representing the dietary connections in the food chain."
   },
   {
@@ -1665,15 +1665,15 @@
   },
   {
     "input": "Applications of Semantic Networks in AI",
-    "output": "Semantic networks are used in various AI applications such as: "
+    "output": "Semantic networks are used in various AI applications such as: Natural Language Processing (NLP): In NLP, semantic networks help in understanding the meaning of words and sentences by representing the relationships between different words and concepts. Expert Systems: In expert systems, they are used to represent the knowledge of human experts, enabling the system to make decisions or provide recommendations based on that knowledge. Ontology Development: Ontologies which define the structure of knowledge in a particular domain, often use semantic networks to represent the relationships between concepts within that domain. Information Retrieval: They enhance information retrieval by allowing systems to understand the context and relationships between different pieces of information, leading to more accurate search results. Machine Learning: In some machine Learning applications, they are used to improve the interpretability of models by providing a structured representation of the knowledge the model has learned."
   },
   {
     "input": "Advantages of Semantic Networks",
-    "output": "Semantic networks has several advantages which are as follows: "
+    "output": "Semantic networks has several advantages which are as follows: Clear and Intuitive: Their graphical structure makes it easy to understand and organize complex relationships between concepts. Supports Reasoning and Inference: Semantic networks allow AI systems to infer new facts based on known relationships, helping them make intelligent decisions. Flexible: They can represent various types of relationships making them applicable across diverse AI domains. Contextual Understanding: By linking concepts, they enable machines to understand context much like humans do when processing information."
   },
   {
     "input": "Challenges of Semantic Networks",
-    "output": "Despite their various benefits, semantic networks come with challenges: By mastering semantic networks helps AI systems understand and reason better, making technologies smarter and more efficient."
+    "output": "Despite their various benefits, semantic networks come with challenges: Scalability: Large networks can become difficult to manage causing inefficiency and potential confusion as the number of nodes and relationships grows. Ambiguity: Representing vague or unclear relationships can lead to misinterpretations and challenges in decision-making. Computational Load: Processing complex networks can require significant computational power particularly when making inferences or answering queries. By mastering semantic networks helps AI systems understand and reason better, making technologies smarter and more efficient."
   },
   {
     "input": "Single Layer Perceptron",
@@ -6616,7 +6616,7 @@
     "output": "Semi-supervised learning trains the model using pseudo-labeled training data as opposed to supervised learning. During training, many other models like neural network models and training methods are introduced to increase accuracy. Step 1: First, it uses a very small portion of labeled training data to train the model using supervised learning algorithms. Up until the model produces accurate results, training is continued. Step 2: Now algorithm will use a portion of unlabeled training data with pseudo labels. In this step, the output can have less accuracy.Step 3: In this step labeled training data and pseudo-labeled training data are linked. Step 4: Unlabeled training data and labeled training data share the same input data. Step 5: As we did in the previous phase, train the model once more using the new combined input. It will decrease the number of errors and increase the model's accuracy."
   },
   {
-    "input": "Advantages Semi-supervised learning",
+    "input": "Advantages of Semi-supervised learning",
     "output": "It is simple to comprehend. It minimizes the utilization of annotated data. This algorithm is reliable."
   },
   {
@@ -9145,7 +9145,7 @@
     "output": "Image Synthesis & Generation: GANs generate realistic images, avatars and high-resolution visuals by learning patterns from training data. They are used in art, gaming and AI-driven design. Image-to-Image Translation: They can transform images between domains while preserving key features. Examples include converting day images to night, sketches to realistic images or changing artistic styles. Text-to-Image Synthesis: They create visuals from textual descriptions helps applications in AI-generated art, automated design and content creation. Data Augmentation: They generate synthetic data to improve machine learning models helps in making them more robust and generalizable in fields with limited labeled data. High-Resolution Image Enhancement: They upscale low-resolution images which helps in improving clarity for applications like medical imaging, satellite imagery and video enhancement."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of Generative Adversial Networks (GANs)",
     "output": "Lets see various advantages of the GANs: Synthetic Data Generation: GANs produce new, synthetic data resembling real data distributions which is useful for augmentation, anomaly detection and creative tasks. High-Quality Results: They can generate photorealistic images, videos, music and other media with high quality. Unsupervised Learning: They don’t require labeled data helps in making them effective in scenarios where labeling is expensive or difficult. Versatility: They can be applied across many tasks including image synthesis, text-to-image generation, style transfer, anomaly detection and more. GANs are evolving and shaping the future of artificial intelligence. As the technology improves, we can expect even more innovative applications that will change how we create, work and interact with digital content."
   },
   {
