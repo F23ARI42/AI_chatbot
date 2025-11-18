@@ -8501,7 +8501,7 @@
     "output": "After calling loss.backward(), gradients are stored and can be accessed for optimization: "
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of Chain Rule Derivative",
     "output": "Automatic Gradient Computation: Enables fast, scalable calculation of gradients, which is essential for training deep neural networks and automating optimization in modern frameworks. Practical Backpropagation: Makes efficient backpropagation possible, allowing gradients to be passed through every layer for effective parameter updates. Supported by Frameworks: Fully integrated into deep learning libraries likePyTorch, TensorFlowandJAX, which handle chain rule differentiation automatically. Architecture Flexibility: Works seamlessly with a wide variety of architectures, includingCNNs, RNNsandtransformers, supporting diverse machine learning tasks."
   },
   {
@@ -8721,7 +8721,7 @@
     "output": "Image classification: CNNs are the state-of-the-art models for image classification. They can be used to classify images into different categories such as cats and dogs. Object detection: It can be used to detect objects in images such as people, cars and buildings. They can also be used to localize objects in images which means that they can identify the location of an object in an image. Image segmentation: It can be used to segment images which means that they can identify and label different objects in an image. This is useful for applications such as medical imaging and robotics. Video analysis: It can be used to analyze videos such as tracking objects in a video or detecting events in a video. This is useful for applications such as video surveillance and traffic monitoring."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of CNN",
     "output": "High Accuracy: They can achieve high accuracy in various image recognition tasks. Efficiency: They are efficient, especially when implemented on GPUs. Robustness: They are robust to noise and variations in input data. Adaptability: It can be adapted to different tasks by modifying their architecture."
   },
   {
@@ -8893,7 +8893,7 @@
     "output": "Image Denoising: Removing noise from images to restore clear, high-quality visuals. Data Imputation: Filling in missing values or reconstructing incomplete data entries. Feature Extraction: Learning robust features that improve performance for tasks like classification and clustering. Anomaly Detection: Identifying outliers by measuring reconstruction errors on new data. Signal and Audio Denoising: Cleaning noisy sensor or audio signals, such as in speech or biomedical recordings."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of Denoising Autoencoder (DAE)",
     "output": "Help models learn robust, meaningful features that are less sensitive to noise or missing data. Reduce the risk of merely copying input data (identity mapping), especially when compared to basic autoencoders. Improve performance on tasks such as image denoising, data imputation and anomaly detection by reconstructing clean signals from corrupted inputs. Enhance the generalizability of learned representations, making models more useful for downstream tasks."
   },
   {
@@ -9457,7 +9457,7 @@
     "output": "In PyTorch, Adagrad can be used with the torch.optim.Adagrad class. Here's an example where: datasets.MNIST() loads data, ToTensor() converts images and Lambda() flattens them. DataLoaderbatches and shuffles data. SimpleModelhas two linear layers with ReLU in forward(). CrossEntropyLosscomputes classification loss. Adagrad optimizeradapts learning rates per parameter based on past gradients, improving training on sparse or noisy data. Training loop: zero gradients, forward pass, compute loss, backpropagate and update weights with Adagrad. Output: By applying Adagrad in appropriate scenarios and complementing it with other techniques like RMSProp and Adam, practitioners can achieve faster convergence and improved model performance."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of Adagrad",
     "output": "Adapts learning rates for each parameter, helping with sparse features and noisy data. Works well with sparse data by giving rare but important features appropriate updates. Automatically adjusts learning rates, eliminating the need for manual tuning. Improves performance in cases with varying gradient magnitudes, enabling efficient convergence."
   },
   {
@@ -9997,7 +9997,7 @@
     "output": "Although not strictly a momentum-based optimizer in the traditional senseRMSPropincorporates a form of momentum by adapting the learning rate for each parameter. It’s particularly effective when dealing with non-stationary objectives such as in training recurrent neural networks (RNNs)."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of Momentum based gradient",
     "output": "Faster Convergence: It helps to accelerate the convergence by considering past gradients which helps the model navigate through flat regions more efficiently. Reduces Oscillation: Traditional gradient descent can oscillate when there are steep gradients in some directions and flat gradients in others. Momentum reduces this oscillation by maintaining the direction of previous updates. Improved Generalization: By smoothing the optimization process, momentum-based methods can lead to better generalization on unseen data, preventing overfitting. Helps Avoid Local Minima: The momentum term can help the optimizer escape from local minima by maintaining a strong enough  velocity  to continue moving past these suboptimal points."
   },
   {
@@ -10037,7 +10037,7 @@
     "output": "SGD and its variants are widely used across various domains of machine learning: Deep Learning: In training deep neural networks, SGD is the default optimizer due to its efficiency with large datasets and its ability to work with large models. Natural Language Processing (NLP): Models like Word2Vec and transformers are trained using SGD variants to optimize large models on vast text corpora. Computer Vision: For tasks such as image classification, object detection and segmentation, SGD has been fundamental in training convolutional neural networks (CNNs). Reinforcement Learning: SGD is also used to optimize the parameters of models used in reinforcement learning, such as deep Q-networks (DQNs) and policy gradient methods."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of Stochastic Gradient Descent (SGD)",
     "output": "Efficiency: Because it uses only one or a few data points to calculate the gradient, SGD can be much faster, especially for large datasets. Each step requires fewer computations, leading to quicker convergence. Memory Efficiency: Since it does not require storing the entire dataset in memory for each iteration, SGD can handle much larger datasets than traditional gradient descent. Escaping Local Minima: The noisy updates in SGD, caused by the stochastic nature of the algorithm, can help the model escape local minima or saddle points, potentially leading to better solutions in non-convex optimization problems. Online Learning: SGD is well-suited for online learning where the model is trained incrementally as new data comes in, rather than on a static dataset."
   },
   {
@@ -10161,7 +10161,7 @@
     "output": "Use the trained model to make predictions on new data. Process the output to interpret the predictions like converting probabilities to binary outcomes."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of Neural Networks",
     "output": "Neural networks are widely used in many different applications because of their many benefits: Adaptability: Neural networks are useful for activities where the link between inputs and outputs is complex or not well defined because they can adapt to new situations and learn from data. Pattern Recognition: Their proficiency in pattern recognition renders them efficacious in tasks like as audio and image identification, natural language processing and other intricate data patterns. Parallel Processing: Because neural networks are capable of parallel processing by nature, they can process numerous jobs at once which speeds up and improves the efficiency of computations. Non-Linearity: Neural networks are able to model and comprehend complicated relationships in data by virtue of the non-linear activation functions found in neurons which overcome the drawbacks of linear models."
   },
   {
@@ -10361,7 +10361,7 @@
     "output": "We evaluate test accuracy on unseen test data and plot training and validation loss curves to visualize learning progress."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of RMSProp",
     "output": "Adaptive Learning Rates: Adjusts learning rates for each parameter individually, optimizing updates more effectively. Handles Non-Stationary Objectives: Efficiently adapts to changing optimal parameter values over time. Prevents Learning Rate Decay Problem: Maintains optimal learning rates by using a decay rate unlike AdaGrad. Improved Convergence Speed: Faster convergence due to balanced and dynamic learning rates."
   },
   {
@@ -11829,7 +11829,7 @@
     "output": "GPT models are built upon the transformer architecture, introduced in 2017, which uses self-attention mechanisms to process input data in parallel, allowing for efficient handling of long-range dependencies in text. The core process involves: This two-step approach enables GPTs to generate coherent and contextually relevant responses across a wide array of topics and tasks."
   },
   {
-    "input": "Architecture",
+    "input": "Architecture of GPT",
     "output": "Let's explore the architecture: 1. Input Embedding Input: The raw text input is tokenized into individual tokens (words or subwords). Embedding: Each token is converted into a dense vector representation using an embedding layer. 2. Positional Encoding: Since transformers do not inherently understand the order of tokens, positional encodingsare added to the input embeddings to retain the sequence information. 3. Dropout Layer: A dropout layer is applied to the embeddings to prevent overfitting during training. 4. Transformer Blocks LayerNorm: Each transformer block starts with a layer normalization. Multi-Head Self-Attention: Multi-Head Self-Attentionare core component where the input passes through multiple attention heads. Add & Norm: The output of the attention mechanism is added back to the input (residual connection) and normalized again. Feed-Forward Network: A position-wiseFeed-Forward Networkis applied, typically consisting of two linear transformations with a GeLU activation in between. Dropout: Dropoutis applied to the feed-forward network output. 5. Layer Stack: The transformer blocks are stacked to form a deeper model, allowing the network to capture more complex patterns and dependencies in the input. 6. Final Layers LayerNorm: LayerNormis final layer normalization is applied. Linear: The output is passed through a linear layer to map it to the vocabulary size. Softmax: ASoftmaxlayer is applied to produce the final probabilities for each token in the vocabulary."
   },
   {
@@ -11837,11 +11837,11 @@
     "output": "The progress of GPT (Generative Pre-trained Transformer) models by OpenAI has been marked by significant advancements in natural language processing. Here’s a overview: 1. GPT (2018): The original model had 12 layers, 768 hidden units, 12 attention heads (≈ 117 million parameters). It introduced the idea of unsupervised pre-training followed by supervised fine-tuning on downstream tasks. 2. GPT-2 (2019): Scaled up to as many as 1.5 billion parameters. It showed strong generative abilities (generating coherent passages), prompting initial concerns about misuse. 3. GPT-3 (2020): Massive jump to ~175 billion parameters. Introduced stronger few-shot and zero-shot capabilities, reducing the need for task-specific training. 4. GPT-4 (2023): Improved in reasoning, context retention, multimodal abilities (in some variants) and better alignment. 5. GPT-4.5 (2025): Introduced as a bridge between GPT-4 and GPT-5, it included better steerability, nuance and conversational understanding. 6. GPT-4.1 (2025): Released in April 2025, offering enhancements in coding performance, long-context comprehension (up to 1 million tokens) and instruction following. 7. GPT-5 (2025): The newest major release. GPT-5 is a unified system that dynamically routes queries between a fast model and a “thinking” deeper model to optimize for both speed and depth. It demonstrates improved performance across reasoning, coding, multimodality and safety benchmarks. GPT-5 also better mitigates hallucinations, sees stronger instruction-following fidelity and shows more reliable domain reasoning. In medical imaging tasks, GPT-5 achieves significant gains over GPT-4o, e.g. up to +20 % in some anatomical region reasoning benchmarks. Because the field is rapidly evolving, newer intermediate or specialized models (e.g. reasoning-only models or domain-tuned variants) are also emerging, but GPT-5 currently represents the headline advancement."
   },
   {
-    "input": "Applications",
+    "input": "Applications of GPT",
     "output": "The versatility of GPT models allows for a wide range of applications, including but not limited to: Content Creation: GPT can generate articles, stories and poetry, assisting writers with creative tasks. Customer Support: Automated chatbots and virtual assistants powered by GPT provide efficient and human-like customer service interactions. Education: GPT models can create personalized tutoring systems, generate educational content and assist with language learning. Programming: GPT's ability to generate code from natural language descriptions aids developers in software development and debugging. Healthcare: Applications include generating medical reports, assisting in research by summarizing scientific literature and providing conversational agents for patient support."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of GPT",
     "output": "Versatility: Capable of handling diverse tasks with minimal adaptation. Contextual Understanding: Deep learning enables comprehension of complex text.. Scalability: Performance improves with data size and model parameters. Few-Shot Learning: Learns new tasks from limited examples. Creativity: Generates novel and coherent content."
   },
   {
@@ -13906,7 +13906,7 @@
   },
   {
     "input": "What is Skip-Gram Model?",
-    "output": "TheSkip-Gram modelis another neural network architecture within the Word2Vec framework for generating word embeddings. Unlike Continuous Bag of Words (CBOW), Skip-Gram predicts context words given a target word. It's designed to learn the representation of a word by predicting the surrounding words in its context. Input Layer: It takes a single word (the target word) encoded as a one-hot vector. Hidden Layer: This layer transforms the input word into a distributed representation in the hidden layer. Output Layer: It predicts the context words (surrounding words) based on the representation learned in the hidden layer."
+    "output": "TheSkip-Gram model is another neural network architecture within the Word2Vec framework for generating word embeddings. Unlike Continuous Bag of Words (CBOW), Skip-Gram predicts context words given a target word. It's designed to learn the representation of a word by predicting the surrounding words in its context. Input Layer: It takes a single word (the target word) encoded as a one-hot vector. Hidden Layer: This layer transforms the input word into a distributed representation in the hidden layer. Output Layer: It predicts the context words (surrounding words) based on the representation learned in the hidden layer."
   },
   {
     "input": "How They Work",
@@ -13917,19 +13917,19 @@
     "output": "The code uses the Gensim library to train Word2Vec models on a sample sentence. Gensim is a Python library for efficient topic modeling and creating word embeddings from large text data. Output Below is the code where it creates two models: CBOW model(sg=0): Predicts a target word based on its surrounding context words. For example, given the context[ wins ,  next ,  world ], it tries to predict India . Skip-Gram model(sg=1): Predicts the context words given a target word. For example, given the target word India , it tries to predict its surrounding words like wins , next , and world . Output"
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of CBOW",
     "output": "Trains faster and is more efficient on large datasets. Performs well with frequent words and captures word similarity"
   },
   {
-    "input": "Disadvantages",
+    "input": "Disadvantages of CBOW",
     "output": "Struggles with rare words and does not preserve word order. Prone to overfitting frequent words."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of Skip-Gram",
     "output": "Excels with rare words and captures better semantic relationships. Less sensitive to frequent word overfitting and can handle larger context windows."
   },
   {
-    "input": "Disadvantages",
+    "input": "Disadvantages of Skip-Gram",
     "output": "Slower training and more computationally intensive due to multiple predictions per target word. Larger model size."
   },
   {
@@ -13961,7 +13961,7 @@
     "output": "You need to use the exact same pipeline during deploying your model as were used to create the training data for the word embedding. You can replace  OOV  words with  UNK  or unknown and then handle them separately. Dimension mis-match: Ensure to use the same dimensions throughout during training and inference."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of Word Embedding",
     "output": "It is much faster to train than hand build models like WordNet Almost all modern NLP applications start with an embedding layer. It Stores an approximation of meaning."
   },
   {
@@ -14521,7 +14521,7 @@
     "output": "words = nltk.word_tokenize(' '.join(reuters.words())): tokenizes the entire Reuters corpus into words tri_grams = list(trigrams(words)): creates 3-word sequences from the tokenized words model = defaultdict(lambda: defaultdict(lambda: 0)): initializes nested dictionary for trigram counts model[(w1, w2)][w3] += 1: counts occurrences of third word w3 after (w1, w2) model[w1_w2][w3] /= total_count: converts counts to probabilities return max(next_word_probs, key=next_word_probs.get): returns the most likely next word based on highest probability."
   },
   {
-    "input": "Advantages",
+    "input": "Advantages of N-gram",
     "output": "Simple and Fast: Easy to build and fast to run for small n. Interpretable: Easy to understand and debug. Good Baseline: Useful as a starting point for many NLP tasks."
   },
   {
