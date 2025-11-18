@@ -600,7 +600,7 @@
     "output": "Organized Knowledge: Frames help in structuring information in a way that mirrors real-world scenarios, making it easier for AI systems to understand and process. Flexibility: Frames can be easily modified or extended to incorporate new information or adapt to changing contexts. Reusability: Once defined, frames can be reused across different applications or scenarios, promoting consistency and efficiency."
   },
   {
-    "input": "Challenges and Limitations",
+    "input": "Challenges and Limitations of Frames in AI",
     "output": "Complexity: As the number of frames and their interrelationships increase, managing and maintaining the frames can become complex. Context Sensitivity: Frames may struggle to adapt to highly dynamic or ambiguous situations where predefined structures may not fit. Scalability: For large-scale systems, the sheer volume of frames and their interactions can pose challenges in terms of performance and resource management."
   },
   {
@@ -1976,7 +1976,7 @@
     "output": "No need for labeled data: Works with raw, unlabeled data hence saving time and effort on data annotation. Discovers hidden patterns: Finds natural groupings and structures that might be missed by humans. Handles complex and large datasets: Effective for high-dimensional or vast amounts of data. Useful for anomaly detection: Can identify outliers and unusual data points without prior examples."
   },
   {
-    "input": "Challenges",
+    "input": "Challenges in Unsupervised Learning",
     "output": "Here are the key challenges of unsupervised learning: Noisy Data: Outliers and noise can distort patterns and reduce the effectiveness of algorithms. Assumption Dependence: Algorithms often rely on assumptions (e.g., cluster shapes) which may not match the actual data structure. Overfitting Risk: Overfitting can occur when models capture noise instead of meaningful patterns in the data. Limited Guidance: The absence of labels restricts the ability to guide the algorithm toward specific outcomes. Cluster Interpretability: Results such as clusters may lack clear meaning or alignment with real-world categories. Sensitivity to Parameters: Many algorithms require careful tuning of hyperparameters such as the number of clusters in k-means. Lack of Ground Truth: Unsupervised learning lacks labeled data making it difficult to evaluate the accuracy of results."
   },
   {
@@ -2437,11 +2437,11 @@
   },
   {
     "input": "Applications of Polynomial Regression",
-    "output": "Modeling Growth Rates: Polynomial regression is used to model non-linear growth rates such as the growth of tissues over time. Disease Epidemic Progression: It helps track and predict the progression of disease outbreaks, capturing the non-linear nature of epidemic curves. Environmental Studies: It is applied in studies like the distribution of carbon isotopes in lake sediments where relationships are non-linear. Economics and Finance: It is used to analyze non-linear relationships in financial markets, predicting trends and fluctuations over time" 
+    "output": "Modeling Growth Rates: Polynomial regression is used to model non-linear growth rates such as the growth of tissues over time. Disease Epidemic Progression: It helps track and predict the progression of disease outbreaks, capturing the non-linear nature of epidemic curves. Environmental Studies: It is applied in studies like the distribution of carbon isotopes in lake sediments where relationships are non-linear. Economics and Finance: It is used to analyze non-linear relationships in financial markets, predicting trends and fluctuations over time"
   },
   {
     "input": "Advantages of Polynomial Regression",
-    "output": "Fits a Wide Range of Curves: Polynomial regression can model a broad range of non-linear relationships helps in making it versatile for complex data. Captures Non-linear Patterns: It provides a more accurate approximation of relationships when data follows a curvilinear pattern, unlike linear regression. Flexible Modeling: It can capture and represent the nuances in the data helps in making it ideal for situations where linear models fail." 
+    "output": "Fits a Wide Range of Curves: Polynomial regression can model a broad range of non-linear relationships helps in making it versatile for complex data. Captures Non-linear Patterns: It provides a more accurate approximation of relationships when data follows a curvilinear pattern, unlike linear regression. Flexible Modeling: It can capture and represent the nuances in the data helps in making it ideal for situations where linear models fail."
   },
   {
     "input": "Disadvantages of Polynomial Regression",
@@ -2668,7 +2668,7 @@
     "output": "Stability: Ridge regression provides more stable estimates in the presence of multicollinearity. Bias-Variance Tradeoff: By introducing bias, ridge regression reduces the variance of the estimates, leading to lower MSE. Interpretability: Unlike principal component regression, ridge regression retains the original predictors, making the results easier to interpret."
   },
   {
-    "input": "Disadvantages:",
+    "input": "Disadvantages of Ridge Regression",
     "output": "Bias Introduction: The introduction of bias can lead to underestimation of the true effects of the predictors. Parameter Selection: Choosing the optimal ridge parameter k can be challenging and computationally intensive. Not Suitable for Variable Selection: Ridge regression does not perform variable selection, meaning all predictors remain in the model, even those with negligible effects."
   },
   {
@@ -2788,7 +2788,7 @@
     "output": "The key benefits of using the Back Propagation algorithm are: Ease of Implementation: Back Propagation is beginner-friendly requiring no prior neural network knowledge and simplifies programming by adjusting weights with error derivatives. Simplicity and Flexibility: Its straightforward design suits a range of tasks from basic feedforward to complex convolutional or recurrent networks. Efficiency: Back Propagation accelerates learning by directly updating weights based on error especially in deep networks. Generalization: It helps models generalize well to new data improving prediction accuracy on unseen examples. Scalability: The algorithm scales efficiently with larger datasets and more complex networks making it ideal for large-scale tasks."
   },
   {
-    "input": "Challenges",
+    "input": "Challenges in Back Propogation Algorithm",
     "output": "While Back Propagation is useful it does face some challenges: Vanishing Gradient Problem: In deep networks the gradients can become very small during Back Propagation making it difficult for the network to learn. This is common when using activation functions like sigmoid or tanh. Exploding Gradients: The gradients can also become excessively large causing the network to diverge during training. Overfitting: If the network is too complex it might memorize the training data instead of learning general patterns."
   },
   {
@@ -4208,11 +4208,11 @@
     "output": "Feature extraction has various advantages which are as follows: Simplifies Data: Reduces complex data into a manageable form for easier analysis and visualization. Boosts Model Performance: Removes irrelevant data, making algorithms faster and more accurate. Highlights Key Patterns: Filters out noise to focus on important features for quicker insights. Improves Generalization: Helps models perform better on new, unseen data by emphasizing informative features. Speeds Up Training and Prediction: Fewer features mean faster model training and real-time predictions."
   },
   {
-    "input": "Challenges",
+    "input": "Challenges in Feature Extarction",
     "output": "Managing High-Dimensional Data: Extracting relevant features from large, complex datasets can be difficult. Risk of Overfitting or Underfitting: Too many or too few features can hurt model accuracy and generalization. Computational Costs: Complex methods may require heavy resources, limiting use with big or real-time data. Redundant or Irrelevant Features: Overlapping or noisy features can confuse models and reduce efficiency."
   },
   {
-    "input": "Mean",
+    "input": "What is Mean",
     "output": "Mean in Mathematicsis the measure of central tendency and is mostly used in Statistics. Mean is the easiest of all the measures. The method of finding the mean is also different depending on the type of data. Data is of two types, grouped dataandungrouped data.  The mean is generally the average of a given set of numbers or data. It is one of the most important measures of the central tendency of distributed data. It is calculated by adding all the numbers in the data set and dividing by the number of values in the set. The mean is also known as theaverage. It is sensitive to skewed data and extreme values. For example, when the data is skewed, it can miss the mark."
   },
   {
@@ -6847,7 +6847,6 @@
     "input": "Numerical v/s Numerical",
     "output": "Output: It displays the age and length of service of employees in the organization as we can see that younger employees have less experience in terms of their length of service."
   },
-  
   {
     "input": "Multivariate Analysis",
     "output": "It is an extension of bivariate analysis which means it involves multiple variables at the same time to find correlation between them. Multivariate Analysis is a set of statistical model that examine patterns in multidimensional data by considering at once, several data variable."
@@ -10017,7 +10016,7 @@
     "output": "Faster Convergence: It helps to accelerate the convergence by considering past gradients which helps the model navigate through flat regions more efficiently. Reduces Oscillation: Traditional gradient descent can oscillate when there are steep gradients in some directions and flat gradients in others. Momentum reduces this oscillation by maintaining the direction of previous updates. Improved Generalization: By smoothing the optimization process, momentum-based methods can lead to better generalization on unseen data, preventing overfitting. Helps Avoid Local Minima: The momentum term can help the optimizer escape from local minima by maintaining a strong enough  velocity  to continue moving past these suboptimal points."
   },
   {
-    "input": "Challenges and Considerations",
+    "input": "Challenges and Considerations in Momentum based gradient",
     "output": "Choosing Hyperparameters: Selecting the appropriate values for the learning rate and momentum factor can be challenging. Typically a momentum factor of 0.9 is common but it may vary based on the specific problem or dataset. Potential for Over-Accumulation: If the momentum term becomes too large it can lead to the optimizer overshooting the minimum, especially in the presence of noisy gradients. Initial Momentum: When momentum is initialized it can have a significant impact on the convergence rate. Poor initialization can lead to slow or erratic optimization behavior."
   },
   {
@@ -10057,7 +10056,7 @@
     "output": "Efficiency: Because it uses only one or a few data points to calculate the gradient, SGD can be much faster, especially for large datasets. Each step requires fewer computations, leading to quicker convergence. Memory Efficiency: Since it does not require storing the entire dataset in memory for each iteration, SGD can handle much larger datasets than traditional gradient descent. Escaping Local Minima: The noisy updates in SGD, caused by the stochastic nature of the algorithm, can help the model escape local minima or saddle points, potentially leading to better solutions in non-convex optimization problems. Online Learning: SGD is well-suited for online learning where the model is trained incrementally as new data comes in, rather than on a static dataset."
   },
   {
-    "input": "Challenges",
+    "input": "Challenges in Stochastic Gradient Descent (SGD)",
     "output": "Noisy Convergence: Since the gradient is estimated based on a single data point (or a small batch), the updates can be noisy, causing the cost function to fluctuate rather than steadily decrease. This makes convergence slower and more erratic than in batch gradient descent. Learning Rate Tuning: SGD is highly sensitive to the choice of learning rate. A learning rate that is too large may cause the algorithm to diverge while one that is too small can slow down convergence. Adaptive methods like Adam and RMSprop address this by adjusting the learning rate dynamically during training. Long Training Times: While each individual update is fast, the convergence might take a longer time overall since the steps are more erratic compared to batch gradient descent."
   },
   {
@@ -11653,7 +11652,7 @@
     "output": "Deep learning models automatically learn features from raw data, eliminating the need for manual feature extraction. This capability allows them to handle a wide range of data types and complexities. Deep learning models achieve state-of-the-art performance in many tasks, outperforming traditional machine learning algorithms in accuracy and efficiency. This is particularly evident in image recognition and language processing tasks. Deep learning algorithms can scale with the amount of data and computational power available. As more data becomes available, these models continue to improve and adapt, leading to better performance. Deep learning is applicable across various domains, from image and speech recognition to time-series forecasting and robotics. Its versatility makes it a valuable tool for solving complex problems in diverse fields."
   },
   {
-    "input": "Challenges and Considerations",
+    "input": "Challenges and Considerations in Deep Learning",
     "output": "Deep learning models require large amounts of data to train effectively. The need for extensive datasets can be a barrier in fields where data is scarce or difficult to obtain. Training deep learning models can be resource-intensive, requiring powerful hardware like GPUs and TPUs. This can be a limitation for organizations with limited computational resources. Deep learning models are often considered  black boxes  due to their complexity, making it challenging to interpret their decision-making processes. This lack of transparency can be problematic, especially in critical applications like healthcare and finance. The use of deep learning raises ethical concerns, including issues related to privacy, bias, and fairness. Ensuring that models are trained on diverse and representative data is crucial to addressing these concerns"
   },
   {
@@ -11861,7 +11860,7 @@
     "output": "Versatility: Capable of handling diverse tasks with minimal adaptation. Contextual Understanding: Deep learning enables comprehension of complex text.. Scalability: Performance improves with data size and model parameters. Few-Shot Learning: Learns new tasks from limited examples. Creativity: Generates novel and coherent content."
   },
   {
-    "input": "Challenges and Ethical Considerations",
+    "input": "Challenges and Ethical Considerations of GPT",
     "output": "Bias: Models inherit biases from training data. Misinformation: Can generate convincing but false content. Resource Intensive: Large models require substantial computational power. Transparency: Hard to interpret reasoning behind outputs. Job Displacement: Automation of language-based tasks may impact employment. OpenAI addresses these concerns by implementing safety measures, encouraging responsible use and actively researching ways to mitigate potential harms."
   },
   {
@@ -11921,7 +11920,7 @@
     "output": "The versatility of masked language models makes them applicable to a wide range of real-world scenarios. Some common applications include: "
   },
   {
-    "input": "Challenges and Limitations",
+    "input": "Challenges and Limitations in Masked Language Models",
     "output": "While masked language models have achieved impressive results they are not without challenges: In the coming years we can expect masked language models to play an even greater role in shaping how humans interact with machines. From smarter virtual assistants to more accurate translation tools the potential applications of MLMs are virtually limitless."
   },
   {
@@ -12593,7 +12592,7 @@
     "output": "For better understanding, we can visualize how the dictionary-based tokenization is working over various sentences. This can help confirm whether multi-word expressions are accurately grouped as single tokens."
   },
   {
-    "input": "Challenges and Limitations",
+    "input": "Challenges and Limitations in Dictionary-Based Tokenization",
     "output": "By using dictionary-based tokenization, NLP systems can efficiently recognize and process multi-word expressions, enhancing their accuracy and performance across a wide range of language tasks."
   },
   {
