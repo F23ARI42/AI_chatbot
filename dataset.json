@@ -19064,24 +19064,36 @@
     "output": "In conclusion, it is important for businesses to implement the practice of Responsible AI into the AI systems they develop if they wish to effectively manage the ethical, social and legal implications of managing them. To gain the trust of the users, there AI systems must be transparent, accountable and beneficial to the society. It is up to the users to determine how much trust is ok to place in these systems once they have a proper understanding of what they are getting themselves into."
   },
   {
+    "input": "What is Retrieval-Augmented Generation (RAG) ?",
+    "output": "Retrieval-Augmented Generation (RAG) is an advanced AI framework that combines information retrieval with text generation models like GPT to produce more accurate and up-to-date responses. Instead of relying only on pre-trained data like traditional language models, RAG fetches relevant documents from an external knowledge source before generating an answer."
+  },
+  {
+    "input": "What is RAG ?",
+    "output": "Retrieving relevent data and generating accurate, context-aware responses to improve AI's outputs. Retrieve: Find useful information. Augmented: Add it to AI's knowledge. Generate: Create a better response."
+  },
+  {
+    "input": "Importance of RAG",
+    "output": "Access to Updated Knowledge: LLMs are trained on fixed datasets but RAG allows them to fetch fresh and real time information from external sources. Improved Accuracy: It reduces hallucinations in LLMs and makes answers more factually correct. Domain Specific Expertise: It lets us use specialized datasets like medical records and legal documents to get expert-level responses without retraining the model. Cost Efficiency: Instead of retraining massive LLMs with new data, we simply update the external knowledge base hence saving time and resources. Personalization: RAG can retrieve user specific information like past interactions or personal data to provide more tailored and relevant responses."
+  },
+  {
     "input": "Components of RAG",
-    "output": "The main components of RAG are: "
+    "output": "The main components of RAG are: External Knowledge Source: Stores domain specific or general information like documents, APIs or databases. Text Chunking and Preprocessing: Breaks large text into smaller, manageable chunks and cleans it for consistency. Embedding Model: Converts text into numerical vectors that capture semantic meaning. Vector Database: Stores embeddings and enables similarity search for fast information retrieval. Query Encoder: Transforms the user’s query into a vector for comparison with stored embeddings. Retriever: Finds and returns the most relevant chunks from the database based on query similarity. Prompt Augmentation Layer: Combines retrieved chunks with the user’s query to provide context to the LLM. LLM (Generator): Generates a grounded response using both the query and retrieved knowledge. Updater (Optional): Regularly refreshes and re-embeds data to keep the knowledge base up to date."
   },
   {
     "input": "Working of RAG",
-    "output": "The system first searches external sources for relevant information based on the user’s query instead of relying only on existing training data."
+    "output": "The system first searches external sources for relevant information based on the user’s query instead of relying only on existing training data. Creating External Data: External data from APIs, databases or documents is chunked, converted into embeddings and stored in a vector database to build a knowledge library. Retrieving Relevant Information: User queries are converted into vectors and matched against stored embeddings to fetch the most relevant data ensuring accurate responses. Augmenting the LLM Prompt: Retrieved content is added to the user’s query giving the LLM extra context to work with. Answer Generation: LLM uses both the query and retrieved data to generate a factually accurate, context aware response. Keeping Data Updated: External data and embeddings are refreshed regularly in real time or scheduled so the system always retrieves latest information."
   },
   {
     "input": "What Problems does RAG solve?",
-    "output": "Some the problems that RAG solves are: "
+    "output": "Some the problems that RAG solves are: Hallucinations: Traditional generative models can produce incorrect information. RAG reduces this risk by retrieving verified, external data to ground responses in factual knowledge. Outdated Information: Static models rely on training data that may become outdated. It dynamically retrieves latest information ensuring relevance and accuracy in real time. Contextual Relevance: Generative models often struggle with maintaining context in complex or multi turn conversations. RAG retrieves relevant documents to enrich the context improving coherence and relevance. Domain Specific Knowledge: Generic models may lack expertise in specialized fields. It integrates domain specific external knowledge for tailored and precise responses. Cost and Efficiency: Fine tuning large models for specific tasks is expensive. It eliminates the need for retraining by dynamically retrieving relevant data reducing costs and computational load. Scalability Across Domains: It is adaptable to diverse industries from healthcare to finance without extensive retraining making it highly scalable."
   },
   {
-    "input": "Challenges",
-    "output": "Despite its advantages, RAG faces several challenges: "
+    "input": "Challenges in RAG",
+    "output": "Despite its advantages, RAG faces several challenges: Complexity: Combining retrieval and generation adds complexity to the model requires careful tuning and optimization to ensure both components work seamlessly together. Latency: The retrieval step can introduce latency making it challenging to deploy RAG models in real time applications. Quality of Retrieval: The overall performance heavily depends on the quality of the retrieved documents. Poor retrieval can lead to suboptimal generation, undermining the model’s effectiveness. Bias and Fairness: It can inherit biases present in the training data or retrieved documents, necessitating ongoing efforts to ensure fairness and mitigate biases."
   },
   {
     "input": "RAG Applications",
-    "output": "Here are some examples to illustrate the applications of RAG we discussed earlier: "
+    "output": "Here are some examples to illustrate the applications of RAG we discussed earlier: Question-Answering Systems: It enables chatbots or virtual assistants to pull information from a knowledge base or documents and generate accurate, context aware answers. Content Creation and Summarization: It can gather information from multiple sources and generate concise, simplified summaries or articles. Conversational Agents and Chatbots: It enhances chatbots by grounding their responses in reliable data making interactions more informative and personalized. Information Retrieval: Goes beyond traditional search by retrieving documents and generating meaningful summaries of their content. Educational Tools and Resources: Provides students with explanations, diagrams or multimedia references tailored to their queries."
   },
   {
     "input": "RAG Alternatives",
@@ -23640,7 +23652,7 @@
     "output": "Large Language Models (LLMs) come with several advantages that contribute to their widespread adoption and success in various applications: Zero-Shot and Few-Shot Learning: Can perform new tasks without explicit retraining. Scalable Knowledge: Efficiently process and understand vast text corpora. Fine-Tuning Flexibility: Adaptable to specific industries and datasets. Automation of Language Tasks: Frees human effort from repetitive or time-consuming tasks. Versatility: Effective across multiple domains—healthcare, education, business and research."
   },
   {
-    "input": "Challenges",
+    "input": "Challenges in Large Language Models (LLMs)",
     "output": "High Costs: Training requires millions of dollars in compute resources. Time-Intensive: Training large models can take weeks or months. Data Challenges: Limited availability of high-quality, legal and unbiased text data. Environmental Impact: High energy consumption leading to significant carbon footprint. Ethical Concerns: Bias, misinformation risks and responsible deployment remains a major issue."
   },
   {
