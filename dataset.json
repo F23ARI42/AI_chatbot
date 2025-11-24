@@ -3276,7 +3276,7 @@
     "output": "There are various algorithms used for feature selection and are grouped into three main categories and each one has its own strengths and trade-offs depending on the use case."
   },
   {
-    "input": "1. Filter Methods",
+    "input": "Filter Methods",
     "output": "Filter methods evaluate each feature independently with target variable. Feature with high correlation with target variable are selected as it means this feature has some relation and can help us in making predictions. These methods are used in the preprocessing phase to remove irrelevant or redundant features based on statistical tests (correlation) or other criteria."
   },
   {
@@ -3284,11 +3284,11 @@
     "output": "Fast and efficient: Filter methods are computationally inexpensive, making them ideal for large datasets. Easy to implement: These methods are often built-in to popular machine learning libraries, requiring minimal coding effort. Model Independence: Filter methods can be used with any type of machine learning model, making them versatile tools."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Filter Methods",
     "output": "Limited interaction with the model: Since they operate independently, filter methods might miss data interactions that could be important for prediction. Choosing the right metric: Selecting the appropriate metric for our data and task is crucial for optimal performance. Some techniques used are: Information Gain: It is defined as the amount of information provided by the feature for identifying the target value and measures reduction in the entropy values. Information gain of each attribute is calculated considering the target values for feature selection. Chi-square test: It is generally used to test the relationship between categorical variables. It compares the observed values from different attributes of the dataset to its expected value. Fisher’s Score: It selects each feature independently according to their scores under Fisher criterion leading to a suboptimal set of features. Larger the Fisher’s score means selected feature is better to choose. Pearson’s Correlation Coefficient: It is a measure of quantifying the association between the two continuous variables and the direction of the relationship with its values ranging from -1 to 1. Variance Threshold: It is an approach where all features are removed whose variance doesn’t meet the specific threshold. By default this method removes features having zero variance. The assumption made using this method is higher variance features are likely to contain more information. Mean Absolute Difference: It is a method is similar to variance threshold method but the difference is there is no square in this method. This method calculates the mean absolute difference from the mean value. Dispersion ratio: It is defined as the ratio of the Arithmetic mean (AM) to that of Geometric mean (GM) for a given feature. Its value ranges from +1 to infinity as AM ≥ GM for a given feature. Higher dispersion ratio implies a more relevant feature."
   },
   {
-    "input": "2. Wrapper methods",
+    "input": "Wrapper methods",
     "output": "Wrapper methods are also referred as greedy algorithms that train algorithm. They use different combination of features and compute relation between these subset features and target variable and based on conclusion addition and removal of features are done. Stopping criteria for selecting the best subset are usually pre-defined by the person training the model such as when the performance of the model decreases or a specific number of features are achieved."
   },
   {
@@ -3296,11 +3296,11 @@
     "output": "Model-specific optimization: Wrapper methods directly consider how features influence the model, potentially leading to better performance compared to filter methods. Flexible: These methods can be adapted to various model types and evaluation metrics."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Wrapper Methods",
     "output": "Computationally expensive: Evaluating different feature combinations can be time-consuming, especially for large datasets. Risk of overfitting: Fine-tuning features to a specific model can lead to an overfitted model that performs poorly on unseen data. Some techniques used are: Forward selection: This method is an iterative approach where we initially start with an empty set of features and keep adding a feature which best improves our model after each iteration. The stopping criterion is till the addition of a new variable does not improve the performance of the model. Backward elimination: This method is also an iterative approach where we initially start with all features and after each iteration, we remove the least significant feature. The stopping criterion is till no improvement in the performance of the model is observed after the feature is removed. Recursive elimination: Recursive eliminationis a greedy method that selects features by recursively removing the least important ones. It trains a model, ranks features based on importance and eliminates them one by one until the desired number of features is reached."
   },
   {
-    "input": "3. Embedded methods",
+    "input": "Embedded methods",
     "output": "Embedded methods perform feature selection during the model training process. They combine the benefits of both filter and wrapper methods. Feature selection is integrated into the model training allowing the model to select the most relevant features based on the training process dynamically."
   },
   {
@@ -3308,7 +3308,7 @@
     "output": "Efficient and effective: Embedded methods can achieve good results without the computational burden of some wrapper methods. Model-specific learning: Similar to wrapper methods these techniques usees the learning process to identify relevant features."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Embedded Methods",
     "output": "Limited interpretability: Embedded methods can be more challenging to interpret compared to filter methods making it harder to understand why specific features were chosen. Not universally applicable: Not all machine learning algorithms support embedded feature selection techniques. Some techniques used are: L1 Regularization (Lasso): A regression method that applies L1 regularization to encourage sparsity in the model. Features with non-zero coefficients are considered important. Decision TreesandRandom Forests: These algorithms naturally perform feature selection by selecting the most important features for splitting nodes based on criteria like Gini impurity or information gain. Gradient Boosting: Like random forests gradient boosting models select important features while building trees by prioritizing features that reduce error the most."
   },
   {
@@ -3828,11 +3828,11 @@
     "output": "When dealing with ordinal data, a custom mapping ensures the numeric values preserve order: Output: This approach is ideal for features where the order carries semantic meaning."
   },
   {
-    "input": "Performance and Limitations",
+    "input": "Performance and Limitations of Label Encoding",
     "output": "Label encoding is computationally efficient. Both LabelEncoder and pandas' Categorical require a single scan of the data (O(n)) to map categories. Memory usage is minimal as only integer codes and the category map are stored."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Label Encoding",
     "output": "Nominal data misinterpretation: Encoded integers can imply false order; one-hot encoding is safer for nominal features. Missing values: These must be handled prior to encoding. Unseen categories in test data: Encoders will fail if new categories appear; handle this with a default value or ensure training includes all possible categories. High cardinality: Features with many unique categories may still require additional feature engineering."
   },
   {
@@ -5004,7 +5004,7 @@
     "output": "A3C has demonstrated strong performance in several domains: Game Playing: Achieved superhuman performance on Atari games in significantly less time than DQN. Robotics: Multiple agents learn control tasks collaboratively while maintaining exploration diversity. Financial Trading: Trading bots explore varied strategies and share insights through a global network."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of A3C",
     "output": "A3C also has some drawbacks such as: Stale Gradients: Workers may use outdated global parameters, leading to less effective updates. Exploration Redundancy: If multiple agents converge to similar policies, exploration diversity may suffer. Hardware Dependency: A3C benefits most from multi-core systems; on single-core machines, its advantages may diminish. A3C has changed reinforcement learning by proving that parallel, asynchronous agents can enhance training speed and stability. Its architecture balances exploration and exploitation while scaling well with hardware. Though newer methods like PPO and SAC have refined its ideas, A3C is still inspiring ongoing research in advantage estimation and sample efficiency."
   },
   {
@@ -5256,7 +5256,7 @@
     "output": "In a Gaussian Mixture Model, each cluster is modeled by a Gaussian distribution characterized by: Mean (μ): The mean represents the central point or average location of the cluster in the feature space. It defines where the cluster is centered. Covariance (Σ): The covariance matrix describes the shape, size and orientation of the cluster. Unlike simpler clustering methods such as K-Means which assume spherical (circular) clusters, the covariance allows Gaussian components to take on elliptical shapes. This means clusters can be stretched, compressed or tilted depending on the relationships between features. To visualize these concepts, consider two sets of data points generated from two Gaussians with different means and covariances: Scatter plots show the raw data points clustered around their respective means. Overlaidkernel density estimate(KDE) contours represent the smooth shape of each Gaussian, illustrating the cluster’s distribution and spread. This visualization highlights the flexibility of GMMs to model clusters that are not necessarily spherical and can overlap, making them more powerful than simpler methods like K-Means that assume equally sized, spherical clusters. By adjusting the mean and covariance, GMM adapts to the true underlying data distribution more accurately."
   },
   {
-    "input": "Use-Cases",
+    "input": "Use-Cases of Gaussian Micture Model (GMM)",
     "output": "Clustering: Discover underlying groups or structure in data (marketing, medicine, genetics). Anomaly Detection: Identify outliers or rare events (fraud, medical errors). Image Segmentation: Separate images into meaningful regions (medical, remote sensing). Density Estimation: Model complex probability distributions for generative modeling."
   },
   {
@@ -5264,7 +5264,7 @@
     "output": "Flexible Cluster Shapes: Models ellipsoidal and overlapping clusters. Soft Assignments: Assigns probabilistic cluster membership instead of hard labels. Handles Missing Data: Robust to incomplete observations. Interpretable Parameters: Each Gaussian’s mean, covariance and weight are easy to interpret."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Gaussian Micture Model (GMM)",
     "output": "Initialization Sensitive: Results depend on starting parameter values—can get stuck in local optima. Computation Intensive: Slow for high-dimensional or very large datasets. Assumes Gaussian Distributions: Not suitable for non-Gaussian cluster shapes. Requires Cluster Number: Must specify the number of components/clusters before fitting."
   },
   {
@@ -6980,7 +6980,7 @@
     "output": "Performs well in high-dimensional spaces. Relies only on support vectors, which speeds up predictions. Can be used for both binary and multi-class classification."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Support Vector Machines (SVMs)",
     "output": "Computationally expensive for large datasets with time complexity O(n²)–O(n³). Requires feature scaling and careful hyperparameter tuning. Sensitive to outliers and class imbalance, which may skew the decision boundary. Support Vector Machines are a robust choice for classification, especially when classes are well-separated. By maximizing the margin around the decision boundary, they deliver strong generalization performance across diverse datasets."
   },
   {
@@ -8312,7 +8312,7 @@
     "output": "Now compare original images and their reconstructions from the autoencoder. encoded_imgs = autoencoder.encoder(x_test).numpy(): Passes test images through the encoder to get their compressed latent representations as NumPy arrays. decoded_imgs = autoencoder.decoder(encoded_imgs).numpy(): Reconstructs images by passing the latent representations through the decoder and converts them to NumPy arrays. Output: The visualization compares original MNIST images (top row) with their reconstructed versions (bottom row) showing that the autoencoder effectively captures key features despite some minor blurriness."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Autoencoders",
     "output": "Autoencoders are useful but also have some limitations: Memorizing Instead of Learning Patterns: It can sometimes memorize the training data rather than learning meaningful patterns which reduces their ability to generalize to new data. Reconstructed Data Might Not Be Perfect: Output may be blurry or distorted with noisy inputs or if the model architecture lacks sufficient complexity to capture all details. Requires a Large Dataset and Good Parameter Tuning: It require large amounts of data and careful parameter tuning (latent dimension size, learning rate, etc) to perform well. Insufficient data or poor tuning can result in weak feature representations."
   },
   {
@@ -8532,7 +8532,7 @@
     "output": "Automatic Gradient Computation: Enables fast, scalable calculation of gradients, which is essential for training deep neural networks and automating optimization in modern frameworks. Practical Backpropagation: Makes efficient backpropagation possible, allowing gradients to be passed through every layer for effective parameter updates. Supported by Frameworks: Fully integrated into deep learning libraries likePyTorch, TensorFlowandJAX, which handle chain rule differentiation automatically. Architecture Flexibility: Works seamlessly with a wide variety of architectures, includingCNNs, RNNsandtransformers, supporting diverse machine learning tasks."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Chain Rule Derivative",
     "output": "Vanishing/Exploding Gradients: Repeated application can lead to gradients becoming too small or too large, causing instability during training. Differentiability Requirement: Only applies to functions that are smooth and differentiable; cannot directly handle discrete or non-differentiable operations. Computational Cost: For very deep or wide networks, the process can become computationally intensive and memory-heavy."
   },
   {
@@ -8924,15 +8924,15 @@
     "output": "Help models learn robust, meaningful features that are less sensitive to noise or missing data. Reduce the risk of merely copying input data (identity mapping), especially when compared to basic autoencoders. Improve performance on tasks such as image denoising, data imputation and anomaly detection by reconstructing clean signals from corrupted inputs. Enhance the generalizability of learned representations, making models more useful for downstream tasks."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Denoising Autoencoder (DAE)",
     "output": "May require careful tuning of the type and level of noise added to the inputs for optimal performance. Can be less effective if the noise model used during training does not match the type of corruption seen in real-world data. High computational cost, especially with large datasets or deep architectures. Like other unsupervised methods, provide no guarantees that learned features will be directly useful for specific downstream supervised tasks."
   },
   {
-    "input": "1. Artificial Neural Networks (ANNs)",
+    "input": "Artificial Neural Networks (ANNs)",
     "output": "Artificial Neural Networksare computational models inspired by the human brain's neural architecture. The simplest form of ANN follows afeed-forward mechanismwhere data flows from input to output without looping back. These networks consist of interconnected layers: input layers that receive data, hidden layers that process it and output layers that produce the final result. Advantages of ANNs: Versatile Learning: ANNs can handle both linear and non-linear data which makes them applicable across diverse domains. Forecasting: They are sensitive to complex patterns making them effective intime series forecastingsuch as predicting stock prices or economic trends. Disadvantages of ANNs: Lack of Interpretability: Due to their black-box nature, it is difficult to understand how decisions are made within the network. Hardware Dependence: ANNs require heavy computational resources which can limit their scalability in certain environments."
   },
   {
-    "input": "2. Biological Neural Networks (BNNs)",
+    "input": "Biological Neural Networks (BNNs)",
     "output": "Biological Neural Networks are the foundation of cognition in living organisms. A biological neuron comprises dendrites, a cell body and an axon. Dendrites receive signals from other neurons, the soma integrates these inputs and the axon transmits the resulting signal to subsequent neurons via synapses. Advantages of BNNs: Input Handling: Biological synapses are capable of interpreting and integrating a wide variety of stimuli/inputs. Parallel Processing: BNNs are efficient at processing massive amounts of information simultaneously, enabling rapid responses. Disadvantages of BNNs: Lack of Central Control: Unlike artificial systems, BNNs lack a clear central processing unit, which can make control mechanisms less structured. Slower Processing: BNNs operate at slower speeds compared to silicon-based systems due to the nature of electrochemical transmission."
   },
   {
@@ -9488,7 +9488,7 @@
     "output": "Adapts learning rates for each parameter, helping with sparse features and noisy data. Works well with sparse data by giving rare but important features appropriate updates. Automatically adjusts learning rates, eliminating the need for manual tuning. Improves performance in cases with varying gradient magnitudes, enabling efficient convergence."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Adagrad",
     "output": "Learning rates shrink continuously during training which can slow convergence and cause early stopping. Performance depends heavily on the initial learning rate choice. Lacks momentum, making it harder to escape shallow local minima. Learning rates decrease as gradients accumulate which helps avoid overshooting but may hinder progress later in training."
   },
   {
@@ -10192,7 +10192,7 @@
     "output": "Neural networks are widely used in many different applications because of their many benefits: Adaptability: Neural networks are useful for activities where the link between inputs and outputs is complex or not well defined because they can adapt to new situations and learn from data. Pattern Recognition: Their proficiency in pattern recognition renders them efficacious in tasks like as audio and image identification, natural language processing and other intricate data patterns. Parallel Processing: Because neural networks are capable of parallel processing by nature, they can process numerous jobs at once which speeds up and improves the efficiency of computations. Non-Linearity: Neural networks are able to model and comprehend complicated relationships in data by virtue of the non-linear activation functions found in neurons which overcome the drawbacks of linear models."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Neural Networks",
     "output": "Neural networks while powerful, are not without drawbacks and difficulties: Computational Intensity: Large neural network training can be a laborious and computationally demanding process that demands a lot of computing power. Black box Nature: As  black box  models, neural networks pose a problem in important applications since it is difficult to understand how they make decisions. Overfitting: Overfitting is a phenomenon in which neural networks commit training material to memory rather than identifying patterns in the data. Although regularization approaches help to alleviate this, the problem still exists. Need for Large datasets: For efficient training, neural networks frequently need sizable, labeled datasets; otherwise, their performance may suffer from incomplete or skewed data."
   },
   {
@@ -11260,7 +11260,7 @@
     "output": "Parameter Sharing: The same filter is used repeatedly across the input, greatly reducing the number of parameters in the model compared to fully connected layers. Local Connectivity: Each filter focuses on a small local region, capturing fine-grained features and patterns. Hierarchical Feature Learning: Stacking multiple convolution layers enables the network to learn increasingly complex features—from low-level edges in early layers to entire objects in deeper layers. Computational Efficiency: Fewer parameters make convolution layers more efficient both in storage and computation allowing deep architectures suitable for large-scale visual tasks."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Convolution Layers",
     "output": "High Resource Requirements: Needs substantial computing power and memory. Large Data Needs: Requires lots of labeled training data. Limited Global Context: Captures local patterns well, but struggles with long-range dependencies. Overfitting Risks: May not generalize well with limited data."
   },
   {
@@ -12660,11 +12660,11 @@
     "output": "FastText excels in scenarios requiring robust of morphological variations and out-of-vocabulary words. It's particularly effective for: Multilingual applicationswhere training data may be limited for some languages Domain-specific textwith specialized vocabulary not found in general corpora Real-time systemsrequiring fast inference and low memory overhead Text classification taskswhere subword information provides discriminative features The library's combination of efficiency and linguistic sophistication makes it a valuable tool for production NLP systems, especially when dealing with diverse or evolving vocabularies where traditional word-level approaches fall short."
   },
   {
-    "input": "Key Advantages",
+    "input": "Key Advantages of FastText",
     "output": "OOV handling: Generates embeddings for unseen words through subword information Morphological awareness: Captures relationships between word variants (run, running, runner) Computational efficiency: Fast training and inference through hierarchical softmax Language flexibility: Works well with morphologically rich languages"
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of FastText",
     "output": "Memory overhead: Requires more storage than traditional embeddings due to subword information Hyperparameter sensitivity: N-gram range (minn, maxn) significantly affects performance Limited semantic depth: May not capture complex semantic relationships as well as transformer-based models"
   },
   {
@@ -13420,7 +13420,7 @@
     "output": "Consistent interface with other NLTK tokenizers Built-in span tracking capabilities Better integration with NLTK processing pipelines Standardized error handling and edge case management"
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of WhitespaceTokenizer",
     "output": "Languages such as Chinese, Japanese or Korean, where words are not separated by spaces. Languages with complex or ambiguous word boundary rules. Technical or domain-specific text requiring specialized tokenization rules. Punctuation remains attached to adjacent words, which may need additional processing depending on the application."
   },
   {
@@ -13680,7 +13680,7 @@
     "output": "Real-world applications often require custom stopword lists tailored to specific domains: Imports Counter to count word frequencies. Tokenizes all texts and flattens them into one word list. Calculates frequency of each word. Adds words to custom stopwords if they exceed a set frequency threshold. Merges custom stopwords with NLTK’s default stopword list. This approach identifies domain-specific high-frequency words that may not appear in standard stopword lists but function as noise in particular contexts."
   },
   {
-    "input": "Edge Cases and Limitations",
+    "input": "Edge Cases and Limitations of removing stop words",
     "output": "Stopword removal is essential in NLP but must be handled carefully. It requires normalization (e.g., handling case and contractions) and language-specific lists for multilingual text. Removing words like  not  or certain prepositions can harm tasks such as sentiment analysis or entity recognition. Over-removal may lose valuable signals while under-removal can keep noise. Its impact varies—beneficial in classification but risky in tasks needing full semantic context. Modern deep learning approaches sometimes learn to ignore irrelevant words automatically, but traditional machine learning methods and resource-constrained applications still benefit significantly from thoughtful stopword handling."
   },
   {
@@ -13708,7 +13708,7 @@
     "output": "Rather than building from scratch, libraries likeNLTKandspaCyprovide robust tokenizers that incorporate rule-based logic with language awareness. Output: NLTK handles common punctuation and sentence boundaries effectively with pre-defined patterns. Output: spaCy is optimized for speed and accuracy, automatically handling edge cases like URLs and contractions."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Rule based Tokenization",
     "output": "Whitespace and punctuation methods may leave attached symbols or split wrongly. Regex-based approaches can be brittle if rules are overly specific or poorly structured. Language-specific models may require external dependencies and setup time. Rule conflicts may occur in hybrid tokenization if ordering is not handled carefully. Rule-based tokenization offers a customizable approach to text segmentation. While modern models may automate tokenization, understanding and applying rule-based techniques remains vital especially when control or domain-specific adaptation is required."
   },
   {
@@ -14556,7 +14556,7 @@
     "output": "Simple and Fast: Easy to build and fast to run for small n. Interpretable: Easy to understand and debug. Good Baseline: Useful as a starting point for many NLP tasks."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of N-gram",
     "output": "Limited Context: Only considers a few previous words, missing long-range dependencies. Data Sparsity: Needs lots of data; rare n-grams are common as n increases. High Memory: Bigger n-gram models require lots of storage. Poor with Unseen Words: Struggles with new or rare words unless smoothing is applied."
   },
   {
@@ -14704,7 +14704,7 @@
     "output": "We create a list of sample sentences that include ambiguous words like  bank . We call the get_elmo_embedding() function to generate the embeddings. The result is a 3D tensor with shape (batch_size, max_seq_length, 1024). Output: We can see that our model is working fine."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of ELMo Embeddings",
     "output": "Ambiguous Contexts: Some sentences may not provide enough information for accurate disambiguation. For example,  The bank was full of fish.  could still confuse the model. Computational Overhead: ELMo requires more memory and processing due to biLSTM layers, which can be a constraint in real-time applications. Pretraining Dependency: Performance heavily depends on the quality and size of the pretraining corpus."
   },
   {
@@ -14984,7 +14984,7 @@
     "output": "Test with example, src: random input token IDs. trg: random target token IDs (used for teacher forcing). outputs: predicted token IDs for each sequence. .T: transpose to show batch sequences as rows."
   },
   {
-    "input": "Applications od Seq2Seq Model",
+    "input": "Applications of Seq2Seq Model",
     "output": "Machine Translation: Converts text between languages like English to French. Text Summarization: Produces concise summaries of documents or news articles. Speech Recognition: Transcribes spoken language into text. Image Captioning: Generates captions for images by combining visual features with sequence generation. Time-Series Prediction: Predicts future sequences based on past temporal data."
   },
   {
@@ -15820,7 +15820,7 @@
     "output": "Efficient on High-Resolution Images: Window-based and hierarchical design enables scalability and speed for large images. Versatile: Can serve as a backbone for varied vision tasks such as classification, detection and segmentation without major architecture changes. Reduced Computational Complexity: Achieves linear computational complexity (unlike the quadratic cost in standard transformers), making it practical for real-world, large-scale applications. Strong Real-World Performance: Delivers robust results in practical applications, even with limited computational resources."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Swin Transformer",
     "output": "Limited Global Context: Window-based attention can miss long-range dependencies unless many layers are stacked. Increased Complexity: Hierarchical, shifted window design adds implementation and tuning complexity compared to standard CNNs or transformers. Resource Demands for Large Models: Scaling Swin Transformers still requires significant computational resources and memory. Weaker Local Inductive Bias: May underperform CNNs on tasks where highly localized features are important."
   },
   {
@@ -15952,7 +15952,7 @@
     "output": "Multimodal Strength: Handles both images and text together, delivering rich, context-aware results. Versatility: Adaptable for various tasks, captioning, answering questions, moderation and more. Performance: Sets a high standard for accuracy in generating and understanding content across modalities. Open Source: Easily accessible models and code for customization."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of BLIP",
     "output": "Data Quality: Needs diverse and unbiased data to avoid mistakes and bias. Training Demands: High computing power is required for best results. Accuracy: Can miss details in very complex or unusual images. Scalability: Large models may be slower and require work to use for new problems."
   },
   {
@@ -16644,7 +16644,7 @@
     "output": "Zero-shot learning using CLIP can be highly impactful in various industries. Some applications include: Healthcare: CLIP helps spot rare diseases by matching medical images with symptom descriptions, even when labeled data is scarce. E-commerce: Retailers can instantly categorize brand-new products using written details, automating inventory without needing new model training. Autonomous Vehicles: Cars can identify unfamiliar obstacles on the road described in text prompts, improving real-world safety. Content Moderation: Platforms can flag inappropriate or harmful images using up-to-date descriptions, even in the absence of labeled examples."
   },
   {
-    "input": "Limitations",
+    "input": "Limitationsof Zero shot learning for novel class recognition",
     "output": "Susceptible to Bias: May reproduce biases found in large, web-crawled training data, which can affect fairness in real-world applications. Contextual Limitations: Sometimes misinterprets nuanced, complex or ambiguous visual contexts, leading to incorrect matches with text prompts. Dependence on Prompt Quality: Highly reliant on the accuracy and detail of text descriptions—vague or poorly constructed prompts can reduce performance. Not Robust to Adversarial Inputs: Can be tricked by carefully designed misleading images or prompts, exposing vulnerabilities in security-critical scenarios."
   },
   {
@@ -16688,7 +16688,7 @@
     "output": "Massive Scale: Trained on over 1.8 billion image-text pairs, making it robust and generalizable to real-world data. Minimal Data Cleaning: Handles noisy, web-sourced data with little filtering, enabling adaptability to uncontrolled environments. Dual-Encoder Efficiency: Architected for fast similarity computation, making large-scale retrieval tasks practical. Strong Zero-shot Capability: Performs well on unseen classes and tasks without the need for task-specific training."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of ALIGN",
     "output": "Sensitive to Noisy Data: While robust, excessive noise or irrelevant text-image pairings can still degrade performance. Language and Domain Bias: May reflect biases present in large-scale, web-sourced data, impacting fairness and reliability. Quality vs. Quantity Trade-off: Minimal filtering allows more data, but risks including more irrelevant or low-quality pairs. Limited Fine-grained Localization: Focuses on global image-text correspondence; less effective at tasks needing detailed localization or fine object matching."
   },
   {
@@ -17744,7 +17744,7 @@
     "output": "Enhanced problem-solving: By exploring multiple paths, ToT increases the likelihood of finding optimal or creative solutions. Human-like reasoning: Mimics the way humans brainstorm, weigh options and reconsider decisions. Flexibility: Can be tailored for open-ended tasks (creative writing) or structured tasks (math, logic puzzles)."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Tree of Thought (ToT) prompting",
     "output": "Resource-intensive: Exploring multiple branches increases computational cost, making it less efficient for simple tasks. Complexity management: Requires careful design to balance thorough exploration with practical resource constraints."
   },
   {
@@ -18004,7 +18004,7 @@
     "output": "Autonomous: Functions independently with minimal human oversight. Adaptable: Learns from experience and adjusts actions to changing environments. Versatile: Handles a wide range of complex and dynamic tasks. Scalable: Effectively coordinates multiple agents and systems."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Agentic AI",
     "output": "Safety: Requires ongoing monitoring to prevent errors or unintended outcomes. Accountability: Raises ethical concerns and questions about responsibility for autonomous actions. Complexity: Can be difficult to interpret, explain or regulate. Bias: May carry forward or amplify existing biases without careful supervision."
   },
   {
@@ -18592,15 +18592,15 @@
     "output": "Prompt: “Generate a simple login page using HTML and CSS”Output: Output: These examples show how Google Gemini AI can simplify coding tasks and learning."
   },
   {
-    "input": "Use Cases",
+    "input": "Use Cases of Multimodal",
     "output": "Code Generation: Write Python scripts, JavaScript functions or full application modules. Debugging and Error Fixing: Identify syntax errors, logic issues and optimize code. Learning and Education: Explain programming concepts, algorithms and complex logic for students. App & Web Development: Generate HTML/CSS, UI components and backend code quickly. Creative Coding Projects: Analyze screenshots, convert sketches to UI code or assist in multimedia projects. Research Assistance: Summarize documentation, extract relevant code examples or automate repetitive tasks."
   },
   {
-    "input": "Advantages of Multimodal",
+    "input": "Advantages of Multimodal in Google Gemini",
     "output": "Multimodal Capabilities: Handles text, code, images, audio and video for versatile assistance. Advanced Reasoning: Provides accurate, context-aware solutions and step-by-step explanations. Coding Efficiency: Generates, debugs and explains code across multiple programming languages. Real-Time Knowledge: Accesses latest libraries, trends and best practices to keep outputs current. Integration-Friendly: Works across Google platforms, cloud APIs and Google Assistant. Contextual Awareness: Remembers project context to offer tailored suggestions."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Google Gemini",
     "output": "Niche Language Support: May struggle with obscure programming languages or uncommon frameworks. Complex Systems: Extremely large or intricate systems may not be fully understood or handled correctly. Multimodal Maturity: Features for image/video analysis and UI-to-code conversion are still evolving. Vague Prompts: Ambiguous instructions can result in suboptimal outputs. Testing Required: Outputs should always be reviewed and tested before deployment to avoid runtime issues."
   },
   {
@@ -18672,7 +18672,7 @@
     "output": "High Performance: Achieves state-of-the-art results across NLP tasks like text generation, summarization, translation and sentiment analysis. Scalable and Flexible: Can be trained and fine-tuned on a range of hardware setups, from high-end GPUs to accessible computing environments. Versatile Applications: Useful for chatbots, content creation, translation, sentiment analysis and more across multiple industries. Open-Source Friendly: Meta provides access to models and documentation, promoting research, collaboration and innovation. Context-Aware Understanding: Uses Transformer-based architecture with self-attention mechanisms to maintain coherence and context in generated text."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of LLaMA",
     "output": "Resource Intensive: Large models require significant computing power and memory for training and inference. Potential Bias: Like other language models, LLaMA can reflect biases present in training data, affecting fairness and neutrality. Interpretability Challenges: Understanding why the model generates a specific output can be difficult, limiting transparency. Ethical Concerns: Misuse in generating fake content, misinformation or spam is possible if not carefully monitored. Fine-Tuning Requirements: Domain-specific tasks may require additional fine-tuning to achieve optimal performance."
   },
   {
@@ -19708,7 +19708,7 @@
     "output": "Human-like interaction with context-aware and natural responses. Versatile across tasks like writing, coding, research and problem-solving. Continuously learns from interactions for more accurate responses. Enterprise-grade security with HIPAA compliance and SOC II Type 2 certification. High reliability with very low hallucination rates."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Claude AI",
     "output": "Limited knowledge cutoff; may not include the latest events or updates. Can occasionally provide inaccurate or misleading information. Responses depend heavily on the clarity and specificity of user queries. Cannot truly understand or reason like a human—it mimics comprehension. Advanced features require a paid subscription (Claude Pro) for full access."
   },
   {
@@ -20432,7 +20432,7 @@
     "output": "There are various advantages present for using RAG which are discussed below: Enhanced Contextual Understanding: RAG excels at understanding context because of its integration of external knowledge during generation. Diverse and Relevant Outputs: The retrieval mechanism enables the model to produce diverse and contextually relevant outputs, making it suitable for a wide range of applications. Flexibility in Knowledge Integration: RAG provides flexibility in choosing the knowledge source, allowing adaptability to various domains."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of RAG",
     "output": "Nothings comes with all good powers. RAG also has its own limitations which are discussed below: Computational Intensity: The retrieval mechanism can be computationally intensive, impacting real-time applications and scalability. This strategy makes the model size very large which makes it hard to integrate with real-time applications if there is a shortage of computational resources. Dependence on External Knowledge: RAG's effectiveness relies on the quality and relevance of external knowledge, which may introduce biases or inaccuracies."
   },
   {
@@ -20444,7 +20444,7 @@
     "output": "Fine-tuning a model has some of the useful advantages which are discussed below: Task-specific Adaptation: Fine-tuningallows models to adapt to specific tasks, likemusic genre classification, audio classification etc. which make them more effective in domain-specific applications. Efficient Use of Limited Data: In scenarios with limited task-specific data, fine-tuning leverages pre-existing knowledge, preventing overfitting. Improved Generalization: Fine-tuned models often exhibit improved generalization to the target task, particularly when the pre-trained model is robust."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Fine tuning",
     "output": "Like RAG, Fine-tuning is also not a full-proof strategy. Its limitations are discussed below: Risk of Overfitting: Fine-tuning on small datasets carries the risk of overfitting, especially when the target task significantly differs from the pre-training data. Domain-Specific Data Dependency: The effectiveness of fine-tuning is contingent on the availability and representativeness of domain-specific data. If we choose a wrong pre-trained model, then fine-tuning is useless for that specific task."
   },
   {
@@ -21204,7 +21204,7 @@
     "output": "We plot three lines on the same graph, one for each scaling law: Linear scaling plot with alpha = 1. Sublinear scaling plot with alpha = 0.7. Superlinear scaling plot with alpha = 1.3. Output: Linear scaling (α = 1): Output grows in direct proportion to input. Doubling input doubles output. Sublinear scaling (α = 0.7): Output grows slower than input. Doubling input gives less than double output. Superlinear scaling (α = 1.3): Output grows faster than input. Doubling input gives more than double output. The higher the scaling exponent α, the steeper the curve and faster the growth."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Sacling in AI",
     "output": "Diminishing returns: At some point, adding more resources gives tiny improvements. Breakdown at extremes: Very small or very large models may not follow the same law. Different α values: The scaling exponent can change depending on model architecture, data quality and training method."
   },
   {
@@ -22464,7 +22464,7 @@
     "output": "The Falcon team used the following sources of dataset to develop their pertaining dataset known as Falcon mixture. RefinedWeb-English -  sourced from CommonCrawl it formed 76% of the pertaining dataset RefinedWeb-Euro - sourced from CommonCrawl for Europe forced multilingual training it formed 8% of pretraining dataset Books  - SOurced form project Gutenberg it formed 6 % of pretraining dataset Conversations  - It was sourced from StackOverflow, HackerNews, etc, and formed 5% of pretraining dataset Code - It was sourced from GitHub and formed 3% of the pertaining dataset Technical - It was sourced from arXiv, and Wikipedia ec and formed 2% of the pertaining dataset."
   },
   {
-    "input": "Limitation",
+    "input": "Limitation of Falcon Model",
     "output": "The key limitation of Falcon model is their limited language support as their proficiency is mainly in English, German, Spanish, and French. Support for other languages is less robust, limiting their global accessibility."
   },
   {
@@ -22584,7 +22584,7 @@
     "output": "High accuracy: Maintains state-of-the-art detection performance. End-to-end training: Joint optimization of RPN and detection network. Faster than predecessors: Eliminates external region proposal methods. Flexible backbone: Can use different CNN architectures for feature extraction."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Faster R-CNN",
     "output": "Slower than single-stage detectors like YOLO or SSD for real-time applications. High computational cost for very large images. Performance depends on the quality of anchors and backbone network."
   },
   {
@@ -24196,7 +24196,7 @@
     "output": "MLLMs have various advantages, few of them are discussed here. Richer Understanding: MLLMs can interpret and combine information from text, images, audio and video, leading to more context-aware responses. Natural Interaction: They enable more human-like communication e.g., answering questions about pictures or transcribing audio. Versatility & Accessibility: MLLMs support diverse tasks and improve access for users with disabilities (like describing visuals for the visually impaired). Automated Workflows: They can simplify complex tasks such as summarizing mixed media content or reviewing documents with embedded visuals."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Multimodal Large Language Models (MLLMs)",
     "output": "Let's see the limitations faced by them, High Resource Needs: Running advanced MLLMs often requires significant computational power. Integration Challenges: Seamless fusion of different data types remains technically difficult, sometimes affecting accuracy. Domain Gaps: For some specialized or highly detailed tasks, traditional single-modal models may still outperform MLLMs. Ethical Risks: Privacy and consent issues can arise, especially with sensitive images or audio data."
   },
   {
@@ -24264,7 +24264,7 @@
     "output": "Open Source & Community: Free, open-source with wide community support. Scalability: Runs on various platforms including CPU, GPU, TPU and mobile. Pre-trained Models: Provides many models for quick customization. Tools & APIs: Simplifies building detection pipelines. Real-Time: Supports fast detection on embedded devices."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of Object detection",
     "output": "Resource Intensive: Training can require powerful hardware. Complexity: Pipeline setup can be difficult for beginners. Accuracy Trade-off: Lightweight models may reduce accuracy. Dataset Limits: Pre-trained models may need custom data for best results."
   },
   {
@@ -24276,7 +24276,7 @@
     "output": "A typical one-shot prompt includes: Task Instruction: A brief description of what the model should do. One Example: A single demonstration of the desired input and output. New Input: The actual data for which the model should generate a response. Example (Sentiment Analysis): The model uses the single example to infer that it should classify sentiment and then applies this logic to the new input."
   },
   {
-    "input": "Applications and Use Cases",
+    "input": "Applications and Use Cases of One-Shot Prompting",
     "output": "Natural Language Processing (NLP): Sentiment analysis, text classification, question answering. Business Scenarios: Deploying AI in environments with limited data, rapid prototyping, or when quick adaptation is required. Structured Data Tasks: Improving understanding and processing of structured information with minimal examples."
   },
   {
@@ -24284,7 +24284,7 @@
     "output": "Reduces Data Requirements: Useful when collecting large datasets is impractical. Quick Adaptation: Enables models to tackle new tasks with minimal setup time. Clarifies Ambiguous Instructions: Providing one example helps the model understand the task even if the instructions are not fully explicit."
   },
   {
-    "input": "Limitations",
+    "input": "Limitations of One-Shot Prompting",
     "output": "Performance Variability: The model’s effectiveness depends on the complexity of the task and the quality of the example provided. Limited Coverage: One example may not capture all task variations, leading to errors on edge cases or nuanced inputs. Not Ideal for Complex Tasks: For tasks requiring deep understanding or multiple formats, few-shot prompting (with more examples) often yields better results."
   },
   {
