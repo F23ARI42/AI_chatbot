@@ -4404,7 +4404,7 @@
     "output": "We will, Shows confidence values between top antecedent and consequent itemsets. A quick way to identify highly confident rules."
   },
   {
-    "input": "Use Cases",
+    "input": "Use Cases of Association Rule",
     "output": "Let's see the use case of Association rule, Market Basket Analysis: Identifies products often bought together to improve store layouts and promotions (e.g., bread and butter). Recommendation Systems: Suggests related items based on buying patterns (e.g., accessories with laptops). Fraud Detection: Detects unusual transaction patterns indicating fraud. Healthcare Analytics: Finds links between symptoms, diseases and treatments (e.g., symptom combinations predicting a disease). Interpretable and Easy to Explain: Rules offer clear “if-then” relationships understandable to non-technical stakeholders. Unsupervised Learning: Works well on unlabeled data to find hidden patterns without prior knowledge. Flexible Data Types: Effective on transactional, categorical and binary data. Helps in Feature Engineering: Can be used to create new features for downstream supervised models. Large Number of Rules: Can generate many rules, including trivial or redundant ones, making interpretation hard. Support Threshold Sensitivity: High support thresholds miss interesting but infrequent patterns; low thresholds generate too many rules. Not Suitable for Continuous Variables: Requires discretization or binning before use with numerical attributes. Computationally Expensive: Performance degrades on very large or dense datasets due to combinatorial explosion. Statistical Significance: High confidence doesn’t guarantee a meaningful rule; domain knowledge is essential to validate findings."
   },
   {
@@ -4548,7 +4548,7 @@
     "output": "Fuzzy clustering extends traditional methods by allowing each data point to belong to multiple clusters with varying degrees of membership. This approach captures ambiguity and soft boundaries in data and is particularly useful when the clusters overlap or boundaries are not clear-cut. Algorithm: Fuzzy C-Means: Similar to K-means but with fuzzy memberships updated iteratively. Pros: Models data ambiguity explicitly. Useful for complex or imprecise data. Cons: Choosing fuzziness parameter can be tricky. Computational overhead compared to hard clustering."
   },
   {
-    "input": "Use Cases",
+    "input": "Use Cases of Clustering in Machine Learning",
     "output": "Customer Segmentation: Grouping customers based on behavior or demographics for targeted marketing and personalized services. Anomaly Detection: Identifying outliers or fraudulent activities in finance, network security and sensor data. Image Segmentation: Dividing images into meaningful parts for object detection, medical diagnostics or computer vision tasks. Recommendation Systems: Clustering user preferences to recommend movies, products or content tailored to different groups. Market Basket Analysis: Discovering products frequently bought together to optimize store layouts and promotions."
   },
   {
@@ -10644,7 +10644,7 @@
     "output": "StyleGAN achieves state-of-the-art image quality on theCelebA-HQ datasetwhich is a high-resolution face dataset used for benchmarking. NVIDIA also introduced theFlickr-Faces-HQ (FFHQ) dataset which offers more diversity in age, ethnicity and backgrounds. It produces highly realistic images on FFHQ as well. Here we calculate FID score using 50, 000 randomly chosen images from the training set and take the lowest distance encountered over the course of training."
   },
   {
-    "input": "Use cases",
+    "input": "Use cases of StylGAN's",
     "output": "StyleGAN’s ability to generate highly realistic images with fine control has many practical applications: Face Generation and Enhancement: It is used to create realistic human faces for entertainment, gaming and virtual avatars. It can generate faces that don’t belong to any real person which are useful for video games, movies or virtual meetings. Fashion Design: Designers use it to blend different style features helps in exploring new clothing looks, colors and patterns. This speeds up creativity and helps to generate innovative design ideas. Data Augmentation in Machine Learning: In computer vision it generates synthetic images like faces or vehicles to augment datasets. This is valuable when collecting real data is expensive or limited. Animation and Video Games: It’s detailed facial feature generation supports character creation in games. It helps create varied and realistic faces for characters and NPCs helps in enhancing immersion."
   },
   {
@@ -18572,7 +18572,7 @@
     "output": "Copy the code into your project or share it via your preferred platform."
   },
   {
-    "input": "Use Cases",
+    "input": "Use Cases of Gemini AI",
     "output": "Gemini AI is versatile for various coding scenarios. Here are examples with prompts and outputs: "
   },
   {
@@ -18716,7 +18716,7 @@
     "output": "Let's see the differences between LlamaIndex and LangChain: "
   },
   {
-    "input": "Use Cases",
+    "input": "Use Cases of LLaMAIndex",
     "output": "Conversational Chatbots: Real-time interactive bots that leverage company knowledgebases and product documents. Knowledge Agents: Intelligent systems capable of following complex decision trees and adapting to evolving knowledge. Semantic Search Engines: Naturally phrased queries processed to find contextually relevant information in large datasets. Data Augmentation: Enriching public LLMs with private knowledge to tailor performance for specific domains or enterprises."
   },
   {
@@ -19680,7 +19680,7 @@
     "output": "Let's see the difference between Claude AI and ChatGPT, Claude AI can be leveraged in multiple scenarios across personal, educational and business contexts: "
   },
   {
-    "input": "Use Cases",
+    "input": "Use Cases of Calude AI",
     "output": "Claude AI can be leveraged in multiple scenarios across personal, educational and business contexts: "
   },
   {
@@ -21204,7 +21204,7 @@
     "output": "We plot three lines on the same graph, one for each scaling law: Linear scaling plot with alpha = 1. Sublinear scaling plot with alpha = 0.7. Superlinear scaling plot with alpha = 1.3. Output: Linear scaling (α = 1): Output grows in direct proportion to input. Doubling input doubles output. Sublinear scaling (α = 0.7): Output grows slower than input. Doubling input gives less than double output. Superlinear scaling (α = 1.3): Output grows faster than input. Doubling input gives more than double output. The higher the scaling exponent α, the steeper the curve and faster the growth."
   },
   {
-    "input": "Limitations of Sacling in AI",
+    "input": "Limitations of Scaling in AI",
     "output": "Diminishing returns: At some point, adding more resources gives tiny improvements. Breakdown at extremes: Very small or very large models may not follow the same law. Different α values: The scaling exponent can change depending on model architecture, data quality and training method."
   },
   {
@@ -23660,7 +23660,7 @@
     "output": "Some of the most widely used LLMs include: GPT-4 and GPT-4o (OpenAI): Advanced multimodal reasoning and dialogue capabilities. Gemini 1.5 (Google DeepMind): Long-context reasoning, capable of handling 1M+ tokens. Claude 3 (Anthropic): Safety-focused, strong at reasoning and summarization. LLaMA 3 (Meta): Open-weight model, popular in research and startups. Mistral 7B / Mixtral (Mistral AI): Efficient open-source alternatives for developers. BERT and RoBERTa (Google/Facebook): Strong embedding models for NLP tasks. mBERT and XLM-R: Early multilingual LLMs. BLOOM: Large open-source multilingual model, collaboratively developed."
   },
   {
-    "input": "Use Cases",
+    "input": "Use Cases of Large Language Models (LLMs)",
     "output": "Code Generation: LLMs can generate accurate code based on user instructions for specific tasks. Debugging and Documentation: They assist in identifying code errors, suggesting fixes and even automating project documentation. Question Answering: Users can ask both casual and complex questions, receiving detailed, context-aware responses. Language Translation and Correction: LLMs can translate text between over 50 languages and correct grammatical errors. Prompt-Based Versatility: By crafting creative prompts, users can unlock endless possibilities, as LLMs excel in one-shot and zero-shot learning scenarios."
   },
   {
