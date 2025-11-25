@@ -344,7 +344,7 @@
     "output": "ANNs work by learning patterns in data through a process called training. During training, the network adjusts itself to improve its accuracy by comparing its predictions with the actual results. Lets see how the learning process works: Input Layer: Data such as an image, text or number is fed into the network through the input layer. Hidden Layers: Each neuron in the hidden layers performs some calculation on the input, passing the result to the next layer. The data is transformed and abstracted at each layer. Output Layer: After passing through all the layers, the network gives its final prediction like classifying an image as a cat or a dog. The process ofbackpropagationis used to adjust the weights between neurons. When the network makes a mistake, the weights are updated to reduce the error and improve the next prediction."
   },
   {
-    "input": "Training and Testing:",
+    "input": "Training and Testing of Artificial Neural Networks",
     "output": "During training, the network is shown examples like images of cats and learns to recognize patterns in them. After training, the network is tested on new data to check its performance. The better the network is trained, the more accurately it will predict new data."
   },
   {
@@ -356,20 +356,20 @@
     "output": "Activation functions are important in neural networks because they introduce non-linearity and helps the network to learn complex patterns. Lets see some common activation functions used in ANNs: These functions help the network decide whether to activate a neuron helps it to recognize patterns and make predictions."
   },
   {
-    "input": "1. Feedforward Neural Network (FNN)",
+    "input": "Feedforward Neural Network (FNN)",
     "output": "Feedforward Neural Networksare one of the simplest types of ANNs. In this network, data flows in one direction from the input layer to the output layer, passing through one or more hidden layers. There are no loops or cycles means the data doesn’t return to any earlier layers. This type of network does not use backpropagation and is mainly used for basic classification and regression tasks."
   },
   {
-    "input": "2. Convolutional Neural Network (CNN)",
+    "input": "Convolutional Neural Network (CNN)",
     "output": "Convolutional Neural Networks (CNNs) are designed to process data that has a grid-like structure such as images. It include convolutional layers that apply filters to extract important features from the data such as edges or textures. This makes CNNs effective in image and speech recognition as they can identify patterns and structures in complex data."
   },
   {
-    "input": "3. Radial Basis Function Network (RBFN)",
+    "input": "Radial Basis Function Network (RBFN)",
     "output": "Radial Basis Function Networksare designed to work with data that can be modeled in a radial or circular way. These networks consist of two layers: one that maps input to radial basis functions and another that finds the output. They are used for classification and regression tasks especially when the data represents an underlying pattern or trend."
   },
   {
-    "input": "4. Recurrent Neural Network (RNN)",
-    "output": "Recurrent Neural Networksare designed to handle sequential data such as time-series or text. Unlike other networks, RNNs have feedback loops that allow information to be passed back into previous layers, giving the network memory. This feature helps RNNs to make predictions based on the context provided by previous data helps in making them ideal for tasks like speech recognition, language modeling and forecasting."
+    "input": "Recurrent Neural Network (RNN)",
+    "output": "Recurrent Neural Networks are designed to handle sequential data such as time-series or text. Unlike other networks, RNNs have feedback loops that allow information to be passed back into previous layers, giving the network memory. This feature helps RNNs to make predictions based on the context provided by previous data helps in making them ideal for tasks like speech recognition, language modeling and forecasting."
   },
   {
     "input": "Optimization Algorithms in ANN Training",
@@ -380,11 +380,11 @@
     "output": "As technology keeps improving, Artificial Neural Networks will continue to change the way we solve problems and make our lives easier."
   },
   {
-    "input": "1. Bellman Equation for State Value Function",
+    "input": "Bellman Equation for State Value Function",
     "output": "State value function denoted asV(s) under a given policy represents the expected cumulative reward when starting from statesand following that policy: V^{ pi}(s) =  mathbb{E}[R(s, a) +  gamma V^{ pi }(s')] Expanding this equation with transition probabilities we get: V^{ pi}(s) =  sum_{a  in A}  pi(a | s)  sum_{s'  in S} P(s' | s, a)  left[ R(s, a) +  gamma V^{ pi}(s')  right] where: V^{ pi}(s): Value function of statesunder policy. P(s' | s, a): Transition probability from statesto states'when taking actiona. R(s, a): Reward obtained after taking actionain states. γ: Discount factor controlling the importance of future rewards.  pi(a | s): Probability of taking actionain statesunder policy ."
   },
   {
-    "input": "2. Bellman Equation for Action Value Function (Q-function)",
+    "input": "Bellman Equation for Action Value Function (Q-function)",
     "output": "Q-function(Q(s, a)) represents the expected return for taking actionain state s and following the policy afterward: Q^{ pi}(s, a) =  mathbb{E}  left[ R(s, a) +  gamma V^{ pi}(s')  right] Expanding it using transition probabilities: Q^{ pi}(s, a) =  sum_{s'  in S} P(s' | s, a)  left[ R(s, a) +  gamma  sum_{a'}  pi(a' | s') Q^{ pi}(s', a')  right] This equation helps compute the expected future rewards based on both current actionaand subsequent policy actions."
   },
   {
@@ -396,7 +396,7 @@
     "output": "Markov Decision Processcan be solved using Dynamic Programming (DP) methods that rely on Bellman Equations: Value Iteration: Uses Bellman Optimality Equation to iteratively update value functions until convergence. Policy Iteration: Alternates between policy evaluation (solving Bellman Expectation Equation) and policy improvement (updating policy based on new value function). Q-Learning: Uses the Bellman Optimality Equation for Q-values to learn optimal policies."
   },
   {
-    "input": "Example: Navigating a Maze",
+    "input": "Example of Navigating a Maze using Bellman Equation",
     "output": "Consider a maze as our environment, where an agent's goal is to reach the trophy state (rewardR = 1) while avoiding the fire state (rewardR = -1). The agent receives positive reinforcement for reaching the goal and negative reinforcement for failing. The agent must navigate the maze efficiently while considering possible future rewards. What Happens Without the Bellman Equation? Initially we allow the agent to explore the environment and find a path to the goal. Once it reaches the trophy state it backtracks to its starting position and assigns a value of V = 1 to all states that lead to the goal. However if we change the agent’s starting position it will struggle to find a new path since all previously learned state values remain the same. This is where the Bellman Equation helps by dynamically updating state values based on future rewards. Applying the Concept Consider a state adjacent to the fire state, where V = 0.9. The agent can move UP, DOWN or RIGHT but cannot move LEFT due to a wall. Among the available actions the agent selects the action leading to the maximum value, ensuring the highest possible reward over time. By continuously updating state values the agent systematically calculates the best path while avoiding the fire state. The goal (trophy) and failure (fire) states do not require value updates as they represent terminal states (V = 0). Bellman Equation allows agents to think ahead, balance immediate and future rewards and choose actions wisely."
   },
   {
@@ -412,19 +412,19 @@
     "output": "Here we’ll use the Python library sklearn to compute DBSCAN and matplotlib.pyplot library for visualizing clusters."
   },
   {
-    "input": "Step 1: Importing Libraries",
+    "input": "Implementation of DBSCAN Algorithm In Python Step 1: Importing Libraries",
     "output": "We import all the necessary library like numpy, matplotlib and scikit-learn."
   },
   {
-    "input": "Step 2: Preparing Dataset",
+    "input": "Implementation of DBSCAN Algorithm In Python Step 2: Preparing Dataset",
     "output": "We will create a dataset of 4 clusters usingmake_blob. The dataset have 300 points that are grouped into 4 visible clusters."
   },
   {
-    "input": "Step 3: Applying DBSCAN Clustering",
+    "input": "Implementation of DBSCAN Algorithm In Python Step 3: Applying DBSCAN Clustering",
     "output": "Now we apply DBSCAN clustering on our data, count it and visualize it using the matplotlib library. eps=0.3: The radius to look for neighboring points. min_samples: Minimum number of points required to form a dense region a cluster. labels: Cluster numbers for each point.-1means the point is considered noise. Output: As shown in above output image cluster are shown in different colours like yellow, blue, green and red."
   },
   {
-    "input": "Step 4: Evaluation Metrics For DBSCAN Algorithm In Machine Learning",
+    "input": "Implementation of DBSCAN Algorithm In Python Step 4: Evaluation Metrics For DBSCAN Algorithm In Machine Learning",
     "output": "We will use theSilhouette scoreandAdjusted rand scorefor evaluating clustering algorithms. Silhouette's score is in the range of -1 to 1. A score near 1 denotes the best meaning that the data point i is very compact within the cluster to which it belongs and far away from the other clusters. The worst value is -1. Values near 0 denote overlapping clusters. Absolute Rand Score is in the range of 0 to 1. More than 0.9 denotes excellent cluster recovery and above 0.8 is a good recovery. Less than 0.5 is considered to be poor recovery. Output: Black points represent outliers. By changing the eps and the MinPts we can change the cluster configuration."
   },
   {
@@ -476,7 +476,7 @@
     "output": "Modus Tollens is another deductive reasoning pattern that denies the truth of the consequent if the premises are true. It follows the format of  if P, then Q; not Q; therefore, not P.  In Modus Tollens, if the first premise (conditional statement) is true and the consequent is not true, then the antecedent must also be false. For example: Premise 1: If it is a weekday, then John goes to work. Premise 2: John is not going to work. Conclusion: Therefore, it is not a weekday."
   },
   {
-    "input": "How to Solve Deductive Reasoning ?",
+    "input": "How to Solve Deductive Reasoning?",
     "output": "To solve deductive reasoning problems, we follow these simple steps: Step 1: Carefully read and understand the given premises or statements. Step 2 : Look for logical patterns or relationships between the premises and the conclusion. Step 3 : Use deductive reasoning rules like syllogism, modus ponens, or modus tollens to derive conclusions. Step 4: Ensure that the conclusions logically follow from the given premises. Step 5: Explore different possibilities and scenarios to verify the validity of the conclusions."
   },
   {
@@ -501,18 +501,18 @@
   },
   {
     "input": "Working of LSTM",
-    "output": "LSTM architecture has a chain structure that contains four neural networks and different memory blocks called cells. Information is retained by the cells and the memory manipulations are done by thegates.There are three gates -"
+    "output": "LSTM architecture has a chain structure that contains four neural networks and different memory blocks called cells. Information is retained by the cells and the memory manipulations are done by the gates. There are three gates - 1: Forget Gate, 2: Input Gate, 3: Output Gate"
   },
   {
-    "input": "1. Forget Gate",
+    "input": "Forget Gate in LSTM",
     "output": "The information that is no longer useful in the cell state is removed with the forget gate. Two inputsx_t(input at the particular time) andh_{t-1}(previous cell output) are fed to the gate and multiplied with weight matrices followed by the addition of bias. The resultant is passed through sigmoid activation function which gives output in range of [0,1]. If for a particular cell state the output is 0 or near to 0, the piece of information is forgotten and for output of 1 or near to 1, the information is retained for future use. The equation for the forget gate is: f_t =  sigma  left( W_f  cdot [h_{t-1}, x_t] + b_f  right) Where: W_frepresents the weight matrix associated with the forget gate. [h_t-1, x_t]denotes the concatenation of the current input and the previous hidden state. b_fis the bias with the forget gate.  sigmais the sigmoid activation function."
   },
   {
-    "input": "2. Input gate",
+    "input": "Input gate in LSTM",
     "output": "The addition of useful information to the cell state is done by the input gate. First the information is regulated using the sigmoid function and filter the values to be remembered similar to the forget gate using inputsh_{t-1}andx_t. Then, a vector is created usingtanhfunction that gives an output from -1 to +1 which contains all the possible values fromh_{t-1}andx_t. At last the values of the vector and the regulated values are multiplied to obtain the useful information. The equation for the input gate is: i_t =  sigma  left( W_i  cdot [h_{t-1}, x_t] + b_i  right)  hat{C}_t =  tanh  left( W_c  cdot [h_{t-1}, x_t] + b_c  right) We multiply the previous state byf_teffectively filtering out the information we had decided to ignore earlier. Then we addi_t  odot C_twhich represents the new candidate values scaled by how much we decided to update each state value. C_t = f_t  odot C_{t-1} + i_t  odot  hat{C}_t where  odotdenotes element-wise multiplication tanh is activation function"
   },
   {
-    "input": "3. Output gate",
+    "input": "Output gate in LSTM",
     "output": "The output gate is responsible for deciding what part of the current cell state should be sent as the hidden state (output) for this time step.First, the gate uses a sigmoid function to determine which information from the current cell state will be output. This is done using the previous hidden stateh_{t - 1}​ and the current inputx_t​: o_t =  sigma  left( W_o  cdot [h_{t-1}, x_t] + b_o  right) Next, the current cell stateC_t​ is passed through a tanh activation to scale its values between-1and+1. Finally, this transformed cell state is multiplied element-wise witho_t​ to produce the hidden stateh_t: h_t = o_t  odot  tanh(C_t) Here: o_t​ is the output gate activation. C_t​ is the current cell state.  odotrepresents element-wise multiplication.  sigmais the sigmoid activation function. This hidden state htht​ is then passed to the next time step and can also be used for generating the output of the network."
   },
   {
@@ -520,23 +520,31 @@
     "output": "Some of the famous applications of LSTM includes: Language Modeling: Used in tasks like language modeling, machine translation and text summarization. These networks learn the dependencies between words in a sentence to generate coherent and grammatically correct sentences. Speech Recognition: Used in transcribing speech to text and recognizing spoken commands. By learning speech patterns they can match spoken words to corresponding text. Time Series Forecasting: Used for predicting stock prices, weather and energy consumption. They learn patterns in time series data to predict future events. Anomaly Detection: Used for detecting fraud or network intrusions. These networks can identify patterns in data that deviate drastically and flag them as potential anomalies. Recommender Systems: In recommendation tasks like suggesting movies, music and books. They learn user behavior patterns to provide personalized suggestions. Video Analysis: Applied in tasks such as object detection, activity recognition and action classification. When combined withConvolutional Neural Networks (CNNs) they help analyze video data and extract useful information."
   },
   {
-    "input": "Architecture of Deep Q-Networks",
-    "output": "A DQN consists of the following components: "
+    "input": "Deep Q-Learning in Reinforcement Learning",
+    "output": "Deep Q-Learning is a method that uses deep learning to help machines make decisions in complicated situations. It’s especially useful in environments where the number of possible situations called states is very large like in video games or robotics. Before understanding Deep Q-Learning it’s important to understand the main concept of Q-Learning. It is a model-free method that learns an optimal policy by estimating the Q-value function which tells how good it is to take a certain action in a certain situation. The goal is to find a plan that gives the highest total reward over time. Q-Learning works well for small problems but struggles with complex ones like images or many possible situations. Deep Q-Learning solves this by using a neural network to estimate values instead of a big table."
   },
   {
-    "input": "1. Neural Network",
+    "input": "Key Challenges Addressed by Deep Q-Learning",
+    "output": "High-Dimensional State Spaces: Traditional Q-Learning uses a table to store values but this becomes impossible when there are too many situations. Neural networks can understand and work with many different situations at once so they are better for complex problems. Continuous Input Data: Real-world problems often have continuous data like video images. Neural networks are good at handling this kind of information. Scalability: Deep learning helps Q-Learning grow and handle bigger, harder tasks that regular Q-Learning couldn’t solve before."
+  },
+  {
+    "input": "Architecture of Deep Q-Networks",
+    "output": "A DQN consists of the following components: 1: Neural Network, 2: Experience Replay, 3: Target Network, 4: Loss Fucntion"
+  },
+  {
+    "input": "Neural Network as a component in Deep Q-Networks",
     "output": "The network approximates the Q-value functionQ(s, a;θ) where thetarepresents the trainable parameters. For example in Atari games the input might be raw pixels from the game screen and the output is a vector of Q-values corresponding to each possible action."
   },
   {
-    "input": "2. Experience Replay",
+    "input": "Experience Replay as a component in Deep Q-Networks",
     "output": "To stabilize training, DQNs store past experiences(s, a, r, s′) in a replay buffer. During training, mini-batches of experiences are sampled randomly from the buffer, breaking the correlation between consecutive experiences and improving generalization."
   },
   {
-    "input": "3. Target Network",
+    "input": "Target Network as a component in Deep Q-Networks",
     "output": "A separate target network with parameters theta^{-}is used to compute the target Q-values during updates. The target network is periodically updated with the weights of the main network to ensure stability."
   },
   {
-    "input": "4. Loss Function:",
+    "input": "Loss Function as a component in Deep Q-Networks",
     "output": "The loss function measures the difference between the predicted Q-values and the target Q-values: L( theta)= E[(r+ gamma  max_{a'}Q(s', a';  theta^{-}) - Q(s, a;  theta))^2]"
   },
   {
@@ -573,18 +581,18 @@
   },
   {
     "input": "What Are Frames in AI?",
-    "output": "Framesare data structures used inAIto represent stereotypical situations or scenarios. They encapsulate information about objects, events, and their interrelationships within a particular context. Each frame consists of a set of attributes and values, forming a template for understanding specific situations."
+    "output": "Framesare data structures used in AI to represent stereotypical situations or scenarios. They encapsulate information about objects, events, and their interrelationships within a particular context. Each frame consists of a set of attributes and values, forming a template for understanding specific situations."
   },
   {
-    "input": "Concept of Frames",
-    "output": "The frame concept was introduced byMinskyin 1974 and is foundational in the field of knowledge representation. Frames are designed to provide a structured way to capture the essential aspects of a situation, facilitating easier retrieval and manipulation of information. They are akin to schemas or blueprints that organize knowledge into manageable chunks."
+    "input": "Concept of Frames in AI",
+    "output": "The frame concept was introduced by Minskyin 1974 and is foundational in the field of knowledge representation. Frames are designed to provide a structured way to capture the essential aspects of a situation, facilitating easier retrieval and manipulation of information. They are akin to schemas or blueprints that organize knowledge into manageable chunks."
   },
   {
     "input": "Key Components of Frames",
-    "output": "Frames are essential for structuringknowledge in AI, and understanding their key components helps in effectively utilizing them. Here are the main components of frames, along with examples to illustrate their use: Slots are attributes or properties of a frame. They represent the different aspects or characteristics of the frame's concept. Example: For a  Person  frame, slots might include: Name: The individual's name Age: The individual's age Occupation: The individual's profession Address: The individual's home address Facets provide additional details or constraints for slots, defining acceptable values or specifying how slots should be used. Example: For the  Age  slot in the  Person  frame: Type: Integer Range: 0 to 120 Default Value: 30 Default values are predefined values assigned to slots if no specific value is provided. They offer a baseline that can be overridden with more specific information. Example: In a  Car  frame: Make: Default value could be  Unknown  Model: Default value could be  Unknown  Year: Default value could be the current year Procedures are methods or functions associated with frames that define how the information within the frame should be processed or utilized. Example: In an  Account  frame: Procedure: CalculateInterest- A method to compute interest based on the account balance."
+    "output": "Frames are essential for structuring knowledge in AI, and understanding their key components helps in effectively utilizing them. Here are the main components of frames, along with examples to illustrate their use: Slots are attributes or properties of a frame. They represent the different aspects or characteristics of the frame's concept. Example: For a  Person  frame, slots might include: Name: The individual's name Age: The individual's age Occupation: The individual's profession Address: The individual's home address Facets provide additional details or constraints for slots, defining acceptable values or specifying how slots should be used. Example: For the  Age  slot in the  Person  frame: Type: Integer Range: 0 to 120 Default Value: 30 Default values are predefined values assigned to slots if no specific value is provided. They offer a baseline that can be overridden with more specific information. Example: In a  Car  frame: Make: Default value could be  Unknown  Model: Default value could be  Unknown  Year: Default value could be the current year Procedures are methods or functions associated with frames that define how the information within the frame should be processed or utilized. Example: In an  Account  frame: Procedure: CalculateInterest- A method to compute interest based on the account balance."
   },
   {
-    "input": "Example of a Complete Frame",
+    "input": "Example of a Complete Frame in AI",
     "output": "Let’s construct a complete frame for a  Book  in a library management system: Frame Name: BookSlots: Title:  To Kill a Mockingbird Author:  Harper Lee Publication Year: 1960ISBN:  978-0-06-112008-4 Genre:  Fiction Facets: Publication Year: Type: IntegerRange: 1450 to current year (reasonable range for publication years)ISBN: Format: 13-digit numberDefault Values: Genre:  Unknown  (if not specified)Procedures: CheckAvailability: A method to check if the book is currently available in the library.UpdateRecord: A method to update the book’s record when it is borrowed or returned. Slots: Title:  To Kill a Mockingbird Author:  Harper Lee Publication Year: 1960ISBN:  978-0-06-112008-4 Genre:  Fiction  Title:  To Kill a Mockingbird  Author:  Harper Lee  Publication Year: 1960 ISBN:  978-0-06-112008-4  Genre:  Fiction  Facets: Publication Year: Type: IntegerRange: 1450 to current year (reasonable range for publication years)ISBN: Format: 13-digit number Publication Year: Type: IntegerRange: 1450 to current year (reasonable range for publication years) Type: Integer Range: 1450 to current year (reasonable range for publication years) ISBN: Format: 13-digit number Format: 13-digit number Default Values: Genre:  Unknown  (if not specified) Genre:  Unknown  (if not specified) Procedures: CheckAvailability: A method to check if the book is currently available in the library.UpdateRecord: A method to update the book’s record when it is borrowed or returned. CheckAvailability: A method to check if the book is currently available in the library. UpdateRecord: A method to update the book’s record when it is borrowed or returned. This frame encapsulates all necessary information about a book and provides mechanisms to interact with that information."
   },
   {
@@ -648,28 +656,32 @@
     "output": "While fuzzy logic has many strengths, it also comes with some challenges: Ambiguity: Different researchers may propose different solutions to the same problem, making the approach less systematic. Difficulty in proving correctness: Since fuzzy logic deals with uncertainty, proving that a system works as expected can be tricky. Accuracy compromises: Because fuzzy logic deals with both precise and imprecise data, the system might sacrifice some level of accuracy."
   },
   {
+    "input": "Gated Recurrent Unit Networks",
+    "output": "In machine learning Recurrent Neural Networks (RNNs) are essential for tasks involving sequential data such as text, speech and time-series analysis. While traditional RNNs struggle with capturing long-term dependencies due to the vanishing gradient problem architectures like Long Short-Term Memory (LSTM) networks were developed to overcome this limitation. However LSTMs are very complex structure with higher computational cost. To overcome this Gated Recurrent Unit (GRU) where introduced which uses LSTM architecture by merging its gating mechanisms offering a more efficient solution for many sequential tasks without sacrificing performance."
+  },
+  {
     "input": "What are Gated Recurrent Units (GRU) ?",
     "output": "Gated Recurrent Units (GRUs) are a type of RNN introduced by Cho et al. in 2014. The core idea behind GRUs is to usegating mechanismsto selectively update the hidden state at each time step allowing them to remember important information while discarding irrelevant details. GRUs aim to simplify the LSTM architecture by merging some of its components and focusing on just two main gates: theupdate gateand thereset gate. The GRU consists oftwo main gates: These gates allow GRU to control the flow of information in a more efficient manner compared to traditional RNNs which solely rely on hidden state."
   },
   {
     "input": "Equations for GRU Operations",
-    "output": "The internal workings of a GRU can be described using following equations: "
+    "output": "The internal workings of a GRU can be described using following equations: Reset Gate, Update Gate, Candidate Hidden State, Hidden State"
   },
   {
-    "input": "1. Reset gate:",
-    "output": "r_t =  sigma  left( W_r  cdot [h_{t-1}, x_t]  right) The reset gate determines how much of the previous hidden stateh_{t-1}should be forgotten."
+    "input": "Reset gate Equation for GRU Operations",
+    "output": "r_t = σ (W_r . [h_t-1, x_t]) The reset gate determines how much of the previous hidden state h_t-1 should be forgotten."
   },
   {
-    "input": "2. Update gate:",
-    "output": "z_t =  sigma(W_z  cdot [h_{t-1}, x_t]) The update gate controls how much of the new informationx_t​ should be used to update the hidden state."
+    "input": "Update gate Equation for GRU Operations",
+    "output": "z_t = σ (W_z . [h_t-1, x_t]) The update gate controls how much of the new information x_t​ should be used to update the hidden state."
   },
   {
-    "input": "3. Candidate hidden state:",
-    "output": "h_t' =  tanh(W_h  cdot [r_t  cdot h_{t-1}, x_t]) This is the potential new hidden state calculated based on the current input and the previous hidden state."
+    "input": "Candidate hidden state Equation for GRU Operations",
+    "output": "h't =  tanh(W_h . [r_t . h_t-1, x_t]) This is the potential new hidden state calculated based on the current input and the previous hidden state."
   },
   {
-    "input": "4. Hidden state:",
-    "output": "h_t = (1 - z_t)  cdot h_{t-1} + z_t  cdot h_t' The final hidden state is a weighted average of the previous hidden stateh_{t-1}and the candidate hidden stateh_t'based on the update gatez_t."
+    "input": "Hidden state Equation for GRU Operations",
+    "output": "h_t = (1 - z_t) . h_t-1 + z_t . h't The final hidden state is a weighted average of the previous hidden state h_t-1 and the candidate hidden state h't based on the update gate z_t."
   },
   {
     "input": "How GRUs Solve the Vanishing Gradient Problem",
@@ -680,40 +692,44 @@
     "output": "GRUs are more computationally efficient because they combine the forget and input gates into a single update gate. GRUs do not maintain an internal cell state as LSTMs do, instead they store information directly in the hidden state making them simpler and faster."
   },
   {
-    "input": "Implementation in Python",
+    "input": "Implementation in Python of GRU",
     "output": "Now let's implement simple GRU model in Python using Keras. We'll start by preparing the necessary libraries and dataset."
   },
   {
-    "input": "1. Importing Libraries",
+    "input": "Implementation in Python of GRU Step 1: Importing Libraries",
     "output": "We will import the following libraries for implementing our GRU model. numpy: For handling numerical data and array manipulations. pandas: For data manipulation and reading datasets (CSV files). MinMaxScaler: For normalizing the dataset. TensorFlow: For building and training the GRU model. Adam: An optimization algorithm used during training."
   },
   {
-    "input": "2. Loading the Dataset",
+    "input": "Implementation in Python of GRU Step 2: Loading the Dataset",
     "output": "The dataset we're using is a time-series dataset containing daily temperature data i.e forecasting dataset. It spans 8,000 days starting from January 1, 2010. You can download dataset fromhere. pd.read_csv(): Reads a CSV file into a pandas DataFrame. Here, we are assuming that the dataset has aDatecolumn which is set as the index of the DataFrame. date_parser=True: Ensures that pandas parses the 'Date' column as datetime."
   },
   {
-    "input": "3. Preprocessing the Data",
+    "input": "Implementation in Python of GRU Step 3: Preprocessing the Data",
     "output": "We will scale our data to ensure all features have equal weight and avoid any bias. In this example, we will useMinMaxScaler, which scales the data to a range between 0 and 1. Proper scaling is important because neural networks tend to perform better when input features are normalized."
   },
   {
-    "input": "4. Preparing Data for GRU",
+    "input": "Implementation in Python of GRU Step 4: Preparing Data for GRU",
     "output": "We will define a function to prepare our data for training our model. create_dataset(): Prepares the dataset for time-series forecasting. It creates sliding windows of time_step length to predict the next time step. X.reshape(): Reshapes the input data to fit the expected shape for the GRU which is 3D: [samples, time steps, features]."
   },
   {
-    "input": "5. Building the GRU Model",
+    "input": "Implementation in Python of GRU Step 5: Building the GRU Model",
     "output": "We will define our GRU model with the following components: GRU(units=50): Adds a GRU layer with 50 units (neurons). return_sequences=True: Ensures that the GRU layer returns the entire sequence (required for stacking multiple GRU layers). Dense(units=1): The output layer which predicts a single value for the next time step. Adam(): An adaptive optimizer commonly used in deep learning."
   },
   {
-    "input": "6. Training the Model",
+    "input": "Implementation in Python of GRU Step 6: Training the Model",
     "output": "model.fit() trains the model on the prepared dataset. Theepochs=10specifies the number of iterations over the entire dataset, andbatch_size=32defines the number of samples per batch."
   },
   {
-    "input": "7. Making Predictions",
+    "input": "Implementation in Python of GRU Step 7: Making Predictions",
     "output": "We will be now making predictions using our trained GRU model. Input Sequence: The code takes the last 100 temperature values from the dataset(scaled_data[-time_step: ]) as an input sequence. Reshaping the Input Sequence: The input sequence is reshaped into theshape (1, time_step, 1) because the GRU model expects a 3D input: [samples, time_steps, features]. Heresamples=1because we are making one prediction, time_steps=100 (the length of the input sequence) and features=1 because we are predicting only the temperature value. model.predict(): Uses the trained model to predict future values based on the input data.  "
   },
   {
-    "input": "8. Inverse Transforming the Predictions",
+    "input": "Implementation in Python of GRU Step 8: Inverse Transforming the Predictions",
     "output": "Inverse Transforming the Predictions refers to the process of converting the scaled (normalized) predictions back to their original scale. scaler.inverse_transform(): Converts the normalized predictions back to their original scale. Output: The output25.03^ omicron  text{C}is the GRU model's prediction for the next day's temperature based on the past 100 days of data. The model uses historical patterns to forecast future values and converts the prediction back to the original temperature scale."
+  },
+  {
+    "input": "Hierarchical Clustering in Machine Learning",
+    "output": "Hierarchical Clustering is an unsupervised learning method used to group similar data points into clusters based on their distance or similarity. Instead of choosing the number of clusters in advance, it builds a tree-like structure called a dendrogram that shows how clusters merge or split at different levels. It helps identify natural groupings in data and is commonly used in pattern recognition, customer segmentation, gene analysis and image grouping. Imagine we have four fruits with different weights: an apple (100g), a banana (120g), a cherry (50g) and a grape (30g). Hierarchical clustering starts by treating each fruit as its own group. Start with each fruit as its own cluster. Merge the closest items: grape (30g) and cherry (50g) are grouped first. Next, apple (100g) and banana (120g) are grouped. Finally, these two clusters merge into one. Finally all the fruits are merged into one large group, showing how hierarchical clustering progressively combines the most similar data points."
   },
   {
     "input": "Dendrogram",
@@ -721,27 +737,39 @@
   },
   {
     "input": "Types of Hierarchical Clustering",
-    "output": "Now we understand the basics of hierarchical clustering. There are two main types of hierarchical clustering."
+    "output": "Now we understand the basics of hierarchical clustering. There are two main types of hierarchical clustering. 1: Hierarchical Agglomerative Clustering, 2: Hierarchical Divisive clustering"
   },
   {
-    "input": "1. Hierarchical Agglomerative Clustering",
+    "input": "Hierarchical Agglomerative Clustering",
     "output": "It is also known as the bottom-up approach or hierarchicalagglomerative clustering(HAC). Bottom-up algorithms treat each data as a singleton cluster at the outset and then successively agglomerate pairs of clusters until all clusters have been merged into a single cluster that contains all data."
   },
   {
-    "input": "Implementation",
+    "input": "Workflow for Hierarchical Agglomerative clustering",
+    "output": "Start with individual points: Each data point is its own cluster. For example if we have 5 data points we start with 5 clusters each containing just one data point. Calculate distances between clusters: Calculate the distance between every pair of clusters. Initially since each cluster has one point this is the distance between the two data points. Merge the closest clusters: Identify the two clusters with the smallest distance and merge them into a single cluster. Update distance matrix: After merging we now have one less cluster. Recalculate the distances between the new cluster and the remaining clusters. Repeat steps 3 and 4: Keep merging the closest clusters and updating the distance matrix until we have only one cluster left. Create a dendrogram: As the process continues we can visualize the merging of clusters using a tree-like diagram called a dendrogram. It shows the hierarchy of how clusters are merged."
+  },
+  {
+    "input": "Implementation of Hierarchical Agglomerative Clustering",
     "output": "Let's see the implementation of Agglomerative Clustering, Start with each data point as its own cluster. Compute distances between all clusters. Merge the two closest clusters based on a linkage method. Update the distances to reflect the new cluster. Repeat merging until the desired number of clusters or one cluster remains. The dendrogram visualizes these merges as a tree, showing cluster relationships and distances. Output : "
   },
   {
-    "input": "2. Hierarchical Divisive clustering",
+    "input": "Hierarchical Divisive clustering",
     "output": "Divisive clusteringis also known as a top-down approach. Top-down clustering requires a method for splitting a cluster that contains the whole data and proceeds by splitting clusters recursively until individual data have been split into singleton clusters."
   },
   {
-    "input": "Implementation",
+    "input": "Workflow for Hierarchical Divisive clustering",
+    "output": "Start with all data points in one cluster: Treat the entire dataset as a single large cluster. Split the cluster: Divide the cluster into two smaller clusters. The division is typically done by finding the two most dissimilar points in the cluster and using them to separate the data into two parts. Repeat the process: For each of the new clusters, repeat the splitting process: Choose the cluster with the most dissimilar points and split it again into two smaller clusters. Stop when each data point is in its own cluster: Continue this process until every data point is its own cluster or the stopping condition (such as a predefined number of clusters) is met."
+  },
+  {
+    "input": "Implementation of Hierarchical Divisive clustering",
     "output": "Let's see the implementation of Divisive Clustering, Starts with all data points as one big cluster. Finds the largest cluster and splits it into two using KMeans. Repeats splitting the largest cluster until reaching the desired number of clusters. Assigns cluster labels to each data point based on the splits. Returns history of clusters at each step and final labels. Visualizes data points colored by their final cluster."
   },
   {
-    "input": "Computing Distance Matrix",
+    "input": "Computing Distance Matrix in Hierarchical Clustering",
     "output": "While merging two clusters we check the distance between two every pair of clusters and merge the pair with the least distance/most similarity. But the question is how is that distance determined. There are different ways of defining Inter Cluster distance/similarity. Some of them are: Min Distance: Find the minimum distance between any two points of the cluster. Max Distance: Find the maximum distance between any two points of the cluster. Group Average: Find the average distance between every two points of the clusters. Ward's Method: The similarity of two clusters is based on the increase in squared error when two clusters are merged. The image compares cluster distance methods: Min uses the shortest distance between clusters Max uses the longest Group Average computes the mean of all pairwise distances Ward’s method minimizes the increase in within-cluster variance during merging"
+  },
+  {
+    "input": "Inductive Reasoning in AI",
+    "output": "Inductive reasoning involves making generalizations from specific observations or past experiences. Instead of using a general rule, we predict broader patterns based on specific examples. For example, if a technology company's stock price rises after a new product launch, we might predict it will happen again next time. In AI, this process helps systems learn from data, recognize patterns and make better predictions, enhancing decision-making across various fields."
   },
   {
     "input": "Key Principles of Inductive Reasoning",
@@ -761,7 +789,11 @@
   },
   {
     "input": "Applications of Inductive Reasoning in AI",
-    "output": "Inductive reasoning plays an important role in many AI applications, helping systems learn and adapt to new data: "
+    "output": "Inductive reasoning plays an important role in many AI applications, helping systems learn and adapt to new data: Spam Filtering: AI identifies patterns in labeled emails to predict whether new emails are spam or not, even if they’ve never been seen before. It constantly improves by recognizing new types of spam messages. Image Classification: AI systems analyze pixel patterns to classify images such as distinguishing between cats and dogs. After training on thousands of labeled images, the system can recognize new images with similar patterns. Natural Language Processing (NLP): It helps to identify the sentiment in text (positive, negative or neutral). It can handle new, unseen text by learning patterns from existing data. Recommendation Systems: By recognizing patterns in users' past behavior such as movie or product preferences, it provides personalized recommendations, offering content that aligns with individual tastes. Fraud Detection: It analyzes transaction data for unusual patterns that suggest fraudulent activity. This helps detect and prevent fraud in real-time even when new types of fraud emerge."
+  },
+  {
+    "input": "Advantages of Inductive Reasoning in AI",
+    "output": "Adaptability: AI systems can handle new, unseen data by generalizing from prior examples. This makes them flexible and able to adapt to changes without requiring explicit programming for every new situation. Improved Accuracy Over Time: As more data is collected, AI systems can refine their models, becoming more accurate in their predictions or decisions through iterative learning. Handling Complex Data: Inductive reasoning allows AI to process and learn from complex, unstructured data such as images, text, and speech, making it suitable for a wide range of applications. Efficiency in Decision-Making: By recognizing patterns in large datasets, AI can make quick decisions or predictions, improving efficiency in tasks like fraud detection, recommendations, and diagnostics."
   },
   {
     "input": "Challenges of Inductive Reasoning in AI",
@@ -13393,7 +13425,11 @@
   },
   {
     "input": "Advantages of Lemmatization with NLTK",
-    "output": "Lets see some key advantages: "
+    "output": "Lets see some key advantages: Efficient Data Processing: It reduces the number of unique words by grouping similar variations together. This reduction helps to process large datasets more efficiently, conserving both memory and computational resources. Enhanced Search and Retrieval: In tasks like search and information retrieval, it improves results by making it easier to match different forms of a word like 'run', 'running', 'ran' to the same base form increasing the relevance of search queries. Consistency in NLP Models: Standardizing words to their base form improves the consistency of input data which enhances the performance of NLP models. With consistent data, models are more likely to make accurate predictions and understand the underlying context of the text."
+  },
+  {
+    "input": "Disadvantages of Lemmatization with NLTK",
+    "output": "Time-consuming: It can be slower compared to other techniques such as stemming because it involves parsing the text and performing dictionary lookups or morphological analysis. Not Ideal for Real-Time Applications: Due to its time-consuming nature, it may not be well-suited for real-time applications where fast processing is important.Risk of Ambiguity: It may sometimes produce ambiguous results, when a word has multiple meanings based on its context. For example, the word 'lead' can refer to both the noun (a type of metal) and a verb (to guide). Without context, the lemmatizer might not always resolve these ambiguities correctly."
   },
   {
     "input": "Understanding NLTK's WhitespaceTokenizer",
