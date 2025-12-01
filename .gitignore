@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.idea/misc.xml
+.idea/AI_ChatBot.iml
+__pycache__/
