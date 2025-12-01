@@ -85,7 +85,7 @@ function safeCreateIcons() {
             const welcomeDescription = document.getElementById('welcome-description');
             const socialContainer = document.getElementById('social-container');
 
-            typeWriter(typingText, "CS Assistant", 0, () => {
+            typeWriter(typingText, "AI Assistant", 0, () => {
                 setTimeout(() => {
                     welcomeDescription.style.opacity = '1';
                     setTimeout(() => {
