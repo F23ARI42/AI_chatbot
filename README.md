@@ -19,3 +19,7 @@ python app.py
 3. Make your change, and make sure the actions still work
 4. Push to your fork and submit a pull request
 5. Wait for your pull request to be reviewed and merged.
+
+
+                   Model Download Link
+https://drive.google.com/drive/folders/1w_sh0yvdoPYVnrE6kocxsDt7ADt1MDTG?usp=drive_link
